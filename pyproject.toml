@@ -1,7 +1,7 @@
 [project]
 name = "faang-dsa"
 version = "0.1.0"
-description = "Add your description here"
+description = "dsa prep in Python for intern/co-op/new grad interviews at top companies like Google, Facebook, and Bloomberg"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
