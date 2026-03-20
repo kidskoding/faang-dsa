@@ -1,43 +1,55 @@
 class MaxHeap:
     def __init__(self):
-        # TODO: initialize internal list to store heap elements
-        pass
-
-    def __len__(self) -> int:
-        # TODO: return number of elements
-        pass
-
-    def __repr__(self) -> str:
-        # TODO: return string representation of internal list
-        pass
+        self.heap = []
 
     def push(self, val: int):
-        # TODO: append val to end of list, then heapify up
-        pass
+        self.heap.append(val)
+        self.heapify_up(len(self.heap) - 1)
 
     def pop(self) -> int:
-        # TODO: swap root with last element, pop last, heapify down from root
-        # raise IndexError if empty
-        pass
+        if not self.heap:
+            raise IndexError("pop from empty heap")
+        
+        max_val = self.heap[0]
+        self.heap[0], self.heap[-1] = self.heap[-1], self.heap[0]
+        self.heap.pop()
+        self.heapify_down(0)
+        
+        return max_val
 
     def peek(self) -> int:
-        # TODO: return root element without removing it
-        # raise IndexError if empty
-        pass
+        if not self.heap:
+            raise IndexError("peek from empty heap")
+        
+        return self.heap[0]
 
-    def heapify(self, vals: list[int]):
-        # TODO: build heap from arbitrary list in O(n)
-        # assign list to internal storage, then heapify down from last non-leaf to root
-        pass
+    def build_heap(self, vals: list[int]):
+        self.heap = vals
+        for i in range(len(self.heap) // 2 - 1, -1, -1):
+            self.heapify_down(i)
     
     def heapify_up(self, i: int):
-        # TODO: while i > 0 and element at i is greater than its parent, swap and move up
-        pass
+        while i > 0 and self.heap[i] > self.heap[self.parent(i)]:
+            self.heap[i], self.heap[self.parent(i)] = self.heap[self.parent(i)], self.heap[i]
+            i = self.parent(i)
     
     def heapify_down(self, i: int):
-        # TODO: while i has at least one child, find largest child
-        # if largest child is greater than element at i, swap and continue down
-        pass
+        size = len(self.heap)
+        largest = i
+        
+        while True:
+            left = self.left(i)
+            right = self.right(i)
+            
+            if left < size and self.heap[largest] < self.heap[left]:
+                largest = left
+            if right < size and self.heap[largest] < self.heap[right]:
+                largest = right
+            if largest != i:
+                self.heap[i], self.heap[largest] = self.heap[largest], self.heap[i]
+                i = largest
+            else:
+                break
 
     def parent(self, i: int) -> int:
         return (i - 1) // 2 if i > 0 else -1

@@ -3,51 +3,58 @@ from heapq import heapify
 class MinHeap:
     def __init__(self):
         self.heap = []
-    
-    def __len__(self) -> int:
-        # TODO: return number of elements
-        pass
-
-    def __repr__(self) -> str:
-        # TODO: return string representation of internal list
-        pass
 
     def push(self, val: int):
         self.heap.append(val)
-        i = len(self.heap) - 1
+        self.heapify_up(len(self.heap) - 1)
 
-        self.heapify_up(i)
-
-    def pop(self) -> int:
-        # TODO: swap root with last element, pop last, heapify down from root
-        # raise IndexError if empty
-        pass
+    def pop(self):
+        if not self.heap:
+            raise IndexError("pop from empty heap")
+        
+        min_val = self.heap[0]
+        self.heap[0], self.heap[-1] = self.heap[-1], self.heap[0]
+        self.heap.pop()
+        self.heapify_down(0)
+        
+        return min_val
 
     def peek(self) -> int:
-        # TODO: return root element without removing it
-        # raise IndexError if empty
-        pass
+        if not self.heap:
+            raise IndexError('peek from empty heap')
+        
+        return self.heap[0]
 
-    def heapify(self, vals: list[int]):
-        # TODO: build heap from arbitrary list in O(n)
-        # assign list to internal storage, then heapify down from last non-leaf to root
-        pass
+    def build_heap(self, vals: list[int]):
+        self.heap = vals
+        for i in range(len(self.heap) // 2 - 1, -1, -1):
+            self.heapify_down(i)
 
     def heapify_up(self, i: int):
-        while i > 0:
-            p = self.parent(i)
-            
-            if self.heap[i] >= self.heap[p]:
-                break
-            
-            self.heap[i], self.heap[p] = self.heap[p], self.heap[i]
-            i = p
+        while i > 0 and self.heap[self.parent(i)] > self.heap[i]:
+            self.heap[i], self.heap[self.parent(i)] = self.heap[self.parent(i)], self.heap[i]
+            i = self.parent(i)
             
     def heapify_down(self, i: int):
-        while i > 0 and self.heap[i] > self.heap[2 * i + 1]
+        size = len(self.heap)
+        smallest = i
+        
+        while True:
+            left = self.left(i)
+            right = self.right(i)
+            
+            if left < size and self.heap[smallest] > self.heap[left]:
+                smallest = left
+            if right < size and self.heap[smallest] > self.heap[right]:
+                smallest = right
+            if smallest != i:
+                self.heap[i], self.heap[smallest] = self.heap[smallest], self.heap[i]
+                i = smallest
+            else:
+                break
 
     def parent(self, i: int) -> int:
-        return (i - 1) // 2 if i > 0 else -1
+        return (i - 1) // 2
     
     def left(self, i: int) -> int:
         return 2 * i + 1
