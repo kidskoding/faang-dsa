@@ -1,5 +1,3 @@
-from heapq import heapify
-
 class MinHeap:
     def __init__(self):
         self.heap = []
@@ -19,7 +17,7 @@ class MinHeap:
         
         return min_val
 
-    def peek(self) -> int:
+    def peek(self):
         if not self.heap:
             raise IndexError('peek from empty heap')
         
@@ -53,11 +51,11 @@ class MinHeap:
             else:
                 break
 
-    def parent(self, i: int) -> int:
+    def parent(self, i: int):
         return (i - 1) // 2
     
-    def left(self, i: int) -> int:
+    def left(self, i: int):
         return 2 * i + 1
     
-    def right(self, i: int) -> int:
+    def right(self, i: int):
         return 2 * i + 2

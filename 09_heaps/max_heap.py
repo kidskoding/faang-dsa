@@ -6,7 +6,7 @@ class MaxHeap:
         self.heap.append(val)
         self.heapify_up(len(self.heap) - 1)
 
-    def pop(self) -> int:
+    def pop(self):
         if not self.heap:
             raise IndexError("pop from empty heap")
         
@@ -17,7 +17,7 @@ class MaxHeap:
         
         return max_val
 
-    def peek(self) -> int:
+    def peek(self):
         if not self.heap:
             raise IndexError("peek from empty heap")
         
@@ -51,11 +51,11 @@ class MaxHeap:
             else:
                 break
 
-    def parent(self, i: int) -> int:
+    def parent(self, i: int):
         return (i - 1) // 2 if i > 0 else -1
     
-    def left(self, i: int) -> int:
+    def left(self, i: int):
         return 2 * i + 1
     
-    def right(self, i: int) -> int:
+    def right(self, i: int):
         return 2 * i + 2
