@@ -2,16 +2,21 @@
 
 ## Goal
 
-A Python repo for FAANG interview prep and competitive programming — deep, from-scratch implementations of data structures and algorithms, tested thoroughly, with problems to reinforce each topic.
+A teaching-first DSA curriculum for SWE internship, co-op, and new-grad interviews targeting Meta, Amazon, Microsoft, Apple, Google, Airbnb, Bloomberg, Coinbase, Stripe, Salesforce, TikTok/ByteDance, Oracle, NVIDIA, Snowflake, Databricks, Capital One, IBM, OpenAI, ServiceNow, Uber, and analogous FAANG+ companies.
+
+The repo should teach concepts deeply inside numbered module folders, provide from-scratch implementations/templates, and give guided practice that builds toward timed mixed interview performance.
 
 ---
 
 ## Core Principles
 
-- Everything is implemented from scratch — no standard library collections for the structure being learned
-- Prefer clarity over cleverness; this is a learning repo
-- Every structure has an implementation file and a test file
-- No notes, no docs, no theory files
+- Structure the curriculum by interview pattern, not traditional CS taxonomy.
+- Use the numbered chapter folders as the source of truth.
+- Teach concepts explicitly with chapter READMEs, focused comments, examples, tests, and guided practice.
+- Implement data structures from scratch when the structure itself is being learned.
+- Use normal Python interview tools (`dict`, `set`, `list`, `heapq`, `deque`) in problem solutions unless the point of the problem is to implement that structure.
+- Prioritize high-frequency interview patterns before low-frequency advanced algorithms.
+- Company-specific drilling belongs in `problem_sets/`; do not claim those are exact interview question lists.
 
 ---
 
@@ -19,116 +24,58 @@ A Python repo for FAANG interview prep and competitive programming — deep, fro
 
 ```text
 faang-dsa/
-├── README.md
-├── arrays/
-│   ├── dynamic_array.py
-│   └── ...
-├── linked_lists/
-├── stacks-and-queues/
-├── hash_tables/
-├── trees/
-├── heaps/
-├── graphs/
-├── sorting/
-├── searching/
-├── dp/
-├── greedy/
-├── tries/
-├── disjoint_set/
-├── tests/
-│   ├── test_arrays.py
-│   ├── test_linked_lists.py
-│   ├── test_stacks.py
-│   ├── test_queues.py
-│   ├── test_hash_tables.py
-│   ├── test_trees.py
-│   ├── test_heaps.py
-│   ├── test_graphs.py
-│   ├── test_sorting.py
-│   ├── test_searching.py
-│   ├── test_dp.py
-│   ├── test_greedy.py
-│   ├── test_tries.py
-│   └── test_disjoint_set.py
-└── problems/
-    ├── topic_based/
-    └── mixed_review/
+├── 01_arrays/
+├── 02_linked_lists/
+├── 03_stacks_and_queues/
+├── 04_recursion_backtracking/
+├── 05_divide_conquer/
+├── 06_searching/
+├── 07_sorting/
+├── 08_trees/
+├── 09_heaps/
+├── 10_intervals/
+├── 11_disjoint_set/
+├── 12_graphs/
+├── 13_hash_tables/
+├── 14_dp/
+├── 15_bit_manipulation/
+├── 16_greedy/
+├── 17_tries/
+├── 18_advanced/
+├── 19_mixed_interview_practice/
+├── problem_sets/
+└── tests/
 ```
 
 ---
 
-## File Pattern
+## Priority
 
-For each concept:
+Highest interview review priority:
 
-```text
-linked_lists/singly_linked_list.py
-tests/test_singly_linked_list.py
-```
+1. Arrays, strings, hash maps, sets, prefix sums, two pointers, sliding window
+2. Stacks/queues, binary search, trees
+3. Graphs/grids, heaps, intervals
+4. Backtracking, DP, greedy
+5. Linked lists, tries, union find
+6. Bit manipulation and advanced structures after the core is reliable
 
----
-
-## Implementation Order
-
-1.  dynamic array
-2.  arrays and hashing techniques
-3.  prefix / suffix sums
-4.  two pointers
-5.  sliding window (fixed and variable)
-6.  Kadane's algorithm (maximum subarray)
-7.  singly linked list
-8.  doubly linked list
-9.  fast & slow pointers
-10. stacks, queues, deques
-11. monotonic stack / queue
-12. recursion and backtracking (subsets, permutations)
-13. divide and conquer
-14. searching algorithms (linear, binary)
-15. binary search as a technique (rotated arrays, search on answer, boundaries)
-16. sorting algorithms (bubble, selection, insertion, merge, quick, heap)
-17. binary tree
-18. tree traversals (inorder, preorder, postorder, level-order)
-20. binary search tree
-21. BST balancing concepts
-22. AVL tree
-23. heaps / priority queues
-24. two heaps (top-K and k-way merge patterns)
-25. intervals (merge intervals, insert interval, meeting rooms)
-26. disjoint set union (union find)
-27. graph representations (adjacency list, adjacency matrix)
-28. graph traversals (BFS, DFS) + cycle detection
-29. matrix / 2D grid traversal
-30. topological sort (Kahn's algorithm, DFS-based)
-31. minimum spanning tree (Kruskal's, Prim's)
-32. graph algorithms (Dijkstra, Bellman-Ford, Floyd-Warshall)
-33. hash table
-34. bloom filter
-35. dynamic programming
-36. bit manipulation
-37. greedy algorithms (activity selection, jump game, gas station, task scheduler)
-38. trie
-39. advanced topics (bit manipulation, knapsack problem, LCS, segment tree, fenwick tree, KMP, Z-algorithm)
+For Google specifically, overweight trees, graphs, recursion, backtracking, DP, and binary search on answer.
 
 ---
 
-## Testing Requirements
+## Chapter Quality Bar
 
-Every implementation must be tested for:
+Each chapter should eventually include:
 
-- normal cases
-- empty structure
-- one-element
-- repeated inserts and deletes
-- edge conditions
+- concept explanation: what it is, when to use it, pitfalls, and complexity
+- implementation: clear Python code for the structure or algorithm
+- tests: normal cases, empty cases, one-element cases, repeated operations, and edge cases
+- guided practice: warmups, core interview problems, follow-ups, and review problems
 
----
+Guided practice belongs inside the numbered module folder that teaches the concept. Do not create a separate top-level `problems/` folder.
 
-## Naming Conventions
-
-- Files: `snake_case` — e.g. `singly_linked_list.py`
-- Classes: `PascalCase` — e.g. `SinglyLinkedList`
-- Methods: `snake_case` — e.g. `push_back`
-- Constants: `UPPER_SNAKE_CASE` — e.g. `INITIAL_CAPACITY`
+Company-specific drilling belongs in `problem_sets/`. These should be curated practice plans, not claims about exact company interview questions.
 
 ---
 
@@ -137,14 +84,7 @@ Every implementation must be tested for:
 - Python 3.11+
 - pytest for testing
 - type hints on all method signatures
-
-Each class should handle:
-- `__init__`, `__len__`, `__repr__` where applicable
-- `__iter__` where it makes sense
-- no use of `list`, `dict`, `deque`, `heapq` etc. for the structure being implemented
-
----
-
-## Problems
-
-The `problems/` folder is for coding problems only — no solution writeups, no notes. Just `.py` files with a problem statement in a comment at the top and a solution below.
+- Files: `snake_case`
+- Classes: `PascalCase`
+- Methods: `snake_case`
+- Constants: `UPPER_SNAKE_CASE`
