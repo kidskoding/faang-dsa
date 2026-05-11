@@ -1,5 +1,7 @@
 # NVIDIA Problem Set
 
+NVIDIA Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for NVIDIA SWE interviews
+
 Focus: arrays, graphs, DP, bit manipulation, performance reasoning, and clean low-level logic.
 
 ## Warmups

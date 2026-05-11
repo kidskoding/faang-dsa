@@ -1,5 +1,7 @@
 # TikTok / ByteDance Problem Set
 
+TikTok / ByteDance Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for TikTok / ByteDance SWE interviews
+
 Focus: fast implementation, arrays/strings, trees, graphs, DP, heaps, and harder mediums.
 
 ## Warmups

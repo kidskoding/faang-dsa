@@ -1,5 +1,7 @@
 # Capital One Problem Set
 
+Capital One Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for Capital One SWE interviews
+
 Focus: fundamentals, arrays/maps, strings, trees, BFS/DFS, and reliable communication.
 
 ## Warmups

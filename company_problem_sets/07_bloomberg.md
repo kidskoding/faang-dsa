@@ -1,5 +1,7 @@
 # Bloomberg Problem Set
 
+Bloomberg Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for Bloomberg SWE interviews
+
 Focus: practical coding, strings/maps, trees, linked lists, heaps, and implementation accuracy.
 
 ## Warmups

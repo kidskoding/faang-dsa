@@ -1,5 +1,7 @@
 # Snowflake Problem Set
 
+Snowflake Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for Snowflake SWE interviews
+
 Focus: data structures, graphs, DP, intervals, heaps, performance, and system-adjacent reasoning.
 
 ## Warmups

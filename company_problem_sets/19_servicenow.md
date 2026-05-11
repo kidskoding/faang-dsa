@@ -1,5 +1,7 @@
 # ServiceNow Problem Set
 
+ServiceNow Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for ServiceNow SWE interviews
+
 Focus: fundamentals, arrays/maps, trees, BFS/DFS, practical design, and reliable implementation.
 
 ## Warmups

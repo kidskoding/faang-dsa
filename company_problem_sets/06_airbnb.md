@@ -1,5 +1,7 @@
 # Airbnb Problem Set
 
+Airbnb Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for Airbnb SWE interviews
+
 Focus: graphs, backtracking, practical modeling, strings, intervals, and design-style coding.
 
 ## Warmups

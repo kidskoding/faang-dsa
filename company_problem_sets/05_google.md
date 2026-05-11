@@ -1,5 +1,7 @@
 # Google Problem Set
 
+Google Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for Google SWE interviews
+
 Focus: recursive reasoning, trees, graphs, grids, DP, backtracking, and clean explanation.
 
 ## Warmups

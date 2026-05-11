@@ -43,8 +43,7 @@ faang-dsa/
 ├── 17_tries/
 ├── 18_advanced/
 ├── 19_mixed_interview_practice/
-├── problem_sets/
-└── tests/
+└── problem_sets/
 ```
 
 ---
@@ -70,10 +69,12 @@ Each chapter should eventually include:
 
 - concept explanation: what it is, when to use it, pitfalls, and complexity
 - implementation: clear Python code for the structure or algorithm
-- tests: normal cases, empty cases, one-element cases, repeated operations, and edge cases
+- tests: module-local tests under that module's `tests/` folder
 - guided practice: warmups, core interview problems, follow-ups, and review problems
 
 Guided practice belongs inside the numbered module folder that teaches the concept. Do not create a separate top-level `problems/` folder.
+
+Tests belong inside the numbered module folder that owns the concept. Do not create a separate top-level `tests/` folder.
 
 Company-specific drilling belongs in `problem_sets/`. These should be curated practice plans, not claims about exact company interview questions.
 

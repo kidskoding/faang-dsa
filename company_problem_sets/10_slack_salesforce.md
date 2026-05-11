@@ -1,4 +1,6 @@
-# Salesforce Problem Set
+# Slack / Salesforce Problem Set
+
+Slack / Salesforce Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for Slack / Salesforce SWE interviews
 
 Focus: balanced fundamentals, arrays/maps, trees, BFS/DFS, OOP-style design, and clear communication.
 

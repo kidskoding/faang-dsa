@@ -1,5 +1,7 @@
 # OpenAI Problem Set
 
+OpenAI Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for OpenAI SWE interviews
+
 Focus: deep reasoning, graphs, DP, trees, search, optimization, and clean abstractions.
 
 ## Warmups

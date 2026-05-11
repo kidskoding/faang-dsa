@@ -5,5 +5,31 @@ description = "DSA prep in Python for internship, co-op, and new-grad interviews
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "pytest>=9.0.2",
+    "pytest>=9.0.3",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+    "08_trees",
+]
+testpaths = [
+    "01_arrays",
+    "02_linked_lists",
+    "03_stacks_and_queues",
+    "04_recursion_backtracking",
+    "05_divide_conquer",
+    "06_searching",
+    "07_sorting",
+    "08_trees",
+    "09_heaps",
+    "10_intervals",
+    "11_disjoint_set",
+    "12_graphs",
+    "13_hash_tables",
+    "14_dp",
+    "15_bit_manipulation",
+    "16_greedy",
+    "17_tries",
+    "18_advanced",
+    "19_mixed_interview_practice",
 ]

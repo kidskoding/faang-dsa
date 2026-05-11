@@ -1,5 +1,7 @@
 # IBM Problem Set
 
+IBM Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for IBM SWE interviews
+
 Focus: fundamentals, clean implementation, trees, graphs, DP basics, and practical design.
 
 ## Warmups

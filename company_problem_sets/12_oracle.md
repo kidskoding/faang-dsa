@@ -1,5 +1,7 @@
 # Oracle Problem Set
 
+Oracle Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for Oracle SWE interviews
+
 Focus: fundamentals, arrays/maps, trees, SQL-adjacent data modeling style, and object-oriented design.
 
 ## Warmups

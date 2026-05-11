@@ -1,5 +1,7 @@
 # Apple Problem Set
 
+Apple Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for Apple SWE interviews
+
 Focus: clean code, arrays/strings, trees, graphs, low-level reasoning, and edge cases.
 
 ## Warmups

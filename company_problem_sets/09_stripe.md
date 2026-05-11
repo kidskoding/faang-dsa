@@ -1,5 +1,7 @@
 # Stripe Problem Set
 
+Stripe Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for Stripe SWE interviews
+
 Focus: practical coding, data modeling, maps/strings, debugging, edge cases, and readable code.
 
 ## Warmups

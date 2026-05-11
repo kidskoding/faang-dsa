@@ -1,5 +1,7 @@
 # Databricks Problem Set
 
+Databricks Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for Databricks SWE interviews
+
 Focus: harder mediums, graphs, DP, arrays, performance tradeoffs, and precise reasoning.
 
 ## Warmups

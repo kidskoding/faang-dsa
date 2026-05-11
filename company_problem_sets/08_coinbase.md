@@ -1,5 +1,7 @@
 # Coinbase Problem Set
 
+Coinbase Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for Coinbase SWE interviews
+
 Focus: correctness under constraints, arrays/maps, graphs, DP, practical modeling, and clean state.
 
 ## Warmups

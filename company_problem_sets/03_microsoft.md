@@ -1,5 +1,7 @@
 # Microsoft Problem Set
 
+Microsoft Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for Microsoft SWE interviews
+
 Focus: balanced fundamentals, trees, arrays, DP, design-style coding, and clear implementation.
 
 ## Warmups

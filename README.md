@@ -1,6 +1,6 @@
 # faang-dsa
 
-DSA prep in Python for internship, co-op, and new-grad interviews at Meta, Amazon, Microsoft, Apple, Google, Airbnb, Bloomberg, Coinbase, Stripe, Salesforce, TikTok/ByteDance, Oracle, NVIDIA, Snowflake, Databricks, Capital One, IBM, OpenAI, ServiceNow, Uber, and analogous FAANG+ companies.
+DSA prep in Python for internship, co-op, and new-grad interviews at Meta, Amazon, Microsoft, Apple, Google, Airbnb, Bloomberg, Coinbase, Stripe, Slack / Salesforce, TikTok/ByteDance, Oracle, NVIDIA, Snowflake, Databricks, Capital One, IBM, OpenAI, ServiceNow, Uber, and analogous FAANG+ companies.
 
 ## Goal
 
@@ -23,6 +23,7 @@ The numbered folders are modules. Each module owns the full learning experience 
 
 ```text
 faang-dsa/
+├── 00_fundamentals/
 ├── 01_arrays/
 ├── 02_linked_lists/
 ├── 03_stacks_and_queues/
@@ -42,8 +43,7 @@ faang-dsa/
 ├── 17_tries/
 ├── 18_advanced/
 ├── 19_mixed_interview_practice/
-├── problem_sets/
-└── tests/
+└── problem_sets/
 ```
 
 ## Guided Curriculum
@@ -52,10 +52,28 @@ Work through the curriculum module by module. Each module has the same loop:
 
 1. Read the module folder `README.md`.
 2. Study the implementation files.
-3. Run or expand the tests.
+3. Run or expand the module-local tests.
 4. Complete warmup practice.
 5. Complete core practice.
 6. Do one review problem without hints before moving on.
+
+### Module 00: Fundamentals
+
+Goal: build the baseline reasoning needed for every later module.
+
+Study:
+
+- Time complexity
+- Space complexity
+- Output space versus auxiliary space
+- Recursion call stacks
+- Common array, tree, graph, heap, and hash-map complexity patterns
+
+Practice:
+
+- For every implementation, write `Input size`, `Time`, and `Space`
+- Explain the complexity out loud in one sentence
+- Revisit this module whenever a Big-O explanation feels unclear
 
 ### Module 01: Arrays
 
@@ -444,7 +462,7 @@ Ready signal:
 7. Bloomberg
 8. Coinbase
 9. Stripe
-10. Salesforce
+10. Slack / Salesforce
 11. TikTok/ByteDance
 12. Oracle
 13. NVIDIA
@@ -463,7 +481,7 @@ Ready signal:
 - Amazon, Microsoft, Apple: balanced LeetCode coverage plus clear communication, edge cases, and behavioral/project stories.
 - Stripe, Coinbase, Bloomberg: practical coding, debugging, data modeling, strings/maps, correctness under constraints, and clean code.
 - Airbnb, Snowflake, NVIDIA: graphs, DP, system-adjacent problem solving, performance awareness, and careful design choices.
-- Salesforce, Oracle, IBM, ServiceNow, Capital One: strong fundamentals, arrays/hash maps, trees, BFS/DFS, OOP/design-style coding, and reliable communication.
+- Slack / Salesforce, Oracle, IBM, ServiceNow, Capital One: strong fundamentals, arrays/hash maps, trees, BFS/DFS, OOP/design-style coding, and reliable communication.
 
 ## FAANG+ Generalization
 

@@ -1,5 +1,7 @@
 # Amazon Problem Set
 
+Amazon Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for Amazon SWE interviews
+
 Focus: broad pattern recognition, trees, BFS/DFS, heaps, intervals, sliding window, and behavioral-ready explanations.
 
 ## Warmups

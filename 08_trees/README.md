@@ -1,28 +1,42 @@
 # Module 08: Trees
 
-## Goal
+## Problem Set
 
-Learn tree traversal, recursive reasoning, and the most common binary-tree interview patterns.
-
-## Lessons
-
-- Binary trees
-- Tree traversals
-- Binary search trees
-- BST validation
-- Depth, diameter, and path patterns
-- LCA
-- Serialization
-- Balancing concepts
-- AVL trees
-
-## Guided Practice
-
-Add practice files under this folder as the topic grows:
-
-```text
-practice/warmups/
-practice/core/
-practice/follow_ups/
-practice/review/
-```
+- [1. Maximum Depth Of Binary Tree](problem_set/tree_problem_set.md)
+- [2. Invert Binary Tree](problem_set/tree_problem_set.md)
+- [3. Same Tree](problem_set/tree_problem_set.md)
+- [4. Symmetric Tree](problem_set/tree_problem_set.md)
+- [5. Balanced Binary Tree](problem_set/tree_problem_set.md)
+- [6. Diameter Of Binary Tree](problem_set/tree_problem_set.md)
+- [7. Subtree Of Another Tree](problem_set/tree_problem_set.md)
+- [8. Binary Tree Level Order Traversal](problem_set/tree_problem_set.md)
+- [9. Right Side View](problem_set/tree_problem_set.md)
+- [10. Minimum Depth](problem_set/tree_problem_set.md)
+- [11. Average Of Levels](problem_set/tree_problem_set.md)
+- [12. Zigzag Level Order Traversal](problem_set/tree_problem_set.md)
+- [13. Path Sum](problem_set/tree_problem_set.md)
+- [14. Path Sum II](problem_set/tree_problem_set.md)
+- [15. Binary Tree Paths](problem_set/tree_problem_set.md)
+- [16. Sum Root To Leaf Numbers](problem_set/tree_problem_set.md)
+- [17. Path Sum III](problem_set/tree_problem_set.md)
+- [18. Lowest Common Ancestor Of A Binary Tree](problem_set/tree_problem_set.md)
+- [19. Search In BST](problem_set/tree_problem_set.md)
+- [20. Validate BST](problem_set/tree_problem_set.md)
+- [21. Kth Smallest Element In A BST](problem_set/tree_problem_set.md)
+- [22. Lowest Common Ancestor Of A BST](problem_set/tree_problem_set.md)
+- [23. Convert Sorted Array To BST](problem_set/tree_problem_set.md)
+- [24. Insert Into A BST](problem_set/tree_problem_set.md)
+- [25. Delete Node In A BST](problem_set/tree_problem_set.md)
+- [26. Construct Binary Tree From Preorder And Inorder Traversal](problem_set/tree_problem_set.md)
+- [27. Construct Binary Tree From Inorder And Postorder Traversal](problem_set/tree_problem_set.md)
+- [28. Serialize And Deserialize Binary Tree](problem_set/tree_problem_set.md)
+- [29. Binary Tree Maximum Path Sum](problem_set/tree_problem_set.md)
+- [30. Binary Tree Cameras](problem_set/tree_problem_set.md)
+- [31. House Robber III](problem_set/tree_problem_set.md)
+- [32. Count Good Nodes In Binary Tree](problem_set/tree_problem_set.md)
+- [33. Vertical Order Traversal Of A Binary Tree](problem_set/tree_problem_set.md)
+- [34. All Nodes Distance K In Binary Tree](problem_set/tree_problem_set.md)
+- [35. Flatten Binary Tree To Linked List](problem_set/tree_problem_set.md)
+- [36. Recover Binary Search Tree](problem_set/tree_problem_set.md)
+- [37. Lowest Common Ancestor Of Deepest Leaves](problem_set/tree_problem_set.md)
+- [38. Binary Tree Pruning](problem_set/tree_problem_set.md)
