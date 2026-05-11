@@ -2,7 +2,7 @@
 
 These are curated practice sets for the 20 target companies.
 
-They are not claimed to be exact interview question lists. They are company-tuned drills based on the patterns that matter for rigorous SWE internship interviews: arrays, strings, hashing, trees, graphs, DP, binary search, heaps, intervals, backtracking, and clean implementation.
+They are not claimed to be exact interview question lists. They are company-tuned drills based on the LeetCode-style patterns that matter for rigorous SWE internship interviews: arrays, strings, hashing, trees, graphs, DP, binary search, heaps, intervals, backtracking, and clean implementation. Stripe is the main exception and is intentionally more practical / integration-heavy.
 
 ## How To Use
 
@@ -24,7 +24,7 @@ For a company-focused week:
 - [7. Bloomberg](07_bloomberg.md)
 - [8. Coinbase](08_coinbase.md)
 - [9. Stripe](09_stripe.md)
-- [10. Slack / Salesforce](10_slack_salesforce.md)
+- [10. Salesforce](10_salesforce.md)
 - [11. TikTok / ByteDance](11_tiktok_bytedance.md)
 - [12. Oracle](12_oracle.md)
 - [13. NVIDIA](13_nvidia.md)
@@ -35,3 +35,9 @@ For a company-focused week:
 - [18. OpenAI](18_openai.md)
 - [19. ServiceNow](19_servicenow.md)
 - [20. Uber](20_uber.md)
+
+## Other Companies
+
+Additional company sets that are useful if you want more LeetCode-style practice beyond the original 20 targets.
+
+- [Other Companies Index](other_companies/README.md)

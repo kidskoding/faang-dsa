@@ -1,43 +1,51 @@
 # Stripe Problem Set
 
-Stripe Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for Stripe SWE interviews
+Stripe Problem Set - Commonly reported practical coding, API, and debugging patterns for Stripe SWE interviews
 
-Focus: practical coding, data modeling, maps/strings, debugging, edge cases, and readable code.
+Focus: multi-part implementation tasks, readable code, working with APIs or JSON-like data, debugging existing code, simple system behaviors, and careful edge-case handling.
+
+Stripe interviews are not LeetCode-style in the usual sense. Stripe interviews tend to reward correct, clean solutions over clever algorithm tricks. The practical goal is to write working code, extend existing code, read documentation, and use core data structures well.
 
 ## Warmups
 
-1. Two Sum
-2. Valid Anagram
-3. Merge Intervals
-4. Valid Parentheses
+1. Parse and validate JSON-like payloads
+2. Transform nested transaction records
+3. Implement user mention parsing
+4. Normalize event log entries
+5. Count mentions per user
+6. Merge and sort small event streams
 
 ## Core
 
-1. Group Anagrams
-2. LRU Cache
-3. Time Based Key-Value Store
-4. Design HashMap
-5. Minimum Window Substring
-6. Subarray Sum Equals K
-7. Meeting Rooms II
-8. Insert Interval
-9. Evaluate Reverse Polish Notation
-10. Basic Calculator basics
-11. Design Underground System
-12. Serialize and Deserialize Binary Tree
+1. Build a rate limiter
+2. Add TTL caching behavior
+3. Extend a mock API client
+4. Aggregate payment events by account
+5. Detect duplicate or out-of-order events
+6. Implement pagination over a response stream
+7. Repair a buggy helper in an existing codebase
+8. Extend a small in-memory service
+9. Convert between domain objects and wire formats
+10. Add validation and error handling to a request pipeline
+11. Implement a small webhook processor
+12. Debug a partially working integration
+13. Add a filter or search feature to an existing endpoint
+14. Simulate a simple ledger or account summary view
 
 ## Stretch
 
-1. Text Justification
-2. Design In-Memory File System
-3. All O(1) Data Structure
-4. Snapshot Array
-5. Random Pick with Weight
+1. Design a webhook retry queue
+2. Implement idempotency keys
+3. Build a simplified ledger reconciliation flow
+4. Add backoff and retry behavior to an API wrapper
+5. Implement a small feature flag store
 
 ## Review Modules
 
 - `13_hash_tables/`
 - `01_arrays/`
-- `10_intervals/`
 - `03_stacks_and_queues/`
+- `05_hashing_and_sets/`
 - `08_trees/`
+- `10_intervals/`
+- `12_graphs/`

@@ -1,6 +1,6 @@
 # faang-dsa
 
-DSA prep in Python for internship, co-op, and new-grad interviews at Meta, Amazon, Microsoft, Apple, Google, Airbnb, Bloomberg, Coinbase, Stripe, Slack / Salesforce, TikTok/ByteDance, Oracle, NVIDIA, Snowflake, Databricks, Capital One, IBM, OpenAI, ServiceNow, Uber, and analogous FAANG+ companies.
+DSA prep in Python for internship, co-op, and new-grad interviews at Meta, Amazon, Microsoft, Apple, Google, Airbnb, Bloomberg, Coinbase, Stripe, Salesforce, TikTok/ByteDance, Oracle, NVIDIA, Snowflake, Databricks, Capital One, IBM, OpenAI, ServiceNow, Uber, and analogous FAANG+ companies.
 
 ## Goal
 
@@ -462,7 +462,7 @@ Ready signal:
 7. Bloomberg
 8. Coinbase
 9. Stripe
-10. Slack / Salesforce
+10. Salesforce
 11. TikTok/ByteDance
 12. Oracle
 13. NVIDIA
@@ -479,15 +479,16 @@ Ready signal:
 - Meta, TikTok/ByteDance, Uber: speed on arrays, strings, trees, graphs, heaps, backtracking, and clean implementation.
 - Google, OpenAI, Databricks: deeper reasoning on trees, graphs, recursion, DP, backtracking, and optimization tradeoffs.
 - Amazon, Microsoft, Apple: balanced LeetCode coverage plus clear communication, edge cases, and behavioral/project stories.
-- Stripe, Coinbase, Bloomberg: practical coding, debugging, data modeling, strings/maps, correctness under constraints, and clean code.
+- Stripe: practical coding, debugging, data modeling, strings/maps, correctness under constraints, and clean code.
+- Coinbase, Bloomberg, Salesforce, and the rest of the target companies: mostly LeetCode-style mediums with company-specific emphasis and some practical implementation variation.
 - Airbnb, Snowflake, NVIDIA: graphs, DP, system-adjacent problem solving, performance awareness, and careful design choices.
-- Slack / Salesforce, Oracle, IBM, ServiceNow, Capital One: strong fundamentals, arrays/hash maps, trees, BFS/DFS, OOP/design-style coding, and reliable communication.
+- Salesforce, Oracle, IBM, ServiceNow, Capital One: strong fundamentals, arrays/hash maps, trees, BFS/DFS, OOP/design-style coding, and reliable communication.
 
 ## FAANG+ Generalization
 
 This curriculum also applies to AMD, Snap, DoorDash, Roblox, Palantir, Ramp, Robinhood, Rippling, fintechs, AI startups, infrastructure companies, and other FAANG+ loops.
 
-- Product-heavy companies: arrays, strings, hash maps, trees, graphs, practical debugging, and design-style coding.
+- Product-heavy companies: arrays, strings, hash maps, trees, graphs, and design-style coding with mostly LeetCode-style mediums.
 - Infrastructure/data companies: graphs, heaps, intervals, DP, binary search on answer, and performance tradeoffs.
 - Hardware/AI/platform companies: arrays, graphs, DP, bit manipulation, performance, and clean low-level reasoning.
 - Startup-style loops: fast implementation, practical edge cases, data modeling, and readable code.
