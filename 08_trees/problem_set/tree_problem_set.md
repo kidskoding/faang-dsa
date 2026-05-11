@@ -1,4 +1,4 @@
-# Tree Workbook
+# Trees Problem Set
 
 ## Goal
 

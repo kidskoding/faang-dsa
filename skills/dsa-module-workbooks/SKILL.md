@@ -11,14 +11,14 @@ Use this skill when building or revising a curriculum module that should teach a
 
 Every module should use the same scaffold:
 
-1. A module `README.md` that acts as a problem index and lists the workbook problems only.
-2. A single workbook markdown file for the module.
+1. A module `README.md` that acts as a problem index and lists the problem set problems only.
+2. A single problem set markdown file for the module.
 3. Problem stubs in a module-local `problem_set/` or equivalent, with importable filenames that stay friendly to tests.
 4. Tests grouped by the same problem categories.
 
 ## Workbook Structure
 
-Write the workbook in one file and keep it linear:
+Write the problem set in one file and keep it linear:
 
 1. Fundamentals.
 2. Core mediums.
@@ -32,7 +32,7 @@ Avoid splitting the workbook into multiple overlapping lists unless the user exp
 2. Add the common medium problems next.
 3. Finish with harder extensions or follow-ups.
 4. Do not repeat the same problem in multiple sections.
-5. Keep the workbook as a checklist first, then add brief pattern notes.
+5. Keep the problem set as a checklist first, then add brief pattern notes.
 
 ## Implementation Files
 
@@ -58,10 +58,10 @@ When creating tests:
 
 1. Prefer one unified workbook over duplicate warmup/core files unless the user explicitly wants separate tracks.
 2. If the user asks for a simpler progression, collapse repetition into one file.
-3. Update the module README to be a minimal problem index that lists the workbook problems in order and links to the canonical workbook.
+3. Update the module README to be a minimal problem index that lists the problem set problems in order and links to the canonical problem set.
 4. Keep the README minimal. Do not add goal/lesson prose unless the user explicitly asks for it.
 5. Keep Python filenames importable and stable. Use the workbook and README for ordering, not numeric filename prefixes, unless the user explicitly wants that tradeoff.
-6. Keep the same scaffold for every module: `README.md`, one workbook `.md`, `problem_set/`, and `tests/`.
+6. Keep the same scaffold for every module: `README.md`, one problem set `.md`, `problem_set/`, and `tests/`.
 7. Keep explanations concise and pattern-driven.
 
 ## Typical Workflow
