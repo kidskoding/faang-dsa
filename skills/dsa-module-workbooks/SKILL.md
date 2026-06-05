@@ -7,6 +7,34 @@ description: Create and update DSA curriculum modules with a single workbook, pr
 
 Use this skill when building or revising a curriculum module that should teach a topic from fundamentals through interview-ready practice.
 
+## Curriculum Order
+
+Use this live-coding-first module order:
+
+1. `00_fundamentals`
+2. `01_arrays_and_hashing`
+3. `02_two_pointers`
+4. `03_sliding_window`
+5. `04_stack`
+6. `05_binary_search`
+7. `06_linked_lists`
+8. `07_trees`
+9. `08_graphs`
+10. `09_heaps`
+11. `10_backtracking`
+12. `11_dp`
+13. `12_greedy`
+14. `13_intervals`
+15. `14_tries`
+16. `15_bit_manipulation`
+17. `16_math_geometry`
+18. `17_advanced`
+19. `18_mixed_interview_practice`
+
+Do not create a separate design-data-structures module. Put design-style implementations inside the pattern module that powers them.
+
+Advanced graph algorithms, sorting internals, divide and conquer, segment trees, Fenwick trees, KMP, rolling hash, and similar lower-frequency topics belong in `17_advanced`.
+
 ## Output Shape
 
 Every module should use the same scaffold:
@@ -43,6 +71,18 @@ When creating stubs:
 3. Keep one function per problem.
 4. Leave `NotImplementedError` in place until the user is ready to implement.
 5. Match test names to the function names and workbook sections.
+
+For `08_graphs`, split traversal files by context:
+
+1. `graph_representations.py`
+2. `graph_bfs.py`
+3. `graph_dfs.py`
+4. `grid_dfs.py`
+5. `grid_bfs.py`
+6. `multi_source_bfs.py`
+7. `topological_sort.py`
+
+Treat grids as implicit graphs. Teach grid DFS, grid BFS, and multi-source BFS as separate course units.
 
 ## Tests
 

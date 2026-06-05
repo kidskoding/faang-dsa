@@ -1,0 +1,7 @@
+interface:
+  display_name: "DSA Module Workbooks"
+  short_description: "Builds module workbooks, stubs, and tests"
+  default_prompt: "Use $dsa-module-workbooks to build or revise a DSA module workbook, implementation stubs, and tests."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "DSA Curriculum Workflow"
+  short_description: "Keeps module READMEs and workbooks aligned"
+  default_prompt: "Use $dsa-curriculum-workflow to update a DSA module README, workbook, and tests in the standard repo workflow."
+
+policy:
+  allow_implicit_invocation: true
