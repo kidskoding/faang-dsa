@@ -16,7 +16,7 @@ The repo should teach concepts deeply inside numbered module folders, provide fr
 - Implement data structures from scratch when the structure itself is being learned.
 - Use normal Python interview tools (`dict`, `set`, `list`, `heapq`, `deque`) in problem solutions unless the point of the problem is to implement that structure.
 - Prioritize high-frequency interview patterns before low-frequency advanced algorithms.
-- Company-specific drilling belongs in `problem_sets/`; do not claim those are exact interview question lists.
+- Company-specific drilling belongs in `company_problem_sets/`; do not claim those are exact interview question lists.
 
 ---
 
@@ -24,26 +24,26 @@ The repo should teach concepts deeply inside numbered module folders, provide fr
 
 ```text
 faang-dsa/
-├── 01_arrays/
-├── 02_linked_lists/
-├── 03_stacks_and_queues/
-├── 04_recursion_backtracking/
-├── 05_divide_conquer/
-├── 06_searching/
-├── 07_sorting/
-├── 08_trees/
+├── 00_fundamentals/
+├── 01_arrays_and_hashing/
+├── 02_two_pointers/
+├── 03_sliding_window/
+├── 04_stack/
+├── 05_binary_search/
+├── 06_linked_lists/
+├── 07_trees/
+├── 08_graphs/
 ├── 09_heaps/
-├── 10_intervals/
-├── 11_disjoint_set/
-├── 12_graphs/
-├── 13_hash_tables/
-├── 14_dp/
+├── 10_backtracking/
+├── 11_dp/
+├── 12_greedy/
+├── 13_intervals/
+├── 14_tries/
 ├── 15_bit_manipulation/
-├── 16_greedy/
-├── 17_tries/
-├── 18_advanced/
-├── 19_mixed_interview_practice/
-└── problem_sets/
+├── 16_math_geometry/
+├── 17_advanced/
+├── 18_mixed_interview_practice/
+└── company_problem_sets/
 ```
 
 ---
@@ -56,8 +56,8 @@ Highest interview review priority:
 2. Stacks/queues, binary search, trees
 3. Graphs/grids, heaps, intervals
 4. Backtracking, DP, greedy
-5. Linked lists, tries, union find
-6. Bit manipulation and advanced structures after the core is reliable
+5. Linked lists and tries
+6. Union find, shortest paths, sorting internals, and advanced structures after the core is reliable
 
 For Google specifically, overweight trees, graphs, recursion, backtracking, DP, and binary search on answer.
 
@@ -76,7 +76,7 @@ Guided practice belongs inside the numbered module folder that teaches the conce
 
 Tests belong inside the numbered module folder that owns the concept. Do not create a separate top-level `tests/` folder.
 
-Company-specific drilling belongs in `problem_sets/`. These should be curated practice plans, not claims about exact company interview questions.
+Company-specific drilling belongs in `company_problem_sets/`. These should be curated practice plans, not claims about exact company interview questions.
 
 ---
 
