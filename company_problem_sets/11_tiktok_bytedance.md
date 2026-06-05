@@ -36,8 +36,10 @@ Focus: fast implementation, arrays/strings, trees, graphs, DP, heaps, and harder
 
 ## Review Modules
 
-- `01_arrays/`
-- `06_searching/`
-- `08_trees/`
-- `12_graphs/`
-- `14_dp/`
+- `01_arrays_and_hashing/`
+- `02_two_pointers/`
+- `03_sliding_window/`
+- `05_binary_search/`
+- `07_trees/`
+- `08_graphs/`
+- `11_dp/`

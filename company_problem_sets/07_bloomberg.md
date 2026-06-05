@@ -36,8 +36,10 @@ Focus: practical coding, strings/maps, trees, linked lists, heaps, and implement
 
 ## Review Modules
 
-- `13_hash_tables/`
-- `02_linked_lists/`
-- `08_trees/`
+- `01_arrays_and_hashing/`
+- `02_two_pointers/`
+- `03_sliding_window/`
+- `06_linked_lists/`
+- `07_trees/`
 - `09_heaps/`
-- `03_stacks_and_queues/`
+- `04_stack/`

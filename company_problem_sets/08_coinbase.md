@@ -36,8 +36,10 @@ Focus: correctness under constraints, arrays/maps, graphs, DP, practical modelin
 
 ## Review Modules
 
-- `13_hash_tables/`
-- `12_graphs/`
-- `14_dp/`
+- `01_arrays_and_hashing/`
+- `02_two_pointers/`
+- `03_sliding_window/`
+- `08_graphs/`
+- `11_dp/`
 - `09_heaps/`
-- `17_tries/`
+- `14_tries/`

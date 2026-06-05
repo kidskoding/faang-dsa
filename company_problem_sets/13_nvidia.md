@@ -36,8 +36,10 @@ Focus: arrays, graphs, DP, bit manipulation, performance reasoning, and clean lo
 
 ## Review Modules
 
-- `01_arrays/`
-- `12_graphs/`
-- `14_dp/`
+- `01_arrays_and_hashing/`
+- `02_two_pointers/`
+- `03_sliding_window/`
+- `08_graphs/`
+- `11_dp/`
 - `15_bit_manipulation/`
-- `18_advanced/`
+- `17_advanced/`

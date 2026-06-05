@@ -36,8 +36,14 @@ For a company-focused week:
 - [19. ServiceNow](19_servicenow.md)
 - [20. Uber](20_uber.md)
 
-## Other Companies
+## Other Big Tech
 
 Additional company sets that are useful if you want more LeetCode-style practice beyond the original 20 targets.
 
-- [Other Companies Index](other_companies/README.md)
+- [Other Big Tech Index](other_big_tech/README.md)
+
+## Other Companies
+
+Additional targeted sets for specific upcoming interviews.
+
+- [Other Companies Index](other/README.md)

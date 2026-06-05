@@ -36,8 +36,8 @@ Focus: recursive reasoning, trees, graphs, grids, DP, backtracking, and clean ex
 
 ## Review Modules
 
-- `08_trees/`
-- `12_graphs/`
-- `14_dp/`
-- `04_recursion_backtracking/`
-- `06_searching/`
+- `07_trees/`
+- `08_graphs/`
+- `11_dp/`
+- `10_backtracking/`
+- `05_binary_search/`

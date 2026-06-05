@@ -36,8 +36,9 @@ Focus: fundamentals, arrays/maps, trees, BFS/DFS, practical design, and reliable
 
 ## Review Modules
 
-- `01_arrays/`
-- `13_hash_tables/`
-- `08_trees/`
-- `12_graphs/`
-- `14_dp/`
+- `01_arrays_and_hashing/`
+- `02_two_pointers/`
+- `03_sliding_window/`
+- `07_trees/`
+- `08_graphs/`
+- `11_dp/`

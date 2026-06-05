@@ -36,8 +36,10 @@ Focus: data structures, graphs, DP, intervals, heaps, performance, and system-ad
 
 ## Review Modules
 
-- `13_hash_tables/`
+- `01_arrays_and_hashing/`
+- `02_two_pointers/`
+- `03_sliding_window/`
 - `09_heaps/`
-- `10_intervals/`
-- `12_graphs/`
-- `14_dp/`
+- `13_intervals/`
+- `08_graphs/`
+- `11_dp/`

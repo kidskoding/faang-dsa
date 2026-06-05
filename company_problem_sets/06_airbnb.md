@@ -36,8 +36,10 @@ Focus: graphs, backtracking, practical modeling, strings, intervals, and design-
 
 ## Review Modules
 
-- `12_graphs/`
-- `04_recursion_backtracking/`
-- `17_tries/`
-- `10_intervals/`
-- `13_hash_tables/`
+- `08_graphs/`
+- `10_backtracking/`
+- `14_tries/`
+- `13_intervals/`
+- `01_arrays_and_hashing/`
+- `02_two_pointers/`
+- `03_sliding_window/`

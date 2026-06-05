@@ -36,9 +36,10 @@ Focus: graphs, trees, hashing, arrays, and core interview problem solving.
 
 ## Review Modules
 
-- `01_arrays/`
-- `13_hash_tables/`
-- `03_stacks_and_queues/`
+- `01_arrays_and_hashing/`
+- `02_two_pointers/`
+- `03_sliding_window/`
+- `04_stack/`
 - `09_heaps/`
-- `12_graphs/`
-- `08_trees/`
+- `08_graphs/`
+- `07_trees/`

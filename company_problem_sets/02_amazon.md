@@ -36,8 +36,10 @@ Focus: broad pattern recognition, trees, BFS/DFS, heaps, intervals, sliding wind
 
 ## Review Modules
 
-- `01_arrays/`
-- `08_trees/`
-- `12_graphs/`
+- `01_arrays_and_hashing/`
+- `02_two_pointers/`
+- `03_sliding_window/`
+- `07_trees/`
+- `08_graphs/`
 - `09_heaps/`
-- `10_intervals/`
+- `13_intervals/`

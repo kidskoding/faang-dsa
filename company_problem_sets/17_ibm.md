@@ -36,8 +36,10 @@ Focus: fundamentals, clean implementation, trees, graphs, DP basics, and practic
 
 ## Review Modules
 
-- `01_arrays/`
-- `02_linked_lists/`
-- `08_trees/`
-- `12_graphs/`
-- `14_dp/`
+- `01_arrays_and_hashing/`
+- `02_two_pointers/`
+- `03_sliding_window/`
+- `06_linked_lists/`
+- `07_trees/`
+- `08_graphs/`
+- `11_dp/`

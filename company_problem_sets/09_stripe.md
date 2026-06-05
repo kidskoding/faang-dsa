@@ -42,10 +42,11 @@ Stripe interviews are not LeetCode-style in the usual sense. Stripe interviews t
 
 ## Review Modules
 
-- `13_hash_tables/`
-- `01_arrays/`
-- `03_stacks_and_queues/`
+- `01_arrays_and_hashing/`
+- `02_two_pointers/`
+- `03_sliding_window/`
+- `04_stack/`
 - `05_hashing_and_sets/`
-- `08_trees/`
-- `10_intervals/`
-- `12_graphs/`
+- `07_trees/`
+- `13_intervals/`
+- `08_graphs/`

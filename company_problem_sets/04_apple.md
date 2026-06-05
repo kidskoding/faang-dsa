@@ -36,8 +36,10 @@ Focus: clean code, arrays/strings, trees, graphs, low-level reasoning, and edge 
 
 ## Review Modules
 
-- `01_arrays/`
-- `03_stacks_and_queues/`
-- `08_trees/`
-- `12_graphs/`
+- `01_arrays_and_hashing/`
+- `02_two_pointers/`
+- `03_sliding_window/`
+- `04_stack/`
+- `07_trees/`
+- `08_graphs/`
 - `15_bit_manipulation/`

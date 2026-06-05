@@ -36,8 +36,9 @@ Focus: strings, graphs, trees, heaps, backtracking, and clean implementation.
 
 ## Review Modules
 
-- `01_arrays/`
-- `13_hash_tables/`
-- `03_stacks_and_queues/`
-- `12_graphs/`
-- `08_trees/`
+- `01_arrays_and_hashing/`
+- `02_two_pointers/`
+- `03_sliding_window/`
+- `04_stack/`
+- `08_graphs/`
+- `07_trees/`
