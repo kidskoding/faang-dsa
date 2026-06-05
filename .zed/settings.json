@@ -1,0 +1,6 @@
+{
+  "show_edit_predictions": false,
+  "edit_predictions": {
+    "provider": "none"
+  }
+}
