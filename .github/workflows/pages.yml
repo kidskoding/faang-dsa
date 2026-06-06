@@ -28,16 +28,21 @@ jobs:
       - name: Sync development environment
         run: uv sync --group dev
 
-      - name: Prepare docs source
-        run: uv run python scripts/sync_docs.py
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install mdBook CLI
+        run: cargo install mdbook --locked
 
       - name: Build docs site
-        run: uv run mkdocs build --strict
+        run: |
+          uv run python scripts/sync_mdbook.py
+          mdbook build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: book
 
   deploy:
     needs: build

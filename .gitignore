@@ -8,9 +8,9 @@ wheels/
 .pytest_cache/
 .ruff_cache/
 
-# GitHub Pages 
-docs/
-site/
+# GitHub Pages / mdBook
+book/
+book-src/
 
 # Virtual environments
 .venv
