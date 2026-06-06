@@ -31,7 +31,7 @@ nav:
       - Backtracking: 09_backtracking/README.md
       - Graphs: 10_graphs/README.md
       - Dynamic Programming: 11_dp/README.md
-      - Greedy Algorithms: 12_greedy/README.md
+      - Greedy Algorithms: 12_greedy_algorithms/README.md
       - Intervals: 13_intervals/README.md
       - Tries: 14_tries/README.md
       - Bit Manipulation: 15_bit_manipulation/README.md
