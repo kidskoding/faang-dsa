@@ -7,32 +7,32 @@ Focus: fast implementation, arrays/strings, trees, graphs, DP, heaps, and harder
 ## Warmups
 
 1. Two Sum
-2. Valid Parentheses
-3. Binary Search
-4. Number of Islands
+1. Valid Parentheses
+1. Binary Search
+1. Number of Islands
 
 ## Core
 
 1. Longest Substring Without Repeating Characters
-2. Minimum Window Substring
-3. Search in Rotated Sorted Array
-4. Kth Largest Element in an Array
-5. Top K Frequent Elements
-6. Binary Tree Maximum Path Sum
-7. Course Schedule
-8. Rotting Oranges
-9. Coin Change
-10. Longest Increasing Subsequence
-11. Sliding Window Maximum
-12. Merge K Sorted Lists
+1. Minimum Window Substring
+1. Search in Rotated Sorted Array
+1. Kth Largest Element in an Array
+1. Top K Frequent Elements
+1. Binary Tree Maximum Path Sum
+1. Course Schedule
+1. Rotting Oranges
+1. Coin Change
+1. Longest Increasing Subsequence
+1. Sliding Window Maximum
+1. Merge K Sorted Lists
 
 ## Stretch
 
 1. Word Ladder
-2. Alien Dictionary
-3. Edit Distance
-4. Burst Balloons
-5. Count of Smaller Numbers After Self
+1. Alien Dictionary
+1. Edit Distance
+1. Burst Balloons
+1. Count of Smaller Numbers After Self
 
 ## Review Modules
 

@@ -7,32 +7,32 @@ Focus: strings, graphs, trees, heaps, backtracking, and standard interview probl
 ## Warmups
 
 1. Valid Anagram
-2. Two Sum
-3. Longest Substring Without Repeating Characters
-4. Subsets
+1. Two Sum
+1. Longest Substring Without Repeating Characters
+1. Subsets
 
 ## Core
 
 1. Group Anagrams
-2. Word Search
-3. Course Schedule
-4. Top K Frequent Elements
-5. LRU Cache
-6. Number of Islands
-7. Kth Largest Element in an Array
-8. Minimum Window Substring
-9. Binary Tree Level Order Traversal
-10. Product of Array Except Self
-11. Word Break
-12. Permutations
+1. Word Search
+1. Course Schedule
+1. Top K Frequent Elements
+1. LRU Cache
+1. Number of Islands
+1. Kth Largest Element in an Array
+1. Minimum Window Substring
+1. Binary Tree Level Order Traversal
+1. Product of Array Except Self
+1. Word Break
+1. Permutations
 
 ## Stretch
 
 1. Word Search II
-2. Alien Dictionary
-3. Serialize and Deserialize Binary Tree
-4. Trie
-5. Binary Tree Maximum Path Sum
+1. Alien Dictionary
+1. Serialize and Deserialize Binary Tree
+1. Trie
+1. Binary Tree Maximum Path Sum
 
 ## Review Modules
 

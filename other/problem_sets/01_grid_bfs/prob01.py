@@ -2,9 +2,10 @@ from collections import deque
 
 # Problem 1: Flood Fill
 
+
 # Time: O(r * c) - In the worst case we traverse through all the cells in the grid,
 # which can be represented by r * c
-# 
+#
 # Space: O(r * c) - Each queued item is a coordinate pair of (r, c) and there can be
 # up to r * c cells discovered during the traversal
 def prob01(image, sr, sc, color):
@@ -36,9 +37,9 @@ def prob01(image, sr, sc, color):
         while queue:
             # 9. Let r and c be the row and column of the most current coordinate added to the queue
             r, c = queue.popleft()
-            
+
             for dr, dc in dirs:
-                # 10. Let nr and nc be the new row and new column after applying the new direction 
+                # 10. Let nr and nc be the new row and new column after applying the new direction
                 nr, nc = r + dr, c + dc
 
                 # 11. Check if nr and nc are within appropriate bounds
@@ -49,13 +50,14 @@ def prob01(image, sr, sc, color):
                     # 12. Color the updated cell to the target color
                     image[nr][nc] = color
 
-                    # 13. 
+                    # 13.
                     queue.append((nr, nc))
 
         # 14. Return the updated image grid
         return image
 
     return bfs()
+
 
 # Alternative DFS Solution for Flood Fill
 def dfs():

@@ -7,10 +7,10 @@ Practice like the real interview: no topic labels, no hints, and a strict time b
 ## Weekly Loop
 
 1. Pick 6-10 mixed problems across arrays, linked lists, stacks, binary search, trees, graphs, heaps, backtracking, and DP.
-2. Solve each with a 35-minute timer.
-3. After each problem, write the missed pattern or bug in the relevant module folder.
-4. Re-solve missed problems 3-7 days later.
-5. Do one mock interview where you explain before and during coding.
+1. Solve each with a 35-minute timer.
+1. After each problem, write the missed pattern or bug in the relevant module folder.
+1. Re-solve missed problems 3-7 days later.
+1. Do one mock interview where you explain before and during coding.
 
 ## Ready Signal
 

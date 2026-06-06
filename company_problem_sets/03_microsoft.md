@@ -7,32 +7,32 @@ Focus: balanced fundamentals, trees, arrays, DP, design-style coding, and clear 
 ## Warmups
 
 1. Reverse Linked List
-2. Valid Anagram
-3. Binary Search
-4. Climbing Stairs
+1. Valid Anagram
+1. Binary Search
+1. Climbing Stairs
 
 ## Core
 
 1. Product of Array Except Self
-2. Merge Intervals
-3. Search in Rotated Sorted Array
-4. Validate Binary Search Tree
-5. Binary Tree Level Order Traversal
-6. Number of Islands
-7. Course Schedule
-8. Coin Change
-9. Longest Common Subsequence
-10. Min Stack
-11. LRU Cache
-12. Add Two Numbers
+1. Merge Intervals
+1. Search in Rotated Sorted Array
+1. Validate Binary Search Tree
+1. Binary Tree Level Order Traversal
+1. Number of Islands
+1. Course Schedule
+1. Coin Change
+1. Longest Common Subsequence
+1. Min Stack
+1. LRU Cache
+1. Add Two Numbers
 
 ## Stretch
 
 1. Serialize and Deserialize Binary Tree
-2. Word Break
-3. Design Tic-Tac-Toe
-4. Find Median from Data Stream
-5. Edit Distance
+1. Word Break
+1. Design Tic-Tac-Toe
+1. Find Median from Data Stream
+1. Edit Distance
 
 ## Review Modules
 

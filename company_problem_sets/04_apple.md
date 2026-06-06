@@ -7,32 +7,32 @@ Focus: clean code, arrays/strings, trees, graphs, low-level reasoning, and edge 
 ## Warmups
 
 1. Valid Palindrome
-2. Reverse String
-3. Merge Two Sorted Lists
-4. Maximum Depth of Binary Tree
+1. Reverse String
+1. Merge Two Sorted Lists
+1. Maximum Depth of Binary Tree
 
 ## Core
 
 1. Product of Array Except Self
-2. String to Integer
-3. Longest Substring Without Repeating Characters
-4. Search in Rotated Sorted Array
-5. Validate Binary Search Tree
-6. Binary Tree Right Side View
-7. Number of Islands
-8. Clone Graph
-9. LRU Cache
-10. Kth Largest Element in an Array
-11. Meeting Rooms II
-12. Coin Change
+1. String to Integer
+1. Longest Substring Without Repeating Characters
+1. Search in Rotated Sorted Array
+1. Validate Binary Search Tree
+1. Binary Tree Right Side View
+1. Number of Islands
+1. Clone Graph
+1. LRU Cache
+1. Kth Largest Element in an Array
+1. Meeting Rooms II
+1. Coin Change
 
 ## Stretch
 
 1. Serialize and Deserialize Binary Tree
-2. Word Search
-3. Find Median from Data Stream
-4. Basic Calculator
-5. Design Hit Counter
+1. Word Search
+1. Find Median from Data Stream
+1. Basic Calculator
+1. Design Hit Counter
 
 ## Review Modules
 

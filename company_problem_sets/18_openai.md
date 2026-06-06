@@ -7,32 +7,32 @@ Focus: deep reasoning, graphs, DP, trees, search, optimization, and clean abstra
 ## Warmups
 
 1. Number of Islands
-2. Binary Search
-3. Subsets
-4. Coin Change
+1. Binary Search
+1. Subsets
+1. Coin Change
 
 ## Core
 
 1. Binary Tree Maximum Path Sum
-2. Serialize and Deserialize Binary Tree
-3. Word Search
-4. Course Schedule
-5. Network Delay Time
-6. Shortest Path in Binary Matrix
-7. Longest Increasing Subsequence
-8. Longest Common Subsequence
-9. Word Break
-10. Koko Eating Bananas
-11. Minimum Window Substring
-12. LRU Cache
+1. Serialize and Deserialize Binary Tree
+1. Word Search
+1. Course Schedule
+1. Network Delay Time
+1. Shortest Path in Binary Matrix
+1. Longest Increasing Subsequence
+1. Longest Common Subsequence
+1. Word Break
+1. Koko Eating Bananas
+1. Minimum Window Substring
+1. LRU Cache
 
 ## Stretch
 
 1. Alien Dictionary
-2. Edit Distance
-3. Burst Balloons
-4. Word Search II
-5. Count of Smaller Numbers After Self
+1. Edit Distance
+1. Burst Balloons
+1. Word Search II
+1. Count of Smaller Numbers After Self
 
 ## Review Modules
 

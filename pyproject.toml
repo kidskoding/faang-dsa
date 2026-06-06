@@ -8,6 +8,18 @@ dependencies = [
     "pytest>=9.0.3",
 ]
 
+[dependency-groups]
+dev = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.14",
+    "mdformat>=0.7.22",
+    "mdformat-gfm>=0.4.1",
+    "ruff>=0.11.13",
+]
+
+[tool.mdformat]
+wrap = 88
+
 [tool.pytest.ini_options]
 pythonpath = [
     "07_trees",
@@ -34,3 +46,10 @@ testpaths = [
     "18_mixed_interview_practice",
     "other/problem_sets"
 ]
+
+[tool.ruff]
+line-length = 130
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

@@ -7,32 +7,32 @@ Focus: graphs, intervals, heaps, trees, arrays, and core data structures.
 ## Warmups
 
 1. Two Sum
-2. Valid Anagram
-3. Merge Intervals
-4. Binary Search
+1. Valid Anagram
+1. Merge Intervals
+1. Binary Search
 
 ## Core
 
 1. Course Schedule
-2. Number of Islands
-3. LRU Cache
-4. Meeting Rooms II
-5. Product of Array Except Self
-6. Search in Rotated Sorted Array
-7. Kth Largest Element in an Array
-8. Binary Tree Maximum Path Sum
-9. Top K Frequent Elements
-10. Coin Change
-11. Clone Graph
-12. Binary Tree Level Order Traversal
+1. Number of Islands
+1. LRU Cache
+1. Meeting Rooms II
+1. Product of Array Except Self
+1. Search in Rotated Sorted Array
+1. Kth Largest Element in an Array
+1. Binary Tree Maximum Path Sum
+1. Top K Frequent Elements
+1. Coin Change
+1. Clone Graph
+1. Binary Tree Level Order Traversal
 
 ## Stretch
 
 1. Word Ladder
-2. Serialize and Deserialize Binary Tree
-3. Word Break
-4. Median from Data Stream
-5. Longest Increasing Subsequence
+1. Serialize and Deserialize Binary Tree
+1. Word Break
+1. Median from Data Stream
+1. Longest Increasing Subsequence
 
 ## Review Modules
 

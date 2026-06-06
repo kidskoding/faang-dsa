@@ -7,32 +7,32 @@ Focus: graphs, heaps, intervals, maps, practical modeling, and fast implementati
 ## Warmups
 
 1. Two Sum
-2. Merge Intervals
-3. Number of Islands
-4. Kth Largest Element in an Array
+1. Merge Intervals
+1. Number of Islands
+1. Kth Largest Element in an Array
 
 ## Core
 
 1. LRU Cache
-2. Time Based Key-Value Store
-3. Meeting Rooms II
-4. Insert Interval
-5. Top K Frequent Elements
-6. Merge K Sorted Lists
-7. Clone Graph
-8. Rotting Oranges
-9. Network Delay Time
-10. Course Schedule
-11. Minimum Window Substring
-12. Koko Eating Bananas
+1. Time Based Key-Value Store
+1. Meeting Rooms II
+1. Insert Interval
+1. Top K Frequent Elements
+1. Merge K Sorted Lists
+1. Clone Graph
+1. Rotting Oranges
+1. Network Delay Time
+1. Course Schedule
+1. Minimum Window Substring
+1. Koko Eating Bananas
 
 ## Stretch
 
 1. Cheapest Flights Within K Stops
-2. Design Underground System
-3. Alien Dictionary
-4. Find Median from Data Stream
-5. Serialize and Deserialize Binary Tree
+1. Design Underground System
+1. Alien Dictionary
+1. Find Median from Data Stream
+1. Serialize and Deserialize Binary Tree
 
 ## Review Modules
 

@@ -1,5 +1,6 @@
 from prob01 import prob01
 
+
 def test_flood_fill_recolors_connected_component():
     image = [
         [1, 1, 1],
@@ -16,6 +17,7 @@ def test_flood_fill_recolors_connected_component():
     ]
     assert result is image
 
+
 def test_flood_fill_same_color_returns_image_unchanged():
     image = [
         [0, 0, 0],
@@ -29,6 +31,7 @@ def test_flood_fill_same_color_returns_image_unchanged():
         [0, 1, 1],
     ]
     assert result is image
+
 
 def test_flood_fill_does_not_cross_different_colors():
     image = [
@@ -44,6 +47,7 @@ def test_flood_fill_does_not_cross_different_colors():
         [9, 0, 0, 1],
         [0, 0, 1, 1],
     ]
+
 
 def test_flood_fill_single_cell():
     image = [[3]]

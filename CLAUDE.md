@@ -2,11 +2,11 @@
 
 ## Goal
 
-A teaching-first DSA curriculum for SWE internship, co-op, and new-grad interviews targeting Meta, Amazon, Microsoft, Apple, Google, Airbnb, Bloomberg, Coinbase, Stripe, Salesforce, TikTok/ByteDance, Oracle, NVIDIA, Snowflake, Databricks, Capital One, IBM, OpenAI, ServiceNow, Uber, and analogous FAANG+ companies.
+A teaching-first DSA curriculum for SWE internship, co-op, and new-grad interviews targeting Meta, Amazon, Microsoft, Apple, Google, Airbnb, Bloomberg, Coinbase, Palantir, Salesforce, TikTok/ByteDance, Oracle, NVIDIA, Snowflake, Databricks, Capital One, IBM, OpenAI, ServiceNow, Uber, and analogous FAANG+ companies.
 
 The repo should teach concepts deeply inside numbered module folders, provide from-scratch implementations/templates, and give guided practice that builds toward timed mixed interview performance.
 
----
+______________________________________________________________________
 
 ## Core Principles
 
@@ -18,7 +18,7 @@ The repo should teach concepts deeply inside numbered module folders, provide fr
 - Prioritize high-frequency interview patterns before low-frequency advanced algorithms.
 - Company-specific drilling belongs in `company_problem_sets/`; do not claim those are exact interview question lists.
 
----
+______________________________________________________________________
 
 ## Structure
 
@@ -46,22 +46,22 @@ faang-dsa/
 └── company_problem_sets/
 ```
 
----
+______________________________________________________________________
 
 ## Priority
 
 Highest interview review priority:
 
 1. Arrays, strings, hash maps, sets, prefix sums, two pointers, sliding window
-2. Stacks/queues, binary search, trees
-3. Heaps, backtracking, graphs/grids, intervals
-4. Backtracking, DP, greedy
-5. Linked lists and tries
-6. Union find, shortest paths, sorting internals, and advanced structures after the core is reliable
+1. Stacks/queues, binary search, trees
+1. Heaps, backtracking, graphs/grids, intervals
+1. Backtracking, DP, greedy
+1. Linked lists and tries
+1. Union find, shortest paths, sorting internals, and advanced structures after the core is reliable
 
 For Google specifically, overweight trees, graphs, recursion, backtracking, DP, and binary search on answer.
 
----
+______________________________________________________________________
 
 ## Chapter Quality Bar
 
@@ -78,7 +78,7 @@ Tests belong inside the numbered module folder that owns the concept. Do not cre
 
 Company-specific drilling belongs in `company_problem_sets/`. These should be curated practice plans, not claims about exact company interview questions.
 
----
+______________________________________________________________________
 
 ## Python Standards
 

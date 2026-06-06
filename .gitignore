@@ -5,8 +5,12 @@ build/
 dist/
 wheels/
 *.egg-info
+.pytest_cache/
+.ruff_cache/
+
+# GitHub Pages 
+docs/
+site/
 
 # Virtual environments
 .venv
-
-.pytest_cache/

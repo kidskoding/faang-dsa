@@ -9,18 +9,18 @@ class MinHeap:
     def pop(self):
         if not self.heap:
             raise IndexError("pop from empty heap")
-        
+
         min_val = self.heap[0]
         self.heap[0], self.heap[-1] = self.heap[-1], self.heap[0]
         self.heap.pop()
         self.heapify_down(0)
-        
+
         return min_val
 
     def peek(self):
         if not self.heap:
-            raise IndexError('peek from empty heap')
-        
+            raise IndexError("peek from empty heap")
+
         return self.heap[0]
 
     def build_heap(self, vals: list[int]):
@@ -32,15 +32,15 @@ class MinHeap:
         while i > 0 and self.heap[self.parent(i)] > self.heap[i]:
             self.heap[i], self.heap[self.parent(i)] = self.heap[self.parent(i)], self.heap[i]
             i = self.parent(i)
-            
+
     def heapify_down(self, i: int):
         size = len(self.heap)
         smallest = i
-        
+
         while True:
             left = self.left(i)
             right = self.right(i)
-            
+
             if left < size and self.heap[smallest] > self.heap[left]:
                 smallest = left
             if right < size and self.heap[smallest] > self.heap[right]:
@@ -53,9 +53,9 @@ class MinHeap:
 
     def parent(self, i: int):
         return (i - 1) // 2
-    
+
     def left(self, i: int):
         return 2 * i + 1
-    
+
     def right(self, i: int):
         return 2 * i + 2

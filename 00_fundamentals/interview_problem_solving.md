@@ -7,13 +7,13 @@ Build a repeatable live-coding process so you do not jump straight into code wit
 ## The Loop
 
 1. Restate the problem.
-2. Clarify inputs, outputs, constraints, and edge cases.
-3. Work through one small example.
-4. Name the likely pattern.
-5. Explain the approach before coding.
-6. Code cleanly.
-7. Test normal cases, edge cases, and failure cases.
-8. Analyze time and space complexity.
+1. Clarify inputs, outputs, constraints, and edge cases.
+1. Work through one small example.
+1. Name the likely pattern.
+1. Explain the approach before coding.
+1. Code cleanly.
+1. Test normal cases, edge cases, and failure cases.
+1. Analyze time and space complexity.
 
 ## Before Coding
 
@@ -64,9 +64,9 @@ Space is O(____), because ______.
 If a solution fails:
 
 1. Re-run the smallest failing example by hand.
-2. Check base cases.
-3. Check pointer movement or recursion return values.
-4. Check whether you are losing information.
-5. Check whether the data structure contains the right thing.
+1. Check base cases.
+1. Check pointer movement or recursion return values.
+1. Check whether you are losing information.
+1. Check whether the data structure contains the right thing.
 
 For trees and graphs, be especially careful about whether your queue/stack contains nodes, values, coordinates, or state tuples.

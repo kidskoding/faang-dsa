@@ -4,7 +4,7 @@
 
 Build the baseline knowledge that every later DSA module depends on.
 
-This module should stay language- and interview-focused: enough Python to write clean solutions, enough complexity analysis to explain them, and enough problem-solving process to avoid getting stuck during live coding.
+This module should stay language and interview-focused: enough Python to write clean solutions, enough complexity analysis to explain them, and enough problem-solving process to avoid getting stuck during live coding.
 
 ## Lessons
 

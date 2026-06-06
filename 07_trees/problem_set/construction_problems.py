@@ -1,5 +1,6 @@
 from tree_node import TreeNode
 
+
 def construct_from_preorder_inorder(
     preorder: list[int],
     inorder: list[int],
@@ -9,6 +10,7 @@ def construct_from_preorder_inorder(
     # Time:
     # Space:
     raise NotImplementedError
+
 
 def construct_from_inorder_postorder(
     inorder: list[int],
@@ -20,12 +22,14 @@ def construct_from_inorder_postorder(
     # Space:
     raise NotImplementedError
 
+
 def serialize_binary_tree(root: TreeNode | None) -> str:
     # Problem 28: Serialize And Deserialize Binary Tree
     # Key idea: turn the tree into a sequence that preserves shape.
     # Time:
     # Space:
     raise NotImplementedError
+
 
 def deserialize_binary_tree(data: str) -> TreeNode | None:
     # Problem 28: Serialize And Deserialize Binary Tree

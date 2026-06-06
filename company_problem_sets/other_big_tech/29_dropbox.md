@@ -7,32 +7,32 @@ Focus: strings, arrays, graphs, trees, hashing, and core interview algorithms.
 ## Warmups
 
 1. Valid Anagram
-2. Two Sum
-3. Merge Intervals
-4. Binary Search
+1. Two Sum
+1. Merge Intervals
+1. Binary Search
 
 ## Core
 
 1. LRU Cache
-2. Course Schedule
-3. Number of Islands
-4. Top K Frequent Elements
-5. Kth Largest Element in an Array
-6. Product of Array Except Self
-7. Binary Tree Level Order Traversal
-8. Search in Rotated Sorted Array
-9. Coin Change
-10. Meeting Rooms II
-11. Clone Graph
-12. Validate Binary Search Tree
+1. Course Schedule
+1. Number of Islands
+1. Top K Frequent Elements
+1. Kth Largest Element in an Array
+1. Product of Array Except Self
+1. Binary Tree Level Order Traversal
+1. Search in Rotated Sorted Array
+1. Coin Change
+1. Meeting Rooms II
+1. Clone Graph
+1. Validate Binary Search Tree
 
 ## Stretch
 
 1. Serialize and Deserialize Binary Tree
-2. Word Break
-3. Time Based Key-Value Store
-4. Design HashMap
-5. Longest Increasing Subsequence
+1. Word Break
+1. Time Based Key-Value Store
+1. Design HashMap
+1. Longest Increasing Subsequence
 
 ## Review Modules
 

@@ -1,6 +1,5 @@
-from turtle import left
 from tree_node import TreeNode
-from collections import deque
+
 
 def search(root: TreeNode | None, target: int) -> TreeNode | None:
     # Return the node whose value equals target, or None if it is missing.
@@ -12,16 +11,17 @@ def search(root: TreeNode | None, target: int) -> TreeNode | None:
     #
     # Time:
     # Space:
-    
+
     if root is None:
         return None
-        
+
     if target < root.val:
         return search(root.left, target)
     if target > root.val:
         return search(root.right, target)
-    
+
     return root
+
 
 def contains(root: TreeNode | None, target: int) -> bool:
     # Return True if target exists in the BST.
@@ -30,13 +30,14 @@ def contains(root: TreeNode | None, target: int) -> bool:
     #
     # Time:
     # Space:
-    
+
     if not root:
         return False
     if target == root.val:
         return True
-    
+
     return contains(root.left, target) if target < root.val else contains(root.right, target)
+
 
 def insert(root: TreeNode | None, val: int) -> TreeNode:
     # Insert val into the BST and return the root.
@@ -48,17 +49,18 @@ def insert(root: TreeNode | None, val: int) -> TreeNode:
     #
     # Time:
     # Space:
-    
+
     if not root:
         return TreeNode(val)
-    
+
     if val > root.val:
         root.right = insert(root.right, val)
     if val < root.val:
         root.left = insert(root.left, val)
-        
+
     return root
-    
+
+
 def min_value_node(root: TreeNode | None) -> TreeNode | None:
     # Return the node with the smallest value.
     #
@@ -67,14 +69,15 @@ def min_value_node(root: TreeNode | None) -> TreeNode | None:
     #
     # Time:
     # Space:
-    
+
     if not root:
         return None
-    
+
     if not root.left:
         return root
- 
+
     return min_value_node(root.left)
+
 
 def max_value_node(root: TreeNode | None) -> TreeNode | None:
     # Return the node with the largest value.
@@ -84,14 +87,15 @@ def max_value_node(root: TreeNode | None) -> TreeNode | None:
     #
     # Time:
     # Space:
-    
+
     if not root:
         return None
-    
+
     if not root.right:
         return root
- 
-    return min_value_node(root.right)
+
+    return max_value_node(root.right)
+
 
 def inorder_values(root: TreeNode | None) -> list[int]:
     # Return BST values in sorted order.
@@ -101,17 +105,18 @@ def inorder_values(root: TreeNode | None) -> list[int]:
     #
     # Time:
     # Space:
-    
+
     if not root:
         return []
-    
+
     res = []
-    
+
     res.extend(inorder_values(root.left))
     res.append(root.val)
     res.extend(inorder_values(root.right))
-    
+
     return res
+
 
 def is_valid_bst(root: TreeNode | None) -> bool:
     # Return True if the entire tree satisfies the BST invariant.
@@ -122,20 +127,21 @@ def is_valid_bst(root: TreeNode | None) -> bool:
     #
     # Time:
     # Space:
-    
+
     def is_valid_bst_helper(node: TreeNode | None, low, high) -> bool:
         if not node:
             return True
-        
+
         if node.val <= low or node.val >= high:
             return False
-        
+
         left_valid = is_valid_bst_helper(node.left, low, node.val)
         right_valid = is_valid_bst_helper(node.right, node.val, high)
-        
+
         return left_valid and right_valid
-    
-    return is_valid_bst_helper(root, float('-inf'), float('inf'))
+
+    return is_valid_bst_helper(root, float("-inf"), float("inf"))
+
 
 def delete(root: TreeNode | None, val: int) -> TreeNode | None:
     # Delete val from the BST and return the new root.
@@ -148,10 +154,10 @@ def delete(root: TreeNode | None, val: int) -> TreeNode | None:
     #
     # Time:
     # Space:
-    
+
     if root is None:
         return None
-    
+
     if val < root.val:
         root.left = delete(root.left, val)
     elif val > root.val:
@@ -162,7 +168,7 @@ def delete(root: TreeNode | None, val: int) -> TreeNode | None:
             root.val = successor.val
             root.right = delete(root.right, successor.val)
         elif root.left:
-            return root.left 
+            return root.left
         else:
             return root.right
 

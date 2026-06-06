@@ -7,32 +7,32 @@ Focus: graphs, backtracking, practical modeling, strings, intervals, and design-
 ## Warmups
 
 1. Two Sum
-2. Valid Parentheses
-3. Merge Intervals
-4. Number of Islands
+1. Valid Parentheses
+1. Merge Intervals
+1. Number of Islands
 
 ## Core
 
 1. Alien Dictionary
-2. Word Search
-3. Word Search II
-4. Course Schedule
-5. Clone Graph
-6. Meeting Rooms II
-7. Insert Interval
-8. Minimum Window Substring
-9. Group Anagrams
-10. LRU Cache
-11. Design Search Autocomplete System
-12. Serialize and Deserialize Binary Tree
+1. Word Search
+1. Word Search II
+1. Course Schedule
+1. Clone Graph
+1. Meeting Rooms II
+1. Insert Interval
+1. Minimum Window Substring
+1. Group Anagrams
+1. LRU Cache
+1. Design Search Autocomplete System
+1. Serialize and Deserialize Binary Tree
 
 ## Stretch
 
 1. Sliding Puzzle
-2. Cheapest Flights Within K Stops
-3. Text Justification
-4. Palindrome Pairs
-5. Design File System
+1. Cheapest Flights Within K Stops
+1. Text Justification
+1. Palindrome Pairs
+1. Design File System
 
 ## Review Modules
 

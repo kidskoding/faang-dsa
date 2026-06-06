@@ -7,32 +7,32 @@ Focus: broad pattern recognition, trees, BFS/DFS, heaps, intervals, sliding wind
 ## Warmups
 
 1. Two Sum
-2. Valid Parentheses
-3. Merge Two Sorted Lists
-4. Maximum Depth of Binary Tree
+1. Valid Parentheses
+1. Merge Two Sorted Lists
+1. Maximum Depth of Binary Tree
 
 ## Core
 
 1. Group Anagrams
-2. Longest Substring Without Repeating Characters
-3. LRU Cache
-4. Number of Islands
-5. Rotting Oranges
-6. Binary Tree Level Order Traversal
-7. Lowest Common Ancestor of a Binary Tree
-8. Kth Largest Element in an Array
-9. Top K Frequent Elements
-10. Meeting Rooms II
-11. Insert Interval
-12. Task Scheduler
+1. Longest Substring Without Repeating Characters
+1. LRU Cache
+1. Number of Islands
+1. Rotting Oranges
+1. Binary Tree Level Order Traversal
+1. Lowest Common Ancestor of a Binary Tree
+1. Kth Largest Element in an Array
+1. Top K Frequent Elements
+1. Meeting Rooms II
+1. Insert Interval
+1. Task Scheduler
 
 ## Stretch
 
 1. Word Ladder
-2. Serialize and Deserialize Binary Tree
-3. Minimum Window Substring
-4. Reorder Data in Log Files
-5. Design In-Memory File System
+1. Serialize and Deserialize Binary Tree
+1. Minimum Window Substring
+1. Reorder Data in Log Files
+1. Design In-Memory File System
 
 ## Review Modules
 

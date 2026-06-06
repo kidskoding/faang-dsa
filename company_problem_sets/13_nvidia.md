@@ -7,32 +7,32 @@ Focus: arrays, graphs, DP, bit manipulation, performance reasoning, and clean lo
 ## Warmups
 
 1. Binary Search
-2. Number of 1 Bits
-3. Single Number
-4. Maximum Subarray
+1. Number of 1 Bits
+1. Single Number
+1. Maximum Subarray
 
 ## Core
 
 1. Product of Array Except Self
-2. Search in Rotated Sorted Array
-3. Koko Eating Bananas
-4. Number of Islands
-5. Clone Graph
-6. Network Delay Time
-7. Coin Change
-8. Longest Increasing Subsequence
-9. Counting Bits
-10. Reverse Bits
-11. Top K Frequent Elements
-12. Merge Intervals
+1. Search in Rotated Sorted Array
+1. Koko Eating Bananas
+1. Number of Islands
+1. Clone Graph
+1. Network Delay Time
+1. Coin Change
+1. Longest Increasing Subsequence
+1. Counting Bits
+1. Reverse Bits
+1. Top K Frequent Elements
+1. Merge Intervals
 
 ## Stretch
 
 1. Shortest Path in Binary Matrix
-2. Edit Distance
-3. Burst Balloons
-4. Count of Smaller Numbers After Self
-5. Range Sum Query Mutable
+1. Edit Distance
+1. Burst Balloons
+1. Count of Smaller Numbers After Self
+1. Range Sum Query Mutable
 
 ## Review Modules
 

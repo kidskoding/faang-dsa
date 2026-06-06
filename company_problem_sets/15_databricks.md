@@ -7,32 +7,32 @@ Focus: harder mediums, graphs, DP, arrays, performance tradeoffs, and precise re
 ## Warmups
 
 1. Subarray Sum Equals K
-2. Binary Search
-3. Number of Islands
-4. Coin Change
+1. Binary Search
+1. Number of Islands
+1. Coin Change
 
 ## Core
 
 1. Minimum Window Substring
-2. Search in Rotated Sorted Array
-3. Koko Eating Bananas
-4. Capacity to Ship Packages
-5. Course Schedule
-6. Network Delay Time
-7. Rotting Oranges
-8. Longest Increasing Subsequence
-9. Longest Common Subsequence
-10. Word Break
-11. Top K Frequent Elements
-12. Merge Intervals
+1. Search in Rotated Sorted Array
+1. Koko Eating Bananas
+1. Capacity to Ship Packages
+1. Course Schedule
+1. Network Delay Time
+1. Rotting Oranges
+1. Longest Increasing Subsequence
+1. Longest Common Subsequence
+1. Word Break
+1. Top K Frequent Elements
+1. Merge Intervals
 
 ## Stretch
 
 1. Alien Dictionary
-2. Edit Distance
-3. Burst Balloons
-4. Count of Smaller Numbers After Self
-5. Serialize and Deserialize Binary Tree
+1. Edit Distance
+1. Burst Balloons
+1. Count of Smaller Numbers After Self
+1. Serialize and Deserialize Binary Tree
 
 ## Review Modules
 

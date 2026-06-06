@@ -1,23 +1,22 @@
 # faang-dsa
 
-DSA prep in Python for internship, co-op, and new-grad live coding interviews.
+dsa prep in Python for internship, co-op, and new-grad live coding interviews at top companies like Google, Facebook, and Bloomberg
 
 ## Goal
 
-This repo is a teaching-first interview prep curriculum. It is organized around reusable live-coding patterns, not broad CS taxonomy. The target is to understand each pattern, implement it cleanly, test it, and recognize it under timed interview conditions.
+This repo is a teaching-first interview prep curriculum. It is organized around reusable live-coding patterns, not broad CS taxonomy. The target is to understand each pattern, implement it cleanly, test it, and recognize it under timed interview conditions
 
 The practical goal is to solve most LeetCode mediums in 25-35 minutes with clear communication, clean complexity analysis, and solid edge-case handling.
 
-## Learning Model
+## Mastery Rule
 
-Each module should eventually have four layers:
+A problem is done only when you can:
 
-1. Concept explanation.
-2. From-scratch implementation.
-3. Module-local tests.
-4. Guided practice through a focused problem set.
-
-Design-style data structure problems belong inside the pattern module that powers them. For example, LRU Cache belongs with linked lists and hash maps; Median Finder belongs with heaps.
+1. explain the pattern
+1. choose the right state, base case, or helper shape
+1. write the core logic cleanly
+1. pass the relevant tests
+1. explain time and space complexity
 
 ## Repository Layout
 
@@ -45,23 +44,23 @@ faang-dsa/
 └── company_problem_sets/
 ```
 
-## Curriculum Order
+## Order to Follow
 
 1. Arrays And Hashing
-2. Two Pointers
-3. Sliding Window
-4. Stack
-5. Binary Search
-6. Linked Lists
-7. Trees
-8. Heaps
-9. Backtracking
-10. Graphs
-11. Dynamic Programming
-12. Greedy
-13. Intervals
-14. Tries
-15. Bit Manipulation
-16. Math And Geometry
-17. Advanced Topics
-18. Mixed Interview Practice
+1. Two Pointers
+1. Sliding Window
+1. Stack
+1. Binary Search
+1. Linked Lists
+1. Trees
+1. Heaps
+1. Backtracking
+1. Graphs
+1. Dynamic Programming
+1. Greedy Algorithms
+1. Intervals
+1. Tries
+1. Bit Manipulation
+1. Math And Geometry
+1. Advanced Topics
+1. Mixed Interview Practice

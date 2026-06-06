@@ -7,32 +7,32 @@ Focus: balanced fundamentals, arrays/maps, trees, BFS/DFS, OOP-style design, and
 ## Warmups
 
 1. Two Sum
-2. Valid Parentheses
-3. Merge Two Sorted Lists
-4. Maximum Depth of Binary Tree
+1. Valid Parentheses
+1. Merge Two Sorted Lists
+1. Maximum Depth of Binary Tree
 
 ## Core
 
 1. Group Anagrams
-2. Product of Array Except Self
-3. Search in Rotated Sorted Array
-4. Validate Binary Search Tree
-5. Binary Tree Level Order Traversal
-6. Number of Islands
-7. Course Schedule
-8. LRU Cache
-9. Min Stack
-10. Meeting Rooms II
-11. Coin Change
-12. Design HashMap
+1. Product of Array Except Self
+1. Search in Rotated Sorted Array
+1. Validate Binary Search Tree
+1. Binary Tree Level Order Traversal
+1. Number of Islands
+1. Course Schedule
+1. LRU Cache
+1. Min Stack
+1. Meeting Rooms II
+1. Coin Change
+1. Design HashMap
 
 ## Stretch
 
 1. Serialize and Deserialize Binary Tree
-2. Word Break
-3. Find Median from Data Stream
-4. Design Browser History
-5. Edit Distance
+1. Word Break
+1. Find Median from Data Stream
+1. Design Browser History
+1. Edit Distance
 
 ## Review Modules
 

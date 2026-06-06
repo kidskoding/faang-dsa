@@ -7,32 +7,32 @@ Focus: correctness under constraints, arrays/maps, graphs, DP, practical modelin
 ## Warmups
 
 1. Two Sum
-2. Valid Anagram
-3. Number of Islands
-4. Climbing Stairs
+1. Valid Anagram
+1. Number of Islands
+1. Climbing Stairs
 
 ## Core
 
 1. Subarray Sum Equals K
-2. Longest Consecutive Sequence
-3. LRU Cache
-4. Course Schedule
-5. Clone Graph
-6. Network Delay Time
-7. Coin Change
-8. Word Break
-9. Top K Frequent Elements
-10. Meeting Rooms II
-11. Time Based Key-Value Store
-12. Design Add and Search Words Data Structure
+1. Longest Consecutive Sequence
+1. LRU Cache
+1. Course Schedule
+1. Clone Graph
+1. Network Delay Time
+1. Coin Change
+1. Word Break
+1. Top K Frequent Elements
+1. Meeting Rooms II
+1. Time Based Key-Value Store
+1. Design Add and Search Words Data Structure
 
 ## Stretch
 
 1. Alien Dictionary
-2. Minimum Window Substring
-3. Serialize and Deserialize Binary Tree
-4. Edit Distance
-5. Design In-Memory File System
+1. Minimum Window Substring
+1. Serialize and Deserialize Binary Tree
+1. Edit Distance
+1. Design In-Memory File System
 
 ## Review Modules
 

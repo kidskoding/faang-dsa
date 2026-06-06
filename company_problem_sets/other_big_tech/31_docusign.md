@@ -7,32 +7,32 @@ Focus: arrays, strings, graphs, trees, hashing, and standard problem solving.
 ## Warmups
 
 1. Two Sum
-2. Valid Parentheses
-3. Valid Anagram
-4. Merge Intervals
+1. Valid Parentheses
+1. Valid Anagram
+1. Merge Intervals
 
 ## Core
 
 1. LRU Cache
-2. Number of Islands
-3. Course Schedule
-4. Product of Array Except Self
-5. Kth Largest Element in an Array
-6. Binary Tree Level Order Traversal
-7. Top K Frequent Elements
-8. Validate Binary Search Tree
-9. Coin Change
-10. Meeting Rooms II
-11. Clone Graph
-12. Search in Rotated Sorted Array
+1. Number of Islands
+1. Course Schedule
+1. Product of Array Except Self
+1. Kth Largest Element in an Array
+1. Binary Tree Level Order Traversal
+1. Top K Frequent Elements
+1. Validate Binary Search Tree
+1. Coin Change
+1. Meeting Rooms II
+1. Clone Graph
+1. Search in Rotated Sorted Array
 
 ## Stretch
 
 1. Serialize and Deserialize Binary Tree
-2. Word Break
-3. Time Based Key-Value Store
-4. Design HashMap
-5. Minimum Window Substring
+1. Word Break
+1. Time Based Key-Value Store
+1. Design HashMap
+1. Minimum Window Substring
 
 ## Review Modules
 

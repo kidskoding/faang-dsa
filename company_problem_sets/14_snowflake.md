@@ -7,32 +7,32 @@ Focus: data structures, graphs, DP, intervals, heaps, performance, and system-ad
 ## Warmups
 
 1. Two Sum
-2. Merge Intervals
-3. Number of Islands
-4. Kth Largest Element in an Array
+1. Merge Intervals
+1. Number of Islands
+1. Kth Largest Element in an Array
 
 ## Core
 
 1. LRU Cache
-2. Time Based Key-Value Store
-3. Top K Frequent Elements
-4. Meeting Rooms II
-5. Course Schedule
-6. Network Delay Time
-7. Clone Graph
-8. Coin Change
-9. Longest Increasing Subsequence
-10. Subarray Sum Equals K
-11. Koko Eating Bananas
-12. Merge K Sorted Lists
+1. Time Based Key-Value Store
+1. Top K Frequent Elements
+1. Meeting Rooms II
+1. Course Schedule
+1. Network Delay Time
+1. Clone Graph
+1. Coin Change
+1. Longest Increasing Subsequence
+1. Subarray Sum Equals K
+1. Koko Eating Bananas
+1. Merge K Sorted Lists
 
 ## Stretch
 
 1. Design In-Memory File System
-2. Alien Dictionary
-3. Count of Smaller Numbers After Self
-4. Edit Distance
-5. Range Sum Query Mutable
+1. Alien Dictionary
+1. Count of Smaller Numbers After Self
+1. Edit Distance
+1. Range Sum Query Mutable
 
 ## Review Modules
 

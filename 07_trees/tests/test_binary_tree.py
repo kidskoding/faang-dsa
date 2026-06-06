@@ -1,4 +1,3 @@
-from tree_node import TreeNode
 from binary_tree import (
     build_tree_from_level_order,
     count_nodes,
@@ -6,6 +5,7 @@ from binary_tree import (
     is_leaf,
     tree_to_level_order,
 )
+from tree_node import TreeNode
 
 
 def test_tree_node_defaults_to_no_children():
