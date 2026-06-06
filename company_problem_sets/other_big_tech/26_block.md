@@ -40,6 +40,6 @@ Focus: hashing, intervals, trees, heaps, graphs, and core interview problem solv
 - `02_two_pointers/`
 - `03_sliding_window/`
 - `04_stack/`
-- `09_heaps/`
-- `08_graphs/`
+- `08_heaps/`
+- `10_graphs/`
 - `07_trees/`

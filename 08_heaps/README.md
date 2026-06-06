@@ -1,4 +1,4 @@
-# Module 09: Heaps
+# Module 08: Heaps
 
 ## Goal
 

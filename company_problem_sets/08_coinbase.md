@@ -39,7 +39,7 @@ Focus: correctness under constraints, arrays/maps, graphs, DP, practical modelin
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`
 - `03_sliding_window/`
-- `08_graphs/`
+- `10_graphs/`
 - `11_dp/`
-- `09_heaps/`
+- `08_heaps/`
 - `14_tries/`

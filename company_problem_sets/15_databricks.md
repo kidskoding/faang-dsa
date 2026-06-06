@@ -37,9 +37,9 @@ Focus: harder mediums, graphs, DP, arrays, performance tradeoffs, and precise re
 ## Review Modules
 
 - `05_binary_search/`
-- `08_graphs/`
+- `10_graphs/`
 - `11_dp/`
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`
 - `03_sliding_window/`
-- `09_heaps/`
+- `08_heaps/`

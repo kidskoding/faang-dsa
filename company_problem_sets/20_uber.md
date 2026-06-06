@@ -36,8 +36,8 @@ Focus: graphs, heaps, intervals, maps, practical modeling, and fast implementati
 
 ## Review Modules
 
-- `08_graphs/`
-- `09_heaps/`
+- `10_graphs/`
+- `08_heaps/`
 - `13_intervals/`
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`

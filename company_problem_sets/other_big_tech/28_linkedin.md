@@ -40,6 +40,6 @@ Focus: graphs, trees, arrays, DP, heaps, and clean problem solving.
 - `02_two_pointers/`
 - `03_sliding_window/`
 - `04_stack/`
-- `08_graphs/`
-- `09_heaps/`
+- `10_graphs/`
+- `08_heaps/`
 - `07_trees/`

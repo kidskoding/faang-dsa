@@ -39,7 +39,7 @@ Focus: data structures, graphs, DP, intervals, heaps, performance, and system-ad
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`
 - `03_sliding_window/`
-- `09_heaps/`
+- `08_heaps/`
 - `13_intervals/`
-- `08_graphs/`
+- `10_graphs/`
 - `11_dp/`

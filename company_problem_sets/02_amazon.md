@@ -40,6 +40,6 @@ Focus: broad pattern recognition, trees, BFS/DFS, heaps, intervals, sliding wind
 - `02_two_pointers/`
 - `03_sliding_window/`
 - `07_trees/`
-- `08_graphs/`
-- `09_heaps/`
+- `10_graphs/`
+- `08_heaps/`
 - `13_intervals/`

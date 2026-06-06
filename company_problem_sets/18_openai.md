@@ -37,7 +37,7 @@ Focus: deep reasoning, graphs, DP, trees, search, optimization, and clean abstra
 ## Review Modules
 
 - `07_trees/`
-- `08_graphs/`
+- `10_graphs/`
 - `11_dp/`
-- `10_backtracking/`
+- `09_backtracking/`
 - `05_binary_search/`

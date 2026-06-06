@@ -40,5 +40,5 @@ Focus: arrays, strings, hashes, trees, graphs, heaps, and clean implementation.
 - `02_two_pointers/`
 - `03_sliding_window/`
 - `07_trees/`
-- `08_graphs/`
-- `09_heaps/`
+- `10_graphs/`
+- `08_heaps/`

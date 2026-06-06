@@ -1,4 +1,4 @@
-# Module 10: Backtracking
+# Module 09: Backtracking
 
 ## Goal
 

@@ -31,9 +31,9 @@ faang-dsa/
 ├── 05_binary_search/
 ├── 06_linked_lists/
 ├── 07_trees/
-├── 08_graphs/
-├── 09_heaps/
-├── 10_backtracking/
+├── 08_heaps/
+├── 09_backtracking/
+├── 10_graphs/
 ├── 11_dp/
 ├── 12_greedy/
 ├── 13_intervals/
@@ -54,9 +54,9 @@ faang-dsa/
 5. Binary Search
 6. Linked Lists
 7. Trees
-8. Graphs
-9. Heaps
-10. Backtracking
+8. Heaps
+9. Backtracking
+10. Graphs
 11. Dynamic Programming
 12. Greedy
 13. Intervals

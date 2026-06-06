@@ -32,9 +32,9 @@ faang-dsa/
 ├── 05_binary_search/
 ├── 06_linked_lists/
 ├── 07_trees/
-├── 08_graphs/
-├── 09_heaps/
-├── 10_backtracking/
+├── 08_heaps/
+├── 09_backtracking/
+├── 10_graphs/
 ├── 11_dp/
 ├── 12_greedy/
 ├── 13_intervals/
@@ -54,7 +54,7 @@ Highest interview review priority:
 
 1. Arrays, strings, hash maps, sets, prefix sums, two pointers, sliding window
 2. Stacks/queues, binary search, trees
-3. Graphs/grids, heaps, intervals
+3. Heaps, backtracking, graphs/grids, intervals
 4. Backtracking, DP, greedy
 5. Linked lists and tries
 6. Union find, shortest paths, sorting internals, and advanced structures after the core is reliable

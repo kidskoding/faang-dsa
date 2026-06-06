@@ -40,5 +40,5 @@ Focus: balanced fundamentals, arrays/maps, trees, BFS/DFS, OOP-style design, and
 - `02_two_pointers/`
 - `03_sliding_window/`
 - `07_trees/`
-- `08_graphs/`
+- `10_graphs/`
 - `11_dp/`

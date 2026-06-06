@@ -40,6 +40,6 @@ Focus: strings, arrays, graphs, trees, hashing, and core interview algorithms.
 - `02_two_pointers/`
 - `03_sliding_window/`
 - `04_stack/`
-- `08_graphs/`
-- `09_heaps/`
+- `10_graphs/`
+- `08_heaps/`
 - `07_trees/`

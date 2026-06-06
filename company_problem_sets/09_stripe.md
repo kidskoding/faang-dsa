@@ -49,4 +49,4 @@ Stripe interviews are not LeetCode-style in the usual sense. Stripe interviews t
 - `05_hashing_and_sets/`
 - `07_trees/`
 - `13_intervals/`
-- `08_graphs/`
+- `10_graphs/`

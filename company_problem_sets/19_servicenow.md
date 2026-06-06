@@ -40,5 +40,5 @@ Focus: fundamentals, arrays/maps, trees, BFS/DFS, practical design, and reliable
 - `02_two_pointers/`
 - `03_sliding_window/`
 - `07_trees/`
-- `08_graphs/`
+- `10_graphs/`
 - `11_dp/`

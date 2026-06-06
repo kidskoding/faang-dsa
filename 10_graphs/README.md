@@ -1,4 +1,4 @@
-# Module 08: Graphs
+# Module 10: Graphs
 
 ## Topics
 

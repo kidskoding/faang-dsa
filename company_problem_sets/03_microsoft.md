@@ -41,5 +41,5 @@ Focus: balanced fundamentals, trees, arrays, DP, design-style coding, and clear 
 - `03_sliding_window/`
 - `06_linked_lists/`
 - `07_trees/`
-- `08_graphs/`
+- `10_graphs/`
 - `11_dp/`

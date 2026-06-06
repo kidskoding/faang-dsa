@@ -41,5 +41,5 @@ Focus: fundamentals, clean implementation, trees, graphs, DP basics, and practic
 - `03_sliding_window/`
 - `06_linked_lists/`
 - `07_trees/`
-- `08_graphs/`
+- `10_graphs/`
 - `11_dp/`

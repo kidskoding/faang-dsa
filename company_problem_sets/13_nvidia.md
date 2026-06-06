@@ -39,7 +39,7 @@ Focus: arrays, graphs, DP, bit manipulation, performance reasoning, and clean lo
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`
 - `03_sliding_window/`
-- `08_graphs/`
+- `10_graphs/`
 - `11_dp/`
 - `15_bit_manipulation/`
 - `17_advanced/`

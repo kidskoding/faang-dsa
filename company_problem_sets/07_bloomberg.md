@@ -41,5 +41,5 @@ Focus: practical coding, strings/maps, trees, linked lists, heaps, and implement
 - `03_sliding_window/`
 - `06_linked_lists/`
 - `07_trees/`
-- `09_heaps/`
+- `08_heaps/`
 - `04_stack/`

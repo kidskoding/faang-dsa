@@ -19,9 +19,9 @@ Use this live-coding-first module order:
 6. `05_binary_search`
 7. `06_linked_lists`
 8. `07_trees`
-9. `08_graphs`
-10. `09_heaps`
-11. `10_backtracking`
+9. `08_heaps`
+10. `09_backtracking`
+11. `10_graphs`
 12. `11_dp`
 13. `12_greedy`
 14. `13_intervals`
@@ -72,7 +72,7 @@ When creating stubs:
 4. Leave `NotImplementedError` in place until the user is ready to implement.
 5. Match test names to the function names and workbook sections.
 
-For `08_graphs`, split traversal files by context:
+For `10_graphs`, split traversal files by context:
 
 1. `graph_representations.py`
 2. `graph_bfs.py`

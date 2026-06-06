@@ -41,4 +41,4 @@ Focus: fundamentals, arrays/maps, trees, SQL-adjacent data modeling style, and o
 - `03_sliding_window/`
 - `06_linked_lists/`
 - `07_trees/`
-- `08_graphs/`
+- `10_graphs/`

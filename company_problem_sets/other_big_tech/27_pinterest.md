@@ -40,6 +40,6 @@ Focus: strings, graphs, trees, heaps, backtracking, and standard interview probl
 - `02_two_pointers/`
 - `03_sliding_window/`
 - `04_stack/`
-- `09_heaps/`
-- `08_graphs/`
+- `08_heaps/`
+- `10_graphs/`
 - `07_trees/`

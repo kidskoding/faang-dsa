@@ -40,5 +40,5 @@ Focus: strings, graphs, trees, heaps, backtracking, and clean implementation.
 - `02_two_pointers/`
 - `03_sliding_window/`
 - `04_stack/`
-- `08_graphs/`
+- `10_graphs/`
 - `07_trees/`

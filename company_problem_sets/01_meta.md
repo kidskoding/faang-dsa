@@ -40,5 +40,5 @@ Focus: speed, arrays, strings, trees, graphs, heaps, and backtracking.
 - `02_two_pointers/`
 - `03_sliding_window/`
 - `07_trees/`
-- `08_graphs/`
-- `09_heaps/`
+- `10_graphs/`
+- `08_heaps/`

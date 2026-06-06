@@ -41,4 +41,4 @@ Focus: fundamentals, arrays/maps, strings, trees, BFS/DFS, and reliable communic
 - `03_sliding_window/`
 - `04_stack/`
 - `07_trees/`
-- `08_graphs/`
+- `10_graphs/`

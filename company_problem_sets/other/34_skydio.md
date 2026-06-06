@@ -38,7 +38,7 @@ Focus: arrays, hash tables, strings, heaps, math, BFS/DFS, binary search, greedy
 - `03_sliding_window/`
 - `05_binary_search/`
 - `06_linked_lists/`
-- `09_heaps/`
-- `08_graphs/`
+- `08_heaps/`
+- `10_graphs/`
 - `12_greedy/`
 - `16_math_geometry/`
