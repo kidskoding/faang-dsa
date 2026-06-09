@@ -1,4 +1,4 @@
-# Slack Problem Set
+# Slack (a Salesforce Company) Problem Set
 
 Slack Problem Set - Commonly reported LeetCode-style patterns for Slack SWE interviews
 
