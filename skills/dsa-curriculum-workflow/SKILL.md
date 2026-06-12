@@ -67,6 +67,20 @@ Do not put a `Mastery Rule` section inside individual problem set workbooks. The
 1. Do not repeat the global mastery rule in module READMEs unless the user explicitly asks for a module-specific variant.
 1. If the module README lists LeetCode problems, include the associated LeetCode link beside the workbook link.
 
+## Company Problem Set Rules
+
+Company-specific files in `company_problem_sets/` should use one direct problem list:
+
+1. Use `## Problem Set` as the only problem-list section.
+1. Do not use `Warmups`, `Core`, `Stretch`, or `Major LeetCode Problems` headings.
+1. List the main high-signal LeetCode-style problems directly.
+1. Do not force a fixed problem count. Use as many problems as needed to cover the company's core live-coding techniques.
+1. Larger target companies can have broader sets; smaller or secondary sets can be shorter if coverage is still strong.
+1. Avoid excessive cross-company overlap. Repeat only deliberate anchor problems, and keep most company lists distinct by emphasizing that company's strongest patterns.
+1. If many company files start sharing the same generic problems, replace lower-signal repeats with different high-signal problems from the same technique family.
+1. Do not claim the list is an exact interview question dump.
+1. Keep `## Review Modules` after the problem list.
+
 ## File Organization Rules
 
 1. Keep filenames importable and stable.

@@ -76,7 +76,7 @@ Guided practice belongs inside the numbered module folder that teaches the conce
 
 Tests belong inside the numbered module folder that owns the concept. Do not create a separate top-level `tests/` folder.
 
-Company-specific drilling belongs in `company_problem_sets/`. These should be curated practice plans, not claims about exact company interview questions.
+Company-specific drilling belongs in `company_problem_sets/`. These should be curated practice plans, not claims about exact company interview questions. Company files should use one `## Problem Set` section with the main high-signal LeetCode-style problems, followed by `## Review Modules`; do not split company files into `Warmups`, `Core`, `Stretch`, or `Major LeetCode Problems`. Do not force a fixed problem count; include enough problems to cover the company's core live-coding techniques. Avoid excessive cross-company overlap by repeating only deliberate anchor problems and otherwise choosing different high-signal problems from the same technique family.
 
 ______________________________________________________________________
 
