@@ -4,35 +4,39 @@ ServiceNow Problem Set - Commonly reported LeetCode/HackerRank/live-coding patte
 
 Focus: fundamentals, arrays/maps, trees, BFS/DFS, practical design, and reliable implementation.
 
-## Warmups
-
-1. Two Sum
-1. Valid Parentheses
-1. Merge Two Sorted Lists
-1. Maximum Depth of Binary Tree
-
-## Core
+## Problem Set
 
 1. Group Anagrams
-1. Longest Substring Without Repeating Characters
-1. Product of Array Except Self
-1. Merge Intervals
-1. Search in Rotated Sorted Array
-1. Binary Tree Level Order Traversal
-1. Validate Binary Search Tree
-1. Number of Islands
-1. Course Schedule
-1. LRU Cache
-1. Design HashMap
-1. Coin Change
-
-## Stretch
-
-1. Serialize and Deserialize Binary Tree
-1. Meeting Rooms II
-1. Time Based Key-Value Store
-1. Word Break
-1. Find Median from Data Stream
+2. Contains Duplicate III
+3. Remove Covered Intervals
+4. Valid Parentheses
+5. Min Stack
+6. Envelope Nesting
+7. Spiral Matrix
+8. Optimal Account Balancing
+9. Design Circular Deque
+10. Rotate Array
+11. Design Browser History
+12. Design HashMap
+13. Design Underground System
+14. Sort Colors
+15. Minimum Obstacle Removal to Reach Corner
+16. Redundant Connection
+17. Move Zeroes
+18. Contains Duplicate
+19. Construct Binary Tree from Inorder and Postorder Traversal
+20. Permutation Sequence
+21. Best Time to Buy and Sell Stock IV
+22. Find K Pairs with Smallest Sums
+23. Divide Two Integers
+24. Number of Enclaves
+25. House Robber
+26. Best Time to Buy and Sell Stock II
+27. Plus One
+28. Perfect Squares
+29. Find All Numbers Disappeared in an Array
+30. Encode and Decode Strings
+31. Logger Rate Limiter
 
 ## Review Modules
 

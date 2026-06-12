@@ -4,35 +4,44 @@ Uber Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns fo
 
 Focus: graphs, heaps, intervals, maps, practical modeling, and fast implementation.
 
-## Warmups
+## Problem Set
 
-1. Two Sum
-1. Merge Intervals
-1. Number of Islands
-1. Kth Largest Element in an Array
-
-## Core
-
-1. LRU Cache
-1. Time Based Key-Value Store
-1. Meeting Rooms II
-1. Insert Interval
-1. Top K Frequent Elements
-1. Merge K Sorted Lists
-1. Clone Graph
-1. Rotting Oranges
-1. Network Delay Time
-1. Course Schedule
-1. Minimum Window Substring
-1. Koko Eating Bananas
-
-## Stretch
-
-1. Cheapest Flights Within K Stops
 1. Design Underground System
-1. Alien Dictionary
-1. Find Median from Data Stream
-1. Serialize and Deserialize Binary Tree
+2. Design Hit Counter
+3. Move Zeroes
+4. Design Linked List
+5. Rotate Array
+6. Car Pooling
+7. Redundant Connection II
+8. Minimum Moves to Reach Target with Rotations
+9. Employee Free Time
+10. Sort Colors
+11. Contains Duplicate
+12. Shortest Path in Binary Matrix
+13. Kth Smallest Element in a BST
+14. Game of Life
+15. Add Binary
+16. Cheapest Flights Within K Stops
+17. Reconstruct Itinerary
+18. First Missing Positive
+19. Minimum Cost to Connect All Points
+20. Critical Connections in a Network
+21. Majority Element
+22. Video Stitching
+23. Minimum Window Subsequence
+24. Design Twitter
+25. Longest Palindromic Substring
+26. Best Time to Buy and Sell Stock IV
+27. IPO
+28. Reverse Bits
+29. Word Search
+30. Subsets
+31. Closed Island
+32. Best Time to Buy and Sell Stock II
+33. Plus One
+34. Partition Equal Subset Sum
+35. Find All Numbers Disappeared in an Array
+36. Logger Rate Limiter
 
 ## Review Modules
 

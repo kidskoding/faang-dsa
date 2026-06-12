@@ -4,35 +4,44 @@ Apple Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns f
 
 Focus: clean code, arrays/strings, trees, graphs, low-level reasoning, and edge cases.
 
-## Warmups
+## Problem Set
 
 1. Valid Palindrome
-1. Reverse String
-1. Merge Two Sorted Lists
-1. Maximum Depth of Binary Tree
-
-## Core
-
-1. Product of Array Except Self
-1. String to Integer
-1. Longest Substring Without Repeating Characters
-1. Search in Rotated Sorted Array
-1. Validate Binary Search Tree
-1. Binary Tree Right Side View
-1. Number of Islands
-1. Clone Graph
-1. LRU Cache
-1. Kth Largest Element in an Array
-1. Meeting Rooms II
-1. Coin Change
-
-## Stretch
-
-1. Serialize and Deserialize Binary Tree
-1. Word Search
-1. Find Median from Data Stream
-1. Basic Calculator
-1. Design Hit Counter
+2. Reverse String
+3. Reverse Words in a String
+4. String Compression
+5. Longest Substring Without Repeating Characters
+6. Minimum Window Substring
+7. Product of Array Except Self
+8. Find All Anagrams in a String
+9. Sliding Window Maximum
+10. Daily Temperatures
+11. Search in Rotated Sorted Array
+12. Find Minimum in Rotated Sorted Array
+13. Median of Two Sorted Arrays
+14. Kth Largest Element in an Array
+15. Top K Frequent Elements
+16. LRU Cache
+17. Min Stack
+18. Design Circular Queue
+19. Flatten Nested List Iterator
+20. Binary Tree Zigzag Level Order Traversal
+21. Validate Binary Search Tree
+22. Lowest Common Ancestor of a Binary Tree
+23. Serialize and Deserialize Binary Tree
+24. Number of Islands
+25. Flood Fill
+26. Course Schedule
+27. Clone Graph
+28. Word Search
+29. Generate Parentheses
+30. Subsets
+31. Coin Change
+32. Longest Increasing Subsequence
+33. Edit Distance
+34. Trapping Rain Water
+35. Merge Intervals
+36. Meeting Rooms II
 
 ## Review Modules
 

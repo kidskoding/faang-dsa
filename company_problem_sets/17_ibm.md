@@ -4,35 +4,38 @@ IBM Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for
 
 Focus: fundamentals, clean implementation, trees, graphs, DP basics, and practical design.
 
-## Warmups
+## Problem Set
 
-1. Two Sum
-1. Reverse Linked List
-1. Valid Parentheses
-1. Climbing Stairs
-
-## Core
-
-1. Group Anagrams
-1. Product of Array Except Self
-1. Search in Rotated Sorted Array
-1. Merge Intervals
-1. Validate Binary Search Tree
-1. Binary Tree Level Order Traversal
-1. Number of Islands
-1. Course Schedule
-1. LRU Cache
-1. Coin Change
-1. Add Two Numbers
-1. Top K Frequent Elements
-
-## Stretch
-
-1. Serialize and Deserialize Binary Tree
-1. Word Break
-1. Design HashMap
-1. Meeting Rooms II
-1. Edit Distance
+1. Valid Anagram
+2. Valid Palindrome
+3. Group Anagrams
+4. Product of Array Except Self
+5. My Calendar III
+6. The Skyline Problem
+7. Valid Parentheses
+8. Min Stack
+9. Merge Two Sorted Lists
+10. Reverse Linked List
+11. Linked List Cycle
+12. Search in Rotated Sorted Array
+13. Minimum Difficulty of a Job Schedule
+14. Best Time to Buy and Sell Stock IV
+15. Maximum Depth of Binary Tree
+16. Smallest Range Covering Elements from K Lists
+17. Majority Element
+18. Contains Duplicate
+19. Longest Subarray of 1's After Deleting One Element
+20. Sum Root to Leaf Numbers
+21. Minimum Cost to Reach Destination in Time
+22. Insert Interval
+23. Find the City With the Smallest Number of Neighbors at a Threshold Distance
+24. Surrounded Regions
+25. House Robber
+26. Maximum Subarray
+27. Sudoku Solver
+28. Implement Stack using Queues
+29. Design HashMap
+30. Best Time to Buy and Sell Stock
 
 ## Review Modules
 

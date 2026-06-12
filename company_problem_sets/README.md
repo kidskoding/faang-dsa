@@ -8,10 +8,10 @@ They are not claimed to be exact interview question lists. They are company-tune
 
 For a company-focused week:
 
-1. Do the warmups quickly to prime the patterns.
-1. Solve the core set with a 35-minute timer per problem.
+1. Work through the company `Problem Set` in order.
+1. Use a 35-minute timer per problem for live-coding practice.
 1. Review missed problems after 3-7 days.
-1. Do the stretch set only after the core set is solid.
+1. Revisit the matching `Review Modules` when a pattern is weak.
 
 ## Target Companies
 
@@ -36,11 +36,11 @@ For a company-focused week:
 - [19. ServiceNow](19_servicenow.md)
 - [20. Uber](20_uber.md)
 
-## Other Big Tech
+## Other Tech Companies
 
 Additional company sets that are useful if you want more LeetCode-style practice beyond the original 20 targets.
 
-- [Other Big Tech Index](other_big_tech/README.md)
+- [Other Tech Companies Index](other_tech_companies/README.md)
 
 ## Other Companies
 

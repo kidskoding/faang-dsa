@@ -4,35 +4,41 @@ Coinbase Problem Set - Commonly reported LeetCode/HackerRank/live-coding pattern
 
 Focus: correctness under constraints, arrays/maps, graphs, DP, practical modeling, and clean state.
 
-## Warmups
+## Problem Set
 
-1. Two Sum
-1. Valid Anagram
-1. Number of Islands
-1. Climbing Stairs
-
-## Core
-
-1. Subarray Sum Equals K
-1. Longest Consecutive Sequence
-1. LRU Cache
-1. Course Schedule
-1. Clone Graph
-1. Network Delay Time
-1. Coin Change
-1. Word Break
-1. Top K Frequent Elements
-1. Meeting Rooms II
 1. Time Based Key-Value Store
-1. Design Add and Search Words Data Structure
-
-## Stretch
-
-1. Alien Dictionary
-1. Minimum Window Substring
-1. Serialize and Deserialize Binary Tree
-1. Edit Distance
-1. Design In-Memory File System
+2. Insert Delete GetRandom O(1)
+3. LRU Cache
+4. Design Add and Search Words Data Structure
+5. Design HashMap
+6. Design Underground System
+7. Accounts Merge
+8. Evaluate Division
+9. Network Delay Time
+10. Cheapest Flights Within K Stops
+11. Alien Dictionary
+12. Course Schedule
+13. Clone Graph
+14. Number of Islands
+15. Word Ladder
+16. Minimum Window Substring
+17. Longest Consecutive Sequence
+18. Subarray Sum Equals K
+19. Product of Array Except Self
+20. Top K Frequent Elements
+21. Kth Largest Element in an Array
+22. Meeting Rooms II
+23. Merge Intervals
+24. Validate Binary Search Tree
+25. Serialize and Deserialize Binary Tree
+26. Coin Change
+27. Word Break
+28. Edit Distance
+29. Best Time to Buy and Sell Stock with Transaction Fee
+30. Random Pick with Weight
+31. Find Median from Data Stream
+32. Design In-Memory File System
+33. Logger Rate Limiter
 
 ## Review Modules
 

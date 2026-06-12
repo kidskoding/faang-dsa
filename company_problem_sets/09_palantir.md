@@ -4,37 +4,44 @@ Palantir Problem Set - Commonly reported LeetCode/HackerRank/live-coding pattern
 
 Focus: arrays/maps, graph traversal, intervals, trees, simulation, practical state modeling, and clear implementation under changing requirements.
 
-## Warmups
+## Problem Set
 
-1. Two Sum
-1. Valid Anagram
-1. Merge Intervals
-1. Number of Islands
-
-## Core
-
-1. Group Anagrams
-1. Product of Array Except Self
-1. Insert Interval
-1. Meeting Rooms II
 1. Valid Sudoku
-1. LRU Cache
-1. Clone Graph
-1. Course Schedule
-1. Rotting Oranges
-1. Word Ladder
-1. Validate Binary Search Tree
-1. Binary Tree Level Order Traversal
-1. Time Based Key-Value Store
-1. Design Underground System
-
-## Stretch
-
-1. Serialize and Deserialize Binary Tree
-1. Alien Dictionary
-1. Minimum Window Substring
-1. Reconstruct Itinerary
-1. Design In-Memory File System
+2. Design Underground System
+3. Design In-Memory File System
+4. Time Based Key-Value Store
+5. LRU Cache
+6. Insert Delete GetRandom O(1)
+7. Merge Intervals
+8. Insert Interval
+9. Meeting Rooms II
+10. Car Pooling
+11. Employee Free Time
+12. Best Time to Buy and Sell Stock II
+13. Rotting Oranges
+14. Clone Graph
+15. Course Schedule
+16. Word Ladder
+17. Reconstruct Itinerary
+18. Network Delay Time
+19. Alien Dictionary
+20. Find Eventual Safe States
+21. All Paths From Source to Target
+22. Binary Tree Level Order Traversal
+23. Validate Binary Search Tree
+24. Serialize and Deserialize Binary Tree
+25. Lowest Common Ancestor of a Binary Tree
+26. Word Search
+27. Subsets
+28. Permutations
+29. Coin Change
+30. Word Break
+31. Longest Increasing Subsequence
+32. Minimum Window Substring
+33. Basic Calculator II
+34. Logger Rate Limiter
+35. Accounts Merge
+36. Analyze User Website Visit Pattern
 
 ## Review Modules
 

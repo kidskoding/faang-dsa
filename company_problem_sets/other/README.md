@@ -4,4 +4,4 @@ These are additional company-specific sets that are useful for upcoming screens 
 
 ## Companies
 
-- [34. Skydio](34_skydio.md)
+- [Skydio](skydio.md)

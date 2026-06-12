@@ -4,35 +4,42 @@ Databricks Problem Set - Commonly reported LeetCode/HackerRank/live-coding patte
 
 Focus: harder mediums, graphs, DP, arrays, performance tradeoffs, and precise reasoning.
 
-## Warmups
+## Problem Set
 
-1. Subarray Sum Equals K
-1. Binary Search
-1. Number of Islands
-1. Coin Change
-
-## Core
-
-1. Minimum Window Substring
-1. Search in Rotated Sorted Array
-1. Koko Eating Bananas
-1. Capacity to Ship Packages
-1. Course Schedule
-1. Network Delay Time
-1. Rotting Oranges
-1. Longest Increasing Subsequence
-1. Longest Common Subsequence
-1. Word Break
-1. Top K Frequent Elements
-1. Merge Intervals
-
-## Stretch
-
-1. Alien Dictionary
-1. Edit Distance
-1. Burst Balloons
-1. Count of Smaller Numbers After Self
-1. Serialize and Deserialize Binary Tree
+1. Design In-Memory File System
+2. Design Search Autocomplete System
+3. Time Based Key-Value Store
+4. Maximal Rectangle
+5. Logger Rate Limiter
+6. Accounts Merge
+7. Evaluate Division
+8. Reconstruct Itinerary
+9. Alien Dictionary
+10. Network Delay Time
+11. Path Sum II
+12. Fruit Into Baskets
+13. Contains Duplicate II
+14. Rotting Oranges
+15. Word Search II
+16. Design Add and Search Words Data Structure
+17. Group Anagrams
+18. Top K Frequent Elements
+19. My Calendar I
+20. Longest Consecutive Sequence
+21. Valid Number
+22. Path with Maximum Probability
+23. Count Subtrees With Max Distance Between Cities
+24. Binary Tree Level Order Traversal
+25. Sqrt(x)
+26. Design Front Middle Back Queue
+27. Max Area of Island
+28. Word Break
+29. Longest Increasing Subsequence
+30. Edit Distance
+31. Unique Paths II
+32. Insert Delete GetRandom O(1)
+33. Minimum Cost to Connect All Points
+34. Critical Connections in a Network
 
 ## Review Modules
 

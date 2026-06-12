@@ -4,35 +4,42 @@ Airbnb Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns 
 
 Focus: graphs, backtracking, practical modeling, strings, intervals, and design-style coding.
 
-## Warmups
-
-1. Two Sum
-1. Valid Parentheses
-1. Merge Intervals
-1. Number of Islands
-
-## Core
+## Problem Set
 
 1. Alien Dictionary
-1. Word Search
-1. Word Search II
-1. Course Schedule
-1. Clone Graph
-1. Meeting Rooms II
-1. Insert Interval
-1. Minimum Window Substring
-1. Group Anagrams
-1. LRU Cache
-1. Design Search Autocomplete System
-1. Serialize and Deserialize Binary Tree
-
-## Stretch
-
-1. Sliding Puzzle
-1. Cheapest Flights Within K Stops
-1. Text Justification
-1. Palindrome Pairs
-1. Design File System
+2. File System
+3. Design In-Memory File System
+4. Design Search Autocomplete System
+5. Palindrome Pairs
+6. Text Justification
+7. Pour Water
+8. Sliding Puzzle
+9. Cheapest Flights Within K Stops
+10. Reconstruct Itinerary
+11. Evaluate Division
+12. Accounts Merge
+13. Number of Islands
+14. Shortest Path in Binary Matrix
+15. Word Ladder
+16. Word Ladder II
+17. Optimal Account Balancing
+18. Minimum Window Substring
+19. Group Anagrams
+20. Subarray Sum Equals K
+21. LRU Cache
+22. Time Based Key-Value Store
+23. Insert Delete GetRandom O(1)
+24. Meeting Rooms II
+25. Employee Free Time
+26. Interval List Intersections
+27. Serialize and Deserialize Binary Tree
+28. Lowest Common Ancestor of a Binary Tree
+29. Word Search II
+30. Combination Sum
+31. Subsets
+32. Find Median from Data Stream
+33. Random Pick with Weight
+34. Flatten Nested List Iterator
 
 ## Review Modules
 

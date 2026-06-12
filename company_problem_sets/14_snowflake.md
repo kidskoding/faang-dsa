@@ -4,35 +4,41 @@ Snowflake Problem Set - Commonly reported LeetCode/HackerRank/live-coding patter
 
 Focus: data structures, graphs, DP, intervals, heaps, performance, and system-adjacent reasoning.
 
-## Warmups
+## Problem Set
 
-1. Two Sum
-1. Merge Intervals
-1. Number of Islands
-1. Kth Largest Element in an Array
-
-## Core
-
-1. LRU Cache
 1. Time Based Key-Value Store
-1. Top K Frequent Elements
-1. Meeting Rooms II
-1. Course Schedule
-1. Network Delay Time
-1. Clone Graph
-1. Coin Change
-1. Longest Increasing Subsequence
-1. Subarray Sum Equals K
-1. Koko Eating Bananas
-1. Merge K Sorted Lists
-
-## Stretch
-
-1. Design In-Memory File System
-1. Alien Dictionary
-1. Count of Smaller Numbers After Self
-1. Edit Distance
-1. Range Sum Query Mutable
+2. Design In-Memory File System
+3. Design Search Autocomplete System
+4. Design Add and Search Words Data Structure
+5. Largest Rectangle in Histogram
+6. Insert Delete GetRandom O(1)
+7. Logger Rate Limiter
+8. Accounts Merge
+9. Evaluate Division
+10. Alien Dictionary
+11. Network Delay Time
+12. Path Sum
+13. Minimum Size Subarray Sum
+14. Contains Duplicate
+15. Rotting Oranges
+16. Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree
+17. Path With Minimum Effort
+18. Interval List Intersections
+19. Group Anagrams
+20. Top K Frequent Elements
+21. Subarray Sum Equals K
+22. Longest Consecutive Sequence
+23. Palindrome Number
+24. Predict the Winner
+25. Binary Tree Level Order Traversal
+26. Design Skiplist
+27. Minimize Max Distance to Gas Station
+28. All Nodes Distance K in Binary Tree
+29. Word Break
+30. Longest Increasing Subsequence
+31. Edit Distance
+32. Unique Paths
+33. Design Underground System
 
 ## Review Modules
 

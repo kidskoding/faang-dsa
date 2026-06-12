@@ -4,35 +4,45 @@ OpenAI Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns 
 
 Focus: deep reasoning, graphs, DP, trees, search, optimization, and clean abstractions.
 
-## Warmups
+## Problem Set
 
-1. Number of Islands
-1. Binary Search
-1. Subsets
-1. Coin Change
-
-## Core
-
-1. Binary Tree Maximum Path Sum
-1. Serialize and Deserialize Binary Tree
-1. Word Search
-1. Course Schedule
-1. Network Delay Time
-1. Shortest Path in Binary Matrix
-1. Longest Increasing Subsequence
-1. Longest Common Subsequence
-1. Word Break
-1. Koko Eating Bananas
-1. Minimum Window Substring
-1. LRU Cache
-
-## Stretch
-
-1. Alien Dictionary
-1. Edit Distance
-1. Burst Balloons
-1. Word Search II
-1. Count of Smaller Numbers After Self
+1. Compare Version Numbers
+2. Minimum Interval to Include Each Query
+3. Russian Doll Envelopes
+4. Triangle
+5. Queue Reconstruction by Height
+6. Time Based Key-Value Store
+7. Design In-Memory File System
+8. Design Search Autocomplete System
+9. Move Zeroes
+10. Majority Element II
+11. Contains Duplicate
+12. Shortest Path in Binary Matrix
+13. Max Consecutive Ones III
+14. Construct Binary Tree from Preorder and Inorder Traversal
+15. Game of Life
+16. Word Ladder
+17. Network Delay Time
+18. Critical Connections in a Network
+19. Shortest Path to Get All Keys
+20. Longest Increasing Path in a Matrix
+21. Binary Tree Maximum Path Sum
+22. Pow(x, n)
+23. Lowest Common Ancestor of a Binary Tree
+24. Word Search II
+25. N-Queens
+26. Sudoku Solver
+27. Regular Expression Matching
+28. Multiply Strings
+29. Burst Balloons
+30. Cherry Pickup
+31. Design Twitter
+32. Accounts Merge
+33. Random Pick with Weight
+34. Basic Calculator
+35. Expression Add Operators
+36. Minimum Cost to Make at Least One Valid Path in a Grid
+37. Swim in Rising Water
 
 ## Review Modules
 
