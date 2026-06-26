@@ -360,34 +360,34 @@ These problems teach MSTs, low-link DFS, offline connectivity, and advanced grap
 If you want the shortest path to graph fluency, do these first. This is only the priority path, not the full problem set.
 
 ```text
-1. Flood Fill
-2. Number Of Islands
-3. Max Area Of Island
-4. Rotting Oranges
-5. Walls And Gates
-6. 01 Matrix
-7. Shortest Path In Binary Matrix
-8. Find If Path Exists In Graph
-9. Clone Graph
-10. Course Schedule
-11. Course Schedule II
-12. Is Graph Bipartite
-13. Graph Valid Tree
-14. Redundant Connection
-15. Surrounded Regions
-16. Pacific Atlantic Water Flow
-17. Shortest Bridge
-18. Word Ladder
-19. Evaluate Division
-20. Network Delay Time
-21. Cheapest Flights Within K Stops
-22. Path With Minimum Effort
-23. Min Cost To Connect All Points
-24. Reconstruct Itinerary
-25. Critical Connections In A Network
-26. Longest Increasing Path In A Matrix
-27. Minimum Cost To Make At Least One Valid Path In A Grid
-28. Shortest Path To Get All Keys
-29. Bus Routes
-30. Word Ladder II
+1. [Flood Fill](https://leetcode.com/problems/flood-fill/)
+2. [Number Of Islands](https://leetcode.com/problems/number-of-islands/)
+3. [Max Area Of Island](https://leetcode.com/problems/max-area-of-island/)
+4. [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
+5. [Walls And Gates](https://leetcode.com/problems/walls-and-gates/)
+6. [01 Matrix](https://leetcode.com/problems/01-matrix/)
+7. [Shortest Path In Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)
+8. [Find If Path Exists In Graph](https://leetcode.com/problems/find-if-path-exists-in-graph/)
+9. [Clone Graph](https://leetcode.com/problems/clone-graph/)
+10. [Course Schedule](https://leetcode.com/problems/course-schedule/)
+11. [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
+12. [Is Graph Bipartite](https://leetcode.com/problems/is-graph-bipartite/)
+13. [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)
+14. [Redundant Connection](https://leetcode.com/problems/redundant-connection/)
+15. [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
+16. [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
+17. [Shortest Bridge](https://leetcode.com/problems/shortest-bridge/)
+18. [Word Ladder](https://leetcode.com/problems/word-ladder/)
+19. [Evaluate Division](https://leetcode.com/problems/evaluate-division/)
+20. [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+21. [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
+22. [Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)
+23. [Min Cost To Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
+24. [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)
+25. [Critical Connections In A Network](https://leetcode.com/problems/critical-connections-in-a-network/)
+26. [Longest Increasing Path In A Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
+27. [Minimum Cost To Make At Least One Valid Path In A Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)
+28. [Shortest Path To Get All Keys](https://leetcode.com/problems/shortest-path-to-get-all-keys/)
+29. [Bus Routes](https://leetcode.com/problems/bus-routes/)
+30. [Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)
 ```

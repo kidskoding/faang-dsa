@@ -1,41 +1,41 @@
-# GitHub Problem Set
+# GitHub
 
-GitHub Problem Set - Commonly reported LeetCode-style patterns for GitHub SWE interviews
+GitHub - Commonly reported LeetCode-style patterns for GitHub SWE interviews
 
 Focus: graphs, trees, arrays, hashing, and clean interview algorithms.
 
 ## Problem Set
 
-1. String to Integer (atoi)
-2. Add Binary
-3. Majority Element II
-4. Longest Consecutive Sequence
-5. Maximum Product Subarray
-6. Campus Bikes II
-7. Sudoku Solver
-8. Roman to Integer
-9. Rotate Image
-10. Design File System
-11. Flatten a Multilevel Doubly Linked List
-12. Missing Number
-13. Integer to Roman
-14. Reverse Integer
-15. Multiply Strings
-16. Target Sum
-17. Recover Binary Search Tree
-18. Valid Sudoku
-19. Best Time to Buy and Sell Stock with Transaction Fee
-20. K Closest Points to Origin
-21. Maximum Subarray
-22. Minimum Number of Arrows to Burst Balloons
-23. Parallel Courses III
-24. Shortest Path Visiting All Nodes
-25. Best Time to Buy and Sell Stock III
-26. House Robber II
-27. First Missing Positive
-28. Remove Duplicate Letters
-29. Integer to English Words
-30. Palindrome Number
+1. [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)
+2. [Add Binary](https://leetcode.com/problems/add-binary/)
+3. [Majority Element II](https://leetcode.com/problems/majority-element-ii/)
+4. [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+5. [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
+6. [Campus Bikes II](https://leetcode.com/problems/campus-bikes-ii/)
+7. [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
+8. [Roman to Integer](https://leetcode.com/problems/roman-to-integer/)
+9. [Rotate Image](https://leetcode.com/problems/rotate-image/)
+10. [Design File System](https://leetcode.com/problems/design-file-system/)
+11. [Flatten a Multilevel Doubly Linked List](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/)
+12. [Missing Number](https://leetcode.com/problems/missing-number/)
+13. [Integer to Roman](https://leetcode.com/problems/integer-to-roman/)
+14. [Reverse Integer](https://leetcode.com/problems/reverse-integer/)
+15. [Multiply Strings](https://leetcode.com/problems/multiply-strings/)
+16. [Target Sum](https://leetcode.com/problems/target-sum/)
+17. [Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/)
+18. [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
+19. [Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
+20. [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
+21. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+22. [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
+23. [Parallel Courses III](https://leetcode.com/problems/parallel-courses-iii/)
+24. [Shortest Path Visiting All Nodes](https://leetcode.com/problems/shortest-path-visiting-all-nodes/)
+25. [Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)
+26. [House Robber II](https://leetcode.com/problems/house-robber-ii/)
+27. [First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
+28. [Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/)
+29. [Integer to English Words](https://leetcode.com/problems/integer-to-english-words/)
+30. [Palindrome Number](https://leetcode.com/problems/palindrome-number/)
 
 ## Review Modules
 

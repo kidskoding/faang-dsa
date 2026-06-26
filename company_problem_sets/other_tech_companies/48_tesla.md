@@ -1,6 +1,6 @@
-# Tesla Problem Set
+# Tesla
 
-Tesla Problem Set - Major LeetCode-style problems to drill for Tesla SWE interviews
+Tesla - Major LeetCode-style problems to drill for Tesla SWE interviews
 
 Focus: graph search, grid pathfinding, binary search, heaps, greedy scheduling, intervals, trees, and DP.
 
@@ -8,36 +8,36 @@ These are not guaranteed exact interview questions. Treat this as the high-signa
 
 ## Problem Set
 
-1. Shortest Path in Binary Matrix
-2. Path With Minimum Effort
-3. Swim in Rising Water
-4. Network Delay Time
-5. Cheapest Flights Within K Stops
-6. Minimum Cost to Connect All Points
-7. Critical Connections in a Network
-8. Number of Islands
-9. Rotting Oranges
-10. Flood Fill
-11. Course Schedule
-12. Clone Graph
-13. Koko Eating Bananas
-14. Capacity To Ship Packages Within D Days
-15. Find Peak Element
-16. Search in Rotated Sorted Array
-17. Kth Largest Element in an Array
-18. Sliding Window Maximum
-19. Task Scheduler
-20. Car Pooling
-21. Meeting Rooms II
-22. Merge Intervals
-23. Binary Tree Level Order Traversal
-24. Validate Binary Search Tree
-25. Coin Change
-26. Longest Increasing Subsequence
-27. Maximum Subarray
-28. Product of Array Except Self
-29. Find Median from Data Stream
-30. LRU Cache
+1. [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)
+2. [Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)
+3. [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
+4. [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+5. [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
+6. [Minimum Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
+7. [Critical Connections in a Network](https://leetcode.com/problems/critical-connections-in-a-network/)
+8. [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+9. [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
+10. [Flood Fill](https://leetcode.com/problems/flood-fill/)
+11. [Course Schedule](https://leetcode.com/problems/course-schedule/)
+12. [Clone Graph](https://leetcode.com/problems/clone-graph/)
+13. [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
+14. [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
+15. [Find Peak Element](https://leetcode.com/problems/find-peak-element/)
+16. [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+17. [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+18. [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+19. [Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+20. [Car Pooling](https://leetcode.com/problems/car-pooling/)
+21. [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
+22. [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+23. [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+24. [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+25. [Coin Change](https://leetcode.com/problems/coin-change/)
+26. [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+27. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+28. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+29. [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+30. [LRU Cache](https://leetcode.com/problems/lru-cache/)
 
 ## Review Modules
 

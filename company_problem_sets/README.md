@@ -1,6 +1,6 @@
 # Company Problem Sets
 
-These are curated practice sets for the 20 target companies.
+These are curated practice problem sets targeted towards 20 of the biggest top tech companies.
 
 They are not claimed to be exact interview question lists. They are company-tuned drills based on the LeetCode-style patterns that matter for rigorous SWE internship interviews: arrays, strings, hashing, trees, graphs, DP, binary search, heaps, intervals, backtracking, and clean implementation.
 
@@ -9,9 +9,9 @@ They are not claimed to be exact interview question lists. They are company-tune
 For a company-focused week:
 
 1. Work through the company `Problem Set` in order.
-1. Use a 35-minute timer per problem for live-coding practice.
-1. Review missed problems after 3-7 days.
-1. Revisit the matching `Review Modules` when a pattern is weak.
+2. Use a 35-minute timer per problem for live-coding practice.
+3. Review missed problems after 3-7 days.
+4. Revisit the matching `Review Modules` when a pattern is weak.
 
 ## Target Companies
 

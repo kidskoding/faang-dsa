@@ -1,44 +1,44 @@
-# NVIDIA Problem Set
+# NVIDIA
 
-NVIDIA Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for NVIDIA SWE interviews
+NVIDIA - Commonly reported LeetCode/HackerRank/live-coding patterns for NVIDIA SWE interviews
 
 Focus: arrays, graphs, DP, bit manipulation, performance reasoning, and clean low-level logic.
 
 ## Problem Set
 
-1. Binary Search
-2. Search in Rotated Sorted Array
-3. Find Peak Element
-4. Find Minimum in Rotated Sorted Array
-5. Median of Two Sorted Arrays
-6. Kth Largest Element in an Array
-7. Top K Frequent Elements
-8. Product of Array Except Self
-9. Maximum Subarray
-10. Best Time to Buy and Sell Stock
-11. Trapping Rain Water
-12. Container With Most Water
-13. Best Time to Buy and Sell Stock with Transaction Fee
-14. Rotting Oranges
-15. Subarray Sums Divisible by K
-16. Balanced Binary Tree
-17. Network Delay Time
-18. Cheapest Flights Within K Stops
-19. Critical Connections in a Network
-20. Path With Minimum Effort
-21. Swim in Rising Water
-22. Min Cost to Connect All Points
-23. Binary Tree Level Order Traversal
-24. Validate Binary Search Tree
-25. Smallest Subtree with all the Deepest Nodes
-26. Longest Increasing Subsequence
-27. Edit Distance
-28. Find Median from Data Stream
-29. Design Circular Queue
-30. Online Stock Span
-31. Reverse Integer
-32. Sparse Matrix Multiplication
-33. Set Matrix Zeroes
+1. [Binary Search](https://leetcode.com/problems/binary-search/)
+2. [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+3. [Find Peak Element](https://leetcode.com/problems/find-peak-element/)
+4. [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+5. [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+6. [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+7. [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+8. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+9. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+10. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+11. [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+12. [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
+13. [Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
+14. [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
+15. [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/)
+16. [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+17. [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+18. [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
+19. [Critical Connections in a Network](https://leetcode.com/problems/critical-connections-in-a-network/)
+20. [Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)
+21. [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
+22. [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
+23. [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+24. [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+25. [Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
+26. [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+27. [Edit Distance](https://leetcode.com/problems/edit-distance/)
+28. [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+29. [Design Circular Queue](https://leetcode.com/problems/design-circular-queue/)
+30. [Online Stock Span](https://leetcode.com/problems/online-stock-span/)
+31. [Reverse Integer](https://leetcode.com/problems/reverse-integer/)
+32. [Sparse Matrix Multiplication](https://leetcode.com/problems/sparse-matrix-multiplication/)
+33. [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
 
 ## Review Modules
 

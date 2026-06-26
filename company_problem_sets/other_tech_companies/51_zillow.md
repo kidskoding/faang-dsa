@@ -1,6 +1,6 @@
-# Zillow Problem Set
+# Zillow
 
-Zillow Problem Set - Major LeetCode-style problems to drill for Zillow SWE interviews
+Zillow - Major LeetCode-style problems to drill for Zillow SWE interviews
 
 Focus: search/ranking, heaps, intervals, grids, graph traversal, maps, trees, and DP.
 
@@ -8,36 +8,36 @@ These are not guaranteed exact interview questions. Treat this as the high-signa
 
 ## Problem Set
 
-1. K Closest Points to Origin
-2. Find K Closest Elements
-3. Top K Frequent Elements
-4. Search Suggestions System
-5. Design Search Autocomplete System
-6. Group Anagrams
-7. Minimum Window Substring
-8. Product of Array Except Self
-9. Subarray Sum Equals K
-10. Merge Intervals
-11. Insert Interval
-12. Meeting Rooms II
-13. Employee Free Time
-14. Number of Islands
-15. Rotting Oranges
-16. Shortest Path in Binary Matrix
-17. Course Schedule
-18. Clone Graph
-19. Network Delay Time
-20. Binary Tree Vertical Order Traversal
-21. Validate Binary Search Tree
-22. Serialize and Deserialize Binary Tree
-23. LRU Cache
-24. Time Based Key-Value Store
-25. Design Underground System
-26. Coin Change
-27. Word Break
-28. Find Median from Data Stream
-29. Random Pick with Weight
-30. Accounts Merge
+1. [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
+2. [Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)
+3. [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+4. [Search Suggestions System](https://leetcode.com/problems/search-suggestions-system/)
+5. [Design Search Autocomplete System](https://leetcode.com/problems/design-search-autocomplete-system/)
+6. [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+7. [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+8. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+9. [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+10. [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+11. [Insert Interval](https://leetcode.com/problems/insert-interval/)
+12. [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
+13. [Employee Free Time](https://leetcode.com/problems/employee-free-time/)
+14. [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+15. [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
+16. [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)
+17. [Course Schedule](https://leetcode.com/problems/course-schedule/)
+18. [Clone Graph](https://leetcode.com/problems/clone-graph/)
+19. [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+20. [Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/)
+21. [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+22. [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+23. [LRU Cache](https://leetcode.com/problems/lru-cache/)
+24. [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)
+25. [Design Underground System](https://leetcode.com/problems/design-underground-system/)
+26. [Coin Change](https://leetcode.com/problems/coin-change/)
+27. [Word Break](https://leetcode.com/problems/word-break/)
+28. [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+29. [Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)
+30. [Accounts Merge](https://leetcode.com/problems/accounts-merge/)
 
 ## Review Modules
 

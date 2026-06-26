@@ -20,6 +20,7 @@ wrap = 88
 
 [tool.pytest.ini_options]
 pythonpath = [
+    "06_linked_lists",
     "07_trees",
     "other/problem_sets/01_grid_bfs",
 ]

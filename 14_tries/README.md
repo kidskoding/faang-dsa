@@ -1,10 +1,6 @@
 # Module 14: Tries
 
-## Goal
-
-Learn prefix trees for string lookup, prefix search, and word-grid problems.
-
-## Lessons
+## Topics
 
 - Trie nodes
 - Insert and search
@@ -12,13 +8,17 @@ Learn prefix trees for string lookup, prefix search, and word-grid problems.
 - Word dictionary patterns
 - Trie plus DFS
 
-## Guided Practice
+## Notes
 
-Add practice files under this folder as the topic grows:
+1. [Trie Basics](notes/01_trie_basics.md)
+2. [Word Dictionary Patterns](notes/02_word_dictionary.md)
+3. [Trie Plus DFS](notes/03_trie_plus_dfs.md)
 
-```text
-practice/warmups/
-practice/core/
-practice/follow_ups/
-practice/review/
-```
+## Problem Set
+
+The canonical problem set for this module still needs to be added.
+
+## Additional Notes
+
+- Read the notes first, then drill the module problem set once it exists.
+- Keep implementation files and tests grouped by the same patterns as the notes.

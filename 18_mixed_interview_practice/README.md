@@ -1,20 +1,25 @@
 # Module 18: Mixed Interview Practice
 
-## Goal
+## Topics
 
-Practice like the real interview: no topic labels, no hints, and a strict time box.
+- Timed solving
+- Pattern recognition
+- Explanation practice
+- Review loops
+- Mock interviews
 
-## Weekly Loop
+## Notes
 
-1. Pick 6-10 mixed problems across arrays, linked lists, stacks, binary search, trees, graphs, heaps, backtracking, and DP.
-1. Solve each with a 35-minute timer.
-1. After each problem, write the missed pattern or bug in the relevant module folder.
-1. Re-solve missed problems 3-7 days later.
-1. Do one mock interview where you explain before and during coding.
+1. [Timed Solving](notes/01_timed_solving.md)
+2. [Pattern Review](notes/02_pattern_review.md)
+3. [Mock Interviews](notes/03_mock_interviews.md)
 
-## Ready Signal
+## Problem Set
 
-- Easy problems: 10-15 minutes
-- Medium problems: 25-35 minutes
-- Hard problems: meaningful progress and a clear intended direction
-- Consistent explanation of brute force, optimized approach, complexity, and edge cases
+The canonical problem set for this module still needs to be added.
+
+## Additional Notes
+
+- Read the notes first, then drill the module problem set once it exists.
+- Keep implementation files and tests grouped by the same patterns as the notes.
+- The overall prep strategy lives in `00_fundamentals/notes/01_how_to_prep.md`.

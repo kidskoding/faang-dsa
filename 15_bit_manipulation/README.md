@@ -1,10 +1,6 @@
 # Module 15: Bit Manipulation
 
-## Goal
-
-Learn binary operations and the interview tricks built on masks, shifts, and XOR.
-
-## Lessons
+## Topics
 
 - Bitwise operators
 - Masks
@@ -13,13 +9,18 @@ Learn binary operations and the interview tricks built on masks, shifts, and XOR
 - Counting bits
 - Subset masks
 
-## Guided Practice
+## Notes
 
-Add practice files under this folder as the topic grows:
+1. [Bitwise Basics](notes/01_bitwise_basics.md)
+2. [Masks](notes/02_masks.md)
+3. [XOR Patterns](notes/03_xor_patterns.md)
+4. [Subset Masks](notes/04_subset_masks.md)
 
-```text
-practice/warmups/
-practice/core/
-practice/follow_ups/
-practice/review/
-```
+## Problem Set
+
+The canonical problem set for this module still needs to be added.
+
+## Additional Notes
+
+- Read the notes first, then drill the module problem set once it exists.
+- Keep implementation files and tests grouped by the same patterns as the notes.

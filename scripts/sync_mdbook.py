@@ -1,134 +1,173 @@
 from __future__ import annotations
 
+import re
 import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_DIR = ROOT / "book-src"
+BOOK_SRC = ROOT / "book-src"
+
+EXCLUDED_PARTS = {
+    ".git",
+    ".venv",
+    ".pytest_cache",
+    ".ruff_cache",
+    "book",
+    "book-src",
+    "__pycache__",
+}
 
 
-def existing_markdown_files() -> list[Path]:
-    excluded_parts = {".git", ".venv", ".pytest_cache", "book", "book-src"}
-    paths: set[Path] = set()
-    for path in ROOT.rglob("*.md"):
-        if any(part.startswith(".") or part in excluded_parts for part in path.parts):
-            continue
-        paths.add(path.relative_to(ROOT))
-    return sorted(paths)
+def title_from_markdown(path: Path) -> str:
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if line.startswith("# "):
+            return line[2:].strip()
+    return title_from_path(path)
 
 
-def chapter_line(title: str, path: Path) -> str:
-    return f"- [{title}]({path.as_posix()})"
+def title_from_path(path: Path) -> str:
+    stem = path.stem
+    stem = re.sub(r"^\d+_", "", stem)
+    return stem.replace("_", " ").replace("-", " ").title()
+
+
+def should_copy(path: Path) -> bool:
+    if path.suffix != ".md":
+        return False
+    if any(part in EXCLUDED_PARTS or part.startswith(".") for part in path.parts):
+        return False
+    return True
 
 
 def copy_markdown_sources() -> None:
-    if SOURCE_DIR.exists():
-        shutil.rmtree(SOURCE_DIR)
-    SOURCE_DIR.mkdir(parents=True, exist_ok=True)
+    if BOOK_SRC.exists():
+        shutil.rmtree(BOOK_SRC)
+    BOOK_SRC.mkdir(parents=True, exist_ok=True)
 
-    for source in existing_markdown_files():
-        target = SOURCE_DIR / ("index.md" if source.as_posix() == "README.md" else source)
+    for source in sorted(ROOT.rglob("*.md")):
+        rel = source.relative_to(ROOT)
+        if not should_copy(rel):
+            continue
+
+        target_rel = Path("index.md") if rel.as_posix() == "README.md" else rel
+        target = BOOK_SRC / target_rel
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text((ROOT / source).read_text(encoding="utf-8"), encoding="utf-8")
+        target.write_text(source.read_text(encoding="utf-8"), encoding="utf-8")
+
+
+def summary_link(title: str, path: Path | None, indent: int = 0) -> str:
+    spaces = "  " * indent
+    if path is None:
+        return f"{spaces}- [{title}]()"
+    return f"{spaces}- [{title}]({path.as_posix()})"
+
+
+def module_dirs() -> list[Path]:
+    return sorted(
+        path
+        for path in ROOT.iterdir()
+        if path.is_dir() and re.match(r"^\d{2}_", path.name)
+    )
+
+
+def module_summary_lines(module: Path) -> list[str]:
+    lines: list[str] = []
+    readme = module / "README.md"
+    if not readme.exists():
+        return lines
+
+    module_rel = readme.relative_to(ROOT)
+    lines.append(summary_link(title_from_markdown(readme), module_rel))
+
+    notes_dir = module / "notes"
+    if notes_dir.exists():
+        for note in sorted(notes_dir.glob("*.md")):
+            lines.append(summary_link(title_from_markdown(note), note.relative_to(ROOT), 1))
+
+    problem_set_dir = module / "problem_set"
+    if problem_set_dir.exists():
+        for problem_set in sorted(problem_set_dir.glob("*.md")):
+            lines.append(
+                summary_link(title_from_markdown(problem_set), problem_set.relative_to(ROOT), 1)
+            )
+
+    return lines
+
+
+def company_summary_lines() -> list[str]:
+    lines: list[str] = []
+    root = ROOT / "company_problem_sets"
+    readme = root / "README.md"
+    if not readme.exists():
+        return lines
+
+    lines.append(summary_link("Company Problem Sets", readme.relative_to(ROOT)))
+
+    for path in sorted(root.glob("[0-9][0-9]_*.md")):
+        lines.append(summary_link(title_from_markdown(path), path.relative_to(ROOT), 1))
+
+    other_tech = root / "other_tech_companies"
+    other_tech_readme = other_tech / "README.md"
+    if other_tech_readme.exists():
+        lines.append(summary_link(title_from_markdown(other_tech_readme), other_tech_readme.relative_to(ROOT), 1))
+        for path in sorted(other_tech.glob("[0-9][0-9]_*.md")):
+            lines.append(summary_link(title_from_markdown(path), path.relative_to(ROOT), 2))
+
+    other = root / "other"
+    other_readme = other / "README.md"
+    if other_readme.exists():
+        lines.append(summary_link(title_from_markdown(other_readme), other_readme.relative_to(ROOT), 1))
+        for path in sorted(other.glob("*.md")):
+            if path.name == "README.md":
+                continue
+            lines.append(summary_link(title_from_markdown(path), path.relative_to(ROOT), 2))
+
+    return lines
+
+
+def other_practice_lines() -> list[str]:
+    lines: list[str] = []
+    root = ROOT / "other" / "problem_sets"
+    if not root.exists():
+        return lines
+    for path in sorted(root.rglob("*.md")):
+        lines.append(summary_link(title_from_markdown(path), path.relative_to(ROOT)))
+    return lines
 
 
 def write_summary() -> None:
-    summary_path = SOURCE_DIR / "SUMMARY.md"
     lines: list[str] = ["# Summary", ""]
 
-    sections: list[tuple[str, list[tuple[str, str]]]] = [
-        ("Introduction", [("Home", "index.md")]),
-        (
-            "Foundations",
-            [
-                ("Overview", "00_fundamentals/README.md"),
-                ("Time and Space Complexity", "00_fundamentals/time_and_space_complexity.md"),
-                ("Common Operation Costs", "00_fundamentals/common_operation_costs.md"),
-                ("Interview Problem Solving", "00_fundamentals/interview_problem_solving.md"),
-                ("Python Basics", "00_fundamentals/python_basics.md"),
-            ],
-        ),
-        (
-            "Patterns",
-            [
-                ("Arrays and Hashing", "01_arrays_and_hashing/README.md"),
-                ("Two Pointers", "02_two_pointers/README.md"),
-                ("Sliding Window", "03_sliding_window/README.md"),
-                ("Stack", "04_stack/README.md"),
-                ("Binary Search", "05_binary_search/README.md"),
-                ("Linked Lists", "06_linked_lists/README.md"),
-                ("Trees", "07_trees/README.md"),
-                ("Heaps", "08_heaps/README.md"),
-                ("Backtracking", "09_backtracking/README.md"),
-                ("Graphs", "10_graphs/README.md"),
-                ("Dynamic Programming", "11_dp/README.md"),
-                ("Greedy Algorithms", "12_greedy_algorithms/README.md"),
-                ("Intervals", "13_intervals/README.md"),
-                ("Tries", "14_tries/README.md"),
-                ("Bit Manipulation", "15_bit_manipulation/README.md"),
-                ("Math and Geometry", "16_math_geometry/README.md"),
-                ("Advanced Topics", "17_advanced/README.md"),
-                ("Mixed Interview Practice", "18_mixed_interview_practice/README.md"),
-            ],
-        ),
-        (
-            "Company Practice",
-            [
-                ("Overview", "company_problem_sets/README.md"),
-                ("Meta", "company_problem_sets/01_meta.md"),
-                ("Amazon", "company_problem_sets/02_amazon.md"),
-                ("Microsoft", "company_problem_sets/03_microsoft.md"),
-                ("Apple", "company_problem_sets/04_apple.md"),
-                ("Google", "company_problem_sets/05_google.md"),
-                ("Airbnb", "company_problem_sets/06_airbnb.md"),
-                ("Bloomberg", "company_problem_sets/07_bloomberg.md"),
-                ("Coinbase", "company_problem_sets/08_coinbase.md"),
-                ("Palantir", "company_problem_sets/09_palantir.md"),
-                ("Salesforce", "company_problem_sets/10_salesforce.md"),
-                ("TikTok / ByteDance", "company_problem_sets/11_tiktok_bytedance.md"),
-                ("Oracle", "company_problem_sets/12_oracle.md"),
-                ("NVIDIA", "company_problem_sets/13_nvidia.md"),
-                ("Snowflake", "company_problem_sets/14_snowflake.md"),
-                ("Databricks", "company_problem_sets/15_databricks.md"),
-                ("Capital One", "company_problem_sets/16_capital_one.md"),
-                ("IBM", "company_problem_sets/17_ibm.md"),
-                ("OpenAI", "company_problem_sets/18_openai.md"),
-                ("ServiceNow", "company_problem_sets/19_servicenow.md"),
-                ("Uber", "company_problem_sets/20_uber.md"),
-                ("Other Big Tech", "company_problem_sets/other_big_tech/README.md"),
-                ("Other Companies", "company_problem_sets/other/README.md"),
-            ],
-        ),
-        (
-            "Practice Sets",
-            [
-                ("Trees Problem Set", "07_trees/problem_set/TREE_PROBLEM_SET.md"),
-                ("Graph Problem Set", "10_graphs/problem_set/GRAPH_PROBLEM_SET.md"),
-                ("Grid BFS Problem Set", "other/problem_sets/01_grid_bfs/BFS_GRID_PROBLEM_SET.md"),
-            ],
-        ),
-        (
-            "Skill Guides",
-            [
-                ("Curriculum Workflow", "skills/dsa-curriculum-workflow/SKILL.md"),
-                ("Module Workbooks", "skills/dsa-module-workbooks/SKILL.md"),
-                ("Module Readme Template", "skills/module-readme-template/SKILL.md"),
-            ],
-        ),
-        ("Contributor Notes", [("CLAUDE", "CLAUDE.md")]),
-    ]
+    lines.append(summary_link("Home", Path("index.md")))
+    lines.append("")
 
-    for section_title, chapters in sections:
-        lines.append(f"## {section_title}")
+    lines.append("# Curriculum")
+    lines.append("")
+    for module in module_dirs():
+        lines.extend(module_summary_lines(module))
+    lines.append("")
+
+    company_lines = company_summary_lines()
+    if company_lines:
+        lines.append("# Company Practice")
         lines.append("")
-        for chapter_title, chapter_path in chapters:
-            if (SOURCE_DIR / chapter_path).exists():
-                lines.append(chapter_line(chapter_title, Path(chapter_path)))
+        lines.extend(company_lines)
         lines.append("")
 
-    summary_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    practice_lines = other_practice_lines()
+    if practice_lines:
+        lines.append("# Other Practice")
+        lines.append("")
+        lines.extend(practice_lines)
+        lines.append("")
+
+    (BOOK_SRC / "SUMMARY.md").write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+
+
+def main() -> None:
+    copy_markdown_sources()
+    write_summary()
 
 
 if __name__ == "__main__":
-    copy_markdown_sources()
-    write_summary()
+    main()

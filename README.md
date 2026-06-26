@@ -13,10 +13,22 @@ The practical goal is to solve most LeetCode mediums in 25-35 minutes with clear
 A problem is done only when you can:
 
 1. explain the pattern
-1. choose the right state, base case, or helper shape
-1. write the core logic cleanly
-1. pass the relevant tests
-1. explain time and space complexity
+2. choose the right state, base case, or helper shape
+3. write the core logic cleanly
+4. pass the relevant tests
+5. explain time and space complexity
+
+## How To Prep
+
+Start with [General Technical Interview Preparation](00_fundamentals/notes/01_how_to_prep.md) before choosing a module or company problem set.
+
+The short version:
+
+```text
+learn pattern -> solve timed problems -> review misses -> re-solve -> mix topics
+```
+
+The notes are for understanding. The problem sets are for reps. The review loop is what makes the patterns automatic.
 
 ## Repository Layout
 
@@ -34,7 +46,7 @@ faang-dsa/
 ├── 09_backtracking/
 ├── 10_graphs/
 ├── 11_dp/
-├── 12_greedy/
+├── 12_greedy_algorithms/
 ├── 13_intervals/
 ├── 14_tries/
 ├── 15_bit_manipulation/
@@ -47,20 +59,20 @@ faang-dsa/
 ## Order to Follow
 
 1. Arrays And Hashing
-1. Two Pointers
-1. Sliding Window
-1. Stack
-1. Binary Search
-1. Linked Lists
-1. Trees
-1. Heaps
-1. Backtracking
-1. Graphs
-1. Dynamic Programming
-1. Greedy Algorithms
-1. Intervals
-1. Tries
-1. Bit Manipulation
-1. Math And Geometry
-1. Advanced Topics
-1. Mixed Interview Practice
+2. Two Pointers
+3. Sliding Window
+4. Stack
+5. Binary Search
+6. Linked Lists
+7. Trees
+8. Heaps
+9. Backtracking
+10. Graphs
+11. Dynamic Programming
+12. Greedy Algorithms
+13. Intervals
+14. Tries
+15. Bit Manipulation
+16. Math And Geometry
+17. Advanced Topics
+18. Mixed Interview Practice

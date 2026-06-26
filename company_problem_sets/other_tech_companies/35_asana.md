@@ -1,6 +1,6 @@
-# Asana Problem Set
+# Asana
 
-Asana Problem Set - Major LeetCode-style problems to drill for Asana SWE interviews
+Asana - Major LeetCode-style problems to drill for Asana SWE interviews
 
 Focus: task graphs, topological ordering, intervals, strings, design data structures, heaps, and DP.
 
@@ -8,36 +8,36 @@ These are not guaranteed exact interview questions. Treat this as the high-signa
 
 ## Problem Set
 
-1. Task Scheduler
-2. Course Schedule II
-3. Course Schedule IV
-4. Find Eventual Safe States
-5. All Paths From Source to Target
-6. Reconstruct Itinerary
-7. Meeting Rooms II
-8. Employee Free Time
-9. Insert Interval
-10. My Calendar II
-11. Time Based Key-Value Store
-12. Design Hit Counter
-13. Logger Rate Limiter
-14. LRU Cache
-15. Group Anagrams
-16. Minimum Window Substring
-17. Subarray Sum Equals K
-18. Top K Frequent Words
-19. Kth Largest Element in a Stream
-20. Binary Tree Right Side View
-21. Validate Binary Search Tree
-22. Accounts Merge
-23. Word Ladder
-24. Alien Dictionary
-25. Coin Change
-26. Word Break
-27. Maximum Profit in Job Scheduling
-28. Design In-Memory File System
-29. Design Search Autocomplete System
-30. Evaluate Division
+1. [Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+2. [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
+3. [Course Schedule IV](https://leetcode.com/problems/course-schedule-iv/)
+4. [Find Eventual Safe States](https://leetcode.com/problems/find-eventual-safe-states/)
+5. [All Paths From Source to Target](https://leetcode.com/problems/all-paths-from-source-to-target/)
+6. [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)
+7. [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
+8. [Employee Free Time](https://leetcode.com/problems/employee-free-time/)
+9. [Insert Interval](https://leetcode.com/problems/insert-interval/)
+10. [My Calendar II](https://leetcode.com/problems/my-calendar-ii/)
+11. [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)
+12. [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/)
+13. [Logger Rate Limiter](https://leetcode.com/problems/logger-rate-limiter/)
+14. [LRU Cache](https://leetcode.com/problems/lru-cache/)
+15. [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+16. [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+17. [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+18. [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)
+19. [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
+20. [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
+21. [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+22. [Accounts Merge](https://leetcode.com/problems/accounts-merge/)
+23. [Word Ladder](https://leetcode.com/problems/word-ladder/)
+24. [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)
+25. [Coin Change](https://leetcode.com/problems/coin-change/)
+26. [Word Break](https://leetcode.com/problems/word-break/)
+27. [Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/)
+28. [Design In-Memory File System](https://leetcode.com/problems/design-in-memory-file-system/)
+29. [Design Search Autocomplete System](https://leetcode.com/problems/design-search-autocomplete-system/)
+30. [Evaluate Division](https://leetcode.com/problems/evaluate-division/)
 
 ## Review Modules
 

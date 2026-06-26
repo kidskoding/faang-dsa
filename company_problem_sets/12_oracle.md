@@ -1,43 +1,43 @@
-# Oracle Problem Set
+# Oracle
 
-Oracle Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for Oracle SWE interviews
+Oracle - Commonly reported LeetCode/HackerRank/live-coding patterns for Oracle SWE interviews
 
 Focus: fundamentals, arrays/maps, trees, SQL-adjacent data modeling style, and object-oriented design.
 
 ## Problem Set
 
-1. Merge Two Sorted Lists
-2. Reverse Linked List
-3. Linked List Cycle
-4. Remove Nth Node From End of List
-5. Add Two Numbers
-6. Valid Parentheses
-7. Min Stack
-8. Implement Queue using Stacks
-9. Design Linked List
-10. Design HashMap
-11. Car Fleet
-12. Search in Rotated Sorted Array
-13. Binary Search
-14. Kth Largest Element in an Array
-15. Binary Tree Level Order Traversal
-16. Maximum Depth of Binary Tree
-17. Validate Binary Search Tree
-18. Lowest Common Ancestor of a Binary Tree
-19. Best Time to Buy and Sell Stock with Cooldown
-20. Rotting Oranges
-21. Clone Graph
-22. Invert Binary Tree
-23. Bricks Falling When Hit
-24. Insert Interval
-25. The Maze III
-26. Count Good Nodes in Binary Tree
-27. House Robber
-28. Word Break
-29. Longest Increasing Subsequence
-30. Product of Array Except Self
-31. Subarray Sum Equals K
-32. Longest Substring Without Repeating Characters
+1. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+2. [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+3. [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+4. [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+5. [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
+6. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+7. [Min Stack](https://leetcode.com/problems/min-stack/)
+8. [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+9. [Design Linked List](https://leetcode.com/problems/design-linked-list/)
+10. [Design HashMap](https://leetcode.com/problems/design-hashmap/)
+11. [Car Fleet](https://leetcode.com/problems/car-fleet/)
+12. [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+13. [Binary Search](https://leetcode.com/problems/binary-search/)
+14. [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+15. [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+16. [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+17. [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+18. [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+19. [Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
+20. [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
+21. [Clone Graph](https://leetcode.com/problems/clone-graph/)
+22. [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
+23. [Bricks Falling When Hit](https://leetcode.com/problems/bricks-falling-when-hit/)
+24. [Insert Interval](https://leetcode.com/problems/insert-interval/)
+25. [The Maze III](https://leetcode.com/problems/the-maze-iii/)
+26. [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/)
+27. [House Robber](https://leetcode.com/problems/house-robber/)
+28. [Word Break](https://leetcode.com/problems/word-break/)
+29. [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+30. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+31. [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+32. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
 ## Review Modules
 

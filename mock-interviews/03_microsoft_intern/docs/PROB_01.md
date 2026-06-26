@@ -1,44 +1,65 @@
-# Diameter Of N-Ary Tree
+# Add Two Numbers
 
-Source: [AlgoMonster 1522](https://algo.monster/liteproblems/1522)
+Source: [LeetCode 2](https://leetcode.com/problems/add-two-numbers/description/)
 
-Given the root of an N-ary tree, return the diameter of the tree.
+You are given two non-empty linked lists representing two non-negative
+integers. The digits are stored in reverse order, and each node contains one
+digit.
 
-The diameter is the length of the longest path between any two nodes. The path
-does not need to pass through the root, and its length is measured by the number
-of edges rather than the number of nodes.
+Add the two numbers and return the sum as a linked list in the same reverse
+order format.
 
-Each node is represented by a `Node` object:
+Each linked list node is represented by a `ListNode` object:
 
 ```python
-class Node:
-    def __init__(self, val=0, children=None):
+class ListNode:
+    def __init__(self, val=0, next=None):
         self.val = val
-        self.children = children if children is not None else []
+        self.next = next
 ```
 
-Example 1:
-    Input:
-        root = [1,null,3,2,4,null,5,6]
-    Output: 3
-    Explanation:
-        One longest path is 5 -> 3 -> 1 -> 2, which contains 3 edges.
+## Examples
 
-Example 2:
-    Input:
-        root = [1,null,2,null,3,null,4]
-    Output: 3
-    Explanation:
-        The tree is a chain from node 1 to node 4.
+### Example 1
 
-Example 3:
-    Input:
-        root = [1]
-    Output: 0
-    Explanation:
-        A single-node tree has no edges.
+```python
+Input:
+l1 = [2, 4, 3]
+l2 = [5, 6, 4]
 
-Constraints:
-    Each node contains an integer value and a list of zero or more children
-    The input forms a valid N-ary tree
-    The diameter is measured in edges
+Output:
+[7, 0, 8]
+
+Explanation:
+342 + 465 = 807.
+```
+
+### Example 2
+
+```python
+Input:
+l1 = [0]
+l2 = [0]
+
+Output:
+[0]
+```
+
+### Example 3
+
+```python
+Input:
+l1 = [9, 9, 9, 9, 9, 9, 9]
+l2 = [9, 9, 9, 9]
+
+Output:
+[8, 9, 9, 9, 0, 0, 0, 1]
+```
+
+## Constraints
+
+```text
+1 <= length of each linked list <= 100
+0 <= Node.val <= 9
+The input lists represent numbers without leading zeroes, except for the number 0 itself
+```

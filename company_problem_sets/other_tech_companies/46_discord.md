@@ -1,6 +1,6 @@
-# Discord Problem Set
+# Discord
 
-Discord Problem Set - Major LeetCode-style problems to drill for Discord SWE interviews
+Discord - Major LeetCode-style problems to drill for Discord SWE interviews
 
 Focus: messaging-style design, rate limits, strings, heaps, graphs, trees, intervals, and DP.
 
@@ -8,36 +8,36 @@ These are not guaranteed exact interview questions. Treat this as the high-signa
 
 ## Problem Set
 
-1. Design Twitter
-2. Logger Rate Limiter
-3. Design Hit Counter
-4. Time Based Key-Value Store
-5. LRU Cache
-6. Insert Delete GetRandom O(1)
-7. Design Search Autocomplete System
-8. Top K Frequent Words
-9. Reorganize String
-10. Task Scheduler
-11. Group Anagrams
-12. Minimum Window Substring
-13. Longest Substring Without Repeating Characters
-14. Number of Islands
-15. Rotting Oranges
-16. Clone Graph
-17. Course Schedule
-18. Word Ladder
-19. Network Delay Time
-20. Accounts Merge
-21. Binary Tree Level Order Traversal
-22. Validate Binary Search Tree
-23. Serialize and Deserialize Binary Tree
-24. Meeting Rooms II
-25. Merge Intervals
-26. Coin Change
-27. Word Break
-28. Find Median from Data Stream
-29. Design Browser History
-30. Minimum Cost to Connect All Points
+1. [Design Twitter](https://leetcode.com/problems/design-twitter/)
+2. [Logger Rate Limiter](https://leetcode.com/problems/logger-rate-limiter/)
+3. [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/)
+4. [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)
+5. [LRU Cache](https://leetcode.com/problems/lru-cache/)
+6. [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)
+7. [Design Search Autocomplete System](https://leetcode.com/problems/design-search-autocomplete-system/)
+8. [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)
+9. [Reorganize String](https://leetcode.com/problems/reorganize-string/)
+10. [Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+11. [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+12. [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+13. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+14. [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+15. [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
+16. [Clone Graph](https://leetcode.com/problems/clone-graph/)
+17. [Course Schedule](https://leetcode.com/problems/course-schedule/)
+18. [Word Ladder](https://leetcode.com/problems/word-ladder/)
+19. [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+20. [Accounts Merge](https://leetcode.com/problems/accounts-merge/)
+21. [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+22. [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+23. [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+24. [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
+25. [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+26. [Coin Change](https://leetcode.com/problems/coin-change/)
+27. [Word Break](https://leetcode.com/problems/word-break/)
+28. [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+29. [Design Browser History](https://leetcode.com/problems/design-browser-history/)
+30. [Minimum Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
 
 ## Review Modules
 

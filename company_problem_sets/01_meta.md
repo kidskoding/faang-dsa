@@ -1,49 +1,49 @@
-# Meta Problem Set
+# Meta
 
-Meta Problem Set - Commonly reported LeetCode/HackerRank/live-coding patterns for Meta SWE interviews
+Meta - Commonly reported LeetCode/HackerRank/live-coding patterns for Meta SWE interviews
 
 Focus: speed, arrays, strings, trees, graphs, heaps, and backtracking.
 
 ## Problem Set
 
-1. Valid Palindrome II
-2. Simplify Path
-3. Minimum Remove to Make Valid Parentheses
-4. Remove Invalid Parentheses
-5. Basic Calculator II
-6. Expression Add Operators
-7. Dot Product of Two Sparse Vectors
-8. Random Pick Index
-9. Random Pick with Weight
-10. Subarray Sum Equals K
-11. Continuous Subarray Sum
-12. Exclusive Time of Functions
-13. Buildings With an Ocean View
-14. Range Sum of BST
-15. Binary Tree Vertical Order Traversal
-16. Lowest Common Ancestor of a Binary Tree III
-17. Diameter of N-Ary Tree
-18. Nested List Weight Sum
-19. Nested List Weight Sum II
-20. Accounts Merge
-21. Clone Graph
-22. Number of Islands
-23. Shortest Path in Binary Matrix
-24. Alien Dictionary
-25. Course Schedule II
-26. Word Ladder
-27. Word Search II
-28. Subsets
-29. Permutations
-30. Combination Sum
-31. Merge K Sorted Lists
-32. Find Median from Data Stream
-33. LRU Cache
-34. Insert Delete GetRandom O(1)
-35. Sparse Matrix Multiplication
-36. Interval List Intersections
-37. Task Scheduler
-38. Kth Largest Element in an Array
+1. [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/)
+2. [Simplify Path](https://leetcode.com/problems/simplify-path/)
+3. [Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
+4. [Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)
+5. [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)
+6. [Expression Add Operators](https://leetcode.com/problems/expression-add-operators/)
+7. [Dot Product of Two Sparse Vectors](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/)
+8. [Random Pick Index](https://leetcode.com/problems/random-pick-index/)
+9. [Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)
+10. [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+11. [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/)
+12. [Exclusive Time of Functions](https://leetcode.com/problems/exclusive-time-of-functions/)
+13. [Buildings With an Ocean View](https://leetcode.com/problems/buildings-with-an-ocean-view/)
+14. [Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)
+15. [Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/)
+16. [Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/)
+17. [Diameter of N-Ary Tree](https://leetcode.com/problems/diameter-of-n-ary-tree/)
+18. [Nested List Weight Sum](https://leetcode.com/problems/nested-list-weight-sum/)
+19. [Nested List Weight Sum II](https://leetcode.com/problems/nested-list-weight-sum-ii/)
+20. [Accounts Merge](https://leetcode.com/problems/accounts-merge/)
+21. [Clone Graph](https://leetcode.com/problems/clone-graph/)
+22. [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+23. [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)
+24. [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)
+25. [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
+26. [Word Ladder](https://leetcode.com/problems/word-ladder/)
+27. [Word Search II](https://leetcode.com/problems/word-search-ii/)
+28. [Subsets](https://leetcode.com/problems/subsets/)
+29. [Permutations](https://leetcode.com/problems/permutations/)
+30. [Combination Sum](https://leetcode.com/problems/combination-sum/)
+31. [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+32. [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+33. [LRU Cache](https://leetcode.com/problems/lru-cache/)
+34. [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)
+35. [Sparse Matrix Multiplication](https://leetcode.com/problems/sparse-matrix-multiplication/)
+36. [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/)
+37. [Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+38. [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 
 ## Review Modules
 

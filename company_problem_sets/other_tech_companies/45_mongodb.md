@@ -1,6 +1,6 @@
-# MongoDB Problem Set
+# MongoDB
 
-MongoDB Problem Set - Major LeetCode-style problems to drill for MongoDB SWE interviews
+MongoDB - Major LeetCode-style problems to drill for MongoDB SWE interviews
 
 Focus: trees, tries, range queries, hash maps, design data structures, graph traversal, intervals, and DP.
 
@@ -8,36 +8,36 @@ These are not guaranteed exact interview questions. Treat this as the high-signa
 
 ## Problem Set
 
-1. Design In-Memory File System
-2. File System
-3. Design Add and Search Words Data Structure
-4. Implement Trie (Prefix Tree)
-5. Word Search II
-6. Prefix and Suffix Search
-7. Time Based Key-Value Store
-8. LRU Cache
-9. Insert Delete GetRandom O(1)
-10. Accounts Merge
-11. Group Anagrams
-12. Top K Frequent Words
-13. Subarray Sum Equals K
-14. Range Sum Query - Mutable
-15. Range Sum Query 2D - Immutable
-16. Binary Tree Level Order Traversal
-17. Validate Binary Search Tree
-18. Kth Smallest Element in a BST
-19. Serialize and Deserialize Binary Tree
-20. BST Iterator
-21. Clone Graph
-22. Course Schedule
-23. Alien Dictionary
-24. Number of Islands
-25. Word Ladder
-26. Merge Intervals
-27. Meeting Rooms II
-28. Coin Change
-29. Word Break
-30. Find Median from Data Stream
+1. [Design In-Memory File System](https://leetcode.com/problems/design-in-memory-file-system/)
+2. [File System](https://leetcode.com/problems/design-file-system/)
+3. [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
+4. [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
+5. [Word Search II](https://leetcode.com/problems/word-search-ii/)
+6. [Prefix and Suffix Search](https://leetcode.com/problems/prefix-and-suffix-search/)
+7. [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)
+8. [LRU Cache](https://leetcode.com/problems/lru-cache/)
+9. [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)
+10. [Accounts Merge](https://leetcode.com/problems/accounts-merge/)
+11. [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+12. [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)
+13. [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+14. [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/)
+15. [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)
+16. [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+17. [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+18. [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
+19. [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+20. [BST Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
+21. [Clone Graph](https://leetcode.com/problems/clone-graph/)
+22. [Course Schedule](https://leetcode.com/problems/course-schedule/)
+23. [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)
+24. [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+25. [Word Ladder](https://leetcode.com/problems/word-ladder/)
+26. [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+27. [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
+28. [Coin Change](https://leetcode.com/problems/coin-change/)
+29. [Word Break](https://leetcode.com/problems/word-break/)
+30. [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 
 ## Review Modules
 

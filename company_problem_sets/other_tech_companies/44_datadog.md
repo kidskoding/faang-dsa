@@ -1,6 +1,6 @@
-# Datadog Problem Set
+# Datadog
 
-Datadog Problem Set - Major LeetCode-style problems to drill for Datadog SWE interviews
+Datadog - Major LeetCode-style problems to drill for Datadog SWE interviews
 
 Focus: logs, streams, rate limits, sliding windows, heaps, graph connectivity, intervals, and design data structures.
 
@@ -8,36 +8,36 @@ These are not guaranteed exact interview questions. Treat this as the high-signa
 
 ## Problem Set
 
-1. Logger Rate Limiter
-2. Design Hit Counter
-3. Moving Average from Data Stream
-4. Time Based Key-Value Store
-5. LRU Cache
-6. LFU Cache
-7. Insert Delete GetRandom O(1)
-8. Sliding Window Maximum
-9. Sliding Window Median
-10. Top K Frequent Elements
-11. Top K Frequent Words
-12. Kth Largest Element in a Stream
-13. Merge Intervals
-14. Meeting Rooms II
-15. Employee Free Time
-16. Number of Islands
-17. Rotting Oranges
-18. Network Delay Time
-19. Course Schedule
-20. Critical Connections in a Network
-21. Clone Graph
-22. Accounts Merge
-23. Evaluate Division
-24. Binary Tree Vertical Order Traversal
-25. Serialize and Deserialize Binary Tree
-26. Subarray Sum Equals K
-27. Minimum Window Substring
-28. Find Median from Data Stream
-29. Design Search Autocomplete System
-30. Minimum Cost to Connect All Points
+1. [Logger Rate Limiter](https://leetcode.com/problems/logger-rate-limiter/)
+2. [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/)
+3. [Moving Average from Data Stream](https://leetcode.com/problems/moving-average-from-data-stream/)
+4. [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)
+5. [LRU Cache](https://leetcode.com/problems/lru-cache/)
+6. [LFU Cache](https://leetcode.com/problems/lfu-cache/)
+7. [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)
+8. [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+9. [Sliding Window Median](https://leetcode.com/problems/sliding-window-median/)
+10. [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+11. [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)
+12. [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
+13. [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+14. [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
+15. [Employee Free Time](https://leetcode.com/problems/employee-free-time/)
+16. [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+17. [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
+18. [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+19. [Course Schedule](https://leetcode.com/problems/course-schedule/)
+20. [Critical Connections in a Network](https://leetcode.com/problems/critical-connections-in-a-network/)
+21. [Clone Graph](https://leetcode.com/problems/clone-graph/)
+22. [Accounts Merge](https://leetcode.com/problems/accounts-merge/)
+23. [Evaluate Division](https://leetcode.com/problems/evaluate-division/)
+24. [Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/)
+25. [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+26. [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+27. [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+28. [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+29. [Design Search Autocomplete System](https://leetcode.com/problems/design-search-autocomplete-system/)
+30. [Minimum Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
 
 ## Review Modules
 

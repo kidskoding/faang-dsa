@@ -1,0 +1,127 @@
+:root {
+  --gruvbox-bg: #282828;
+  --gruvbox-bg-hard: #1d2021;
+  --gruvbox-bg-soft: #32302f;
+  --gruvbox-bg1: #3c3836;
+  --gruvbox-bg2: #504945;
+  --gruvbox-fg: #ebdbb2;
+  --gruvbox-fg-muted: #d5c4a1;
+  --gruvbox-gray: #928374;
+  --gruvbox-red: #fb4934;
+  --gruvbox-green: #b8bb26;
+  --gruvbox-yellow: #fabd2f;
+  --gruvbox-blue: #83a598;
+  --gruvbox-purple: #d3869b;
+  --gruvbox-aqua: #8ec07c;
+  --gruvbox-orange: #fe8019;
+}
+
+html,
+body,
+.page-wrapper,
+.content,
+#content {
+  background: var(--gruvbox-bg) !important;
+  color: var(--gruvbox-fg) !important;
+}
+
+.sidebar {
+  background: var(--gruvbox-bg-hard) !important;
+  border-right: 1px solid var(--gruvbox-bg2);
+}
+
+.content a,
+a {
+  color: var(--gruvbox-aqua) !important;
+}
+
+.sidebar a,
+.chapter a {
+  color: var(--gruvbox-fg-muted) !important;
+}
+
+.chapter li a.active,
+.sidebar .active {
+  color: var(--gruvbox-yellow) !important;
+}
+
+.sidebar a:hover,
+.chapter a:hover {
+  color: var(--gruvbox-yellow) !important;
+}
+
+.chapter li.part-title {
+  color: var(--gruvbox-fg) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--gruvbox-yellow) !important;
+}
+
+hr,
+th,
+td {
+  border-color: var(--gruvbox-bg2) !important;
+}
+
+blockquote {
+  background: var(--gruvbox-bg-soft);
+  border-left-color: var(--gruvbox-orange);
+  color: var(--gruvbox-fg-muted);
+}
+
+code {
+  background: var(--gruvbox-bg-hard) !important;
+  color: var(--gruvbox-green) !important;
+  border-radius: 4px;
+}
+
+pre,
+pre code,
+.hljs {
+  background: var(--gruvbox-bg-hard) !important;
+  color: var(--gruvbox-fg) !important;
+}
+
+table {
+  background: var(--gruvbox-bg-soft);
+}
+
+thead,
+.menu-bar,
+.nav-chapters,
+.mobile-nav-chapters {
+  background: var(--gruvbox-bg-hard) !important;
+  color: var(--gruvbox-fg) !important;
+}
+
+.icon-button,
+.icon-button i {
+  color: var(--gruvbox-fg-muted) !important;
+}
+
+.icon-button:hover,
+.icon-button:hover i {
+  color: var(--gruvbox-yellow) !important;
+}
+
+input,
+select,
+textarea,
+.searchbar-outer,
+#searchresults,
+.searchresults-header,
+.searchresult {
+  background: var(--gruvbox-bg-soft) !important;
+  color: var(--gruvbox-fg) !important;
+  border-color: var(--gruvbox-bg2) !important;
+}
+
+.searchresult .teaser {
+  color: var(--gruvbox-fg-muted) !important;
+}

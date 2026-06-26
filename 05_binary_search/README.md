@@ -1,10 +1,6 @@
 # Module 05: Binary Search
 
-## Goal
-
-Learn binary search as both a direct lookup algorithm and a general answer-space technique.
-
-## Lessons
+## Topics
 
 - Linear search
 - Binary search
@@ -12,13 +8,18 @@ Learn binary search as both a direct lookup algorithm and a general answer-space
 - Rotated arrays
 - Search on answer
 
-## Guided Practice
+## Notes
 
-Add practice files under this folder as the topic grows:
+1. [Binary Search Basics](notes/01_binary_search_basics.md)
+2. [Boundary Search](notes/02_boundary_search.md)
+3. [Rotated Arrays](notes/03_rotated_arrays.md)
+4. [Search On Answer](notes/04_search_on_answer.md)
 
-```text
-practice/warmups/
-practice/core/
-practice/follow_ups/
-practice/review/
-```
+## Problem Set
+
+The canonical problem set for this module still needs to be added.
+
+## Additional Notes
+
+- Read the notes first, then drill the module problem set once it exists.
+- Keep implementation files and tests grouped by the same patterns as the notes.

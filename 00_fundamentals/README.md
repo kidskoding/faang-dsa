@@ -1,35 +1,26 @@
 # Module 00: Fundamentals
 
-## Goal
+## Topics
 
-Build the baseline knowledge that every later DSA module depends on.
+- General technical interview preparation
+- Python basics
+- Time and space complexity
+- Common operation costs
+- Interview problem solving
 
-This module should stay language and interview-focused: enough Python to write clean solutions, enough complexity analysis to explain them, and enough problem-solving process to avoid getting stuck during live coding.
+## Notes
 
-## Lessons
+1. [General Technical Interview Preparation](notes/01_how_to_prep.md)
+2. [Python Basics](notes/02_python_basics.md)
+3. [Time And Space Complexity](notes/03_time_and_space_complexity.md)
+4. [Common Operation Costs](notes/04_common_operation_costs.md)
+5. [Interview Problem Solving](notes/05_interview_problem_solving.md)
 
-- [Python basics](python_basics.md)
-- [Time and space complexity](time_and_space_complexity.md)
-- [Common operation costs](common_operation_costs.md)
-- [Interview problem solving](interview_problem_solving.md)
+## Problem Set
 
-## Guided Practice
+This module is reference material for every later problem set.
 
-Use this module before and during every other module:
+## Additional Notes
 
-```text
-1. Read python_basics.md before writing implementations.
-2. Read time_and_space_complexity.md before adding complexity comments.
-3. Use common_operation_costs.md as a reference while analyzing solutions.
-4. Use interview_problem_solving.md before timed or mixed practice.
-```
-
-For every implementation in later modules, write:
-
-```text
-Input size:
-Time:
-Space:
-```
-
-Before moving to Module 01, you should be able to explain why a simple loop is O(n), why binary search is O(log n), why sorting is O(n log n), and why an output list counts as O(n) space.
+- Start with the prep guide before choosing a module or company problem set.
+- Use this module while writing complexity notes for implementation problems.

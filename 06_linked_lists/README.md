@@ -1,10 +1,6 @@
 # Module 06: Linked Lists
 
-## Goal
-
-Learn pointer manipulation, node ownership, and linked-list interview patterns.
-
-## Lessons
+## Topics
 
 - Singly linked lists
 - Doubly linked lists
@@ -13,13 +9,18 @@ Learn pointer manipulation, node ownership, and linked-list interview patterns.
 - Cycle detection
 - Merge and split patterns
 
-## Guided Practice
+## Notes
 
-Add practice files under this folder as the topic grows:
+1. [Linked List Basics](notes/01_linked_list_basics.md)
+2. [Fast And Slow Pointers](notes/02_fast_slow.md)
+3. [Linked List Reversal](notes/03_reversal.md)
+4. [Merge And Split](notes/04_merge_split.md)
 
-```text
-practice/warmups/
-practice/core/
-practice/follow_ups/
-practice/review/
-```
+## Problem Set
+
+The canonical problem set for this module still needs to be added.
+
+## Additional Notes
+
+- Read the notes first, then drill the module problem set once it exists.
+- Keep implementation files and tests grouped by the same patterns as the notes.

@@ -1,10 +1,6 @@
 # Module 16: Math And Geometry
 
-## Goal
-
-Learn math, coordinate, matrix, and geometry-style interview patterns that show up as implementation-heavy problems.
-
-## Lessons
+## Topics
 
 - Matrix coordinates
 - Modular arithmetic
@@ -12,13 +8,18 @@ Learn math, coordinate, matrix, and geometry-style interview patterns that show 
 - Geometry basics
 - Randomization basics
 
-## Guided Practice
+## Notes
 
-Add practice files under this folder as the topic grows:
+1. [Matrix Coordinates](notes/01_matrix_coordinates.md)
+2. [Modular Arithmetic](notes/02_modular_arithmetic.md)
+3. [GCD And LCM](notes/03_gcd_lcm.md)
+4. [Geometry Basics](notes/04_geometry_basics.md)
 
-```text
-practice/warmups/
-practice/core/
-practice/follow_ups/
-practice/review/
-```
+## Problem Set
+
+The canonical problem set for this module still needs to be added.
+
+## Additional Notes
+
+- Read the notes first, then drill the module problem set once it exists.
+- Keep implementation files and tests grouped by the same patterns as the notes.

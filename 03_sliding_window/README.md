@@ -1,10 +1,6 @@
 # Module 03: Sliding Window
 
-## Goal
-
-Learn fixed and variable window patterns for strings, arrays, counts, sums, and distinct-state constraints.
-
-## Lessons
+## Topics
 
 - Fixed-size windows
 - Variable-size windows
@@ -12,13 +8,18 @@ Learn fixed and variable window patterns for strings, arrays, counts, sums, and 
 - Frequency maps inside windows
 - Window max/min patterns
 
-## Guided Practice
+## Notes
 
-Add practice files under this folder as the topic grows:
+1. [Fixed-Size Sliding Window](notes/01_fixed_size_window.md)
+2. [Variable-Size Sliding Window](notes/02_variable_size_window.md)
+3. [Frequency Map Windows](notes/03_frequency_map_windows.md)
+4. [Window Max And Min](notes/04_window_max_min.md)
 
-```text
-practice/warmups/
-practice/core/
-practice/follow_ups/
-practice/review/
-```
+## Problem Set
+
+The canonical problem set for this module still needs to be added.
+
+## Additional Notes
+
+- Read the notes first, then drill the module problem set once it exists.
+- Keep implementation files and tests grouped by the same patterns as the notes.

@@ -1,10 +1,6 @@
 # Module 09: Backtracking
 
-## Goal
-
-Learn recursive state, decision trees, and systematic search over choices.
-
-## Lessons
+## Topics
 
 - Recursion fundamentals
 - Subsets
@@ -13,13 +9,18 @@ Learn recursive state, decision trees, and systematic search over choices.
 - Constraint backtracking
 - Word search style grid backtracking
 
-## Guided Practice
+## Notes
 
-Add practice files under this folder as the topic grows:
+1. [Backtracking Basics](notes/01_backtracking_basics.md)
+2. [Subsets And Combinations](notes/02_subsets_combinations.md)
+3. [Permutations](notes/03_permutations.md)
+4. [Grid Backtracking](notes/04_grid_backtracking.md)
 
-```text
-practice/warmups/
-practice/core/
-practice/follow_ups/
-practice/review/
-```
+## Problem Set
+
+The canonical problem set for this module still needs to be added.
+
+## Additional Notes
+
+- Read the notes first, then drill the module problem set once it exists.
+- Keep implementation files and tests grouped by the same patterns as the notes.

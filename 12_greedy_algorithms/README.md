@@ -1,10 +1,6 @@
-# Module 12: Greedy
+# Module 12: Greedy Algorithms
 
-## Goal
-
-Learn when local choices lead to a globally optimal solution and how to justify that choice.
-
-## Lessons
+## Topics
 
 - Activity selection
 - Jump game
@@ -13,13 +9,17 @@ Learn when local choices lead to a globally optimal solution and how to justify 
 - Sorting-based greedy
 - Exchange arguments
 
-## Guided Practice
+## Notes
 
-Add practice files under this folder as the topic grows:
+1. [Greedy Fundamentals](notes/01_greedy_fundamentals.md)
+2. [Jump Game Greedy](notes/02_jump_game.md)
+3. [Interval Greedy](notes/03_interval_greedy.md)
 
-```text
-practice/warmups/
-practice/core/
-practice/follow_ups/
-practice/review/
-```
+## Problem Set
+
+The canonical problem set for this module still needs to be added.
+
+## Additional Notes
+
+- Read the notes first, then drill the module problem set once it exists.
+- Keep implementation files and tests grouped by the same patterns as the notes.
