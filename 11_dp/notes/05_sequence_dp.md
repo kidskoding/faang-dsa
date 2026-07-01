@@ -43,10 +43,9 @@ Space depends on table size
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I solving for a subsequence (order preserved, gaps allowed) or a substring/subarray (contiguous)?
+What does dp[i][j] mean — best answer over prefixes ending at i and j, or comparing two full sequences?
+When characters/elements match, why does the transition pull from dp[i-1][j-1] rather than dp[i-1][j] or dp[i][j-1]?
+When they don't match, which of dp[i-1][j] or dp[i][j-1] (or both) carries the answer forward, and why?
+Does this problem admit an O(n log n) alternative (e.g., patience sorting for LIS) instead of the O(n^2) table?
 ```

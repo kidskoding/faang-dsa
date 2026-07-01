@@ -54,10 +54,9 @@ Space: O(V + E)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Is the graph directed or undirected, and does that change how edges are traversed?
+Am I given an adjacency list, or do I need to build one from an edge list first?
+Have I looped over every node, not just node 0, to catch disconnected components?
+Do I mark a node visited before recursing into it, to avoid infinite loops on cycles?
+Would DFS reach the same conclusion as BFS here, or does the question require shortest path?
 ```

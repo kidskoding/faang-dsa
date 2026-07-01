@@ -127,10 +127,9 @@ If you copy paths into a result list, add the output cost.
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Is this problem top-down (state passed into children) or bottom-up (state returned from children)?
+Which traversal order — preorder, inorder, or postorder — matches when I need to process the node?
+If I'm carrying mutable state (like a path list), where exactly does the pop/undo happen?
+What does the base case return, and does it differ for top-down vs bottom-up helpers?
+Am I forgetting to use the recursive return value on the way back up?
 ```

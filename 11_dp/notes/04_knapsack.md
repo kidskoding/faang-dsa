@@ -42,10 +42,9 @@ Space: O(capacity)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Is this 0/1 (each item used at most once) or unbounded (items reusable)?
+Why does 0/1 knapsack require iterating capacity from high to low, while unbounded goes low to high?
+What does dp[cap] mean after processing the current item — best value using items seen so far with this capacity?
+Do I need the 2D dp[item][cap] form, or is the capacity-only 1D rolling array sufficient here?
+What is the base case for dp[0] (zero capacity) and for an empty item set?
 ```

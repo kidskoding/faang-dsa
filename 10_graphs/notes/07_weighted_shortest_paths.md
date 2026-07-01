@@ -49,10 +49,9 @@ Space: O(V + E)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Are all edge weights non-negative, and if not, why is Dijkstra unsafe (Bellman-Ford territory instead)?
+Why do I check `if cost > dist[node]: continue` before processing a popped heap entry?
+Am I updating `dist[nei]` and pushing to the heap only when I find a strictly cheaper path?
+Why does BFS give the wrong answer here if edge weights aren't uniform?
+What is stored in the heap tuple, and why does distance come first for correct min-heap ordering?
 ```

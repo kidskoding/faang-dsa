@@ -43,10 +43,8 @@ Space O(1)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I testing, setting, clearing, or toggling a bit?
+Does `1 << i` correctly line up with the bit position I mean?
+Did I parenthesize the shift so it isn't swallowed by AND/OR/XOR precedence?
+For clearing a bit, did I use `~(1 << i)` and not `~1 << i`?
 ```

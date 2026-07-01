@@ -45,10 +45,9 @@ Space: O(k)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I looking for the k largest or k smallest, and does that flip min heap vs max heap?
+Why does keeping a size-k min heap correctly find the k largest (what does the top represent)?
+What is the invariant on heap size, and when exactly do I pop after pushing?
+Why is this O(n log k) instead of O(n log n), and when does that actually matter?
+Do I need the final k items in sorted order, or is the heap's contents enough?
 ```

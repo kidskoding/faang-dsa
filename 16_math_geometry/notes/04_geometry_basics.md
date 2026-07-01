@@ -41,10 +41,10 @@ Space varies
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Can I compare squared distances instead of taking a sqrt, and does that preserve the ordering I need?
+Am I representing slope as a reduced (dy, dx) pair instead of a float, to avoid precision errors?
+Have I handled vertical lines (dx = 0) separately so I don't divide by zero?
+Did I normalize the sign of my slope key (e.g., always positive dx) so equivalent slopes hash the same?
+Does the problem need exact orientation (cross product sign) rather than distance or slope at all?
+What is the time and space complexity, and does sorting or a heap dominate it?
 ```

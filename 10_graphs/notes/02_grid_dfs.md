@@ -48,10 +48,9 @@ Space: O(rows * cols) worst-case recursion/visited
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+What are my bounds checks, and do I check them before or after indexing into the grid?
+Is movement restricted to 4 directions, or does the problem allow diagonals?
+Am I marking a cell visited (or mutating it in place) before or after recursing into it?
+Can I reuse the input grid as the visited set, or do I need a separate structure?
+Does the recursion depth risk a stack overflow on large grids, and would BFS be safer?
 ```

@@ -45,10 +45,9 @@ review time is separate
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Have I stated the brute force out loud before optimizing?
+Am I tracking elapsed time, or just coding silently?
+If I'm stuck past 10 minutes, what pattern signals have I named?
+Did I run through examples before declaring the solution done?
+Is my complexity explanation ready before time runs out?
 ```

@@ -40,10 +40,9 @@ Space: one concise log entry per miss
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Have I logged the missed pattern, cause, and fix for my last few problems?
+Is my note specific ("BFS level not tracked") or vague ("I was dumb")?
+Have I reread the relevant module notes before attempting a similar problem?
+Did I actually re-solve the missed problem, not just read the fix?
+Is a retry date scheduled for this entry?
 ```

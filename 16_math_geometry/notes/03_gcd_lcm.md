@@ -44,10 +44,9 @@ space: O(1)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Why does gcd(a, b) == gcd(b, a % b), and what breaks if I swap the arguments incorrectly?
+What does my gcd function return when one input is 0, and is that the correct base case?
+Am I computing `lcm` as `a // gcd(a, b) * b` (divide first) rather than `a * b // gcd(a, b)`, to avoid overflow in other languages?
+Does my solution need gcd/lcm of more than two numbers, and do I fold pairwise correctly?
+What is the time complexity of Euclid's algorithm in terms of log(min(a, b))?
 ```

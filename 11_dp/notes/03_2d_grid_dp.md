@@ -42,10 +42,9 @@ Space: O(rows * cols), sometimes O(cols)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+What does dp[r][c] represent — ways to reach the cell, min/max cost to reach it, or something ending there?
+How are the first row and first column initialized, especially with blocked/invalid cells?
+Which neighbors feed dp[r][c] (top, left, or both), and in what traversal order?
+If space-optimizing to O(cols), am I overwriting a value before reading it in the same pass?
+What is the final answer's cell, and does it require a boundary check for unreachable cells?
 ```

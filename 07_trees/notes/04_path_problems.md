@@ -118,10 +118,9 @@ The prefix map holds sums on the current root-to-node path.
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Does the path have to start at the root, or can it start at any ancestor?
+Is the "path complete" check only valid at a leaf, or can it fire mid-path?
+If I'm saving a path into results, am I copying it (not storing a reference)?
+If backtracking, where does the undo (pop, or prefix_count decrement) happen relative to recursion?
+What state travels down the recursion (running_sum, current_path, prefix_count) and why is it needed?
 ```

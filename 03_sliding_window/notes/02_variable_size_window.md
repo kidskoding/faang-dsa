@@ -48,10 +48,9 @@ Space: O(k) or O(n), depending on stored window state
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+What condition makes the window "invalid," and what exactly triggers the while loop that shrinks left?
+Is the underlying data monotonic enough that once left advances it never needs to move back?
+Am I updating the answer inside the shrink loop, after it exits, or on every right expansion — and is that correct for this problem?
+What state do I remove when nums[left] leaves the window, and is that in sync with what I added on entry?
+Am I looking for the longest valid window or the shortest, and does that change when the answer update happens relative to the while loop?
 ```

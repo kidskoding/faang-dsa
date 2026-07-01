@@ -45,10 +45,9 @@ Space: O(n)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I looking for the next/previous greater or smaller element — and does that mean the stack should be increasing or decreasing?
+Why does each element get pushed and popped at most once, making this O(n) despite the nested while loop?
+Should the stack hold indices (needed for distance/width answers) or values?
+What is the correct answer for elements that are never popped (e.g. no greater element exists)?
+Am I scanning left-to-right or does the problem require a right-to-left pass (or both)?
 ```

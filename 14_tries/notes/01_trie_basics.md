@@ -45,10 +45,10 @@ space: O(total characters stored)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+How do I represent a node's children — dict, array of 26, or defaultdict?
+How does the end-of-word marker differ from a node simply existing?
+Does insert create nodes for characters that are already present?
+How does prefix search (startsWith) differ from full word search (search)?
+What happens if the word or prefix is empty?
+Why is each operation O(word length) and independent of the number of stored words?
 ```

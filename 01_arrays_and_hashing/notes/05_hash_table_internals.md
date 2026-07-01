@@ -83,10 +83,9 @@ get/put/delete: O(n)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I using separate chaining or open addressing, and what does each do when a bucket collides?
+At what load factor do I resize, and what happens to existing entries when I do?
+Does my put logic update an existing key in its bucket instead of appending a duplicate?
+What is the worst-case time if every key collides into one bucket, versus the average case?
+Why can't I rely on hash table iteration order for algorithm correctness?
 ```

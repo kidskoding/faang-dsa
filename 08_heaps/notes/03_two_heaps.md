@@ -45,10 +45,9 @@ space: O(n)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+What is the size invariant between the lower max heap and upper min heap?
+Which heap does a new number go into first, and how/when do I rebalance?
+Why does the lower heap's max always stay <= the upper heap's min?
+How do I compute the median differently for even vs odd total counts?
+How am I negating values for the max heap without corrupting comparisons?
 ```

@@ -50,10 +50,9 @@ Space: O(distinct values in window)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Do I need a set (present/absent) or a frequency map (exact counts) — does the problem care about duplicates?
+Am I deleting keys once their count hits zero, or will stale zero-entries corrupt a distinct-count or map-equality check?
+Is "invalid" defined by total window size, a specific key's count, or the number of distinct/matched keys?
+Am I comparing full dictionaries every iteration, or tracking a running "matched count" to keep validity checks O(1)?
+When I shrink from the left, do I decrement counts.get(y) before or after checking the invalid condition, and is that ordering correct?
 ```

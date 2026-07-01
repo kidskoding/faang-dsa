@@ -41,10 +41,9 @@ Space O(m)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I building a prefix/failure table (KMP) or a Z-array, and what does each entry mean?
+Why does the text pointer never move backward, only the pattern pointer via the fallback table?
+On a mismatch, how does the table tell me how much matched prefix I can safely reuse?
+Is the table built on the pattern alone, or on pattern+separator+text (Z-algorithm)?
+Would a simpler hash-based or built-in substring check meet the requirement instead?
 ```

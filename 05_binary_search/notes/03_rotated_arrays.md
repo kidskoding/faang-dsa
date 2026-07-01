@@ -46,10 +46,8 @@ Space: O(1)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+How do you decide which half (`nums[left..mid]` or `nums[mid..right]`) is the sorted one at each step?
+Once you know the sorted half, how do you check if the target falls inside its range?
+How does the logic break with duplicate values (e.g. `nums[left] == nums[mid] == nums[right]`), and how do you recover (linear fallback or shrinking both ends)?
+Why is it still O(log n) on distinct values but O(n) worst case with duplicates?
 ```

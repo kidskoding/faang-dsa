@@ -47,10 +47,9 @@ Space: recursion depth plus output
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+What defines a "complete" state, and how do I detect it?
+What is the full set of choices available at each node of the tree?
+Does undo restore state exactly (mutable list pop, visited flag reset)?
+Am I copying the path before saving it, or saving a reference that will mutate later?
+Can I prune a branch early instead of exploring it fully?
 ```

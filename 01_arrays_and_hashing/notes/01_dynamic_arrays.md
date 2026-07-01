@@ -81,10 +81,9 @@ Amortized means the average cost over many appends is `O(1)`, even though one re
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Does my solution insert or delete from the middle, forcing an O(n) shift?
+Is my append truly amortized O(1), or am I resizing on every call?
+Am I mutating the list while iterating in a way that skips or reprocesses indices?
+Does the output list count against auxiliary space, or is it the required result?
+Am I building strings with repeated concatenation instead of a list plus join?
 ```

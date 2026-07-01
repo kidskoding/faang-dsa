@@ -45,10 +45,9 @@ plus review
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Have I clarified requirements out loud before proposing a brute force?
+Am I narrating my optimization reasoning, not just typing silently?
+Did I test edge cases aloud while coding, not after?
+Is this problem unlabeled by topic, forcing real pattern recognition?
+Have I stated complexity as part of the walkthrough, not an afterthought?
 ```

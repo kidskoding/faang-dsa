@@ -94,10 +94,9 @@ space: O(n) for the map
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I indexing prefix[r] or prefix[r + 1] correctly for the range sum I need?
+Did I seed count[0] = 1 for the running-prefix hash map variant?
+Could negative numbers in the array break a sliding-window approach, requiring prefix sums instead?
+Do I need a full prefix array (for repeated range queries) or just a running variable (for a single pass)?
+Am I confusing the prefix sum array with the running prefix variable anywhere?
 ```

@@ -45,10 +45,9 @@ space: O(n)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Does this problem have nested, reversed, or "most recent unresolved" structure that maps to LIFO order?
+What exactly gets pushed: the raw value, an index, or a (value, extra) tuple?
+What condition triggers a pop, and what do I do with the popped item?
+Is the stack guaranteed to be empty at the end, or does leftover content signal something (e.g. unmatched brackets)?
+Could this be solved without a stack, e.g. with two pointers or a counter, more simply?
 ```

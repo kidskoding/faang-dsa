@@ -44,10 +44,9 @@ traversal: O(n)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Do I need a reference to the node before the one I'm modifying, and have I saved it?
+Would a dummy node before head remove a special case for deleting/inserting at the head?
+Which pointer assignment, if made too early, would strand the rest of the list?
+Am I relying on knowing the list length anywhere I shouldn't be?
+Can I do this in O(1) space, or do I need extra structures (hash set, array)?
 ```

@@ -129,10 +129,9 @@ h = O(n)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+What single value should this node return to its parent?
+What does an empty subtree (None) return, and why is that the correct base case?
+How do I combine left_answer, right_answer, and node.val into the return value?
+Can I state the return meaning in one sentence, e.g. "height(node) returns ..."?
+Am I recomputing subtree info across multiple passes instead of returning it once?
 ```

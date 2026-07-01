@@ -45,10 +45,9 @@ Space O(n)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I storing parent pointers, or ranks/sizes, or both?
+Does find() apply path compression, and does union() attach by rank/size?
+Am I comparing/merging roots, not the original nodes?
+How do I detect a cycle or "already connected" using find(a) == find(b)?
+Is the near-O(1) amortized bound actually needed here, or would a plain BFS/DFS be simpler?
 ```

@@ -116,10 +116,9 @@ Space: O(n)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Can this problem be solved by moving only left or right, or does it require exploring both sides?
+For validation, am I checking the full ancestor range, not just the immediate parent?
+Am I reassigning the recursive result back to `.left`/`.right` in insert/delete?
+For delete with two children, which node replaces the deleted value, and how is it removed from its old spot?
+Why does the BST property make this O(log n) on a balanced tree but O(n) on a skewed one?
 ```

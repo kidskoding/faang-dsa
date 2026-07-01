@@ -45,10 +45,9 @@ Space: O(word_length)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Is "visited" scoped per-path (unmarked on backtrack) rather than global across all start cells?
+What are the bounds/invalid-character checks, and do they run before marking the cell visited?
+Where exactly is completion checked — before or after consuming the current character/cell?
+Is the cell unmarked on every exit path, including early `return false`?
+What is driving the branching factor (grid neighbors, word length) and how does that shape the complexity?
 ```

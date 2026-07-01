@@ -44,10 +44,9 @@ Space: O(1)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+What single value am I tracking (farthest reachable index), and why is that enough?
+Why does checking `i > farthest` before updating catch unreachability correctly?
+Why is it safe to never backtrack to try a different jump length?
+How does this differ from Jump Game II (minimum jumps), where I also need a level/boundary counter?
+What happens at the last index — do I need `i > farthest` or `farthest >= n - 1` as the success condition?
 ```

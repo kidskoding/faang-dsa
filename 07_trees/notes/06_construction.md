@@ -107,10 +107,9 @@ Without the map, searching inorder repeatedly can become `O(n^2)`.
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Which traversal tells me the root (preorder = first, postorder = last), and which gives the left/right split (inorder)?
+Am I using a value-to-index map for inorder lookups instead of searching linearly each call?
+What are the exact left/right index ranges for the current subtree, and where's the off-by-one risk?
+If building from postorder, am I consuming root values from the end and building right before left?
+Why does slicing arrays at each call blow up the complexity, and how does index-range recursion avoid it?
 ```

@@ -46,10 +46,9 @@ Space: O(1) or sorting space
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Why sort by end time instead of start time or duration for this problem?
+What is my exchange argument for why the earliest-ending interval is never a worse choice?
+How exactly am I defining the overlap boundary — is `start >= end` or `start > end` correct here?
+What does `end` represent between iterations, and when does it get updated?
+Would this problem change (e.g. to erase/merge count) if I kept the same sort but changed what I track?
 ```

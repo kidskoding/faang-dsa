@@ -44,10 +44,8 @@ Space O(1)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I reasoning about bits as binary, not decimal?
+Which operator (AND/OR/XOR/NOT/shift) matches the effect I want?
+Does this problem involve negative numbers, and how does Python represent them?
+Would a bit trick actually be clearer than a straightforward check here?
 ```

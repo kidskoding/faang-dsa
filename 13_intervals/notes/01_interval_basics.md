@@ -42,10 +42,9 @@ Space depends on output
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Are endpoints inclusive or exclusive, and does that change what "overlap" means?
+Should I sort by start or by end for this problem?
+What is the exact condition that decides two intervals overlap vs. are disjoint?
+Do touching intervals (e.g. [1,3] and [3,5]) count as overlapping here?
+How do I handle an empty input or a single interval?
 ```

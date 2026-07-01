@@ -43,10 +43,9 @@ Space: O(V)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I counting components, detecting a cycle, or coloring a bipartition, and does that change what state I track per node?
+For cycle detection, is the graph directed (need a "visiting" vs "visited" state) or undirected (need to track the parent edge)?
+For bipartite coloring, what do I do when an edge connects two nodes that already have the same color?
+Have I started a fresh traversal from every unvisited node, so isolated nodes and other components aren't skipped?
+What does the algorithm output when the graph is already disconnected — is that itself a valid or invalid case?
 ```

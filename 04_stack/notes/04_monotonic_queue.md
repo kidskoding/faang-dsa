@@ -46,10 +46,9 @@ Space: O(k)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Why does the deque store indices, not values, and what does that let me check (window expiry via i - k)?
+In what order do I expire out-of-window entries vs pop dominated entries vs append the new index each iteration — and why does that order matter?
+Why can smaller values behind a larger new value be safely discarded forever, not just for this window?
+At what point in the loop is the front of the deque a valid answer (only once the first full window is formed)?
+Am I tracking window max or window min, and is the pop condition (<=  vs >=) correct for that direction?
 ```

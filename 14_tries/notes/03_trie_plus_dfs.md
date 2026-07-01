@@ -45,10 +45,10 @@ Space: trie plus recursion path
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Why build one trie of all target words instead of running DFS per word?
+How does the trie prune board paths that no word could possibly match?
+How do I mark a cell visited and correctly unmark it on backtrack?
+How do I avoid adding the same found word to the result twice?
+What optimization removes a leaf node from the trie once its word is found?
+Why is runtime bounded by valid trie prefixes rather than by board size alone?
 ```

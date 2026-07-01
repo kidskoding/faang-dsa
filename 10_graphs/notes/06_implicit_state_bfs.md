@@ -49,10 +49,9 @@ Space: O(number of reachable states)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+What does a "node" represent here (a lock combination, a word, a gene string), and how do I generate its neighbors on the fly?
+How do I hash or represent a state so it can go into a visited set (tuple, string, frozenset)?
+Are there dead/forbidden states that must be excluded before BFS even starts?
+Why must this be BFS and not DFS, given the question asks for minimum number of moves/steps?
+What is the branching factor per state, and how does that affect the state-space size in my complexity estimate?
 ```

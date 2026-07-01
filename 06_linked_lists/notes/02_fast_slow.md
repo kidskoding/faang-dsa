@@ -44,10 +44,9 @@ Space: O(1)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I checking `fast and fast.next` (or just `fast`), and does that match whether I want the first or second middle?
+If I'm detecting a cycle, do I also need to find its entry point, and do I know why the second pointer starts at head for that?
+Why does fast catching slow prove a cycle, rather than just looping forever?
+Where exactly do slow and fast start, and does that choice shift which node counts as "the middle" for even-length lists?
+What is the time and space complexity, and why is this preferred over a hash-set-of-visited-nodes approach?
 ```

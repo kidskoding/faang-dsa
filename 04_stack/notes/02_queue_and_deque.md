@@ -44,10 +44,9 @@ space: O(n)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Do I need strict FIFO order (queue) or insertion/removal at both ends (deque)?
+Am I using collections.deque instead of list.pop(0), which would silently make this O(n) per op?
+If this is graph/grid BFS, where exactly do I mark visited — on enqueue or on dequeue — and why does that avoid duplicate work?
+Does level-order structure matter here (do I need to track level boundaries via queue length snapshots)?
+What goes in each queue entry: just a node, or (node, distance/state) for path reconstruction?
 ```

@@ -49,10 +49,9 @@ Space: O(V + E)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Which direction do the edges point: prerequisite -> dependent, and did I build the adjacency list in that direction?
+How do I compute indegree for every node before starting the queue?
+How do I detect a cycle: by comparing the length of my output order to the total node count?
+What do I return if the graph has a cycle (no valid ordering) versus a valid full ordering?
+Why does starting from indegree-0 nodes guarantee prerequisites are processed first?
 ```

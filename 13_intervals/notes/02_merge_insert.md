@@ -46,10 +46,9 @@ Space: O(n) output
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+What defines the "current merged interval" I'm extending?
+Should I use `<` or `<=` when checking if the next interval touches the current one?
+For insert-interval, how do I split the work into intervals fully before, overlapping, and fully after the new one?
+Am I appending the final active/merged interval after the loop ends?
+Is the input already sorted, or do I need to sort first (and does that change the complexity)?
 ```

@@ -42,10 +42,9 @@ space O(n)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Do I actually have mutable updates interleaved with range queries (not just static prefix sums)?
+Fenwick or segment tree: do I need arbitrary range min/max, or just prefix sums?
+Is my Fenwick tree consistently 1-indexed, and does lowbit(i) = i & (-i) drive both update and query?
+For a segment tree, how do child nodes combine into a parent, and is that operation associative?
+What is the log n update/query cost buying me over an O(n) rescan per query?
 ```

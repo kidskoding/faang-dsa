@@ -46,10 +46,9 @@ Space: O(1)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Is the window size k fixed by the problem, or does it need to grow/shrink (wrong pattern if so)?
+What incremental update do I apply when right enters and right - k leaves the window?
+At what index does the first full window exist, and how do I avoid updating the answer before then?
+Am I removing exactly index right - k, not left or some other stale index?
+Does my aggregate (sum, count, product) support O(1) removal, or do I need a different structure?
 ```

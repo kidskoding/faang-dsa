@@ -43,10 +43,8 @@ Space: O(1)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Do duplicates in this problem actually appear in cancelable pairs (or n-1 copies)?
+Am I relying on `a ^ a = 0` and `a ^ 0 = a` correctly?
+Does the order of XOR-ing elements matter here (it shouldn't)?
+Would this problem break if a value appeared an odd number of times unintentionally?
 ```

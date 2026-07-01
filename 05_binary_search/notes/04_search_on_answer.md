@@ -48,10 +48,9 @@ Space: depends on feasible check
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+What quantity are you binary searching over (not indices — what value)?
+What does `feasible(mid)` check, and can you prove it's monotonic across that range?
+What are the smallest and largest possible answers, and why are they valid bounds?
+Are you searching for the minimum feasible value or the maximum, and does `right = mid` vs `left = mid + 1` match that direction?
+What is the cost of one `feasible()` call, and how does it factor into total time complexity?
 ```

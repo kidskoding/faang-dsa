@@ -75,10 +75,9 @@ Space: O(1)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I initializing best to nums[0], not 0, so all-negative arrays work?
+At each step, am I choosing max(x, current + x), correctly deciding to extend vs. restart?
+Is the subarray required to be contiguous, or would a subsequence approach be wrong here?
+Am I returning best, not current, at the end?
+Do I need to track the start/end indices of the best subarray, not just its sum?
 ```

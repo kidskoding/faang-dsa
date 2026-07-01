@@ -45,10 +45,10 @@ Space depends on visited/output
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I consistently treating the first coordinate as row and the second as col?
+Which direction set does this problem need: 4-directional, 8-directional, or diagonals only?
+Do I bounds-check `0 <= nr < rows and 0 <= nc < cols` before touching grid[nr][nc]?
+Could the grid be empty or ragged, and does my `len(grid[0])` call handle that?
+Am I marking cells visited in place or with a separate set, and could that double-count or infinite-loop?
+What is the time and space complexity in terms of rows * cols?
 ```

@@ -43,10 +43,9 @@ Space: O(n) or O(1) depending method
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I answering "can everyone attend" (boolean) or "how many rooms needed" (max concurrency)?
+Do back-to-back meetings (one ends exactly when another starts) require a new room?
+Should I use separate sorted start/end arrays with two pointers, or a min-heap of end times — and why?
+If using a heap, when do I pop a finished meeting versus push a new one?
+What does the peak value of my counter represent in terms of the answer?
 ```

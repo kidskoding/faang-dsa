@@ -114,10 +114,9 @@ Space is O(w) for the queue.
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Is this DFS (space O(h)) or BFS (space O(w)), and can I justify why each bound is correct?
+What does h collapse to for a balanced tree vs. a skewed tree, and same for w?
+Am I recomputing subtree information (e.g. height) inside a loop over every node, causing O(n^2)?
+Does the output itself (level-order list, serialized string, all paths) add space beyond auxiliary recursion/queue space?
+Can I state both time and space in the "n is ... because ..." interview phrasing?
 ```

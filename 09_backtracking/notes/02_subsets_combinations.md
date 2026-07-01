@@ -45,10 +45,9 @@ Space: O(n) path
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I passing `i + 1` (not `0` or `i`) as the next `start` to avoid reordered duplicates?
+Do subsets need to be saved at every node, or only when a size/target condition is met?
+If the input has duplicate values, did I sort first and skip repeated values at the same recursion depth?
+Is the path being copied (`path[:]` or `list(path)`) at save time, not saved by reference?
+What terminates the loop early — running out of indices, or exceeding a target sum?
 ```

@@ -46,10 +46,9 @@ Space: O(rows * cols)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Does this problem have one source or multiple sources that should all start in the queue at distance 0?
+Am I marking cells visited when I enqueue them, or only when I dequeue them (and does that create duplicates)?
+How am I tracking distance/level: a per-cell counter, or draining the queue level by level?
+What does an unreachable cell look like in my output, and how do I detect it at the end?
+Why does the first visit to a cell guarantee the shortest distance in an unweighted grid?
 ```

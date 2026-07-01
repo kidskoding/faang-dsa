@@ -44,10 +44,8 @@ Space: output size
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Is n small enough (roughly <= 20) that 2^n enumeration is feasible?
+Am I distinguishing bit position (item index) from the mask's integer value?
+Does my loop correctly include the empty subset (mask 0)?
+For each mask, am I checking `mask & (1 << i)` against the right item i?
 ```

@@ -90,10 +90,9 @@ Worst-case hash collisions can degrade, but interview analysis usually uses aver
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Do I actually need counts/indices (hash map) or just membership (hash set)?
+Am I checking membership before or after adding the current element, and does that order allow reusing the same element incorrectly?
+Would duplicates break my answer if I used a set instead of a frequency map?
+Is my key hashable, and am I mutating it after inserting it into the table?
+Am I relying on dictionary iteration order for correctness?
 ```

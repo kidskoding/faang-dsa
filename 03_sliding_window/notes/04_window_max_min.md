@@ -47,10 +47,9 @@ Space: O(k)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I storing indices in the deque, not values, so I can detect and evict expired entries?
+For a max window, why is it safe to pop smaller values from the back before pushing nums[right]?
+What check evicts the front of the deque when deque[0] falls outside the current window bounds?
+Am I using `<=` vs `<` consistently when popping, and how does that choice handle duplicate values?
+Why does this run in amortized O(n) despite the nested while loop (each index pushed and popped at most once)?
 ```

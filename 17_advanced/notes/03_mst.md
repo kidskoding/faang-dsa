@@ -44,10 +44,9 @@ Space O(V)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I sorting edges by weight before scanning them (Kruskal)?
+How does union-find with path compression tell me an edge would create a cycle?
+Why is greedily taking the cheapest non-cycle edge always safe (cut property)?
+Does the graph need to be connected for a true spanning tree to exist?
+Am I conflating this with shortest-path (single source) instead of minimum total connection cost?
 ```

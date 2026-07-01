@@ -46,10 +46,9 @@ Space: O(1) for iterative merge
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I creating new nodes when I could just relink the existing ones?
+After the main merge loop ends, have I attached whatever remains of the non-exhausted list?
+Does my dummy node let me avoid special-casing which list's head becomes the output head?
+If splitting a list, does my fast/slow setup actually cut the first half where I expect, including for even and odd lengths?
+What is the time and space complexity, and does it change if I'm merging k lists instead of 2?
 ```

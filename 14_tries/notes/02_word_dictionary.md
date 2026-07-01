@@ -45,10 +45,9 @@ Usually bounded by trie size
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Why does a wildcard require recursing into every child instead of following one path?
+What is the base case that distinguishes "reached end of word" from "still matching"?
+Why must the base case check node.is_word rather than just i == len(word)?
+How do I short-circuit as soon as one branch returns a match?
+What is the worst-case complexity when the pattern is all wildcards?
 ```

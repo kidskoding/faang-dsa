@@ -42,10 +42,9 @@ Dijkstra O((V+E) log V)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Are edge weights uniform (BFS), 0/1 (0-1 BFS deque), or general nonnegative (Dijkstra)?
+What is my frontier structure: plain queue, deque, or min-heap keyed by distance?
+How do I detect and skip a stale/outdated heap entry for an already-finalized node?
+Could any edge be negative, and if so, why does Dijkstra break there?
+When is a node's distance considered final versus still tentative?
 ```

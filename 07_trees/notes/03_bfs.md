@@ -103,10 +103,9 @@ Space: O(w)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Why does this problem need level boundaries instead of plain DFS?
+How do I capture level_size before draining the queue, so levels don't blur together?
+Am I enqueuing nodes (not values), and checking children with `if node.left exists`?
+For minimum depth, why is the first leaf BFS reaches guaranteed to be shallowest?
+What does the queue look like at the start of each outer loop iteration?
 ```

@@ -48,10 +48,9 @@ Space: O(1)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+What is the monotonic predicate, and can you prove it's false...false, true...true (or vice versa)?
+Why does this template use `right = n` and `left < right` instead of `right = n - 1` and `left <= right`?
+Why do you set `right = mid` instead of `mid - 1` when the condition is true?
+Does `left` land on the first-true or last-false index, and how would you flip it to find the other boundary?
+What happens if no index satisfies the condition — what does `left` equal on exit?
 ```

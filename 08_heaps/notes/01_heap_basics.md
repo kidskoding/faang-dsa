@@ -43,10 +43,9 @@ heapify: O(n)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Do I need repeated access to the next-best item, or just one min/max lookup?
+Do I need a min heap or a max heap, and how do I simulate max heap in Python?
+What exactly goes in each heap entry, and are tuple fields comparable if priorities tie?
+Should I build the heap with heapify (O(n)) or push items one at a time (O(n log n))?
+Am I relying on heap iteration/order being sorted anywhere (it isn't)?
 ```

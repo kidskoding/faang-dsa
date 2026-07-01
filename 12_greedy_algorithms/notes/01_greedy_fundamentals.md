@@ -43,10 +43,9 @@ Space often O(1) or O(n)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+What is the greedy rule (local choice) I am claiming is optimal?
+Can I prove it with an exchange argument, or find a counterexample first?
+Does the input need sorting to make the greedy choice well-defined, and by what key?
+What accumulated state am I carrying forward as I commit to each choice?
+If I can't justify why the local choice can never be beaten later, should this be DP instead?
 ```

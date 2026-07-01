@@ -49,10 +49,9 @@ Space: O(1)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Is the array actually sorted (or sorted enough) for binary search to apply?
+Why does `left <= right` (not `<`) match an exact-match search?
+Why is `mid + 1` / `mid - 1` correct here instead of `mid` when narrowing?
+How would you rewrite `(left + right) // 2` to avoid overflow in a language without arbitrary-precision ints?
+What do you return if the target is never found?
 ```

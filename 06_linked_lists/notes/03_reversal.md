@@ -47,10 +47,9 @@ Space: O(1)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Have I saved `curr.next` before overwriting `curr.next = prev`?
+What do I return at the end — `prev` or `curr` — and why is that the correct new head?
+If reversing only a sublist, what nodes do I need references to before and after the sublist to reconnect it?
+What are `prev` and `curr` pointing to at the top of each loop iteration — is that invariant true before the first iteration too?
+What is the time and space complexity, and could I do this recursively instead — what would the space tradeoff be?
 ```

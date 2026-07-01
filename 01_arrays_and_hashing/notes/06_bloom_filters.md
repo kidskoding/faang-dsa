@@ -67,10 +67,9 @@ space: fixed bit array size
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Can this problem tolerate false positives, or does it need exact membership?
+Why can a Bloom filter never produce a false negative if implemented correctly?
+How does the number of hash functions k trade off false-positive rate against add/contains cost?
+Why does deletion require a counting Bloom filter instead of just clearing bits?
+How does bit array size affect the false-positive rate as more keys are added?
 ```

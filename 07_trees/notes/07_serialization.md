@@ -92,10 +92,9 @@ The encoded output stores every real node plus enough null markers to recover sh
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Why aren't values alone enough to reconstruct the tree — what do null markers preserve?
+Does deserialize() consume tokens in the exact same order serialize() wrote them?
+Am I tracking a single shared token index/iterator across recursive deserialize calls?
+Is this DFS preorder (node, then children) or BFS level-order, and am I consistent between serialize/deserialize?
+Why is space O(n) even though I'm writing null markers for missing children?
 ```

@@ -44,10 +44,9 @@ Space: O(k)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Why does the heap only ever hold one candidate per list, not all N values?
+What info do I store per heap entry so I know which list/index to advance next?
+What do I do when a list is exhausted or empty from the start?
+Why is this O(N log k) rather than O(N log N), and what does k represent here?
+How would this change if merging linked lists instead of arrays (no index, use node.next)?
 ```
