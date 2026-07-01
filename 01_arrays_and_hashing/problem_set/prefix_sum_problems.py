@@ -1,0 +1,57 @@
+class NumArray:
+    # Problem 7: Range Sum Query - Immutable
+    # Key idea: precompute a prefix sum array for O(1) range queries.
+
+    def __init__(self, nums: list[int]) -> None:
+        # Time:
+        # Space:
+        pass
+
+    def sum_range(self, left: int, right: int) -> int:
+        # Time:
+        # Space:
+        pass
+
+
+def subarray_sum(nums: list[int], k: int) -> int:
+    # Problem 12: Subarray Sum Equals K
+    # Key idea: running prefix sum plus a count hash map.
+    # Time:
+    # Space:
+
+    pass
+
+
+def check_subarray_sum(nums: list[int], k: int) -> bool:
+    # Problem 18: Continuous Subarray Sum
+    # Key idea: running prefix sum modulo k, hash map of first-seen remainder index.
+    # Time:
+    # Space:
+
+    pass
+
+
+class NumMatrix:
+    # Problem 22: Range Sum Query 2D - Immutable
+    # Key idea: 2D prefix sum with inclusion-exclusion.
+
+    def __init__(self, matrix: list[list[int]]) -> None:
+        # Time:
+        # Space:
+        pass
+
+    def sum_region(
+        self, row1: int, col1: int, row2: int, col2: int
+    ) -> int:
+        # Time:
+        # Space:
+        pass
+
+
+def subarrays_div_by_k(nums: list[int], k: int) -> int:
+    # Problem 23: Subarrays Divisible By K
+    # Key idea: running prefix sum modulo k, count matching remainders.
+    # Time:
+    # Space:
+
+    pass

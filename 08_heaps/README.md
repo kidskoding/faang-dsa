@@ -18,9 +18,24 @@
 
 ## Problem Set
 
-The canonical problem set for this module still needs to be added.
+1. [Kth Largest Element In An Array](problem_set/HEAPS_PROBLEM_SET.md)
+2. [Last Stone Weight](problem_set/HEAPS_PROBLEM_SET.md)
+3. [K Closest Points To Origin](problem_set/HEAPS_PROBLEM_SET.md)
+4. [Kth Largest Element In A Stream](problem_set/HEAPS_PROBLEM_SET.md)
+5. [Meeting Rooms II](problem_set/HEAPS_PROBLEM_SET.md)
+6. [Top K Frequent Elements](problem_set/HEAPS_PROBLEM_SET.md)
+7. [Top K Frequent Words](problem_set/HEAPS_PROBLEM_SET.md)
+8. [Task Scheduler](problem_set/HEAPS_PROBLEM_SET.md)
+9. [Reorganize String](problem_set/HEAPS_PROBLEM_SET.md)
+10. [Find Median From Data Stream](problem_set/HEAPS_PROBLEM_SET.md)
+11. [IPO](problem_set/HEAPS_PROBLEM_SET.md)
+12. [Sliding Window Median](problem_set/HEAPS_PROBLEM_SET.md)
+13. [Merge K Sorted Lists](problem_set/HEAPS_PROBLEM_SET.md)
+14. [Smallest Range Covering Elements From K Lists](problem_set/HEAPS_PROBLEM_SET.md)
+15. [Design Twitter](problem_set/HEAPS_PROBLEM_SET.md)
+16. [Employee Free Time](problem_set/HEAPS_PROBLEM_SET.md)
 
 ## Additional Notes
 
-- Read the notes first, then drill the module problem set once it exists.
-- Keep implementation files and tests grouped by the same patterns as the notes.
+- The workbook file is the canonical heaps problem set.
+- Keep heap basics, top-k, two-heaps, and k-way merge problems in that order.

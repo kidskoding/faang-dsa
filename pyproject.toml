@@ -1,7 +1,7 @@
 [project]
 name = "faang-dsa"
 version = "0.1.0"
-description = "DSA prep in Python for internship, co-op, and new-grad interviews at big tech companies"
+description = "dsa prep in Python for internship, co-op, and new-grad interviews at big tech companies"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -20,8 +20,23 @@ wrap = 88
 
 [tool.pytest.ini_options]
 pythonpath = [
+    "01_arrays_and_hashing",
+    "02_two_pointers",
+    "03_sliding_window",
+    "04_stack",
+    "05_binary_search",
     "06_linked_lists",
     "07_trees",
+    "08_heaps",
+    "09_backtracking",
+    "10_graphs",
+    "11_dp",
+    "12_greedy_algorithms",
+    "13_intervals",
+    "14_tries",
+    "15_bit_manipulation",
+    "16_math_geometry",
+    "17_advanced",
     "other/problem_sets/01_grid_bfs",
 ]
 testpaths = [
@@ -52,3 +67,34 @@ target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "I"]
+
+[tool.pyright]
+typeCheckingMode = "off"
+reportUnknownArgumentType = "none"
+reportUnknownMemberType = "none"
+reportUnknownParameterType = "none"
+reportUnknownVariableType = "none"
+reportMissingParameterType = "none"
+
+[[tool.pyright.executionEnvironments]]
+root = "."
+extraPaths = [
+    "01_arrays_and_hashing",
+    "02_two_pointers",
+    "03_sliding_window",
+    "04_stack",
+    "05_binary_search",
+    "06_linked_lists",
+    "07_trees",
+    "08_heaps",
+    "09_backtracking",
+    "10_graphs",
+    "11_dp",
+    "12_greedy_algorithms",
+    "13_intervals",
+    "14_tries",
+    "15_bit_manipulation",
+    "16_math_geometry",
+    "17_advanced",
+    "other/problem_sets/01_grid_bfs",
+]

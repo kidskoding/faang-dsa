@@ -1,0 +1,130 @@
+from problem_set.hashing_problems import (
+    Codec,
+    contains_duplicate,
+    group_anagrams,
+    is_anagram,
+    is_valid_sudoku,
+    longest_consecutive,
+    top_k_frequent,
+    two_sum,
+)
+
+
+def test_two_sum_normal():
+    assert two_sum([2, 7, 11, 15], 9) == [0, 1]
+
+
+def test_two_sum_middle_pair():
+    assert two_sum([3, 2, 4], 6) == [1, 2]
+
+
+def test_two_sum_duplicate_values():
+    assert two_sum([3, 3], 6) == [0, 1]
+
+
+def test_contains_duplicate_true():
+    assert contains_duplicate([1, 2, 3, 1]) is True
+
+
+def test_contains_duplicate_false():
+    assert contains_duplicate([1, 2, 3, 4]) is False
+
+
+def test_contains_duplicate_empty():
+    assert contains_duplicate([]) is False
+
+
+def test_contains_duplicate_single_element():
+    assert contains_duplicate([1]) is False
+
+
+def test_is_anagram_true():
+    assert is_anagram("anagram", "nagaram") is True
+
+
+def test_is_anagram_false_different_lengths():
+    assert is_anagram("rat", "car") is False
+
+
+def test_is_anagram_empty_strings():
+    assert is_anagram("", "") is True
+
+
+def test_group_anagrams_normal():
+    result = group_anagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
+    normalized = sorted(sorted(group) for group in result)
+    expected = sorted(sorted(group) for group in [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]])
+    assert normalized == expected
+
+
+def test_group_anagrams_empty():
+    assert group_anagrams([]) == []
+
+
+def test_group_anagrams_single_word():
+    assert group_anagrams(["abc"]) == [["abc"]]
+
+
+def test_top_k_frequent_normal():
+    assert set(top_k_frequent([1, 1, 1, 2, 2, 3], 2)) == {1, 2}
+
+
+def test_top_k_frequent_single_element():
+    assert top_k_frequent([1], 1) == [1]
+
+
+def test_longest_consecutive_normal():
+    assert longest_consecutive([100, 4, 200, 1, 3, 2]) == 4
+
+
+def test_longest_consecutive_empty():
+    assert longest_consecutive([]) == 0
+
+
+def test_longest_consecutive_with_duplicates():
+    assert longest_consecutive([1, 2, 0, 1]) == 3
+
+
+def _valid_board() -> list[list[str]]:
+    return [
+        ["5", "3", ".", ".", "7", ".", ".", ".", "."],
+        ["6", ".", ".", "1", "9", "5", ".", ".", "."],
+        [".", "9", "8", ".", ".", ".", ".", "6", "."],
+        ["8", ".", ".", ".", "6", ".", ".", ".", "3"],
+        ["4", ".", ".", "8", ".", "3", ".", ".", "1"],
+        ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
+        [".", "6", ".", ".", ".", ".", "2", "8", "."],
+        [".", ".", ".", "4", "1", "9", ".", ".", "5"],
+        [".", ".", ".", ".", "8", ".", ".", "7", "9"],
+    ]
+
+
+def _invalid_board() -> list[list[str]]:
+    board = _valid_board()
+    board[0][0] = "8"
+    return board
+
+
+def test_is_valid_sudoku_true():
+    assert is_valid_sudoku(_valid_board()) is True
+
+
+def test_is_valid_sudoku_false_duplicate_in_column():
+    assert is_valid_sudoku(_invalid_board()) is False
+
+
+def test_codec_roundtrip_normal():
+    codec = Codec()
+    strs = ["neet", "code", "love", "you"]
+    assert codec.decode(codec.encode(strs)) == strs
+
+
+def test_codec_roundtrip_empty():
+    codec = Codec()
+    assert codec.decode(codec.encode([])) == []
+
+
+def test_codec_roundtrip_empty_strings():
+    codec = Codec()
+    strs = ["", "a", ""]
+    assert codec.decode(codec.encode(strs)) == strs

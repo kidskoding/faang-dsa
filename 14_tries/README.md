@@ -16,9 +16,19 @@
 
 ## Problem Set
 
-The canonical problem set for this module still needs to be added.
+1. [Implement Trie (Prefix Tree)](problem_set/TRIES_PROBLEM_SET.md)
+2. [Map Sum Pairs](problem_set/TRIES_PROBLEM_SET.md)
+3. [Longest Word In Dictionary](problem_set/TRIES_PROBLEM_SET.md)
+4. [Replace Words](problem_set/TRIES_PROBLEM_SET.md)
+5. [Design Add And Search Words Data Structure](problem_set/TRIES_PROBLEM_SET.md)
+6. [Implement Magic Dictionary](problem_set/TRIES_PROBLEM_SET.md)
+7. [Search Suggestions System](problem_set/TRIES_PROBLEM_SET.md)
+8. [Stream Of Characters](problem_set/TRIES_PROBLEM_SET.md)
+9. [Word Search II](problem_set/TRIES_PROBLEM_SET.md)
+10. [Palindrome Pairs](problem_set/TRIES_PROBLEM_SET.md)
+11. [Concatenated Words](problem_set/TRIES_PROBLEM_SET.md)
 
 ## Additional Notes
 
-- Read the notes first, then drill the module problem set once it exists.
+- Read the notes first, then drill the module problem set.
 - Keep implementation files and tests grouped by the same patterns as the notes.

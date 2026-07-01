@@ -1,0 +1,115 @@
+def length_of_lis(nums: list[int]) -> int:
+    # Problem 15: Longest Increasing Subsequence
+    # Key idea: dp[i] is the longest increasing subsequence ending at index i.
+    # Time:
+    # Space:
+
+    pass
+
+
+def longest_common_subsequence(text1: str, text2: str) -> int:
+    # Problem 16: Longest Common Subsequence
+    # Key idea: dp[i][j] over prefixes; matching characters extend the diagonal.
+    # Time:
+    # Space:
+
+    pass
+
+
+def min_distance(word1: str, word2: str) -> int:
+    # Problem 17: Edit Distance
+    # Key idea: dp[i][j] is the min insert/delete/replace ops to convert one prefix to another.
+    # Time:
+    # Space:
+
+    pass
+
+
+def word_break(s: str, word_dict: list[str]) -> bool:
+    # Problem 18: Word Break
+    # Key idea: dp[i] is true if the prefix ending at i splits into dictionary words.
+    # Time:
+    # Space:
+
+    pass
+
+
+def longest_palindrome(s: str) -> str:
+    # Problem 19: Longest Palindromic Substring
+    # Key idea: dp[i][j] is true if s[i..j] is a palindrome, built from shorter spans.
+    # Time:
+    # Space:
+
+    pass
+
+
+def count_substrings(s: str) -> int:
+    # Problem 20: Palindromic Substrings
+    # Key idea: count every palindromic substring using the same table shape as above.
+    # Time:
+    # Space:
+
+    pass
+
+
+def max_profit_with_cooldown(prices: list[int]) -> int:
+    # Problem 21: Best Time to Buy and Sell Stock with Cooldown
+    # Key idea: state machine DP over held, sold-today, and cooldown states.
+    # Time:
+    # Space:
+
+    pass
+
+
+def max_profit_with_fee(prices: list[int], fee: int) -> int:
+    # Problem 22: Best Time to Buy and Sell Stock with Transaction Fee
+    # Key idea: state machine DP over held and not-held states, fee charged on sell.
+    # Time:
+    # Space:
+
+    pass
+
+
+def is_interleave(s1: str, s2: str, s3: str) -> bool:
+    # Problem 23: Interleaving String
+    # Key idea: dp[i][j] tracks whether prefixes of s1 and s2 interleave into s3's prefix.
+    # Time:
+    # Space:
+
+    pass
+
+
+def num_distinct(s: str, t: str) -> int:
+    # Problem 24: Distinct Subsequences
+    # Key idea: dp[i][j] counts ways t's prefix appears as a subsequence of s's prefix.
+    # Time:
+    # Space:
+
+    pass
+
+
+def is_match_regex(s: str, p: str) -> bool:
+    # Problem 25: Regular Expression Matching
+    # Key idea: dp[i][j] handles literal, '.', and '*' transitions between s and p.
+    # Time:
+    # Space:
+
+    pass
+
+
+def is_match_wildcard(s: str, p: str) -> bool:
+    # Problem 26: Wildcard Matching
+    # Key idea: dp[i][j] handles literal, '?', and '*' transitions between s and p.
+    # Time:
+    # Space:
+
+    pass
+
+
+def max_coins(nums: list[int]) -> int:
+    # Problem 27: Burst Balloons
+    # Key idea: interval DP — choose the last balloon to burst within a range.
+    # Time:
+    # Space:
+
+    pass
