@@ -120,47 +120,27 @@ reuse, and palindrome construction.
 
 - Pattern: the KMP failure function's final value is the longest proper prefix that is also a suffix.
 
-## Sorting Internals
-
-These problems teach implementing merge sort/quicksort from scratch and using quickselect
-for Kth-order-statistic questions. `Sort Colors` and `Kth Largest Element In An Array` are
-skipped here — they already anchor `02_two_pointers` (Dutch national flag partition) and
-`08_heaps` (heap-based selection) respectively, and this workbook does not repeat a title
-outside its deliberate anchor module.
-
-### 19. [Sort An Array](https://leetcode.com/problems/sort-an-array/)
-
-- Pattern: implement merge sort or quicksort from scratch on a plain array.
-
-### 20. [Largest Number](https://leetcode.com/problems/largest-number/)
-
-- Pattern: sort with a custom pairwise comparator (`a+b` vs `b+a`) instead of numeric order.
-
-### 21. [Wiggle Sort II](https://leetcode.com/problems/wiggle-sort-ii/)
-
-- Pattern: sort (or quickselect the median), then interleave halves from the ends inward.
-
 ## Divide And Conquer
 
-These problems teach the divide/conquer/combine recurrence pattern beyond sorting: splitting
+These problems teach the divide/conquer/combine recurrence pattern: splitting
 on structure (operators, spatial coordinates, array halves) and combining sub-results with a
 non-trivial merge step.
 
-### 22. [Different Ways To Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/)
+### 19. [Different Ways To Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/)
 
 - Pattern: split on each operator, recursively solve both sides, combine every result pair.
 
-### 23. [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
+### 20. [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
 
 - Pattern: divide buildings in half, recursively get each skyline, merge with a line sweep.
 
-### 24. Closest Pair Of Points
+### 21. Closest Pair Of Points
 
 - Not on LeetCode as a standalone problem (classic algorithm, sometimes asked directly in
   interviews); implement the divide-and-conquer version yourself.
 - Pattern: divide by x-coordinate, recurse on each half, combine by checking a narrow strip.
 
-### 25. [Beautiful Array](https://leetcode.com/problems/beautiful-array/)
+### 22. [Beautiful Array](https://leetcode.com/problems/beautiful-array/)
 
 - Pattern: recursively build odd/even-biased halves whose combination avoids arithmetic triples.
 
@@ -171,14 +151,14 @@ result for each subset of items, built up by adding one unset item at a time. `S
 Path Visiting All Nodes` is skipped here — it already anchors `10_graphs` as problem 53 and
 this workbook does not repeat a title outside its deliberate anchor module.
 
-### 26. [Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
+### 23. [Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
 
 - Pattern: `dp[mask]` tracks which numbers are already placed into a completed bucket.
 
-### 27. [Smallest Sufficient Team](https://leetcode.com/problems/smallest-sufficient-team/)
+### 24. [Smallest Sufficient Team](https://leetcode.com/problems/smallest-sufficient-team/)
 
 - Pattern: `dp[skill_mask]` stores the smallest team (as a set of people) covering that skill mask.
 
-### 28. [Parallel Courses II](https://leetcode.com/problems/parallel-courses-ii/)
+### 25. [Parallel Courses II](https://leetcode.com/problems/parallel-courses-ii/)
 
 - Pattern: `dp[mask]` stores the minimum semesters to complete exactly the courses in mask, transitioning by taking any valid subset of newly-available courses each round.

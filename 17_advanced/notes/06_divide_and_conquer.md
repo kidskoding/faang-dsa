@@ -1,5 +1,11 @@
 # Divide And Conquer
 
+Binary search (`05_binary_search`) is the simplest relative of this paradigm —
+it halves the input but solves only one side with no combine step
+("decrease and conquer"). This note covers the full paradigm and its advanced
+problems: Different Ways To Add Parentheses, The Skyline Problem, Closest Pair
+Of Points, Beautiful Array.
+
 ## Pattern
 
 Break a problem into independent subproblems of the same shape, solve each
