@@ -18,9 +18,34 @@
 
 ## Problem Set
 
-The canonical problem set for this module still needs to be added.
+1. [Reverse Linked List](problem_set/LINKED_LIST_PROBLEM_SET.md)
+2. [Merge Two Sorted Lists](problem_set/LINKED_LIST_PROBLEM_SET.md)
+3. [Remove Duplicates From Sorted List](problem_set/LINKED_LIST_PROBLEM_SET.md)
+4. [Delete Node In A Linked List](problem_set/LINKED_LIST_PROBLEM_SET.md)
+5. [Remove Linked List Elements](problem_set/LINKED_LIST_PROBLEM_SET.md)
+6. [Intersection Of Two Linked Lists](problem_set/LINKED_LIST_PROBLEM_SET.md)
+7. [Middle Of The Linked List](problem_set/LINKED_LIST_PROBLEM_SET.md)
+8. [Linked List Cycle](problem_set/LINKED_LIST_PROBLEM_SET.md)
+9. [Linked List Cycle II](problem_set/LINKED_LIST_PROBLEM_SET.md)
+10. [Palindrome Linked List](problem_set/LINKED_LIST_PROBLEM_SET.md)
+11. [Remove Nth Node From End Of List](problem_set/LINKED_LIST_PROBLEM_SET.md)
+12. [Reverse Linked List II](problem_set/LINKED_LIST_PROBLEM_SET.md)
+13. [Swap Nodes In Pairs](problem_set/LINKED_LIST_PROBLEM_SET.md)
+14. [Reverse Nodes In K-Group](problem_set/LINKED_LIST_PROBLEM_SET.md)
+15. [Add Two Numbers](problem_set/LINKED_LIST_PROBLEM_SET.md)
+16. [Partition List](problem_set/LINKED_LIST_PROBLEM_SET.md)
+17. [Sort List](problem_set/LINKED_LIST_PROBLEM_SET.md)
+18. [Merge K Sorted Lists](problem_set/LINKED_LIST_PROBLEM_SET.md)
+19. [Reorder List](problem_set/LINKED_LIST_PROBLEM_SET.md)
+20. [Rotate List](problem_set/LINKED_LIST_PROBLEM_SET.md)
+21. [Odd Even Linked List](problem_set/LINKED_LIST_PROBLEM_SET.md)
+22. [Split Linked List In Parts](problem_set/LINKED_LIST_PROBLEM_SET.md)
+23. [Remove Duplicates From Sorted List II](problem_set/LINKED_LIST_PROBLEM_SET.md)
+24. [Copy List With Random Pointer](problem_set/LINKED_LIST_PROBLEM_SET.md)
+25. [Flatten A Multilevel Doubly Linked List](problem_set/LINKED_LIST_PROBLEM_SET.md)
+26. [LRU Cache](problem_set/LINKED_LIST_PROBLEM_SET.md)
 
 ## Additional Notes
 
-- Read the notes first, then drill the module problem set once it exists.
+- Read the notes first, then drill the module problem set.
 - Keep implementation files and tests grouped by the same patterns as the notes.
