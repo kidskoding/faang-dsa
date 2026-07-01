@@ -11,6 +11,7 @@
 - Fenwick tree
 - KMP
 - Z-algorithm
+- Bitmask DP
 
 ## Notes
 
@@ -21,6 +22,7 @@
 5. [KMP And Z Algorithm](notes/05_string_algorithms.md)
 6. [Sorting Internals](notes/06_sorting_internals.md)
 7. [Divide And Conquer](notes/07_divide_and_conquer.md)
+8. [Bitmask DP](notes/08_bitmask_dp.md)
 
 ## Problem Set
 
@@ -49,6 +51,9 @@
 23. [The Skyline Problem](problem_set/ADVANCED_PROBLEM_SET.md)
 24. [Closest Pair Of Points](problem_set/ADVANCED_PROBLEM_SET.md)
 25. [Beautiful Array](problem_set/ADVANCED_PROBLEM_SET.md)
+26. [Partition to K Equal Sum Subsets](problem_set/ADVANCED_PROBLEM_SET.md)
+27. [Smallest Sufficient Team](problem_set/ADVANCED_PROBLEM_SET.md)
+28. [Parallel Courses II](problem_set/ADVANCED_PROBLEM_SET.md)
 
 ## Additional Notes
 

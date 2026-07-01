@@ -163,3 +163,22 @@ non-trivial merge step.
 ### 25. [Beautiful Array](https://leetcode.com/problems/beautiful-array/)
 
 - Pattern: recursively build odd/even-biased halves whose combination avoids arithmetic triples.
+
+## Bitmask DP
+
+These problems teach state-compression DP: `dp[mask]` (or `dp[mask][i]`) tracks the best
+result for each subset of items, built up by adding one unset item at a time. `Shortest
+Path Visiting All Nodes` is skipped here — it already anchors `10_graphs` as problem 53 and
+this workbook does not repeat a title outside its deliberate anchor module.
+
+### 26. [Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
+
+- Pattern: `dp[mask]` tracks which numbers are already placed into a completed bucket.
+
+### 27. [Smallest Sufficient Team](https://leetcode.com/problems/smallest-sufficient-team/)
+
+- Pattern: `dp[skill_mask]` stores the smallest team (as a set of people) covering that skill mask.
+
+### 28. [Parallel Courses II](https://leetcode.com/problems/parallel-courses-ii/)
+
+- Pattern: `dp[mask]` stores the minimum semesters to complete exactly the courses in mask, transitioning by taking any valid subset of newly-available courses each round.
