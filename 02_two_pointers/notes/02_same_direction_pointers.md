@@ -46,10 +46,10 @@ Space: O(1)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+What does `write` represent — the next free slot, or the last committed slot?
+What is the "should be kept" condition for `read`, and does it depend on prior state (e.g. comparing to `nums[write - 1]`)?
+Does `read` ever need to move faster than one step per iteration, or is it always a simple `for` loop?
+Do I increment `write` before or after writing to `nums[write]`, and why?
+Is `write` itself the answer (a count/length), or do I need to return `nums[:write]`?
+Does the problem require sorted input for correctness, or does it work on arbitrary order?
 ```

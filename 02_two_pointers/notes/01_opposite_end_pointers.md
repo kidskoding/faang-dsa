@@ -50,10 +50,10 @@ Space: O(1)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Is the input actually sorted (or sortable) — does this pattern even apply?
+When the sum/condition is too small, why is moving `left` up correct instead of moving `right`?
+When the sum/condition is too large, why is moving `right` down correct instead of moving `left`?
+Should the loop use `left < right` or `left <= right`, and why (can an element pair with itself)?
+On a match, do I move one pointer, both pointers, or return immediately?
+If duplicate values are allowed, how do I skip past them without missing a valid pair?
 ```
