@@ -5,10 +5,13 @@
 - Union find
 - Shortest paths
 - Minimum spanning tree
+- Sorting internals
+- Divide and conquer
 - Segment tree
 - Fenwick tree
 - KMP
 - Z-algorithm
+- Advanced DP examples
 
 ## Notes
 
