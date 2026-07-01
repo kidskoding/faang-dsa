@@ -44,10 +44,9 @@ Space: O(1)
 Before coding, make sure you can answer:
 
 ```text
-What pattern is this?
-What state or invariant am I maintaining?
-What is the base case or initialization?
-When do I update the answer?
-Why is the movement/transition valid?
-What is the time and space complexity?
+Am I about to overwrite `nums[write]` before I've finished reading its old value elsewhere?
+Does the problem require preserving relative order, or can I swap-from-the-end instead?
+What is left in the array beyond the final `write` index, and does the problem care?
+Is `O(1)` extra space actually required, or would a new array make the solution simpler and still acceptable?
+If I need to write from the back (e.g. merging two sorted arrays), why does moving right-to-left avoid overwriting unread values?
 ```
