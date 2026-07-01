@@ -11,7 +11,6 @@
 - Fenwick tree
 - KMP
 - Z-algorithm
-- Advanced DP examples
 
 ## Notes
 
@@ -20,6 +19,8 @@
 3. [Minimum Spanning Tree](notes/03_mst.md)
 4. [Segment Tree And Fenwick Tree](notes/04_range_structures.md)
 5. [KMP And Z Algorithm](notes/05_string_algorithms.md)
+6. [Sorting Internals](notes/06_sorting_internals.md)
+7. [Divide And Conquer](notes/07_divide_and_conquer.md)
 
 ## Problem Set
 
@@ -41,6 +42,13 @@
 16. [Repeated String Match](problem_set/ADVANCED_PROBLEM_SET.md)
 17. [Shortest Palindrome](problem_set/ADVANCED_PROBLEM_SET.md)
 18. [Longest Happy Prefix](problem_set/ADVANCED_PROBLEM_SET.md)
+19. [Sort An Array](problem_set/ADVANCED_PROBLEM_SET.md)
+20. [Largest Number](problem_set/ADVANCED_PROBLEM_SET.md)
+21. [Wiggle Sort II](problem_set/ADVANCED_PROBLEM_SET.md)
+22. [Different Ways To Add Parentheses](problem_set/ADVANCED_PROBLEM_SET.md)
+23. [The Skyline Problem](problem_set/ADVANCED_PROBLEM_SET.md)
+24. [Closest Pair Of Points](problem_set/ADVANCED_PROBLEM_SET.md)
+25. [Beautiful Array](problem_set/ADVANCED_PROBLEM_SET.md)
 
 ## Additional Notes
 
