@@ -69,8 +69,18 @@ def test_stream_checker_matches_suffix():
     stream_checker = StreamChecker(["cd", "f", "kl"])
     results = [stream_checker.query(letter) for letter in "abcdefghijkl"]
     expected = [
-        False, False, False, True, False, True,
-        False, False, False, False, False, True,
+        False,
+        False,
+        False,
+        True,
+        False,
+        True,
+        False,
+        False,
+        False,
+        False,
+        False,
+        True,
     ]
     assert results == expected
 

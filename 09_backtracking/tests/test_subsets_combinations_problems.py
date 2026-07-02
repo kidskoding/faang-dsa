@@ -21,15 +21,11 @@ def test_subsets_single_element():
 
 
 def test_subsets_normal():
-    assert to_sorted_sets(subsets([1, 2, 3])) == to_sorted_sets(
-        [[], [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3]]
-    )
+    assert to_sorted_sets(subsets([1, 2, 3])) == to_sorted_sets([[], [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3]])
 
 
 def test_subsets_with_dup_normal():
-    assert to_sorted_sets(subsets_with_dup([1, 2, 2])) == to_sorted_sets(
-        [[], [1], [2], [1, 2], [2, 2], [1, 2, 2]]
-    )
+    assert to_sorted_sets(subsets_with_dup([1, 2, 2])) == to_sorted_sets([[], [1], [2], [1, 2], [2, 2], [1, 2, 2]])
 
 
 def test_subsets_with_dup_all_same():
@@ -37,9 +33,7 @@ def test_subsets_with_dup_all_same():
 
 
 def test_combine_normal():
-    assert to_sorted_sets(combine(4, 2)) == to_sorted_sets(
-        [[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]
-    )
+    assert to_sorted_sets(combine(4, 2)) == to_sorted_sets([[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]])
 
 
 def test_combine_k_equals_n():
@@ -47,9 +41,7 @@ def test_combine_k_equals_n():
 
 
 def test_combination_sum_normal():
-    assert to_sorted_sets(combination_sum([2, 3, 6, 7], 7)) == to_sorted_sets(
-        [[2, 2, 3], [7]]
-    )
+    assert to_sorted_sets(combination_sum([2, 3, 6, 7], 7)) == to_sorted_sets([[2, 2, 3], [7]])
 
 
 def test_combination_sum_no_solution():
@@ -57,9 +49,7 @@ def test_combination_sum_no_solution():
 
 
 def test_combination_sum2_normal():
-    assert to_sorted_sets(combination_sum2([10, 1, 2, 7, 6, 1, 5], 8)) == to_sorted_sets(
-        [[1, 1, 6], [1, 2, 5], [1, 7], [2, 6]]
-    )
+    assert to_sorted_sets(combination_sum2([10, 1, 2, 7, 6, 1, 5], 8)) == to_sorted_sets([[1, 1, 6], [1, 2, 5], [1, 7], [2, 6]])
 
 
 def test_combination_sum2_no_solution():

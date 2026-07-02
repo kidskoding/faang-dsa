@@ -14,9 +14,7 @@ def test_letter_combinations_single_digit():
 
 
 def test_letter_combinations_two_digits():
-    assert sorted(letter_combinations("23")) == sorted(
-        ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
-    )
+    assert sorted(letter_combinations("23")) == sorted(["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"])
 
 
 def test_generate_parentheses_single_pair():
@@ -28,9 +26,7 @@ def test_generate_parentheses_two_pairs():
 
 
 def test_generate_parentheses_three_pairs():
-    assert sorted(generate_parentheses(3)) == sorted(
-        ["((()))", "(()())", "(())()", "()(())", "()()()"]
-    )
+    assert sorted(generate_parentheses(3)) == sorted(["((()))", "(()())", "(())()", "()(())", "()()()"])
 
 
 def test_count_arrangement_single():

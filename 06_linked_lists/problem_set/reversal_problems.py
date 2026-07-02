@@ -1,9 +1,7 @@
 from list_node import ListNode
 
 
-def reverse_between(
-    head: ListNode | None, left: int, right: int
-) -> ListNode | None:
+def reverse_between(head: ListNode | None, left: int, right: int) -> ListNode | None:
     # Problem 12: Reverse Linked List II
     # Key idea: reverse only the sublist between two positions.
     # Time:

@@ -32,9 +32,7 @@ def test_permute_unique_all_same():
 
 
 def test_permute_unique_normal():
-    assert to_sorted_lists(permute_unique([1, 1, 2])) == to_sorted_lists(
-        [[1, 1, 2], [1, 2, 1], [2, 1, 1]]
-    )
+    assert to_sorted_lists(permute_unique([1, 1, 2])) == to_sorted_lists([[1, 1, 2], [1, 2, 1], [2, 1, 1]])
 
 
 def test_partition_single_char():
@@ -42,9 +40,7 @@ def test_partition_single_char():
 
 
 def test_partition_normal():
-    assert to_sorted_lists(partition("aab")) == to_sorted_lists(
-        [["a", "a", "b"], ["aa", "b"]]
-    )
+    assert to_sorted_lists(partition("aab")) == to_sorted_lists([["a", "a", "b"], ["aa", "b"]])
 
 
 def test_partition_no_palindromic_split_needed():
@@ -52,9 +48,7 @@ def test_partition_no_palindromic_split_needed():
 
 
 def test_restore_ip_addresses_normal():
-    assert sorted(restore_ip_addresses("25525511135")) == sorted(
-        ["255.255.11.135", "255.255.111.35"]
-    )
+    assert sorted(restore_ip_addresses("25525511135")) == sorted(["255.255.11.135", "255.255.111.35"])
 
 
 def test_restore_ip_addresses_too_short():

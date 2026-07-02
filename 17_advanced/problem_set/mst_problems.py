@@ -29,9 +29,7 @@ def min_cost_connecting_cities(n: int, connections: list[list[int]]) -> int:
     raise NotImplementedError
 
 
-def min_cost_to_supply_water(
-    n: int, wells: list[int], pipes: list[list[int]]
-) -> int:
+def min_cost_to_supply_water(n: int, wells: list[int], pipes: list[list[int]]) -> int:
     # Problem 10: Optimize Water Distribution In A Village
     # Key idea: treat each well as an edge from a virtual node 0, then run Kruskal's/Prim's.
     # Time:

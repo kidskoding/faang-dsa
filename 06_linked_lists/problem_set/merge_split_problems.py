@@ -1,9 +1,7 @@
 from list_node import ListNode
 
 
-def add_two_numbers(
-    l1: ListNode | None, l2: ListNode | None
-) -> ListNode | None:
+def add_two_numbers(l1: ListNode | None, l2: ListNode | None) -> ListNode | None:
     # Problem 15: Add Two Numbers
     # Key idea: digit-by-digit addition with a carry.
     # Time:

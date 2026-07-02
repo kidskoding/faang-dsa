@@ -2,10 +2,11 @@ from collections import deque
 
 # Problem 2: Rotting Oranges
 
+
 def prob02(grid: list[list[int]]) -> int:
     if not grid:
         return -1
-    
+
     queue = deque()
     minutes, fresh = 0, 0
     rows, cols = len(grid), len(grid[0])
@@ -24,10 +25,10 @@ def prob02(grid: list[list[int]]) -> int:
     while queue:
         for _ in range(len(queue)):
             r, c = queue.popleft()
-        
+
             for dr, dc in dirs:
                 nr, nc = r + dr, c + dc
-    
+
                 if 0 <= nr < rows and 0 <= nc < cols:
                     grid[nr][nc] = 2
                     queue.append((nr, nc))

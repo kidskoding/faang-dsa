@@ -21,9 +21,7 @@ class MedianFinder:
         raise NotImplementedError
 
 
-def find_maximized_capital(
-    k: int, w: int, profits: list[int], capital: list[int]
-) -> int:
+def find_maximized_capital(k: int, w: int, profits: list[int], capital: list[int]) -> int:
     # Problem 11: IPO
     # Key idea: min heap gates projects by capital, max heap picks the best profit.
     # Time:

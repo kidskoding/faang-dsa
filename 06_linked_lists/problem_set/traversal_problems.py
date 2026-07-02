@@ -17,12 +17,11 @@ def reverse_list(head: ListNode | None) -> ListNode | None:
         curr.next = prev
         prev = curr
         curr = temp
-    
+
     return prev
 
-def merge_two_lists(
-    list1: ListNode | None, list2: ListNode | None
-) -> ListNode | None:
+
+def merge_two_lists(list1: ListNode | None, list2: ListNode | None) -> ListNode | None:
     # Problem 2: Merge Two Sorted Lists
     # Key idea: weave two lists with a dummy head.
     # Time:
@@ -43,6 +42,7 @@ def merge_two_lists(
     tail.next = list1 if list1 else list2
     return dummy.next
 
+
 def delete_duplicates(head: ListNode | None) -> ListNode | None:
     # Problem 3: Remove Duplicates From Sorted List
     # Key idea: skip a node whose value equals the next.
@@ -51,7 +51,7 @@ def delete_duplicates(head: ListNode | None) -> ListNode | None:
 
     if not head:
         return None
-    
+
     curr = head
     while curr.next:
         if curr.val == curr.next.val:
@@ -80,9 +80,7 @@ def remove_elements(head: ListNode | None, val: int) -> ListNode | None:
     raise NotImplementedError
 
 
-def get_intersection_node(
-    head_a: ListNode | None, head_b: ListNode | None
-) -> ListNode | None:
+def get_intersection_node(head_a: ListNode | None, head_b: ListNode | None) -> ListNode | None:
     # Problem 6: Intersection Of Two Linked Lists
     # Key idea: two pointers that switch lists to align lengths.
     # Time:

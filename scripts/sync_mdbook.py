@@ -63,11 +63,7 @@ def summary_link(title: str, path: Path | None, indent: int = 0) -> str:
 
 
 def module_dirs() -> list[Path]:
-    return sorted(
-        path
-        for path in ROOT.iterdir()
-        if path.is_dir() and re.match(r"^\d{2}_", path.name)
-    )
+    return sorted(path for path in ROOT.iterdir() if path.is_dir() and re.match(r"^\d{2}_", path.name))
 
 
 def module_summary_lines(module: Path) -> list[str]:
@@ -87,9 +83,7 @@ def module_summary_lines(module: Path) -> list[str]:
     problem_set_dir = module / "problem_set"
     if problem_set_dir.exists():
         for problem_set in sorted(problem_set_dir.glob("*.md")):
-            lines.append(
-                summary_link(title_from_markdown(problem_set), problem_set.relative_to(ROOT), 1)
-            )
+            lines.append(summary_link(title_from_markdown(problem_set), problem_set.relative_to(ROOT), 1))
 
     return lines
 

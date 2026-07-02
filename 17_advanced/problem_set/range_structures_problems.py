@@ -51,9 +51,7 @@ class NumMatrix:
 
         raise NotImplementedError
 
-    def sum_region(
-        self, row1: int, col1: int, row2: int, col2: int
-    ) -> int:
+    def sum_region(self, row1: int, col1: int, row2: int, col2: int) -> int:
         # Time:
         # Space:
 

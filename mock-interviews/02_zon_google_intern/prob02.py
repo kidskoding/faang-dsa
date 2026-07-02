@@ -2,16 +2,17 @@ def prob02(routes: list[str]) -> int:
     graph = {}
 
     for route in routes:
-        lst = route.replace(':', '').split()
+        lst = route.replace(":", "").split()
         graph[lst[0]] = lst[1:]
 
     memo = {}
+
     def dfs(node: str, seen_dac: bool, seen_fft: bool) -> int:
-        if node == 'dac':
+        if node == "dac":
             seen_dac = True
-        if node == 'fft':
+        if node == "fft":
             seen_fft = True
-        if node == 'out':
+        if node == "out":
             return 1 if seen_dac and seen_fft else 0
 
         key = (node, seen_dac, seen_fft)

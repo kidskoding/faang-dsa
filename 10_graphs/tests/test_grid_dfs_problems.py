@@ -113,9 +113,7 @@ def test_pacific_atlantic_normal_case():
 
     result = pacific_atlantic(heights)
 
-    assert sorted(result) == sorted(
-        [[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]]
-    )
+    assert sorted(result) == sorted([[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]])
 
 
 def test_pacific_atlantic_single_cell():

@@ -1,6 +1,4 @@
-def valid_square(
-    p1: list[int], p2: list[int], p3: list[int], p4: list[int]
-) -> bool:
+def valid_square(p1: list[int], p2: list[int], p3: list[int], p4: list[int]) -> bool:
     # Problem 13: Valid Square
     # Key idea: compare squared distances between all point pairs.
     # Time:

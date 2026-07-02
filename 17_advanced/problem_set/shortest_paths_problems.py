@@ -1,6 +1,4 @@
-def find_cheapest_price(
-    n: int, flights: list[list[int]], src: int, dst: int, k: int
-) -> int:
+def find_cheapest_price(n: int, flights: list[list[int]], src: int, dst: int, k: int) -> int:
     # Problem 5: Cheapest Flights Within K Stops
     # Key idea: Bellman-Ford style relaxation over at most k+1 rounds.
     # Time:
@@ -18,9 +16,7 @@ def count_paths(n: int, roads: list[list[int]]) -> int:
     raise NotImplementedError
 
 
-def find_the_city(
-    n: int, edges: list[list[int]], distance_threshold: int
-) -> int:
+def find_the_city(n: int, edges: list[list[int]], distance_threshold: int) -> int:
     # Problem 7: Find The City With The Smallest Number Of Neighbors At A Threshold Distance
     # Key idea: Floyd-Warshall all-pairs shortest paths, then compare reachable-city counts.
     # Time:

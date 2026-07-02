@@ -20,9 +20,7 @@ def number_of_provinces(is_connected: list[list[int]]) -> int:
     raise NotImplementedError
 
 
-def number_of_islands_ii(
-    m: int, n: int, positions: list[list[int]]
-) -> list[int]:
+def number_of_islands_ii(m: int, n: int, positions: list[list[int]]) -> list[int]:
     # Problem 2: Number Of Islands II
     # Key idea: union each new land cell with its already-land neighbors, track live count.
     # Time:

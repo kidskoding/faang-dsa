@@ -48,8 +48,14 @@ def test_palindrome_pairs_empty_string_pairs_with_palindromes():
 
 def test_find_all_concatenated_words_normal():
     words = [
-        "cat", "cats", "catsdogcats", "dog", "dogcatsdog",
-        "hippopotamuses", "rat", "ratcatdogcat",
+        "cat",
+        "cats",
+        "catsdogcats",
+        "dog",
+        "dogcatsdog",
+        "hippopotamuses",
+        "rat",
+        "ratcatdogcat",
     ]
     result = find_all_concatenated_words(words)
     assert set(result) == {"catsdogcats", "dogcatsdog", "ratcatdogcat"}

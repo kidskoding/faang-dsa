@@ -28,9 +28,7 @@ def odd_even_list(head: ListNode | None) -> ListNode | None:
     raise NotImplementedError
 
 
-def split_list_to_parts(
-    head: ListNode | None, k: int
-) -> list[ListNode | None]:
+def split_list_to_parts(head: ListNode | None, k: int) -> list[ListNode | None]:
     # Problem 22: Split Linked List In Parts
     # Key idea: size each part, then cut.
     # Time:
