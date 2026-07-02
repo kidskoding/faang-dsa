@@ -58,21 +58,23 @@ faang-dsa/
 
 ## Order to Follow
 
-1. Arrays And Hashing
-2. Two Pointers
-3. Sliding Window
-4. Stack
-5. Binary Search
-6. Linked Lists
-7. Trees
-8. Heaps
-9. Backtracking
-10. Graphs
-11. Dynamic Programming
-12. Greedy Algorithms
-13. Intervals
-14. Tries
-15. Bit Manipulation
-16. Math And Geometry
-17. Advanced Topics
-18. Mixed Interview Practice
+| Module | Technique |
+|--------|-----------|
+| 01 Arrays And Hashing | Hash maps and sets, prefix/suffix sums, frequency counting, Kadane's |
+| 02 Two Pointers | Converging and fast/slow pointers on sorted or linear data |
+| 03 Sliding Window | Contiguous subarray/substring under a constraint |
+| 04 Stack | LIFO, monotonic stack, expression parsing, monotonic deque |
+| 05 Binary Search | Search a sorted space or binary-search-on-answer |
+| 06 Linked Lists | Pointer manipulation, fast/slow, reversal, merge/split |
+| 07 Trees | DFS/BFS recursion, BST ordering, construction, serialization |
+| 08 Heaps | Priority queue: top-K, two heaps, k-way merge |
+| 09 Backtracking | Exhaustive search with pruning over choices |
+| 10 Graphs | BFS/DFS, topological sort, union-find, shortest paths |
+| 11 Dynamic Programming | Overlapping subproblems and optimal substructure |
+| 12 Greedy Algorithms | Locally optimal choice justified by an exchange argument |
+| 13 Intervals | Sort by endpoint, merge, sweep line, difference arrays |
+| 14 Tries | Prefix tree for word and prefix queries |
+| 15 Bit Manipulation | Bitwise ops, masks, XOR tricks, bitmask enumeration |
+| 16 Math And Geometry | Number theory, matrix ops, coordinate geometry |
+| 17 Advanced Topics | Union-find, segment/Fenwick trees, string algorithms, bitmask DP |
+| 18 Mixed Interview Practice | Timed mixed-pattern drilling and mock interviews |
