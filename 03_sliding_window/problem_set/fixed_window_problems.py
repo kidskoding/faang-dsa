@@ -4,4 +4,4 @@ def find_max_average(nums: list[int], k: int) -> float:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

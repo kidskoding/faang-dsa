@@ -4,7 +4,7 @@ def can_partition_k_subsets(nums: list[int], k: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def smallest_sufficient_team(req_skills: list[str], people: list[list[str]]) -> list[int]:
@@ -13,7 +13,7 @@ def smallest_sufficient_team(req_skills: list[str], people: list[list[str]]) -> 
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_number_of_semesters(
@@ -25,4 +25,4 @@ def min_number_of_semesters(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

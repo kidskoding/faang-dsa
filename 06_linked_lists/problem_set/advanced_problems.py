@@ -37,7 +37,7 @@ def delete_duplicates_ii(head: ListNode | None) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def copy_random_list(head: RandomNode | None) -> RandomNode | None:
@@ -46,7 +46,7 @@ def copy_random_list(head: RandomNode | None) -> RandomNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def flatten(head: MultilevelNode | None) -> MultilevelNode | None:
@@ -55,7 +55,7 @@ def flatten(head: MultilevelNode | None) -> MultilevelNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class LRUCache:
@@ -65,14 +65,14 @@ class LRUCache:
     def __init__(self, capacity: int) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def get(self, key: int) -> int:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def put(self, key: int, value: int) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError

@@ -15,22 +15,22 @@ class Trie:
     def __init__(self) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def insert(self, word: str) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def search(self, word: str) -> bool:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def starts_with(self, prefix: str) -> bool:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
 
 class MapSumNode:
@@ -47,17 +47,17 @@ class MapSum:
     def __init__(self) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def insert(self, key: str, val: int) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def sum(self, prefix: str) -> int:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
 
 def longest_word_in_dictionary(words: list[str]) -> str:
@@ -66,7 +66,7 @@ def longest_word_in_dictionary(words: list[str]) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def replace_words(dictionary: list[str], sentence: str) -> str:
@@ -76,4 +76,4 @@ def replace_words(dictionary: list[str], sentence: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

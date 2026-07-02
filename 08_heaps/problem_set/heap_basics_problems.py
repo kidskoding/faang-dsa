@@ -4,7 +4,7 @@ def kth_largest_element(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def last_stone_weight(stones: list[int]) -> int:
@@ -13,7 +13,7 @@ def last_stone_weight(stones: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def k_closest_points(points: list[list[int]], k: int) -> list[list[int]]:
@@ -22,7 +22,7 @@ def k_closest_points(points: list[list[int]], k: int) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class KthLargest:
@@ -33,13 +33,13 @@ class KthLargest:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def add(self, val: int) -> int:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
 
 def meeting_rooms_ii(intervals: list[list[int]]) -> int:
@@ -48,4 +48,4 @@ def meeting_rooms_ii(intervals: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

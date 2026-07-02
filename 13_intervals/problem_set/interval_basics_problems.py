@@ -4,7 +4,7 @@ def summary_ranges(nums: list[int]) -> list[str]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_min_arrow_shots(points: list[list[int]]) -> int:
@@ -13,7 +13,7 @@ def find_min_arrow_shots(points: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def interval_intersection(
@@ -24,4 +24,4 @@ def interval_intersection(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -5,12 +5,12 @@ class StockSpanner:
     def __init__(self) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def next(self, price: int) -> int:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
 
 def daily_temperatures(temperatures: list[int]) -> list[int]:
@@ -19,7 +19,7 @@ def daily_temperatures(temperatures: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def next_greater_element(nums1: list[int], nums2: list[int]) -> list[int]:
@@ -28,7 +28,7 @@ def next_greater_element(nums1: list[int], nums2: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def next_greater_elements(nums: list[int]) -> list[int]:
@@ -37,7 +37,7 @@ def next_greater_elements(nums: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def asteroid_collision(asteroids: list[int]) -> list[int]:
@@ -46,7 +46,7 @@ def asteroid_collision(asteroids: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def remove_k_digits(num: str, k: int) -> str:
@@ -55,7 +55,7 @@ def remove_k_digits(num: str, k: int) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def largest_rectangle_area(heights: list[int]) -> int:
@@ -64,7 +64,7 @@ def largest_rectangle_area(heights: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def trap(height: list[int]) -> int:
@@ -73,4 +73,4 @@ def trap(height: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

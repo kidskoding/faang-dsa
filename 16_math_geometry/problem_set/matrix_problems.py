@@ -4,7 +4,7 @@ def rotate(matrix: list[list[int]]) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def spiral_order(matrix: list[list[int]]) -> list[int]:
@@ -13,7 +13,7 @@ def spiral_order(matrix: list[list[int]]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def generate_matrix(n: int) -> list[list[int]]:
@@ -22,7 +22,7 @@ def generate_matrix(n: int) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def set_zeroes(matrix: list[list[int]]) -> None:
@@ -31,7 +31,7 @@ def set_zeroes(matrix: list[list[int]]) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def game_of_life(board: list[list[int]]) -> None:
@@ -40,4 +40,4 @@ def game_of_life(board: list[list[int]]) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

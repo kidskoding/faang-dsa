@@ -4,7 +4,7 @@ def subsets(nums: list[int]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def total_hamming_distance(nums: list[int]) -> int:
@@ -13,7 +13,7 @@ def total_hamming_distance(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_xor_of_two_numbers(nums: list[int]) -> int:
@@ -22,4 +22,4 @@ def max_xor_of_two_numbers(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

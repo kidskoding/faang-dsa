@@ -4,7 +4,7 @@ def permute(nums: list[int]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def permute_unique(nums: list[int]) -> list[list[int]]:
@@ -13,7 +13,7 @@ def permute_unique(nums: list[int]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def partition(s: str) -> list[list[str]]:
@@ -22,7 +22,7 @@ def partition(s: str) -> list[list[str]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def restore_ip_addresses(s: str) -> list[str]:
@@ -31,4 +31,4 @@ def restore_ip_addresses(s: str) -> list[str]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

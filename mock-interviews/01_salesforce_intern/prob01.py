@@ -12,7 +12,8 @@
 #   6. If it comes before, we are going to subtract the current character from our resulting value
 #   7. Otherwise, if after, we are going to add the current character from our resulting value
 # 
-# 8. Check if i is equal to the index of the last character in the string, add its roman numeral equivalent value to the resulting value
+# 8. Check if i is equal to the index of the last character in the string,
+#    add its roman numeral equivalent value to the resulting value
 # 9. Return the resulting value
 # 
 # Time: O(n)

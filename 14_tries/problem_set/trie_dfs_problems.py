@@ -15,7 +15,7 @@ def find_words(board: list[list[str]], words: list[str]) -> list[str]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class PalindromePairNode:
@@ -33,7 +33,7 @@ def palindrome_pairs(words: list[str]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class ConcatenatedWordNode:
@@ -50,4 +50,4 @@ def find_all_concatenated_words(words: list[str]) -> list[str]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

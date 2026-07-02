@@ -6,19 +6,19 @@ class SummaryRanges:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def add_num(self, value: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def get_intervals(self) -> list[list[int]]:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
 
 def merge(intervals: list[list[int]]) -> list[list[int]]:
@@ -27,7 +27,7 @@ def merge(intervals: list[list[int]]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def insert(intervals: list[list[int]], new_interval: list[int]) -> list[list[int]]:
@@ -36,7 +36,7 @@ def insert(intervals: list[list[int]], new_interval: list[int]) -> list[list[int
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def erase_overlap_intervals(intervals: list[list[int]]) -> int:
@@ -45,4 +45,4 @@ def erase_overlap_intervals(intervals: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

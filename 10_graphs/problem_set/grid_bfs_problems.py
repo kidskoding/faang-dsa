@@ -4,7 +4,7 @@ def oranges_rotting(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def walls_and_gates(rooms: list[list[int]]) -> None:
@@ -13,7 +13,7 @@ def walls_and_gates(rooms: list[list[int]]) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def update_matrix(mat: list[list[int]]) -> list[list[int]]:
@@ -22,7 +22,7 @@ def update_matrix(mat: list[list[int]]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def shortest_path_binary_matrix(grid: list[list[int]]) -> int:
@@ -31,7 +31,7 @@ def shortest_path_binary_matrix(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def nearest_exit(maze: list[list[str]], entrance: list[int]) -> int:
@@ -40,7 +40,7 @@ def nearest_exit(maze: list[list[str]], entrance: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_distance(grid: list[list[int]]) -> int:
@@ -49,7 +49,7 @@ def max_distance(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def highest_peak(is_water: list[list[int]]) -> list[list[int]]:
@@ -58,7 +58,7 @@ def highest_peak(is_water: list[list[int]]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def shortest_bridge(grid: list[list[int]]) -> int:
@@ -67,7 +67,7 @@ def shortest_bridge(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def contains_cycle(grid: list[list[str]]) -> bool:
@@ -76,4 +76,4 @@ def contains_cycle(grid: list[list[str]]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -4,7 +4,7 @@ def search(nums: list[int], target: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def search_insert(nums: list[int], target: int) -> int:
@@ -13,7 +13,7 @@ def search_insert(nums: list[int], target: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def search_matrix(matrix: list[list[int]], target: int) -> bool:
@@ -22,7 +22,7 @@ def search_matrix(matrix: list[list[int]], target: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def search_matrix_ii(matrix: list[list[int]], target: int) -> bool:
@@ -31,4 +31,4 @@ def search_matrix_ii(matrix: list[list[int]], target: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

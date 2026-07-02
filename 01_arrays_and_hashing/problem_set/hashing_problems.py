@@ -4,7 +4,7 @@ def two_sum(nums: list[int], target: int) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def contains_duplicate(nums: list[int]) -> bool:
@@ -13,7 +13,7 @@ def contains_duplicate(nums: list[int]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def is_anagram(s: str, t: str) -> bool:
@@ -22,7 +22,7 @@ def is_anagram(s: str, t: str) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def group_anagrams(strs: list[str]) -> list[list[str]]:
@@ -31,7 +31,7 @@ def group_anagrams(strs: list[str]) -> list[list[str]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def top_k_frequent(nums: list[int], k: int) -> list[int]:
@@ -40,7 +40,7 @@ def top_k_frequent(nums: list[int], k: int) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def longest_consecutive(nums: list[int]) -> int:
@@ -49,7 +49,7 @@ def longest_consecutive(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def is_valid_sudoku(board: list[list[str]]) -> bool:
@@ -58,7 +58,7 @@ def is_valid_sudoku(board: list[list[str]]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class Codec:
@@ -68,9 +68,9 @@ class Codec:
     def encode(self, strs: list[str]) -> str:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def decode(self, s: str) -> list[str]:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError

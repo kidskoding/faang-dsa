@@ -4,7 +4,7 @@ def letter_combinations(digits: str) -> list[str]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def generate_parentheses(n: int) -> list[str]:
@@ -13,7 +13,7 @@ def generate_parentheses(n: int) -> list[str]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def count_arrangement(n: int) -> int:
@@ -22,4 +22,4 @@ def count_arrangement(n: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

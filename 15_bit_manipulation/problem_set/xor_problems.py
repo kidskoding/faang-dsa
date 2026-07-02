@@ -4,7 +4,7 @@ def single_number(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def single_number_ii(nums: list[int]) -> int:
@@ -13,7 +13,7 @@ def single_number_ii(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def single_number_iii(nums: list[int]) -> list[int]:
@@ -22,7 +22,7 @@ def single_number_iii(nums: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def missing_number(nums: list[int]) -> int:
@@ -31,4 +31,4 @@ def missing_number(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

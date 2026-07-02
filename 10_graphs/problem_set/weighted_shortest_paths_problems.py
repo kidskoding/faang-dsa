@@ -8,7 +8,7 @@ def calc_equation(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def network_delay_time(times: list[list[int]], n: int, k: int) -> int:
@@ -17,7 +17,7 @@ def network_delay_time(times: list[list[int]], n: int, k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_cheapest_price(n: int, flights: list[list[int]], src: int, dst: int, k: int) -> int:
@@ -26,7 +26,7 @@ def find_cheapest_price(n: int, flights: list[list[int]], src: int, dst: int, k:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def minimum_effort_path(heights: list[list[int]]) -> int:
@@ -35,7 +35,7 @@ def minimum_effort_path(heights: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_probability(
@@ -50,7 +50,7 @@ def max_probability(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def has_path(maze: list[list[int]], start: list[int], destination: list[int]) -> bool:
@@ -59,7 +59,7 @@ def has_path(maze: list[list[int]], start: list[int], destination: list[int]) ->
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def shortest_distance(maze: list[list[int]], start: list[int], destination: list[int]) -> int:
@@ -68,7 +68,7 @@ def shortest_distance(maze: list[list[int]], start: list[int], destination: list
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_the_city(n: int, edges: list[list[int]], distance_threshold: int) -> int:
@@ -77,7 +77,7 @@ def find_the_city(n: int, edges: list[list[int]], distance_threshold: int) -> in
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def minimum_obstacles(grid: list[list[int]]) -> int:
@@ -86,7 +86,7 @@ def minimum_obstacles(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_cost(grid: list[list[int]]) -> int:
@@ -95,7 +95,7 @@ def min_cost(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def swim_in_water(grid: list[list[int]]) -> int:
@@ -104,7 +104,7 @@ def swim_in_water(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def minimum_cost(max_time: int, edges: list[list[int]], passing_fees: list[int]) -> int:
@@ -113,7 +113,7 @@ def minimum_cost(max_time: int, edges: list[list[int]], passing_fees: list[int])
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def second_minimum_time(n: int, edges: list[list[int]], time: int, change: int) -> int:
@@ -122,4 +122,4 @@ def second_minimum_time(n: int, edges: list[list[int]], time: int, change: int) 
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -6,25 +6,25 @@ class RangeModule:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def add_range(self, left: int, right: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def query_range(self, left: int, right: int) -> bool:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def remove_range(self, left: int, right: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
 
 def employee_free_time(schedule: list[list[list[int]]]) -> list[list[int]]:
@@ -33,7 +33,7 @@ def employee_free_time(schedule: list[list[list[int]]]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def car_pooling(trips: list[list[int]], capacity: int) -> bool:
@@ -42,4 +42,4 @@ def car_pooling(trips: list[list[int]], capacity: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

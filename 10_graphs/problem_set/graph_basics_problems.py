@@ -27,7 +27,7 @@ def find_center(edges: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def valid_path(n: int, edges: list[list[int]], source: int, destination: int) -> bool:
@@ -36,7 +36,7 @@ def valid_path(n: int, edges: list[list[int]], source: int, destination: int) ->
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def get_importance(employees: list[Employee], id: int) -> int:
@@ -45,7 +45,7 @@ def get_importance(employees: list[Employee], id: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def can_visit_all_rooms(rooms: list[list[int]]) -> bool:
@@ -54,7 +54,7 @@ def can_visit_all_rooms(rooms: list[list[int]]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def clone_graph(node: Node | None) -> Node | None:
@@ -63,4 +63,4 @@ def clone_graph(node: Node | None) -> Node | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

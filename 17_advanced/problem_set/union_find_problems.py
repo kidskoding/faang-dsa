@@ -2,13 +2,13 @@ class UnionFind:
     # Shared disjoint set union with path compression and union by size.
 
     def __init__(self, n: int) -> None:
-        pass
+        raise NotImplementedError
 
     def find(self, x: int) -> int:
-        pass
+        raise NotImplementedError
 
     def union(self, a: int, b: int) -> bool:
-        pass
+        raise NotImplementedError
 
 
 def number_of_provinces(is_connected: list[list[int]]) -> int:
@@ -17,7 +17,7 @@ def number_of_provinces(is_connected: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def number_of_islands_ii(
@@ -28,7 +28,7 @@ def number_of_islands_ii(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def equations_possible(equations: list[str]) -> bool:
@@ -37,7 +37,7 @@ def equations_possible(equations: list[str]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def smallest_string_with_swaps(s: str, pairs: list[list[int]]) -> str:
@@ -46,4 +46,4 @@ def smallest_string_with_swaps(s: str, pairs: list[list[int]]) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

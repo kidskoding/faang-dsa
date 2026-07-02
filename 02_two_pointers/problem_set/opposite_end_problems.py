@@ -4,7 +4,7 @@ def is_palindrome(s: str) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def two_sum(numbers: list[int], target: int) -> list[int]:
@@ -13,7 +13,7 @@ def two_sum(numbers: list[int], target: int) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def reverse_string(s: list[str]) -> None:
@@ -22,7 +22,7 @@ def reverse_string(s: list[str]) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_area(height: list[int]) -> int:
@@ -31,7 +31,7 @@ def max_area(height: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def three_sum(nums: list[int]) -> list[list[int]]:
@@ -40,7 +40,7 @@ def three_sum(nums: list[int]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def three_sum_closest(nums: list[int], target: int) -> int:
@@ -49,7 +49,7 @@ def three_sum_closest(nums: list[int], target: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def num_rescue_boats(people: list[int], limit: int) -> int:
@@ -58,7 +58,7 @@ def num_rescue_boats(people: list[int], limit: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def trap(height: list[int]) -> int:
@@ -67,7 +67,7 @@ def trap(height: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def four_sum(nums: list[int], target: int) -> list[list[int]]:
@@ -76,4 +76,4 @@ def four_sum(nums: list[int], target: int) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

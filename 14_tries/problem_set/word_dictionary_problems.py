@@ -15,17 +15,17 @@ class WordDictionary:
     def __init__(self) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def add_word(self, word: str) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def search(self, word: str) -> bool:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
 
 class MagicDictionaryNode:
@@ -43,17 +43,17 @@ class MagicDictionary:
     def __init__(self) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def build_dict(self, dictionary: list[str]) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def search(self, search_word: str) -> bool:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
 
 def search_suggestions(products: list[str], search_word: str) -> list[list[str]]:
@@ -63,7 +63,7 @@ def search_suggestions(products: list[str], search_word: str) -> list[list[str]]
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class StreamCheckerNode:
@@ -81,9 +81,9 @@ class StreamChecker:
     def __init__(self, words: list[str]) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def query(self, letter: str) -> bool:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError

@@ -4,7 +4,7 @@ def merge(nums1: list[int], m: int, nums2: list[int], n: int) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def sorted_squares(nums: list[int]) -> list[int]:
@@ -13,7 +13,7 @@ def sorted_squares(nums: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def sort_colors(nums: list[int]) -> None:
@@ -22,4 +22,4 @@ def sort_colors(nums: list[int]) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

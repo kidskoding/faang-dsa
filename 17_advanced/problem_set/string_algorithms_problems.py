@@ -1,7 +1,7 @@
 def build_failure_table(pattern: str) -> list[int]:
     # Shared KMP failure/prefix table: longest proper prefix that is also a suffix.
 
-    pass
+    raise NotImplementedError
 
 
 def str_str(haystack: str, needle: str) -> int:
@@ -10,7 +10,7 @@ def str_str(haystack: str, needle: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def repeated_string_match(a: str, b: str) -> int:
@@ -19,7 +19,7 @@ def repeated_string_match(a: str, b: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def shortest_palindrome(s: str) -> str:
@@ -28,7 +28,7 @@ def shortest_palindrome(s: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def longest_prefix(s: str) -> str:
@@ -37,4 +37,4 @@ def longest_prefix(s: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

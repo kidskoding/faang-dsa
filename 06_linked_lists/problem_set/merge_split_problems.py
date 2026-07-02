@@ -9,7 +9,7 @@ def add_two_numbers(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def partition(head: ListNode | None, x: int) -> ListNode | None:
@@ -18,7 +18,7 @@ def partition(head: ListNode | None, x: int) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def sort_list(head: ListNode | None) -> ListNode | None:
@@ -27,7 +27,7 @@ def sort_list(head: ListNode | None) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def merge_k_lists(lists: list[ListNode | None]) -> ListNode | None:
@@ -36,4 +36,4 @@ def merge_k_lists(lists: list[ListNode | None]) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

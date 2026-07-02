@@ -6,6 +6,7 @@ def search_in_bst(root: TreeNode | None, val: int) -> TreeNode | None:
     # Key idea: use the BST ordering property to move left or right.
     # Time:
     # Space:
+
     raise NotImplementedError
 
 
@@ -14,6 +15,7 @@ def validate_bst(root: TreeNode | None) -> bool:
     # Key idea: carry lower and upper bounds.
     # Time:
     # Space:
+
     raise NotImplementedError
 
 
@@ -22,6 +24,7 @@ def kth_smallest(root: TreeNode | None, k: int) -> int:
     # Key idea: inorder traversal visits BST values in sorted order.
     # Time:
     # Space:
+
     raise NotImplementedError
 
 
@@ -34,6 +37,7 @@ def lowest_common_ancestor_bst(
     # Key idea: use value ranges to move left, move right, or stop.
     # Time:
     # Space:
+
     raise NotImplementedError
 
 
@@ -42,6 +46,7 @@ def convert_sorted_array_to_bst(nums: list[int]) -> TreeNode | None:
     # Key idea: choose the middle element as the root recursively.
     # Time:
     # Space:
+
     raise NotImplementedError
 
 
@@ -50,6 +55,7 @@ def insert_into_bst(root: TreeNode | None, val: int) -> TreeNode:
     # Key idea: walk down to the insertion point using BST ordering.
     # Time:
     # Space:
+
     raise NotImplementedError
 
 
@@ -58,6 +64,7 @@ def delete_node_bst(root: TreeNode | None, key: int) -> TreeNode | None:
     # Key idea: handle leaf, one-child, and two-child deletion cases.
     # Time:
     # Space:
+
     raise NotImplementedError
 
 
@@ -66,6 +73,7 @@ def search_range_bst(root: TreeNode | None, low: int, high: int) -> list[int]:
     # Key idea: prune branches using BST ordering.
     # Time:
     # Space:
+
     raise NotImplementedError
 
 
@@ -74,4 +82,5 @@ def trim_bst(root: TreeNode | None, low: int, high: int) -> TreeNode | None:
     # Key idea: remove nodes outside the target value range.
     # Time:
     # Space:
+
     raise NotImplementedError

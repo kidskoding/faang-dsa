@@ -6,7 +6,7 @@ def find_cheapest_price(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def count_paths(n: int, roads: list[list[int]]) -> int:
@@ -15,7 +15,7 @@ def count_paths(n: int, roads: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_the_city(
@@ -26,4 +26,4 @@ def find_the_city(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -4,7 +4,7 @@ def top_k_frequent(nums: list[int], k: int) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def top_k_frequent_words(words: list[str], k: int) -> list[str]:
@@ -13,7 +13,7 @@ def top_k_frequent_words(words: list[str], k: int) -> list[str]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def least_interval(tasks: list[str], n: int) -> int:
@@ -22,7 +22,7 @@ def least_interval(tasks: list[str], n: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def reorganize_string(s: str) -> str:
@@ -31,4 +31,4 @@ def reorganize_string(s: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

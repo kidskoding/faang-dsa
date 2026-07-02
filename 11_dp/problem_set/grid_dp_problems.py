@@ -4,7 +4,7 @@ def unique_paths(m: int, n: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def unique_paths_with_obstacles(obstacle_grid: list[list[int]]) -> int:
@@ -13,7 +13,7 @@ def unique_paths_with_obstacles(obstacle_grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_path_sum(grid: list[list[int]]) -> int:
@@ -22,7 +22,7 @@ def min_path_sum(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def minimum_total(triangle: list[list[int]]) -> int:
@@ -31,7 +31,7 @@ def minimum_total(triangle: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def maximal_square(matrix: list[list[str]]) -> int:
@@ -40,4 +40,4 @@ def maximal_square(matrix: list[list[str]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

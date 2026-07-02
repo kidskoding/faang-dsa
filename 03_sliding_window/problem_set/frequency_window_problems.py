@@ -4,7 +4,7 @@ def character_replacement(s: str, k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def check_inclusion(s1: str, s2: str) -> bool:
@@ -13,7 +13,7 @@ def check_inclusion(s1: str, s2: str) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_anagrams(s: str, p: str) -> list[int]:
@@ -22,7 +22,7 @@ def find_anagrams(s: str, p: str) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def total_fruit(fruits: list[int]) -> int:
@@ -31,7 +31,7 @@ def total_fruit(fruits: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_window(s: str, t: str) -> str:
@@ -40,7 +40,7 @@ def min_window(s: str, t: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def length_of_longest_substring_k_distinct(s: str, k: int) -> int:
@@ -49,7 +49,7 @@ def length_of_longest_substring_k_distinct(s: str, k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def subarrays_with_k_distinct(nums: list[int], k: int) -> int:
@@ -58,7 +58,7 @@ def subarrays_with_k_distinct(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def number_of_subarrays(nums: list[int], k: int) -> int:
@@ -67,4 +67,4 @@ def number_of_subarrays(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

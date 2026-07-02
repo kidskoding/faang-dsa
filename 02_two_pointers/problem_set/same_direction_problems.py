@@ -4,7 +4,7 @@ def remove_element(nums: list[int], val: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def remove_duplicates(nums: list[int]) -> int:
@@ -13,7 +13,7 @@ def remove_duplicates(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def move_zeroes(nums: list[int]) -> None:
@@ -22,4 +22,4 @@ def move_zeroes(nums: list[int]) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

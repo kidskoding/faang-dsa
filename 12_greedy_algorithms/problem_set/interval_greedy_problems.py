@@ -4,7 +4,7 @@ def erase_overlap_intervals(intervals: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def partition_labels(s: str) -> list[int]:
@@ -13,7 +13,7 @@ def partition_labels(s: str) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def candy(ratings: list[int]) -> int:
@@ -22,7 +22,7 @@ def candy(ratings: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def reconstruct_queue(people: list[list[int]]) -> list[list[int]]:
@@ -31,7 +31,7 @@ def reconstruct_queue(people: list[list[int]]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_min_arrow_shots(points: list[list[int]]) -> int:
@@ -40,7 +40,7 @@ def find_min_arrow_shots(points: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def num_rescue_boats(people: list[int], limit: int) -> int:
@@ -49,7 +49,7 @@ def num_rescue_boats(people: list[int], limit: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def least_interval(tasks: list[str], n: int) -> int:
@@ -58,4 +58,4 @@ def least_interval(tasks: list[str], n: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

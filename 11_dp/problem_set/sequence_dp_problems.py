@@ -4,7 +4,7 @@ def length_of_lis(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def longest_common_subsequence(text1: str, text2: str) -> int:
@@ -13,7 +13,7 @@ def longest_common_subsequence(text1: str, text2: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_distance(word1: str, word2: str) -> int:
@@ -22,7 +22,7 @@ def min_distance(word1: str, word2: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def word_break(s: str, word_dict: list[str]) -> bool:
@@ -31,7 +31,7 @@ def word_break(s: str, word_dict: list[str]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def longest_palindrome(s: str) -> str:
@@ -40,7 +40,7 @@ def longest_palindrome(s: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def count_substrings(s: str) -> int:
@@ -49,7 +49,7 @@ def count_substrings(s: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_profit_with_cooldown(prices: list[int]) -> int:
@@ -58,7 +58,7 @@ def max_profit_with_cooldown(prices: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_profit_with_fee(prices: list[int], fee: int) -> int:
@@ -67,7 +67,7 @@ def max_profit_with_fee(prices: list[int], fee: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def is_interleave(s1: str, s2: str, s3: str) -> bool:
@@ -76,7 +76,7 @@ def is_interleave(s1: str, s2: str, s3: str) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def num_distinct(s: str, t: str) -> int:
@@ -85,7 +85,7 @@ def num_distinct(s: str, t: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def is_match_regex(s: str, p: str) -> bool:
@@ -94,7 +94,7 @@ def is_match_regex(s: str, p: str) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def is_match_wildcard(s: str, p: str) -> bool:
@@ -103,7 +103,7 @@ def is_match_wildcard(s: str, p: str) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_coins(nums: list[int]) -> int:
@@ -112,4 +112,4 @@ def max_coins(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

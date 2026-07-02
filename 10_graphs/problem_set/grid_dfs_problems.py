@@ -4,7 +4,7 @@ def flood_fill(image: list[list[int]], sr: int, sc: int, color: int) -> list[lis
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def num_islands(grid: list[list[str]]) -> int:
@@ -13,7 +13,7 @@ def num_islands(grid: list[list[str]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_area_of_island(grid: list[list[int]]) -> int:
@@ -22,7 +22,7 @@ def max_area_of_island(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def island_perimeter(grid: list[list[int]]) -> int:
@@ -31,7 +31,7 @@ def island_perimeter(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def solve(board: list[list[str]]) -> None:
@@ -40,7 +40,7 @@ def solve(board: list[list[str]]) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def pacific_atlantic(heights: list[list[int]]) -> list[list[int]]:
@@ -49,7 +49,7 @@ def pacific_atlantic(heights: list[list[int]]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def num_enclaves(grid: list[list[int]]) -> int:
@@ -58,7 +58,7 @@ def num_enclaves(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def closed_island(grid: list[list[int]]) -> int:
@@ -67,7 +67,7 @@ def closed_island(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def count_sub_islands(grid1: list[list[int]], grid2: list[list[int]]) -> int:
@@ -76,7 +76,7 @@ def count_sub_islands(grid1: list[list[int]], grid2: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def largest_island(grid: list[list[int]]) -> int:
@@ -85,4 +85,4 @@ def largest_island(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

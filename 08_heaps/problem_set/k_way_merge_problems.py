@@ -14,7 +14,7 @@ def merge_k_lists(lists: list[ListNode | None]) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def smallest_range(nums: list[list[int]]) -> list[int]:
@@ -23,7 +23,7 @@ def smallest_range(nums: list[list[int]]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class Twitter:
@@ -34,31 +34,31 @@ class Twitter:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def post_tweet(self, user_id: int, tweet_id: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def get_news_feed(self, user_id: int) -> list[int]:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def follow(self, follower_id: int, followee_id: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def unfollow(self, follower_id: int, followee_id: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
 
 def employee_free_time(schedule: list[list[list[int]]]) -> list[list[int]]:
@@ -67,4 +67,4 @@ def employee_free_time(schedule: list[list[list[int]]]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

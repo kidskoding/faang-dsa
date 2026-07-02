@@ -4,7 +4,7 @@ def can_finish(num_courses: int, prerequisites: list[list[int]]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_order(num_courses: int, prerequisites: list[list[int]]) -> list[int]:
@@ -13,7 +13,7 @@ def find_order(num_courses: int, prerequisites: list[list[int]]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def all_paths_source_target(graph: list[list[int]]) -> list[list[int]]:
@@ -22,7 +22,7 @@ def all_paths_source_target(graph: list[list[int]]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def eventual_safe_nodes(graph: list[list[int]]) -> list[int]:
@@ -31,7 +31,7 @@ def eventual_safe_nodes(graph: list[list[int]]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_min_height_trees(n: int, edges: list[list[int]]) -> list[int]:
@@ -40,7 +40,7 @@ def find_min_height_trees(n: int, edges: list[list[int]]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def num_of_minutes(n: int, head_id: int, manager: list[int], inform_time: list[int]) -> int:
@@ -49,7 +49,7 @@ def num_of_minutes(n: int, head_id: int, manager: list[int], inform_time: list[i
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def check_if_prerequisite(
@@ -62,7 +62,7 @@ def check_if_prerequisite(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_itinerary(tickets: list[list[str]]) -> list[str]:
@@ -71,7 +71,7 @@ def find_itinerary(tickets: list[list[str]]) -> list[str]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def get_ancestors(n: int, edges: list[list[int]]) -> list[list[int]]:
@@ -80,7 +80,7 @@ def get_ancestors(n: int, edges: list[list[int]]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def alien_order(words: list[str]) -> str:
@@ -89,7 +89,7 @@ def alien_order(words: list[str]) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def minimum_time(n: int, relations: list[list[int]], time: list[int]) -> int:
@@ -98,7 +98,7 @@ def minimum_time(n: int, relations: list[list[int]], time: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def largest_path_value(colors: str, edges: list[list[int]]) -> int:
@@ -107,4 +107,4 @@ def largest_path_value(colors: str, edges: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

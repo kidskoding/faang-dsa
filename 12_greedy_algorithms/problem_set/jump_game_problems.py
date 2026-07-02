@@ -4,7 +4,7 @@ def can_jump(nums: list[int]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def jump(nums: list[int]) -> int:
@@ -13,7 +13,7 @@ def jump(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def can_reach(arr: list[int], start: int) -> bool:
@@ -22,4 +22,4 @@ def can_reach(arr: list[int], start: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

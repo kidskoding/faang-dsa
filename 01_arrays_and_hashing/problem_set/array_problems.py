@@ -4,7 +4,7 @@ def rotate(nums: list[int], k: int) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def product_except_self(nums: list[int]) -> list[int]:
@@ -13,7 +13,7 @@ def product_except_self(nums: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def set_zeroes(matrix: list[list[int]]) -> None:
@@ -22,7 +22,7 @@ def set_zeroes(matrix: list[list[int]]) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_duplicates(nums: list[int]) -> list[int]:
@@ -31,7 +31,7 @@ def find_duplicates(nums: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def first_missing_positive(nums: list[int]) -> int:
@@ -40,7 +40,7 @@ def first_missing_positive(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class RandomizedSet:
@@ -50,19 +50,19 @@ class RandomizedSet:
     def __init__(self) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def insert(self, val: int) -> bool:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def remove(self, val: int) -> bool:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def get_random(self) -> int:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError

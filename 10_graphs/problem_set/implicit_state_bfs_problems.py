@@ -4,7 +4,7 @@ def min_mutation(start_gene: str, end_gene: str, bank: list[str]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def open_lock(deadends: list[str], target: str) -> int:
@@ -13,7 +13,7 @@ def open_lock(deadends: list[str], target: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def ladder_length(begin_word: str, end_word: str, word_list: list[str]) -> int:
@@ -22,7 +22,7 @@ def ladder_length(begin_word: str, end_word: str, word_list: list[str]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def snakes_and_ladders(board: list[list[int]]) -> int:
@@ -31,7 +31,7 @@ def snakes_and_ladders(board: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def shortest_path_all_keys(grid: list[str]) -> int:
@@ -40,7 +40,7 @@ def shortest_path_all_keys(grid: list[str]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def num_buses_to_destination(routes: list[list[int]], source: int, target: int) -> int:
@@ -49,7 +49,7 @@ def num_buses_to_destination(routes: list[list[int]], source: int, target: int) 
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_ladders(begin_word: str, end_word: str, word_list: list[str]) -> list[list[str]]:
@@ -58,7 +58,7 @@ def find_ladders(begin_word: str, end_word: str, word_list: list[str]) -> list[l
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def shortest_path_length(graph: list[list[int]]) -> int:
@@ -67,7 +67,7 @@ def shortest_path_length(graph: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def minimum_moves(grid: list[list[int]]) -> int:
@@ -76,4 +76,4 @@ def minimum_moves(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

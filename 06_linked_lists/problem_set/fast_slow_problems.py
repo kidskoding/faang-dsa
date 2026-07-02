@@ -7,7 +7,7 @@ def middle_node(head: ListNode | None) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def has_cycle(head: ListNode | None) -> bool:
@@ -16,7 +16,7 @@ def has_cycle(head: ListNode | None) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def detect_cycle(head: ListNode | None) -> ListNode | None:
@@ -25,7 +25,7 @@ def detect_cycle(head: ListNode | None) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def is_palindrome(head: ListNode | None) -> bool:
@@ -34,7 +34,7 @@ def is_palindrome(head: ListNode | None) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def remove_nth_from_end(head: ListNode | None, n: int) -> ListNode | None:
@@ -43,4 +43,4 @@ def remove_nth_from_end(head: ListNode | None, n: int) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

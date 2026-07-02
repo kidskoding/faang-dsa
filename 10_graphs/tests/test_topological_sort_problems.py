@@ -1,6 +1,6 @@
 from problem_set.topological_sort_problems import (
-    all_paths_source_target,
     alien_order,
+    all_paths_source_target,
     can_finish,
     check_if_prerequisite,
     eventual_safe_nodes,

@@ -4,7 +4,7 @@ def diff_ways_to_compute(expression: str) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def get_skyline(buildings: list[list[int]]) -> list[list[int]]:
@@ -13,7 +13,7 @@ def get_skyline(buildings: list[list[int]]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def closest_pair(points: list[list[int]]) -> float:
@@ -22,7 +22,7 @@ def closest_pair(points: list[list[int]]) -> float:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def beautiful_array(n: int) -> list[int]:
@@ -31,4 +31,4 @@ def beautiful_array(n: int) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -4,7 +4,7 @@ def max_profit(prices: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def length_of_longest_substring(s: str) -> int:
@@ -13,7 +13,7 @@ def length_of_longest_substring(s: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_sub_array_len(target: int, nums: list[int]) -> int:
@@ -22,7 +22,7 @@ def min_sub_array_len(target: int, nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def longest_ones(nums: list[int], k: int) -> int:
@@ -31,4 +31,4 @@ def longest_ones(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -4,7 +4,7 @@ def assign_cookies(g: list[int], s: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def lemonade_change(bills: list[int]) -> bool:
@@ -13,7 +13,7 @@ def lemonade_change(bills: list[int]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_profit(prices: list[int]) -> int:
@@ -22,7 +22,7 @@ def max_profit(prices: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def can_complete_circuit(gas: list[int], cost: list[int]) -> int:
@@ -31,4 +31,4 @@ def can_complete_circuit(gas: list[int], cost: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -5,12 +5,12 @@ class NumArray:
     def __init__(self, nums: list[int]) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def sum_range(self, left: int, right: int) -> int:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
 
 def subarray_sum(nums: list[int], k: int) -> int:
@@ -19,7 +19,7 @@ def subarray_sum(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def check_subarray_sum(nums: list[int], k: int) -> bool:
@@ -28,7 +28,7 @@ def check_subarray_sum(nums: list[int], k: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class NumMatrix:
@@ -38,14 +38,14 @@ class NumMatrix:
     def __init__(self, matrix: list[list[int]]) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def sum_region(
         self, row1: int, col1: int, row2: int, col2: int
     ) -> int:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
 
 def subarrays_div_by_k(nums: list[int], k: int) -> int:
@@ -54,4 +54,4 @@ def subarrays_div_by_k(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -9,6 +9,7 @@ def construct_from_preorder_inorder(
     # Key idea: preorder gives the root; inorder splits left and right subtrees.
     # Time:
     # Space:
+
     raise NotImplementedError
 
 
@@ -20,6 +21,7 @@ def construct_from_inorder_postorder(
     # Key idea: postorder gives the root; inorder splits left and right subtrees.
     # Time:
     # Space:
+
     raise NotImplementedError
 
 
@@ -28,6 +30,7 @@ def serialize_binary_tree(root: TreeNode | None) -> str:
     # Key idea: turn the tree into a sequence that preserves shape.
     # Time:
     # Space:
+
     raise NotImplementedError
 
 
@@ -36,4 +39,5 @@ def deserialize_binary_tree(data: str) -> TreeNode | None:
     # Key idea: rebuild the tree from the serialized sequence.
     # Time:
     # Space:
+
     raise NotImplementedError

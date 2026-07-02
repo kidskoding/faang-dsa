@@ -7,7 +7,7 @@ def reorder_list(head: ListNode | None) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def rotate_right(head: ListNode | None, k: int) -> ListNode | None:
@@ -16,7 +16,7 @@ def rotate_right(head: ListNode | None, k: int) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def odd_even_list(head: ListNode | None) -> ListNode | None:
@@ -25,7 +25,7 @@ def odd_even_list(head: ListNode | None) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def split_list_to_parts(
@@ -36,4 +36,4 @@ def split_list_to_parts(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

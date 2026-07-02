@@ -6,13 +6,13 @@ class MyCalendar:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def book(self, start: int, end: int) -> bool:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
 
 class MyCalendarTwo:
@@ -23,13 +23,13 @@ class MyCalendarTwo:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def book(self, start: int, end: int) -> bool:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
 
 class MyCalendarThree:
@@ -40,13 +40,13 @@ class MyCalendarThree:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def book(self, start: int, end: int) -> int:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
 
 def can_attend_meetings(intervals: list[list[int]]) -> bool:
@@ -55,7 +55,7 @@ def can_attend_meetings(intervals: list[list[int]]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_meeting_rooms(intervals: list[list[int]]) -> int:
@@ -64,7 +64,7 @@ def min_meeting_rooms(intervals: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def most_booked_room(n: int, meetings: list[list[int]]) -> int:
@@ -73,4 +73,4 @@ def most_booked_room(n: int, meetings: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

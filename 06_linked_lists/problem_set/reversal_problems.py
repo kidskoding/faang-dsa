@@ -9,7 +9,7 @@ def reverse_between(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def swap_pairs(head: ListNode | None) -> ListNode | None:
@@ -18,7 +18,7 @@ def swap_pairs(head: ListNode | None) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def reverse_k_group(head: ListNode | None, k: int) -> ListNode | None:
@@ -27,4 +27,4 @@ def reverse_k_group(head: ListNode | None, k: int) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

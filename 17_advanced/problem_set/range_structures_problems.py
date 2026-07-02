@@ -2,16 +2,16 @@ class FenwickTree:
     # Shared 1-indexed binary indexed tree supporting point update and prefix sum query.
 
     def __init__(self, n: int) -> None:
-        pass
+        raise NotImplementedError
 
     def update(self, index: int, delta: int) -> None:
-        pass
+        raise NotImplementedError
 
     def prefix_sum(self, index: int) -> int:
-        pass
+        raise NotImplementedError
 
     def range_sum(self, left: int, right: int) -> int:
-        pass
+        raise NotImplementedError
 
 
 class NumArray:
@@ -21,19 +21,19 @@ class NumArray:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def update(self, index: int, val: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def sum_range(self, left: int, right: int) -> int:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
 
 class NumMatrix:
@@ -43,13 +43,13 @@ class NumMatrix:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def update(self, row: int, col: int, val: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def sum_region(
         self, row1: int, col1: int, row2: int, col2: int
@@ -57,7 +57,7 @@ class NumMatrix:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
 
 def count_smaller(nums: list[int]) -> list[int]:
@@ -66,7 +66,7 @@ def count_smaller(nums: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def count_range_sum(nums: list[int], lower: int, upper: int) -> int:
@@ -75,4 +75,4 @@ def count_range_sum(nums: list[int], lower: int, upper: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -68,7 +68,7 @@ def delete_node(node: ListNode) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def remove_elements(head: ListNode | None, val: int) -> ListNode | None:
@@ -77,7 +77,7 @@ def remove_elements(head: ListNode | None, val: int) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def get_intersection_node(
@@ -88,4 +88,4 @@ def get_intersection_node(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

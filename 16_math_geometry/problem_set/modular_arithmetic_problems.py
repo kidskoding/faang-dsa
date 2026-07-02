@@ -4,7 +4,7 @@ def my_pow(x: float, n: int) -> float:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def my_sqrt(x: int) -> int:
@@ -13,7 +13,7 @@ def my_sqrt(x: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def can_win_nim(n: int) -> bool:
@@ -22,7 +22,7 @@ def can_win_nim(n: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def is_happy(n: int) -> bool:
@@ -31,7 +31,7 @@ def is_happy(n: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def title_to_number(column_title: str) -> int:
@@ -40,7 +40,7 @@ def title_to_number(column_title: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def convert_to_title(column_number: int) -> str:
@@ -49,4 +49,4 @@ def convert_to_title(column_number: int) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -6,7 +6,7 @@ def valid_square(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def is_rectangle_overlap(rec1: list[int], rec2: list[int]) -> bool:
@@ -15,7 +15,7 @@ def is_rectangle_overlap(rec1: list[int], rec2: list[int]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_area_rect(points: list[list[int]]) -> int:
@@ -24,7 +24,7 @@ def min_area_rect(points: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_points(points: list[list[int]]) -> int:
@@ -33,4 +33,4 @@ def max_points(points: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

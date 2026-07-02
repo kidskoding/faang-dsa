@@ -4,7 +4,7 @@ def exist(board: list[list[str]], word: str) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def solve_n_queens(n: int) -> list[list[str]]:
@@ -13,7 +13,7 @@ def solve_n_queens(n: int) -> list[list[str]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def total_n_queens(n: int) -> int:
@@ -22,7 +22,7 @@ def total_n_queens(n: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def solve_sudoku(board: list[list[str]]) -> None:
@@ -31,7 +31,7 @@ def solve_sudoku(board: list[list[str]]) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def makesquare(matchsticks: list[int]) -> bool:
@@ -40,4 +40,4 @@ def makesquare(matchsticks: list[int]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

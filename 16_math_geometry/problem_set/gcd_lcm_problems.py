@@ -4,4 +4,4 @@ def fraction_to_decimal(numerator: int, denominator: int) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

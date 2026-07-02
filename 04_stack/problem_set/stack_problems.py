@@ -5,27 +5,27 @@ class MinStack:
     def __init__(self) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def push(self, val: int) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def pop(self) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def top(self) -> int:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def get_min(self) -> int:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
 
 def is_valid(s: str) -> bool:
@@ -34,7 +34,7 @@ def is_valid(s: str) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def eval_rpn(tokens: list[str]) -> int:
@@ -43,7 +43,7 @@ def eval_rpn(tokens: list[str]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def decode_string(s: str) -> str:
@@ -52,7 +52,7 @@ def decode_string(s: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def calculate_ii(s: str) -> int:
@@ -61,7 +61,7 @@ def calculate_ii(s: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def calculate(s: str) -> int:
@@ -70,4 +70,4 @@ def calculate(s: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

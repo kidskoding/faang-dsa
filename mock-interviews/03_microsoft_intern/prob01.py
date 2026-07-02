@@ -6,6 +6,7 @@
 
 from list_node import ListNode
 
+
 def prob01(l1, l2):
     dummy = ListNode(0)
     temp = dummy

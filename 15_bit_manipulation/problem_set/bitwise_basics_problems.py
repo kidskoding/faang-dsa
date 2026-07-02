@@ -4,7 +4,7 @@ def hamming_weight(n: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def count_bits(n: int) -> list[int]:
@@ -13,7 +13,7 @@ def count_bits(n: int) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def reverse_bits(n: int) -> int:
@@ -22,7 +22,7 @@ def reverse_bits(n: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def is_power_of_two(n: int) -> bool:
@@ -31,7 +31,7 @@ def is_power_of_two(n: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def is_power_of_four(n: int) -> bool:
@@ -40,4 +40,4 @@ def is_power_of_four(n: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

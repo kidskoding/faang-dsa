@@ -4,7 +4,7 @@ def get_sum(a: int, b: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def range_bitwise_and(left: int, right: int) -> int:
@@ -13,7 +13,7 @@ def range_bitwise_and(left: int, right: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_flips(a: int, b: int, c: int) -> int:
@@ -22,4 +22,4 @@ def min_flips(a: int, b: int, c: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

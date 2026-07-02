@@ -4,7 +4,7 @@ def climbing_stairs(n: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_cost_climbing_stairs(cost: list[int]) -> int:
@@ -13,7 +13,7 @@ def min_cost_climbing_stairs(cost: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def rob(nums: list[int]) -> int:
@@ -22,7 +22,7 @@ def rob(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def rob_ii(nums: list[int]) -> int:
@@ -31,7 +31,7 @@ def rob_ii(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def num_decodings(s: str) -> int:
@@ -40,4 +40,4 @@ def num_decodings(s: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

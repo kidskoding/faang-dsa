@@ -7,7 +7,7 @@ def first_bad_version(n: int, is_bad_version: Callable[[int], bool]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def search_range(nums: list[int], target: int) -> list[int]:
@@ -16,7 +16,7 @@ def search_range(nums: list[int], target: int) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_peak_element(nums: list[int]) -> int:
@@ -25,7 +25,7 @@ def find_peak_element(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_closest_elements(arr: list[int], k: int, x: int) -> list[int]:
@@ -34,7 +34,7 @@ def find_closest_elements(arr: list[int], k: int, x: int) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class TimeMap:
@@ -46,16 +46,16 @@ class TimeMap:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def set(self, key: str, value: str, timestamp: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def get(self, key: str, timestamp: int) -> str:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError

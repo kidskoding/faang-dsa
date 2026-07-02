@@ -4,7 +4,7 @@ def count_components(n: int, edges: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def valid_tree(n: int, edges: list[list[int]]) -> bool:
@@ -13,7 +13,7 @@ def valid_tree(n: int, edges: list[list[int]]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_redundant_connection(edges: list[list[int]]) -> list[int]:
@@ -22,7 +22,7 @@ def find_redundant_connection(edges: list[list[int]]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def is_bipartite(graph: list[list[int]]) -> bool:
@@ -31,7 +31,7 @@ def is_bipartite(graph: list[list[int]]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def possible_bipartition(n: int, dislikes: list[list[int]]) -> bool:
@@ -40,7 +40,7 @@ def possible_bipartition(n: int, dislikes: list[list[int]]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def accounts_merge(accounts: list[list[str]]) -> list[list[str]]:
@@ -49,7 +49,7 @@ def accounts_merge(accounts: list[list[str]]) -> list[list[str]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_reorder(n: int, connections: list[list[int]]) -> int:
@@ -58,7 +58,7 @@ def min_reorder(n: int, connections: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_smallest_set_of_vertices(n: int, edges: list[list[int]]) -> list[int]:
@@ -67,7 +67,7 @@ def find_smallest_set_of_vertices(n: int, edges: list[list[int]]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def closest_meeting_node(edges: list[int], node1: int, node2: int) -> int:
@@ -76,4 +76,4 @@ def closest_meeting_node(edges: list[int], node1: int, node2: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

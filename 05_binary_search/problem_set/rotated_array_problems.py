@@ -4,7 +4,7 @@ def search_rotated(nums: list[int], target: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_min_rotated(nums: list[int]) -> int:
@@ -13,7 +13,7 @@ def find_min_rotated(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def search_rotated_ii(nums: list[int], target: int) -> bool:
@@ -23,7 +23,7 @@ def search_rotated_ii(nums: list[int], target: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_min_rotated_ii(nums: list[int]) -> int:
@@ -32,4 +32,4 @@ def find_min_rotated_ii(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

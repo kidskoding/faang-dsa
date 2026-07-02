@@ -4,7 +4,7 @@ def can_partition(nums: list[int]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_target_sum_ways(nums: list[int], target: int) -> int:
@@ -13,7 +13,7 @@ def find_target_sum_ways(nums: list[int], target: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def coin_change(coins: list[int], amount: int) -> int:
@@ -22,7 +22,7 @@ def coin_change(coins: list[int], amount: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def change(amount: int, coins: list[int]) -> int:
@@ -31,4 +31,4 @@ def change(amount: int, coins: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

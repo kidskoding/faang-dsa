@@ -2,13 +2,13 @@ class UnionFind:
     # Shared disjoint set union with path compression and union by size.
 
     def __init__(self, n: int) -> None:
-        pass
+        raise NotImplementedError
 
     def find(self, x: int) -> int:
-        pass
+        raise NotImplementedError
 
     def union(self, a: int, b: int) -> bool:
-        pass
+        raise NotImplementedError
 
 
 def min_cost_connect_points(points: list[list[int]]) -> int:
@@ -17,7 +17,7 @@ def min_cost_connect_points(points: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_cost_connecting_cities(n: int, connections: list[list[int]]) -> int:
@@ -26,7 +26,7 @@ def min_cost_connecting_cities(n: int, connections: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_cost_to_supply_water(
@@ -37,4 +37,4 @@ def min_cost_to_supply_water(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -4,7 +4,7 @@ def subsets(nums: list[int]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def subsets_with_dup(nums: list[int]) -> list[list[int]]:
@@ -13,7 +13,7 @@ def subsets_with_dup(nums: list[int]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def combine(n: int, k: int) -> list[list[int]]:
@@ -22,7 +22,7 @@ def combine(n: int, k: int) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def combination_sum(candidates: list[int], target: int) -> list[list[int]]:
@@ -31,7 +31,7 @@ def combination_sum(candidates: list[int], target: int) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def combination_sum2(candidates: list[int], target: int) -> list[list[int]]:
@@ -40,7 +40,7 @@ def combination_sum2(candidates: list[int], target: int) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def combination_sum3(k: int, n: int) -> list[list[int]]:
@@ -49,4 +49,4 @@ def combination_sum3(k: int, n: int) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

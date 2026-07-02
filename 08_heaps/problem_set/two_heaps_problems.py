@@ -6,19 +6,19 @@ class MedianFinder:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def add_num(self, num: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def find_median(self) -> float:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
 
 def find_maximized_capital(
@@ -29,7 +29,7 @@ def find_maximized_capital(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def median_sliding_window(nums: list[int], k: int) -> list[float]:
@@ -38,4 +38,4 @@ def median_sliding_window(nums: list[int], k: int) -> list[float]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

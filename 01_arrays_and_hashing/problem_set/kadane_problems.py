@@ -4,7 +4,7 @@ def max_subarray(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_profit(prices: list[int]) -> int:
@@ -13,7 +13,7 @@ def max_profit(prices: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_product_subarray(nums: list[int]) -> int:
@@ -22,4 +22,4 @@ def max_product_subarray(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

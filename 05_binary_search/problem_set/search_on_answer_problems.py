@@ -4,7 +4,7 @@ def my_sqrt(x: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_eating_speed(piles: list[int], h: int) -> int:
@@ -13,7 +13,7 @@ def min_eating_speed(piles: list[int], h: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def ship_within_days(weights: list[int], days: int) -> int:
@@ -22,7 +22,7 @@ def ship_within_days(weights: list[int], days: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def split_array(nums: list[int], k: int) -> int:
@@ -32,7 +32,7 @@ def split_array(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_median_sorted_arrays(nums1: list[int], nums2: list[int]) -> float:
@@ -41,4 +41,4 @@ def find_median_sorted_arrays(nums1: list[int], nums2: list[int]) -> float:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
