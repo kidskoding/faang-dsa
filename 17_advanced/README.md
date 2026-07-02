@@ -11,6 +11,7 @@
 - KMP
 - Z-algorithm
 - Bitmask DP
+- Bloom filters
 
 ## Notes
 
@@ -21,6 +22,7 @@
 5. [KMP And Z Algorithm](notes/05_string_algorithms.md)
 6. [Divide And Conquer](notes/06_divide_and_conquer.md)
 7. [Bitmask DP](notes/07_bitmask_dp.md)
+8. [Bloom Filters](notes/08_bloom_filters.md)
 
 ## Problem Set
 

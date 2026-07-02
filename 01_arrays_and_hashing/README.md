@@ -8,7 +8,6 @@
 - Kadane's algorithm
 - Hash table implementation
 - Collision handling
-- Bloom filters
 
 ## Notes
 
@@ -17,7 +16,6 @@
 3. [Prefix And Suffix Sums](notes/03_prefix_suffix_sums.md)
 4. [Kadane's Algorithm](notes/04_kadanes_algorithm.md)
 5. [Hash Table Internals](notes/05_hash_table_internals.md)
-6. [Bloom Filters](notes/06_bloom_filters.md)
 
 ## Problem Set
 
