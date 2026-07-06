@@ -1,4 +1,4 @@
-# SWE Intern Amazon - Mock Interview #1
+# SWE Intern - Amazon: Mock Interview #1
 
 1. [Container With Most Water](PROB_01.md)
    - Source: [LeetCode 11](https://leetcode.com/problems/container-with-most-water/description/)
