@@ -4,7 +4,7 @@ These are additional company-focused LeetCode-style practice sets for major tech
 
 ## Companies
 
-- [21. Slack](21_slack.md)
+- [21. Expedia Group](21_expedia.md)
 - [22. Robinhood](22_robinhood.md)
 - [23. Reddit](23_reddit.md)
 - [24. DoorDash](24_doordash.md)
@@ -33,10 +33,10 @@ These are additional company-focused LeetCode-style practice sets for major tech
 - [47. Snap](47_snap.md)
 - [48. Tesla](48_tesla.md)
 - [49. Yelp](49_yelp.md)
-- [50. Expedia](50_expedia.md)
-- [51. Zillow](51_zillow.md)
-- [52. Notion](52_notion.md)
-- [53. Replit](53_replit.md)
-- [54. Airtable](54_airtable.md)
-- [55. Rivian](55_rivian.md)
-- [56. Cisco](56_cisco.md)
+- [50. Zillow](50_zillow.md)
+- [51. Notion](51_notion.md)
+- [52. Replit](52_replit.md)
+- [53. Airtable](53_airtable.md)
+- [54. Rivian](54_rivian.md)
+- [55. Cisco](55_cisco.md)
+- [56. Slack](56_slack.md)

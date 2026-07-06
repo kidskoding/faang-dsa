@@ -14,3 +14,4 @@ book-src/
 
 # Virtual environments
 .venv
+.DS_Store
