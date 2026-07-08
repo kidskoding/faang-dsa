@@ -3,7 +3,7 @@
 ## Interiew #1: Algorithmic Problem Solving
 1. [Basic Calculator II](PROB_01.md)
    - Source: [LeetCode 227](https://leetcode.com/problems/basic-calculator-ii/)
-2. [Basic Calculator III](PROB_02.md) (Follow Up)
+2. [Basic Calculator III](PROB_02.md) (Follow Up of #1)
    - Source: [LeetCode 772](https://leetcode.com/problems/basic-calculator-iii/)
 3. [Trapping Rain Water](PROB_03.md)
    - Source: [LeetCode 42](https://leetcode.com/problems/trapping-rain-water/)
