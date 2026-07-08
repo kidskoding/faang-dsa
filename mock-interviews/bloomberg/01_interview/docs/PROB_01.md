@@ -12,24 +12,20 @@ All the clues that lead us in circles are false evidence we need to purge!
 Given the head of a linked list `evidence`, clean up the evidence list by
 identifying any false clues.
 
-Write a function `collect_false_evidence()` that returns an array containing all
-values that are part of any cycle in `evidence`. Return the values in any order.
+Return an array containing all values that are part of any cycle in `evidence`.
+Return the values in any order.
 
 Evaluate the time and space complexity of your solution. Define your variables
 and provide a rationale for why you believe your solution has the stated time
 and space complexity.
 
-## Function Signature
+## Reference
 
 ```python
 class Node:
     def __init__(self, value, next=None):
         self.value = value
         self.next = next
-
-
-def collect_false_evidence(evidence):
-    pass
 ```
 
 ## Examples
