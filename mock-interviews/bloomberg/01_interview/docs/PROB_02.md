@@ -1,7 +1,5 @@
 # The Slowest Data Path
 
-**Difficulty:** Medium
-
 Closest LeetCode: [543 - Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
 
 ## Description

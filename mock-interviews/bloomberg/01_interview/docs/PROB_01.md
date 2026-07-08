@@ -1,9 +1,6 @@
 # Breaking the Cycle
 
-**Difficulty:** Medium
-
-Closest LeetCode: [142 - Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
-(cycle detection; here you extend it to collect every node on the loop). Base
+Source: [142 - Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/). Base cycle
 detection is [141 - Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/).
 
 ## Description
