@@ -104,7 +104,7 @@ Space O(1) for single-pattern search, O(k) if storing seen hashes
 - Forgetting to take mod at every step → integer overflow in fixed-width langs
   (Python bigints hide this, but interviewers expect the mod).
 - Treating equal hashes as a guaranteed match — always verify, or double-hash.
-- A small modulus or base → frequent collisions and O(n*m) blowup.
+- A small modulus or base → frequent collisions and O(n\*m) blowup.
 - Recomputing `B^(m-1)` inside the loop instead of once up front.
 
 ## Interview Checklist

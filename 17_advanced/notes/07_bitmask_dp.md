@@ -5,7 +5,7 @@
 Some problems ask you to visit every node, assign every worker, or cover every
 skill exactly once, where the *order* of visiting/assigning matters for the
 DP transition but the *set already handled* is the only state that matters
-going forward. When N is small (typically N <= 20), encode that set as an
+going forward. When N is small (typically N \<= 20), encode that set as an
 integer bitmask and use it as a DP dimension: `dp[mask]` or `dp[mask][i]`.
 
 ## Intuition
@@ -24,15 +24,15 @@ mask by adding one more element.
 
 1. Pick what one bit represents (city visited, worker assigned, skill
    covered). N items means `1 << N` possible masks.
-2. Define `dp[mask]` (or `dp[mask][i]` when you also need to track the last
+1. Define `dp[mask]` (or `dp[mask][i]` when you also need to track the last
    item touched, e.g. current city for a path) as the best/count/feasibility
    value achievable using exactly the items in `mask`.
-3. Base case: the empty mask `dp[0]` (nothing chosen yet) or single-bit masks
+1. Base case: the empty mask `dp[0]` (nothing chosen yet) or single-bit masks
    `dp[1 << i][i]` (just started at item i), seeded to a trivial value.
-4. Transition: for each mask, try every bit `j` not yet set in `mask`. Move to
+1. Transition: for each mask, try every bit `j` not yet set in `mask`. Move to
    `mask | (1 << j)` by "adding" item j, updating that state from the current
    one.
-5. Answer sits at the full mask `dp[(1 << N) - 1]` (all items used), possibly
+1. Answer sits at the full mask `dp[(1 << N) - 1]` (all items used), possibly
    minimized/maximized over the trailing index dimension.
 
 ## Template

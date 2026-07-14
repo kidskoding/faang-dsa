@@ -53,11 +53,11 @@ ______________________________________________________________________
 Highest interview review priority:
 
 1. Arrays, strings, hash maps, sets, prefix sums, two pointers, sliding window
-2. Stacks/queues, binary search, trees
-3. Heaps, backtracking, graphs/grids, intervals
-4. Backtracking, DP, greedy
-5. Linked lists and tries
-6. Union find, shortest paths, sorting internals, and advanced structures after the core is reliable
+1. Stacks/queues, binary search, trees
+1. Heaps, backtracking, graphs/grids, intervals
+1. Backtracking, DP, greedy
+1. Linked lists and tries
+1. Union find, shortest paths, sorting internals, and advanced structures after the core is reliable
 
 For Google specifically, overweight trees, graphs, recursion, backtracking, DP, and binary search on answer.
 

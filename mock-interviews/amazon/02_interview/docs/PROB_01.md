@@ -1,4 +1,4 @@
-# Problem 1: Diagonal Traverse 
+# Problem 1: Diagonal Traverse
 
 Source: [LeetCode 498](https://leetcode.com/problems/diagonal-traverse/description/)
 

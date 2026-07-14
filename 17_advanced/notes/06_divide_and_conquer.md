@@ -25,8 +25,8 @@ programming, where subproblems overlap and get cached instead of recombined.
 
 1. **Divide**: split the input into smaller, independent pieces (usually
    halves, sometimes an operator or a spatial partition).
-2. **Conquer**: recursively solve each piece down to a trivial base case.
-3. **Combine**: merge the sub-results into the answer for the current level —
+1. **Conquer**: recursively solve each piece down to a trivial base case.
+1. **Combine**: merge the sub-results into the answer for the current level —
    this is usually where the real algorithmic work happens.
 
 Divide and conquer beats brute force when the combine step can exploit

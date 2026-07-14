@@ -11,8 +11,8 @@
 ## Notes
 
 1. [Timed Solving](notes/01_timed_solving.md)
-2. [Pattern Review](notes/02_pattern_review.md)
-3. [Mock Interviews](notes/03_mock_interviews.md)
+1. [Pattern Review](notes/02_pattern_review.md)
+1. [Mock Interviews](notes/03_mock_interviews.md)
 
 ## Problem Set
 

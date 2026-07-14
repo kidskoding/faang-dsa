@@ -17,8 +17,8 @@ Once that return value is clear, the recursive solution becomes much easier.
 At any node, you usually do three things:
 
 1. Ask the left child for information.
-2. Ask the right child for information.
-3. Combine those answers with the current node.
+1. Ask the right child for information.
+1. Combine those answers with the current node.
 
 That gives this general shape:
 

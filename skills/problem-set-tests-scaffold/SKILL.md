@@ -1,7 +1,6 @@
----
-name: problem-set-tests-scaffold
-description: Use when adding or mirroring a module problem_set and its pytest suite in this DSA repo (e.g. "mirror the trees problem set for X", "scaffold a problem set for heaps", "write the tests file"), to reproduce the exact folder layout, stub header format, test helper convention, namespace-package import style, and pyproject pythonpath wiring.
----
+______________________________________________________________________
+
+## name: problem-set-tests-scaffold description: Use when adding or mirroring a module problem_set and its pytest suite in this DSA repo (e.g. "mirror the trees problem set for X", "scaffold a problem set for heaps", "write the tests file"), to reproduce the exact folder layout, stub header format, test helper convention, namespace-package import style, and pyproject pythonpath wiring.
 
 # Problem Set + Tests Scaffold
 
@@ -134,11 +133,11 @@ Expect a clean collection. If the stubs are unimplemented (`pass`), tests are **
 
 ## Common Mistakes
 
-| Mistake | Symptom | Fix |
-|---|---|---|
-| Forgot `pythonpath` entry | `ModuleNotFoundError: list_node` / `problem_set` at collection | Add `"NN_module"` to `pythonpath` in pyproject |
-| Added `__init__.py` | `problem_set` from another module shadows / import clashes | Delete it; rely on namespace packages |
-| Shared helpers in `conftest.py` | Diverges from trees convention | Inline `build_*`/`to_*` in each test file |
-| `NotImplementedError` body | Tests error instead of asserting | Use `pass` so failures are clean assertion RED |
-| Compared nodes by value when contract returns a node | False pass/fail on cycle/intersection | Assert with `is` against the expected node |
-| Renamed category files per test run | Imports drift | Keep `<category>_problems.py` ↔ `test_<category>_problems.py` paired and stable |
+| Mistake                                              | Symptom                                                        | Fix                                                                             |
+| ---------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Forgot `pythonpath` entry                            | `ModuleNotFoundError: list_node` / `problem_set` at collection | Add `"NN_module"` to `pythonpath` in pyproject                                  |
+| Added `__init__.py`                                  | `problem_set` from another module shadows / import clashes     | Delete it; rely on namespace packages                                           |
+| Shared helpers in `conftest.py`                      | Diverges from trees convention                                 | Inline `build_*`/`to_*` in each test file                                       |
+| `NotImplementedError` body                           | Tests error instead of asserting                               | Use `pass` so failures are clean assertion RED                                  |
+| Compared nodes by value when contract returns a node | False pass/fail on cycle/intersection                          | Assert with `is` against the expected node                                      |
+| Renamed category files per test run                  | Imports drift                                                  | Keep `<category>_problems.py` ↔ `test_<category>_problems.py` paired and stable |

@@ -9,10 +9,10 @@ Learn to explain where runtime and memory usage come from. Do not memorize Big-O
 For every function, ask:
 
 1. What is the input size?
-2. How many times can each input item be touched?
-3. What data structures grow with the input?
-4. What is the worst case?
-5. Is output space separate from auxiliary space?
+1. How many times can each input item be touched?
+1. What data structures grow with the input?
+1. What is the worst case?
+1. Is output space separate from auxiliary space?
 
 Common variables:
 

@@ -11,10 +11,10 @@
 ## Notes
 
 1. [General Technical Interview Preparation](notes/01_how_to_prep.md)
-2. [Python Basics](notes/02_python_basics.md)
-3. [Time And Space Complexity](notes/03_time_and_space_complexity.md)
-4. [Common Operation Costs](notes/04_common_operation_costs.md)
-5. [Interview Problem Solving](notes/05_interview_problem_solving.md)
+1. [Python Basics](notes/02_python_basics.md)
+1. [Time And Space Complexity](notes/03_time_and_space_complexity.md)
+1. [Common Operation Costs](notes/04_common_operation_costs.md)
+1. [Interview Problem Solving](notes/05_interview_problem_solving.md)
 
 ## Problem Set
 

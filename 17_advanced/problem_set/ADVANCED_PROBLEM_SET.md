@@ -183,8 +183,7 @@ non-trivial merge step.
 ## Bitmask DP
 
 These problems teach state-compression DP: `dp[mask]` (or `dp[mask][i]`) tracks the best
-result for each subset of items, built up by adding one unset item at a time. `Shortest
-Path Visiting All Nodes` is skipped here — it already anchors `10_graphs` as problem 53 and
+result for each subset of items, built up by adding one unset item at a time. `Shortest Path Visiting All Nodes` is skipped here — it already anchors `10_graphs` as problem 53 and
 this workbook does not repeat a title outside its deliberate anchor module.
 
 ### 32. [Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)

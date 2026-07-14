@@ -7,8 +7,8 @@ Dynamic programming solves problems with overlapping subproblems by storing answ
 A DP solution has three parts:
 
 1. State: what each `dp[...]` entry means.
-2. Transition: how to compute a state from smaller states.
-3. Order: the order in which states must be solved.
+1. Transition: how to compute a state from smaller states.
+1. Order: the order in which states must be solved.
 
 If you cannot say what the state means in one sentence, the solution is not ready to code.
 
