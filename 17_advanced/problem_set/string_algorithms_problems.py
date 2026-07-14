@@ -38,3 +38,13 @@ def longest_prefix(s: str) -> str:
     # Space:
 
     raise NotImplementedError
+
+
+def longest_dup_substring(s: str) -> str:
+    # Problem 19: Longest Duplicate Substring
+    # Key idea: binary search the answer length; for each length L, use a Rabin-Karp
+    #           rolling hash to check in O(n) whether any length-L substring repeats.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
