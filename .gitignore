@@ -8,10 +8,6 @@ wheels/
 .pytest_cache/
 .ruff_cache/
 
-# GitHub Pages / mdBook
-book/
-book-src/
-
 # Virtual environments
 .venv
 .DS_Store
