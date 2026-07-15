@@ -16,6 +16,7 @@ ______________________________________________________________________
 - Implement data structures from scratch when the structure itself is being learned.
 - Use normal Python interview tools (`dict`, `set`, `list`, `heapq`, `deque`) in problem solutions unless the point of the problem is to implement that structure.
 - Prioritize high-frequency interview patterns before low-frequency advanced algorithms.
+- Keep each numbered module's problem set single-technique. A problem stays in a module if that module's technique solves it cleanly, even when another pattern (e.g. DP) is an alternative solution. A problem that genuinely requires chaining two or more patterns to solve belongs in `18_mixed_interview_practice/`, not a single-technique module.
 - Company-specific drilling belongs in `company_problem_sets/`; do not claim those are exact interview question lists.
 
 ______________________________________________________________________
@@ -73,6 +74,8 @@ Each chapter should eventually include:
 - guided practice: warmups, core interview problems, follow-ups, and review problems
 
 Guided practice belongs inside the numbered module folder that teaches the concept. Do not create a separate top-level `problems/` folder.
+
+Size each technique section (each `.py` file / `##` section in a module problem set) to the number of problems that actually builds mastery of that technique — enough coverage to go from warmup to hard and drill the pattern until it is automatic, not a fixed count. Do not leave a section thin (roughly, fewer than 4-5 problems is a smell); if migrating problems out leaves a section sparse, backfill it with more problems of that same technique. The number of problems is the lever that ensures mastery, so err toward more coverage per technique rather than a minimal set.
 
 Tests belong inside the numbered module folder that owns the concept. Do not create a separate top-level `tests/` folder.
 
