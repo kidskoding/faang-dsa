@@ -32,3 +32,57 @@ def longest_ones(nums: list[int], k: int) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def longest_subarray(nums: list[int]) -> int:
+    # Problem 6: Longest Subarray of 1's After Deleting One Element
+    # Key idea: window allowing at most one zero; shrink when a second zero enters, answer is length minus one.
+    # Time:
+    # Space:
+
+    pass
+
+
+def num_subarray_product_less_than_k(nums: list[int], k: int) -> int:
+    # Problem 7: Subarray Product Less Than K
+    # Key idea: expand right multiplying in, shrink left while the product is too large, count windows ending at right.
+    # Time:
+    # Space:
+
+    pass
+
+
+def equal_substring(s: str, t: str, max_cost: int) -> int:
+    # Problem 8: Get Equal Substrings Within Budget
+    # Key idea: expand right accumulating conversion cost, shrink left while the cost exceeds maxCost.
+    # Time:
+    # Space:
+
+    pass
+
+
+def maximum_unique_subarray(nums: list[int]) -> int:
+    # Problem 9: Maximum Erasure Value
+    # Key idea: variable window of unique elements; shrink left when a duplicate enters, track the max window sum.
+    # Time:
+    # Space:
+
+    pass
+
+
+def max_frequency(nums: list[int], k: int) -> int:
+    # Problem 10: Frequency of the Most Frequent Element
+    # Key idea: sort, then slide a window where cost to raise all to the right edge stays within k.
+    # Time:
+    # Space:
+
+    pass
+
+
+def longest_nice_subarray(nums: list[int]) -> int:
+    # Problem 11: Longest Nice Subarray
+    # Key idea: window whose elements are pairwise AND-zero; track a running OR mask and shrink on conflict.
+    # Time:
+    # Space:
+
+    pass

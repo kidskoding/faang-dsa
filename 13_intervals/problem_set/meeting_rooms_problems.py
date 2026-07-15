@@ -74,3 +74,39 @@ def most_booked_room(n: int, meetings: list[list[int]]) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def max_events(events: list[list[int]]) -> int:
+    # Problem 14: Maximum Number of Events That Can Be Attended
+    # Key idea: sweep days, min heap of end days, greedily attend the soonest-ending event.
+    # Time:
+    # Space:
+
+    pass
+
+
+def min_groups(intervals: list[list[int]]) -> int:
+    # Problem 15: Divide Intervals Into Minimum Number of Groups
+    # Key idea: max concurrent overlap equals the group count, sweep starts and ends.
+    # Time:
+    # Space:
+
+    pass
+
+
+def min_interval(intervals: list[list[int]], queries: list[int]) -> list[int]:
+    # Problem 16: Minimum Interval to Include Each Query
+    # Key idea: sort queries and intervals, min heap of sizes for intervals covering each query.
+    # Time:
+    # Space:
+
+    pass
+
+
+def full_bloom_flowers(flowers: list[list[int]], people: list[int]) -> list[int]:
+    # Problem 17: Number of Flowers in Full Bloom
+    # Key idea: binary search sorted starts and ends per person, or sweep with events.
+    # Time:
+    # Space:
+
+    pass

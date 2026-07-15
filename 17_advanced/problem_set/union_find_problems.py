@@ -45,3 +45,23 @@ def smallest_string_with_swaps(s: str, pairs: list[list[int]]) -> str:
     # Space:
 
     raise NotImplementedError
+
+
+def find_redundant_connection(edges: list[list[int]]) -> list[int]:
+    # Problem 5: Redundant Connection
+    # Key idea: add edges one at a time; the first whose endpoints already share a root closes the cycle.
+    # Time:
+    # Space:
+
+    pass
+
+
+def calc_equation(
+    equations: list[list[str]], values: list[float], queries: list[list[str]]
+) -> list[float]:
+    # Problem 6: Evaluate Division
+    # Key idea: weighted union-find carrying edge ratios (or graph DFS).
+    # Time:
+    # Space:
+
+    pass

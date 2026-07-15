@@ -165,3 +165,34 @@ def zigzag_level_order(root: TreeNode | None) -> list[list[int]]:
         zigzag = not zigzag
 
     return res
+
+
+def connect(root: TreeNode | None) -> TreeNode | None:
+    # Problem 13: Populating Next Right Pointers In Each Node
+    # Key idea: link nodes level by level using existing next pointers.
+    # Time:
+    # Space:
+
+    pass
+
+
+def vertical_traversal(root: TreeNode | None) -> list[list[int]]:
+    # Problem 14: Vertical Order Traversal Of A Binary Tree
+    # Key idea: track column indices during traversal.
+    # Time:
+    # Space:
+
+    pass
+
+
+def distance_k(
+    root: TreeNode | None,
+    target: TreeNode | None,
+    k: int,
+) -> list[int]:
+    # Problem 15: All Nodes Distance K In Binary Tree
+    # Key idea: combine parent links with BFS from the target.
+    # Time:
+    # Space:
+
+    pass

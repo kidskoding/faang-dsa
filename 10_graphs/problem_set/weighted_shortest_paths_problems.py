@@ -123,3 +123,12 @@ def second_minimum_time(n: int, edges: list[list[int]], time: int, change: int) 
     # Space:
 
     raise NotImplementedError
+
+
+def min_cost_connect_points(points: list[list[int]]) -> int:
+    # Problem 68: Min Cost To Connect All Points
+    # Key idea: minimum spanning tree over complete graph distances.
+    # Time:
+    # Space:
+
+    pass

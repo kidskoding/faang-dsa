@@ -16,7 +16,9 @@
 
 ## Problem Set
 
-The canonical problem set for this module still needs to be added.
+[Mixed Interview Practice Problem Set](problem_set/MIXED_PROBLEM_SET.md) —
+problems that chain two or more patterns and so do not belong in a single
+technique module. Solutions live in `problem_set/multi_pattern_problems.py`.
 
 ## Additional Notes
 

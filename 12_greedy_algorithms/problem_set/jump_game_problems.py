@@ -23,3 +23,30 @@ def can_reach(arr: list[int], start: int) -> bool:
     # Space:
 
     raise NotImplementedError
+
+
+def min_jumps(arr: list[int]) -> int:
+    # Problem 8: Jump Game IV
+    # Key idea: BFS over value-buckets, greedily clearing each visited value group to avoid re-expansion.
+    # Time:
+    # Space:
+
+    pass
+
+
+def can_reach_end(s: str, min_jump: int, max_jump: int) -> bool:
+    # Problem 9: Jump Game VII
+    # Key idea: sliding-window reachability; index i is reachable if any reachable index sits in [i-max_jump, i-min_jump].
+    # Time:
+    # Space:
+
+    pass
+
+
+def minimum_jumps(forbidden: list[int], a: int, b: int, x: int) -> int:
+    # Problem 10: Minimum Jumps to Reach Home
+    # Key idea: BFS over positions, greedily bounding the reachable range and tracking whether the last hop was a backward jump.
+    # Time:
+    # Space:
+
+    pass

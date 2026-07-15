@@ -41,3 +41,21 @@ def maximal_square(matrix: list[list[str]]) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def min_falling_path_sum(matrix: list[list[int]]) -> int:
+    # Problem 11: Minimum Falling Path Sum
+    # Key idea: each cell takes the min of the three cells above it.
+    # Time:
+    # Space:
+
+    pass
+
+
+def count_squares(matrix: list[list[int]]) -> int:
+    # Problem 12: Count Square Submatrices with All Ones
+    # Key idea: same recurrence as Maximal Square, but sum every side length to count squares.
+    # Time:
+    # Space:
+
+    pass

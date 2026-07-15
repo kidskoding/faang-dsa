@@ -26,3 +26,21 @@ def reverse_k_group(head: ListNode | None, k: int) -> ListNode | None:
     # Space:
 
     raise NotImplementedError
+
+
+def twin_sum(head: ListNode | None) -> int:
+    # Problem 15: Maximum Twin Sum Of A Linked List
+    # Key idea: reverse the second half, then pair it against the first half.
+    # Time:
+    # Space:
+
+    pass
+
+
+def swap_nodes(head: ListNode | None, k: int) -> ListNode | None:
+    # Problem 16: Swapping Nodes In A Linked List
+    # Key idea: two pointers a gap of k apart to find the kth from both ends.
+    # Time:
+    # Space:
+
+    pass

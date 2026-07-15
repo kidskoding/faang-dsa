@@ -32,3 +32,21 @@ def change(amount: int, coins: list[int]) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def combination_sum4(nums: list[int], target: int) -> int:
+    # Problem 15: Combination Sum IV
+    # Key idea: unbounded knapsack counting ordered sequences, so loop target outside items.
+    # Time:
+    # Space:
+
+    pass
+
+
+def find_max_form(strs: list[str], m: int, n: int) -> int:
+    # Problem 16: Ones and Zeroes
+    # Key idea: 0/1 knapsack with two capacities, the counts of zeros and ones.
+    # Time:
+    # Space:
+
+    pass

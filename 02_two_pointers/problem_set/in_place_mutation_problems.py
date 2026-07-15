@@ -23,3 +23,21 @@ def sort_colors(nums: list[int]) -> None:
     # Space:
 
     raise NotImplementedError
+
+
+def rotate(nums: list[int], k: int) -> None:
+    # Problem 14: Rotate Array
+    # Key idea: reverse-based rotation using opposite-end swaps on three ranges.
+    # Time:
+    # Space:
+
+    pass
+
+
+def wiggle_sort(nums: list[int]) -> None:
+    # Problem 15: Wiggle Sort II
+    # Key idea: partition around the median, then interleave halves with three-way pointer indexing.
+    # Time:
+    # Space:
+
+    pass

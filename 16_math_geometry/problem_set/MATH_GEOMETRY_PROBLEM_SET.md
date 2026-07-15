@@ -2,11 +2,17 @@
 
 ## Goal
 
-Build the coordinate, modular, gcd/lcm, and geometry intuition needed for the math-flavored problems that show up in LeetCode-style interviews.
+Build math and geometry intuition across the four core techniques —
+in-place matrix transforms, modular and digit arithmetic, gcd/lcm via
+Euclid, and coordinate geometry — then use each technique to solve the
+math-flavored problems that show up in LeetCode-style interviews.
 
 ## How To Use
 
-Work the file in order. The early sections are the fundamentals. The later sections are the medium and hard extensions.
+Each section maps to one solution file in this folder and to one technique
+family. Work a section top to bottom: problems are ordered roughly easy to
+hard, and the implemented ones come first. `solves:` names the function in
+that section's file; `solves: (todo)` means the solution is not written yet.
 
 For every problem, write:
 
@@ -17,187 +23,245 @@ Space:
 Key idea:
 ```
 
-## Fundamentals
+## Matrix
 
-These are the matrix/coordinate and modular-arithmetic basics you should be able to do without thinking too hard.
+`matrix_problems.py` — in-place matrix transforms using shrinking
+boundaries, the grid's own borders as marks, and spare bits for state.
 
 ### 1. [Rotate Image](https://leetcode.com/problems/rotate-image/)
 
+- solves: `rotate`
 - Pattern: transpose the matrix, then reverse each row in place.
 
 ### 2. [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
 
+- solves: `spiral_order`
 - Pattern: shrink four boundaries while walking the ring.
 
 ### 3. [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/)
 
+- solves: `generate_matrix`
 - Pattern: fill the same shrinking-boundary ring instead of reading it.
 
 ### 4. [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
 
-- Pattern: mark rows and columns to zero using the matrix's own first row/column.
+- solves: `set_zeroes`
+- Pattern: mark rows and columns to zero using the matrix's own first
+  row/column.
 
-### 5. [Pow(x, n)](https://leetcode.com/problems/powx-n/)
+### 5. [Game Of Life](https://leetcode.com/problems/game-of-life/)
 
-- Pattern: binary exponentiation halves the exponent each step.
-
-### 6. [Sqrt(x)](https://leetcode.com/problems/sqrtx/)
-
-- Pattern: binary search the answer space for the integer square root.
-
-### 7. [Plus One](https://leetcode.com/problems/plus-one/)
-
-- Pattern: walk digits right-to-left, carrying, and prepend a leading 1 if it overflows.
-
-### 8. [Palindrome Number](https://leetcode.com/problems/palindrome-number/)
-
-- Pattern: reverse half the digits and compare without converting to a string.
-
-### 9. [Add Strings](https://leetcode.com/problems/add-strings/)
-
-- Pattern: digit-by-digit bignum addition with carry.
-
-### 10. [Reverse Integer](https://leetcode.com/problems/reverse-integer/)
-
-- Pattern: reverse digits with 32-bit overflow checking.
-
-## Mediums
-
-These are the matrix, modular arithmetic, and gcd/lcm mediums you should drill for FAANG-style interviews.
-
-### 11. [Game Of Life](https://leetcode.com/problems/game-of-life/)
-
+- solves: `game_of_life`
 - Pattern: encode next state in unused bits so the update stays in place.
 
-### 12. [Fraction To Recurring Decimal](https://leetcode.com/problems/fraction-to-recurring-decimal/)
+## Modular And Digit Arithmetic
 
-- Pattern: use gcd to reduce the fraction, then track remainders to detect a repeating cycle.
+`modular_arithmetic_problems.py` — base-26 conversions, binary
+exponentiation, and digit/number-theory transforms.
 
-### 13. [Happy Number](https://leetcode.com/problems/happy-number/)
+### 6. [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/)
 
-- Pattern: cycle detection over repeated digit-square-sum transforms.
-
-### 14. [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/)
-
+- solves: `title_to_number`
 - Pattern: treat the letters as a base-26 number.
 
-### 15. [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
+### 7. [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
 
+- solves: `convert_to_title`
 - Pattern: base-26 conversion with a 1-indexed digit shift.
 
-### 16. [Multiply Strings](https://leetcode.com/problems/multiply-strings/)
+### 8. [Nim Game](https://leetcode.com/problems/nim-game/)
 
-- Pattern: schoolbook multiply into a fixed-size digit buffer indexed by position sums.
+- solves: `can_win_nim`
+- Pattern: find the losing positions via modulo on the pile size.
 
-### 17. [Integer to Roman](https://leetcode.com/problems/integer-to-roman/)
+### 9. [Happy Number](https://leetcode.com/problems/happy-number/)
 
-- Pattern: greedily subtract the largest value-symbol pair, including the subtractive cases.
+- solves: `is_happy`
+- Pattern: cycle detection over repeated digit-square-sum transforms.
 
-### 18. [Count Primes](https://leetcode.com/problems/count-primes/)
+### 10. [Sqrt(x)](https://leetcode.com/problems/sqrtx/)
 
+- solves: `my_sqrt`
+- Pattern: binary search the answer space for the integer square root.
+
+### 11. [Pow(x, n)](https://leetcode.com/problems/powx-n/)
+
+- solves: `my_pow`
+- Pattern: binary exponentiation halves the exponent each step.
+
+### 12. [Plus One](https://leetcode.com/problems/plus-one/)
+
+- solves: `plus_one`
+- Pattern: walk digits right-to-left, carrying, and prepend a leading 1 if
+  it overflows.
+
+### 13. [Palindrome Number](https://leetcode.com/problems/palindrome-number/)
+
+- solves: `is_palindrome`
+- Pattern: reverse half the digits and compare without converting to a
+  string.
+
+### 14. [Add Strings](https://leetcode.com/problems/add-strings/)
+
+- solves: `add_strings`
+- Pattern: digit-by-digit bignum addition with carry.
+
+### 15. [Reverse Integer](https://leetcode.com/problems/reverse-integer/)
+
+- solves: `reverse`
+- Pattern: reverse digits with 32-bit overflow checking.
+
+### 16. [Count Primes](https://leetcode.com/problems/count-primes/)
+
+- solves: `count_primes`
 - Pattern: sieve of Eratosthenes marks multiples as composite.
 
-### 19. [Ugly Number II](https://leetcode.com/problems/ugly-number-ii/)
+### 17. [Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/)
 
+- solves: `trailing_zeroes`
+- Pattern: count factors of 5 by summing floor divisions by increasing
+  powers of 5.
+
+### 18. [Multiply Strings](https://leetcode.com/problems/multiply-strings/)
+
+- solves: `multiply`
+- Pattern: schoolbook multiply into a fixed-size digit buffer indexed by
+  position sums.
+
+### 19. [Integer to Roman](https://leetcode.com/problems/integer-to-roman/)
+
+- solves: `int_to_roman`
+- Pattern: greedily subtract the largest value-symbol pair, including the
+  subtractive cases.
+
+### 20. [Ugly Number II](https://leetcode.com/problems/ugly-number-ii/)
+
+- solves: `nth_ugly_number`
 - Pattern: merge three pointer-advanced streams of multiples of 2, 3, and 5.
 
-### 20. [Perfect Squares](https://leetcode.com/problems/perfect-squares/)
+### 21. [Perfect Squares](https://leetcode.com/problems/perfect-squares/)
 
+- solves: `num_squares`
 - Pattern: DP over the fewest squares, or BFS on remaining-value states.
 
-### 21. [Rectangle Area](https://leetcode.com/problems/rectangle-area/)
+### 22. [Implement Rand10() Using Rand7()](https://leetcode.com/problems/implement-rand10-using-rand7/)
 
-- Pattern: sum both areas and subtract the overlap of the two axis intervals.
-
-### 22. [Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/)
-
-- Pattern: count factors of 5 by summing floor divisions by increasing powers of 5.
-
-### 23. [Implement Rand10() Using Rand7()](https://leetcode.com/problems/implement-rand10-using-rand7/)
-
+- solves: `rand10`
 - Pattern: rejection sampling to build a uniform distribution.
 
-## Geometry Basics
+## GCD And LCM
 
-These are the coordinate-geometry problems that build on slopes, distances, and orientation.
+`gcd_lcm_problems.py` — Euclid's gcd applied to factor counts, repeated
+strings, and reduced fractions.
 
-### 24. [Valid Square](https://leetcode.com/problems/valid-square/)
+### 23. [Number of Common Factors](https://leetcode.com/problems/number-of-common-factors/)
 
-- Pattern: compare squared distances between all point pairs.
+- solves: `common_factors`
+- Pattern: the common factors of a and b are exactly the divisors of
+  gcd(a, b).
 
-### 25. [Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/)
+### 24. [Greatest Common Divisor of Strings](https://leetcode.com/problems/greatest-common-divisor-of-strings/)
 
+- solves: `gcd_of_strings`
+- Pattern: a common divisor exists only if `str1 + str2 == str2 + str1`;
+  its length is gcd(len1, len2).
+
+### 25. [Fraction To Recurring Decimal](https://leetcode.com/problems/fraction-to-recurring-decimal/)
+
+- solves: `fraction_to_decimal`
+- Pattern: use gcd to reduce the fraction, then track remainders to detect
+  a repeating cycle.
+
+### 26. [Smallest Even Multiple](https://leetcode.com/problems/smallest-even-multiple/)
+
+- solves: `smallest_even_multiple`
+- Pattern: the answer is lcm(n, 2) — `n` if it is already even, else `2 * n`.
+
+### 27. [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/)
+
+- solves: `find_gcd`
+- Pattern: gcd of the array equals gcd of only its smallest and largest
+  elements.
+
+### 28. [Water and Jug Problem](https://leetcode.com/problems/water-and-jug-problem/)
+
+- solves: `can_measure_water`
+- Pattern: by Bezout's identity, target is reachable iff it fits in the two
+  jugs and is a multiple of gcd(jug1, jug2).
+
+## Geometry
+
+`geometry_problems.py` — coordinate geometry with squared distances,
+interval overlap, reduced slopes, and area sweeps.
+
+### 29. [Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/)
+
+- solves: `is_rectangle_overlap`
 - Pattern: check that both axis intervals overlap.
 
-### 26. [Minimum Area Rectangle](https://leetcode.com/problems/minimum-area-rectangle/)
+### 30. [Valid Square](https://leetcode.com/problems/valid-square/)
 
+- solves: `valid_square`
+- Pattern: compare squared distances between all point pairs.
+
+### 31. [Minimum Area Rectangle](https://leetcode.com/problems/minimum-area-rectangle/)
+
+- solves: `min_area_rect`
 - Pattern: hash points and pair up diagonals that share a center and radius.
 
-### 27. [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
+### 32. [Max Points On A Line](https://leetcode.com/problems/max-points-on-a-line/)
 
-- Pattern: keep the k smallest squared distances with a heap or quickselect.
-
-### 28. [Largest Triangle Area](https://leetcode.com/problems/largest-triangle-area/)
-
-- Pattern: apply the shoelace cross-product area over every triple of points.
-
-## Hards And Extensions
-
-These are the math and geometry follow-ups that push beyond the standard medium set.
-
-### 29. [Max Points On A Line](https://leetcode.com/problems/max-points-on-a-line/)
-
+- solves: `max_points`
 - Pattern: group points by reduced-slope key relative to each anchor point.
 
-### 30. [Erect the Fence](https://leetcode.com/problems/erect-the-fence/)
+### 33. [Largest Triangle Area](https://leetcode.com/problems/largest-triangle-area/)
 
-- Pattern: build the convex hull (Andrew's monotone chain) via cross-product turns.
+- solves: `largest_triangle_area`
+- Pattern: apply the shoelace cross-product area over every triple of
+  points.
 
-### 31. [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
+### 34. [Rectangle Area](https://leetcode.com/problems/rectangle-area/)
 
+- solves: `compute_area`
+- Pattern: sum both areas and subtract the overlap of the two axis
+  intervals.
+
+### 35. [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
+
+- solves: `k_closest`
+- Pattern: keep the k smallest squared distances with a heap or quickselect.
+
+### 36. [Basic Calculator](https://leetcode.com/problems/basic-calculator/)
+
+- solves: `calculate`
+- Pattern: evaluate with a running sign and a stack for parenthesized
+  subexpressions.
+
+### 37. [Self Crossing](https://leetcode.com/problems/self-crossing/)
+
+- solves: `is_self_crossing`
+- Pattern: compare each move against the prior few segments for the three
+  crossing cases.
+
+### 38. [Erect the Fence](https://leetcode.com/problems/erect-the-fence/)
+
+- solves: `outer_trees`
+- Pattern: build the convex hull (Andrew's monotone chain) via cross-product
+  turns.
+
+### 39. [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
+
+- solves: `get_skyline`
 - Pattern: sweep building edges and track the current max height with a heap.
 
-### 32. [Perfect Rectangle](https://leetcode.com/problems/perfect-rectangle/)
+### 40. [Perfect Rectangle](https://leetcode.com/problems/perfect-rectangle/)
 
-- Pattern: check total area equals the bounding box and every interior corner cancels.
+- solves: `is_rectangle_cover`
+- Pattern: check total area equals the bounding box and every interior
+  corner cancels.
 
-### 33. [Rectangle Area II](https://leetcode.com/problems/rectangle-area-ii/)
+### 41. [Rectangle Area II](https://leetcode.com/problems/rectangle-area-ii/)
 
-- Pattern: coordinate-compress and sweep a line, summing active covered width.
-
-### 34. [Self Crossing](https://leetcode.com/problems/self-crossing/)
-
-- Pattern: compare each move against the prior few segments for the three crossing cases.
-
-### 35. [Basic Calculator](https://leetcode.com/problems/basic-calculator/)
-
-- Pattern: evaluate with a running sign and a stack for parenthesized subexpressions.
-
-## Recommended Order
-
-If you want the shortest path to math and geometry fluency, do them in this order:
-
-```text
-1. [Rotate Image](https://leetcode.com/problems/rotate-image/)
-2. [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
-3. [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
-4. [Plus One](https://leetcode.com/problems/plus-one/)
-5. [Palindrome Number](https://leetcode.com/problems/palindrome-number/)
-6. [Add Strings](https://leetcode.com/problems/add-strings/)
-7. [Reverse Integer](https://leetcode.com/problems/reverse-integer/)
-8. [Pow(x, n)](https://leetcode.com/problems/powx-n/)
-9. [Sqrt(x)](https://leetcode.com/problems/sqrtx/)
-10. [Happy Number](https://leetcode.com/problems/happy-number/)
-11. [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/)
-12. [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)
-13. [Count Primes](https://leetcode.com/problems/count-primes/)
-14. [Multiply Strings](https://leetcode.com/problems/multiply-strings/)
-15. [Integer to Roman](https://leetcode.com/problems/integer-to-roman/)
-16. [Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/)
-17. [Game Of Life](https://leetcode.com/problems/game-of-life/)
-18. [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
-19. [Rectangle Area](https://leetcode.com/problems/rectangle-area/)
-20. [Max Points On A Line](https://leetcode.com/problems/max-points-on-a-line/)
-21. [Erect the Fence](https://leetcode.com/problems/erect-the-fence/)
-22. [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
-```
+- solves: `rectangle_area`
+- Pattern: coordinate-compress and sweep a line, summing active covered
+  width.

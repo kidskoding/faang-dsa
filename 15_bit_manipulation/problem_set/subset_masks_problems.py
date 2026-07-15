@@ -23,3 +23,39 @@ def max_xor_of_two_numbers(nums: list[int]) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def can_partition_k_subsets(nums: list[int], k: int) -> bool:
+    # Problem 16: Partition to K Equal Sum Subsets
+    # Key idea: memoize over a used-elements bitmask while filling buckets to the target sum.
+    # Time:
+    # Space:
+
+    pass
+
+
+def shortest_path_length(graph: list[list[int]]) -> int:
+    # Problem 17: Shortest Path Visiting All Nodes
+    # Key idea: BFS over (node, visited-mask) states until every bit is set.
+    # Time:
+    # Space:
+
+    pass
+
+
+def max_students(seats: list[list[str]]) -> int:
+    # Problem 18: Maximum Students Taking Exam
+    # Key idea: DP over per-row seating bitmasks that are compatible with the row above.
+    # Time:
+    # Space:
+
+    pass
+
+
+def distribute_cookies(cookies: list[int], k: int) -> int:
+    # Problem 19: Fair Distribution of Cookies
+    # Key idea: submask enumeration / bitmask DP assigning subsets to buckets.
+    # Time:
+    # Space:
+
+    pass

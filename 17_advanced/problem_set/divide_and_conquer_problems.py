@@ -32,3 +32,21 @@ def beautiful_array(n: int) -> list[int]:
     # Space:
 
     raise NotImplementedError
+
+
+def max_sub_array(nums: list[int]) -> int:
+    # Problem 26: Maximum Subarray
+    # Key idea: divide in half; the best subarray is in the left, the right, or crosses the midpoint.
+    # Time:
+    # Space:
+
+    pass
+
+
+def find_median_sorted_arrays(nums1: list[int], nums2: list[int]) -> float:
+    # Problem 27: Median Of Two Sorted Arrays
+    # Key idea: binary-search the partition point in the shorter array so both halves balance.
+    # Time:
+    # Space:
+
+    pass

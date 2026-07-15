@@ -1,5 +1,4 @@
 from problem_set.implicit_state_bfs_problems import (
-    find_ladders,
     ladder_length,
     min_mutation,
     minimum_moves,
@@ -80,24 +79,6 @@ def test_num_buses_to_destination_normal_case():
 
 def test_num_buses_to_destination_same_start_and_target():
     assert num_buses_to_destination([[1, 2, 7]], 1, 1) == 0
-
-
-def test_find_ladders_normal_case():
-    word_list = ["hot", "dot", "dog", "lot", "log", "cog"]
-
-    result = find_ladders("hit", "cog", word_list)
-
-    assert sorted(tuple(path) for path in result) == sorted(
-        tuple(path)
-        for path in [
-            ["hit", "hot", "dot", "dog", "cog"],
-            ["hit", "hot", "lot", "log", "cog"],
-        ]
-    )
-
-
-def test_find_ladders_no_path():
-    assert find_ladders("hit", "cog", ["hot", "dot", "dog", "lot", "log"]) == []
 
 
 def test_shortest_path_length_normal_case():

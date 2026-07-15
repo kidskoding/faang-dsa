@@ -84,3 +84,21 @@ def trim_bst(root: TreeNode | None, low: int, high: int) -> TreeNode | None:
     # Space:
 
     raise NotImplementedError
+
+
+def inorder_successor(root: TreeNode | None, p: TreeNode | None) -> TreeNode | None:
+    # Problem 26: Inorder Successor In BST
+    # Key idea: BST navigation tracking the deepest ancestor greater than the target.
+    # Time:
+    # Space:
+
+    pass
+
+
+def recover_tree(root: TreeNode | None) -> None:
+    # Problem 27: Recover Binary Search Tree
+    # Key idea: fix two swapped nodes found by inorder traversal.
+    # Time:
+    # Space:
+
+    pass

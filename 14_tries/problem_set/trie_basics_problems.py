@@ -77,3 +77,52 @@ def replace_words(dictionary: list[str], sentence: str) -> str:
     # Space:
 
     raise NotImplementedError
+
+
+class TrieIINode:
+    # Node for Implement Trie II (Prefix Tree).
+    def __init__(self) -> None:
+        self.children: dict[str, TrieIINode] = {}
+        self.word_count: int = 0
+        self.prefix_count: int = 0
+
+
+class TrieII:
+    # Problem 5: Implement Trie II (Prefix Tree)
+    # Key idea: nodes track word counts and prefix counts to support insert,
+    # count, and erase.
+
+    def __init__(self) -> None:
+        # Time:
+        # Space:
+        pass
+
+    def insert(self, word: str) -> None:
+        # Time:
+        # Space:
+        pass
+
+    def count_words_equal_to(self, word: str) -> int:
+        # Time:
+        # Space:
+        pass
+
+    def count_words_starting_with(self, prefix: str) -> int:
+        # Time:
+        # Space:
+        pass
+
+    def erase(self, word: str) -> None:
+        # Time:
+        # Space:
+        pass
+
+
+def minimum_length_encoding(words: list[str]) -> int:
+    # Problem 6: Short Encoding Of Words
+    # Key idea: insert reversed words into a suffix trie; only leaf words
+    # contribute to the encoding.
+    # Time:
+    # Space:
+
+    pass

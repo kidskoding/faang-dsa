@@ -77,3 +77,31 @@ def closest_meeting_node(edges: list[int], node1: int, node2: int) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def find_circle_num(is_connected: list[list[int]]) -> int:
+    # Problem 34: Number Of Provinces
+    # Key idea: count connected components via union-find or DFS on an
+    # adjacency matrix.
+    # Time:
+    # Space:
+
+    pass
+
+
+def critical_connections(n: int, connections: list[list[int]]) -> list[list[int]]:
+    # Problem 35: Critical Connections In A Network
+    # Key idea: bridge-finding with DFS low-link values.
+    # Time:
+    # Space:
+
+    pass
+
+
+def hit_bricks(grid: list[list[int]], hits: list[list[int]]) -> list[int]:
+    # Problem 36: Bricks Falling When Hit
+    # Key idea: reverse process with union-find connectivity restoration.
+    # Time:
+    # Space:
+
+    pass

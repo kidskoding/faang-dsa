@@ -1,5 +1,4 @@
 from problem_set.topological_sort_problems import (
-    alien_order,
     all_paths_source_target,
     can_finish,
     check_if_prerequisite,
@@ -116,14 +115,6 @@ def test_get_ancestors_normal_case():
 
 def test_get_ancestors_no_edges():
     assert get_ancestors(3, []) == [[], [], []]
-
-
-def test_alien_order_normal_case():
-    assert alien_order(["wrt", "wrf", "er", "ett", "rftt"]) == "wertf"
-
-
-def test_alien_order_invalid_ordering():
-    assert alien_order(["z", "x", "z"]) == ""
 
 
 def test_minimum_time_normal_case():

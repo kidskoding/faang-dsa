@@ -58,21 +58,19 @@ def flatten(head: MultilevelNode | None) -> MultilevelNode | None:
     raise NotImplementedError
 
 
-class LRUCache:
-    # Problem 26: LRU Cache
-    # Key idea: hash map plus a doubly linked list for O(1) eviction.
+def next_larger_nodes(head: ListNode | None) -> list[int]:
+    # Problem 27: Next Greater Node In Linked List
+    # Key idea: monotonic stack over the values in one pass.
+    # Time:
+    # Space:
 
-    def __init__(self, capacity: int) -> None:
-        # Time:
-        # Space:
-        raise NotImplementedError
+    pass
 
-    def get(self, key: int) -> int:
-        # Time:
-        # Space:
-        raise NotImplementedError
 
-    def put(self, key: int, value: int) -> None:
-        # Time:
-        # Space:
-        raise NotImplementedError
+def reverse_even_length_groups(head: ListNode | None) -> ListNode | None:
+    # Problem 28: Reverse Nodes In Even Length Groups
+    # Key idea: walk growing groups, reverse only the even-length ones.
+    # Time:
+    # Space:
+
+    pass

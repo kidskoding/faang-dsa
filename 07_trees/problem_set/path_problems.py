@@ -98,3 +98,21 @@ def sum_root_to_leaf_numbers(root: TreeNode | None) -> int:
 
     helper(root, f"{root.val}")
     return sum(nums)
+
+
+def good_nodes(root: TreeNode | None) -> int:
+    # Problem 17: Count Good Nodes In Binary Tree
+    # Key idea: carry the maximum value seen so far down each path.
+    # Time:
+    # Space:
+
+    pass
+
+
+def path_sum_iii(root: TreeNode | None, target_sum: int) -> int:
+    # Problem 18: Path Sum III
+    # Key idea: count paths that can start anywhere using prefix sums.
+    # Time:
+    # Space:
+
+    pass

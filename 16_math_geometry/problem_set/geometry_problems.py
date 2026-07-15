@@ -32,3 +32,86 @@ def max_points(points: list[list[int]]) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def largest_triangle_area(points: list[list[int]]) -> float:
+    # Problem 17: Largest Triangle Area
+    # Key idea: apply the shoelace cross-product area over every triple of points.
+    # Time:
+    # Space:
+
+    pass
+
+
+def compute_area(
+    ax1: int, ay1: int, ax2: int, ay2: int, bx1: int, by1: int, bx2: int, by2: int
+) -> int:
+    # Problem 18: Rectangle Area
+    # Key idea: sum both areas and subtract the overlap of the two axis intervals.
+    # Time:
+    # Space:
+
+    pass
+
+
+def k_closest(points: list[list[int]], k: int) -> list[list[int]]:
+    # Problem 19: K Closest Points to Origin
+    # Key idea: keep the k smallest squared distances with a heap or quickselect.
+    # Time:
+    # Space:
+
+    pass
+
+
+def calculate(s: str) -> int:
+    # Problem 20: Basic Calculator
+    # Key idea: evaluate with a running sign and a stack for parenthesized subexpressions.
+    # Time:
+    # Space:
+
+    pass
+
+
+def is_self_crossing(distance: list[int]) -> bool:
+    # Problem 21: Self Crossing
+    # Key idea: compare each move against the prior few segments for the three crossing cases.
+    # Time:
+    # Space:
+
+    pass
+
+
+def outer_trees(trees: list[list[int]]) -> list[list[int]]:
+    # Problem 22: Erect the Fence
+    # Key idea: build the convex hull (Andrew's monotone chain) via cross-product turns.
+    # Time:
+    # Space:
+
+    pass
+
+
+def get_skyline(buildings: list[list[int]]) -> list[list[int]]:
+    # Problem 23: The Skyline Problem
+    # Key idea: sweep building edges and track the current max height with a heap.
+    # Time:
+    # Space:
+
+    pass
+
+
+def is_rectangle_cover(rectangles: list[list[int]]) -> bool:
+    # Problem 24: Perfect Rectangle
+    # Key idea: check total area equals the bounding box and every interior corner cancels.
+    # Time:
+    # Space:
+
+    pass
+
+
+def rectangle_area(rectangles: list[list[int]]) -> int:
+    # Problem 25: Rectangle Area II
+    # Key idea: coordinate-compress and sweep a line, summing active covered width.
+    # Time:
+    # Space:
+
+    pass

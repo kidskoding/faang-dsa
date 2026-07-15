@@ -83,15 +83,6 @@ def get_ancestors(n: int, edges: list[list[int]]) -> list[list[int]]:
     raise NotImplementedError
 
 
-def alien_order(words: list[str]) -> str:
-    # Problem 43: Alien Dictionary
-    # Key idea: infer character ordering and topologically sort.
-    # Time:
-    # Space:
-
-    raise NotImplementedError
-
-
 def minimum_time(n: int, relations: list[list[int]], time: list[int]) -> int:
     # Problem 44: Parallel Courses III
     # Key idea: longest path in a DAG.
@@ -108,3 +99,12 @@ def largest_path_value(colors: str, edges: list[list[int]]) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def longest_increasing_path(matrix: list[list[int]]) -> int:
+    # Problem 46: Longest Increasing Path In A Matrix
+    # Key idea: memoized DFS on a directed acyclic grid graph.
+    # Time:
+    # Space:
+
+    pass

@@ -33,3 +33,13 @@ def find_min_rotated_ii(nums: list[int]) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def peak_index_in_mountain_array(arr: list[int]) -> int:
+    # Problem 16: Peak Index in a Mountain Array
+    # Key idea: binary search on the slope of a mountain array — move toward
+    # whichever side is still ascending until the peak is pinned.
+    # Time:
+    # Space:
+
+    raise NotImplementedError

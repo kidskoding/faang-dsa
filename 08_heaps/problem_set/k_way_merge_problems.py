@@ -68,3 +68,30 @@ def employee_free_time(schedule: list[list[list[int]]]) -> list[list[int]]:
     # Space:
 
     raise NotImplementedError
+
+
+def k_smallest_pairs(nums1: list[int], nums2: list[int], k: int) -> list[list[int]]:
+    # Problem 17: Find K Pairs With Smallest Sums
+    # Key idea: heap expands the frontier of pair sums across two sorted arrays.
+    # Time:
+    # Space:
+
+    pass
+
+
+def kth_smallest(matrix: list[list[int]], k: int) -> int:
+    # Problem 18: Kth Smallest Element In A Sorted Matrix
+    # Key idea: heap merges sorted rows, popping k times to reach the kth smallest.
+    # Time:
+    # Space:
+
+    pass
+
+
+def nth_super_ugly_number(n: int, primes: list[int]) -> int:
+    # Problem 19: Super Ugly Number
+    # Key idea: heap merges the multiples generated from each prime factor.
+    # Time:
+    # Space:
+
+    pass

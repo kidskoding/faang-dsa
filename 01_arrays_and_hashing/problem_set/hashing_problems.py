@@ -74,3 +74,59 @@ class Codec:
         # Time:
         # Space:
         raise NotImplementedError
+
+
+def intersect(nums1: list[int], nums2: list[int]) -> list[int]:
+    # Problem 16: Intersection of Two Arrays II
+    # Key idea: frequency-map intersection of two arrays.
+    # Time:
+    # Space:
+
+    pass
+
+
+def majority_element(nums: list[int]) -> int:
+    # Problem 17: Majority Element
+    # Key idea: Boyer-Moore vote counting, or a frequency hash map.
+    # Time:
+    # Space:
+
+    pass
+
+
+def majority_element_ii(nums: list[int]) -> list[int]:
+    # Problem 18: Majority Element II
+    # Key idea: Boyer-Moore with two candidate counters for the n/3 threshold.
+    # Time:
+    # Space:
+
+    pass
+
+
+class MyHashMap:
+    # Problem 19: Design HashMap
+    # Key idea: bucket array with separate chaining for collisions.
+
+    def __init__(self) -> None:
+        # Time:
+        # Space:
+
+        pass
+
+    def put(self, key: int, value: int) -> None:
+        # Time:
+        # Space:
+
+        pass
+
+    def get(self, key: int) -> int:
+        # Time:
+        # Space:
+
+        pass
+
+    def remove(self, key: int) -> None:
+        # Time:
+        # Space:
+
+        pass

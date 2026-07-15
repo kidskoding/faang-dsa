@@ -23,3 +23,21 @@ def interval_intersection(first_list: list[list[int]], second_list: list[list[in
     # Space:
 
     raise NotImplementedError
+
+
+def have_conflict(event1: list[str], event2: list[str]) -> bool:
+    # Problem 4: Determine if Two Events Have Conflict
+    # Key idea: two intervals overlap iff each start is not after the other's end.
+    # Time:
+    # Space:
+
+    pass
+
+
+def partition_labels(s: str) -> list[int]:
+    # Problem 5: Partition Labels
+    # Key idea: build last-index intervals per char, then merge greedily while scanning.
+    # Time:
+    # Space:
+
+    pass

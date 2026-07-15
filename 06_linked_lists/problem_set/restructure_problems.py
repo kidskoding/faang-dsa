@@ -35,3 +35,12 @@ def split_list_to_parts(head: ListNode | None, k: int) -> list[ListNode | None]:
     # Space:
 
     raise NotImplementedError
+
+
+def remove_nodes(head: ListNode | None) -> ListNode | None:
+    # Problem 23: Remove Nodes From Linked List
+    # Key idea: reverse, drop nodes smaller than the running max, reverse back.
+    # Time:
+    # Space:
+
+    pass

@@ -87,3 +87,59 @@ class StreamChecker:
         # Time:
         # Space:
         raise NotImplementedError
+
+
+def camel_match(queries: list[str], pattern: str) -> list[bool]:
+    # Problem 9: Camelcase Matching
+    # Key idea: match each query against the pattern trie, allowing extra
+    # lowercase but never extra uppercase.
+    # Time:
+    # Space:
+
+    pass
+
+
+class WordFilterNode:
+    # Node for Prefix And Suffix Search.
+    def __init__(self) -> None:
+        self.children: dict[str, WordFilterNode] = {}
+        self.weight: int = -1
+
+
+class WordFilter:
+    # Problem 10: Prefix And Suffix Search
+    # Key idea: index each word by combined suffix#prefix keys so a single trie
+    # answers both filters.
+
+    def __init__(self, words: list[str]) -> None:
+        # Time:
+        # Space:
+        pass
+
+    def f(self, prefix: str, suffix: str) -> int:
+        # Time:
+        # Space:
+        pass
+
+
+class AutocompleteNode:
+    # Node for Design Search Autocomplete System.
+    def __init__(self) -> None:
+        self.children: dict[str, AutocompleteNode] = {}
+        self.counts: dict[str, int] = {}
+
+
+class AutocompleteSystem:
+    # Problem 11: Design Search Autocomplete System
+    # Key idea: trie nodes store historical query frequencies, ranked as the
+    # user types each character.
+
+    def __init__(self, sentences: list[str], times: list[int]) -> None:
+        # Time:
+        # Space:
+        pass
+
+    def input(self, c: str) -> list[str]:
+        # Time:
+        # Space:
+        pass

@@ -52,15 +52,6 @@ def num_buses_to_destination(routes: list[list[int]], source: int, target: int) 
     raise NotImplementedError
 
 
-def find_ladders(begin_word: str, end_word: str, word_list: list[str]) -> list[list[str]]:
-    # Problem 52: Word Ladder II
-    # Key idea: BFS shortest layers plus path reconstruction.
-    # Time:
-    # Space:
-
-    raise NotImplementedError
-
-
 def shortest_path_length(graph: list[list[int]]) -> int:
     # Problem 53: Shortest Path Visiting All Nodes
     # Key idea: BFS over node plus visited-bitmask state.

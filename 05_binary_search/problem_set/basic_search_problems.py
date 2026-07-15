@@ -1,3 +1,6 @@
+from collections.abc import Callable
+
+
 def search(nums: list[int], target: int) -> int:
     # Problem 1: Binary Search
     # Key idea: repeatedly cut the sorted search space in half.
@@ -80,3 +83,12 @@ def search_matrix_ii(matrix: list[list[int]], target: int) -> bool:
             return True
 
     return False
+
+
+def guess_number(n: int, guess: Callable[[int], int]) -> int:
+    # Problem 19: Guess Number Higher or Lower
+    # Key idea: exact-match search driven by a comparison oracle instead of array reads.
+    # Time:
+    # Space:
+
+    pass

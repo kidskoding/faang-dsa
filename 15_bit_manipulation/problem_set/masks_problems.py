@@ -23,3 +23,21 @@ def min_flips(a: int, b: int, c: int) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def gray_code(n: int) -> list[int]:
+    # Problem 9: Gray Code
+    # Key idea: generate the sequence with i ^ (i >> 1) so consecutive codes differ by one bit.
+    # Time:
+    # Space:
+
+    pass
+
+
+def valid_utf8(data: list[int]) -> bool:
+    # Problem 10: UTF-8 Validation
+    # Key idea: mask the leading bits of each byte to decode and verify continuation counts.
+    # Time:
+    # Space:
+
+    pass

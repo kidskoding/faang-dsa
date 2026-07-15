@@ -74,3 +74,57 @@ def trap(height: list[int]) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def car_fleet(target: int, position: list[int], speed: list[int]) -> int:
+    # Problem 18: Car Fleet
+    # Key idea: sort by position and use a stack of arrival times to merge cars into fleets.
+    # Time:
+    # Space:
+
+    pass
+
+
+def remove_duplicate_letters(s: str) -> str:
+    # Problem 19: Remove Duplicate Letters
+    # Key idea: monotonic increasing stack keeps the lexicographically smallest result using last-occurrence counts.
+    # Time:
+    # Space:
+
+    pass
+
+
+def find132pattern(nums: list[int]) -> bool:
+    # Problem 20: 132 Pattern
+    # Key idea: right-to-left monotonic stack tracks the largest valid "2" below each candidate "3".
+    # Time:
+    # Space:
+
+    pass
+
+
+def sum_subarray_mins(arr: list[int]) -> int:
+    # Problem 21: Sum Of Subarray Minimums
+    # Key idea: monotonic stack counts subarrays where each element is the minimum via span boundaries.
+    # Time:
+    # Space:
+
+    pass
+
+
+def sub_array_ranges(nums: list[int]) -> int:
+    # Problem 22: Sum Of Subarray Ranges
+    # Key idea: monotonic-stack contribution counting for both subarray minimums and maximums.
+    # Time:
+    # Space:
+
+    pass
+
+
+def maximal_rectangle(matrix: list[list[str]]) -> int:
+    # Problem 23: Maximal Rectangle
+    # Key idea: build per-row histograms and apply the largest-rectangle monotonic stack to each.
+    # Time:
+    # Space:
+
+    pass

@@ -23,3 +23,21 @@ def find_the_city(n: int, edges: list[list[int]], distance_threshold: int) -> in
     # Space:
 
     raise NotImplementedError
+
+
+def network_delay_time(times: list[list[int]], n: int, k: int) -> int:
+    # Problem 8: Network Delay Time
+    # Key idea: single-source Dijkstra; the answer is the maximum shortest-path distance over all nodes.
+    # Time:
+    # Space:
+
+    pass
+
+
+def minimum_effort_path(heights: list[list[int]]) -> int:
+    # Problem 9: Path With Minimum Effort
+    # Key idea: Dijkstra variant minimizing the maximum edge weight (min-max path) on a grid.
+    # Time:
+    # Space:
+
+    pass

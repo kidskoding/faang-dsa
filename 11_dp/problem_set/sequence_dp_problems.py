@@ -113,3 +113,57 @@ def max_coins(nums: list[int]) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def min_cut(s: str) -> int:
+    # Problem 29: Palindrome Partitioning II
+    # Key idea: min-cut partition DP with a precomputed palindrome table.
+    # Time:
+    # Space:
+
+    pass
+
+
+def max_profit_iv(k: int, prices: list[int]) -> int:
+    # Problem 30: Best Time to Buy and Sell Stock IV
+    # Key idea: state DP over (day, transactions-remaining, holding).
+    # Time:
+    # Space:
+
+    pass
+
+
+def longest_valid_parentheses(s: str) -> int:
+    # Problem 31: Longest Valid Parentheses
+    # Key idea: dp[i] is the longest valid substring ending at i, closing bracket looks back.
+    # Time:
+    # Space:
+
+    pass
+
+
+def maximal_rectangle(matrix: list[list[str]]) -> int:
+    # Problem 32: Maximal Rectangle
+    # Key idea: build per-row histogram heights, then largest-rectangle-in-histogram each row.
+    # Time:
+    # Space:
+
+    pass
+
+
+def merge_stones(stones: list[int], k: int) -> int:
+    # Problem 33: Minimum Cost to Merge Stones
+    # Key idea: interval DP over merge ranges.
+    # Time:
+    # Space:
+
+    pass
+
+
+def cherry_pickup(grid: list[list[int]]) -> int:
+    # Problem 34: Cherry Pickup
+    # Key idea: two walks at once, dp over both positions on a shared diagonal.
+    # Time:
+    # Space:
+
+    pass

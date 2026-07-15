@@ -74,3 +74,29 @@ def count_range_sum(nums: list[int], lower: int, upper: int) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def reverse_pairs(nums: list[int]) -> int:
+    # Problem 15: Reverse Pairs
+    # Key idea: Fenwick tree (or merge sort) counting pairs where one value exceeds twice another.
+    # Time:
+    # Space:
+
+    pass
+
+
+class MyCalendarThree:
+    # Problem 16: My Calendar III
+    # Key idea: segment tree with lazy propagation (range update, range-max query).
+
+    def __init__(self) -> None:
+        # Time:
+        # Space:
+
+        pass
+
+    def book(self, start: int, end: int) -> int:
+        # Time:
+        # Space:
+
+        pass

@@ -46,3 +46,12 @@ def erase_overlap_intervals(intervals: list[list[int]]) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def remove_covered_intervals(intervals: list[list[int]]) -> int:
+    # Problem 8: Remove Covered Intervals
+    # Key idea: sort by start asc and end desc, drop intervals covered by the last kept end.
+    # Time:
+    # Space:
+
+    pass

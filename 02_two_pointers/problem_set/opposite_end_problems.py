@@ -77,3 +77,84 @@ def four_sum(nums: list[int], target: int) -> list[list[int]]:
     # Space:
 
     raise NotImplementedError
+
+
+def valid_palindrome(s: str) -> bool:
+    # Problem 16: Valid Palindrome II
+    # Key idea: shrink from both ends, and on the first mismatch try skipping either the left or the right character.
+    # Time:
+    # Space:
+
+    pass
+
+
+def bag_of_tokens_score(tokens: list[int], power: int) -> int:
+    # Problem 17: Bag Of Tokens
+    # Key idea: sort, then spend the cheapest token for score and cash in the most expensive for power at the ends.
+    # Time:
+    # Space:
+
+    pass
+
+
+def min_pair_sum(nums: list[int]) -> int:
+    # Problem 18: Minimize Maximum Pair Sum In Array
+    # Key idea: sort, then pair smallest with largest from opposite ends to flatten the max pair sum.
+    # Time:
+    # Space:
+
+    pass
+
+
+def find_closest_elements(arr: list[int], k: int, x: int) -> list[int]:
+    # Problem 19: Find K Closest Elements
+    # Key idea: shrink a window from both ends, dropping whichever end is farther from the target.
+    # Time:
+    # Space:
+
+    pass
+
+
+def backspace_compare(s: str, t: str) -> bool:
+    # Problem 20: Backspace String Compare
+    # Key idea: scan both strings from the back, skipping characters consumed by backspaces before comparing.
+    # Time:
+    # Space:
+
+    pass
+
+
+def reverse_words(s: str) -> str:
+    # Problem 21: Reverse Words In A String
+    # Key idea: reverse the whole string, then reverse each word span with opposite-end pointers.
+    # Time:
+    # Space:
+
+    pass
+
+
+def three_sum_smaller(nums: list[int], target: int) -> int:
+    # Problem 22: 3Sum Smaller
+    # Key idea: fix one value, then count all pairs at once when the opposite-end sum drops below the target.
+    # Time:
+    # Space:
+
+    pass
+
+
+def three_sum_multi(arr: list[int], target: int) -> int:
+    # Problem 23: 3Sum With Multiplicity
+    # Key idea: fix one value and count opposite-end pairs, handling equal-value multiplicities with combinatorics.
+    # Time:
+    # Space:
+
+    pass
+
+
+def num_subseq(nums: list[int], target: int) -> int:
+    # Problem 24: Number Of Subsequences That Satisfy The Given Sum Condition
+    # Key idea: sort, then use opposite-end pointers to count valid min/max windows via powers of two.
+    # Time:
+    # Space:
+
+    pass

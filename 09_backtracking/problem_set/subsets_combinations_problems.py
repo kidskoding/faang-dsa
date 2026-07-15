@@ -50,3 +50,12 @@ def combination_sum3(k: int, n: int) -> list[list[int]]:
     # Space:
 
     raise NotImplementedError
+
+
+def count_vowel_strings(n: int) -> int:
+    # Problem 10: Count Sorted Vowel Strings
+    # Key idea: choose each next vowel in non-decreasing order, count the leaves of the recursion tree.
+    # Time:
+    # Space:
+
+    pass

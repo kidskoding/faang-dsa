@@ -2,18 +2,23 @@
 
 ## Goal
 
-Push past general graph traversal into the structures and algorithms that show up when a
-plain BFS/DFS is not enough: union-find connectivity, shortest-path extensions beyond
-plain Dijkstra, minimum spanning trees, mutable range queries, and linear-time string
-matching.
+Push past general graph traversal into the structures and algorithms that
+show up when a plain BFS/DFS is not enough: union-find connectivity,
+shortest-path extensions beyond plain Dijkstra, minimum spanning trees,
+mutable range queries, linear-time string matching, divide and conquer, and
+bitmask DP. Learn each technique from its solution file, then use it on the
+medium and hard problems that carry it in LeetCode-style interviews.
 
 ## How To Use
 
-Work the file in order. The bands follow the module topic order: union find, shortest
-paths, minimum spanning tree, range structures, then string algorithms. `10_graphs`
-already drills general traversal, topological sort, and baseline weighted shortest
-paths — this workbook stays narrow on the union-find/MST/range/string angle and only
-repeats a title when it is the deliberate anchor problem for a technique.
+Each section maps to one solution file in this folder and to one advanced
+technique. Work a section top to bottom: problems are ordered roughly easy
+to hard, and the implemented ones come first. `solves:` names the function
+in that section's file; `solves: (todo)` means the solution is not written
+yet. `10_graphs` already drills general traversal, topological sort, and
+baseline weighted shortest paths — this workbook stays narrow on the
+union-find/MST/range/string angle and only repeats a title when it is the
+deliberate anchor for a technique.
 
 For every problem, write:
 
@@ -26,182 +31,228 @@ Key idea:
 
 ## Union Find
 
-These problems teach disjoint set union with path compression and union by size/rank.
+`union_find_problems.py` — disjoint set union with path compression and
+union by size; connectivity queries in near-constant amortized time.
 
 ### 1. [Number Of Provinces](https://leetcode.com/problems/number-of-provinces/)
 
-- Pattern: union adjacent cities from an adjacency matrix, then count roots.
+- solves: `number_of_provinces`
+- Pattern: union adjacent cities from the adjacency matrix, then count distinct roots.
 
 ### 2. [Number Of Islands II](https://leetcode.com/problems/number-of-islands-ii/)
 
-- Pattern: online connectivity — union find answers component count after each add.
+- solves: `number_of_islands_ii`
+- Pattern: online connectivity — union each new land cell with its land neighbors, track live count.
 
 ### 3. [Satisfiability Of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/)
 
-- Pattern: union equal variables first, then check inequalities against roots.
+- solves: `equations_possible`
+- Pattern: union all "==" pairs first, then reject any "!=" pair sharing a root.
 
 ### 4. [Smallest String With Swaps](https://leetcode.com/problems/smallest-string-with-swaps/)
 
-- Pattern: union swappable indices into components, then sort each component independently.
+- solves: `smallest_string_with_swaps`
+- Pattern: union swappable indices into components, then sort each component's letters.
 
 ### 5. [Redundant Connection](https://leetcode.com/problems/redundant-connection/)
 
-- Pattern: add edges one at a time; the first edge whose endpoints already share a root is the cycle-closing one.
+- solves: `find_redundant_connection`
+- Pattern: add edges one at a time; the first whose endpoints already share a root closes the cycle.
 
 ### 6. [Evaluate Division](https://leetcode.com/problems/evaluate-division/)
 
+- solves: `calc_equation`
 - Pattern: weighted union-find carrying edge ratios (or graph DFS).
 
 ## Shortest Paths Extensions
 
-These problems teach shortest-path variants beyond a single unweighted or nonnegative-weight
-run: relaxation-based algorithms, path counting, and all-pairs distances.
+`shortest_paths_problems.py` — shortest-path variants beyond a single
+nonnegative-weight run: bounded relaxation, path counting, and all-pairs
+distances.
 
 ### 7. [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
 
-- Pattern: Bellman-Ford style relaxation limited to k rounds.
+- solves: `find_cheapest_price`
+- Pattern: Bellman-Ford style relaxation over at most `k + 1` rounds.
 
 ### 8. [Number Of Ways To Arrive At Destination](https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/)
 
-- Pattern: Dijkstra distances plus a parallel count of shortest-path ways.
+- solves: `count_paths`
+- Pattern: Dijkstra distances plus a parallel ways-count updated during relaxation.
 
 ### 9. [Find The City With The Smallest Number Of Neighbors At A Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/)
 
-- Pattern: Floyd-Warshall all-pairs shortest paths.
+- solves: `find_the_city`
+- Pattern: Floyd-Warshall all-pairs shortest paths, then compare reachable-city counts.
 
 ### 10. [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
 
+- solves: `network_delay_time`
 - Pattern: single-source Dijkstra; the answer is the maximum shortest-path distance over all nodes.
 
 ### 11. [Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)
 
+- solves: `minimum_effort_path`
 - Pattern: Dijkstra variant minimizing the maximum edge weight (min-max path) on a grid.
 
 ## Minimum Spanning Tree
 
-These problems teach building a minimum-cost tree that connects every node, with Prim's
-and Kruskal's algorithms.
+`mst_problems.py` — build a minimum-cost tree that connects every node with
+Prim's and Kruskal's algorithms.
 
 ### 12. [Min Cost To Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
 
+- solves: `min_cost_connect_points`
 - Pattern: Prim's algorithm growing a tree from a min heap of frontier edges.
 
 ### 13. [Connecting Cities With Minimum Cost](https://leetcode.com/problems/connecting-cities-with-minimum-cost/)
 
-- Pattern: Kruskal's algorithm with union find over sorted edges.
+- solves: `min_cost_connecting_cities`
+- Pattern: Kruskal's algorithm — sort edges, union find skips cycle-forming edges.
 
 ### 14. [Optimize Water Distribution In A Village](https://leetcode.com/problems/optimize-water-distribution-in-a-village/)
 
-- Pattern: MST with a virtual node representing the free well option.
+- solves: `min_cost_to_supply_water`
+- Pattern: treat each well as an edge from a virtual node 0, then run Kruskal's/Prim's.
+
+### 15. [Find Critical And Pseudo-Critical Edges In Minimum Spanning Tree](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/)
+
+- solves: `find_critical_and_pseudo_critical_edges`
+- Pattern: compare the baseline MST weight against forcing each edge out (critical) or in (pseudo-critical).
+
+### 16. [Checking Existence Of Edge Length Limited Paths](https://leetcode.com/problems/checking-existence-of-edge-length-limited-paths/)
+
+- solves: `distance_limited_paths_exist`
+- Pattern: offline Kruskal — sort edges and queries by weight, union up to each limit, then test connectivity.
 
 ## Range Structures
 
-These problems teach Fenwick tree (BIT) and segment tree style structures for mutable
-range queries.
+`range_structures_problems.py` — Fenwick tree (BIT) structures for mutable
+range queries: point update with prefix/range sum in logarithmic time.
 
-### 15. [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/)
+### 17. [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/)
 
+- solves: `NumArray`
 - Pattern: Fenwick tree supporting point update and prefix sum query.
 
-### 16. [Range Sum Query 2D - Mutable](https://leetcode.com/problems/range-sum-query-2d-mutable/)
+### 18. [Range Sum Query 2D - Mutable](https://leetcode.com/problems/range-sum-query-2d-mutable/)
 
+- solves: `NumMatrix`
 - Pattern: 2D Fenwick tree combining row and column prefix sums.
 
-### 17. [Count Of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
+### 19. [Count Of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
 
+- solves: `count_smaller`
 - Pattern: Fenwick tree over coordinate-compressed values, scanned right to left.
 
-### 18. [Count Of Range Sum](https://leetcode.com/problems/count-of-range-sum/)
+### 20. [Count Of Range Sum](https://leetcode.com/problems/count-of-range-sum/)
 
-- Pattern: Fenwick tree over compressed prefix sums to count valid range sums.
+- solves: `count_range_sum`
+- Pattern: Fenwick tree over compressed prefix sums counts sums in `[lower, upper]`.
 
-### 19. [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)
+### 21. [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)
 
+- solves: `reverse_pairs`
 - Pattern: Fenwick tree (or merge sort) counting pairs where one value exceeds twice another.
 
-### 20. [My Calendar III](https://leetcode.com/problems/my-calendar-iii/)
+### 22. [My Calendar III](https://leetcode.com/problems/my-calendar-iii/)
 
+- solves: `MyCalendarThree`
 - Pattern: segment tree with lazy propagation (range update, range-max query).
 
 ## String Algorithms
 
-These problems teach KMP's failure function and its use for pattern matching, prefix
-reuse, and palindrome construction.
+`string_algorithms_problems.py` — KMP's failure function and Rabin-Karp
+hashing for linear-time matching, prefix reuse, and palindrome construction.
 
-### 21. [Find The Index Of The First Occurrence In A String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)
+### 23. [Find The Index Of The First Occurrence In A String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)
 
-- Pattern: KMP pattern matching using a failure table to avoid backtracking the text pointer.
+- solves: `str_str`
+- Pattern: KMP failure table lets the pattern pointer fall back without rewinding the text.
 
-### 22. [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)
+### 24. [Repeated String Match](https://leetcode.com/problems/repeated-string-match/)
 
-- Pattern: KMP failure function on `s + separator + reverse(s)` finds the longest palindromic prefix.
+- solves: `repeated_string_match`
+- Pattern: repeat `a` until it is at least as long as `b`, then KMP search for `b`.
 
-### 23. [Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix/)
+### 25. [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)
 
-- Pattern: the KMP failure function's final value is the longest proper prefix that is also a suffix.
+- solves: `shortest_palindrome`
+- Pattern: failure table of `s + separator + reverse(s)` gives the longest palindromic prefix.
 
-### 24. [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/)
+### 26. [Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix/)
 
+- solves: `longest_prefix`
+- Pattern: the last value of the KMP failure table is the longest prefix that is also a suffix.
+
+### 27. [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/)
+
+- solves: `repeated_substring_pattern`
 - Pattern: the KMP failure function reveals the smallest repeating block when `n % (n - lps[-1]) == 0`.
-
-### 25. [Longest Duplicate Substring](https://leetcode.com/problems/longest-duplicate-substring/)
-
-- Pattern: binary search on length + Rabin-Karp rolling hash.
 
 ## Divide And Conquer
 
-These problems teach the divide/conquer/combine recurrence pattern: splitting
-on structure (operators, spatial coordinates, array halves) and combining sub-results with a
-non-trivial merge step.
+`divide_and_conquer_problems.py` — the divide/conquer/combine recurrence:
+split on structure (operators, coordinates, array halves) and combine
+sub-results with a non-trivial merge.
 
-### 26. [Different Ways To Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/)
+### 28. [Different Ways To Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/)
 
+- solves: `diff_ways_to_compute`
 - Pattern: split on each operator, recursively solve both sides, combine every result pair.
 
-### 27. [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
+### 29. [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
 
+- solves: `get_skyline`
 - Pattern: divide buildings in half, recursively get each skyline, merge with a line sweep.
 
-### 28. Closest Pair Of Points
+### 30. Closest Pair Of Points
 
-- Not on LeetCode as a standalone problem (classic algorithm, sometimes asked directly in
-  interviews); implement the divide-and-conquer version yourself.
+- solves: `closest_pair`
 - Pattern: divide by x-coordinate, recurse on each half, combine by checking a narrow strip.
 
-### 29. [Beautiful Array](https://leetcode.com/problems/beautiful-array/)
+### 31. [Beautiful Array](https://leetcode.com/problems/beautiful-array/)
 
+- solves: `beautiful_array`
 - Pattern: recursively build odd/even-biased halves whose combination avoids arithmetic triples.
 
-### 30. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+### 32. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
-- Pattern: divide in half; best subarray is in the left, the right, or crosses the midpoint.
+- solves: `max_sub_array`
+- Pattern: divide in half; the best subarray is in the left, the right, or crosses the midpoint.
 
-### 31. [Median Of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+### 33. [Median Of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
-- Pattern: binary-search partition point in the shorter array so both halves balance.
+- solves: `find_median_sorted_arrays`
+- Pattern: binary-search the partition point in the shorter array so both halves balance.
 
 ## Bitmask DP
 
-These problems teach state-compression DP: `dp[mask]` (or `dp[mask][i]`) tracks the best
-result for each subset of items, built up by adding one unset item at a time. `Shortest Path Visiting All Nodes` is skipped here — it already anchors `10_graphs` as problem 53 and
-this workbook does not repeat a title outside its deliberate anchor module.
+`bitmask_dp_problems.py` — state-compression DP where `dp[mask]` (or
+`dp[mask][i]`) tracks the best result for each subset, built up one unset
+item at a time.
 
-### 32. [Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
+### 34. [Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
 
+- solves: `can_partition_k_subsets`
 - Pattern: `dp[mask]` tracks which numbers are already placed into a completed bucket.
 
-### 33. [Smallest Sufficient Team](https://leetcode.com/problems/smallest-sufficient-team/)
+### 35. [Smallest Sufficient Team](https://leetcode.com/problems/smallest-sufficient-team/)
 
+- solves: `smallest_sufficient_team`
 - Pattern: `dp[skill_mask]` stores the smallest team (as a set of people) covering that skill mask.
 
-### 34. [Parallel Courses II](https://leetcode.com/problems/parallel-courses-ii/)
+### 36. [Parallel Courses II](https://leetcode.com/problems/parallel-courses-ii/)
 
-- Pattern: `dp[mask]` stores the minimum semesters to complete exactly the courses in mask, transitioning by taking any valid subset of newly-available courses each round.
+- solves: `min_number_of_semesters`
+- Pattern: `dp[mask]` stores the minimum semesters to complete exactly the courses in mask, taking any valid subset of newly-available courses each round.
 
-### 35. [Maximum Students Taking Exam](https://leetcode.com/problems/maximum-students-taking-exam/)
+### 37. [Maximum Students Taking Exam](https://leetcode.com/problems/maximum-students-taking-exam/)
 
+- solves: `max_students`
 - Pattern: `dp[row][mask]` over seat layouts, checking mask validity against broken seats and diagonal neighbors in the prior row.
 
-### 36. [Number Of Ways To Wear Different Hats To Each Other](https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/)
+### 38. [Number Of Ways To Wear Different Hats To Each Other](https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/)
 
+- solves: `number_ways`
 - Pattern: assign hats (not people) one at a time; `dp[hat][mask]` counts ways to cover the people bitmask.

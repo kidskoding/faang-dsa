@@ -53,3 +53,57 @@ def subarrays_div_by_k(nums: list[int], k: int) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def max_sub_array_len(nums: list[int], k: int) -> int:
+    # Problem 24: Maximum Size Subarray Sum Equals k
+    # Key idea: prefix sum with first-seen index in a hash map to get longest subarray.
+    # Time:
+    # Space:
+
+    pass
+
+
+def pivot_index(nums: list[int]) -> int:
+    # Problem 26: Find Pivot Index
+    # Key idea: the pivot is where the left prefix sum equals the right suffix sum.
+    # Time:
+    # Space:
+
+    pass
+
+
+def left_right_difference(nums: list[int]) -> list[int]:
+    # Problem 27: Left and Right Sum Differences
+    # Key idea: build a left prefix-sum array and a right suffix-sum array, take the absolute difference per index.
+    # Time:
+    # Space:
+
+    pass
+
+
+def max_score(s: str) -> int:
+    # Problem 28: Maximum Score After Splitting a String
+    # Key idea: prefix zeros on the left plus suffix ones on the right, maximized over every split.
+    # Time:
+    # Space:
+
+    pass
+
+
+def ways_to_split_array(nums: list[int]) -> int:
+    # Problem 29: Number of Ways to Split Array
+    # Key idea: sweep the split point comparing the left prefix sum against the remaining suffix sum.
+    # Time:
+    # Space:
+
+    pass
+
+
+def find_max_length(nums: list[int]) -> int:
+    # Problem 25: Contiguous Array
+    # Key idea: map 0 to -1, track first index of each running prefix sum.
+    # Time:
+    # Space:
+
+    pass

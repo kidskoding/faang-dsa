@@ -1,4 +1,7 @@
-from problem_set.monotonic_queue_problems import max_sliding_window
+from problem_set.monotonic_queue_problems import (
+    max_sliding_window,
+    shortest_subarray,
+)
 
 
 def test_max_sliding_window_normal_case():
@@ -19,3 +22,19 @@ def test_max_sliding_window_k_equals_length():
 
 def test_max_sliding_window_decreasing_values():
     assert max_sliding_window([9, 8, 7, 6], 2) == [9, 8, 7]
+
+
+def test_shortest_subarray_single():
+    assert shortest_subarray([1], 1) == 1
+
+
+def test_shortest_subarray_impossible():
+    assert shortest_subarray([1, 2], 4) == -1
+
+
+def test_shortest_subarray_with_negative():
+    assert shortest_subarray([2, -1, 2], 3) == 3
+
+
+def test_shortest_subarray_normal():
+    assert shortest_subarray([84, -37, 32, 40, 95], 167) == 3

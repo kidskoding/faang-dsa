@@ -23,3 +23,21 @@ def count_arrangement(n: int) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def letter_case_permutation(s: str) -> list[str]:
+    # Problem 4: Letter Case Permutation
+    # Key idea: at each letter branch on lower/upper case, pass digits straight through.
+    # Time:
+    # Space:
+
+    pass
+
+
+def binary_tree_paths(root: "TreeNode | None") -> list[str]:
+    # Problem 5: Binary Tree Paths
+    # Key idea: DFS the tree, append the node to the path on the way down and pop it on the way back up.
+    # Time:
+    # Space:
+
+    pass

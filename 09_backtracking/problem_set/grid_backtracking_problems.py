@@ -41,3 +41,66 @@ def makesquare(matchsticks: list[int]) -> bool:
     # Space:
 
     raise NotImplementedError
+
+
+def unique_paths_iii(grid: list[list[int]]) -> int:
+    # Problem 19: Unique Paths III
+    # Key idea: DFS every path that covers all empty cells, marking and unmarking cells as visited.
+    # Time:
+    # Space:
+
+    pass
+
+
+def clean_room(robot: "Robot") -> None:
+    # Problem 20: Robot Room Cleaner
+    # Key idea: DFS with a relative-coordinate visited set, turning the robot back to its prior heading on backtrack.
+    # Time:
+    # Space:
+
+    pass
+
+
+def can_partition_k_subsets(nums: list[int], k: int) -> bool:
+    # Problem 22: Partition to K Equal Sum Subsets
+    # Key idea: fill one bucket at a time to the target sum, sort descending and skip duplicate starts to prune.
+    # Time:
+    # Space:
+
+    pass
+
+
+def add_operators(num: str, target: int) -> list[str]:
+    # Problem 23: Expression Add Operators
+    # Key idea: choose "+", "-", "*", or concatenation between digits, carrying the last operand to undo multiplication precedence.
+    # Time:
+    # Space:
+
+    pass
+
+
+def word_break(s: str, word_dict: list[str]) -> list[str]:
+    # Problem 24: Word Break II
+    # Key idea: choose each next dictionary-word prefix, memoizing suffixes to avoid re-exploring dead ends.
+    # Time:
+    # Space:
+
+    pass
+
+
+def remove_invalid_parentheses(s: str) -> list[str]:
+    # Problem 25: Remove Invalid Parentheses
+    # Key idea: compute the minimum removals, then backtrack over which parentheses to drop, deduping at each depth.
+    # Time:
+    # Space:
+
+    pass
+
+
+def judge_point24(cards: list[int]) -> bool:
+    # Problem 26: 24 Game
+    # Key idea: pick two numbers and an operator, recurse on the reduced multiset until one value reaches 24.
+    # Time:
+    # Space:
+
+    pass

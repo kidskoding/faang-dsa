@@ -35,3 +35,23 @@ def merge_k_lists(lists: list[ListNode | None]) -> ListNode | None:
     # Space:
 
     raise NotImplementedError
+
+
+def add_two_numbers_ii(l1: ListNode | None, l2: ListNode | None) -> ListNode | None:
+    # Problem 19: Add Two Numbers II
+    # Key idea: most-significant-digit first, so use stacks or reverse.
+    # Time:
+    # Space:
+
+    pass
+
+
+def merge_in_between(
+    list1: ListNode | None, a: int, b: int, list2: ListNode | None
+) -> ListNode | None:
+    # Problem 20: Merge In Between Linked Lists
+    # Key idea: cut a node range and splice another list in by index.
+    # Time:
+    # Space:
+
+    pass

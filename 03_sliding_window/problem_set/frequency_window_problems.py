@@ -68,3 +68,48 @@ def number_of_subarrays(nums: list[int], k: int) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def number_of_substrings(s: str) -> int:
+    # Problem 15: Number of Substrings Containing All Three Characters
+    # Key idea: shrink left while all three characters are present, add left valid substrings for each right.
+    # Time:
+    # Space:
+
+    pass
+
+
+def num_subarrays_with_sum(nums: list[int], goal: int) -> int:
+    # Problem 16: Binary Subarrays With Sum
+    # Key idea: exact-sum count via atMost(goal) - atMost(goal - 1) over a 0/1 window.
+    # Time:
+    # Space:
+
+    pass
+
+
+def balanced_string(s: str) -> int:
+    # Problem 17: Replace the Substring for Balanced String
+    # Key idea: shrink the smallest window whose removal lets the outside counts be rebalanced to n / 4 each.
+    # Time:
+    # Space:
+
+    pass
+
+
+def find_substring(s: str, words: list[str]) -> list[int]:
+    # Problem 18: Substring with Concatenation of All Words
+    # Key idea: word-length-stepped windows with a word frequency map, one pass per starting offset.
+    # Time:
+    # Space:
+
+    pass
+
+
+def min_window_subsequence(s1: str, s2: str) -> str:
+    # Problem 19: Minimum Window Subsequence
+    # Key idea: forward-scan then backtrack two-pointer window (not a classic monotonic slide).
+    # Time:
+    # Space:
+
+    pass

@@ -40,11 +40,10 @@ def longest_prefix(s: str) -> str:
     raise NotImplementedError
 
 
-def longest_dup_substring(s: str) -> str:
-    # Problem 19: Longest Duplicate Substring
-    # Key idea: binary search the answer length; for each length L, use a Rabin-Karp
-    #           rolling hash to check in O(n) whether any length-L substring repeats.
+def repeated_substring_pattern(s: str) -> bool:
+    # Problem 20: Repeated Substring Pattern
+    # Key idea: the KMP failure function reveals the smallest repeating block when n % (n - lps[-1]) == 0.
     # Time:
     # Space:
 
-    raise NotImplementedError
+    pass

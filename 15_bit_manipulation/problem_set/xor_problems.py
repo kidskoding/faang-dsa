@@ -32,3 +32,21 @@ def missing_number(nums: list[int]) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def find_the_difference(s: str, t: str) -> str:
+    # Problem 13: Find the Difference
+    # Key idea: XOR both strings together so shared characters cancel out.
+    # Time:
+    # Space:
+
+    pass
+
+
+def decode(encoded: list[int], first: int) -> list[int]:
+    # Problem 14: Decode XORed Array
+    # Key idea: recover each element by XORing the previous decoded value with the encoded one.
+    # Time:
+    # Space:
+
+    pass

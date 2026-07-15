@@ -2,13 +2,17 @@
 
 ## Goal
 
-Build DP intuition from single-index state through grid state, capacity-constrained
-knapsack state, and two-sequence state, then use that foundation to solve the
-medium and hard DP problems that show up in LeetCode-style interviews.
+Build DP intuition across the four state shapes — single-index (1D) state,
+grid (row/column) state, capacity-constrained knapsack state, and
+one-or-two-sequence state — then use each shape to solve the medium and hard
+DP problems that show up in LeetCode-style interviews.
 
 ## How To Use
 
-Work the file in order. Each band adds a new state shape on top of the last.
+Each section maps to one solution file in this folder and to one DP state
+shape. Work a section top to bottom: problems are ordered roughly easy to
+hard, and the implemented ones come first. `solves:` names the function in
+that section's file; `solves: (todo)` means the solution is not written yet.
 
 For every problem, write:
 
@@ -21,209 +25,221 @@ Key idea:
 
 ## 1D DP
 
-State is a single index, usually the best answer up to or ending at that index.
+`one_d_dp_problems.py` — state is a single index, usually the best answer up
+to or ending at that index.
 
 ### 1. [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
 
-- Pattern: `dp[i] = dp[i - 1] + dp[i - 2]`.
+- solves: `climbing_stairs`
+- Pattern: `dp[i] = dp[i - 1] + dp[i - 2]`, ways to reach step i.
 
 ### 2. [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)
 
-- Pattern: choose the cheaper of the last one or two steps.
+- solves: `min_cost_climbing_stairs`
+- Pattern: `dp[i]` is the cheapest cost to reach step i from one or two steps back.
 
 ### 3. [House Robber](https://leetcode.com/problems/house-robber/)
 
-- Pattern: rob or skip the current house.
+- solves: `rob`
+- Pattern: `dp[i] = max(skip house i, rob house i + dp[i - 2])`.
 
 ### 4. [House Robber II](https://leetcode.com/problems/house-robber-ii/)
 
-- Pattern: houses form a circle, so run House Robber twice excluding one end each time.
+- solves: `rob_ii`
+- Pattern: houses form a circle; run House Robber twice, excluding one end each time.
 
 ### 5. [Decode Ways](https://leetcode.com/problems/decode-ways/)
 
-- Pattern: `dp[i]` depends on whether the last one or two digits form a valid letter code.
+- solves: `num_decodings`
+- Pattern: `dp[i]` sums the ways using the last one digit and the last two digits.
 
 ### 6. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
-- Pattern: Kadane — best subarray ending at i is either extend or restart.
+- solves: `max_subarray`
+- Pattern: Kadane — best subarray ending at i either extends or restarts.
 
 ### 7. [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
 
+- solves: `max_product`
 - Pattern: track both max and min products ending at i since negatives flip signs.
 
 ### 8. [Delete and Earn](https://leetcode.com/problems/delete-and-earn/)
 
+- solves: `delete_and_earn`
 - Pattern: bucket values into points, then it reduces to House Robber over the value line.
 
 ## 2D Grid DP
 
-State is a row and column, usually built from the top and left neighbors.
+`grid_dp_problems.py` — state is a row and column, usually built from the top
+and left neighbors.
 
 ### 9. [Unique Paths](https://leetcode.com/problems/unique-paths/)
 
-- Pattern: sum the ways from the top and left cells.
+- solves: `unique_paths`
+- Pattern: `dp[r][c] = dp[r - 1][c] + dp[r][c - 1]`.
 
 ### 10. [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)
 
-- Pattern: same as Unique Paths but obstacles zero out a cell.
+- solves: `unique_paths_with_obstacles`
+- Pattern: same recurrence as Unique Paths, but an obstacle cell is forced to 0.
 
 ### 11. [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
 
-- Pattern: take the cheaper of the top and left paths into each cell.
+- solves: `min_path_sum`
+- Pattern: `dp[r][c] = grid[r][c] + min(dp[r - 1][c], dp[r][c - 1])`.
 
 ### 12. [Triangle](https://leetcode.com/problems/triangle/)
 
-- Pattern: min path sum on a triangular grid, bottom-up.
+- solves: `minimum_total`
+- Pattern: min path sum from the bottom row upward on a triangular grid.
 
 ### 13. [Maximal Square](https://leetcode.com/problems/maximal-square/)
 
+- solves: `maximal_square`
 - Pattern: `dp[r][c]` is the largest square side ending at that cell.
 
 ### 14. [Minimum Falling Path Sum](https://leetcode.com/problems/minimum-falling-path-sum/)
 
+- solves: `min_falling_path_sum`
 - Pattern: each cell takes the min of the three cells above it.
 
 ### 15. [Count Square Submatrices with All Ones](https://leetcode.com/problems/count-square-submatrices-with-all-ones/)
 
+- solves: `count_squares`
 - Pattern: same recurrence as Maximal Square, but sum every side length to count squares.
 
 ## Knapsack
 
-State tracks item index and remaining or used capacity.
+`knapsack_problems.py` — state tracks item index and remaining or used
+capacity.
 
 ### 16. [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)
 
-- Pattern: 0/1 knapsack — can a subset hit exactly half the total sum.
+- solves: `can_partition`
+- Pattern: 0/1 knapsack — can a subset of nums sum to exactly half the total.
 
 ### 17. [Target Sum](https://leetcode.com/problems/target-sum/)
 
-- Pattern: 0/1 knapsack reframed as counting sign assignments that hit a target.
+- solves: `find_target_sum_ways`
+- Pattern: 0/1 knapsack reframed — count sign assignments that hit target.
 
 ### 18. [Coin Change](https://leetcode.com/problems/coin-change/)
 
-- Pattern: unbounded knapsack — fewest coins to reach an amount.
+- solves: `coin_change`
+- Pattern: unbounded knapsack — fewest coins whose sum is amount.
 
 ### 19. [Coin Change II](https://leetcode.com/problems/coin-change-ii/)
 
-- Pattern: unbounded knapsack — count combinations that reach an amount.
+- solves: `change`
+- Pattern: unbounded knapsack — count combinations of coins that sum to amount.
 
 ### 20. [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)
 
+- solves: `combination_sum4`
 - Pattern: unbounded knapsack counting ordered sequences, so loop target outside items.
 
 ### 21. [Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/)
 
+- solves: `find_max_form`
 - Pattern: 0/1 knapsack with two capacities, the counts of zeros and ones.
 
 ## Sequence DP
 
-State compares positions within one or two sequences.
+`sequence_dp_problems.py` — state compares positions within one or two
+sequences, then pushes into three inputs, subsequence counting, and interval
+DP.
 
 ### 22. [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 
-- Pattern: `dp[i]` is the longest increasing subsequence ending at i.
+- solves: `length_of_lis`
+- Pattern: `dp[i]` is the longest increasing subsequence ending at index i.
 
-### 23. [Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)
+### 23. [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
 
-- Pattern: sort then O(n log n) LIS on the second dimension.
+- solves: `longest_common_subsequence`
+- Pattern: `dp[i][j]` over prefixes; matching characters extend the diagonal.
 
-### 24. [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
+### 24. [Word Break](https://leetcode.com/problems/word-break/)
 
-- Pattern: `dp[i][j]` over prefixes of two strings, matching characters extend the diagonal.
+- solves: `word_break`
+- Pattern: `dp[i]` is true if the prefix ending at i splits into dictionary words.
 
-### 25. [Edit Distance](https://leetcode.com/problems/edit-distance/)
+### 25. [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
 
-- Pattern: `dp[i][j]` is the min operations to convert one prefix into another.
+- solves: `count_substrings`
+- Pattern: count every palindromic substring using a `dp[i][j]` palindrome table.
 
-### 26. [Word Break](https://leetcode.com/problems/word-break/)
+### 26. [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
 
-- Pattern: `dp[i]` is true if the prefix ending at i can be segmented into dictionary words.
+- solves: `longest_palindrome`
+- Pattern: `dp[i][j]` is true if s[i..j] is a palindrome, built from shorter spans.
 
-### 27. [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
+### 27. [Edit Distance](https://leetcode.com/problems/edit-distance/)
 
-- Pattern: `dp[i][j]` is true if the substring is a palindrome, expand from the diagonal.
+- solves: `min_distance`
+- Pattern: `dp[i][j]` is the min insert/delete/replace ops to convert one prefix to another.
 
-### 28. [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
+### 28. [Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
 
-- Pattern: count every palindromic substring using the same table shape as above.
+- solves: `max_profit_with_cooldown`
+- Pattern: state machine DP over held, sold-today, and cooldown states.
 
-### 29. [Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/)
+### 29. [Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
 
-- Pattern: min-cut partition DP with precomputed palindrome table.
-
-### 30. [Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
-
-- Pattern: state machine DP over held, sold, and cooldown states.
-
-### 31. [Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
-
+- solves: `max_profit_with_fee`
 - Pattern: state machine DP over held and not-held states, fee charged on sell.
 
-### 32. [Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)
+### 30. [Interleaving String](https://leetcode.com/problems/interleaving-string/)
 
+- solves: `is_interleave`
+- Pattern: `dp[i][j]` tracks whether prefixes of s1 and s2 interleave into s3's prefix.
+
+### 31. [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/)
+
+- solves: `num_distinct`
+- Pattern: `dp[i][j]` counts ways t's prefix appears as a subsequence of s's prefix.
+
+### 32. [Burst Balloons](https://leetcode.com/problems/burst-balloons/)
+
+- solves: `max_coins`
+- Pattern: interval DP — choose the last balloon to burst within a range.
+
+### 33. [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)
+
+- solves: `is_match_regex`
+- Pattern: `dp[i][j]` handles literal, `.`, and `*` transitions between s and p.
+
+### 34. [Wildcard Matching](https://leetcode.com/problems/wildcard-matching/)
+
+- solves: `is_match_wildcard`
+- Pattern: `dp[i][j]` handles literal, `?`, and `*` transitions between s and p.
+
+### 35. [Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/)
+
+- solves: `min_cut`
+- Pattern: min-cut partition DP with a precomputed palindrome table.
+
+### 36. [Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)
+
+- solves: `max_profit_iv`
 - Pattern: state DP over (day, transactions-remaining, holding).
 
-## Hards And Extensions
+### 37. [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
 
-These push sequence DP into three inputs, counting subsequences, and interval DP.
-
-### 33. [Interleaving String](https://leetcode.com/problems/interleaving-string/)
-
-- Pattern: `dp[i][j]` tracks whether prefixes of two strings interleave into a third.
-
-### 34. [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/)
-
-- Pattern: `dp[i][j]` counts ways one string's prefix appears as a subsequence of another.
-
-### 35. [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)
-
-- Pattern: `dp[i][j]` handles literal, `.`, and `*` transitions between string and pattern.
-
-### 36. [Burst Balloons](https://leetcode.com/problems/burst-balloons/)
-
-- Pattern: interval DP — choose the last balloon to burst in a range.
-
-### 37. [Minimum Cost to Merge Stones](https://leetcode.com/problems/minimum-cost-to-merge-stones/)
-
-- Pattern: interval DP over merge ranges.
-
-### 38. [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
-
+- solves: `longest_valid_parentheses`
 - Pattern: `dp[i]` is the longest valid substring ending at i, closing bracket looks back.
 
-### 39. [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/)
+### 38. [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/)
 
+- solves: `maximal_rectangle`
 - Pattern: build per-row histogram heights, then largest-rectangle-in-histogram each row.
+
+### 39. [Minimum Cost to Merge Stones](https://leetcode.com/problems/minimum-cost-to-merge-stones/)
+
+- solves: `merge_stones`
+- Pattern: interval DP over merge ranges.
 
 ### 40. [Cherry Pickup](https://leetcode.com/problems/cherry-pickup/)
 
+- solves: `cherry_pickup`
 - Pattern: two walks at once, `dp` over both positions on a shared diagonal.
-
-## Recommended Order
-
-If you want the shortest path to DP fluency, do them in this order:
-
-```text
-1. [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
-2. [House Robber](https://leetcode.com/problems/house-robber/)
-3. [House Robber II](https://leetcode.com/problems/house-robber-ii/)
-4. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
-5. [Decode Ways](https://leetcode.com/problems/decode-ways/)
-6. [Unique Paths](https://leetcode.com/problems/unique-paths/)
-7. [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
-8. [Triangle](https://leetcode.com/problems/triangle/)
-9. [Maximal Square](https://leetcode.com/problems/maximal-square/)
-10. [Coin Change](https://leetcode.com/problems/coin-change/)
-11. [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)
-12. [Target Sum](https://leetcode.com/problems/target-sum/)
-13. [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
-14. [Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)
-15. [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
-16. [Edit Distance](https://leetcode.com/problems/edit-distance/)
-17. [Word Break](https://leetcode.com/problems/word-break/)
-18. [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
-19. [Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
-20. [Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)
-21. [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)
-22. [Burst Balloons](https://leetcode.com/problems/burst-balloons/)
-```

@@ -32,3 +32,21 @@ def restore_ip_addresses(s: str) -> list[str]:
     # Space:
 
     raise NotImplementedError
+
+
+def get_permutation(n: int, k: int) -> str:
+    # Problem 14: Permutation Sequence
+    # Key idea: pick each digit by factorial block count rather than enumerating every permutation.
+    # Time:
+    # Space:
+
+    pass
+
+
+def num_tile_possibilities(tiles: str) -> int:
+    # Problem 15: Letter Tile Possibilities
+    # Key idea: count sequences from a multiset of tiles, using per-depth counts to skip duplicate letters.
+    # Time:
+    # Space:
+
+    pass

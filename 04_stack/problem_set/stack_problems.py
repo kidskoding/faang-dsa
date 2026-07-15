@@ -71,3 +71,86 @@ def calculate(s: str) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def remove_duplicates(s: str) -> str:
+    # Problem 19: Remove All Adjacent Duplicates In String
+    # Key idea: push characters and pop when the top equals the incoming character.
+    # Time:
+    # Space:
+
+    pass
+
+
+def simplify_path(path: str) -> str:
+    # Problem 20: Simplify Path
+    # Key idea: stack of directory names; pop on `..` and skip `.` and empty segments.
+    # Time:
+    # Space:
+
+    pass
+
+
+def min_remove_to_make_valid(s: str) -> str:
+    # Problem 21: Minimum Remove To Make Valid Parentheses
+    # Key idea: stack of unmatched `(` indices marks characters to delete in one pass.
+    # Time:
+    # Space:
+
+    pass
+
+
+def validate_stack_sequences(pushed: list[int], popped: list[int]) -> bool:
+    # Problem 22: Validate Stack Sequences
+    # Key idea: simulate pushes and greedily pop whenever the top matches the next popped value.
+    # Time:
+    # Space:
+
+    pass
+
+
+def remove_duplicates_ii(s: str, k: int) -> str:
+    # Problem 23: Remove All Adjacent Duplicates In String II
+    # Key idea: stack of (char, count) pairs collapsed when a run reaches length k.
+    # Time:
+    # Space:
+
+    pass
+
+
+def count_of_atoms(formula: str) -> str:
+    # Problem 24: Number Of Atoms
+    # Key idea: stack of atom-count maps multiplied and merged as parentheses close.
+    # Time:
+    # Space:
+
+    pass
+
+
+class FreqStack:
+    # Problem 25: Maximum Frequency Stack
+    # Key idea: group elements into per-frequency stacks and pop from the highest frequency group.
+
+    def __init__(self) -> None:
+        # Time:
+        # Space:
+        pass
+
+    def push(self, val: int) -> None:
+        # Time:
+        # Space:
+        pass
+
+    def pop(self) -> int:
+        # Time:
+        # Space:
+        pass
+
+
+def longest_valid_parentheses(s: str) -> int:
+    # Problem 26: Longest Valid Parentheses
+    # Key idea: stack of indices; each match measures the valid span back to the last unmatched boundary.
+    # Time:
+    # Space:
+
+    pass

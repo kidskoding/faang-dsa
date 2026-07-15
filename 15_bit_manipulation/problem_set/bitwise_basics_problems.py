@@ -41,3 +41,30 @@ def is_power_of_four(n: int) -> bool:
     # Space:
 
     raise NotImplementedError
+
+
+def hamming_distance(x: int, y: int) -> int:
+    # Problem 6: Hamming Distance
+    # Key idea: popcount of x ^ y counts the differing bit positions.
+    # Time:
+    # Space:
+
+    pass
+
+
+def bitwise_complement(n: int) -> int:
+    # Problem 7: Complement of Base 10 Integer
+    # Key idea: XOR against an all-ones mask sized to the number's bit length.
+    # Time:
+    # Space:
+
+    pass
+
+
+def divide(dividend: int, divisor: int) -> int:
+    # Problem 8: Divide Two Integers
+    # Key idea: subtract shifted (doubled) divisors to build the quotient bit by bit.
+    # Time:
+    # Space:
+
+    pass

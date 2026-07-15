@@ -87,3 +87,53 @@ def get_intersection_node(head_a: ListNode | None, head_b: ListNode | None) -> L
     # Space:
 
     raise NotImplementedError
+
+
+class MyLinkedList:
+    # Problem 7: Design Linked List
+    # Key idea: implement get, insert, and delete on a from-scratch list.
+
+    def __init__(self) -> None:
+        # Time:
+        # Space:
+
+        pass
+
+    def get(self, index: int) -> int:
+        # Time:
+        # Space:
+
+        pass
+
+    def add_at_head(self, val: int) -> None:
+        # Time:
+        # Space:
+
+        pass
+
+    def add_at_tail(self, val: int) -> None:
+        # Time:
+        # Space:
+
+        pass
+
+    def add_at_index(self, index: int, val: int) -> None:
+        # Time:
+        # Space:
+
+        pass
+
+    def delete_at_index(self, index: int) -> None:
+        # Time:
+        # Space:
+
+        pass
+
+
+def get_decimal_value(head: ListNode | None) -> int:
+    # Problem 8: Convert Binary Number In A Linked List To Integer
+    # Key idea: single pass building the value with shift-and-add.
+    # Time:
+    # Space:
+
+    pass

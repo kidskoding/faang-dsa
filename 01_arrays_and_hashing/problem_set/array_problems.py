@@ -66,3 +66,39 @@ class RandomizedSet:
         # Time:
         # Space:
         raise NotImplementedError
+
+
+def sort_colors(nums: list[int]) -> None:
+    # Problem 25: Sort Colors
+    # Key idea: Dutch national flag three-way partition in one pass.
+    # Time:
+    # Space:
+
+    pass
+
+
+def find_duplicate(nums: list[int]) -> int:
+    # Problem 26: Find The Duplicate Number
+    # Key idea: treat values as pointers, Floyd cycle detection to find the repeat.
+    # Time:
+    # Space:
+
+    pass
+
+
+def spiral_order(matrix: list[list[int]]) -> list[int]:
+    # Problem 27: Spiral Matrix
+    # Key idea: shrink top/bottom/left/right bounds while walking the layers.
+    # Time:
+    # Space:
+
+    pass
+
+
+def rotate_image(matrix: list[list[int]]) -> None:
+    # Problem 28: Rotate Image
+    # Key idea: transpose in place, then reverse each row.
+    # Time:
+    # Space:
+
+    pass

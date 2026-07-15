@@ -41,3 +41,30 @@ def num_decodings(s: str) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def max_subarray(nums: list[int]) -> int:
+    # Problem 6: Maximum Subarray
+    # Key idea: Kadane — best subarray ending at i either extends or restarts.
+    # Time:
+    # Space:
+
+    pass
+
+
+def max_product(nums: list[int]) -> int:
+    # Problem 7: Maximum Product Subarray
+    # Key idea: track both max and min products ending at i since negatives flip signs.
+    # Time:
+    # Space:
+
+    pass
+
+
+def delete_and_earn(nums: list[int]) -> int:
+    # Problem 8: Delete and Earn
+    # Key idea: bucket values into points, then it reduces to House Robber over the value line.
+    # Time:
+    # Space:
+
+    pass

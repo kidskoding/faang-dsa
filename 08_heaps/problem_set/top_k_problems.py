@@ -32,3 +32,21 @@ def reorganize_string(s: str) -> str:
     # Space:
 
     raise NotImplementedError
+
+
+def frequency_sort(s: str) -> str:
+    # Problem 10: Sort Characters By Frequency
+    # Key idea: max heap of character counts emits letters in descending frequency.
+    # Time:
+    # Space:
+
+    pass
+
+
+def find_least_num_of_unique_ints(arr: list[int], k: int) -> int:
+    # Problem 11: Least Number Of Unique Integers After K Removals
+    # Key idea: min heap of counts removes the rarest values first to shrink the unique set.
+    # Time:
+    # Space:
+
+    pass

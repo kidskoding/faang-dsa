@@ -44,3 +44,12 @@ def remove_nth_from_end(head: ListNode | None, n: int) -> ListNode | None:
     # Space:
 
     raise NotImplementedError
+
+
+def delete_middle(head: ListNode | None) -> ListNode | None:
+    # Problem 12: Delete The Middle Node Of A Linked List
+    # Key idea: slow/fast to find the middle, keep a trailing pointer to unlink it.
+    # Time:
+    # Space:
+
+    pass

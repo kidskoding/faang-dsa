@@ -2,14 +2,19 @@
 
 ## Goal
 
-Build interval intuition from the ground up, then use that foundation to solve the
-medium and hard scheduling and overlap problems that show up in LeetCode-style
+Build interval intuition across the four interval techniques — sorting and
+scanning basics, merging into disjoint sets, room/booking counting, and
+sweep-line difference arrays — then use each technique to solve the medium
+and hard scheduling and overlap problems that show up in LeetCode-style
 interviews.
 
 ## How To Use
 
-Work the file in order. The early sections are the fundamentals. The later sections
-are the medium and hard extensions.
+Each section maps to one solution file in this folder and to one interval
+technique. Work a section top to bottom: problems are ordered roughly easy
+to hard, and the implemented ones come first. `solves:` names the function
+or class in that section's file; `solves: (todo)` means the solution is not
+written yet.
 
 For every problem, write:
 
@@ -20,178 +25,180 @@ Space:
 Key idea:
 ```
 
-## Fundamentals
+## Interval Basics
 
-These are the interval basics you should be able to do without thinking too hard.
+`interval_basics_problems.py` — sort intervals or numbers, then scan once
+to group runs, count non-overlapping groups, or walk two lists together.
 
 ### 1. [Summary Ranges](https://leetcode.com/problems/summary-ranges/)
 
-- Pattern: group consecutive numbers into ranges.
+- solves: `summary_ranges`
+- Pattern: walk the sorted array, extend a run while numbers stay consecutive.
 
 ### 2. [Minimum Number Of Arrows To Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
 
-- Pattern: sort by end, count non-overlapping groups.
+- solves: `find_min_arrow_shots`
+- Pattern: sort by end, shoot at the earliest end, skip balloons it pops.
 
 ### 3. [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/)
 
-- Pattern: two pointers walking two sorted interval lists.
+- solves: `interval_intersection`
+- Pattern: two pointers, take the overlap, advance the pointer that ends first.
 
 ### 4. [Determine if Two Events Have Conflict](https://leetcode.com/problems/determine-if-two-events-have-conflict/)
 
+- solves: `have_conflict`
 - Pattern: two intervals overlap iff each start is not after the other's end.
 
 ### 5. [Partition Labels](https://leetcode.com/problems/partition-labels/)
 
+- solves: `partition_labels`
 - Pattern: build last-index intervals per char, then merge greedily while scanning.
-
-### 6. [Maximum Population Year](https://leetcode.com/problems/maximum-population-year/)
-
-- Pattern: delta array, +1 at birth and -1 at death, prefix sum for the peak.
-
-### 7. [Points That Intersect With Cars](https://leetcode.com/problems/points-that-intersect-with-cars/)
-
-- Pattern: difference array over the coordinate range, count covered points.
 
 ## Merge And Insert
 
-These build and maintain a clean, non-overlapping set of intervals.
+`merge_insert_problems.py` — build and maintain a clean, non-overlapping
+set of intervals as you merge, insert, or stream values in.
 
-### 8. [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+### 6. [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
 
-- Pattern: sort by start, extend or start a new merged interval.
+- solves: `merge`
+- Pattern: sort by start, extend the current merged interval or start a new one.
 
-### 9. [Insert Interval](https://leetcode.com/problems/insert-interval/)
+### 7. [Insert Interval](https://leetcode.com/problems/insert-interval/)
 
-- Pattern: split into before, overlapping, and after the new interval.
+- solves: `insert`
+- Pattern: append intervals fully before, merge overlapping, append fully after.
 
-### 10. [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+### 8. [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
 
-- Pattern: sort by end, greedily keep the interval that ends earliest.
+- solves: `erase_overlap_intervals`
+- Pattern: sort by end, greedily keep the interval that finishes earliest.
 
-### 11. [Data Stream As Disjoint Intervals](https://leetcode.com/problems/data-stream-as-disjoint-intervals/)
+### 9. [Data Stream As Disjoint Intervals](https://leetcode.com/problems/data-stream-as-disjoint-intervals/)
 
-- Pattern: maintain a running merged interval set as values stream in.
+- solves: `SummaryRanges`
+- Pattern: keep a sorted, merged interval set and re-merge around each insert.
 
-### 12. [Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals/)
+### 10. [Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals/)
 
+- solves: `remove_covered_intervals`
 - Pattern: sort by start asc and end desc, drop intervals covered by the last kept end.
 
 ## Meeting Rooms And Scheduling
 
-These track how many intervals are active at once or gate new bookings against
-existing ones.
+`meeting_rooms_problems.py` — count how many intervals are active at once
+or gate new bookings against the existing ones, using two pointers or heaps.
 
-### 13. [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)
+### 11. [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)
 
-- Pattern: sort by start, check adjacent pairs for overlap.
+- solves: `can_attend_meetings`
+- Pattern: sort by start, check every adjacent pair for overlap.
 
-### 14. [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
+### 12. [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
 
-- Pattern: sorted starts/ends two pointers or a min heap of end times.
+- solves: `min_meeting_rooms`
+- Pattern: sorted start/end two pointers or a min heap of end times.
 
-### 15. [Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/)
+### 13. [My Calendar I](https://leetcode.com/problems/my-calendar-i/)
 
-- Pattern: two heaps tracking free rooms and occupied rooms with end times.
-
-### 16. [My Calendar I](https://leetcode.com/problems/my-calendar-i/)
-
+- solves: `MyCalendar`
 - Pattern: reject a booking that overlaps any existing booking.
 
-### 17. [My Calendar II](https://leetcode.com/problems/my-calendar-ii/)
+### 14. [My Calendar II](https://leetcode.com/problems/my-calendar-ii/)
 
-- Pattern: track single bookings and double-booked overlaps, reject triple.
+- solves: `MyCalendarTwo`
+- Pattern: track single bookings and double-booked overlaps, reject a triple.
 
-### 18. [My Calendar III](https://leetcode.com/problems/my-calendar-iii/)
+### 15. [My Calendar III](https://leetcode.com/problems/my-calendar-iii/)
 
-- Pattern: sweep-line delta counting to track maximum k-booking.
+- solves: `MyCalendarThree`
+- Pattern: sweep-line delta counting to track the maximum k-booking.
 
-### 19. [Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/)
+### 16. [Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/)
 
+- solves: `most_booked_room`
+- Pattern: two heaps track free rooms and occupied rooms with end times.
+
+### 17. [Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/)
+
+- solves: `max_events`
 - Pattern: sweep days, min heap of end days, greedily attend the soonest-ending event.
 
-### 20. [Divide Intervals Into Minimum Number of Groups](https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/)
+### 18. [Divide Intervals Into Minimum Number of Groups](https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/)
 
+- solves: `min_groups`
 - Pattern: max concurrent overlap equals the group count, sweep starts and ends.
+
+### 19. [Minimum Interval to Include Each Query](https://leetcode.com/problems/minimum-interval-to-include-each-query/)
+
+- solves: `min_interval`
+- Pattern: sort queries and intervals, min heap of sizes for intervals covering each query.
+
+### 20. [Number of Flowers in Full Bloom](https://leetcode.com/problems/number-of-flowers-in-full-bloom/)
+
+- solves: `full_bloom_flowers`
+- Pattern: binary search sorted starts and ends per person, or sweep with events.
 
 ## Sweep Line
 
-These convert interval starts and ends into events and scan in sorted order.
+`sweep_line_problems.py` — convert interval starts and ends into events or
+difference-array deltas, then scan in sorted order to read gaps, coverage,
+or peaks.
 
 ### 21. [Employee Free Time](https://leetcode.com/problems/employee-free-time/)
 
-- Pattern: flatten and merge all schedules, then read the gaps.
+- solves: `employee_free_time`
+- Pattern: flatten every employee's intervals, merge, then read the gaps.
 
 ### 22. [Range Module](https://leetcode.com/problems/range-module/)
 
+- solves: `RangeModule`
 - Pattern: maintain a sorted disjoint interval set with add/remove/query.
 
 ### 23. [Car Pooling](https://leetcode.com/problems/car-pooling/)
 
+- solves: `car_pooling`
 - Pattern: delta array of passenger changes at pickup and dropoff points.
 
-### 24. [Corporate Flight Bookings](https://leetcode.com/problems/corporate-flight-bookings/)
+### 24. [Maximum Population Year](https://leetcode.com/problems/maximum-population-year/)
 
+- solves: `maximum_population`
+- Pattern: delta array, +1 at birth and -1 at death, prefix sum for the peak.
+
+### 25. [Points That Intersect With Cars](https://leetcode.com/problems/points-that-intersect-with-cars/)
+
+- solves: `number_of_points`
+- Pattern: difference array over the coordinate range, count covered points.
+
+### 26. [Corporate Flight Bookings](https://leetcode.com/problems/corporate-flight-bookings/)
+
+- solves: `corp_flight_bookings`
 - Pattern: difference array of seat deltas, prefix sum for per-flight totals.
 
-### 25. [Describe the Painting](https://leetcode.com/problems/describe-the-painting/)
+### 27. [Describe the Painting](https://leetcode.com/problems/describe-the-painting/)
 
+- solves: `split_painting`
 - Pattern: color-sum deltas at segment endpoints, sweep and emit non-zero runs.
 
-## Hards And Extensions
+### 28. [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
 
-These stack sweep line with heaps, sorted structures, or BIT/segment trees.
-
-### 26. [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
-
+- solves: `get_skyline`
 - Pattern: sweep x events with a max heap of active heights, emit height changes.
 
-### 27. [Minimum Interval to Include Each Query](https://leetcode.com/problems/minimum-interval-to-include-each-query/)
+### 29. [Set Intersection Size At Least Two](https://leetcode.com/problems/set-intersection-size-at-least-two/)
 
-- Pattern: sort queries and intervals, min heap of sizes for intervals covering each query.
-
-### 28. [Number of Flowers in Full Bloom](https://leetcode.com/problems/number-of-flowers-in-full-bloom/)
-
-- Pattern: binary search sorted starts and ends per person, or sweep with events.
-
-### 29. [Maximum Number of Events That Can Be Attended II](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/)
-
-- Pattern: sort by end, DP with binary search over the next non-conflicting event.
-
-### 30. [Set Intersection Size At Least Two](https://leetcode.com/problems/set-intersection-size-at-least-two/)
-
+- solves: `intersection_size_two`
 - Pattern: sort by end, greedily add the two largest points each interval needs.
 
-### 31. [Falling Squares](https://leetcode.com/problems/falling-squares/)
+### 30. [Falling Squares](https://leetcode.com/problems/falling-squares/)
 
+- solves: `falling_squares`
 - Pattern: coordinate-compressed segment tree of range max heights.
 
-### 32. [Amount of New Area Painted Each Day](https://leetcode.com/problems/amount-of-new-area-painted-each-day/)
+### 31. [Amount of New Area Painted Each Day](https://leetcode.com/problems/amount-of-new-area-painted-each-day/)
 
+- solves: `amount_painted`
 - Pattern: track painted coordinates with a sorted set or union-find skip pointers.
-
-## Recommended Order
-
-If you want the shortest path to interval fluency, do them in this order:
-
-```text
-1. [Summary Ranges](https://leetcode.com/problems/summary-ranges/)
-2. [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
-3. [Insert Interval](https://leetcode.com/problems/insert-interval/)
-4. [Partition Labels](https://leetcode.com/problems/partition-labels/)
-5. [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
-6. [Minimum Number Of Arrows To Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
-7. [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/)
-8. [Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals/)
-9. [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)
-10. [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
-11. [My Calendar I](https://leetcode.com/problems/my-calendar-i/)
-12. [My Calendar II](https://leetcode.com/problems/my-calendar-ii/)
-13. [Car Pooling](https://leetcode.com/problems/car-pooling/)
-14. [Corporate Flight Bookings](https://leetcode.com/problems/corporate-flight-bookings/)
-15. [My Calendar III](https://leetcode.com/problems/my-calendar-iii/)
-16. [Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/)
-17. [Divide Intervals Into Minimum Number of Groups](https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/)
-18. [Data Stream As Disjoint Intervals](https://leetcode.com/problems/data-stream-as-disjoint-intervals/)
-19. [Employee Free Time](https://leetcode.com/problems/employee-free-time/)
-20. [Minimum Interval to Include Each Query](https://leetcode.com/problems/minimum-interval-to-include-each-query/)
-```
+  </content>
+  </invoke>

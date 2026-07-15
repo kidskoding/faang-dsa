@@ -37,3 +37,21 @@ def median_sliding_window(nums: list[int], k: int) -> list[float]:
     # Space:
 
     raise NotImplementedError
+
+
+def get_order(tasks: list[list[int]]) -> list[int]:
+    # Problem 13: Single-Threaded CPU
+    # Key idea: min heap by availability feeds a min heap by processing time and index.
+    # Time:
+    # Space:
+
+    pass
+
+
+def assign_tasks(servers: list[int], tasks: list[int]) -> list[int]:
+    # Problem 14: Process Tasks Using Servers
+    # Key idea: one heap of free servers by weight, one heap of busy servers by free time.
+    # Time:
+    # Space:
+
+    pass
