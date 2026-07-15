@@ -48,7 +48,7 @@ These are not guaranteed exact interview questions. If you can solve these clean
 
 ## Review Modules
 
-- `03_stack/`
+- `03_stacks_and_queues/`
 - `05_binary_search/`
 - `08_heaps/`
 - `01_arrays_and_hashing/`

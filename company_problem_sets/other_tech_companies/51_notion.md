@@ -43,7 +43,7 @@ These are not guaranteed exact interview questions. Treat this as the high-signa
 
 - `01_arrays_and_hashing/`
 - `04_sliding_window/`
-- `03_stack/`
+- `03_stacks_and_queues/`
 - `07_trees/`
 - `08_heaps/`
 - `09_backtracking/`

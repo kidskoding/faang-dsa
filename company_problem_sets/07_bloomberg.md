@@ -50,4 +50,4 @@ Focus: practical coding, strings/maps, trees, linked lists, heaps, and implement
 - `06_linked_lists/`
 - `07_trees/`
 - `08_heaps/`
-- `03_stack/`
+- `03_stacks_and_queues/`

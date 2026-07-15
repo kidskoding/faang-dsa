@@ -14,7 +14,7 @@ Use this live-coding-first module order:
 1. `01_arrays_and_hashing`
 1. `02_two_pointers`
 1. `04_sliding_window`
-1. `03_stack`
+1. `03_stacks_and_queues`
 1. `05_binary_search`
 1. `06_linked_lists`
 1. `07_trees`

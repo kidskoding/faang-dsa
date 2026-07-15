@@ -37,7 +37,7 @@ faang-dsa/
 ├── 00_fundamentals/
 ├── 01_arrays_and_hashing/
 ├── 02_two_pointers/
-├── 03_stack/
+├── 03_stacks_and_queues/
 ├── 04_sliding_window/
 ├── 05_binary_search/
 ├── 06_linked_lists/

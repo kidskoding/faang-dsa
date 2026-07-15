@@ -42,7 +42,7 @@ Focus: graphs, heaps, trees, strings, and clean interview algorithms.
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`
 - `04_sliding_window/`
-- `03_stack/`
+- `03_stacks_and_queues/`
 - `08_heaps/`
 - `10_graphs/`
 - `07_trees/`

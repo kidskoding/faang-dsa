@@ -1,4 +1,4 @@
-# Stack Problem Set
+# Stacks And Queues Problem Set
 
 ## Goal
 
