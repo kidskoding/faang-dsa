@@ -86,7 +86,7 @@ def find_circle_num(is_connected: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def critical_connections(n: int, connections: list[list[int]]) -> list[list[int]]:
@@ -95,7 +95,7 @@ def critical_connections(n: int, connections: list[list[int]]) -> list[list[int]
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def hit_bricks(grid: list[list[int]], hits: list[list[int]]) -> list[int]:
@@ -104,4 +104,4 @@ def hit_bricks(grid: list[list[int]], hits: list[list[int]]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

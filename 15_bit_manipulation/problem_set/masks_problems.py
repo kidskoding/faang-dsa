@@ -31,7 +31,7 @@ def gray_code(n: int) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def valid_utf8(data: list[int]) -> bool:
@@ -40,4 +40,4 @@ def valid_utf8(data: list[int]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -31,7 +31,7 @@ def min_jumps(arr: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def can_reach_end(s: str, min_jump: int, max_jump: int) -> bool:
@@ -40,7 +40,7 @@ def can_reach_end(s: str, min_jump: int, max_jump: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def minimum_jumps(forbidden: list[int], a: int, b: int, x: int) -> int:
@@ -49,4 +49,4 @@ def minimum_jumps(forbidden: list[int], a: int, b: int, x: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

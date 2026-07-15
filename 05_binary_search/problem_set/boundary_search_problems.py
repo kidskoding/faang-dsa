@@ -67,7 +67,7 @@ def next_greatest_letter(letters: list[str], target: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_kth_positive(arr: list[int], k: int) -> int:
@@ -76,7 +76,7 @@ def find_kth_positive(arr: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def single_non_duplicate(nums: list[int]) -> int:
@@ -85,7 +85,7 @@ def single_non_duplicate(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def successful_pairs(spells: list[int], potions: list[int], success: int) -> list[int]:
@@ -94,17 +94,17 @@ def successful_pairs(spells: list[int], potions: list[int], success: int) -> lis
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class MountainArray:
     # Interface provided by the problem; get and length are the only reads allowed.
 
     def get(self, index: int) -> int:
-        pass
+        raise NotImplementedError
 
     def length(self) -> int:
-        pass
+        raise NotImplementedError
 
 
 def find_in_mountain_array(target: int, mountain_arr: MountainArray) -> int:
@@ -113,4 +113,4 @@ def find_in_mountain_array(target: int, mountain_arr: MountainArray) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

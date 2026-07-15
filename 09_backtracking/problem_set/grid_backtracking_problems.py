@@ -1,3 +1,19 @@
+class Robot:
+    # Interface provided by the problem; the robot's absolute position is hidden.
+
+    def move(self) -> bool:
+        raise NotImplementedError
+
+    def turn_left(self) -> None:
+        raise NotImplementedError
+
+    def turn_right(self) -> None:
+        raise NotImplementedError
+
+    def clean(self) -> None:
+        raise NotImplementedError
+
+
 def exist(board: list[list[str]], word: str) -> bool:
     # Problem 14: Word Search
     # Key idea: mark the current cell visited before exploring neighbors, unmark on backtrack.
@@ -49,16 +65,16 @@ def unique_paths_iii(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
-def clean_room(robot: "Robot") -> None:
+def clean_room(robot: Robot) -> None:
     # Problem 20: Robot Room Cleaner
     # Key idea: DFS with a relative-coordinate visited set, turning the robot back to its prior heading on backtrack.
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def can_partition_k_subsets(nums: list[int], k: int) -> bool:
@@ -67,16 +83,17 @@ def can_partition_k_subsets(nums: list[int], k: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def add_operators(num: str, target: int) -> list[str]:
     # Problem 23: Expression Add Operators
-    # Key idea: choose "+", "-", "*", or concatenation between digits, carrying the last operand to undo multiplication precedence.
+    # Key idea: choose "+", "-", "*", or concatenation between digits, carrying the
+    # last operand to undo multiplication precedence.
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def word_break(s: str, word_dict: list[str]) -> list[str]:
@@ -85,7 +102,7 @@ def word_break(s: str, word_dict: list[str]) -> list[str]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def remove_invalid_parentheses(s: str) -> list[str]:
@@ -94,7 +111,7 @@ def remove_invalid_parentheses(s: str) -> list[str]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def judge_point24(cards: list[int]) -> bool:
@@ -103,4 +120,4 @@ def judge_point24(cards: list[int]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

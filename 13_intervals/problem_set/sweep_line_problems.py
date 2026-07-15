@@ -51,7 +51,7 @@ def maximum_population(logs: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def number_of_points(nums: list[list[int]]) -> int:
@@ -60,7 +60,7 @@ def number_of_points(nums: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def corp_flight_bookings(bookings: list[list[int]], n: int) -> list[int]:
@@ -69,7 +69,7 @@ def corp_flight_bookings(bookings: list[list[int]], n: int) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def split_painting(segments: list[list[int]]) -> list[list[int]]:
@@ -78,7 +78,7 @@ def split_painting(segments: list[list[int]]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def get_skyline(buildings: list[list[int]]) -> list[list[int]]:
@@ -87,7 +87,7 @@ def get_skyline(buildings: list[list[int]]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def intersection_size_two(intervals: list[list[int]]) -> int:
@@ -96,7 +96,7 @@ def intersection_size_two(intervals: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def falling_squares(positions: list[list[int]]) -> list[int]:
@@ -105,7 +105,7 @@ def falling_squares(positions: list[list[int]]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def amount_painted(paint: list[list[int]]) -> list[int]:
@@ -114,4 +114,4 @@ def amount_painted(paint: list[list[int]]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

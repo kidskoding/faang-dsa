@@ -67,7 +67,7 @@ def is_n_straight_hand(hand: list[int], group_size: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def advantage_count(nums1: list[int], nums2: list[int]) -> list[int]:
@@ -76,7 +76,7 @@ def advantage_count(nums1: list[int], nums2: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def eliminate_maximum(dist: list[int], speed: list[int]) -> int:
@@ -85,7 +85,7 @@ def eliminate_maximum(dist: list[int], speed: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def partition_disjoint(nums: list[int]) -> int:
@@ -94,7 +94,7 @@ def partition_disjoint(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def is_possible(nums: list[int]) -> bool:
@@ -103,4 +103,4 @@ def is_possible(nums: list[int]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

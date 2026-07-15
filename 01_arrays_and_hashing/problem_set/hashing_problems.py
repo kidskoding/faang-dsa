@@ -82,7 +82,7 @@ def intersect(nums1: list[int], nums2: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def majority_element(nums: list[int]) -> int:
@@ -91,7 +91,7 @@ def majority_element(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def majority_element_ii(nums: list[int]) -> list[int]:
@@ -100,7 +100,7 @@ def majority_element_ii(nums: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class MyHashMap:
@@ -111,22 +111,22 @@ class MyHashMap:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def put(self, key: int, value: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def get(self, key: int) -> int:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def remove(self, key: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError

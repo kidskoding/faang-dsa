@@ -31,7 +31,7 @@ def find_duplicate(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def partition_labels(s: str) -> list[int]:
@@ -40,7 +40,7 @@ def partition_labels(s: str) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def longest_mountain(arr: list[int]) -> int:
@@ -49,7 +49,7 @@ def longest_mountain(arr: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def num_subarray_product_less_than_k(nums: list[int], k: int) -> int:
@@ -58,7 +58,7 @@ def num_subarray_product_less_than_k(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def num_subarray_bounded_max(nums: list[int], left: int, right: int) -> int:
@@ -67,7 +67,7 @@ def num_subarray_bounded_max(nums: list[int], left: int, right: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def interval_intersection(
@@ -78,7 +78,7 @@ def interval_intersection(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def subarrays_with_k_distinct(nums: list[int], k: int) -> int:
@@ -87,4 +87,4 @@ def subarrays_with_k_distinct(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -82,7 +82,7 @@ def reverse_pairs(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class MyCalendarThree:
@@ -93,10 +93,10 @@ class MyCalendarThree:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def book(self, start: int, end: int) -> int:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError

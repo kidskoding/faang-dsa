@@ -95,27 +95,27 @@ class TrieII:
     def __init__(self) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def insert(self, word: str) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def count_words_equal_to(self, word: str) -> int:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def count_words_starting_with(self, prefix: str) -> int:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def erase(self, word: str) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
 
 def minimum_length_encoding(words: list[str]) -> int:
@@ -125,4 +125,4 @@ def minimum_length_encoding(words: list[str]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

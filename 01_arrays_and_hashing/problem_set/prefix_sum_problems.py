@@ -61,7 +61,7 @@ def max_sub_array_len(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def pivot_index(nums: list[int]) -> int:
@@ -70,7 +70,7 @@ def pivot_index(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def left_right_difference(nums: list[int]) -> list[int]:
@@ -79,7 +79,7 @@ def left_right_difference(nums: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_score(s: str) -> int:
@@ -88,7 +88,7 @@ def max_score(s: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def ways_to_split_array(nums: list[int]) -> int:
@@ -97,7 +97,7 @@ def ways_to_split_array(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_max_length(nums: list[int]) -> int:
@@ -106,4 +106,4 @@ def find_max_length(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -53,7 +53,7 @@ def find_redundant_connection(edges: list[list[int]]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def calc_equation(
@@ -64,4 +64,4 @@ def calc_equation(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

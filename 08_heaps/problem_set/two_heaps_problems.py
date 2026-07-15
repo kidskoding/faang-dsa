@@ -45,7 +45,7 @@ def get_order(tasks: list[list[int]]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def assign_tasks(servers: list[int], tasks: list[int]) -> list[int]:
@@ -54,4 +54,4 @@ def assign_tasks(servers: list[int], tasks: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

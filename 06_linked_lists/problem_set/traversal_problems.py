@@ -97,37 +97,37 @@ class MyLinkedList:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def get(self, index: int) -> int:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def add_at_head(self, val: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def add_at_tail(self, val: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def add_at_index(self, index: int, val: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def delete_at_index(self, index: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
 
 def get_decimal_value(head: ListNode | None) -> int:
@@ -136,4 +136,4 @@ def get_decimal_value(head: ListNode | None) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

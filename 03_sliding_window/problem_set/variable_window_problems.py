@@ -40,7 +40,7 @@ def longest_subarray(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def num_subarray_product_less_than_k(nums: list[int], k: int) -> int:
@@ -49,7 +49,7 @@ def num_subarray_product_less_than_k(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def equal_substring(s: str, t: str, max_cost: int) -> int:
@@ -58,7 +58,7 @@ def equal_substring(s: str, t: str, max_cost: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def maximum_unique_subarray(nums: list[int]) -> int:
@@ -67,7 +67,7 @@ def maximum_unique_subarray(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_frequency(nums: list[int], k: int) -> int:
@@ -76,7 +76,7 @@ def max_frequency(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def longest_nice_subarray(nums: list[int]) -> int:
@@ -85,4 +85,4 @@ def longest_nice_subarray(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

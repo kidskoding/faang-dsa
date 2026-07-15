@@ -43,4 +43,4 @@ def remove_nodes(head: ListNode | None) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

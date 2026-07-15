@@ -4,7 +4,7 @@ def count_range_sum(nums: list[int], lower: int, upper: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def median_sliding_window(nums: list[int], k: int) -> list[float]:
@@ -13,7 +13,7 @@ def median_sliding_window(nums: list[int], k: int) -> list[float]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class LRUCache:
@@ -24,19 +24,19 @@ class LRUCache:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def get(self, key: int) -> int:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def put(self, key: int, value: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
 
 class LFUCache:
@@ -47,19 +47,19 @@ class LFUCache:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def get(self, key: int) -> int:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def put(self, key: int, value: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
 
 def find_words(board: list[list[str]], words: list[str]) -> list[str]:
@@ -68,7 +68,7 @@ def find_words(board: list[list[str]], words: list[str]) -> list[str]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def alien_order(words: list[str]) -> str:
@@ -77,7 +77,7 @@ def alien_order(words: list[str]) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_ladders(begin_word: str, end_word: str, word_list: list[str]) -> list[list[str]]:
@@ -86,7 +86,7 @@ def find_ladders(begin_word: str, end_word: str, word_list: list[str]) -> list[l
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_envelopes(envelopes: list[list[int]]) -> int:
@@ -95,7 +95,7 @@ def max_envelopes(envelopes: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_value(events: list[list[int]], k: int) -> int:
@@ -104,7 +104,7 @@ def max_value(events: list[list[int]], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def longest_dup_substring(s: str) -> str:
@@ -113,7 +113,7 @@ def longest_dup_substring(s: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_result(nums: list[int], k: int) -> int:
@@ -122,7 +122,7 @@ def max_result(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def constrained_subset_sum(nums: list[int], k: int) -> int:
@@ -131,7 +131,7 @@ def constrained_subset_sum(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def job_scheduling(start_time: list[int], end_time: list[int], profit: list[int]) -> int:
@@ -140,7 +140,7 @@ def job_scheduling(start_time: list[int], end_time: list[int], profit: list[int]
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_sum_submatrix(matrix: list[list[int]], k: int) -> int:
@@ -149,7 +149,7 @@ def max_sum_submatrix(matrix: list[list[int]], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def odd_even_jumps(arr: list[int]) -> int:
@@ -158,7 +158,7 @@ def odd_even_jumps(arr: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class WeightedRandomPicker:
@@ -169,13 +169,13 @@ class WeightedRandomPicker:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def pick_index(self) -> int:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
 
 class SnapshotArray:
@@ -186,25 +186,25 @@ class SnapshotArray:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def set(self, index: int, val: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def snap(self) -> int:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def get(self, index: int, snap_id: int) -> int:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
 
 class StockPrice:
@@ -215,31 +215,31 @@ class StockPrice:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def update(self, timestamp: int, price: int) -> None:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def current(self) -> int:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def maximum(self) -> int:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
     def minimum(self) -> int:
         # Time:
         # Space:
 
-        pass
+        raise NotImplementedError
 
 
 def busiest_servers(k: int, arrival: list[int], load: list[int]) -> list[int]:
@@ -248,7 +248,7 @@ def busiest_servers(k: int, arrival: list[int], load: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def sort_items(n: int, m: int, group: list[int], before_items: list[list[int]]) -> list[int]:
@@ -257,7 +257,7 @@ def sort_items(n: int, m: int, group: list[int], before_items: list[list[int]]) 
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_number(nums1: list[int], nums2: list[int], k: int) -> list[int]:
@@ -266,4 +266,4 @@ def max_number(nums1: list[int], nums2: list[int], k: int) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

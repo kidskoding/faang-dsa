@@ -40,7 +40,7 @@ def combination_sum4(nums: list[int], target: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_max_form(strs: list[str], m: int, n: int) -> int:
@@ -49,4 +49,4 @@ def find_max_form(strs: list[str], m: int, n: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

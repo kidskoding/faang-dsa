@@ -91,4 +91,4 @@ def guess_number(n: int, guess: Callable[[int], int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -31,13 +31,13 @@ def letter_case_permutation(s: str) -> list[str]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
-def binary_tree_paths(root: "TreeNode | None") -> list[str]:
-    # Problem 5: Binary Tree Paths
-    # Key idea: DFS the tree, append the node to the path on the way down and pop it on the way back up.
+def max_unique_split(s: str) -> int:
+    # Problem 5: Split A String Into The Max Number Of Unique Substrings
+    # Key idea: try every cut, add the piece to a seen set on the way down and remove it on the way back up.
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

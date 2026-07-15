@@ -31,7 +31,7 @@ def shortest_subarray(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def count_subarrays(nums: list[int], min_k: int, max_k: int) -> int:
@@ -40,4 +40,4 @@ def count_subarrays(nums: list[int], min_k: int, max_k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

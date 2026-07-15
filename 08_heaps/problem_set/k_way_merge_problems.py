@@ -76,7 +76,7 @@ def k_smallest_pairs(nums1: list[int], nums2: list[int], k: int) -> list[list[in
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def kth_smallest(matrix: list[list[int]], k: int) -> int:
@@ -85,7 +85,7 @@ def kth_smallest(matrix: list[list[int]], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def nth_super_ugly_number(n: int, primes: list[int]) -> int:
@@ -94,4 +94,4 @@ def nth_super_ugly_number(n: int, primes: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

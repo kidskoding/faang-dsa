@@ -31,7 +31,7 @@ def contains_nearby_duplicate(nums: list[int], k: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def count_good_substrings(s: str) -> int:
@@ -40,7 +40,7 @@ def count_good_substrings(s: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_satisfied(customers: list[int], grumpy: list[int], minutes: int) -> int:
@@ -49,7 +49,7 @@ def max_satisfied(customers: list[int], grumpy: list[int], minutes: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_score(card_points: list[int], k: int) -> int:
@@ -58,4 +58,4 @@ def max_score(card_points: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

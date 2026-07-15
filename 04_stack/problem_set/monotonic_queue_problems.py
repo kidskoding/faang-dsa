@@ -22,7 +22,7 @@ def continuous_subarrays(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_max_value_of_equation(points: list[list[int]], k: int) -> int:
@@ -31,7 +31,7 @@ def find_max_value_of_equation(points: list[list[int]], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def maximum_robots(charge_times: list[int], running_costs: list[int], budget: int) -> int:
@@ -40,4 +40,4 @@ def maximum_robots(charge_times: list[int], running_costs: list[int], budget: in
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

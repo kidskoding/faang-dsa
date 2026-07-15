@@ -34,7 +34,7 @@ def twin_sum(head: ListNode | None) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def swap_nodes(head: ListNode | None, k: int) -> ListNode | None:
@@ -43,4 +43,4 @@ def swap_nodes(head: ListNode | None, k: int) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

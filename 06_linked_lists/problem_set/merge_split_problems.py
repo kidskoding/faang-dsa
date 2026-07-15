@@ -43,7 +43,7 @@ def add_two_numbers_ii(l1: ListNode | None, l2: ListNode | None) -> ListNode | N
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def merge_in_between(
@@ -54,4 +54,4 @@ def merge_in_between(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -58,4 +58,4 @@ def count_vowel_strings(n: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

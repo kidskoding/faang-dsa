@@ -107,4 +107,4 @@ def longest_increasing_path(matrix: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

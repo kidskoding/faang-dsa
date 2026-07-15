@@ -47,7 +47,7 @@ def find_critical_and_pseudo_critical_edges(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def distance_limited_paths_exist(
@@ -59,4 +59,4 @@ def distance_limited_paths_exist(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -165,7 +165,7 @@ def lowest_common_ancestor(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def count_nodes(root: TreeNode | None) -> int:
@@ -174,7 +174,7 @@ def count_nodes(root: TreeNode | None) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def prune_tree(root: TreeNode | None) -> TreeNode | None:
@@ -183,7 +183,7 @@ def prune_tree(root: TreeNode | None) -> TreeNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def flatten(root: TreeNode | None) -> None:
@@ -192,7 +192,7 @@ def flatten(root: TreeNode | None) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def lca_deepest_leaves(root: TreeNode | None) -> TreeNode | None:
@@ -201,7 +201,7 @@ def lca_deepest_leaves(root: TreeNode | None) -> TreeNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def rob(root: TreeNode | None) -> int:
@@ -210,7 +210,7 @@ def rob(root: TreeNode | None) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_path_sum(root: TreeNode | None) -> int:
@@ -219,7 +219,7 @@ def max_path_sum(root: TreeNode | None) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_camera_cover(root: TreeNode | None) -> int:
@@ -228,4 +228,4 @@ def min_camera_cover(root: TreeNode | None) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -115,12 +115,12 @@ class RecentCounter:
     def __init__(self) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def ping(self, t: int) -> int:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
 
 class MyCircularQueue:

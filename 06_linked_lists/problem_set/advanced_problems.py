@@ -64,7 +64,7 @@ def next_larger_nodes(head: ListNode | None) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def reverse_even_length_groups(head: ListNode | None) -> ListNode | None:
@@ -73,4 +73,4 @@ def reverse_even_length_groups(head: ListNode | None) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

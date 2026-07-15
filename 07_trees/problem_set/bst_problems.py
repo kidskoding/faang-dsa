@@ -92,7 +92,7 @@ def inorder_successor(root: TreeNode | None, p: TreeNode | None) -> TreeNode | N
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def recover_tree(root: TreeNode | None) -> None:
@@ -101,4 +101,4 @@ def recover_tree(root: TreeNode | None) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -96,7 +96,7 @@ def camel_match(queries: list[str], pattern: str) -> list[bool]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class WordFilterNode:
@@ -114,12 +114,12 @@ class WordFilter:
     def __init__(self, words: list[str]) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def f(self, prefix: str, suffix: str) -> int:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
 
 class AutocompleteNode:
@@ -137,9 +137,9 @@ class AutocompleteSystem:
     def __init__(self, sentences: list[str], times: list[int]) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def input(self, c: str) -> list[str]:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError

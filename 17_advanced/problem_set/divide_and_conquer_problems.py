@@ -40,7 +40,7 @@ def max_sub_array(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_median_sorted_arrays(nums1: list[int], nums2: list[int]) -> float:
@@ -49,4 +49,4 @@ def find_median_sorted_arrays(nums1: list[int], nums2: list[int]) -> float:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -173,7 +173,7 @@ def connect(root: TreeNode | None) -> TreeNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def vertical_traversal(root: TreeNode | None) -> list[list[int]]:
@@ -182,7 +182,7 @@ def vertical_traversal(root: TreeNode | None) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def distance_k(
@@ -195,4 +195,4 @@ def distance_k(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

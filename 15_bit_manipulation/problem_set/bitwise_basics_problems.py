@@ -49,7 +49,7 @@ def hamming_distance(x: int, y: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def bitwise_complement(n: int) -> int:
@@ -58,7 +58,7 @@ def bitwise_complement(n: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def divide(dividend: int, divisor: int) -> int:
@@ -67,4 +67,4 @@ def divide(dividend: int, divisor: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

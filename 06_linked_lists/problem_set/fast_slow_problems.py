@@ -52,4 +52,4 @@ def delete_middle(head: ListNode | None) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

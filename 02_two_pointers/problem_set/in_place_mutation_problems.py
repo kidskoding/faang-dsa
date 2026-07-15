@@ -31,7 +31,7 @@ def rotate(nums: list[int], k: int) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def wiggle_sort(nums: list[int]) -> None:
@@ -40,4 +40,4 @@ def wiggle_sort(nums: list[int]) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

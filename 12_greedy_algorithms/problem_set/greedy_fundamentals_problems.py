@@ -40,7 +40,7 @@ def can_place_flowers(flowerbed: list[int], n: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def maximum_units(box_types: list[list[int]], truck_size: int) -> int:
@@ -49,7 +49,7 @@ def maximum_units(box_types: list[list[int]], truck_size: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_add_to_make_valid(s: str) -> int:
@@ -58,7 +58,7 @@ def min_add_to_make_valid(s: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def wiggle_max_length(nums: list[int]) -> int:
@@ -67,7 +67,7 @@ def wiggle_max_length(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def bag_of_tokens_score(tokens: list[int], power: int) -> int:
@@ -76,7 +76,7 @@ def bag_of_tokens_score(tokens: list[int], power: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def two_city_sched_cost(costs: list[list[int]]) -> int:
@@ -85,7 +85,7 @@ def two_city_sched_cost(costs: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def remove_k_digits(num: str, k: int) -> str:
@@ -94,7 +94,7 @@ def remove_k_digits(num: str, k: int) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def remove_duplicate_letters(s: str) -> str:
@@ -103,7 +103,7 @@ def remove_duplicate_letters(s: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def reorganize_string(s: str) -> str:
@@ -112,7 +112,7 @@ def reorganize_string(s: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_deletions(s: str) -> int:
@@ -121,7 +121,7 @@ def min_deletions(s: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def connect_sticks(sticks: list[int]) -> int:
@@ -130,7 +130,7 @@ def connect_sticks(sticks: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def furthest_building(heights: list[int], bricks: int, ladders: int) -> int:
@@ -139,7 +139,7 @@ def furthest_building(heights: list[int], bricks: int, ladders: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_maximized_capital(k: int, w: int, profits: list[int], capital: list[int]) -> int:
@@ -148,7 +148,7 @@ def find_maximized_capital(k: int, w: int, profits: list[int], capital: list[int
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_refuel_stops(target: int, start_fuel: int, stations: list[list[int]]) -> int:
@@ -157,7 +157,7 @@ def min_refuel_stops(target: int, start_fuel: int, stations: list[list[int]]) ->
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def schedule_course(courses: list[list[int]]) -> int:
@@ -166,4 +166,4 @@ def schedule_course(courses: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

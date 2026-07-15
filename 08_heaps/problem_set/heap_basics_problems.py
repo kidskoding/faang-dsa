@@ -57,7 +57,7 @@ def maximum_product(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_stone_sum(piles: list[int], k: int) -> int:
@@ -66,4 +66,4 @@ def min_stone_sum(piles: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -76,7 +76,7 @@ def number_of_substrings(s: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def num_subarrays_with_sum(nums: list[int], goal: int) -> int:
@@ -85,7 +85,7 @@ def num_subarrays_with_sum(nums: list[int], goal: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def balanced_string(s: str) -> int:
@@ -94,7 +94,7 @@ def balanced_string(s: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_substring(s: str, words: list[str]) -> list[int]:
@@ -103,7 +103,7 @@ def find_substring(s: str, words: list[str]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_window_subsequence(s1: str, s2: str) -> str:
@@ -112,4 +112,4 @@ def min_window_subsequence(s1: str, s2: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

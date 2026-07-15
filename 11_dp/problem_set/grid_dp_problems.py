@@ -49,7 +49,7 @@ def min_falling_path_sum(matrix: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def count_squares(matrix: list[list[int]]) -> int:
@@ -58,4 +58,4 @@ def count_squares(matrix: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -40,7 +40,7 @@ def largest_triangle_area(points: list[list[int]]) -> float:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def compute_area(
@@ -51,7 +51,7 @@ def compute_area(
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def k_closest(points: list[list[int]], k: int) -> list[list[int]]:
@@ -60,7 +60,7 @@ def k_closest(points: list[list[int]], k: int) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def calculate(s: str) -> int:
@@ -69,7 +69,7 @@ def calculate(s: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def is_self_crossing(distance: list[int]) -> bool:
@@ -78,7 +78,7 @@ def is_self_crossing(distance: list[int]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def outer_trees(trees: list[list[int]]) -> list[list[int]]:
@@ -87,7 +87,7 @@ def outer_trees(trees: list[list[int]]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def get_skyline(buildings: list[list[int]]) -> list[list[int]]:
@@ -96,7 +96,7 @@ def get_skyline(buildings: list[list[int]]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def is_rectangle_cover(rectangles: list[list[int]]) -> bool:
@@ -105,7 +105,7 @@ def is_rectangle_cover(rectangles: list[list[int]]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def rectangle_area(rectangles: list[list[int]]) -> int:
@@ -114,4 +114,4 @@ def rectangle_area(rectangles: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

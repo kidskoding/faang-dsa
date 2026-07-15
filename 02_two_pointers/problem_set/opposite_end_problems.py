@@ -85,7 +85,7 @@ def valid_palindrome(s: str) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def bag_of_tokens_score(tokens: list[int], power: int) -> int:
@@ -94,7 +94,7 @@ def bag_of_tokens_score(tokens: list[int], power: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_pair_sum(nums: list[int]) -> int:
@@ -103,7 +103,7 @@ def min_pair_sum(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_closest_elements(arr: list[int], k: int, x: int) -> list[int]:
@@ -112,7 +112,7 @@ def find_closest_elements(arr: list[int], k: int, x: int) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def backspace_compare(s: str, t: str) -> bool:
@@ -121,7 +121,7 @@ def backspace_compare(s: str, t: str) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def reverse_words(s: str) -> str:
@@ -130,7 +130,7 @@ def reverse_words(s: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def three_sum_smaller(nums: list[int], target: int) -> int:
@@ -139,7 +139,7 @@ def three_sum_smaller(nums: list[int], target: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def three_sum_multi(arr: list[int], target: int) -> int:
@@ -148,7 +148,7 @@ def three_sum_multi(arr: list[int], target: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def num_subseq(nums: list[int], target: int) -> int:
@@ -157,4 +157,4 @@ def num_subseq(nums: list[int], target: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

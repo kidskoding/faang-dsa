@@ -31,7 +31,7 @@ def have_conflict(event1: list[str], event2: list[str]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def partition_labels(s: str) -> list[int]:
@@ -40,4 +40,4 @@ def partition_labels(s: str) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

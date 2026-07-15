@@ -31,7 +31,7 @@ def can_partition_k_subsets(nums: list[int], k: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def shortest_path_length(graph: list[list[int]]) -> int:
@@ -40,7 +40,7 @@ def shortest_path_length(graph: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_students(seats: list[list[str]]) -> int:
@@ -49,7 +49,7 @@ def max_students(seats: list[list[str]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def distribute_cookies(cookies: list[int], k: int) -> int:
@@ -58,4 +58,4 @@ def distribute_cookies(cookies: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

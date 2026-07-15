@@ -31,7 +31,7 @@ def network_delay_time(times: list[list[int]], n: int, k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def minimum_effort_path(heights: list[list[int]]) -> int:
@@ -40,4 +40,4 @@ def minimum_effort_path(heights: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

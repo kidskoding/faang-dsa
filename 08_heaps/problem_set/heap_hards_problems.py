@@ -1,13 +1,10 @@
-import heapq
-
-
 def trap_rain_water(height_map: list[list[int]]) -> int:
     # Problem 1: Trapping Rain Water II
     # Key idea: min heap processes the boundary inward, raising water to the lowest wall.
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def mincost_to_hire_workers(quality: list[int], wage: list[int], k: int) -> float:
@@ -16,7 +13,7 @@ def mincost_to_hire_workers(quality: list[int], wage: list[int], k: int) -> floa
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def swim_in_water(grid: list[list[int]]) -> int:
@@ -25,7 +22,7 @@ def swim_in_water(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def get_skyline(buildings: list[list[int]]) -> list[list[int]]:
@@ -34,7 +31,7 @@ def get_skyline(buildings: list[list[int]]) -> list[list[int]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_performance(n: int, speed: list[int], efficiency: list[int], k: int) -> int:
@@ -43,7 +40,7 @@ def max_performance(n: int, speed: list[int], efficiency: list[int], k: int) -> 
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_refuel_stops(target: int, start_fuel: int, stations: list[list[int]]) -> int:
@@ -52,7 +49,7 @@ def min_refuel_stops(target: int, start_fuel: int, stations: list[list[int]]) ->
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def kth_smallest(mat: list[list[int]], k: int) -> int:
@@ -61,7 +58,7 @@ def kth_smallest(mat: list[list[int]], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def schedule_course(courses: list[list[int]]) -> int:
@@ -70,7 +67,7 @@ def schedule_course(courses: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def network_delay_time(times: list[list[int]], n: int, k: int) -> int:
@@ -79,4 +76,4 @@ def network_delay_time(times: list[list[int]], n: int, k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

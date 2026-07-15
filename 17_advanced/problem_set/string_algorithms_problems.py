@@ -46,4 +46,4 @@ def repeated_substring_pattern(s: str) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

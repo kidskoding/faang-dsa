@@ -40,7 +40,7 @@ def find_the_difference(s: str, t: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def decode(encoded: list[int], first: int) -> list[int]:
@@ -49,4 +49,4 @@ def decode(encoded: list[int], first: int) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

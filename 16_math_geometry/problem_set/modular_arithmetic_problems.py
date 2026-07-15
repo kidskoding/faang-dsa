@@ -58,7 +58,7 @@ def plus_one(digits: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def is_palindrome(x: int) -> bool:
@@ -67,7 +67,7 @@ def is_palindrome(x: int) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def add_strings(num1: str, num2: str) -> str:
@@ -76,7 +76,7 @@ def add_strings(num1: str, num2: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def reverse(x: int) -> int:
@@ -85,7 +85,7 @@ def reverse(x: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def count_primes(n: int) -> int:
@@ -94,7 +94,7 @@ def count_primes(n: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def trailing_zeroes(n: int) -> int:
@@ -103,7 +103,7 @@ def trailing_zeroes(n: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def multiply(num1: str, num2: str) -> str:
@@ -112,7 +112,7 @@ def multiply(num1: str, num2: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def int_to_roman(num: int) -> str:
@@ -121,7 +121,7 @@ def int_to_roman(num: int) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def nth_ugly_number(n: int) -> int:
@@ -130,7 +130,7 @@ def nth_ugly_number(n: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def num_squares(n: int) -> int:
@@ -139,7 +139,7 @@ def num_squares(n: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def rand10() -> int:
@@ -148,4 +148,4 @@ def rand10() -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

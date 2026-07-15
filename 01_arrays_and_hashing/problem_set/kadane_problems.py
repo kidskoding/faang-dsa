@@ -31,7 +31,7 @@ def max_subarray_sum_circular(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_absolute_sum(nums: list[int]) -> int:
@@ -40,7 +40,7 @@ def max_absolute_sum(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_turbulence_size(arr: list[int]) -> int:
@@ -49,7 +49,7 @@ def max_turbulence_size(arr: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def k_concatenation_max_sum(arr: list[int], k: int) -> int:
@@ -58,4 +58,4 @@ def k_concatenation_max_sum(arr: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

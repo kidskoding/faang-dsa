@@ -121,7 +121,7 @@ def min_cut(s: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_profit_iv(k: int, prices: list[int]) -> int:
@@ -130,7 +130,7 @@ def max_profit_iv(k: int, prices: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def longest_valid_parentheses(s: str) -> int:
@@ -139,7 +139,7 @@ def longest_valid_parentheses(s: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def maximal_rectangle(matrix: list[list[str]]) -> int:
@@ -148,7 +148,7 @@ def maximal_rectangle(matrix: list[list[str]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def merge_stones(stones: list[int], k: int) -> int:
@@ -157,7 +157,7 @@ def merge_stones(stones: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def cherry_pickup(grid: list[list[int]]) -> int:
@@ -166,4 +166,4 @@ def cherry_pickup(grid: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

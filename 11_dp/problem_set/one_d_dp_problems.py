@@ -49,7 +49,7 @@ def max_subarray(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_product(nums: list[int]) -> int:
@@ -58,7 +58,7 @@ def max_product(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def delete_and_earn(nums: list[int]) -> int:
@@ -67,4 +67,4 @@ def delete_and_earn(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

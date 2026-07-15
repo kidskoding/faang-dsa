@@ -82,7 +82,7 @@ def max_events(events: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_groups(intervals: list[list[int]]) -> int:
@@ -91,7 +91,7 @@ def min_groups(intervals: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_interval(intervals: list[list[int]], queries: list[int]) -> list[int]:
@@ -100,7 +100,7 @@ def min_interval(intervals: list[list[int]], queries: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def full_bloom_flowers(flowers: list[list[int]], people: list[int]) -> list[int]:
@@ -109,4 +109,4 @@ def full_bloom_flowers(flowers: list[list[int]], people: list[int]) -> list[int]
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

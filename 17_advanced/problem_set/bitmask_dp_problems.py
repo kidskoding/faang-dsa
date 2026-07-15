@@ -28,11 +28,12 @@ def min_number_of_semesters(n: int, relations: list[list[int]], k: int) -> int:
 
 def max_students(seats: list[list[str]]) -> int:
     # Problem 29: Maximum Students Taking Exam
-    # Key idea: dp[row][mask] over seat layouts, checking mask validity against broken seats and diagonal neighbors in the prior row.
+    # Key idea: dp[row][mask] over seat layouts, checking mask validity against
+    # broken seats and diagonal neighbors in the prior row.
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def number_ways(hats: list[list[int]]) -> int:
@@ -41,4 +42,4 @@ def number_ways(hats: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

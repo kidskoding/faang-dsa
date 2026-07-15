@@ -67,7 +67,7 @@ def word_squares(words: list[str]) -> list[list[str]]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class MaximumXorNode:
@@ -83,7 +83,7 @@ def find_maximum_xor(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def maximize_xor(nums: list[int], queries: list[list[int]]) -> list[int]:
@@ -93,7 +93,7 @@ def maximize_xor(nums: list[int], queries: list[list[int]]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class SuffixQueryNode:
@@ -110,4 +110,4 @@ def string_indices(words_container: list[str], words_query: list[str]) -> list[i
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

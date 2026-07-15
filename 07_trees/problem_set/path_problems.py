@@ -106,7 +106,7 @@ def good_nodes(root: TreeNode | None) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def path_sum_iii(root: TreeNode | None, target_sum: int) -> int:
@@ -115,4 +115,4 @@ def path_sum_iii(root: TreeNode | None, target_sum: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

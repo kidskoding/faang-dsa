@@ -131,4 +131,4 @@ def min_cost_connect_points(points: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

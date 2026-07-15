@@ -74,7 +74,7 @@ def sort_colors(nums: list[int]) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_duplicate(nums: list[int]) -> int:
@@ -83,7 +83,7 @@ def find_duplicate(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def spiral_order(matrix: list[list[int]]) -> list[int]:
@@ -92,7 +92,7 @@ def spiral_order(matrix: list[list[int]]) -> list[int]:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def rotate_image(matrix: list[list[int]]) -> None:
@@ -101,4 +101,4 @@ def rotate_image(matrix: list[list[int]]) -> None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

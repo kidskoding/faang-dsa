@@ -50,7 +50,7 @@ def arrange_coins(n: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_speed_on_time(dist: list[int], hour: float) -> int:
@@ -59,7 +59,7 @@ def min_speed_on_time(dist: list[int], hour: float) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def smallest_divisor(nums: list[int], threshold: int) -> int:
@@ -68,7 +68,7 @@ def smallest_divisor(nums: list[int], threshold: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_duplicate(nums: list[int]) -> int:
@@ -77,7 +77,7 @@ def find_duplicate(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_days(bloom_day: list[int], m: int, k: int) -> int:
@@ -86,7 +86,7 @@ def min_days(bloom_day: list[int], m: int, k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def max_distance(position: list[int], m: int) -> int:
@@ -95,7 +95,7 @@ def max_distance(position: list[int], m: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def kth_smallest(matrix: list[list[int]], k: int) -> int:
@@ -104,7 +104,7 @@ def kth_smallest(matrix: list[list[int]], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_kth_number(m: int, n: int, k: int) -> int:
@@ -113,7 +113,7 @@ def find_kth_number(m: int, n: int, k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def smallest_distance_pair(nums: list[int], k: int) -> int:
@@ -122,4 +122,4 @@ def smallest_distance_pair(nums: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

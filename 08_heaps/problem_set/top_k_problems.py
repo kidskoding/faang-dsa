@@ -40,7 +40,7 @@ def frequency_sort(s: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find_least_num_of_unique_ints(arr: list[int], k: int) -> int:
@@ -49,4 +49,4 @@ def find_least_num_of_unique_ints(arr: list[int], k: int) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

@@ -79,7 +79,7 @@ def remove_duplicates(s: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def simplify_path(path: str) -> str:
@@ -88,7 +88,7 @@ def simplify_path(path: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def min_remove_to_make_valid(s: str) -> str:
@@ -97,7 +97,7 @@ def min_remove_to_make_valid(s: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def validate_stack_sequences(pushed: list[int], popped: list[int]) -> bool:
@@ -106,7 +106,7 @@ def validate_stack_sequences(pushed: list[int], popped: list[int]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def remove_duplicates_ii(s: str, k: int) -> str:
@@ -115,7 +115,7 @@ def remove_duplicates_ii(s: str, k: int) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def count_of_atoms(formula: str) -> str:
@@ -124,7 +124,7 @@ def count_of_atoms(formula: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 class FreqStack:
@@ -134,17 +134,17 @@ class FreqStack:
     def __init__(self) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def push(self, val: int) -> None:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
     def pop(self) -> int:
         # Time:
         # Space:
-        pass
+        raise NotImplementedError
 
 
 def longest_valid_parentheses(s: str) -> int:
@@ -153,4 +153,4 @@ def longest_valid_parentheses(s: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

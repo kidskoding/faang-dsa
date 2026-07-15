@@ -40,7 +40,7 @@ def get_permutation(n: int, k: int) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def num_tile_possibilities(tiles: str) -> int:
@@ -49,4 +49,4 @@ def num_tile_possibilities(tiles: str) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

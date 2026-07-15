@@ -82,7 +82,7 @@ def car_fleet(target: int, position: list[int], speed: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def remove_duplicate_letters(s: str) -> str:
@@ -91,7 +91,7 @@ def remove_duplicate_letters(s: str) -> str:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def find132pattern(nums: list[int]) -> bool:
@@ -100,7 +100,7 @@ def find132pattern(nums: list[int]) -> bool:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def sum_subarray_mins(arr: list[int]) -> int:
@@ -109,7 +109,7 @@ def sum_subarray_mins(arr: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def sub_array_ranges(nums: list[int]) -> int:
@@ -118,7 +118,7 @@ def sub_array_ranges(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 
 
 def maximal_rectangle(matrix: list[list[str]]) -> int:
@@ -127,4 +127,4 @@ def maximal_rectangle(matrix: list[list[str]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError

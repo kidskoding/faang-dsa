@@ -49,10 +49,10 @@ you should be able to write without thinking too hard.
 - solves: `letter_case_permutation`
 - Pattern: at each letter branch on lower/upper case, pass digits straight through.
 
-### 5. [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)
+### 5. [Split A String Into The Max Number Of Unique Substrings](https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings/)
 
-- solves: `binary_tree_paths`
-- Pattern: DFS the tree, append the node to the path on the way down and pop it on the way back up.
+- solves: `max_unique_split`
+- Pattern: try every cut point, add the piece to a seen set on the way down and remove it on the way back up.
 
 ## Subsets And Combinations
 

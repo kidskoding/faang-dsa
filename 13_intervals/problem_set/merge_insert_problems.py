@@ -54,4 +54,4 @@ def remove_covered_intervals(intervals: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
