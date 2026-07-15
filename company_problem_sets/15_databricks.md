@@ -48,5 +48,5 @@ Focus: harder mediums, graphs, DP, arrays, performance tradeoffs, and precise re
 - `11_dp/`
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`
-- `03_sliding_window/`
+- `04_sliding_window/`
 - `08_heaps/`

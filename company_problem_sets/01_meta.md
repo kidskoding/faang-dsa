@@ -49,7 +49,7 @@ Focus: speed, arrays, strings, trees, graphs, heaps, and backtracking.
 
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`
-- `03_sliding_window/`
+- `04_sliding_window/`
 - `07_trees/`
 - `10_graphs/`
 - `08_heaps/`

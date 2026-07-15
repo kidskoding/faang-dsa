@@ -218,3 +218,18 @@ min of the current window in O(1) amortized.
 
 - solves: `count_subarrays`
 - Pattern: track last positions of `minK`, `maxK`, and out-of-range values to count valid windows per right edge.
+
+### 36. [Continuous Subarrays](https://leetcode.com/problems/continuous-subarrays/)
+
+- solves: `continuous_subarrays`
+- Pattern: two deques track the window max and min; shrink left while `max - min > 2`, count windows per right edge.
+
+### 37. [Max Value of Equation](https://leetcode.com/problems/max-value-of-equation/)
+
+- solves: `find_max_value_of_equation`
+- Pattern: monotonic decreasing deque of `y - x` keeps the best partner within the `|xi - xj| <= k` window.
+
+### 38. [Maximum Number of Robots Within Budget](https://leetcode.com/problems/maximum-number-of-robots-within-budget/)
+
+- solves: `maximum_robots`
+- Pattern: sliding window with a monotonic deque for the running max charge time against the running sum budget.

@@ -1,4 +1,4 @@
-# Module 03: Sliding Window
+# Module 04: Sliding Window
 
 ## Topics
 

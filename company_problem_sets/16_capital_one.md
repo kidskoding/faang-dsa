@@ -41,7 +41,7 @@ Focus: fundamentals, arrays/maps, strings, trees, BFS/DFS, and reliable communic
 
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`
-- `03_sliding_window/`
-- `04_stack/`
+- `04_sliding_window/`
+- `03_stack/`
 - `07_trees/`
 - `10_graphs/`

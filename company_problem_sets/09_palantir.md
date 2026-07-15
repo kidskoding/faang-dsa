@@ -47,7 +47,7 @@ Focus: arrays/maps, graph traversal, intervals, trees, simulation, practical sta
 
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`
-- `03_sliding_window/`
+- `04_sliding_window/`
 - `07_trees/`
 - `10_graphs/`
 - `13_intervals/`

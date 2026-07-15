@@ -37,8 +37,8 @@ faang-dsa/
 ├── 00_fundamentals/
 ├── 01_arrays_and_hashing/
 ├── 02_two_pointers/
-├── 03_sliding_window/
-├── 04_stack/
+├── 03_stack/
+├── 04_sliding_window/
 ├── 05_binary_search/
 ├── 06_linked_lists/
 ├── 07_trees/

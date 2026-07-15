@@ -42,8 +42,8 @@ These are not guaranteed exact interview questions. Treat this as the high-signa
 ## Review Modules
 
 - `01_arrays_and_hashing/`
-- `03_sliding_window/`
-- `04_stack/`
+- `04_sliding_window/`
+- `03_stack/`
 - `07_trees/`
 - `08_heaps/`
 - `09_backtracking/`

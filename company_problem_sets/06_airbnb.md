@@ -49,4 +49,4 @@ Focus: graphs, backtracking, practical modeling, strings, intervals, and design-
 - `13_intervals/`
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`
-- `03_sliding_window/`
+- `04_sliding_window/`

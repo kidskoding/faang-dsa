@@ -47,7 +47,7 @@ Focus: fast implementation, arrays/strings, trees, graphs, DP, heaps, and harder
 
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`
-- `03_sliding_window/`
+- `04_sliding_window/`
 - `05_binary_search/`
 - `07_trees/`
 - `10_graphs/`

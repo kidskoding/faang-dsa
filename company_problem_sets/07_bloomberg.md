@@ -46,8 +46,8 @@ Focus: practical coding, strings/maps, trees, linked lists, heaps, and implement
 
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`
-- `03_sliding_window/`
+- `04_sliding_window/`
 - `06_linked_lists/`
 - `07_trees/`
 - `08_heaps/`
-- `04_stack/`
+- `03_stack/`

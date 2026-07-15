@@ -42,7 +42,7 @@ These are not guaranteed exact interview questions. Treat this as the high-signa
 ## Review Modules
 
 - `01_arrays_and_hashing/`
-- `03_sliding_window/`
+- `04_sliding_window/`
 - `07_trees/`
 - `08_heaps/`
 - `10_graphs/`

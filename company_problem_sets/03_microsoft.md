@@ -48,7 +48,7 @@ Focus: balanced fundamentals, trees, arrays, DP, design-style coding, and clear 
 
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`
-- `03_sliding_window/`
+- `04_sliding_window/`
 - `06_linked_lists/`
 - `07_trees/`
 - `10_graphs/`

@@ -1,4 +1,4 @@
-# Module 04: Stack
+# Module 03: Stack
 
 ## Topics
 

@@ -3,9 +3,10 @@
 ## Goal
 
 Build stack and queue intuition across the core stack techniques — plain
-LIFO stacks, queue/deque design, the monotonic stack, and the monotonic
-deque — then use each technique to solve the medium and hard stack and queue
-problems that show up in LeetCode-style interviews.
+LIFO stacks, queue/deque design, and the monotonic stack — then use each
+technique to solve the medium and hard stack and queue problems that show up
+in LeetCode-style interviews. The monotonic deque built here is applied to
+window problems in `04_sliding_window`.
 
 ## How To Use
 
@@ -213,33 +214,3 @@ next-greater / next-smaller relationship and its span boundaries.
 
 - solves: `maximal_rectangle`
 - Pattern: build per-row histograms and apply the largest-rectangle monotonic stack to each.
-
-## Monotonic Queue
-
-`monotonic_queue_problems.py` — a monotonic deque of indices yields the max
-or min of a sliding window (or DP transition) in O(1) amortized.
-
-### 36. [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
-
-- solves: `max_sliding_window`
-- Pattern: monotonic decreasing deque of indices; the front is always the window max.
-
-### 37. [Shortest Subarray with Sum at Least K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/)
-
-- solves: `shortest_subarray`
-- Pattern: monotonic increasing deque over prefix sums finds the shortest qualifying window.
-
-### 38. [Continuous Subarrays](https://leetcode.com/problems/continuous-subarrays/)
-
-- solves: `continuous_subarrays`
-- Pattern: two deques track the window max and min; shrink left while `max - min > 2`, count windows per right edge.
-
-### 39. [Max Value of Equation](https://leetcode.com/problems/max-value-of-equation/)
-
-- solves: `find_max_value_of_equation`
-- Pattern: monotonic decreasing deque of `y - x` keeps the best partner within the `|xi - xj| <= k` window.
-
-### 40. [Maximum Number of Robots Within Budget](https://leetcode.com/problems/maximum-number-of-robots-within-budget/)
-
-- solves: `maximum_robots`
-- Pattern: sliding window with a monotonic deque for the running max charge time against the running sum budget.

@@ -48,11 +48,11 @@ These are not guaranteed exact interview questions. If you can solve these clean
 
 ## Review Modules
 
-- `04_stack/`
+- `03_stack/`
 - `05_binary_search/`
 - `08_heaps/`
 - `01_arrays_and_hashing/`
-- `03_sliding_window/`
+- `04_sliding_window/`
 - `07_trees/`
 - `10_graphs/`
 - `13_intervals/`

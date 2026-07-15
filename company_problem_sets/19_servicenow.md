@@ -42,7 +42,7 @@ Focus: fundamentals, arrays/maps, trees, BFS/DFS, practical design, and reliable
 
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`
-- `03_sliding_window/`
+- `04_sliding_window/`
 - `07_trees/`
 - `10_graphs/`
 - `11_dp/`

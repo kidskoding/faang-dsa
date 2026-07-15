@@ -43,7 +43,7 @@ Focus: fundamentals, arrays/maps, trees, SQL-adjacent data modeling style, and o
 
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`
-- `03_sliding_window/`
+- `04_sliding_window/`
 - `06_linked_lists/`
 - `07_trees/`
 - `10_graphs/`

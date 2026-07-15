@@ -47,8 +47,8 @@ Focus: clean code, arrays/strings, trees, graphs, low-level reasoning, and edge 
 
 - `01_arrays_and_hashing/`
 - `02_two_pointers/`
-- `03_sliding_window/`
-- `04_stack/`
+- `04_sliding_window/`
+- `03_stack/`
 - `07_trees/`
 - `10_graphs/`
 - `15_bit_manipulation/`
