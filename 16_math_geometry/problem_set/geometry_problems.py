@@ -43,9 +43,7 @@ def largest_triangle_area(points: list[list[int]]) -> float:
     raise NotImplementedError
 
 
-def compute_area(
-    ax1: int, ay1: int, ax2: int, ay2: int, bx1: int, by1: int, bx2: int, by2: int
-) -> int:
+def compute_area(ax1: int, ay1: int, ax2: int, ay2: int, bx1: int, by1: int, bx2: int, by2: int) -> int:
     # Problem 18: Rectangle Area
     # Key idea: sum both areas and subtract the overlap of the two axis intervals.
     # Time:

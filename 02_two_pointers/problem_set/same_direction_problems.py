@@ -70,9 +70,7 @@ def num_subarray_bounded_max(nums: list[int], left: int, right: int) -> int:
     raise NotImplementedError
 
 
-def interval_intersection(
-    first_list: list[list[int]], second_list: list[list[int]]
-) -> list[list[int]]:
+def interval_intersection(first_list: list[list[int]], second_list: list[list[int]]) -> list[list[int]]:
     # Problem 12: Interval List Intersections
     # Key idea: advance two pointers across both sorted lists, emitting the overlap and moving the one that ends first.
     # Time:

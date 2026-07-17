@@ -38,9 +38,7 @@ def min_cost_to_supply_water(n: int, wells: list[int], pipes: list[list[int]]) -
     raise NotImplementedError
 
 
-def find_critical_and_pseudo_critical_edges(
-    n: int, edges: list[list[int]]
-) -> list[list[int]]:
+def find_critical_and_pseudo_critical_edges(n: int, edges: list[list[int]]) -> list[list[int]]:
     # Problem 11: Find Critical And Pseudo-Critical Edges In Minimum Spanning Tree
     # Key idea: baseline MST weight; an edge is critical if excluding it raises the
     #           MST weight, pseudo-critical if forcing it in still hits the baseline.
@@ -50,9 +48,7 @@ def find_critical_and_pseudo_critical_edges(
     raise NotImplementedError
 
 
-def distance_limited_paths_exist(
-    n: int, edge_list: list[list[int]], queries: list[list[int]]
-) -> list[bool]:
+def distance_limited_paths_exist(n: int, edge_list: list[list[int]], queries: list[list[int]]) -> list[bool]:
     # Problem 12: Checking Existence Of Edge Length Limited Paths
     # Key idea: offline Kruskal — sort edges and queries by weight, union edges up to
     #           each query's limit, then test whether the two nodes share a root.
