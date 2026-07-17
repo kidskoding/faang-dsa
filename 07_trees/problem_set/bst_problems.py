@@ -102,3 +102,12 @@ def recover_tree(root: TreeNode | None) -> None:
     # Space:
 
     raise NotImplementedError
+
+
+def convert_bst(root: TreeNode | None) -> TreeNode | None:
+    # Problem 28: Convert BST To Greater Tree
+    # Key idea: reverse inorder (right, node, left) carrying a running sum of all greater values.
+    # Time:
+    # Space:
+
+    raise NotImplementedError

@@ -196,3 +196,30 @@ def distance_k(
     # Space:
 
     raise NotImplementedError
+
+
+def width_of_binary_tree(root: TreeNode | None) -> int:
+    # Problem 16: Maximum Width Of Binary Tree
+    # Key idea: BFS carrying heap-style position indices; width is last minus first index per level.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+def find_bottom_left_value(root: TreeNode | None) -> int:
+    # Problem 17: Find Bottom Left Tree Value
+    # Key idea: BFS level by level, remembering the first value of each level; the last remembered wins.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+def is_cousins(root: TreeNode | None, x: int, y: int) -> bool:
+    # Problem 18: Cousins In Binary Tree
+    # Key idea: BFS tracking each target's depth and parent; cousins share depth but not parent.
+    # Time:
+    # Space:
+
+    raise NotImplementedError

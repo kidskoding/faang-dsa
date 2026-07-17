@@ -204,27 +204,9 @@ def lca_deepest_leaves(root: TreeNode | None) -> TreeNode | None:
     raise NotImplementedError
 
 
-def rob(root: TreeNode | None) -> int:
-    # Problem 13: House Robber III
-    # Key idea: return a rob/skip pair from each subtree.
-    # Time:
-    # Space:
-
-    raise NotImplementedError
-
-
 def max_path_sum(root: TreeNode | None) -> int:
     # Problem 14: Binary Tree Maximum Path Sum
     # Key idea: choose whether to continue a path through a node.
-    # Time:
-    # Space:
-
-    raise NotImplementedError
-
-
-def min_camera_cover(root: TreeNode | None) -> int:
-    # Problem 15: Binary Tree Cameras
-    # Key idea: return a covered/needs-camera state from each subtree.
     # Time:
     # Space:
 

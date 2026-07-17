@@ -153,3 +153,15 @@ interview patterns working together; neither pattern alone finishes them.
 - solves: `max_number`
 - chains: greedy monotonic stack + k-way merge
 - Pattern: for each split, pick the max subsequence from each array with a monotonic stack, then merge the two greedily.
+
+### 22. [House Robber III](https://leetcode.com/problems/house-robber-iii/)
+
+- solves: `rob`
+- chains: tree post-order DFS + DP take/skip state
+- Pattern: the naive rob-or-skip recursion recomputes subtrees; returning a rob/skip pair up the DFS restores O(n).
+
+### 23. [Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/)
+
+- solves: `min_camera_cover`
+- chains: tree post-order DFS + greedy state machine
+- Pattern: each subtree reports covered / needs-camera / has-camera, and the parent greedily places cameras on demand.

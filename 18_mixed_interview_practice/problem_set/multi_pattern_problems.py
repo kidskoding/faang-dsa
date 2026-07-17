@@ -267,3 +267,28 @@ def max_number(nums1: list[int], nums2: list[int], k: int) -> list[int]:
     # Space:
 
     raise NotImplementedError
+
+
+class TreeNode:
+    def __init__(self, val: int = 0, left: "TreeNode | None" = None, right: "TreeNode | None" = None) -> None:
+        self.val = val
+        self.left = left
+        self.right = right
+
+
+def rob(root: TreeNode | None) -> int:
+    # Problem 22: House Robber III
+    # Key idea: post-order DFS where each subtree returns a rob/skip pair; naive recursion recomputes subtrees.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+def min_camera_cover(root: TreeNode | None) -> int:
+    # Problem 23: Binary Tree Cameras
+    # Key idea: post-order DFS returning a covered/needs-camera/has-camera state, resolved greedily at each parent.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
