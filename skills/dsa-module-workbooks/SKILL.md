@@ -1,6 +1,7 @@
-______________________________________________________________________
-
-## name: dsa-module-workbooks description: Create and update DSA curriculum modules with a single workbook, problem ladder, stubs, and tests for fundamentals, mediums, and hard extensions.
+---
+name: dsa-module-workbooks
+description: "Create and update DSA curriculum modules with a single workbook, problem ladder, stubs, and tests for fundamentals, mediums, and hard extensions."
+---
 
 # DSA Module Workbooks
 

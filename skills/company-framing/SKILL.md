@@ -1,6 +1,7 @@
-______________________________________________________________________
-
-## name: company-framing description: Use when creating mock interview problems, company OA-style questions, or disguising a LeetCode problem as a company-themed story — e.g. building a mock interview for a specific company, writing problem docs under mock-interviews/, or when the user invokes /company-framing.
+---
+name: company-framing
+description: Use when creating mock interview problems, company OA-style questions, or disguising a LeetCode problem as a company-themed story — e.g. building a mock interview for a specific company, writing problem docs under mock-interviews/, or when the user invokes /company-framing.
+---
 
 # Company Problem Framing
 
@@ -15,9 +16,7 @@ A problem doc has these sections, in this order, and nothing else:
 1. `# Problem N: <Themed Title>` — story title, tied to the company's domain
    (fintech for Robinhood, logistics for Amazon, etc.)
 1. Story paragraphs — themed entities (services, trades, packages…), then the
-   ask as a plain directive: "Return the …". End the ask with the complexity
-   prompt: "Evaluate the time and space complexity of your solution…" when the
-   problem warrants it.
+   ask as a plain directive: "Return the …".
 1. `## Reference` — data-structure class definition only (e.g. a themed
    `TreeNode`), present only when the input is a linked structure.
 1. `## Examples` — 2–4 `### Example N` blocks with themed Input/Output;
@@ -35,6 +34,9 @@ A problem doc has these sections, in this order, and nothing else:
 - **Source link goes at the bottom**, never under the title — a source link
   up top spoils the pattern before the story is read.
 - **No `Difficulty:` label.** Interviewers don't announce difficulty.
+- **No complexity-evaluation boilerplate.** Never include "Evaluate the time
+  and space complexity of your solution…" or any variant — complexity
+  discussion happens live in the interview, not in the prompt.
 - **No meta hints** ("this tests BFS", "hint: use two pointers"). Prompt-only.
 - **Never name the underlying LeetCode problem or pattern in the prose.**
 - Story must be a real disguise: rename every entity (nodes → services,

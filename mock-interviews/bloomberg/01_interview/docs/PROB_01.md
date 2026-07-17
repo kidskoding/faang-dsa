@@ -12,10 +12,6 @@ identifying any false clues.
 Return an array containing all values that are part of any cycle in `evidence`.
 Return the values in any order.
 
-Evaluate the time and space complexity of your solution. Define your variables
-and provide a rationale for why you believe your solution has the stated time
-and space complexity.
-
 ## Reference
 
 ```python

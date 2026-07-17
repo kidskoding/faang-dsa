@@ -16,10 +16,6 @@ Given the root of the service tree, a reference to the alarming service node
 the IDs of all services exactly `k` hops away from `alarm`. Return them in
 any order.
 
-Evaluate the time and space complexity of your solution. Define your
-variables and provide a rationale for why you believe your solution has the
-stated time and space complexity.
-
 ## Reference
 
 ```python

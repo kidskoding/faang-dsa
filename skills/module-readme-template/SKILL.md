@@ -1,6 +1,7 @@
-______________________________________________________________________
-
-## name: module-readme-template description: Create or update numbered DSA module README files with a consistent module header, topics, notes index, problem set index, and additional notes section.
+---
+name: module-readme-template
+description: "Create or update numbered DSA module README files with a consistent module header, topics, notes index, problem set index, and additional notes section."
+---
 
 # Module README Template
 

@@ -1,6 +1,7 @@
-______________________________________________________________________
-
-## name: dsa-curriculum-workflow description: Streamline DSA module updates across the repo by keeping module READMEs, workbooks, tests, and implementation files aligned to one consistent curriculum workflow.
+---
+name: dsa-curriculum-workflow
+description: "Streamline DSA module updates across the repo by keeping module READMEs, workbooks, tests, and implementation files aligned to one consistent curriculum workflow."
+---
 
 # DSA Curriculum Workflow
 

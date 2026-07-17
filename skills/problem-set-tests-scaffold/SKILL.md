@@ -1,6 +1,7 @@
-______________________________________________________________________
-
-## name: problem-set-tests-scaffold description: Use when adding or mirroring a module problem_set and its pytest suite in this DSA repo (e.g. "mirror the trees problem set for X", "scaffold a problem set for heaps", "write the tests file"), to reproduce the exact folder layout, stub header format, test helper convention, namespace-package import style, and pyproject pythonpath wiring.
+---
+name: problem-set-tests-scaffold
+description: 'Use when adding or mirroring a module problem_set and its pytest suite in this DSA repo (e.g. "mirror the trees problem set for X", "scaffold a problem set for heaps", "write the tests file"), to reproduce the exact folder layout, stub header format, test helper convention, namespace-package import style, and pyproject pythonpath wiring.'
+---
 
 # Problem Set + Tests Scaffold
 
