@@ -1,2 +1,2 @@
-def prob02(deposits: list[int], days: int) -> int:
+def prob02(trades: list[int], target: int) -> int:
     pass
