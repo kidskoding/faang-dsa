@@ -1,5 +1,18 @@
 # faang-dsa
 
+## Session Ritual
+
+At the start of every session, ask once: **"Anirudh, what did you finish?"**
+(skip if already reported today). From the plain-English answer, update the
+Notion Problem Set Grind Board (data source
+`collection://9660e71e-2956-48ee-b02d-a4bd29a68438`, `Status` select):
+cold first solve → In progress; hint/solution used → Needs review;
+**Mastered only on a cold redo on a later day — refuse same-day Mastered.**
+Confirm old → new statuses briefly. "Needs review" cards surface in the next
+8 AM Daily Brief automatically.
+
+______________________________________________________________________
+
 ## Goal
 
 A teaching-first DSA curriculum for SWE internship, co-op, and new-grad interviews targeting Meta, Amazon, Microsoft, Apple, Google, Airbnb, Bloomberg, Coinbase, Palantir, Salesforce, TikTok/ByteDance, Oracle, NVIDIA, Snowflake, Databricks, Capital One, IBM, OpenAI, ServiceNow, Uber, and analogous FAANG+ companies.
