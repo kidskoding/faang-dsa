@@ -44,10 +44,11 @@ alarm = the node with ID 5
 k = 2
 
 Output: [7, 4, 1]
-```
 
+Explanation:
 The services 7 and 4 are two hops below service 5. Service 1 is two hops
 away going up through the root: 5 -> 3 -> 1.
+```
 
 ### Example 2
 

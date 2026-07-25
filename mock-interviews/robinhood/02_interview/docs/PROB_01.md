@@ -25,9 +25,10 @@ end    = [3, 4, 5, 6]
 profit = [50, 10, 40, 70]
 
 Output: 120
-```
 
+Explanation:
 Book window 0 (time 1–3, $50) and window 3 (time 3–6, $70).
+```
 
 ### Example 2
 
@@ -38,11 +39,12 @@ end    = [3, 5, 10, 6, 9]
 profit = [20, 20, 100, 70, 60]
 
 Output: 150
-```
 
+Explanation:
 Book window 0 (time 1–3, $20), window 3 (time 4–6, $70), and window 4
 (time 6–9, $60) for $150. Taking the single $100 window instead caps the
 desk at $120.
+```
 
 ### Example 3
 
@@ -53,9 +55,10 @@ end    = [2, 3, 4]
 profit = [5, 6, 4]
 
 Output: 6
-```
 
+Explanation:
 All three windows overlap; only one can be booked.
+```
 
 ## Constraints
 

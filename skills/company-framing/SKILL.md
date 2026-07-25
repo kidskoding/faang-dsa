@@ -21,6 +21,9 @@ A problem doc has these sections, in this order, and nothing else:
    `TreeNode`), present only when the input is a linked structure.
 1. `## Examples` — 2–4 `### Example N` blocks with themed Input/Output;
    include at least one edge case (single node, empty result, boundary split).
+   Any prose justifying an output goes **inside the same code block**, on an
+   `Explanation:` line after the `Output:` line — never as a loose paragraph
+   after the fence.
 1. `## Constraints` — text code block, LeetCode-style bounds restated in
    themed terms.
 1. `## Follow-up` — optional; a harder verbal extension.
@@ -68,3 +71,4 @@ solution doesn't drop in unchanged.
 | "Write a function `foo(...)`" in prose | Plain directive: "Return the …"                 |
 | Difficulty or pattern named            | Delete it                                       |
 | Themed intro + verbatim LeetCode body  | Rename every entity in examples/constraints too |
+| Explanation prose after the code fence | Move it inside the fence as `Explanation:`      |
