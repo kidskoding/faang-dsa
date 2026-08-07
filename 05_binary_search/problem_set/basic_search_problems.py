@@ -7,17 +7,7 @@ def search(nums: list[int], target: int) -> int:
     # Time:
     # Space:
 
-    low, high = 0, len(nums) - 1
-    while low <= high:
-        mid = (low + high) // 2
-        if nums[mid] > target:
-            high = mid - 1
-        elif nums[mid] < target:
-            low = mid + 1
-        else:
-            return mid
-
-    return -1
+    raise NotImplementedError
 
 
 def search_insert(nums: list[int], target: int) -> int:
@@ -26,17 +16,7 @@ def search_insert(nums: list[int], target: int) -> int:
     # Time:
     # Space:
 
-    low, high = 0, len(nums) - 1
-    while low <= high:
-        mid = (low + high) // 2
-        if nums[mid] > target:
-            high = mid - 1
-        elif nums[mid] < target:
-            low = mid + 1
-        else:
-            return mid
-
-    return low
+    raise NotImplementedError
 
 
 def search_matrix(matrix: list[list[int]], target: int) -> bool:
@@ -45,22 +25,7 @@ def search_matrix(matrix: list[list[int]], target: int) -> bool:
     # Time:
     # Space:
 
-    if not matrix or not matrix[0]:
-        return False
-
-    rows, cols = len(matrix), len(matrix[0])
-    low, high = 0, rows * cols - 1
-    while low <= high:
-        mid = (low + high) // 2
-        val = matrix[mid // cols][mid % cols]
-        if val > target:
-            high = mid - 1
-        elif val < target:
-            low = mid + 1
-        else:
-            return True
-
-    return False
+    raise NotImplementedError
 
 
 def search_matrix_ii(matrix: list[list[int]], target: int) -> bool:
@@ -69,20 +34,7 @@ def search_matrix_ii(matrix: list[list[int]], target: int) -> bool:
     # Time:
     # Space:
 
-    if not matrix or not matrix[0]:
-        return False
-
-    row, col = 0, len(matrix[0]) - 1
-    while row < len(matrix) and col >= 0:
-        val = matrix[row][col]
-        if val > target:
-            col -= 1
-        elif val < target:
-            row += 1
-        else:
-            return True
-
-    return False
+    raise NotImplementedError
 
 
 def guess_number(n: int, guess: Callable[[int], int]) -> int:

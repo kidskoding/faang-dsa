@@ -7,18 +7,7 @@ def reverse_list(head: ListNode | None) -> ListNode | None:
     # Time:
     # Space:
 
-    if not head:
-        return None
-
-    prev = None
-    curr = head
-    while curr:
-        temp = curr.next
-        curr.next = prev
-        prev = curr
-        curr = temp
-
-    return prev
+    raise NotImplementedError
 
 
 def merge_two_lists(list1: ListNode | None, list2: ListNode | None) -> ListNode | None:
@@ -27,20 +16,7 @@ def merge_two_lists(list1: ListNode | None, list2: ListNode | None) -> ListNode 
     # Time:
     # Space:
 
-    dummy = ListNode(0)
-    tail = dummy
-    while list1 and list2:
-        if list1.val <= list2.val:
-            tail.next = list1
-            list1 = list1.next
-        else:
-            tail.next = list2
-            list2 = list2.next
-
-        tail = tail.next
-
-    tail.next = list1 if list1 else list2
-    return dummy.next
+    raise NotImplementedError
 
 
 def delete_duplicates(head: ListNode | None) -> ListNode | None:
@@ -49,17 +25,7 @@ def delete_duplicates(head: ListNode | None) -> ListNode | None:
     # Time:
     # Space:
 
-    if not head:
-        return None
-
-    curr = head
-    while curr.next:
-        if curr.val == curr.next.val:
-            curr.next = curr.next.next
-        else:
-            curr = curr.next
-
-    return head
+    raise NotImplementedError
 
 
 def delete_node(node: ListNode) -> None:

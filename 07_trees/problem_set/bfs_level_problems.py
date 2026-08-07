@@ -1,5 +1,3 @@
-import statistics
-from collections import deque
 
 from tree_node import TreeNode
 
@@ -10,28 +8,7 @@ def level_order(root: TreeNode | None) -> list[list[int]]:
     # Time:
     # Space:
 
-    if not root:
-        return []
-
-    res = []
-    queue = deque([root])
-    while queue:
-        level_size = len(queue)
-        curr_level = []
-
-        for _ in range(level_size):
-            node = queue.popleft()
-
-            if node:
-                curr_level.append(node.val)
-                if node.left:
-                    queue.append(node.left)
-                if node.right:
-                    queue.append(node.right)
-
-        res.append(curr_level)
-
-    return res
+    raise NotImplementedError
 
 
 def right_side_view(root: TreeNode | None) -> list[int]:
@@ -40,28 +17,7 @@ def right_side_view(root: TreeNode | None) -> list[int]:
     # Time:
     # Space:
 
-    if not root:
-        return []
-
-    res = []
-    queue = deque([root])
-    while queue:
-        level_size = len(queue)
-        curr_level = []
-
-        for _ in range(level_size):
-            node = queue.popleft()
-
-            if node:
-                curr_level.append(node.val)
-                if node.left:
-                    queue.append(node.left)
-                if node.right:
-                    queue.append(node.right)
-
-        res.append(curr_level[-1])
-
-    return res
+    raise NotImplementedError
 
 
 def minimum_depth(root: TreeNode | None) -> int:
@@ -70,33 +26,7 @@ def minimum_depth(root: TreeNode | None) -> int:
     # Time:
     # Space:
 
-    if not root:
-        return 0
-
-    min_depth = 1
-
-    queue = deque([root])
-    while queue:
-        level_size = len(queue)
-        curr_level = []
-
-        for _ in range(level_size):
-            node = queue.popleft()
-
-            if not node.left and not node.right:
-                return min_depth
-
-            if node:
-                curr_level.append(node.val)
-
-                if node.left:
-                    queue.append(node.left)
-                if node.right:
-                    queue.append(node.right)
-
-        min_depth += 1
-
-    return min_depth
+    raise NotImplementedError
 
 
 def average_of_levels(root: TreeNode | None) -> list[float]:
@@ -105,29 +35,7 @@ def average_of_levels(root: TreeNode | None) -> list[float]:
     # Time:
     # Space:
 
-    if root is None:
-        return []
-
-    res = []
-    queue = deque([root])
-    while queue:
-        level_size = len(queue)
-        curr_level = []
-
-        for _ in range(level_size):
-            node = queue.popleft()
-
-            if node:
-                curr_level.append(node.val)
-
-                if node.left:
-                    queue.append(node.left)
-                if node.right:
-                    queue.append(node.right)
-
-        res.append(statistics.mean(curr_level))
-
-    return res
+    raise NotImplementedError
 
 
 def zigzag_level_order(root: TreeNode | None) -> list[list[int]]:
@@ -136,35 +44,7 @@ def zigzag_level_order(root: TreeNode | None) -> list[list[int]]:
     # Time:
     # Space:
 
-    if root is None:
-        return []
-
-    res = []
-    queue = deque([root])
-    zigzag = False
-    while queue:
-        level_size = len(queue)
-        curr_level = []
-
-        for _ in range(level_size):
-            node = queue.popleft()
-
-            if node:
-                curr_level.append(node.val)
-
-                if node.left:
-                    queue.append(node.left)
-                if node.right:
-                    queue.append(node.right)
-
-        if zigzag:
-            res.append(list(reversed(curr_level)))
-        else:
-            res.append(curr_level)
-
-        zigzag = not zigzag
-
-    return res
+    raise NotImplementedError
 
 
 def connect(root: TreeNode | None) -> TreeNode | None:
