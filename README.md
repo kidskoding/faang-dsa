@@ -30,6 +30,31 @@ learn pattern -> solve timed problems -> review misses -> re-solve -> mix topics
 
 The notes are for understanding. The problem sets are for reps. The review loop is what makes the patterns automatic.
 
+## Local Checks
+
+CI runs lint, formatting, and tests. Run the same commands before pushing:
+
+```bash
+uv sync --group dev
+
+uv run ruff check .          # lint
+uv run ruff format --check . # formatting (CI fails here if a file needs reformatting)
+uv run pytest                # tests
+```
+
+To fix issues instead of just reporting them:
+
+```bash
+uv run ruff format .         # reformat Python
+uv run ruff check --fix .    # auto-fix lint
+```
+
+Markdown is checked with `mdformat`:
+
+```bash
+uv run mdformat README.md    # or any .md path
+```
+
 ## Repository Layout
 
 ```text
