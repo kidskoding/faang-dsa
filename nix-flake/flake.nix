@@ -9,6 +9,7 @@
     in {
       devShells.${system}.default = pkgs.mkShell {
         buildInputs = [
+          pkgs.ruff
           pkgs.uv
 
           pkgs.python313
