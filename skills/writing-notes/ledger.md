@@ -39,9 +39,9 @@ Every later note may assume Big-O notation and Python fluency without comment.
 
 | Note                       | Establishes                                                                                                                 |
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| 01_opposite_end_pointers   | Converging pointers on sorted input, why each move is forced, when a hash set beats it                                      |
-| 02_same_direction_pointers | Read/write cursor pair, the `write <= read` invariant, in-place filtering, swapping, writing backwards, three-way partition |
-| 03_in_place_mutation (absorbed) | Covered by `02_same_direction_pointers`; no standalone note exists                                                     |
+| 01_opposite_end_pointers | Forced converging-pointer movement; symmetric end scans; fixed-value plus pair scans; duplicate skipping and grouped counting; extreme pairing; width and boundary proofs |
+| 02_same_direction_pointers | Read/write cursors and the `write <= read` invariant; in-place filtering and swapping; backward writes; forward-only boundaries; value-to-index fast/slow traversal; three-way partitioning |
+| 03_in_place_mutation (absorbed) | Swapping, backward writing, stale-tail semantics, and three-way partitioning are covered by `02_same_direction_pointers`; no standalone note exists |
 
 ## 03_stacks_and_queues
 
