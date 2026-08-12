@@ -17,11 +17,11 @@ Update this file whenever a note is added, renamed, or changes what it covers.
 
 | Note                         | Establishes                                                                   |
 | ---------------------------- | ----------------------------------------------------------------------------- |
-| 01_how_to_prep               | Study method, interview formats, what companies score                         |
-| 02_python_basics             | Python syntax, `dict`/`set`/`list`, slicing, comprehensions, `heapq`, `deque` |
-| 03_time_and_space_complexity | Big-O, amortized cost, how to read `O(n log n)`, space accounting             |
-| 04_common_operation_costs    | Cost table for list/dict/set/heap/deque operations                            |
-| 05_interview_problem_solving | Clarify → brute force → optimize → code → test loop; narrating out loud       |
+| 01_how_to_prep               | Learn → focused practice → specific review → later cold re-solve → mixed practice; OA/live/mock progression |
+| 02_python_basics             | Interview Python; functions/type hints; iteration; mutation/aliasing; `list`/`dict`/`set`/tuple; slicing; sorting; comprehensions; `heapq`; `deque` |
+| 03_time_and_space_complexity | Big-O derivation; named input variables; sequential/nested/halving work; worst case; output vs auxiliary space; amortized analysis |
+| 04_common_operation_costs    | Documented list/dict/set/deque/heap/string/sort costs; average vs worst vs amortized bounds; choosing by the repeated operation |
+| 05_interview_problem_solving | Natural clarify → example → brute force → bottleneck → optimize → code → test → analyze conversation; invariants, debugging, hints, and follow-ups |
 
 Every later note may assume Big-O notation and Python fluency without comment.
 

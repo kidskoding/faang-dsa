@@ -1,420 +1,141 @@
-# General Technical Interview Preparation
+# How to Prepare
 
-## Pattern
+Technical interview preparation is the process of turning a new idea into
+something you can recognize, code, and explain without notes. Solving a large
+number of random problems can feel productive, but it gives weak feedback: when
+you get stuck, you cannot tell whether you missed the underlying idea or simply
+had not learned it yet.
 
-Top tech preparation is a training system, not just a pile of LeetCode problems.
-
-The loop is:
-
-```text
-learn pattern -> practice focused problems -> review misses -> re-solve -> mix topics -> mock interview
-```
-
-The notes teach the patterns. The module problem sets build targeted reps. The company problem sets help with targeting. Mixed practice and mocks turn pattern knowledge into interview performance.
-
-## Intuition
-
-Top tech interviews usually test a combination of:
-
-- data structures and algorithms
-- implementation speed
-- pattern recognition
-- debugging ability
-- communication
-- edge-case handling
-- complexity analysis
-- ability to recover when stuck
-
-Different rounds emphasize different parts.
-
-OAs reward speed and correctness under time pressure.
-
-Phone screens and live coding reward clear thinking, clean implementation, and communication.
-
-Final-round technical interviews often reward consistency across multiple patterns, not just one memorized trick.
-
-The goal is not to memorize solutions. The goal is to recognize the pattern, derive the helper shape, code cleanly, and explain the tradeoffs.
-
-## How This Repo Should Be Used
-
-Use each module in this order:
+The shortest useful loop is:
 
 ```text
-1. Read the module README.
-2. Read the notes for the pattern.
-3. Implement or review the core helper/data structure file.
-4. Solve the module problem set in order.
-5. Run focused tests when available.
-6. Write down misses.
-7. Re-solve missed problems after 3-7 days.
-8. Mix the topic with older topics.
+learn one pattern -> solve focused problems -> record the miss -> re-solve cold
 ```
 
-Reading gives you the map. Solving gives you the skill. Re-solving turns the skill into recall.
+A **pattern** is a reusable way to organize a solution, such as keeping a set of
+values already seen or moving two indices through an array. You will learn each
+pattern in the notes before the problem set asks you to recognize it.
 
-## The Core Prep Loop
+## Use the Book in Order
 
-For every topic, repeat this loop:
+Each numbered module has one job. Its notes teach the idea, and its problem set
+turns that idea into recall. Work through a module like this:
+
+1. Read one note and explain its main idea in your own words.
+2. Type the important code yourself instead of copying it.
+3. Solve the matching problem-set section in order.
+4. Record why you got stuck or why your first solution failed.
+5. Re-solve misses on a later day without the note or solution open.
+
+The first few problems are **focused practice**: you know which module you are
+in, so recognizing the pattern is deliberately easier. After several modules,
+add **mixed practice**, where the topic label is hidden. That is when you learn
+to choose a pattern instead of merely applying the one you were told to use.
+
+Do not start with company lists. A company list changes which patterns you
+practice more often; it does not replace learning those patterns. Build core
+coverage first, then use mixed and company-specific sets to aim your review.
+
+## A Miss Is Useful Only When It Is Specific
+
+"I got confused" gives your future self nothing to fix. A useful review names
+the decision that went wrong:
 
 ```text
-understand -> implement -> practice -> review -> re-solve -> mix
+Problem: shortest path through an unweighted grid
+Miss: used depth-first search and had no guarantee of finding the shortest path
+Correction: breadth-first search processes positions one distance layer at a time
+Re-solve: Friday, without notes
 ```
 
-### Understand
+Keep this record short. You are not writing a second solution. You are storing
+the clue that should change your next attempt.
 
-Read the notes until you can explain the pattern without looking.
+Classify each attempt honestly:
 
-You should be able to say:
+- A **cold solve** means you derived and coded the solution without seeing a
+  hint, explanation, or old code.
+- If you needed a hint or solution, the problem needs review even if you later
+  typed correct code.
+- A problem is **mastered** only after a cold re-solve on a later day. Immediate
+  recall after reading a solution mostly measures short-term memory.
+
+When you review, cover the solution and start from an empty editor. If you only
+read your old code, you are practicing recognition, while the interview asks for
+recall.
+
+## Spend Time Where the Failure Is
+
+Use the failure to choose the next kind of practice:
+
+| What happens                                        | What it usually means                      | Next action                                             |
+| --------------------------------------------------- | ------------------------------------------ | ------------------------------------------------------- |
+| You do not know how to begin                        | The pattern is not understood yet          | Reread the relevant note and do focused problems        |
+| You can explain the idea but cannot finish the code | The implementation is not automatic yet    | Type the core shape, then solve another focused problem |
+| You solve by module but not from a random list      | Recognition is weak                        | Add mixed problems without topic labels                 |
+| Your code is nearly right but fails edge cases      | Testing and state tracking are weak        | Trace small inputs by hand before submitting            |
+| You solve silently but struggle in mocks            | The live-coding conversation is unfamiliar | Narrate normal practice out loud                        |
+
+This is more useful than a fixed daily quota. Two carefully reviewed problems
+can repair a weakness that ten unchecked submissions leave untouched.
+
+## Add Time Pressure Gradually
+
+An **online assessment (OA)** is usually a timed set that rewards correct code
+and quick pattern recognition. A live interview also evaluates how you clarify,
+reason, test, and respond to hints. Do not train both formats from the first day.
+
+Use three stages:
+
+1. Learn without a timer. Stop to understand every decision.
+2. Solve focused and mixed problems with a generous target time.
+3. Add timed sets and mock interviews once the common implementations no longer
+   consume all your attention.
+
+During an OA, scan the whole set, take the most reliable points first, and move
+on when one problem is consuming the rest of the assessment. During a live
+interview, keep the interviewer with you. Twenty silent minutes followed by code
+is weaker evidence than a clear approach, a stated tradeoff, and steady progress.
+
+The next four notes teach the Python, complexity language, operation costs, and
+conversation that every later module assumes.
+
+## A Sustainable Review Rhythm
+
+You do not need an elaborate calendar. Every study block should contain at least
+one of these:
+
+- **Learn:** read a new note and type its core code.
+- **Practice:** solve problems from that note's module.
+- **Review:** inspect one miss and write the exact correction.
+- **Recall:** re-solve an older miss cold.
+- **Perform:** solve a mixed problem or run a mock out loud.
+
+New material and recall should both appear in a normal week. If you only learn
+new topics, older ones decay. If you only repeat comfortable topics, your
+coverage stops growing.
+
+## Summary
+
+- Preparation turns a pattern into something you can recognize, code, test, and
+  explain without notes; raw problem count is not the goal.
+- The shortest useful loop is to learn one pattern, solve focused problems,
+  record the exact miss, and re-solve it cold on a later day.
+- Notes teach, module problem sets build focused recall, mixed sets train pattern
+  choice, and mocks train the full live-coding performance.
+- A hint-assisted solve still needs review, because understanding a revealed
+  answer is different from deriving it from an empty editor.
+- Time pressure belongs after the common ideas and implementations are stable;
+  otherwise the timer only rehearses getting stuck.
+
+## Preparation Checklist
 
 ```text
-This is the pattern.
-This is when I use it.
-This is the state or invariant.
-This is the base case.
-This is the complexity.
+Can I explain the current pattern without looking at the note?
+Did I type the important code myself?
+Did I record the exact reason for each miss?
+Did I schedule a cold re-solve on a later day?
+Am I mixing older topics after focused practice?
+Am I practicing some solutions out loud?
+Does my next study block target the failure I am actually having?
 ```
-
-### Implement
-
-Write the core technique yourself.
-
-Examples:
-
-- binary search template
-- tree DFS helper
-- BFS queue loop
-- sliding window shrink loop
-- heap push/pop usage
-- backtracking choose/explore/unchoose
-- DP state and transition
-
-### Practice
-
-Do focused problems from the module problem set.
-
-At this stage, it is okay that the topic is known. You are building the muscle memory for that pattern.
-
-### Review
-
-After each miss, write the concrete reason.
-
-Bad review:
-
-```text
-I got confused.
-```
-
-Good review:
-
-```text
-I used DFS for shortest path in an unweighted grid. Correct pattern was BFS because first visit gives shortest distance.
-```
-
-### Re-Solve
-
-Re-solve misses 3-7 days later without looking.
-
-If you cannot solve it the second time, it was not learned yet.
-
-### Mix
-
-After focused practice, do mixed problems without topic labels.
-
-This is what makes the prep interview-realistic.
-
-## Daily Prep Template
-
-For a normal study day:
-
-```text
-30-45 min: read/review notes for one pattern
-90-120 min: solve 2-4 focused problems from that module
-30 min: review misses and write what went wrong
-30-45 min: re-solve one old missed problem
-```
-
-For a heavier practice day:
-
-```text
-20 min: review notes for weak patterns
-2-3 hours: timed problem solving
-30-45 min: postmortem and re-solve one miss
-```
-
-For a lighter maintenance day:
-
-```text
-20 min: reread one note
-35 min: solve one medium
-15 min: write complexity and edge cases
-```
-
-## Weekly Prep Template
-
-A strong weekly rhythm:
-
-```text
-Day 1: focused module notes + fundamentals
-Day 2: focused module problem set
-Day 3: harder problems from the same module
-Day 4: mixed review from older modules
-Day 5: company problem set practice
-Day 6: mock interview or timed OA-style set
-Day 7: review, re-solve misses, light notes
-```
-
-The common failure mode is doing only new problems. The review and re-solve days are what make patterns stick.
-
-## Topic Priority
-
-For top tech technical interviews, prioritize the core modules first:
-
-```text
-arrays and hashing
-two pointers
-sliding window
-stack
-binary search
-linked lists
-trees
-heaps
-backtracking
-graphs
-dynamic programming
-greedy algorithms
-intervals
-tries
-```
-
-Then add lower-frequency or advanced topics:
-
-```text
-bit manipulation
-math and geometry
-union find
-shortest paths
-minimum spanning tree
-segment tree
-Fenwick tree
-advanced string algorithms
-```
-
-Advanced topics are useful, but they should not come before fluency in the core patterns.
-
-## Company Targeting
-
-Use company problem sets after you have basic pattern coverage.
-
-The right order is:
-
-```text
-module notes -> module problem set -> mixed practice -> company problem set
-```
-
-Company sets are not magic. They help you bias practice toward likely patterns.
-
-Examples:
-
-- Google-style prep should emphasize trees, graphs, DP, backtracking, binary search, heaps, and recursion clarity.
-- Amazon-style prep should emphasize arrays, strings, hash maps, trees, graphs, heaps, and implementation speed.
-- Meta-style prep should emphasize arrays, strings, trees, graphs, recursion, and clean medium-speed execution.
-
-## OA Preparation
-
-OAs reward speed, correctness, and pattern recognition.
-
-Use this strategy:
-
-```text
-1. Scan all problems first.
-2. Solve the easiest reliable problem first.
-3. Avoid spending 30+ minutes stuck on one problem.
-4. Write simple correct code before optimizing.
-5. Test edge cases quickly.
-6. Return to harder problems with remaining time.
-```
-
-Common OA edge cases:
-
-- empty input
-- one element
-- duplicates
-- negative numbers
-- impossible target
-- disconnected graph
-- very large input
-- off-by-one boundaries
-- integer overflow in languages where it matters
-
-## Live Coding Preparation
-
-Live coding is not just solving. It is solving while communicating.
-
-Use this script:
-
-```text
-First, I will clarify the input, output, and edge cases.
-The brute force approach is ...
-The bottleneck is ...
-The better pattern is ...
-I will maintain this state/invariant ...
-Now I will code the base case/helper.
-Let's test the sample.
-Let's test edge cases.
-The time complexity is ...
-The space complexity is ...
-```
-
-Practice saying this out loud while coding. It will feel slower at first. That is the point.
-
-## Phone Screen Preparation
-
-For phone screens, the goal is to solve one or two medium problems cleanly.
-
-You need to show:
-
-- clear approach
-- correct code
-- reasonable speed
-- edge-case awareness
-- complexity analysis
-- ability to accept hints and adjust
-
-Do not silently code for 20 minutes. Keep the interviewer with you.
-
-## Mock Interview Preparation
-
-Do mocks after you have enough focused reps that the basics do not collapse.
-
-A useful mock should include:
-
-```text
-5 min: problem clarification and brute force
-25-35 min: coding and testing
-5-10 min: complexity, cleanup, follow-ups
-10 min: review after the mock
-```
-
-The post-mock review matters as much as the mock.
-
-## How To Know A Problem Is Done
-
-A problem is done only when you can:
-
-```text
-explain the pattern
-write the base case
-write the helper shape
-code it without looking
-test edge cases
-explain time and space
-re-solve it days later
-```
-
-If you needed heavy hints, mark it as a miss and re-solve it later.
-
-## Stuck Protocol
-
-When stuck, follow this sequence:
-
-```text
-1. Restate the problem in your own words.
-2. Write the brute force approach.
-3. Identify the bottleneck.
-4. Ask what pattern removes that bottleneck.
-5. Define the state, invariant, or helper return value.
-6. Write the smallest base case.
-7. Test on a tiny example.
-```
-
-Pattern signals:
-
-```text
-repeated lookup -> hashing
-sorted array -> binary search or two pointers
-contiguous subarray/string -> sliding window or prefix sum
-nearest level/shortest unweighted path -> BFS
-choose/explore/unchoose -> backtracking
-overlapping subproblems -> DP
-repeated min/max priority -> heap
-range overlap -> intervals
-prefix lookup -> trie
-```
-
-## Review Loop
-
-After every miss, write:
-
-```text
-Problem:
-Missed pattern:
-Bug:
-Correct idea:
-Re-solve date:
-```
-
-Keep the note short and concrete.
-
-Examples:
-
-```text
-Missed pattern: Prefix sum with hash map.
-Bug: Tried sliding window even though negative numbers were allowed.
-Correct idea: Count previous prefix sums equal to current_sum - target.
-```
-
-```text
-Missed pattern: Postorder tree DFS.
-Bug: Recomputed height at every node and got O(n^2).
-Correct idea: Return height and update answer in one DFS pass.
-```
-
-## Time Allocation
-
-A good prep split:
-
-```text
-20% notes and pattern review
-55% focused/timed problem solving
-15% reviewing and re-solving misses
-10% mixed practice or mocks
-```
-
-If you are failing problems because you do not recognize patterns, increase notes briefly.
-
-If you understand the notes but cannot code, increase timed reps.
-
-If you can solve by topic but fail random problems, increase mixed practice.
-
-## Pitfalls
-
-- Reading notes for hours without solving.
-- Solving random problems before learning the pattern.
-- Never re-solving missed problems.
-- Looking at solutions too early.
-- Memorizing exact code instead of understanding helper shapes.
-- Avoiding weak topics.
-- Practicing only by topic and never doing mixed sets.
-- Passing tests once and never revisiting the problem.
-- Doing company sets before learning the underlying modules.
-
-## Interview Checklist
-
-Before a serious top tech interview cycle, check:
-
-```text
-Can I solve core mediums in 25-35 minutes?
-Can I explain brute force before optimizing?
-Can I identify common patterns from constraints?
-Can I write tree and graph helpers without freezing?
-Can I write binary search boundaries cleanly?
-Can I handle sliding window and prefix sum cases?
-Can I define DP states for common DP problems?
-Can I test edge cases without being prompted?
-Can I explain time and space clearly?
-Have I re-solved my misses?
-Have I done mixed practice without topic labels?
-Have I done at least a few mock interviews out loud?
-```
-
-If the answer is no, the fix is focused reps and review.
