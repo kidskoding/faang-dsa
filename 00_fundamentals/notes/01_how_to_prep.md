@@ -42,9 +42,9 @@ coverage first, then use mixed and company-specific sets to aim your review.
 the decision that went wrong:
 
 ```text
-Problem: shortest path through an unweighted grid
-Miss: used depth-first search and had no guarantee of finding the shortest path
-Correction: breadth-first search processes positions one distance layer at a time
+Problem: find two values that add to a target in a sorted list
+Miss: checked every pair and ignored that the values were ordered
+Correction: use the ordering to rule out impossible pairs instead of rechecking them
 Re-solve: Friday, without notes
 ```
 

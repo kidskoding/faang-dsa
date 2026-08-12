@@ -34,8 +34,8 @@ answer exists. Use `is None` to test the absence marker, since `0`, `False`, and
 an empty container may all be valid values.
 
 Names created inside a function are local to that call. A helper function is
-useful when it gives a repeated piece of logic a clear contract, especially in
-recursion. Do not split a five-line scan into helpers merely to look organized.
+useful when it gives a repeated piece of logic a clear contract. Do not split a
+five-line scan into helpers merely to look organized.
 
 ## Move Through Values and Indices Deliberately
 
@@ -59,7 +59,7 @@ assert nums == [5, 3, 8]
 ```
 
 Tuple assignment performs the swap without a temporary variable. `zip(a, b)`
-pairs values from two iterables and stops when the shorter one ends, so clarify
+pairs values from two sequences and stops when the shorter one ends, so clarify
 whether unequal lengths are allowed before relying on it.
 
 Python ranges exclude the stop value. `range(start, stop)` includes `start` but
@@ -103,15 +103,18 @@ assert alias is original
 assert copy == [1, 2]
 ```
 
-This matters when a problem says not to mutate the input or when backtracking
-stores a path. Store `path.copy()` when you need the current snapshot; storing
-`path` stores another reference to the object that will keep changing.
+This matters when a problem says not to mutate the input or when it stores a
+path, changes that path, and later needs the earlier version. Store `path.copy()`
+when you need the current snapshot; storing `path` stores another reference to
+the object that will keep changing.
 
 ## Dictionaries and Sets Make Lookup Explicit
 
 A **dictionary** maps each unique key to a value. A **set** stores unique values
-without an associated value. Keys and set members must be hashable, so integers,
-strings, and tuples of hashable values work, while lists do not.
+without an associated value. Keys and set members must be **hashable**, which
+means Python can derive a stable lookup code from the value while it is stored.
+Integers, strings, and tuples containing only hashable values work, while lists
+do not.
 
 ```python
 def frequencies(nums: list[int]) -> dict[int, int]:
@@ -203,8 +206,8 @@ returns `None`, so do not write `words = words.sort()`.
 
 ## Comprehensions Are Useful Until They Hide the Idea
 
-A **comprehension** builds a container from an iterable. Use it when the
-expression remains easy to say in one sentence.
+A **comprehension** builds a container while looping over existing values. Use
+it when the expression remains easy to say in one sentence.
 
 ```python
 nums = [-2, -1, 0, 1, 2]

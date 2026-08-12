@@ -5,9 +5,11 @@ the input grows. It does not predict an exact number of milliseconds. Instead,
 it lets you compare approaches independently of the laptop, programming
 language, and particular small input used in a test.
 
-We write that growth with **Big-O notation**. If `n` is the number of input
-items, `O(n)` means the work grows in direct proportion to `n`, while `O(n²)`
-means it can grow in proportion to the number of pairs of items.
+We write that growth with **Big-O notation**, which gives an upper bound as the
+input becomes large. If `n` is the number of input items, `O(n)` means the work
+is eventually bounded above by a constant multiple of `n`; it does not promise
+exactly proportional growth. In interviews, give the tightest useful bound, so a
+one-pass scan is called `O(n)` rather than the also-true but unhelpful `O(n²)`.
 
 ## Start by Naming the Input
 
@@ -171,9 +173,15 @@ without assuming random input. Python list append is the standard example.
 
 Most appends place the new value into already allocated room. Occasionally the
 list runs out of room and allocates a larger backing array, copying the existing
-references. That one append costs `O(n)`, but the extra capacity means the copy
-does not happen on every append. Across `n` appends, the total copying remains
-`O(n)`, so each append is `O(1)` amortized.
+references. That one append costs `O(n)`.
+
+The bound comes from how the capacity grows: each resize adds space proportional
+to the current capacity, so resize sizes form a geometric sequence. The copied
+amounts look like `1 + c + c² + ... + n` for some constant growth factor `c > 1`.
+A geometric sequence is bounded by a constant multiple of its final term, so all
+resize copies across `n` appends total `O(n)`. The `n` ordinary writes add
+another `O(n)`, which makes the whole sequence `O(n)` and each append `O(1)`
+amortized.
 
 Amortized is not the same as average case:
 

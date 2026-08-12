@@ -21,7 +21,7 @@ Update this file whenever a note is added, renamed, or changes what it covers.
 | 02_python_basics             | Interview Python; functions/type hints; iteration; mutation/aliasing; `list`/`dict`/`set`/tuple; slicing; sorting; comprehensions; `heapq`; `deque` |
 | 03_time_and_space_complexity | Big-O derivation; named input variables; sequential/nested/halving work; worst case; output vs auxiliary space; amortized analysis |
 | 04_common_operation_costs    | Documented list/dict/set/deque/heap/string/sort costs; average vs worst vs amortized bounds; choosing by the repeated operation |
-| 05_interview_problem_solving | Natural clarify → example → brute force → bottleneck → optimize → code → test → analyze conversation; invariants, debugging, hints, and follow-ups |
+| 05_interview_problem_solving | Natural clarify → example → brute force → bottleneck → optimize → code/test narration → analyze conversation; invariants, debugging, hints, and follow-ups |
 
 Every later note may assume Big-O notation and Python fluency without comment.
 

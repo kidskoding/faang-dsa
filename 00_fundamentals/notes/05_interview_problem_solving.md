@@ -34,100 +34,69 @@ interviewer says to make a reasonable assumption, state it and continue:
 Walk through one small example before coding. A concrete example often exposes
 an ambiguity faster than another abstract question.
 
-## Let the Brute Force Reveal the Better Approach
+## What the Conversation Sounds Like
 
-The first solution does not need to be fast. It needs to be correct and useful.
-State the straightforward approach, derive its cost, and name the repeated work
-that makes it too slow for the constraints.
+The [previous note](04_common_operation_costs.md) already explains the container
+costs in this example. Here, the point is how a candidate moves through the
+decisions without turning the interview into a speech.
 
-Suppose the prompt is:
+> **Interviewer:** "Return whether a list of integers contains a repeated
+> value."
+>
+> **Candidate:** "Can the list be empty, may I change it, and roughly how large
+> can it be?"
+>
+> **Interviewer:** "It may be empty, do not change it, and assume it can be very
+> large."
+>
+> **Candidate:** "Then `[4, 1, 4]` should return `True`, while `[4, 1, 7]` should
+> return `False`. The direct approach compares each pair. That uses constant
+> extra space but takes `O(n²)` time, which is too much for a large input because
+> it repeatedly searches values it has already checked. I can keep the earlier
+> values in a set instead, making one pass in `O(n)` average time and using
+> `O(n)` extra space. Is that tradeoff acceptable?"
+>
+> **Interviewer:** "Yes. Go ahead and code it."
+>
+> **Candidate:** "I'll write the signature, create the set, and then scan the
+> values. The important branch checks whether the current value was seen before
+> I add it. After coding, I'll trace the repeated-value case, then check an empty
+> list and a list with no repeat."
+>
+> **Candidate, after testing:** "The normal and boundary cases behave as
+> expected. Let `n` be the list length. The scan is `O(n)` average time because
+> each set operation is `O(1)` average case, and the set uses `O(n)` auxiliary
+> space because it may hold every value."
 
-> Given a list of integers, return `True` if any value appears at least twice.
+The exchange is short, but it exposes the contract, a concrete example, the
+correct brute force, its bottleneck, the optimization and its tradeoff, the plan
+for code, the tests, and the final complexity. The algorithm details stay in the
+note that teaches container costs.
 
-For `[4, 1, 4]`, the answer is `True`; for `[4, 1, 7]`, it is `False`. A direct
-approach compares every pair. That is correct, but it examines up to
-`n(n - 1) / 2` pairs, so it takes `O(n²)` time.
-
-The repeated work is searching the earlier values again for every new value.
-The [Python container costs](04_common_operation_costs.md) suggest the repair: a
-set answers whether a value has already appeared in `O(1)` average time.
-
-> "I can trade `O(n)` extra space for `O(n)` average time by storing the values
-> already seen. Before adding each value, I'll check whether it is in the set."
-
-That explanation gives the interviewer the brute force, bottleneck, tradeoff,
-and invariant. The **invariant** is the fact that remains true while the
-algorithm runs: before processing the current value, `seen` contains exactly the
-values processed earlier.
-
-## Code in Explainable Chunks
+## Narrate Decisions While You Code
 
 Once the approach is agreed upon, write the signature and the important state.
-Narrate decisions, not every character you type.
+Narrate decisions, not every character you type. One sentence before each
+meaningful chunk is enough: what the state represents, what the loop maintains,
+and what makes a branch return or continue.
 
-```python
-def contains_duplicate(nums: list[int]) -> bool:
-    seen: set[int] = set()
-
-    for value in nums:
-        if value in seen:
-            return True
-        seen.add(value)
-
-    return False
-
-
-assert contains_duplicate([4, 1, 4]) is True
-assert contains_duplicate([4, 1, 7]) is False
-assert contains_duplicate([]) is False
-assert contains_duplicate([-2, -2]) is True
-```
-
-Useful narration here is short:
-
-> "The set starts empty. If the current value is already present, I have found
-> the required pair and can return immediately. Otherwise I add it. If the loop
-> finishes, every processed value was new, so I return `False`."
-
-The order of the check and insertion matters. Adding first would make every
-value look like a duplicate of itself. Explain that branch when you write it;
-do not wait for the interviewer to discover why it is there.
-
-Prefer direct names such as `seen`, `left`, `window_sum`, or `node`. Add a helper
-when it owns repeated logic or a recursive contract. Avoid polishing unrelated
-syntax while the core solution is still incomplete.
+The fact that must remain true while the code runs is an **invariant**. State it
+in ordinary language before the loop, since that gives both you and the
+interviewer something concrete to check. Prefer direct names such as `seen`,
+`left`, `total`, or `node`. Add a helper only when it owns repeated logic.
 
 ## Test the Decisions, Not Just the Sample
 
-Do not say "looks good" after coding. Trace a normal case through the important
-state, then choose edge cases that challenge decisions in your code.
+Do not say "looks good" after coding. Trace one normal case through the important
+state, then choose small inputs that challenge decisions in your code:
 
-For `[4, 1, 4]`:
+- Test the boundary, such as empty input or one item.
+- Exercise the branch that returns an answer and the path that finds no answer.
+- Include the special input property you clarified, such as duplicates or
+  negative values.
 
-```text
-value=4   seen={}       not present, add it       seen={4}
-value=1   seen={4}      not present, add it       seen={1, 4}
-value=4   seen={1, 4}   present, return True
-```
-
-Then test the boundaries:
-
-- `[]` and `[7]` both finish the loop and return `False`.
-- `[-2, -2]` confirms that negative values need no special treatment.
-- `[3, 3, 3]` confirms that the first repeated occurrence returns immediately.
-
-These tests are useful because they exercise the empty path, the no-answer path,
-and the early-return branch. A long random input is less informative to trace by
-hand.
-
-Finally volunteer the analysis:
-
-> "Let `n` be the number of values. I visit each value once and do an average
-> `O(1)` set lookup and insertion, so the time is `O(n)` average case. The set
-> can hold all `n` distinct values, so the auxiliary space is `O(n)`."
-
-The word "average" is important because set operations have a theoretical
-collision-heavy `O(n)` worst case.
+Say what each test proves. A long random input is less informative than a tiny
+case that reaches the branch most likely to be wrong.
 
 ## Keep Talking When You Are Stuck
 
@@ -142,8 +111,8 @@ help. Return to evidence you already have:
 
 If the interviewer gives a hint, acknowledge what changed:
 
-> "That suggests I should store previous prefix sums rather than only the
-> current window. Let me update the state I am maintaining."
+> "That suggests I should keep a summary of the earlier values instead of
+> rebuilding it each time. Let me update the state I am maintaining."
 
 Do not defend an old approach after its assumption has failed. Incorporating a
 hint cleanly is useful signal because real engineering also involves revising a
@@ -158,22 +127,21 @@ it first differs from what you expected. Common checks include:
 - Does a queue, stack, heap, or set store the full state needed later?
 - Is an index allowed to reach `len(values)`, or must it stop before it?
 
-Describe the bug before editing. "This check happens after the insertion, so the
-current value matches itself; I will move the check before the insertion" is
-better than changing several lines and hoping.
+Describe the bug before editing. "This index can reach the list length, so I
+will tighten the loop boundary" is better than changing several lines and
+hoping.
 
 ## Handle Follow-Ups from the Existing Solution
 
 An interviewer may change a constraint after the first solution. Start from the
 tradeoff you already stated:
 
-- If extra space is no longer allowed, the set solution may not fit; sorting
-  could group duplicates in `O(n log n)` time with different mutation or copy
-  costs.
-- If values arrive as a stream, the set logic still works, but memory grows with
-  the number of distinct values seen.
-- If the interviewer asks for duplicate counts rather than existence, a
-  dictionary replaces the set because each key now needs an associated count.
+- If extra memory is no longer allowed, revisit the approach that spent memory
+  to save time.
+- If the input can no longer be changed, identify whether your solution mutates
+  it and whether making a copy changes the space bound.
+- If the return value changes from one answer to every answer, identify whether
+  an early return or stored state must change.
 
 Explain what remains valid and what must change. Do not discard working code
 until the new requirement actually requires another approach.
@@ -183,8 +151,8 @@ until the new requirement actually requires another approach.
 - A live interview is a conversation that moves from a clear contract to an
   example, a correct brute force, its bottleneck, an improved approach, code,
   tests, and complexity.
-- The brute force is valuable when its repeated work leads directly to the data
-  structure or invariant used by the better solution.
+- The brute force is valuable when its repeated work leads directly to the state
+  or tradeoff used by the better solution.
 - Narrate decisions and tradeoffs rather than every line of syntax, and state the
   invariant before the loop that maintains it.
 - Test branches and boundaries with small inputs, because they reveal more than
