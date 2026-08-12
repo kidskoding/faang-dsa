@@ -56,10 +56,10 @@ Every later note may assume Big-O notation and Python fluency without comment.
 
 | Note                     | Establishes                                                                                                                                          |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 01_fixed_size_window     | Window of constant width, add-one/drop-one                                                                                                           |
-| 02_variable_size_window  | Expand-until-invalid, shrink-until-valid                                                                                                             |
-| 03_frequency_map_windows | Counts inside a window, delete-at-zero, matching character multisets, `have`/`need`/`formed` containment, `at_most(k) - at_most(k - 1)` for exact counts |
-| 04_window_max_min        | **Monotonic deque**: domination, fixed-width max, min variant, two deques for a spread, prefix-sum variant for negatives, and the three expiry rules |
+| 01_fixed_size_window     | Fixed vs variable width; prime/add/drop updates; sum, predicate-count, and set state; fixed base plus window gain; contiguous-complement windows |
+| 02_variable_size_window  | One-direction validity requirement; longest-invalid-shrink vs shortest-valid-shrink; at-most counting; budget/cost windows; last-seen jumps and stale positions; sorted raise-cost and bit-mask variants |
+| 03_frequency_map_windows | Membership vs multiplicity; delete-at-zero distinct counts; fixed multiset matching; `have`/`need`/`formed` containment; `at_most(k) - at_most(k - 1)` exact counts; complement and word-unit maps; order-sensitive near-miss; stale maximum-frequency proof |
+| 04_window_max_min        | **Monotonic deque** domination; index vs value entries; fixed max/min; fixed, left-pointer, and coordinate expiry; two-deque spread windows; negative-prefix shortest subarray; max-plus-sum state; fixed-bound last-position counting |
 
 ## 05_binary_search
 
