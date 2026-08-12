@@ -528,7 +528,9 @@ Templates are runnable Python with type hints, not pseudocode — the reader is
 practicing in Python. After the code block, walk the lines that carry the idea:
 why the tuple is ordered that way, why the check is on roots and not nodes, what
 happens if a line is omitted. Use `text` blocks for traces, diagrams, and
-complexity so they read as data.
+incidental cost references so they read as data. The dedicated `## Time and
+Space Complexity` section uses markdown tables; concise time/space bullets
+directly below a continuous worked-example solution are the exception.
 
 ### The dry run is the load-bearing section
 
