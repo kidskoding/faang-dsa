@@ -166,6 +166,71 @@ The dequeue on the line above also shows why the values are never cleared. Slot 
 still held a stale 10 for one step, and nothing read it, because `head` had already
 moved past
 
+The same `head` and `count` state extends to a **circular deque**. The front lives
+at `head`, the rear lives at `(head + count - 1) % capacity`, and the next free
+slot after the rear is `(head + count) % capacity`. Adding at the front first
+moves `head` backward; deleting at the front moves it forward. Adding or deleting
+at the rear changes only `count`, because the rear index is derived from it.
+
+```python
+class MyCircularDeque:
+    def __init__(self, k: int) -> None:
+        self.buf: list[int] = [0] * k
+        self.cap = k
+        self.head = 0
+        self.count = 0
+
+    def insert_front(self, value: int) -> bool:
+        if self.count == self.cap:
+            return False
+        self.head = (self.head - 1) % self.cap
+        self.buf[self.head] = value
+        self.count += 1
+        return True
+
+    def insert_last(self, value: int) -> bool:
+        if self.count == self.cap:
+            return False
+        rear_next = (self.head + self.count) % self.cap
+        self.buf[rear_next] = value
+        self.count += 1
+        return True
+
+    def delete_front(self) -> bool:
+        if self.count == 0:
+            return False
+        self.head = (self.head + 1) % self.cap
+        self.count -= 1
+        return True
+
+    def delete_last(self) -> bool:
+        if self.count == 0:
+            return False
+        self.count -= 1
+        return True
+
+    def get_front(self) -> int:
+        return -1 if self.count == 0 else self.buf[self.head]
+
+    def get_rear(self) -> int:
+        if self.count == 0:
+            return -1
+        return self.buf[(self.head + self.count - 1) % self.cap]
+```
+
+```text
+capacity=3
+insert_last(10)   buf=[10, 0, 0]   head=0 count=1   logical=[10]
+insert_front(5)   buf=[10, 0, 5]   head=2 count=2   logical=[5,10]
+insert_last(20)   buf=[10,20, 5]   head=2 count=3   logical=[5,10,20]
+delete_last()     buf=[10,20, 5]   head=2 count=2   logical=[5,10]
+delete_front()    buf=[10,20, 5]   head=0 count=1   logical=[10]
+```
+
+The deletion steps deliberately leave stale values in `buf`. Changing the
+boundary and count makes those slots unreachable, so clearing them would add work
+without changing the deque.
+
 ## collections.deque: Python's built-in queue/deque
 
 As mentioned previously, Python ships a queue/deque built from a linked chain of
@@ -177,17 +242,21 @@ You can import it from Python's collections (shown below):
 from collections import deque
 ```
 
-Below is an example of using a queue:
+For FIFO use, append new arrivals at the back and remove the oldest arrival from
+the front. The additional methods are for arbitrary double-ended use:
 
 ```python
 from collections import deque
 
-q: deque[int] = deque([10, 20])
-q.append(30)  # add at the back
-q.appendleft(5)  # add at the front
-oldest = q.popleft()  # remove from the front -> 5
-newest = q.pop()  # remove from the back  -> 30
-front, back = q[0], q[-1]
+fifo: deque[int] = deque([10, 20])
+fifo.append(30)
+oldest = fifo.popleft()  # 10 was first in, so it is first out
+
+double_ended: deque[int] = deque([10, 20])
+double_ended.appendleft(5)
+double_ended.append(30)
+leftmost = double_ended.popleft()  # 5
+rightmost = double_ended.pop()  # 30
 ```
 
 [Operation Costs](../../00_fundamentals/notes/04_common_operation_costs.md):
@@ -220,7 +289,9 @@ Interviewers may ask you to build a queue when the only structure you are given
 is a stack. Since stacks hand back the newest element and a queue needs the oldest, the
 order needs to somehow be reversed
 
-The best solution is to pop everything out of one stack and pushing it all into another stack. This in theory, reverses everything because the last thing out of the first stack is the first thing into the second
+The solution is to drain one stack into another. The oldest value was pushed into
+`in` first, so it is popped from `in` last and pushed into `out` last. That leaves
+the oldest value on top of `out`, ready to be popped first
 
 ```text
 in  = [1, 2, 3]        top is 3, the newest
@@ -295,15 +366,13 @@ transfer was correctly declined and 2 came out next. Had `_shift` run there, `ou
 would have become `[2, 3]` with 3 on top, and the next pop would have returned 3
 ahead of 2
 
-Only two of the five reads triggered a transfer, and that ratio is the amortized
+Only two of the four reads triggered a transfer, and that ratio is the amortized
 argument made visible. Element 3 was moved between stacks exactly once, on the
 final pop, no matter how many operations happened in between
 
 The inverse interview problem, implementing a stack with one queue, rotates the
 older items behind each new item after a push. That makes the newest item sit at
-the queue's front, so `pop` is `O(1)` while each `push` costs `O(n)`. For a
-circular deque, the ring-buffer idea is the same as above, but the head may move
-in either direction and both ends need full/empty guards
+the queue's front, so `pop` is `O(1)` while each `push` costs `O(n)`
 
 ## Counting Events In A Time Window
 

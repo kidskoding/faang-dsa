@@ -157,6 +157,93 @@ It is parked on the stack while the nested `c` section runs. Basic Calculator
 uses the same idea with a running result and sign, while Number Of Atoms parks a
 map of element counts.
 
+**Basic Calculator** reads a multi-digit number with
+`number = number * 10 + int(ch)`. When `+` or `-` arrives, it applies the previous
+sign with `result += sign * number`, then clears `number` and remembers the new
+sign. A `(` suspends the result and sign from before the parentheses. A `)` first
+finishes the number inside, then multiplies that subtotal by the saved sign and
+adds the saved result.
+
+```python
+def calculate(expression: str) -> int:
+    stack: list[int] = []
+    result = number = 0
+    sign = 1
+
+    for ch in expression:
+        if ch.isdigit():
+            number = number * 10 + int(ch)
+        elif ch in "+-":
+            result += sign * number
+            number = 0
+            sign = 1 if ch == "+" else -1
+        elif ch == "(":
+            stack.append(result)
+            stack.append(sign)
+            result = number = 0
+            sign = 1
+        elif ch == ")":
+            result += sign * number
+            number = 0
+            result *= stack.pop()  # sign before '('
+            result += stack.pop()  # result before '('
+
+    return result + sign * number
+```
+
+The sign is pushed after the result, so it comes back first. On `"1-(2+3)"`, the
+inner subtotal 5 is multiplied by `-1` and then added to the saved result 1,
+giving `-4`. Reversing those two pushes restores the wrong facts into the wrong
+roles.
+
+**Number Of Atoms** changes the saved state from integers to count maps. An
+uppercase letter plus its following lowercase letters form one atom token, and
+the digits after that token form its count. `(` starts a fresh map. At `)`, parse
+the multiplier, pop the completed inner map, multiply every count, and merge it
+into the map below.
+
+```python
+def count_of_atoms(formula: str) -> str:
+    stack: list[dict[str, int]] = [{}]
+    i = 0
+
+    while i < len(formula):
+        if formula[i] == "(":
+            stack.append({})
+            i += 1
+        elif formula[i] == ")":
+            i += 1
+            start = i
+            while i < len(formula) and formula[i].isdigit():
+                i += 1
+            multiplier = int(formula[start:i] or "1")
+            group = stack.pop()
+            for atom, count in group.items():
+                stack[-1][atom] = stack[-1].get(atom, 0) + count * multiplier
+        else:
+            start = i
+            i += 1
+            while i < len(formula) and formula[i].islower():
+                i += 1
+            atom = formula[start:i]
+
+            start = i
+            while i < len(formula) and formula[i].isdigit():
+                i += 1
+            count = int(formula[start:i] or "1")
+            stack[-1][atom] = stack[-1].get(atom, 0) + count
+
+    counts = stack[0]
+    return "".join(
+        atom + (str(counts[atom]) if counts[atom] > 1 else "")
+        for atom in sorted(counts)
+    )
+```
+
+For `"Mg(OH)2"`, the inner map becomes `{'O': 1, 'H': 1}`. Closing the group
+multiplies it to `{'O': 2, 'H': 2}` and merges those counts beside `Mg`. Sorting
+the final atom names produces the required `"H2MgO2"` output.
+
 ## Decide What Each Stack Entry Must Remember
 
 The operations hardly change between stack problems. The main design decision
@@ -220,11 +307,67 @@ Pairs also compress repeated state. Remove Adjacent Duplicates II stores
 `(character, count)`, Stock Span later stores `(price, span)`, and a frequency
 stack keeps a separate stack for each frequency so ties still resolve by recency.
 
+Maximum Frequency Stack makes that last idea concrete. `freq[value]` records the
+value's current frequency, `groups[f]` is a stack of values at frequency `f` in
+arrival order, and `max_freq` points at the only group `pop` may use. When that
+group becomes empty, decrementing `max_freq` exposes the next non-empty group.
+
+```python
+class FreqStack:
+    def __init__(self) -> None:
+        self.freq: dict[int, int] = {}
+        self.groups: dict[int, list[int]] = {}
+        self.max_freq = 0
+
+    def push(self, value: int) -> None:
+        frequency = self.freq.get(value, 0) + 1
+        self.freq[value] = frequency
+        self.groups.setdefault(frequency, []).append(value)
+        self.max_freq = max(self.max_freq, frequency)
+
+    def pop(self) -> int:
+        value = self.groups[self.max_freq].pop()
+        self.freq[value] -= 1
+        if not self.groups[self.max_freq]:
+            self.max_freq -= 1
+        return value
+```
+
+Values tied at `max_freq` come from the same list, so its normal LIFO pop returns
+the most recent tied value without comparing timestamps.
+
 **Store indices** when the answer depends on a position or distance. Minimum
 Remove To Make Valid Parentheses needs to delete specific characters, Longest
 Valid Parentheses measures a span, and the next note's
 [monotonic stacks](03_monotonic_stack.md) use indices to recover distances and
 boundaries.
+
+Longest Valid Parentheses starts its index stack with `-1`, a sentinel boundary
+just before the string. An unmatched `)` replaces that boundary with its own
+index. After a successful match, the current valid suffix begins one position
+after the boundary now on top, so its length is `i - stack[-1]`.
+
+```python
+def longest_valid_parentheses(s: str) -> int:
+    stack = [-1]
+    best = 0
+
+    for i, ch in enumerate(s):
+        if ch == "(":
+            stack.append(i)
+        else:
+            stack.pop()
+            if not stack:
+                stack.append(i)  # unmatched ')' becomes the new boundary
+            else:
+                best = max(best, i - stack[-1])
+
+    return best
+```
+
+On `")()())"`, index 0 is an unmatched boundary. The matches ending at indices
+2 and 4 measure `2 - 0 = 2` and `4 - 0 = 4`. Index 5 is unmatched, so it becomes
+the next boundary rather than contributing a length.
 
 Some problems use the stack as the result under construction. Simplify Path
 pushes directory names and pops on `..`; Remove Adjacent Duplicates pushes

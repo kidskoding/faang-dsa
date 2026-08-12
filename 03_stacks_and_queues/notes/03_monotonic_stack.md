@@ -188,13 +188,128 @@ points make `nums[j]` the minimum:
 contribution = nums[j] * (j - left) * (right - j)
 ```
 
-Sum Of Subarray Minimums adds those contributions. Sum Of Subarray Ranges runs
-the idea once for maxima and once for minima, then subtracts. Maximal Rectangle
-builds a histogram from every matrix row and reuses the rectangle routine.
+Sum Of Subarray Minimums needs one concrete duplicate policy. The implementation
+below pops on `>=`, so the arriving index is the **next smaller-or-equal**
+boundary. After those equal values pop, the surviving stack top is the **previous
+strictly smaller** boundary. That strict/non-strict pairing assigns every
+subarray containing equal minima to exactly one index.
+
+```python
+def sum_subarray_mins(arr: list[int]) -> int:
+    mod = 1_000_000_007
+    stack: list[int] = []
+    total = 0
+
+    for right, value in enumerate(arr + [0]):
+        while stack and arr[stack[-1]] >= value:
+            j = stack.pop()
+            left = stack[-1] if stack else -1
+            left_choices = j - left
+            right_choices = right - j
+            total = (total + arr[j] * left_choices * right_choices) % mod
+        stack.append(right)
+
+    return total
+```
+
+The final zero is a sentinel because the problem's values are positive. For
+`[11, 11]`, the first 11 owns the one-element subarray ending at index 0, while
+the second owns its own one-element subarray and the two-element subarray. The
+contributions are 11 and 22, not two copies of the same spans, so the total is 33.
+
+Sum Of Subarray Ranges runs the contribution idea once for maxima and once for
+minima, then subtracts. Maximal Rectangle builds a histogram from every matrix
+row and reuses the rectangle routine.
 
 ## Variants In The Problem Set
 
 The stack invariant stays useful even when the story changes:
+
+**Remove K Digits** uses the stack as the smallest prefix built so far. While an
+incoming digit is smaller than the top and deletions remain, removing that earlier
+larger digit improves the number at the earliest possible position. If the scan
+ends with deletions left, the number is already nondecreasing, so the least
+damaging choice is to remove digits from the end. Finally, strip leading zeroes
+and return `"0"` if nothing remains.
+
+```python
+def remove_k_digits(num: str, k: int) -> str:
+    stack: list[str] = []
+
+    for digit in num:
+        while k and stack and stack[-1] > digit:
+            stack.pop()
+            k -= 1
+        stack.append(digit)
+
+    if k:
+        del stack[-k:]
+
+    answer = "".join(stack).lstrip("0")
+    return answer or "0"
+```
+
+On `"1432219"` with `k = 3`, the arrivals 3, 2, and the second 2 discard the
+larger digits immediately before them, leaving `"1219"`. On `"12345"`, no
+arrival can improve the prefix, so the remaining deletions come from the end.
+
+**Remove Duplicate Letters** adds two pieces of state. `seen` prevents a letter
+already in the answer from being pushed twice, while `remaining` says whether a
+larger top letter is safe to pop because another copy still appears later.
+
+```python
+from collections import Counter
+
+
+def remove_duplicate_letters(s: str) -> str:
+    remaining = Counter(s)
+    seen: set[str] = set()
+    stack: list[str] = []
+
+    for ch in s:
+        remaining[ch] -= 1
+        if ch in seen:
+            continue
+        while stack and stack[-1] > ch and remaining[stack[-1]] > 0:
+            seen.remove(stack.pop())
+        stack.append(ch)
+        seen.add(ch)
+
+    return "".join(stack)
+```
+
+For `"bcabc"`, the arriving `a` can pop both `c` and `b` because each still has a
+copy remaining. For `"cbacdcbc"`, `d` cannot be popped after its last occurrence
+has been used, even when a smaller character arrives.
+
+**Trapping Rain Water** treats a popped bar as the bottom of a valley. If the pop
+empties the stack, there is no left wall and therefore no trapped water. Otherwise
+the new top is the left wall, the current index is the right wall, the usable
+height is `min(left_height, right_height) - bottom_height`, and the width is
+`right - left - 1`.
+
+```python
+def trap(heights: list[int]) -> int:
+    stack: list[int] = []
+    water = 0
+
+    for right, right_height in enumerate(heights):
+        while stack and heights[stack[-1]] < right_height:
+            bottom = stack.pop()
+            if not stack:
+                break
+            left = stack[-1]
+            width = right - left - 1
+            bounded_height = min(heights[left], right_height) - heights[bottom]
+            water += width * bounded_height
+        stack.append(right)
+
+    return water
+```
+
+On `[0, 1, 0, 2]`, index 2 pops when the height-2 right wall arrives. Index 1 is
+the left wall, so the width is `3 - 1 - 1 = 1`, the bounded height is
+`min(1, 2) - 0 = 1`, and that layer contributes one unit of water.
 
 - **Next Greater Element I** records next-greater answers in a map for a subset
   of queried values. **Next Greater Element II** scans `2 * n` positions with
@@ -202,13 +317,6 @@ The stack invariant stays useful even when the story changes:
 - **Online Stock Span** stores `(price, span)` and absorbs the spans of smaller or
   equal prices, so each `next()` call returns how far the current price dominates
   to the left
-- **Trapping Rain Water** pops a valley when a right wall arrives, then uses the
-  new stack top as the left wall. The popped height and distance determine the
-  trapped layer
-- **Remove K Digits** uses the stack as the answer under construction and pops a
-  larger trailing digit while the deletion budget remains. **Remove Duplicate
-  Letters** adds last-occurrence information so a character is removed only when
-  it can still be used later
 - **Asteroid Collision** is a related stack simulation rather than an ordered
   monotonic stack. An incoming left-moving asteroid repeatedly collides with the
   newest surviving right-moving asteroid
