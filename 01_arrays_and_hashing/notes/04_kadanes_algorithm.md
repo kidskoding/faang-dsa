@@ -41,28 +41,11 @@ Do not initialize the answer to zero unless an empty subarray is allowed. The
 usual Maximum Subarray problem requires at least one value, so zero would invent
 an invalid answer for `[-8, -3, -6]`.
 
-```python
-def max_subarray(nums: list[int]) -> int:
-    if not nums:
-        raise ValueError("max_subarray requires a nonempty array")
-
-    current = nums[0]
-    best = nums[0]
-
-    for value in nums[1:]:
-        current = max(value, current + value)
-        best = max(best, current)
-
-    return best
-
-
-assert max_subarray([5]) == 5
-assert max_subarray([-8, -3, -6]) == -3
-```
-
 `current` and `best` are different questions. The best subarray overall may end
 before the scan does, so returning `current` is wrong. For `[5, -1, -10]`, the
-final local answer is `-6`, but the global answer remains `5`.
+final local answer is `-6`, but the global answer remains `5`. The worked
+example below puts these states into runnable code and checks both singleton and
+all-negative input.
 
 ## Worked Example: [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
@@ -87,7 +70,8 @@ def max_subarray(nums: list[int]) -> int:
     current = nums[0]
     best = nums[0]
 
-    for value in nums[1:]:
+    for index in range(1, len(nums)):
+        value = nums[index]
         current = max(value, current + value)
         best = max(best, current)
 
@@ -183,7 +167,8 @@ def max_profit(prices: list[int]) -> int:
     minimum_price = prices[0]
     best = 0
 
-    for price in prices[1:]:
+    for index in range(1, len(prices)):
+        price = prices[index]
         minimum_price = min(minimum_price, price)
         best = max(best, price - minimum_price)
 
@@ -213,7 +198,8 @@ def max_product_subarray(nums: list[int]) -> int:
 
     current_max = current_min = answer = nums[0]
 
-    for value in nums[1:]:
+    for index in range(1, len(nums)):
+        value = nums[index]
         from_max = current_max * value
         from_min = current_min * value
         current_max = max(value, from_max, from_min)
@@ -255,11 +241,40 @@ increase extends the previous decreasing run, a decrease extends the previous
 increasing run, and equality rejects both extensions and resets them to one.
 
 [K-Concatenation Maximum Sum](https://leetcode.com/problems/k-concatenation-maximum-sum/)
-repeats an array `k` times. Kadane over at most two copies captures the best
-prefix and suffix connection. If the whole-array total is positive, every
-middle copy can be accepted in full; otherwise those middle copies are rejected
-because they cannot improve the sum. Returning `answer % 1_000_000_007` is an
-output-format rule from the problem, not part of the local-state reasoning.
+repeats an array `k` times and explicitly allows the empty subarray, whose sum is
+zero. Therefore its Kadane scan starts at zero and never keeps a negative best.
+For `k == 1`, run that zero-allowed scan over one copy. For `k > 1`, run it over
+two logical copies to capture a suffix joined to a prefix, then add every middle
+copy only when the whole-array sum is positive:
+
+```python
+def k_concatenation_max_sum(values: list[int], k: int) -> int:
+    modulo = 1_000_000_007
+
+    def best_over_copies(copies: int) -> int:
+        current = 0
+        best = 0
+        for index in range(copies * len(values)):
+            current = max(0, current + values[index % len(values)])
+            best = max(best, current)
+        return best
+
+    if k == 1:
+        return best_over_copies(1) % modulo
+
+    middle_copies = (k - 2) * max(sum(values), 0)
+    return (best_over_copies(2) + middle_copies) % modulo
+
+
+assert k_concatenation_max_sum([1, -2, 1], 5) == 2
+assert k_concatenation_max_sum([1, 2], 3) == 9
+assert k_concatenation_max_sum([-5, -2], 4) == 0
+```
+
+The all-negative check returns zero because every nonempty candidate is rejected
+in favor of the allowed empty subarray. Returning the final value modulo
+`1_000_000_007` is an output-format rule from the problem, not part of the
+local-state reasoning.
 
 ## Time and Space Complexity
 
@@ -269,6 +284,7 @@ output-format rule from the problem, not part of the local-state reasoning.
 | Kadane's algorithm              | `O(n)`: each value performs one extend-or-restart decision            | `O(1)` auxiliary: the local and global states have fixed size               |
 | Kadane with returned boundaries | `O(n)`: boundary bookkeeping adds constant work per value             | `O(1)` auxiliary: a fixed number of indices is retained                     |
 | Maximum product variation       | `O(n)`: each value updates the local minimum and maximum once         | `O(1)` auxiliary: only two local extremes and one global answer are stored  |
+| K-concatenation variation       | `O(n)`: it scans at most two logical copies of the `n`-value array    | `O(1)` auxiliary: modular indexing avoids constructing repeated copies      |
 
 ## Summary
 
@@ -284,6 +300,8 @@ output-format rule from the problem, not part of the local-state reasoning.
 - The same scan shape can track a running minimum for stock profit, both product
   extremes for sign flips, or both maximum and minimum sums for circular and
   absolute-sum variants.
+- When a variation allows an empty subarray, initialize its local and global
+  states to zero; this is why all-negative K-Concatenation input returns zero.
 - Recovering indices requires one candidate start and one saved winning range;
   tie behavior follows from choosing `>` or `>=` in the update branches.
 

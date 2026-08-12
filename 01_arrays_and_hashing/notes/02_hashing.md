@@ -190,11 +190,13 @@ assert group_anagrams([]) == []
 assert group_anagrams([""]) == [[""]]
 ```
 
-- **Time Complexity:** `O(c log w)`, where `c` is the total number of characters
-  and `w` is the longest word, because sorting each word dominates its dictionary
-  lookup.
-- **Space Complexity:** `O(c)` including the returned groups and signature keys,
-  because the stored words and keys contain a linear number of characters.
+- **Time Complexity:** `O(n + sum(|word| log |word|))`, where `n` is the number
+  of words, because the loop and dictionary work touch all `n` words while each
+  word pays for sorting its own characters. This includes `n` empty strings,
+  even though their total character count is zero.
+- **Space Complexity:** `O(n + c)`, where `c` is the total number of characters,
+  because the returned group lists store `n` word references and the signature
+  keys contain at most `c` characters in total.
 
 Here is the lookup trace. `tan` is the useful rejection: its signature does not
 match the existing `aet` key, so it must start a new group rather than being
@@ -261,10 +263,55 @@ appears more than `n / 2` times is the only possible majority, so
 different values in pairs and keep one candidate. For
 [Majority Element II](https://leetcode.com/problems/majority-element-ii/), there
 can be at most two answers above the `n / 3` threshold, so keep two candidates
-and then verify their real counts in a second pass. This **Boyer-Moore voting**
-family is a specialized constant-space alternative to a frequency map;
-unverified candidates must be rejected because cancellation produces
-possibilities, not proof.
+and counts.
+
+For each value, first increment its count if it matches a current candidate. If
+it matches neither candidate, fill an empty candidate slot. If both slots are
+occupied, decrement both counts, which cancels one occurrence of three different
+values. More than two values cannot each survive above `n / 3`, because their
+combined occurrences would exceed `n`.
+
+```python
+def majority_element_ii(nums: list[int]) -> list[int]:
+    candidate1: int | None = None
+    candidate2: int | None = None
+    count1 = 0
+    count2 = 0
+
+    for value in nums:
+        if value == candidate1:
+            count1 += 1
+        elif value == candidate2:
+            count2 += 1
+        elif count1 == 0:
+            candidate1, count1 = value, 1
+        elif count2 == 0:
+            candidate2, count2 = value, 1
+        else:
+            count1 -= 1
+            count2 -= 1
+
+    answer: list[int] = []
+    for candidate in (candidate1, candidate2):
+        if candidate is None or candidate in answer:
+            continue
+        occurrences = sum(value == candidate for value in nums)
+        if occurrences > len(nums) // 3:
+            answer.append(candidate)
+    return answer
+
+
+assert sorted(majority_element_ii([3, 2, 3])) == [3]
+assert sorted(majority_element_ii([1, 2])) == [1, 2]
+assert majority_element_ii([1, 2, 3, 4]) == []
+assert majority_element_ii([]) == []
+```
+
+The first pass produces only candidates, not guaranteed answers. Cancellation
+can leave a value whose real frequency is too small, so the second pass must
+reject any candidate that does not actually appear more than `n // 3` times.
+This **Boyer-Moore voting** family is a specialized `O(1)`-space alternative to
+a frequency map.
 
 ## Time and Space Complexity
 

@@ -94,9 +94,11 @@ remove index 1        [ 2 ][ 6 ][ 8 ]
                               ^ 6 moved left; incrementing i skips it
 ```
 
-Use a separate write position when order must be preserved. That pattern is
-developed in [same-direction pointers](../../02_two_pointers/notes/02_same_direction_pointers.md).
-When order does not matter, there is a cheaper deletion.
+When order must be preserved, the next module derives a separate read position
+and write position in
+[same-direction pointers](../../02_two_pointers/notes/02_same_direction_pointers.md).
+For now, keep the consequence in mind: changing the length during a scan can
+skip a value. When order does not matter, there is a cheaper deletion.
 
 ## Delete Without Shifting When Order Does Not Matter
 
@@ -172,7 +174,8 @@ creates a chain of positions. Since `n + 1` positions point into only `n`
 possible next positions, that chain must repeat, and the entry into the repeated
 cycle identifies the duplicate. The fast/slow method for locating that entry is
 derived fully in [cycle detection](../../06_linked_lists/notes/02_fast_slow.md).
-Until then, a seen set is the straightforward `O(n)`-space solution.
+This is a recognition preview rather than a technique to use yet; the later note
+derives the constant-space search from the repeated chain.
 
 ## Worked Example: [Rotate Array](https://leetcode.com/problems/rotate-array/)
 
