@@ -65,10 +65,10 @@ Every later note may assume Big-O notation and Python fluency without comment.
 
 | Note                    | Establishes                                                    |
 | ----------------------- | -------------------------------------------------------------- |
-| 01_binary_search_basics | Halving on sorted input, loop invariant, off-by-one discipline |
-| 02_boundary_search      | First/last true, `bisect` semantics                            |
-| 03_rotated_arrays       | Deciding which half is sorted                                  |
-| 04_search_on_answer     | Binary searching a value space with a feasibility predicate    |
+| 01_binary_search_basics | Inclusive exact search and insertion position; candidate-region invariant and termination; overflow-safe midpoint; comparison-oracle search; chained-row matrix flattening with `divmod`; independently sorted matrix staircase |
+| 02_boundary_search | Half-open first-true and first-false boundaries with `n` sentinel; predicate monotonicity and post-loop validation; `bisect_left`/`bisect_right` equality semantics; timestamp, derived-count, fixed-window-edge, per-query, peak-slope, and mountain-array applications |
+| 03_rotated_arrays | Two sorted runs and rotation point; sorted-half target containment; right-end minimum search; zero-rotation behavior; duplicate ambiguity and linear worst case; mountain local-slope search |
+| 04_search_on_answer | Inclusive minimum- and maximum-feasible value search; monotonicity and endpoint proofs; integer-safe midpoint and ceiling division; greedy grouping/adjacency predicates; counting predicates for kth values; shorter-array median partition |
 
 ## 06_linked_lists
 
