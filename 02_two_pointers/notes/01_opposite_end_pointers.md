@@ -53,7 +53,7 @@ def two_sum_sorted(nums: list[int], target: int) -> list[int]:
     while left < right:
         total = nums[left] + nums[right]
         if total == target:
-            return [left, right]
+            return [left + 1, right + 1]
         if total < target:
             left += 1
         else:
@@ -62,8 +62,8 @@ def two_sum_sorted(nums: list[int], target: int) -> list[int]:
     return []
 
 
-assert two_sum_sorted([2, 7, 11, 15], 9) == [0, 1]
-assert two_sum_sorted([1, 2, 2, 6], 8) == [1, 3]
+assert two_sum_sorted([2, 7, 11, 15], 9) == [1, 2]
+assert two_sum_sorted([1, 2, 2, 6], 8) == [2, 4]
 assert two_sum_sorted([], 8) == []
 ```
 
@@ -76,11 +76,13 @@ nums=[1, 2, 2, 6], target=8
 
 left=0 (1)  right=3 (6)  sum=7  too small
     reject every pair using the 1; move left, keep right fixed
-left=1 (2)  right=3 (6)  sum=8  accept [1, 3]
+left=1 (2)  right=3 (6)  sum=8  accept one-based positions [2, 4]
 ```
 
 The duplicate `2` causes no problem because the function returns one valid pair.
-When a problem asks for every unique group, duplicates need deliberate skipping
+The returned positions are one-based because Two Sum II explicitly numbers the
+first element as position 1. When a problem asks for every unique group,
+duplicates need deliberate skipping
 
 ## Fix One Value To Turn A Triple Into A Pair
 
@@ -130,10 +132,41 @@ match is proven could skip a valid group
 
 4Sum fixes two values before the scan. 3Sum Smaller counts `right - left`
 pairs at once when a sum is small enough, because every value between those
-pointers also works. 3Sum With Multiplicity makes the same grouped count but
-multiplies by the number of equal values. Number of Subsequences That Satisfy the
-Given Sum Condition uses the related fact that, once the minimum and maximum
-work, every subset of the middle values works, giving a power-of-two count
+pointers also works
+
+3Sum With Multiplicity must count positions rather than only unique triples.
+After fixing the first value, steer `left` and `right` by their sum as usual. On
+a match where the endpoint values differ, count their equal runs. If the left
+value appears `left_count` times and the right value appears `right_count` times,
+they form `left_count * right_count` pairs. If the endpoint values are equal,
+all `k = right - left + 1` remaining values are equal, so any two positions work:
+add `k * (k - 1) // 2` and finish that scan. Keep the running answer modulo the
+constant required by the problem
+
+```text
+remaining=[1, 1, 2, 2, 2], needed sum=3
+left value 1 occurs 2 times; right value 2 occurs 3 times
+accept 2 * 3 = 6 position pairs, then move past both groups
+
+remaining=[2, 2, 2, 2], needed sum=4
+both ends have value 2; choose 2 of 4 positions -> 4 * 3 // 2 = 6
+```
+
+Number of Subsequences That Satisfy the Given Sum Condition sorts the values and
+tests `nums[left] + nums[right]`. If that sum is too large, `right` is rejected,
+because pairing it with any larger minimum would also fail. If it fits,
+`nums[left]` is the required minimum and any subset of the `right - left` values
+after it may be included. Every included value is at most `nums[right]`, so all
+`2 ** (right - left)` subsets are valid. Add that count and move `left`; in code,
+precompute the powers of two modulo the value required by the problem
+
+```text
+nums=[3, 5, 6, 7], target=9
+left=0 (3), right=3 (7) -> 10 is too large, reject 7 and move right
+left=0 (3), right=2 (6) -> 9 fits
+    keep 3; choose any subset of positions holding 5 and 6
+    {}, {5}, {6}, {5, 6} -> 2 ** (2 - 0) = 4 subsequences
+```
 
 ## Worked Example: [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 
@@ -203,31 +236,68 @@ already checked
 
 ## Other Shapes In This Family
 
-The workbook stretches the same idea in several useful directions:
+The workbook stretches the same idea in several useful directions. Valid
+Palindrome first advances each side past non-alphanumeric characters, since
+spaces and punctuation are not part of the comparison. It lowercases the two
+remaining characters, rejects a mismatch, and moves both pointers after a match.
+For example, the comma in `"A man, a plan"` moves a pointer without triggering a
+comparison. Reverse String uses the same two-end movement but swaps instead.
+Valid Palindrome II branches once at the first real mismatch and tests the ranges
+formed by skipping either the left or the right character
 
-- Valid Palindrome and Reverse String compare or swap the two ends, then move
-  both pointers. Valid Palindrome II branches once at the first mismatch and
-  tests skipping either end, because only one deletion is allowed
-- Backspace String Compare scans both strings from right to left. Before comparing
-  visible characters, each pointer skips characters erased by a `#`
-- Reverse Words in a String reverses the whole sequence and then reverses each
-  word range, reusing the same opposite-end swap on several boundaries
+Backspace String Compare scans each string from right to left with its own
+`skip` counter. A `#` increments `skip`; an ordinary character is discarded and
+decrements `skip` while `skip > 0`; otherwise it is the next visible character
+to compare. The two indices move independently until each has found a visible
+character, which handles chains such as `"ab##c"` without constructing the
+edited strings
+
+Reverse Words in a String must normally remove leading and trailing whitespace
+and reduce every internal run to one space. Python strings are immutable, so the
+array-style "reverse all characters, then reverse each word" method cannot be
+truly in place on a `str`. In Python, `" ".join(reversed(s.split()))` performs
+the whitespace normalization and word reversal. In a language with a mutable
+character array, the whole-string and per-word reversals reuse the opposite-end
+swap directly
+
 - Boats To Save People pairs the heaviest remaining person with the lightest when
   they fit. If they do not fit, the heaviest must travel alone, because no other
   remaining partner is lighter
 - Minimize Maximum Pair Sum In Array pairs smallest with largest after sorting.
   Pairing a large value with another large value can only raise the maximum pair
   sum
-- Bag of Tokens spends the cheapest token to gain score and, only when blocked,
-  sells the most expensive token to recover the most power per lost point
 - Find K Closest Elements starts with the whole sorted array and discards the
   farther endpoint until only `k` values remain. A tie discards the right end
   because the problem prefers smaller values
 - 3Sum Closest keeps the closest total while steering toward the target. Four
   Sum adds one more fixed outer index, while the duplicate rules stay the same
-- Trapping Rain Water tracks the tallest wall seen from each side. The side with
-  the smaller running boundary can be finalized, because the opposite boundary
-  is already tall enough and a future wall cannot lower the trapped amount there
+
+Bag of Tokens sorts the token costs and tracks `left`, `right`, `power`, the
+current `score`, and the largest score seen. Buy the cheapest remaining token
+when affordable, gaining one score, and update `best`. When blocked but holding
+a score point, sell the most expensive remaining token for the greatest power
+recovery. Selling reduces the current score, so returning the final score is a
+rejected shortcut; return `best`, which preserves the peak reached before a
+later sale
+
+Trapping Rain Water keeps `left_max` and `right_max`, the tallest walls seen from
+the two ends, updating the chosen maximum with the current height before counting
+water. When `left_max <= right_max`, the left position is settled because the
+right side already supplies a wall at least as tall as its limiting left wall.
+Add `left_max - height[left]` when positive, then advance `left`. Otherwise add
+`right_max - height[right]` and advance `right`. A future taller wall can raise a
+maximum, but it cannot change water already bounded by the lower known side
+
+```text
+height=[3, 0, 2, 0, 4]
+left_max=3, right_max=4 -> settle from the left
+height[1]=0             -> add 3 - 0 = 3
+height[2]=2             -> add 3 - 2 = 1
+height[3]=0             -> add 3 - 0 = 3
+```
+
+The three additions account for all seven trapped units. Each chosen position is
+finalized once, which is why the scan remains linear
 
 Each variant still needs its own rejection sentence. "Move the pointer that the
 template says to move" is not a correctness argument

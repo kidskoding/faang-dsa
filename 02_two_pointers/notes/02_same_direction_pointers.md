@@ -14,10 +14,12 @@ value   1   2   2   2   3   ?
           write
 ```
 
-Everything before `write` is finished. Everything from `read` onward is unread,
-and the gap between them may be overwritten. Since `write` advances only after
-`read` accepts a value, **`write <= read`** throughout a left-to-right scan. That
-invariant is what makes modifying the input safe
+At the start of an iteration, everything before `write` is finished, everything
+from `read` onward is unread, and **`write <= read`**. The gap between the two may
+be overwritten. After accepting `nums[read]`, `write` advances and may temporarily
+equal `read + 1`; the loop advances `read` before the next iteration. Equivalently,
+`write` never passes the next unread position, which is what makes modifying the
+input safe
 
 This note also covers the in-place mutation techniques that use the same idea:
 swapping instead of overwriting, filling free space from the back, and dividing
@@ -67,6 +69,10 @@ assert values[:length] == [1, 2, 3]
 
 empty: list[int] = []
 assert remove_duplicates(empty) == 0
+
+single = [7]
+assert remove_duplicates(single) == 1
+assert single == [7]
 ```
 
 The returned length says which prefix is valid. Values after that prefix are
@@ -113,10 +119,11 @@ move_zeroes(empty)
 assert empty == []
 ```
 
-Because `write <= read`, the value swapped toward `read` has already been
-examined. The swap therefore cannot place an unread value behind the scan. Use
-assignment when rejected values are dead, and use a swap when they still need a
-place in the final array
+At the start of the iteration, `write <= read`, so the value swapped toward
+`read` has already been examined. The swap therefore cannot place an unread
+value behind the scan. After an accepted value, `write` may become `read + 1`,
+and then the loop advances `read` as well. Use assignment when rejected values
+are dead, and use a swap when they still need a place in the final array
 
 ## Fill From The Back To Protect Unread Values
 
@@ -168,10 +175,14 @@ values where every value is from `1` through `n`, read `nums[index]` as the next
 index to visit. There are more starting positions than possible next positions,
 so repeatedly following the values must eventually enter a loop
 
-A `slow` pointer moves one step at a time and `fast` moves two. They must meet
-inside the loop. Then a pointer restarted at index 0 and the meeting pointer move
-one step each; the value where they meet is the entry to the loop and therefore
-the duplicated value
+This is **Floyd's cycle detection**. A `slow` pointer moves one step at a time and
+`fast` moves two, so they must meet inside the loop. To see why the second phase
+works, call the distance from index 0 to the loop entry `d`. At the first meeting,
+the extra distance traveled by `fast` is a whole number of loop lengths. That
+leaves the loop entry exactly `d` forward steps from the meeting point when
+distance is measured around the loop. Therefore, a pointer restarted at index 0
+and the meeting pointer will reach the entry together when both move one step at
+a time
 
 ```python
 def find_duplicate(nums: list[int]) -> int:
@@ -196,7 +207,8 @@ assert find_duplicate([3, 1, 3, 4, 2]) == 3
 ```
 
 The first meeting is not automatically the answer, so returning there is a
-rejected shortcut. The restart phase aligns both pointers with the loop entry
+rejected shortcut. The distance alignment is why the restart phase finds the
+entry rather than merely producing another arbitrary meeting inside the loop
 
 ## Boundaries That Only Move Forward
 
@@ -213,17 +225,96 @@ need to be revisited
 - Interval List Intersections keeps one pointer in each sorted list of closed
   intervals `[start, end]`. After recording an overlap, move the interval that
   ends first because it cannot overlap any later interval from the other list
-- Number of Subarrays With Bounded Maximum remembers the last index above the
-  allowed maximum and the last index whose value entered the allowed range. The
-  difference between those boundaries counts valid starts for the current end
 
 Subarray Product Less Than K maintains a contiguous region between `left` and
-`right`. It expands `right`, then advances `left` while the product is too large;
-once valid, every suffix ending at `right` is valid because all inputs are
-positive. Subarrays With K Different Integers uses a frequency map for the same
-moving region and computes `exactly(k) = at_most(k) - at_most(k - 1)`. The next
-module develops this moving-region idea under its usual name,
-**sliding window**
+`right`. All values are positive, so removing values from the left can only
+decrease the product. After shrinking until the product is below `k`, every
+suffix ending at `right` and starting from `left` through `right` is also valid.
+There are `right - left + 1` such suffixes
+
+Number of Subarrays With Bounded Maximum uses two last-seen boundaries.
+`last_too_large` is the latest index whose value exceeded `upper`, and
+`last_in_range` is the latest index whose value was between `lower` and `upper`.
+For the current right end, valid starts run from `last_too_large + 1` through
+`last_in_range`, so add `max(0, last_in_range - last_too_large)`
+
+Subarrays With K Different Integers uses a **frequency map**, which stores how
+many times each value occurs in the current region. `at_most(k)` adds the new
+right value, then shrinks from the left while the map has more than `k` keys.
+Each removal decrements a count and deletes the key at zero, because a zero-count
+key must not count as distinct. Once valid, it also adds `right - left + 1`.
+Every region with exactly `k` distinct values appears in `at_most(k)` but not in
+`at_most(k - 1)`, giving `exactly(k) = at_most(k) - at_most(k - 1)`
+
+```python
+def num_subarray_product_less_than_k(nums: list[int], k: int) -> int:
+    if k <= 1:
+        return 0
+
+    left = 0
+    product = 1
+    total = 0
+    for right, value in enumerate(nums):
+        product *= value
+        while product >= k:
+            product //= nums[left]
+            left += 1
+        total += right - left + 1
+    return total
+
+
+def num_subarray_bounded_max(
+    nums: list[int], lower: int, upper: int
+) -> int:
+    last_too_large = -1
+    last_in_range = -1
+    total = 0
+
+    for right, value in enumerate(nums):
+        if value > upper:
+            last_too_large = right
+        if lower <= value <= upper:
+            last_in_range = right
+        total += max(0, last_in_range - last_too_large)
+
+    return total
+
+
+def subarrays_with_k_distinct(nums: list[int], k: int) -> int:
+    def at_most(limit: int) -> int:
+        counts: dict[int, int] = {}
+        left = 0
+        total = 0
+
+        for right, value in enumerate(nums):
+            counts[value] = counts.get(value, 0) + 1
+            while len(counts) > limit:
+                outgoing = nums[left]
+                counts[outgoing] -= 1
+                if counts[outgoing] == 0:
+                    del counts[outgoing]
+                left += 1
+            total += right - left + 1
+
+        return total
+
+    return at_most(k) - at_most(k - 1)
+
+
+assert num_subarray_product_less_than_k([10, 5, 2, 6], 100) == 8
+assert num_subarray_product_less_than_k([], 100) == 0
+assert num_subarray_bounded_max([2, 1, 4, 3], 2, 3) == 3
+assert subarrays_with_k_distinct([1, 2, 1, 2, 3], 2) == 7
+```
+
+Each helper takes `O(n)` time because both boundaries move only forward; a
+shrinking `while` loop advances `left` at most `n` times across the whole run.
+The product and bounded-maximum versions use `O(1)` auxiliary space. The
+exact-distinct version uses `O(k)` space for at most `k` live frequency keys, and
+running `at_most` twice changes neither asymptotic bound
+
+Module 04 develops this moving-region idea under its usual name, **sliding
+window**, but these equations are enough to implement the workbook problems here
 
 ## Worked Example: [Sort Colors](https://leetcode.com/problems/sort-colors/)
 
@@ -295,21 +386,43 @@ see 2       [0, 0, 1, 1, 2, 2]   low=2 mid=2 high=3
 ```
 
 Advancing `mid` after the first swap is rejected because it would skip the
-unseen 0 that arrived from `high`. By contrast, after swapping a 0 with `low`,
-the incoming value at `mid` is from the already classified 1 region, so advancing
-is safe
+unseen 0 that arrived from `high`. The 0 branch has two safe cases. When
+`low == mid`, the swap is a self-swap, so both pointers simply advance. When
+`low < mid`, the region from `low` through `mid - 1` contains only classified
+1s, so the swap pulls a known 1 into `mid` and both pointers may still advance.
+For example, `[1, 0]` first advances `mid` over the 1, then swaps the 0 with
+`low`; the incoming 1 is already classified, producing `[0, 1]`
 
 - **Time Complexity:** `O(n)`, because either `mid` increases or `high`
   decreases on every iteration, shrinking the unknown region once per value
 - **Space Complexity:** `O(1)`, because the three regions are stored inside the
   input and only three indices are added
 
-Wiggle Sort II asks for `nums[0] < nums[1] > nums[2] < ...`. Its optimal form
-chooses the median, three-way partitions around it, and uses remapped indices so
-large values land in odd positions and small values land in even positions.
-The reversed placement of each half keeps equal values apart. It is the advanced
-follow-up to Sort Colors; a sorted copy with reversed-half interleaving is the
-simpler `O(n)`-space starting point to explain before optimizing in place
+Wiggle Sort II asks for `nums[0] < nums[1] > nums[2] < ...`. Choose the median,
+then run the same three-way partition through **virtual indices** rather than
+physical indices. For an array of length `n`, logical position `i` maps to
+`(1 + 2 * i) % (n | 1)`. This visits odd positions first and then even positions:
+for `n = 6`, the order is `1, 3, 5, 0, 2, 4`
+
+Treat that virtual order as the array used by the partition. Values greater than
+the median swap toward the virtual `low` end, values smaller than the median swap
+toward virtual `high`, and values equal to the median advance through the middle.
+The result places large values in physical odd slots and small values in physical
+even slots, while the median values fill the gaps
+
+```text
+nums=[1, 5, 1, 1, 6, 4], median=1
+virtual order of slots: 1, 3, 5, 0, 2, 4
+move values > 1 toward the start of that virtual order
+one valid physical result: [1, 5, 1, 6, 1, 4]
+                         1 < 5 > 1 < 6 > 1 < 4
+```
+
+Selecting the median with in-place Quickselect takes `O(n)` expected time and
+`O(1)` auxiliary space, and the virtual three-way partition is another `O(n)`
+pass with constant state. The simpler starting solution sorts a copy and
+interleaves reversed halves; that costs `O(n log n)` time and `O(n)` auxiliary
+space, but it makes the placement rule easier to explain before the follow-up
 
 ## Time and Space Complexity
 
@@ -326,9 +439,10 @@ in the first array of a merge
 
 ## Summary
 
-- **Same-direction pointers** often split reading from writing. Everything before
-  `write` is final, everything from `read` onward is unread, and the gap is safe
-  to overwrite because `write` never passes `read`
+- **Same-direction pointers** often split reading from writing. At the start of
+  each iteration, everything before `write` is final, everything from `read`
+  onward is unread, and `write <= read`. After accepting a value, `write` may
+  equal `read + 1`, but it never passes the next unread position
 - In-place filtering returns a logical length, so values beyond that prefix may
   remain stale. Swap instead of overwrite when rejected values must still appear
   somewhere in the final array
@@ -350,7 +464,7 @@ Before coding, make sure you can answer each of these
 
 ```text
 What does each pointer mean, and which region is already final?
-Why can write never overtake read?
+Why can write never pass the next unread position?
 Does a rejected value disappear, remain stale, or need to be swapped elsewhere?
 Does the caller read the whole array or only the returned logical prefix?
 Would writing forward overwrite unread data, meaning I should write backward?
