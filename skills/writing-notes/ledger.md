@@ -47,10 +47,10 @@ Every later note may assume Big-O notation and Python fluency without comment.
 
 | Note               | Establishes                                      |
 | ------------------ | ------------------------------------------------ |
-| 01_stack           | LIFO, matching/pairing, `list` as a stack        |
-| 02_queue_and_deque | FIFO, `deque`, O(1) both ends                    |
-| 03_monotonic_stack | Next-greater/smaller in one pass, amortized O(n) |
-| 04_monotonic_queue (absorbed) | Covered by `04_sliding_window/04_window_max_min`; no standalone note exists |
+| 01_stack | LIFO and Python `list` operations; matching; nested-state parsing; value/index/tuple entry choices; expression evaluation and stack simulation |
+| 02_queue_and_deque | FIFO vs LIFO; `collections.deque`; list-front cost; ring buffers; queue-from-stacks amortization; recent-event windows; two-deque middle access |
+| 03_monotonic_stack | Ordered unresolved candidates; next/previous greater/smaller; strict equality policy; span boundaries, sentinels, contributions, and one-push/one-pop amortization |
+| 04_monotonic_queue (absorbed) | `04_sliding_window/04_window_max_min` owns monotonic-deque domination, index expiry, fixed/variable/coordinate windows, prefix-sum deques, and window recurrences; no standalone note exists |
 
 ## 04_sliding_window
 
