@@ -29,11 +29,11 @@ Every later note may assume Big-O notation and Python fluency without comment.
 
 | Note                    | Establishes                                                      |
 | ----------------------- | ---------------------------------------------------------------- |
-| 01_dynamic_arrays       | Array growth, amortized append, index math                       |
-| 02_hashing              | Hash map/set as the lookup workhorse, seen-set pattern, counting |
-| 03_prefix_suffix_sums   | Prefix sum arrays, range-sum in O(1), running aggregates         |
-| 04_kadanes_algorithm    | Running-best scan, the local-vs-global maximum idea              |
-| 05_hash_table_internals | Buckets, collisions, why average O(1) and worst O(n)             |
+| 01_dynamic_arrays       | Indexed contiguous storage; size vs capacity; geometric growth and amortized append; in-place mutation, swaps, swap-delete, range-to-index marking, matrix boundaries, and three-reversal rotation |
+| 02_hashing              | Set membership vs map state; seen-set and complement lookup; frequency maps; signatures and grouping; sequence heads; length-prefix encoding; Boyer-Moore candidates |
+| 03_prefix_suffix_sums   | Leading-zero prefix arrays and O(1) range sums; running split totals; prefix/suffix products; prefix-frequency and earliest-index maps; equal-remainder ranges; 2D inclusion-exclusion |
+| 04_kadanes_algorithm    | Local extend-or-restart state vs global optimum; all-negative initialization; boundary recovery; running-min, product, circular, absolute, turbulent, and repeated-array variations |
+| 05_hash_table_internals | Hash functions, buckets, equality, collisions, separate chaining vs open addressing, duplicate-key updates, load factor, resizing/rehashing, and average/worst/amortized bounds |
 
 ## 02_two_pointers
 
