@@ -222,7 +222,8 @@ descends to the children, which then descend to those same grandchildren. Every
 grandchild subtree is therefore solved twice, once from each side, and the
 doubling compounds with depth. On a tree shaped like a single path of 30 nodes
 that recursion makes 7,049,153 calls, which I measured by counting them, for an
-answer that a single pass could produce in 30
+answer that a single pass produces in 61 calls, counting the `None` base cases
+the same way
 
 The fix is to stop returning one number. The reason the recursion re-descends is
 that `rob(child)` throws away the information the parent actually needs, which is
@@ -344,9 +345,10 @@ answer = max(8, 9) = 9
 
 **The rejected step is at the root.** Robbing it scores `3 + 4 + 1 = 8`, using the
 two children's skipped entries, and that branch is discarded in favour of skipping
-the root for `4 + 5 = 9`. The root holds the largest single value in the top
-layer, so a greedy that grabs it loses by one, and this trace is the counterexample
-to say out loud if asked why greedy fails
+the root for `4 + 5 = 9`. A rule that robs the root and then every other layer
+takes `3 + (1 + 3 + 1) = 8` here, one short of the 9 you get by skipping the root,
+and this trace is the counterexample to say out loud if asked why a fixed rule
+fails
 
 Two smaller things in the same trace are worth naming. At node 4 the two answers
 tie at 4, which is why the parent must keep both rather than collapse to a winner,

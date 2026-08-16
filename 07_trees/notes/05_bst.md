@@ -390,13 +390,13 @@ def convert_bst(root: TreeNode | None) -> TreeNode | None:
     return root
 
 
-adjacent = TreeNode(1, TreeNode(3, None, TreeNode(2)))
-recover_tree(adjacent)
-assert inorder_values(adjacent) == [1, 2, 3]
-
-apart = TreeNode(3, TreeNode(1), TreeNode(4, TreeNode(2)))
+apart = TreeNode(1, TreeNode(3, None, TreeNode(2)))
 recover_tree(apart)
-assert inorder_values(apart) == [1, 2, 3, 4]
+assert inorder_values(apart) == [1, 2, 3]
+
+adjacent = TreeNode(3, TreeNode(1), TreeNode(4, TreeNode(2)))
+recover_tree(adjacent)
+assert inorder_values(adjacent) == [1, 2, 3, 4]
 
 lone = TreeNode(1)
 recover_tree(lone)
@@ -545,7 +545,7 @@ already placed. Take the middle element as the root instead, which splits the
 remaining values into two halves of nearly equal size, and recurse on each half
 
 ```python
-def sorted_array_to_bst(nums: list[int]) -> TreeNode | None:
+def convert_sorted_array_to_bst(nums: list[int]) -> TreeNode | None:
     def build(lo: int, hi: int) -> TreeNode | None:
         if lo > hi:
             return None
@@ -558,10 +558,10 @@ def sorted_array_to_bst(nums: list[int]) -> TreeNode | None:
     return build(0, len(nums) - 1)
 
 
-balanced = sorted_array_to_bst([-10, -3, 0, 5, 9])
+balanced = convert_sorted_array_to_bst([-10, -3, 0, 5, 9])
 assert balanced is not None and balanced.val == 0
 assert inorder_values(balanced) == [-10, -3, 0, 5, 9]
-assert sorted_array_to_bst([]) is None
+assert convert_sorted_array_to_bst([]) is None
 ```
 
 The indices are inclusive on both ends, so `lo > hi` is the empty range and the
@@ -721,7 +721,7 @@ assumption is a correctness error rather than a rounding one
 | `kth_smallest`                               | `O(h + k)`: pushing the left spine costs `h`, then each of the `k` pops does `O(1)` work before returning early                       | `O(h)`: the stack never holds more than one root-to-node path of ancestors                                                                  |
 | `range_sum_bst`, `trim_bst`                  | `O(n)` worst case: pruning skips out-of-range subtrees, but a range covering the whole tree prunes nothing                            | `O(h)`: the recursion stack, and `trim_bst` rewires existing nodes rather than allocating new ones                                          |
 | `convert_bst`, `recover_tree`                | `O(n)`: both need the complete sorted sequence, since a running total and a pair of out-of-order nodes can only be settled at the end | `O(h)`: the call stack for `convert_bst`, and the explicit stack for `recover_tree`                                                         |
-| `sorted_array_to_bst`                        | `O(n)`: one node is constructed per element, and the index arithmetic per call is constant                                            | `O(n)` for the tree it returns, plus `O(log n)` of stack, because halving the range at each level makes the result balanced by construction |
+| `convert_sorted_array_to_bst`                | `O(n)`: one node is constructed per element, and the index arithmetic per call is constant                                            | `O(n)` for the tree it returns, plus `O(log n)` of stack, because halving the range at each level makes the result balanced by construction |
 
 ## Summary
 
