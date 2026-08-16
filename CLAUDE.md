@@ -67,11 +67,11 @@ ______________________________________________________________________
 Highest interview review priority:
 
 1. Arrays, strings, hash maps, sets, prefix sums, two pointers, sliding window
-1. Stacks/queues, binary search, trees
-1. Heaps, backtracking, graphs/grids, intervals
-1. Backtracking, DP, greedy
-1. Linked lists and tries
-1. Union find, shortest paths, sorting internals, and advanced structures after the core is reliable
+2. Stacks/queues, binary search, trees
+3. Heaps, backtracking, graphs/grids, intervals
+4. Backtracking, DP, greedy
+5. Linked lists and tries
+6. Union find, shortest paths, sorting internals, and advanced structures after the core is reliable
 
 For Google specifically, overweight trees, graphs, recursion, backtracking, DP, and binary search on answer.
 
@@ -87,6 +87,21 @@ Each chapter should eventually include:
 - guided practice: warmups, core interview problems, follow-ups, and review problems
 
 Guided practice belongs inside the numbered module folder that teaches the concept. Do not create a separate top-level `problems/` folder.
+
+### Notes
+
+The `notes/` files across all modules are one book, read in module order by someone with no DSA or LeetCode background who is preparing for live coding interviews at top tech companies. Notes teach; the problem sets drill. Use the `writing-notes` skill for any note work — it holds the full standard, and `writing-notes/ledger.md` records what each note establishes so a later note references earlier ones instead of re-teaching them.
+
+The bar for a note is outcome-based: after reading it, could someone who had never heard of the technique recognize it in a disguised problem, code it under pressure, and explain why it works out loud? Section structure is flexible in service of that; six things are not:
+
+1. Explain the concept before applying it.
+2. Derive the technique, never just announce it — show the brute force and why it dies.
+3. Real Python, executed and verified before saving.
+4. A hand trace that includes a rejected or discarded step.
+5. Never re-teach what an earlier note established.
+6. Something on what to say out loud, since the interview is verbal.
+
+A note near 50 lines is still a skeleton. Reference exemplar: `17_advanced/notes/03_mst.md`.
 
 Size each technique section (each `.py` file / `##` section in a module problem set) to the number of problems that actually builds mastery of that technique — enough coverage to go from warmup to hard and drill the pattern until it is automatic, not a fixed count. Do not leave a section thin (roughly, fewer than 4-5 problems is a smell); if migrating problems out leaves a section sparse, backfill it with more problems of that same technique. The number of problems is the lever that ensures mastery, so err toward more coverage per technique rather than a minimal set.
 

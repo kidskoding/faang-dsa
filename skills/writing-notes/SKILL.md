@@ -230,7 +230,15 @@ buffers are lower frequency in interviews than the rest of the module. A problem
 with no teaching behind it is a hole the reader falls into.
 
 **Do not teach what no problem needs.** If nothing in the ladder exercises a
-technique, it does not belong in the note, however elegant it is.
+technique, it does not belong in the topic, however elegant it is.
+
+**The one sanctioned exception is a topic with no LeetCode problems at all.**
+Bloom filters are the only case in this curriculum: they are a design-round
+subject, not a 40-minute coding problem. When that happens, the topic says so in
+its own words, its worked example is framed as a design question rather than
+given a fake LeetCode link, and the workbook carries a short section explaining
+why there are no numbered problems and what to practise instead. Never invent a
+LeetCode link to satisfy the structure.
 
 The check runs both directions, and it is the fastest way to settle an argument
 about whether a section earns its place. Name the problems each major section
@@ -238,39 +246,64 @@ prepares the reader for, and if you cannot name one, cut the section.
 
 ### Every topic works one LeetCode medium end to end
 
-Somewhere in the topic, take a real interview problem and solve it completely.
-Not a toy, not a fragment, and not an easy. Pick a **medium from this module's own
-workbook** and link it in the heading:
+Take a real interview problem and solve it completely. Not a toy, not a fragment,
+and not an easy. Pick a **medium from this module's own workbook** and link it in
+the heading:
 
 ```md
-## Worked Example: [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
+## Worked Example: [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 ```
 
-Mediums specifically, because an easy does not exercise the pattern hard enough to
-convince, and a hard belongs in a follow-up once the reader can already do the
-medium.
+**The section runs in this order, and every part is required.**
 
-Keep the entire example under that one heading. The required content is a natural
-flow, not a set of `###` subheadings such as `What You Are Given`, `The
-Approach`, `Step By Step`, `The Solution`, or `Complexity`. Let the prose move
-naturally through:
+**1. The problem**, in a sentence or two, in your own words.
 
-- the input, return value, constraints that affect the approach, and ambiguous
-  behavior that should be clarified;
-- the signal that identifies the technique and the reason the obvious structure
-  or brute force is insufficient;
-- the invariant or central idea in language a candidate could say aloud;
-- a short numbered sequence when steps genuinely improve comprehension;
-- self-contained Python; and
-- time and space complexity as concise bullets immediately after the code.
+**2. Input and output, stated explicitly, with types.** Be thorough. The reader
+should be able to write the signature from this alone, and in a real interview
+this is the clarifying step that gets skipped:
 
-Use a short blockquote when exact interview narration materially helps. Do not
-surround every explanation with labels merely to satisfy a format.
+```md
+**Input**: `temperatures`, a `list[int]` of daily temperatures, where
+`1 <= len(temperatures) <= 10^5` and each value is between 30 and 100
 
-Name the section for the problem so the reader can find it when they hit that
-problem in the ladder. A topic may work more than one problem when the technique
-has genuinely different shapes, but do not pad, since the ladder is where volume
-belongs.
+**Output**: a `list[int]` of the same length, where position `i` holds the number
+of days after day `i` until a warmer temperature, or `0` if no warmer day comes
+```
+
+For a design problem, list every method with its signature and its return
+contract, including what it returns when the structure is empty. Never invent a
+numeric bound. If you cannot confirm one, describe the shape instead.
+
+**3. The approach.** Name the phrase in the problem that identifies the technique,
+say why the naive version is too slow, then give the idea in prose. Put the
+decision the candidate has to defend in a quoted block, phrased as speech:
+
+```md
+> "Two words are anagrams exactly when their sorted characters match. I will use
+> that sorted string as the dictionary key and append each word to its group."
+```
+
+**4. A numbered step by step.** Walk through the solution in the same explanatory
+voice as the rest of the topic, not as terse imperatives. Someone should be able
+to follow it to a working answer on a whiteboard without reading the Python. Four
+to eight steps is typical, and each step says what happens and why.
+
+**5. The solution.** Real Python, with `assert` statements on the official
+examples inside the same block, so the code carries its own proof:
+
+```python
+assert group_anagrams([]) == []
+assert group_anagrams([""]) == [[""]]
+```
+
+**6. Time and space complexity for this problem**, each with its reason, as two
+bolded bullets. Be precise rather than round: `O(n + sum(|word| log |word|))`
+beats `O(n log n)` when the input is a list of strings of differing lengths.
+
+A trace after the code is welcome, and it should name the step that gets rejected.
+
+Name the section for the problem so the reader finds it when they hit it in the
+ladder.
 
 ### End with a bulleted summary
 
@@ -522,15 +555,31 @@ it.
 Watch for the restatement trap. If a paragraph after the diagram says the same
 thing as the paragraph before it, keep one of them.
 
-### Real Python, explained line by line
+### Real Python, carrying its own asserts
 
-Templates are runnable Python with type hints, not pseudocode — the reader is
-practicing in Python. After the code block, walk the lines that carry the idea:
-why the tuple is ordered that way, why the check is on roots and not nodes, what
-happens if a line is omitted. Use `text` blocks for traces, diagrams, and
-incidental cost references so they read as data. The dedicated `## Time and
-Space Complexity` section uses markdown tables; concise time/space bullets
-directly below a continuous worked-example solution are the exception.
+Templates are runnable Python with type hints, not pseudocode, and **every block
+that defines something ends with `assert` statements on real examples**:
+
+```python
+def two_sum_sorted(nums: list[int], target: int) -> list[int]:
+    ...
+
+
+assert two_sum_sorted([2, 7, 11, 15], 9) == [1, 2]
+assert two_sum_sorted([], 8) == []
+```
+
+The asserts do three jobs. The reader can paste the block and watch it pass, the
+expected output is stated next to the code rather than described in prose that can
+drift, and nobody editing the topic later can quietly break it.
+
+Include an empty or degenerate case in the asserts, since that is the input
+interviewers probe and the one most likely to be wrong.
+
+After the code, walk the lines that carry the idea: why the tuple is ordered that
+way, why the check is on roots and not nodes, what breaks if a line is removed.
+Use `text` blocks for traces and figures.
+
 
 ### The dry run is the load-bearing section
 
