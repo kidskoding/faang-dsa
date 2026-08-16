@@ -262,7 +262,7 @@ validate, and modify the tree.
 
 ### 43. [Range Sum Of BST](https://leetcode.com/problems/range-sum-of-bst/)
 
-- solves: `search_range_bst`
+- solves: `range_sum_bst`
 - Pattern: prune branches using BST ordering.
 
 ### 44. [Convert Sorted Array To BST](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)

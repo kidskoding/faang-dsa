@@ -68,8 +68,8 @@ def delete_node_bst(root: TreeNode | None, key: int) -> TreeNode | None:
     raise NotImplementedError
 
 
-def search_range_bst(root: TreeNode | None, low: int, high: int) -> list[int]:
-    # Problem 24: Range Sum / Search Range In BST
+def range_sum_bst(root: TreeNode | None, low: int, high: int) -> int:
+    # Problem 43: Range Sum Of BST
     # Key idea: prune branches using BST ordering.
     # Time:
     # Space:
