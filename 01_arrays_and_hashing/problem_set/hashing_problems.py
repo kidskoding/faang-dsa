@@ -26,7 +26,7 @@ def is_anagram(s: str, t: str) -> bool:
 
 
 def group_anagrams(strs: list[str]) -> list[list[str]]:
-    # Problem 8: Group Anagrams
+    # Problem 4: Group Anagrams
     # Key idea: hash map keyed by a sorted-string signature.
     # Time:
     # Space:
@@ -35,7 +35,7 @@ def group_anagrams(strs: list[str]) -> list[list[str]]:
 
 
 def top_k_frequent(nums: list[int], k: int) -> list[int]:
-    # Problem 9: Top K Frequent Elements
+    # Problem 5: Top K Frequent Elements
     # Key idea: frequency map plus bucket sort or a heap.
     # Time:
     # Space:
@@ -44,7 +44,7 @@ def top_k_frequent(nums: list[int], k: int) -> list[int]:
 
 
 def longest_consecutive(nums: list[int]) -> int:
-    # Problem 11: Longest Consecutive Sequence
+    # Problem 6: Longest Consecutive Sequence
     # Key idea: hash set lookup, only start counting from sequence heads.
     # Time:
     # Space:
@@ -53,7 +53,7 @@ def longest_consecutive(nums: list[int]) -> int:
 
 
 def is_valid_sudoku(board: list[list[str]]) -> bool:
-    # Problem 14: Valid Sudoku
+    # Problem 7: Valid Sudoku
     # Key idea: hash sets per row, column, and box.
     # Time:
     # Space:
@@ -62,7 +62,7 @@ def is_valid_sudoku(board: list[list[str]]) -> bool:
 
 
 class Codec:
-    # Problem 15: Encode And Decode Strings
+    # Problem 8: Encode And Decode Strings
     # Key idea: length-prefix encoding to make decoding unambiguous.
 
     def encode(self, strs: list[str]) -> str:
@@ -77,7 +77,7 @@ class Codec:
 
 
 def intersect(nums1: list[int], nums2: list[int]) -> list[int]:
-    # Problem 16: Intersection of Two Arrays II
+    # Problem 9: Intersection of Two Arrays II
     # Key idea: frequency-map intersection of two arrays.
     # Time:
     # Space:
@@ -86,7 +86,7 @@ def intersect(nums1: list[int], nums2: list[int]) -> list[int]:
 
 
 def majority_element(nums: list[int]) -> int:
-    # Problem 17: Majority Element
+    # Problem 10: Majority Element
     # Key idea: Boyer-Moore vote counting, or a frequency hash map.
     # Time:
     # Space:
@@ -95,7 +95,7 @@ def majority_element(nums: list[int]) -> int:
 
 
 def majority_element_ii(nums: list[int]) -> list[int]:
-    # Problem 18: Majority Element II
+    # Problem 11: Majority Element II
     # Key idea: Boyer-Moore with two candidate counters for the n/3 threshold.
     # Time:
     # Space:
@@ -104,7 +104,7 @@ def majority_element_ii(nums: list[int]) -> list[int]:
 
 
 class MyHashMap:
-    # Problem 19: Design HashMap
+    # Problem 12: Design HashMap
     # Key idea: bucket array with separate chaining for collisions.
 
     def __init__(self) -> None:

@@ -228,14 +228,14 @@ cycles, 2-color graphs, and reason about directed edge orientation.
 
 ### 37. [Redundant Connection II](https://leetcode.com/problems/redundant-connection-ii/)
 
-- solves: (todo)
+- solves: `find_redundant_directed_connection`
 - Pattern: directed version of cycle removal; a node with two parents and a cycle
   are separate cases, so find the candidate edges first and test which removal
   leaves a valid rooted tree.
 
 ### 38. [Count Subtrees With Max Distance Between Cities](https://leetcode.com/problems/count-subtrees-with-max-distance-between-cities/)
 
-- solves: (todo)
+- solves: `count_subgraphs_for_each_diameter`
 - Pattern: enumerate every subset of nodes as a bitmask, keep the connected ones,
   and take the diameter of each induced subtree.
 

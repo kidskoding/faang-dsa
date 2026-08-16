@@ -246,6 +246,6 @@ DP.
 
 ### 41. [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
 
-- solves: (todo)
+- solves: `longest_palindrome_subseq`
 - Pattern: the LCS recurrence run against the reversed string, or `dp[i][j]` over
   a widening interval where matching ends add two.

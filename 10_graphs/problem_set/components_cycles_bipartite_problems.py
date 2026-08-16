@@ -26,7 +26,7 @@ def find_redundant_connection(edges: list[list[int]]) -> list[int]:
 
 
 def is_bipartite(graph: list[list[int]]) -> bool:
-    # Problem 28: Is Graph Bipartite
+    # Problem 28: Is Graph Bipartite?
     # Key idea: 2-color a graph during BFS/DFS.
     # Time:
     # Space:
@@ -101,6 +101,25 @@ def critical_connections(n: int, connections: list[list[int]]) -> list[list[int]
 def hit_bricks(grid: list[list[int]], hits: list[list[int]]) -> list[int]:
     # Problem 36: Bricks Falling When Hit
     # Key idea: reverse process with union-find connectivity restoration.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+def find_redundant_directed_connection(edges: list[list[int]]) -> list[int]:
+    # Problem 37: Redundant Connection II
+    # Key idea: a node with two parents and a cycle are separate cases; pick the candidate
+    # edge whose removal leaves a valid rooted tree.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+def count_subgraphs_for_each_diameter(n: int, edges: list[list[int]]) -> list[int]:
+    # Problem 38: Count Subtrees With Max Distance Between Cities
+    # Key idea: enumerate every subset, keep the connected ones, take each one's diameter.
     # Time:
     # Space:
 

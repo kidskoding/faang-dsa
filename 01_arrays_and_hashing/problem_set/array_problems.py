@@ -1,5 +1,5 @@
 def rotate(nums: list[int], k: int) -> None:
-    # Problem 4: Rotate Array
+    # Problem 13: Rotate Array
     # Key idea: reverse the whole array, then reverse each part in place.
     # Time:
     # Space:
@@ -7,17 +7,8 @@ def rotate(nums: list[int], k: int) -> None:
     raise NotImplementedError
 
 
-def product_except_self(nums: list[int]) -> list[int]:
-    # Problem 10: Product Of Array Except Self
-    # Key idea: prefix products times suffix products.
-    # Time:
-    # Space:
-
-    raise NotImplementedError
-
-
 def set_zeroes(matrix: list[list[int]]) -> None:
-    # Problem 16: Set Matrix Zeroes
+    # Problem 15: Set Matrix Zeroes
     # Key idea: use the first row and column as marker storage.
     # Time:
     # Space:
@@ -26,7 +17,7 @@ def set_zeroes(matrix: list[list[int]]) -> None:
 
 
 def find_duplicates(nums: list[int]) -> list[int]:
-    # Problem 17: Find All Duplicates In An Array
+    # Problem 14: Find All Duplicates In An Array
     # Key idea: mark visited values in place using index sign flips.
     # Time:
     # Space:
@@ -35,7 +26,7 @@ def find_duplicates(nums: list[int]) -> list[int]:
 
 
 def first_missing_positive(nums: list[int]) -> int:
-    # Problem 19: First Missing Positive
+    # Problem 17: First Missing Positive
     # Key idea: place each value at its index in place, then scan for the first mismatch.
     # Time:
     # Space:
@@ -44,7 +35,7 @@ def first_missing_positive(nums: list[int]) -> int:
 
 
 class RandomizedSet:
-    # Problem 24: Insert Delete GetRandom O(1)
+    # Problem 16: Insert Delete GetRandom O(1)
     # Key idea: hash map of value to index paired with a dense array for O(1) random pick.
 
     def __init__(self) -> None:
@@ -69,7 +60,7 @@ class RandomizedSet:
 
 
 def sort_colors(nums: list[int]) -> None:
-    # Problem 25: Sort Colors
+    # Problem 18: Sort Colors
     # Key idea: Dutch national flag three-way partition in one pass.
     # Time:
     # Space:
@@ -78,7 +69,7 @@ def sort_colors(nums: list[int]) -> None:
 
 
 def find_duplicate(nums: list[int]) -> int:
-    # Problem 26: Find The Duplicate Number
+    # Problem 19: Find The Duplicate Number
     # Key idea: treat values as pointers, Floyd cycle detection to find the repeat.
     # Time:
     # Space:
@@ -87,7 +78,7 @@ def find_duplicate(nums: list[int]) -> int:
 
 
 def spiral_order(matrix: list[list[int]]) -> list[int]:
-    # Problem 27: Spiral Matrix
+    # Problem 20: Spiral Matrix
     # Key idea: shrink top/bottom/left/right bounds while walking the layers.
     # Time:
     # Space:
@@ -96,8 +87,17 @@ def spiral_order(matrix: list[list[int]]) -> list[int]:
 
 
 def rotate_image(matrix: list[list[int]]) -> None:
-    # Problem 28: Rotate Image
+    # Problem 21: Rotate Image
     # Key idea: transpose in place, then reverse each row.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+def next_permutation(nums: list[int]) -> None:
+    # Problem 22: Next Permutation
+    # Key idea: find the rightmost descent, swap with its next-larger successor, reverse the suffix.
     # Time:
     # Space:
 

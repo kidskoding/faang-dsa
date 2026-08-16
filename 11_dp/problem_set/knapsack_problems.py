@@ -1,5 +1,5 @@
 def can_partition(nums: list[int]) -> bool:
-    # Problem 11: Partition Equal Subset Sum
+    # Problem 16: Partition Equal Subset Sum
     # Key idea: 0/1 knapsack — can a subset of nums sum to exactly half the total.
     # Time:
     # Space:
@@ -8,7 +8,7 @@ def can_partition(nums: list[int]) -> bool:
 
 
 def find_target_sum_ways(nums: list[int], target: int) -> int:
-    # Problem 12: Target Sum
+    # Problem 17: Target Sum
     # Key idea: 0/1 knapsack reframed — count sign assignments that hit target.
     # Time:
     # Space:
@@ -17,7 +17,7 @@ def find_target_sum_ways(nums: list[int], target: int) -> int:
 
 
 def coin_change(coins: list[int], amount: int) -> int:
-    # Problem 13: Coin Change
+    # Problem 18: Coin Change
     # Key idea: unbounded knapsack — fewest coins whose sum is amount.
     # Time:
     # Space:
@@ -26,7 +26,7 @@ def coin_change(coins: list[int], amount: int) -> int:
 
 
 def change(amount: int, coins: list[int]) -> int:
-    # Problem 14: Coin Change II
+    # Problem 19: Coin Change II
     # Key idea: unbounded knapsack — count combinations of coins that sum to amount.
     # Time:
     # Space:
@@ -35,7 +35,7 @@ def change(amount: int, coins: list[int]) -> int:
 
 
 def combination_sum4(nums: list[int], target: int) -> int:
-    # Problem 15: Combination Sum IV
+    # Problem 20: Combination Sum IV
     # Key idea: unbounded knapsack counting ordered sequences, so loop target outside items.
     # Time:
     # Space:
@@ -44,7 +44,7 @@ def combination_sum4(nums: list[int], target: int) -> int:
 
 
 def find_max_form(strs: list[str], m: int, n: int) -> int:
-    # Problem 16: Ones and Zeroes
+    # Problem 21: Ones and Zeroes
     # Key idea: 0/1 knapsack with two capacities, the counts of zeros and ones.
     # Time:
     # Space:

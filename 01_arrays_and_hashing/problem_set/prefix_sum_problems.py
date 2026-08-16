@@ -1,5 +1,5 @@
 class NumArray:
-    # Problem 7: Range Sum Query - Immutable
+    # Problem 23: Range Sum Query - Immutable
     # Key idea: precompute a prefix sum array for O(1) range queries.
 
     def __init__(self, nums: list[int]) -> None:
@@ -14,7 +14,7 @@ class NumArray:
 
 
 def subarray_sum(nums: list[int], k: int) -> int:
-    # Problem 12: Subarray Sum Equals K
+    # Problem 24: Subarray Sum Equals K
     # Key idea: running prefix sum plus a count hash map.
     # Time:
     # Space:
@@ -23,7 +23,7 @@ def subarray_sum(nums: list[int], k: int) -> int:
 
 
 def check_subarray_sum(nums: list[int], k: int) -> bool:
-    # Problem 18: Continuous Subarray Sum
+    # Problem 25: Continuous Subarray Sum
     # Key idea: running prefix sum modulo k, hash map of first-seen remainder index.
     # Time:
     # Space:
@@ -32,7 +32,7 @@ def check_subarray_sum(nums: list[int], k: int) -> bool:
 
 
 class NumMatrix:
-    # Problem 22: Range Sum Query 2D - Immutable
+    # Problem 27: Range Sum Query 2D - Immutable
     # Key idea: 2D prefix sum with inclusion-exclusion.
 
     def __init__(self, matrix: list[list[int]]) -> None:
@@ -47,7 +47,7 @@ class NumMatrix:
 
 
 def subarrays_div_by_k(nums: list[int], k: int) -> int:
-    # Problem 23: Subarrays Divisible By K
+    # Problem 26: Subarrays Divisible By K
     # Key idea: running prefix sum modulo k, count matching remainders.
     # Time:
     # Space:
@@ -56,7 +56,7 @@ def subarrays_div_by_k(nums: list[int], k: int) -> int:
 
 
 def max_sub_array_len(nums: list[int], k: int) -> int:
-    # Problem 24: Maximum Size Subarray Sum Equals k
+    # Problem 28: Maximum Size Subarray Sum Equals k
     # Key idea: prefix sum with first-seen index in a hash map to get longest subarray.
     # Time:
     # Space:
@@ -65,7 +65,7 @@ def max_sub_array_len(nums: list[int], k: int) -> int:
 
 
 def pivot_index(nums: list[int]) -> int:
-    # Problem 26: Find Pivot Index
+    # Problem 31: Find Pivot Index
     # Key idea: the pivot is where the left prefix sum equals the right suffix sum.
     # Time:
     # Space:
@@ -74,7 +74,7 @@ def pivot_index(nums: list[int]) -> int:
 
 
 def left_right_difference(nums: list[int]) -> list[int]:
-    # Problem 27: Left and Right Sum Differences
+    # Problem 32: Left and Right Sum Differences
     # Key idea: build a left prefix-sum array and a right suffix-sum array, take the absolute difference per index.
     # Time:
     # Space:
@@ -83,7 +83,7 @@ def left_right_difference(nums: list[int]) -> list[int]:
 
 
 def max_score(s: str) -> int:
-    # Problem 28: Maximum Score After Splitting a String
+    # Problem 33: Maximum Score After Splitting a String
     # Key idea: prefix zeros on the left plus suffix ones on the right, maximized over every split.
     # Time:
     # Space:
@@ -92,7 +92,7 @@ def max_score(s: str) -> int:
 
 
 def ways_to_split_array(nums: list[int]) -> int:
-    # Problem 29: Number of Ways to Split Array
+    # Problem 34: Number of Ways to Split Array
     # Key idea: sweep the split point comparing the left prefix sum against the remaining suffix sum.
     # Time:
     # Space:
@@ -101,8 +101,17 @@ def ways_to_split_array(nums: list[int]) -> int:
 
 
 def find_max_length(nums: list[int]) -> int:
-    # Problem 25: Contiguous Array
+    # Problem 29: Contiguous Array
     # Key idea: map 0 to -1, track first index of each running prefix sum.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+def product_except_self(nums: list[int]) -> list[int]:
+    # Problem 30: Product of Array Except Self
+    # Key idea: one prefix pass and one suffix pass, never dividing.
     # Time:
     # Space:
 

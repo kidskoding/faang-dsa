@@ -2,7 +2,7 @@ from problem_set.array_problems import (
     RandomizedSet,
     find_duplicates,
     first_missing_positive,
-    product_except_self,
+    next_permutation,
     rotate,
     set_zeroes,
 )
@@ -30,18 +30,6 @@ def test_rotate_empty():
     nums = []
     rotate(nums, 0)
     assert nums == []
-
-
-def test_product_except_self_normal():
-    assert product_except_self([1, 2, 3, 4]) == [24, 12, 8, 6]
-
-
-def test_product_except_self_with_zero():
-    assert product_except_self([1, 0, 3]) == [0, 3, 0]
-
-
-def test_product_except_self_two_elements():
-    assert product_except_self([3, 5]) == [5, 3]
 
 
 def test_set_zeroes_normal():
@@ -111,3 +99,27 @@ def test_randomized_set_get_random_returns_inserted_value():
 def test_randomized_set_remove_missing_value():
     randomized_set = RandomizedSet()
     assert randomized_set.remove(99) is False
+
+
+def test_next_permutation_middle():
+    nums = [1, 2, 3]
+    next_permutation(nums)
+    assert nums == [1, 3, 2]
+
+
+def test_next_permutation_last_wraps_to_first():
+    nums = [3, 2, 1]
+    next_permutation(nums)
+    assert nums == [1, 2, 3]
+
+
+def test_next_permutation_with_duplicates():
+    nums = [1, 1, 5]
+    next_permutation(nums)
+    assert nums == [1, 5, 1]
+
+
+def test_next_permutation_single():
+    nums = [1]
+    next_permutation(nums)
+    assert nums == [1]

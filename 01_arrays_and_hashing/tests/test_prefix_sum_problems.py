@@ -2,6 +2,7 @@ from problem_set.prefix_sum_problems import (
     NumArray,
     NumMatrix,
     check_subarray_sum,
+    product_except_self,
     subarray_sum,
     subarrays_div_by_k,
 )
@@ -76,3 +77,15 @@ def test_subarrays_div_by_k_single_element_divisible():
 
 def test_subarrays_div_by_k_no_match():
     assert subarrays_div_by_k([1, 2, 3], 100) == 0
+
+
+def test_product_except_self_normal():
+    assert product_except_self([1, 2, 3, 4]) == [24, 12, 8, 6]
+
+
+def test_product_except_self_with_zero():
+    assert product_except_self([1, 0, 3]) == [0, 3, 0]
+
+
+def test_product_except_self_two_elements():
+    assert product_except_self([3, 5]) == [5, 3]
