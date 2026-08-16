@@ -63,6 +63,13 @@ def first_true(n: int, predicate: Callable[[int], bool]) -> int:
             left = mid + 1
 
     return left
+
+
+values = [5, 7, 7, 7, 7, 8]
+
+assert first_true(6, lambda i: values[i] >= 7) == 1
+assert first_true(6, lambda i: values[i] > 8) == 6
+assert first_true(0, lambda i: True) == 0
 ```
 
 The possible return values are 0 through `n`. Returning `n` means no real index
@@ -113,6 +120,11 @@ def first_bad_version(n: int, is_bad_version: Callable[[int], bool]) -> int:
         else:
             left = mid + 1
     return left
+
+
+assert first_bad_version(5, lambda v: v >= 4) == 4
+assert first_bad_version(8, lambda v: v >= 1) == 1
+assert first_bad_version(1, lambda v: v >= 1) == 1
 ```
 
 This version assumes the problem's guarantee that at least one bad version
@@ -137,6 +149,11 @@ def last_true(n: int, predicate: Callable[[int], bool]) -> int:
         else:
             left = mid + 1
     return left - 1
+
+
+assert last_true(5, lambda i: i < 3) == 2
+assert last_true(5, lambda i: False) == -1
+assert last_true(5, lambda i: True) == 4
 ```
 
 The return is `-1` when nothing is true and `n - 1` when everything is true.
@@ -150,7 +167,7 @@ from bisect import bisect_left, bisect_right
 
 values = [5, 7, 7, 7, 7, 8]
 
-assert bisect_left(values, 7) == 1   # first value >= 7
+assert bisect_left(values, 7) == 1  # first value >= 7
 assert bisect_right(values, 7) == 5  # first value > 7
 ```
 
@@ -169,6 +186,16 @@ or `[-1, -1]` if it is absent. Duplicates are the reason an exact search is
 insufficient, and the required `O(log n)` time rules out walking outward after a
 match.
 
+**Input**: `nums`, a `list[int]` sorted in non-decreasing order, where
+`0 <= len(nums) <= 10^5` and every value fits in `-10^9 <= nums[i] <= 10^9`, and
+`target`, a single `int` in that same range. The list may be empty, and it may
+hold many copies of `target`
+
+**Output**: a `list[int]` of exactly two elements, `[first, last]`, where `first`
+is the smallest index holding `target` and `last` is the largest index holding
+it. Both are `-1` when `target` never appears, and both are the same index when
+it appears exactly once
+
 The first occurrence is the boundary `nums[i] >= target`. The position after
 the last occurrence is the boundary `nums[i] > target`. The only extra work is
 validating the first boundary, because it may be `n` or may land on a larger
@@ -178,6 +205,32 @@ value when the target sits in a gap.
 > the true side, while the second pass requires a strictly larger value. Before
 > indexing the first boundary, I will confirm that it is real and actually holds
 > the target.”
+
+Therefore,
+
+1. Write one inner `lower_bound(strict)` helper rather than two loops, because
+   both boundaries run the identical first-true template over positions 0
+   through `len(nums)` and differ only in where equality sits. The `strict` flag
+   selects `nums[mid] > target` instead of `nums[mid] >= target`
+2. Inside the helper, keep the half-open probe interval `[left, right)` and halve
+   it the usual way: a passing `mid` stays with `right = mid` because it may
+   itself be the boundary, and a failing `mid` leaves with `left = mid + 1`
+   because monotonicity rules out every earlier index too
+3. Call the helper with `strict=False` to get `first`, the smallest index whose
+   value is at or above `target`. This is a **candidate**, not a confirmed match,
+   because the loop never compares for equality
+4. Validate that candidate before trusting it. `first == len(nums)` means every
+   value was smaller than `target`, and `nums[first] != target` means the search
+   landed on a larger value across a gap. Either case returns `[-1, -1]`, and
+   testing `first == len(nums)` first is what makes the empty list safe, since
+   short-circuit evaluation stops before the index read
+5. Call the helper again with `strict=True` to get the first index whose value is
+   strictly greater than `target`, which is one position past the last
+   occurrence. Subtract one to turn that **one-past-the-end** boundary into the
+   last matching index
+6. Return `[first, last]`. No separate validation is needed for `last`, because
+   step 4 already proved at least one copy of `target` exists, so the run of
+   equal values is non-empty and its final index is real
 
 ```python
 def search_range(nums: list[int], target: int) -> list[int]:
@@ -198,6 +251,11 @@ def search_range(nums: list[int], target: int) -> list[int]:
 
     last = lower_bound(strict=True) - 1
     return [first, last]
+
+
+assert search_range([5, 7, 7, 8, 8, 10], 8) == [3, 4]
+assert search_range([5, 7, 7, 8, 8, 10], 6) == [-1, -1]
+assert search_range([], 0) == [-1, -1]
 ```
 
 For `nums = [5, 7, 7, 8, 8, 10]` and `target = 8`:
@@ -244,6 +302,8 @@ uses `bisect_right` and wraps index `n` back to 0 with modulo.
 
 ```python
 from bisect import bisect_right
+
+
 class TimeMap:
     def __init__(self) -> None:
         self.times: dict[str, list[int]] = {}
@@ -263,6 +323,18 @@ class TimeMap:
 
 def next_greatest_letter(letters: list[str], target: str) -> str:
     return letters[bisect_right(letters, target) % len(letters)]
+
+
+time_map = TimeMap()
+time_map.set("foo", "bar", 1)
+time_map.set("foo", "bar2", 4)
+assert [time_map.get("foo", t) for t in (1, 3, 4, 5)] == ["bar", "bar", "bar2", "bar2"]
+assert time_map.get("foo", 0) == ""
+assert time_map.get("missing", 4) == ""
+
+assert next_greatest_letter(["c", "f", "j"], "a") == "c"
+assert next_greatest_letter(["c", "f", "j"], "c") == "f"
+assert next_greatest_letter(["c", "f", "j"], "j") == "c"
 ```
 
 The two parallel lists avoid building timestamp tuples or copying timestamps on
@@ -297,6 +369,11 @@ def find_closest_elements(arr: list[int], k: int, x: int) -> list[int]:
         else:
             right = mid
     return arr[left : left + k]
+
+
+assert find_closest_elements([1, 2, 3, 4, 5], 4, 3) == [1, 2, 3, 4]
+assert find_closest_elements([1, 1, 2, 3, 4, 5], 4, -1) == [1, 1, 2, 3]
+assert find_closest_elements([1, 2, 3, 4, 5], 5, 3) == [1, 2, 3, 4, 5]
 ```
 
 The comparison uses `>` rather than `>=` because a distance tie favors the
@@ -328,6 +405,11 @@ def find_peak_element(nums: list[int]) -> int:
         else:
             left = mid + 1
     return left
+
+
+assert find_peak_element([1, 2, 3, 1]) == 2
+assert find_peak_element([1, 2, 1, 3, 5, 6, 4]) == 5
+assert find_peak_element([1]) == 0
 ```
 
 A descending step means a peak exists at `mid` or to its left, so `mid` stays.

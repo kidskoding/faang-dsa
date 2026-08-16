@@ -63,6 +63,12 @@ def search(nums: list[int], target: int) -> int:
             right = mid - 1
 
     return -1
+
+
+assert search([-1, 0, 3, 5, 9, 12], 9) == 4
+assert search([-1, 0, 3, 5, 9, 12], 2) == -1
+assert search([5], 5) == 0
+assert search([], 5) == -1
 ```
 
 This loop uses **inclusive bounds**, so both `left` and `right` are live
@@ -118,6 +124,12 @@ def search_insert(nums: list[int], target: int) -> int:
             right = mid - 1
 
     return left
+
+
+assert search_insert([1, 3, 5, 6], 5) == 2
+assert search_insert([1, 3, 5, 6], 2) == 1
+assert search_insert([1, 3, 5, 6], 7) == 4
+assert search_insert([], 7) == 0
 ```
 
 The equality case moves `right` because an equal value is a valid insertion
@@ -155,6 +167,16 @@ def guess_number(n: int, guess: Callable[[int], int]) -> int:
             right = mid - 1
 
     return -1
+
+
+# make_guess is a test stand-in for the hidden API, not part of the solution.
+def make_guess(pick: int) -> Callable[[int], int]:
+    return lambda value: (pick > value) - (pick < value)
+
+
+assert guess_number(10, make_guess(6)) == 6
+assert guess_number(1, make_guess(1)) == 1
+assert guess_number(2, make_guess(1)) == 1
 ```
 
 The candidates are the values 1 through `n` rather than array indices. The
@@ -174,6 +196,16 @@ reading row by row produces one sorted sequence:
 [ 23  30  34  60 ]    8  9 10 11
 ```
 
+**Input**: `matrix`, a `list[list[int]]` holding `m` rows and `n` columns with
+`1 <= m, n <= 100`, where every row is sorted in increasing order and the first
+value of a row is greater than the last value of the row above it, and `target`,
+the `int` being looked for. Every matrix value and the target lie between
+`-10^4` and `10^4`
+
+**Output**: a `bool` that is `True` when `target` appears somewhere in the
+matrix and `False` when it does not. The position is never reported, so the
+search can stop the moment one probe matches
+
 Copying those values into a new list would make ordinary binary search obvious,
 but it would spend `O(mn)` time and space before a logarithmic search even
 began. The better move is to search the **virtual flattened indices** from 0
@@ -187,6 +219,34 @@ columns, which is easy to get wrong on a rectangular matrix.
 > “I will treat the matrix as one sorted array without copying it. My bounds are
 > inclusive flat indices, and if the target exists it remains inside that flat
 > interval. Each probe converts back with `divmod(mid, cols)`.”
+
+Therefore,
+
+1. Return `False` immediately when the matrix has no rows, or when its first row
+   has no columns. Both cases would make `cols` zero, and `divmod` by zero
+   raises rather than reporting a missing target
+2. Store `rows` and `cols` from the matrix shape. `cols` is the value that every
+   later coordinate conversion divides by, so reading it from `matrix[0]` rather
+   than assuming a square matrix is what keeps a rectangular input correct
+3. Set `left = 0` and `right = rows * cols - 1`, the inclusive flat bounds. This
+   is the only place the flattening happens, and it costs one multiplication
+   instead of an `O(mn)` copy
+4. Loop while `left <= right`, because a range where the two bounds meet still
+   holds one untested candidate. Take the midpoint as
+   `left + (right - left) // 2`, out of habit for languages where `left + right`
+   can overflow
+5. Convert that flat midpoint back to a cell with `row, col = divmod(mid, cols)`
+   and read `matrix[row][col]`. The quotient counts the full rows that fit
+   before `mid` and the remainder is the offset inside the row
+6. Return `True` when that value equals the target, since the problem asks only
+   whether it exists
+7. When the value is smaller than the target, the chained ordering proves every
+   flat index through `mid` is too small, so set `left = mid + 1`. Otherwise the
+   value is too large and every index from `mid` onward can go, so set
+   `right = mid - 1`. Both moves step past `mid`, which guarantees the range
+   shrinks
+8. Return `False` once the bounds cross. The candidate interval is then empty,
+   and the invariant says a present target would still have been inside it
 
 ```python
 def search_matrix(matrix: list[list[int]], target: int) -> bool:
@@ -209,6 +269,13 @@ def search_matrix(matrix: list[list[int]], target: int) -> bool:
             right = mid - 1
 
     return False
+
+
+MATRIX = [[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]]
+assert search_matrix(MATRIX, 3) is True
+assert search_matrix(MATRIX, 13) is False
+assert search_matrix([[1]], 1) is True
+assert search_matrix([], 1) is False
 ```
 
 Searching the matrix above for 16 gives:
@@ -256,6 +323,18 @@ def search_matrix_ii(matrix: list[list[int]], target: int) -> bool:
             row += 1
 
     return False
+
+
+GRID = [
+    [1, 4, 7, 11, 15],
+    [2, 5, 8, 12, 19],
+    [3, 6, 9, 16, 22],
+    [10, 13, 14, 17, 24],
+    [18, 21, 23, 26, 30],
+]
+assert search_matrix_ii(GRID, 5) is True
+assert search_matrix_ii(GRID, 20) is False
+assert search_matrix_ii([[]], 5) is False
 ```
 
 Starting at the top-left is the near miss. When that smallest corner is below the

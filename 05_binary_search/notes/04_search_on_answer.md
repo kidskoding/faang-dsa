@@ -53,6 +53,16 @@ bananas per hour. During an hour she eats from only one pile. A pile of `p`
 bananas takes `ceil(p / speed)` hours, and the goal is the smallest speed that
 finishes all piles within `h` hours.
 
+**Input**: `piles`, a `list[int]` where `piles[i]` is the number of bananas in
+pile `i`, and `h`, an `int` number of hours available. The problem guarantees
+`1 <= len(piles) <= 10^4`, `1 <= piles[i] <= 10^9`, and `len(piles) <= h <= 10^9`,
+and that last guarantee is the one the upper bound leans on
+
+**Output**: a single `int`, the smallest integer eating speed in bananas per hour
+such that eating from one pile per hour finishes every pile within `h` hours. It
+is a speed, not an hour count, and the guarantee `h >= len(piles)` means an answer
+always exists
+
 Trying speed 1, then 2, then 3 is correct because faster eating never takes more
 hours. It is also too slow because the largest pile may contain `10^9` bananas,
 so there may be a billion candidates. The same monotonicity that makes the scan
@@ -76,6 +86,34 @@ because at `max(piles)` every pile takes one hour, and the problem guarantees
 > false to true once. I will keep the minimum feasible speed inside an inclusive
 > interval.”
 
+Therefore,
+
+1. Write the predicate before the loop, because it is the actual algorithm and the
+   search is boilerplate around it. `feasible(speed)` sums
+   `(pile + speed - 1) // speed` over every pile and reports whether the total is
+   at most `h`, which is one `O(n)` pass with a single running counter
+2. Set the inclusive bounds to `left = 1` and `right = max(piles)`. Speed 0 would
+   never finish, so 1 is the smallest legal candidate, and at `max(piles)` every
+   pile takes exactly one hour, which the guarantee `h >= len(piles)` makes
+   feasible. Because the right endpoint is known feasible, the loop can return
+   without a final validity check
+3. Loop while `left < right`, since the search is over as soon as the interval
+   holds one value. Take the lower midpoint `mid = left + (right - left) // 2`,
+   which is the form to use when success keeps `mid` alive, and which cannot
+   overflow in a fixed-width language
+4. When `feasible(mid)` is true, set `right = mid` rather than `mid - 1`, because
+   `mid` itself might be the smallest speed that works and discarding it would
+   lose the answer. Everything above `mid` is dropped, since a larger speed can
+   never be the *minimum* feasible one
+5. When `feasible(mid)` is false, set `left = mid + 1`. Any speed below `mid`
+   takes at least as many hours as `mid` did, so one failed test rejects the whole
+   block at once, and `mid` is provably not the answer
+6. Return `left` when the bounds meet. The invariant says the minimum feasible
+   speed was always inside `[left, right]`, and the interval has narrowed to one
+   value, so that value is it. The edge cases are the two extremes: an answer of
+   1 when the piles are tiny, and an answer of `max(piles)` when `h` equals the
+   number of piles, and neither endpoint is treated as an excluded sentinel
+
 ```python
 def min_eating_speed(piles: list[int], h: int) -> int:
     def feasible(speed: int) -> bool:
@@ -92,6 +130,13 @@ def min_eating_speed(piles: list[int], h: int) -> int:
         else:
             left = mid + 1
     return left
+
+
+assert min_eating_speed([3, 6, 7, 11], 8) == 4
+assert min_eating_speed([30, 11, 23, 4, 20], 5) == 30
+assert min_eating_speed([30, 11, 23, 4, 20], 6) == 23
+assert min_eating_speed([1, 1], 2) == 1
+assert min_eating_speed([3, 6, 7, 11], 4) == 11
 ```
 
 The bounds are inclusive candidates, and the invariant is that the minimum
@@ -159,9 +204,7 @@ def ship_feasible(weights: list[int], days: int, capacity: int) -> bool:
     return used_days <= days
 
 
-def bouquet_feasible(
-    bloom_day: list[int], bouquets: int, size: int, day: int
-) -> bool:
+def bouquet_feasible(bloom_day: list[int], bouquets: int, size: int, day: int) -> bool:
     made, adjacent = 0, 0
     for bloom in bloom_day:
         if bloom <= day:
@@ -172,6 +215,15 @@ def bouquet_feasible(
         else:
             adjacent = 0
     return made >= bouquets
+
+
+assert ship_feasible([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5, 15) is True
+assert ship_feasible([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5, 14) is False
+assert ship_feasible([3, 2, 2, 4, 1, 4], 3, 6) is True
+assert ship_feasible([1, 2, 3, 4, 5], 1, 15) is True
+assert bouquet_feasible([1, 10, 3, 10, 2], 3, 1, 3) is True
+assert bouquet_feasible([1, 10, 3, 10, 2], 3, 1, 2) is False
+assert bouquet_feasible([7, 7, 7, 7, 12, 7, 7], 2, 3, 7) is False
 ```
 
 Resetting `adjacent` on an unbloomed flower is essential because bouquets require
@@ -211,6 +263,12 @@ def my_sqrt(x: int) -> int:
         else:
             right = mid - 1
     return left
+
+
+assert my_sqrt(4) == 2
+assert my_sqrt(8) == 2
+assert my_sqrt(1) == 1
+assert my_sqrt(0) == 0
 ```
 
 The comparison `mid <= x // mid` avoids overflow from `mid * mid` in a
@@ -266,6 +324,11 @@ def kth_smallest(matrix: list[list[int]], k: int) -> int:
         else:
             left = mid + 1
     return left
+
+
+assert kth_smallest([[1, 5, 9], [10, 11, 13], [12, 13, 15]], 8) == 13
+assert kth_smallest([[1, 5, 9], [10, 11, 13], [12, 13, 15]], 1) == 1
+assert kth_smallest([[-5]], 1) == -5
 ```
 
 The column pointer is not reset for each row. Since columns increase downward,
@@ -339,6 +402,11 @@ def find_median_sorted_arrays(nums1: list[int], nums2: list[int]) -> float:
             return (max(a_left, b_left) + min(a_right, b_right)) / 2
 
     raise ValueError("inputs must be sorted and not both empty")
+
+
+assert find_median_sorted_arrays([1, 3], [2]) == 2.0
+assert find_median_sorted_arrays([1, 2], [3, 4]) == 2.5
+assert find_median_sorted_arrays([], [1]) == 1.0
 ```
 
 The infinities represent a missing value beyond an end and keep it from winning

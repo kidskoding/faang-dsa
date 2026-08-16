@@ -57,6 +57,12 @@ def search_rotated(nums: list[int], target: int) -> int:
                 right = mid - 1
 
     return -1
+
+
+assert search_rotated([4, 5, 6, 7, 0, 1, 2], 0) == 4
+assert search_rotated([4, 5, 6, 7, 0, 1, 2], 3) == -1
+assert search_rotated([0, 1, 2, 4, 5, 6, 7], 4) == 3
+assert search_rotated([1], 0) == -1
 ```
 
 The bounds are inclusive. The invariant is that, if the target exists, it remains
@@ -78,9 +84,43 @@ Two details prevent common failures:
 Given a rotated sorted array of distinct integers, return the target's index or
 `-1` if it is absent. The required `O(log n)` time rules out scanning.
 
+**Input**: `nums`, a `list[int]` that was sorted in ascending order and then
+rotated at some unknown pivot, where `1 <= len(nums) <= 5000` and every value is
+distinct, together with `target`, a single `int` to look for. The rotation amount
+may be zero, so an unrotated sorted array is a legal input
+
+**Output**: an `int`, the index into `nums` at which `target` sits, or `-1` when
+`target` does not appear anywhere in `nums`. The index is into the rotated array
+as given, not into the sorted order it came from, which is why sorting a copy
+first would answer the wrong question
+
 > “Plain binary search cannot act on `nums[mid]` alone because the smaller run
 > may have wrapped to the right. I will first identify a sorted half, then use
 > both endpoints of that half to decide whether it can contain the target.”
+
+Therefore,
+
+1. Set `left = 0` and `right = len(nums) - 1`, and loop while `left <= right`.
+   The bounds are inclusive because a single remaining index still has to be
+   probed, and a one-element input is a legal case that must reach its own
+   comparison
+2. Compute `mid = left + (right - left) // 2` and compare `nums[mid]` with
+   `target` first. Returning here is what lets both containment tests below
+   exclude `mid` from their ranges
+3. Decide which half is sorted with `nums[left] <= nums[mid]`. Only one rotation
+   point exists, so it can sit in at most one half, which makes this single
+   comparison enough to name a fully sorted side. The `<=` matters because when
+   two candidates remain `mid == left`, and that one-element left half is sorted
+4. If the left half is sorted, keep it only when
+   `nums[left] <= target < nums[mid]`, since a sorted run's two endpoints decide
+   membership exactly. Keeping it means `right = mid - 1`; otherwise the answer
+   can only be in the other half, so `left = mid + 1`
+5. If instead the right half is sorted, apply the mirrored test
+   `nums[mid] < target <= nums[right]`, moving `left = mid + 1` to keep that half
+   and `right = mid - 1` to reject it
+6. If the loop drains the interval so that `left > right`, no half ever contained
+   the target, so return `-1`. Rotation zero needs no special case here, because
+   every half chosen along the way is just a slice of the original sorted array
 
 The code is the sorted-half search above. For
 `nums = [4, 5, 6, 7, 0, 1, 2]` and `target = 0`:
@@ -131,6 +171,12 @@ def find_min_rotated(nums: list[int]) -> int:
             right = mid
 
     return nums[left]
+
+
+assert find_min_rotated([3, 4, 5, 1, 2]) == 1
+assert find_min_rotated([4, 5, 6, 7, 0, 1, 2]) == 0
+assert find_min_rotated([11, 13, 15, 17]) == 11
+assert find_min_rotated([1]) == 1
 ```
 
 The bounds are inclusive and the invariant is that the minimum remains in
@@ -197,6 +243,12 @@ def search_rotated_with_duplicates(nums: list[int], target: int) -> bool:
                 right = mid - 1
 
     return False
+
+
+assert search_rotated_with_duplicates([2, 5, 6, 0, 0, 1, 2], 0) is True
+assert search_rotated_with_duplicates([2, 5, 6, 0, 0, 1, 2], 3) is False
+assert search_rotated_with_duplicates([1, 0, 1, 1, 1], 0) is True
+assert search_rotated_with_duplicates([1, 1, 1, 1], 0) is False
 ```
 
 Dropping the ends is safe because they equal `nums[mid]`, which remains in the
@@ -221,6 +273,12 @@ def find_min_rotated_with_duplicates(nums: list[int]) -> int:
             right -= 1
 
     return nums[left]
+
+
+assert find_min_rotated_with_duplicates([1, 3, 5]) == 1
+assert find_min_rotated_with_duplicates([2, 2, 2, 0, 1]) == 0
+assert find_min_rotated_with_duplicates([3, 3, 1, 3]) == 1
+assert find_min_rotated_with_duplicates([2, 2, 2]) == 2
 ```
 
 Duplicates degrade the worst case to `O(n)`. An all-equal array with an absent
@@ -247,6 +305,12 @@ def peak_index_in_mountain_array(arr: list[int]) -> int:
             right = mid
 
     return left
+
+
+assert peak_index_in_mountain_array([0, 1, 0]) == 1
+assert peak_index_in_mountain_array([0, 2, 1, 0]) == 1
+assert peak_index_in_mountain_array([0, 10, 5, 2]) == 1
+assert peak_index_in_mountain_array([3, 4, 5, 1]) == 2
 ```
 
 An upward slope proves the peak is strictly right of `mid`. A downward slope
