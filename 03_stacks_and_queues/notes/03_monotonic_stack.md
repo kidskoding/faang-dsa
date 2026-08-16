@@ -62,6 +62,12 @@ def next_greater_naive(nums: list[int]) -> list[int]:
                 answer[i] = nums[j]
                 break
     return answer
+
+
+assert next_greater_naive([5, 4, 3, 9]) == [9, 9, 9, -1]
+assert next_greater_naive([2, 1, 2, 4, 3]) == [4, 2, 4, -1, -1]
+assert next_greater_naive([3, 3, 3]) == [-1, -1, -1]
+assert next_greater_naive([]) == []
 ```
 
 On `[5, 4, 3, 9]`, each of 5, 4, and 3 separately walks toward the same 9. A
@@ -91,6 +97,12 @@ def next_greater(nums: list[int]) -> list[int]:
         stack.append(i)
 
     return answer
+
+
+assert next_greater([2, 1, 2, 4, 3]) == [4, 2, 4, -1, -1]
+assert next_greater([5, 4, 3, 9]) == [9, 9, 9, -1]
+assert next_greater([3, 3, 3]) == [-1, -1, -1]
+assert next_greater([]) == []
 ```
 
 The answer starts with `-1` because any index left on the stack never finds a
@@ -171,6 +183,13 @@ def largest_rectangle_area(heights: list[int]) -> int:
         stack.append(right)
 
     return best
+
+
+assert largest_rectangle_area([2, 1, 5, 6, 2, 3]) == 10
+assert largest_rectangle_area([2, 4]) == 4
+assert largest_rectangle_area([1, 2, 3]) == 4
+assert largest_rectangle_area([5]) == 5
+assert largest_rectangle_area([]) == 0
 ```
 
 The final zero is a **sentinel**, a fake shortest bar that forces every real bar
@@ -210,6 +229,12 @@ def sum_subarray_mins(arr: list[int]) -> int:
         stack.append(right)
 
     return total
+
+
+assert sum_subarray_mins([3, 1, 2, 4]) == 17
+assert sum_subarray_mins([11, 81, 94, 43, 3]) == 444
+assert sum_subarray_mins([11, 11]) == 33
+assert sum_subarray_mins([7]) == 7
 ```
 
 The final zero is a sentinel because the problem's values are positive. For
@@ -247,6 +272,12 @@ def remove_k_digits(num: str, k: int) -> str:
 
     answer = "".join(stack).lstrip("0")
     return answer or "0"
+
+
+assert remove_k_digits("1432219", 3) == "1219"
+assert remove_k_digits("10200", 1) == "200"
+assert remove_k_digits("12345", 2) == "123"
+assert remove_k_digits("10", 2) == "0"
 ```
 
 On `"1432219"` with `k = 3`, the arrivals 3, 2, and the second 2 discard the
@@ -276,6 +307,12 @@ def remove_duplicate_letters(s: str) -> str:
         seen.add(ch)
 
     return "".join(stack)
+
+
+assert remove_duplicate_letters("bcabc") == "abc"
+assert remove_duplicate_letters("cbacdcbc") == "acdb"
+assert remove_duplicate_letters("a") == "a"
+assert remove_duplicate_letters("") == ""
 ```
 
 For `"bcabc"`, the arriving `a` can pop both `c` and `b` because each still has a
@@ -305,6 +342,13 @@ def trap(heights: list[int]) -> int:
         stack.append(right)
 
     return water
+
+
+assert trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]) == 6
+assert trap([4, 2, 0, 3, 2, 5]) == 9
+assert trap([0, 1, 0, 2]) == 1
+assert trap([3, 2, 1]) == 0
+assert trap([]) == 0
 ```
 
 On `[0, 1, 0, 2]`, index 2 pops when the height-2 right wall arrives. Index 1 is
@@ -334,6 +378,13 @@ represents, what makes it obsolete, and what becomes known when it pops.
 Given temperatures in chronological order, return how many days each day must
 wait for a **strictly warmer** temperature. Return `0` when no warmer day follows.
 
+**Input**: `temperatures`, a `list[int]` of daily temperatures in chronological
+order, where `1 <= len(temperatures) <= 10^5` and each value is between 30 and 100
+
+**Output**: a `list[int]` of the same length, where position `i` holds the number
+of days you must wait after day `i` before a strictly warmer day arrives, and `0`
+when no later day is warmer
+
 Scanning forward from every day is correct but quadratic on a decreasing input,
 because each day searches the entire remaining forecast and finds nothing. A
 monotonic stack keeps only the indices still waiting. Their temperatures decrease
@@ -343,6 +394,28 @@ from bottom to top, and a warmer day resolves all colder days at the top.
 > than the day at index `j` on top, `i` is the first warmer day for `j`, so I pop
 > `j` and write `i - j`. Equal temperatures stay because the problem says
 > strictly warmer.”
+
+Therefore,
+
+1. Fill `answer` with `0`, one slot per day, because that default is already the
+   correct output for any day that never finds a warmer one, which removes the
+   need for a cleanup pass at the end
+2. Start an empty stack that holds **indices** rather than temperatures, since the
+   answer is a distance and only an index can produce `i - waiting`
+3. Walk the days from left to right, treating the current day `i` as the newcomer
+   that may settle the unresolved days already on the stack
+4. While the stack is non-empty and the temperature at the top index is **strictly
+   less** than today's, pop that index, because today is the first warmer day it
+   has seen, and record `i - waiting` as its wait. This is a `while` rather than an
+   `if` because a single warm day can settle several colder days stacked above one
+   another
+5. Stop popping as soon as the top temperature is greater than or equal to today's.
+   The equal case is the edge case worth naming out loud: an equal temperature is
+   not strictly warmer, so that index stays and keeps waiting for a real increase
+6. Push `i` onto the stack, since today is itself unresolved. Everything left below
+   it is at least as warm, so the stack stays decreasing from bottom to top
+7. When the scan ends, any index still on the stack never met a warmer day, and its
+   slot already holds the `0` from step 1, so return `answer` as it stands
 
 ```python
 def daily_temperatures(temperatures: list[int]) -> list[int]:
@@ -356,6 +429,12 @@ def daily_temperatures(temperatures: list[int]) -> list[int]:
         stack.append(i)
 
     return answer
+
+
+assert daily_temperatures([73, 74, 75, 71, 69, 72, 76, 73]) == [1, 1, 4, 2, 1, 1, 0, 0]
+assert daily_temperatures([30, 40, 50, 60]) == [1, 1, 1, 0]
+assert daily_temperatures([30, 60, 90]) == [1, 1, 0]
+assert daily_temperatures([75, 74, 73]) == [0, 0, 0]
 ```
 
 - **Time Complexity:** `O(n)`, because each of the `n` indices is pushed once

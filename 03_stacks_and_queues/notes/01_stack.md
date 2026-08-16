@@ -34,6 +34,11 @@ stack.append(4)
 stack.append(9)
 top = stack[-1]  # 9
 removed = stack.pop()  # 9
+
+
+assert top == 9
+assert removed == 9
+assert stack == [4]
 ```
 
 Do not use `pop(0)` for a stack. It removes from the wrong end and shifts every
@@ -88,6 +93,13 @@ def is_valid(s: str) -> bool:
         else:
             stack.append(ch)
     return not stack
+
+
+assert is_valid("()") is True
+assert is_valid("()[]{}") is True
+assert is_valid("(]") is False
+assert is_valid("([)]") is False
+assert is_valid("(") is False
 ```
 
 The dictionary is keyed by closing brackets because the closer is what arrives
@@ -136,6 +148,12 @@ def decode_string(s: str) -> str:
         else:
             current += ch
     return current
+
+
+assert decode_string("3[a]2[bc]") == "aaabcbc"
+assert decode_string("3[a2[c]]") == "accaccacc"
+assert decode_string("2[abc]3[cd]ef") == "abcabccdcdcdef"
+assert decode_string("abc") == "abc"
 ```
 
 `count = count * 10 + int(ch)` matters because repeat counts may have several
@@ -189,6 +207,13 @@ def calculate(expression: str) -> int:
             result += stack.pop()  # result before '('
 
     return result + sign * number
+
+
+assert calculate("1 + 1") == 2
+assert calculate("2-1 + 2") == 3
+assert calculate("(1+(4+5+2)-3)+(6+8)") == 23
+assert calculate("1-(2+3)") == -4
+assert calculate("0") == 0
 ```
 
 The sign is pushed after the result, so it comes back first. On `"1-(2+3)"`, the
@@ -238,6 +263,12 @@ def count_of_atoms(formula: str) -> str:
         atom + (str(counts[atom]) if counts[atom] > 1 else "")
         for atom in sorted(counts)
     )
+
+
+assert count_of_atoms("H2O") == "H2O"
+assert count_of_atoms("Mg(OH)2") == "H2MgO2"
+assert count_of_atoms("K4(ON(SO3)2)2") == "K4N2O14S4"
+assert count_of_atoms("H") == "H"
 ```
 
 For `"Mg(OH)2"`, the inner map becomes `{'O': 1, 'H': 1}`. Closing the group
@@ -272,6 +303,12 @@ def eval_rpn(tokens: list[str]) -> int:
         else:
             stack.append(int(left / right))
     return stack[-1]
+
+
+assert eval_rpn(["2", "1", "+", "3", "*"]) == 9
+assert eval_rpn(["4", "13", "5", "/", "+"]) == 6
+assert eval_rpn(["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]) == 22
+assert eval_rpn(["42"]) == 42
 ```
 
 The pop order is load-bearing. Swapping `left` and `right` still passes addition
@@ -301,6 +338,15 @@ class MinStack:
 
     def get_min(self) -> int:
         return self.stack[-1][1]
+
+
+min_stack = MinStack()
+for value in (-2, 0, -3):
+    min_stack.push(value)
+assert min_stack.get_min() == -3
+min_stack.pop()
+assert min_stack.top() == 0
+assert min_stack.get_min() == -2
 ```
 
 Pairs also compress repeated state. Remove Adjacent Duplicates II stores
@@ -331,6 +377,16 @@ class FreqStack:
         if not self.groups[self.max_freq]:
             self.max_freq -= 1
         return value
+
+
+freq_stack = FreqStack()
+for value in (5, 7, 5, 7, 4, 5):
+    freq_stack.push(value)
+assert [freq_stack.pop() for _ in range(4)] == [5, 7, 5, 4]
+
+single = FreqStack()
+single.push(1)
+assert single.pop() == 1
 ```
 
 Values tied at `max_freq` come from the same list, so its normal LIFO pop returns
@@ -363,6 +419,11 @@ def longest_valid_parentheses(s: str) -> int:
                 best = max(best, i - stack[-1])
 
     return best
+
+
+assert longest_valid_parentheses("(()") == 2
+assert longest_valid_parentheses(")()())") == 4
+assert longest_valid_parentheses("") == 0
 ```
 
 On `")()())"`, index 0 is an unmatched boundary. The matches ending at indices
@@ -381,6 +442,14 @@ You are given a string of lowercase letters and parentheses. Remove the fewest
 parentheses needed to make it valid, keeping all letters and the order of every
 remaining character. More than one valid result may exist.
 
+**Input**: `s`, a `str` containing only lowercase English letters, `'('`, and
+`')'`, where `1 <= len(s) <= 10^5`
+
+**Output**: a `str` built from `s` by deleting the fewest parentheses that make
+every remaining `(` pair with a later `)`, with all letters kept and the relative
+order of every surviving character unchanged. Several answers can be equally
+short, and any one of them is accepted
+
 This is bracket matching with one important change: the answer is a string, not
 a boolean. Therefore, the stack must remember **which positions** are unmatched,
 not merely which bracket character appeared.
@@ -394,6 +463,26 @@ the remaining indices, then join the characters at the end.
 > either consumes the newest opener or, if none exists, marks itself for removal.
 > After the scan, the indices still on the stack are exactly the openers that
 > never found a closer.”
+
+Therefore,
+
+1. Copy `s` into a list of characters, because a string is immutable and each
+   deleted position has to be edited in place rather than rebuilt
+2. Create an empty stack that will hold the **indices** of opening parentheses
+   still waiting for a closer, since the answer needs positions rather than
+   bracket characters
+3. Scan the list once with both the index and the character in hand. A `(` pushes
+   its index, because it is now the newest opener any later closer must match
+4. On a `)`, pop when the stack is non-empty, which pairs that closer with the
+   newest unmatched opener and retires both. This is the edge case to name: when
+   the stack is empty the closer has nothing to match, so blank that position with
+   `chars[i] = ""`. Blank rather than delete, because removing an element would
+   shift every later character left and invalidate the indices already parked on
+   the stack
+5. After the scan, every index still on the stack is an opener that never found a
+   closer, so blank each of those positions too
+6. Join the list back into a string. The blanked entries contribute nothing, and
+   every surviving character keeps its original order
 
 ```python
 def min_remove_to_make_valid(s: str) -> str:
@@ -413,6 +502,12 @@ def min_remove_to_make_valid(s: str) -> str:
         chars[i] = ""
 
     return "".join(chars)
+
+
+assert min_remove_to_make_valid("lee(t(c)o)de)") == "lee(t(c)o)de"
+assert min_remove_to_make_valid("a)b(c)d") == "ab(c)d"
+assert min_remove_to_make_valid("a)b(c)d(") == "ab(c)d"
+assert min_remove_to_make_valid("))((") == ""
 ```
 
 - **Time Complexity:** `O(n)` for a string of length `n`, because the scan, the

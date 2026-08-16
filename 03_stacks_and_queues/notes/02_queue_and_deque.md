@@ -115,6 +115,14 @@ class MyCircularQueue:
         if self.count == 0:
             return -1
         return self.buf[(self.head + self.count - 1) % self.cap]
+
+
+q = MyCircularQueue(3)
+assert [q.enqueue(v) for v in (1, 2, 3, 4)] == [True, True, True, False]
+assert q.rear() == 3
+assert q.dequeue() is True and q.enqueue(4) is True
+assert (q.front(), q.rear()) == (2, 4)
+assert MyCircularQueue(3).front() == -1 and MyCircularQueue(3).dequeue() is False
 ```
 
 **Design decisions**:
@@ -157,9 +165,9 @@ been `(0 + 3) % 3 = 0`, which overwrites the 10 that had not been served yet and
 loses it with no error
 
 The second interesting step is the enqueue that succeeded. `tail` came out as
-`(1 + 2) % 3 = 0`, so 40 landed in slot 0, physically *before* the front element
-20\. The array is now `[40, 20, 30]`, which looks scrambled, and reading it left to
-right would give the wrong answer. The queue order is `head`, then wrap, which is
+`(1 + 2) % 3 = 0`, so 40 landed in slot 0, physically *before* the front element,
+which is 20. The array is now `[40, 20, 30]`, which looks scrambled, and reading
+it left to right would give the wrong answer. The queue order is `head`, then wrap, which is
 20, 30, 40
 
 The dequeue on the line above also shows why the values are never cleared. Slot 0
@@ -216,6 +224,19 @@ class MyCircularDeque:
         if self.count == 0:
             return -1
         return self.buf[(self.head + self.count - 1) % self.cap]
+
+
+dq = MyCircularDeque(3)
+assert [dq.insert_last(1), dq.insert_last(2), dq.insert_front(3), dq.insert_front(4)] == [
+    True,
+    True,
+    True,
+    False,
+]
+assert dq.get_rear() == 2
+assert dq.delete_last() is True and dq.insert_front(4) is True
+assert (dq.get_front(), dq.get_rear()) == (4, 1)
+assert MyCircularDeque(3).get_front() == -1 and MyCircularDeque(3).delete_last() is False
 ```
 
 ```text
@@ -257,6 +278,12 @@ double_ended.appendleft(5)
 double_ended.append(30)
 leftmost = double_ended.popleft()  # 5
 rightmost = double_ended.pop()  # 30
+
+
+assert oldest == 10
+assert list(fifo) == [20, 30]
+assert (leftmost, rightmost) == (5, 30)
+assert list(double_ended) == [10, 20]
 ```
 
 [Operation Costs](../../00_fundamentals/notes/04_common_operation_costs.md):
@@ -327,6 +354,17 @@ class MyQueue:
 
     def empty(self) -> bool:
         return not self.in_stack and not self.out_stack
+
+
+mq = MyQueue()
+assert mq.empty() is True
+mq.push(1)
+mq.push(2)
+assert (mq.peek(), mq.pop()) == (1, 1)
+assert mq.empty() is False
+mq.push(3)
+assert [mq.pop(), mq.pop()] == [2, 3]
+assert mq.empty() is True
 ```
 
 **Why this is amortized O(1)**:
@@ -393,6 +431,11 @@ class RecentCounter:
         while self.calls[0] < t - 3000:
             self.calls.popleft()
         return len(self.calls)
+
+
+counter = RecentCounter()
+assert [counter.ping(t) for t in (1, 100, 3001, 3002)] == [1, 2, 3, 3]
+assert RecentCounter().ping(0) == 1
 ```
 
 Calls arrive with increasing timestamps, so the deque is automatically sorted and
@@ -414,10 +457,27 @@ there are two candidates for the middle, and every operation uses the frontmost 
 the two
 
 Since this is a **design problem**, the input is a sequence of method calls rather
-than one array. The three push methods insert an integer at the front, middle, or
-back and return `None`. The three pop methods remove and return from the matching
-position, or return `-1` when the queue is empty. If the length is even, “middle”
-means the frontmost of the two middle positions
+than one array, so the contract is stated per method
+
+**Input**:
+
+- `FrontMiddleBackQueue()`, the constructor, which takes no arguments and starts
+  the queue empty
+- `push_front(val: int) -> None`, `push_middle(val: int) -> None`, and
+  `push_back(val: int) -> None`, each taking one value to insert at that position,
+  where `1 <= val <= 10^9`
+- `pop_front() -> int`, `pop_middle() -> int`, and `pop_back() -> int`, which take
+  no arguments and remove from that position
+- At most 1000 calls are made across all six methods, so the cost that matters is
+  the cost per call rather than the total
+
+**Output**:
+
+- The three push methods return `None`, since their whole effect is the mutation
+- The three pop methods return an `int`, the value that was removed from that
+  position, and return `-1` when the queue is empty rather than raising
+- “Middle” means the frontmost of the two middle positions when the length is
+  even, so a queue of `[1, 2, 3, 4]` has `2` as its middle, not `3`
 
 A deque makes its ends `O(1)`, but its middle is still `O(n)` to reach. Therefore,
 one deque cannot make all six operations constant time. Split the queue into two
@@ -441,14 +501,38 @@ keeps every lone element in `back`, so `not back` means the whole queue is empty
 
 Therefore,
 
-1. Store the queue as two deques whose logical order is `front + back`
-2. Push or pop at an outer end for front/back operations. For a front pop, use
-   `back` only when `front` is empty
-3. For a middle push, append to `front` when it is shorter; otherwise prepend to
-   `back`. For a middle pop, remove from `front` when the halves are equal;
-   otherwise remove from `back`
-4. Return `-1` before any empty pop. After every successful change, call
-   `_balance` to restore the invariant
+01. Store the queue as two deques, `front` and `back`, whose logical order is
+    `front + back`, because splitting the queue at its midpoint turns the middle
+    into an **end** of one half, and an end is the only place a deque is `O(1)`
+02. Write `_balance` first, since every other method ends by calling it. If `front`
+    has grown longer than `back`, move its last element to the head of `back`; if
+    `back` has grown more than one longer than `front`, move its first element to
+    the tail of `front`. A single `if`/`elif` is enough because one method call can
+    shift the size difference by at most one
+03. For `push_front`, `appendleft` onto `front`, because that is the outer end of
+    the logical queue and needs no knowledge of where the split sits
+04. For `push_middle`, append to `front` when `front` is strictly shorter, so the
+    new value becomes the last element of the front half, which is exactly the
+    boundary position; otherwise `appendleft` onto `back` so it becomes the first
+    element of the back half. Either way the value lands at the midpoint, and
+    `_balance` afterwards decides which half it ends up owned by
+05. For `push_back`, `append` onto `back`, which is the other outer end and is
+    split-agnostic for the same reason `push_front` is
+06. Guard every pop with `if not back: return -1`, which is the empty-queue edge
+    case. The invariant forces a lone element to live in `back`, so an empty `back`
+    is the same statement as an empty queue, and no separate length check is needed
+07. For `pop_front`, `popleft` from `front` when it holds anything, and otherwise
+    `popleft` from `back`, because the invariant allows `front` to be empty while
+    `back` still holds one element
+08. For `pop_middle`, compare the halves. Equal lengths mean the length is even and
+    the frontmost of the two middles is the last element of `front`, so `front.pop()`;
+    unequal lengths mean `back` is the longer half and the middle is its first
+    element, so `back.popleft()`
+09. For `pop_back`, `pop` from `back`, which always holds the last element of the
+    logical queue since the invariant never lets `back` be the shorter half
+10. Finish every successful push and pop by calling `_balance`, which restores the
+    invariant for the next call and moves at most one element, so no operation
+    degrades past `O(1)`
 
 ```python
 from collections import deque
@@ -503,6 +587,16 @@ class FrontMiddleBackQueue:
         val = self.back.pop()
         self._balance()
         return val
+
+
+fmb = FrontMiddleBackQueue()
+fmb.push_front(1)
+fmb.push_back(2)
+fmb.push_middle(3)
+fmb.push_middle(4)
+assert list(fmb.front) + list(fmb.back) == [1, 4, 3, 2]
+assert [fmb.pop_front(), fmb.pop_middle(), fmb.pop_middle(), fmb.pop_back()] == [1, 3, 4, 2]
+assert fmb.pop_front() == -1
 ```
 
 - **Time Complexity:** `O(1)` per method, because each method touches deque ends and
