@@ -1,5 +1,5 @@
 def diff_ways_to_compute(expression: str) -> list[int]:
-    # Problem 22: Different Ways To Add Parentheses
+    # Problem 28: Different Ways To Add Parentheses
     # Key idea: split on each operator, recursively solve both sides, combine every result pair.
     # Time:
     # Space:
@@ -8,7 +8,7 @@ def diff_ways_to_compute(expression: str) -> list[int]:
 
 
 def get_skyline(buildings: list[list[int]]) -> list[list[int]]:
-    # Problem 23: The Skyline Problem
+    # Problem 29: The Skyline Problem
     # Key idea: divide buildings in half, recursively get each skyline, merge with a line sweep.
     # Time:
     # Space:
@@ -26,7 +26,7 @@ def closest_pair(points: list[list[int]]) -> float:
 
 
 def beautiful_array(n: int) -> list[int]:
-    # Problem 25: Beautiful Array
+    # Problem 31: Beautiful Array
     # Key idea: recursively build odd/even-biased halves whose combination avoids arithmetic triples.
     # Time:
     # Space:
@@ -35,7 +35,7 @@ def beautiful_array(n: int) -> list[int]:
 
 
 def max_sub_array(nums: list[int]) -> int:
-    # Problem 26: Maximum Subarray
+    # Problem 32: Maximum Subarray
     # Key idea: divide in half; the best subarray is in the left, the right, or crosses the midpoint.
     # Time:
     # Space:
@@ -44,7 +44,7 @@ def max_sub_array(nums: list[int]) -> int:
 
 
 def find_median_sorted_arrays(nums1: list[int], nums2: list[int]) -> float:
-    # Problem 27: Median Of Two Sorted Arrays
+    # Problem 33: Median Of Two Sorted Arrays
     # Key idea: binary-search the partition point in the shorter array so both halves balance.
     # Time:
     # Space:

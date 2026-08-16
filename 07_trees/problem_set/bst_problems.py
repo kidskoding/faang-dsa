@@ -2,7 +2,7 @@ from tree_node import TreeNode
 
 
 def search_in_bst(root: TreeNode | None, val: int) -> TreeNode | None:
-    # Problem 17: Search In BST
+    # Problem 39: Search In A Binary Search Tree
     # Key idea: use the BST ordering property to move left or right.
     # Time:
     # Space:
@@ -11,7 +11,7 @@ def search_in_bst(root: TreeNode | None, val: int) -> TreeNode | None:
 
 
 def validate_bst(root: TreeNode | None) -> bool:
-    # Problem 18: Validate BST
+    # Problem 40: Validate Binary Search Tree
     # Key idea: carry lower and upper bounds.
     # Time:
     # Space:
@@ -20,7 +20,7 @@ def validate_bst(root: TreeNode | None) -> bool:
 
 
 def kth_smallest(root: TreeNode | None, k: int) -> int:
-    # Problem 19: Kth Smallest In BST
+    # Problem 41: Kth Smallest Element In A BST
     # Key idea: inorder traversal visits BST values in sorted order.
     # Time:
     # Space:
@@ -33,7 +33,7 @@ def lowest_common_ancestor_bst(
     p: TreeNode,
     q: TreeNode,
 ) -> TreeNode | None:
-    # Problem 20: Lowest Common Ancestor Of BST
+    # Problem 42: Lowest Common Ancestor Of A BST
     # Key idea: use value ranges to move left, move right, or stop.
     # Time:
     # Space:
@@ -42,7 +42,7 @@ def lowest_common_ancestor_bst(
 
 
 def convert_sorted_array_to_bst(nums: list[int]) -> TreeNode | None:
-    # Problem 21: Convert Sorted Array To BST
+    # Problem 44: Convert Sorted Array To BST
     # Key idea: choose the middle element as the root recursively.
     # Time:
     # Space:
@@ -51,7 +51,7 @@ def convert_sorted_array_to_bst(nums: list[int]) -> TreeNode | None:
 
 
 def insert_into_bst(root: TreeNode | None, val: int) -> TreeNode:
-    # Problem 22: Insert Into A BST
+    # Problem 45: Insert Into A BST
     # Key idea: walk down to the insertion point using BST ordering.
     # Time:
     # Space:
@@ -60,7 +60,7 @@ def insert_into_bst(root: TreeNode | None, val: int) -> TreeNode:
 
 
 def delete_node_bst(root: TreeNode | None, key: int) -> TreeNode | None:
-    # Problem 23: Delete Node In A BST
+    # Problem 46: Delete Node In A BST
     # Key idea: handle leaf, one-child, and two-child deletion cases.
     # Time:
     # Space:
@@ -78,7 +78,7 @@ def range_sum_bst(root: TreeNode | None, low: int, high: int) -> int:
 
 
 def trim_bst(root: TreeNode | None, low: int, high: int) -> TreeNode | None:
-    # Problem 25: Trim A Binary Search Tree
+    # Problem 47: Trim A Binary Search Tree
     # Key idea: remove nodes outside the target value range.
     # Time:
     # Space:
@@ -87,7 +87,7 @@ def trim_bst(root: TreeNode | None, low: int, high: int) -> TreeNode | None:
 
 
 def inorder_successor(root: TreeNode | None, p: TreeNode | None) -> TreeNode | None:
-    # Problem 26: Inorder Successor In BST
+    # Problem 48: Inorder Successor In BST
     # Key idea: BST navigation tracking the deepest ancestor greater than the target.
     # Time:
     # Space:
@@ -96,7 +96,7 @@ def inorder_successor(root: TreeNode | None, p: TreeNode | None) -> TreeNode | N
 
 
 def recover_tree(root: TreeNode | None) -> None:
-    # Problem 27: Recover Binary Search Tree
+    # Problem 49: Recover Binary Search Tree
     # Key idea: fix two swapped nodes found by inorder traversal.
     # Time:
     # Space:
@@ -105,7 +105,7 @@ def recover_tree(root: TreeNode | None) -> None:
 
 
 def convert_bst(root: TreeNode | None) -> TreeNode | None:
-    # Problem 28: Convert BST To Greater Tree
+    # Problem 50: Convert BST To Greater Tree
     # Key idea: reverse inorder (right, node, left) carrying a running sum of all greater values.
     # Time:
     # Space:

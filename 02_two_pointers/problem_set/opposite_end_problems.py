@@ -26,7 +26,7 @@ def reverse_string(s: list[str]) -> None:
 
 
 def max_area(height: list[int]) -> int:
-    # Problem 9: Container With Most Water
+    # Problem 4: Container With Most Water
     # Key idea: shrink from both ends, always moving the shorter wall.
     # Time:
     # Space:
@@ -35,7 +35,7 @@ def max_area(height: list[int]) -> int:
 
 
 def three_sum(nums: list[int]) -> list[list[int]]:
-    # Problem 10: 3Sum
+    # Problem 6: 3Sum
     # Key idea: fix one value, then run opposite-end pointers on the rest while skipping duplicates.
     # Time:
     # Space:
@@ -44,7 +44,7 @@ def three_sum(nums: list[int]) -> list[list[int]]:
 
 
 def three_sum_closest(nums: list[int], target: int) -> int:
-    # Problem 11: 3Sum Closest
+    # Problem 7: 3Sum Closest
     # Key idea: fix one value, then track the closest sum seen while narrowing with opposite-end pointers.
     # Time:
     # Space:
@@ -53,7 +53,7 @@ def three_sum_closest(nums: list[int], target: int) -> int:
 
 
 def num_rescue_boats(people: list[int], limit: int) -> int:
-    # Problem 12: Boats To Save People
+    # Problem 5: Boats To Save People
     # Key idea: pair the lightest and heaviest person when they fit under the limit together.
     # Time:
     # Space:
@@ -62,7 +62,7 @@ def num_rescue_boats(people: list[int], limit: int) -> int:
 
 
 def trap(height: list[int]) -> int:
-    # Problem 14: Trapping Rain Water
+    # Problem 8: Trapping Rain Water
     # Key idea: track the running max height from each end and trap water against the shorter side.
     # Time:
     # Space:
@@ -71,7 +71,7 @@ def trap(height: list[int]) -> int:
 
 
 def four_sum(nums: list[int], target: int) -> list[list[int]]:
-    # Problem 15: 4Sum
+    # Problem 9: 4Sum
     # Key idea: fix two values, then run opposite-end pointers on the remaining pair while skipping duplicates.
     # Time:
     # Space:
@@ -80,7 +80,7 @@ def four_sum(nums: list[int], target: int) -> list[list[int]]:
 
 
 def valid_palindrome(s: str) -> bool:
-    # Problem 16: Valid Palindrome II
+    # Problem 10: Valid Palindrome II
     # Key idea: shrink from both ends, and on the first mismatch try skipping either the left or the right character.
     # Time:
     # Space:
@@ -89,7 +89,7 @@ def valid_palindrome(s: str) -> bool:
 
 
 def bag_of_tokens_score(tokens: list[int], power: int) -> int:
-    # Problem 17: Bag Of Tokens
+    # Problem 11: Bag Of Tokens
     # Key idea: sort, then spend the cheapest token for score and cash in the most expensive for power at the ends.
     # Time:
     # Space:
@@ -98,7 +98,7 @@ def bag_of_tokens_score(tokens: list[int], power: int) -> int:
 
 
 def min_pair_sum(nums: list[int]) -> int:
-    # Problem 18: Minimize Maximum Pair Sum In Array
+    # Problem 12: Minimize Maximum Pair Sum In Array
     # Key idea: sort, then pair smallest with largest from opposite ends to flatten the max pair sum.
     # Time:
     # Space:
@@ -107,7 +107,7 @@ def min_pair_sum(nums: list[int]) -> int:
 
 
 def find_closest_elements(arr: list[int], k: int, x: int) -> list[int]:
-    # Problem 19: Find K Closest Elements
+    # Problem 13: Find K Closest Elements
     # Key idea: shrink a window from both ends, dropping whichever end is farther from the target.
     # Time:
     # Space:
@@ -116,7 +116,7 @@ def find_closest_elements(arr: list[int], k: int, x: int) -> list[int]:
 
 
 def backspace_compare(s: str, t: str) -> bool:
-    # Problem 20: Backspace String Compare
+    # Problem 14: Backspace String Compare
     # Key idea: scan both strings from the back, skipping characters consumed by backspaces before comparing.
     # Time:
     # Space:
@@ -125,7 +125,7 @@ def backspace_compare(s: str, t: str) -> bool:
 
 
 def reverse_words(s: str) -> str:
-    # Problem 21: Reverse Words In A String
+    # Problem 15: Reverse Words In A String
     # Key idea: reverse the whole string, then reverse each word span with opposite-end pointers.
     # Time:
     # Space:
@@ -134,7 +134,7 @@ def reverse_words(s: str) -> str:
 
 
 def three_sum_smaller(nums: list[int], target: int) -> int:
-    # Problem 22: 3Sum Smaller
+    # Problem 16: 3Sum Smaller
     # Key idea: fix one value, then count all pairs at once when the opposite-end sum drops below the target.
     # Time:
     # Space:
@@ -143,7 +143,7 @@ def three_sum_smaller(nums: list[int], target: int) -> int:
 
 
 def three_sum_multi(arr: list[int], target: int) -> int:
-    # Problem 23: 3Sum With Multiplicity
+    # Problem 17: 3Sum With Multiplicity
     # Key idea: fix one value and count opposite-end pairs, handling equal-value multiplicities with combinatorics.
     # Time:
     # Space:
@@ -152,7 +152,7 @@ def three_sum_multi(arr: list[int], target: int) -> int:
 
 
 def num_subseq(nums: list[int], target: int) -> int:
-    # Problem 24: Number Of Subsequences That Satisfy The Given Sum Condition
+    # Problem 18: Number Of Subsequences That Satisfy The Given Sum Condition
     # Key idea: sort, then use opposite-end pointers to count valid min/max windows via powers of two.
     # Time:
     # Space:

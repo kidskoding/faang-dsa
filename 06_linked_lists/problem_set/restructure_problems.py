@@ -2,7 +2,7 @@ from list_node import ListNode
 
 
 def reorder_list(head: ListNode | None) -> None:
-    # Problem 19: Reorder List
+    # Problem 26: Reorder List
     # Key idea: split, reverse the second half, weave.
     # Time:
     # Space:
@@ -11,7 +11,7 @@ def reorder_list(head: ListNode | None) -> None:
 
 
 def rotate_right(head: ListNode | None, k: int) -> ListNode | None:
-    # Problem 20: Rotate List
+    # Problem 27: Rotate List
     # Key idea: close into a ring, then reopen at the new head.
     # Time:
     # Space:
@@ -20,7 +20,7 @@ def rotate_right(head: ListNode | None, k: int) -> ListNode | None:
 
 
 def odd_even_list(head: ListNode | None) -> ListNode | None:
-    # Problem 21: Odd Even Linked List
+    # Problem 28: Odd Even Linked List
     # Key idea: thread odd and even indices into two chains.
     # Time:
     # Space:
@@ -29,7 +29,7 @@ def odd_even_list(head: ListNode | None) -> ListNode | None:
 
 
 def split_list_to_parts(head: ListNode | None, k: int) -> list[ListNode | None]:
-    # Problem 22: Split Linked List In Parts
+    # Problem 29: Split Linked List In Parts
     # Key idea: size each part, then cut.
     # Time:
     # Space:
@@ -38,7 +38,7 @@ def split_list_to_parts(head: ListNode | None, k: int) -> list[ListNode | None]:
 
 
 def remove_nodes(head: ListNode | None) -> ListNode | None:
-    # Problem 23: Remove Nodes From Linked List
+    # Problem 30: Remove Nodes From Linked List
     # Key idea: reverse, drop nodes smaller than the running max, reverse back.
     # Time:
     # Space:

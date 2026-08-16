@@ -15,7 +15,7 @@ class FenwickTree:
 
 
 class NumArray:
-    # Problem 11: Range Sum Query - Mutable
+    # Problem 17: Range Sum Query - Mutable
 
     def __init__(self, nums: list[int]) -> None:
         # Time:
@@ -37,7 +37,7 @@ class NumArray:
 
 
 class NumMatrix:
-    # Problem 12: Range Sum Query 2D - Mutable
+    # Problem 18: Range Sum Query 2D - Mutable
 
     def __init__(self, matrix: list[list[int]]) -> None:
         # Time:
@@ -59,7 +59,7 @@ class NumMatrix:
 
 
 def count_smaller(nums: list[int]) -> list[int]:
-    # Problem 13: Count Of Smaller Numbers After Self
+    # Problem 19: Count Of Smaller Numbers After Self
     # Key idea: Fenwick tree over coordinate-compressed values, scanned right to left.
     # Time:
     # Space:
@@ -68,7 +68,7 @@ def count_smaller(nums: list[int]) -> list[int]:
 
 
 def count_range_sum(nums: list[int], lower: int, upper: int) -> int:
-    # Problem 14: Count Of Range Sum
+    # Problem 20: Count Of Range Sum
     # Key idea: Fenwick tree over compressed prefix sums counts sums in [lower, upper].
     # Time:
     # Space:
@@ -77,7 +77,7 @@ def count_range_sum(nums: list[int], lower: int, upper: int) -> int:
 
 
 def reverse_pairs(nums: list[int]) -> int:
-    # Problem 15: Reverse Pairs
+    # Problem 21: Reverse Pairs
     # Key idea: Fenwick tree (or merge sort) counting pairs where one value exceeds twice another.
     # Time:
     # Space:
@@ -86,7 +86,7 @@ def reverse_pairs(nums: list[int]) -> int:
 
 
 class MyCalendarThree:
-    # Problem 16: My Calendar III
+    # Problem 22: My Calendar III
     # Key idea: segment tree with lazy propagation (range update, range-max query).
 
     def __init__(self) -> None:

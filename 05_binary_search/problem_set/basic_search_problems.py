@@ -20,7 +20,7 @@ def search_insert(nums: list[int], target: int) -> int:
 
 
 def search_matrix(matrix: list[list[int]], target: int) -> bool:
-    # Problem 6: Search a 2D Matrix
+    # Problem 3: Search a 2D Matrix
     # Key idea: treat the row-sorted, column-sorted grid as one flattened sorted array.
     # Time:
     # Space:
@@ -29,7 +29,7 @@ def search_matrix(matrix: list[list[int]], target: int) -> bool:
 
 
 def search_matrix_ii(matrix: list[list[int]], target: int) -> bool:
-    # Problem 18: Search a 2D Matrix II
+    # Problem 4: Search a 2D Matrix II
     # Key idea: start at a sorted corner and eliminate a full row or column each step.
     # Time:
     # Space:
@@ -38,7 +38,7 @@ def search_matrix_ii(matrix: list[list[int]], target: int) -> bool:
 
 
 def guess_number(n: int, guess: Callable[[int], int]) -> int:
-    # Problem 19: Guess Number Higher or Lower
+    # Problem 5: Guess Number Higher or Lower
     # Key idea: exact-match search driven by a comparison oracle instead of array reads.
     # Time:
     # Space:

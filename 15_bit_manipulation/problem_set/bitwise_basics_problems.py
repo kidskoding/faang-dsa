@@ -17,7 +17,7 @@ def count_bits(n: int) -> list[int]:
 
 
 def reverse_bits(n: int) -> int:
-    # Problem 3: Reverse Bits
+    # Problem 5: Reverse Bits
     # Key idea: shift bits out of n while shifting them into the result.
     # Time:
     # Space:
@@ -26,7 +26,7 @@ def reverse_bits(n: int) -> int:
 
 
 def is_power_of_two(n: int) -> bool:
-    # Problem 4: Power of Two
+    # Problem 3: Power of Two
     # Key idea: a positive power of two has exactly one set bit, so n & (n - 1) == 0.
     # Time:
     # Space:
@@ -35,7 +35,7 @@ def is_power_of_two(n: int) -> bool:
 
 
 def is_power_of_four(n: int) -> bool:
-    # Problem 5: Power of Four
+    # Problem 4: Power of Four
     # Key idea: one set bit plus that bit sitting at an even position.
     # Time:
     # Space:

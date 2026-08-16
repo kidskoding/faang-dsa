@@ -5,7 +5,7 @@ def build_failure_table(pattern: str) -> list[int]:
 
 
 def str_str(haystack: str, needle: str) -> int:
-    # Problem 15: Find The Index Of The First Occurrence In A String
+    # Problem 23: Find The Index Of The First Occurrence In A String
     # Key idea: KMP failure table lets the pattern pointer fall back without rewinding the text.
     # Time:
     # Space:
@@ -14,7 +14,7 @@ def str_str(haystack: str, needle: str) -> int:
 
 
 def repeated_string_match(a: str, b: str) -> int:
-    # Problem 16: Repeated String Match
+    # Problem 24: Repeated String Match
     # Key idea: repeat `a` until it is at least as long as `b`, then KMP search for `b`.
     # Time:
     # Space:
@@ -23,7 +23,7 @@ def repeated_string_match(a: str, b: str) -> int:
 
 
 def shortest_palindrome(s: str) -> str:
-    # Problem 17: Shortest Palindrome
+    # Problem 25: Shortest Palindrome
     # Key idea: failure table of s + separator + reverse(s) gives the longest palindromic prefix.
     # Time:
     # Space:
@@ -32,7 +32,7 @@ def shortest_palindrome(s: str) -> str:
 
 
 def longest_prefix(s: str) -> str:
-    # Problem 18: Longest Happy Prefix
+    # Problem 26: Longest Happy Prefix
     # Key idea: the last value of the KMP failure table is the longest prefix that is also a suffix.
     # Time:
     # Space:
@@ -41,7 +41,7 @@ def longest_prefix(s: str) -> str:
 
 
 def repeated_substring_pattern(s: str) -> bool:
-    # Problem 20: Repeated Substring Pattern
+    # Problem 27: Repeated Substring Pattern
     # Key idea: the KMP failure function reveals the smallest repeating block when n % (n - lps[-1]) == 0.
     # Time:
     # Space:

@@ -2,7 +2,7 @@ from list_node import ListNode
 
 
 def middle_node(head: ListNode | None) -> ListNode | None:
-    # Problem 7: Middle Of The Linked List
+    # Problem 9: Middle Of The Linked List
     # Key idea: slow moves one step, fast moves two.
     # Time:
     # Space:
@@ -11,7 +11,7 @@ def middle_node(head: ListNode | None) -> ListNode | None:
 
 
 def has_cycle(head: ListNode | None) -> bool:
-    # Problem 8: Linked List Cycle
+    # Problem 10: Linked List Cycle
     # Key idea: fast catches slow if a cycle exists.
     # Time:
     # Space:
@@ -20,7 +20,7 @@ def has_cycle(head: ListNode | None) -> bool:
 
 
 def detect_cycle(head: ListNode | None) -> ListNode | None:
-    # Problem 9: Linked List Cycle II
+    # Problem 11: Linked List Cycle II
     # Key idea: after the meeting point, walk from head to the cycle start.
     # Time:
     # Space:
@@ -29,7 +29,7 @@ def detect_cycle(head: ListNode | None) -> ListNode | None:
 
 
 def is_palindrome(head: ListNode | None) -> bool:
-    # Problem 10: Palindrome Linked List
+    # Problem 12: Palindrome Linked List
     # Key idea: find the middle, reverse the second half, compare.
     # Time:
     # Space:
@@ -38,7 +38,7 @@ def is_palindrome(head: ListNode | None) -> bool:
 
 
 def remove_nth_from_end(head: ListNode | None, n: int) -> ListNode | None:
-    # Problem 11: Remove Nth Node From End Of List
+    # Problem 13: Remove Nth Node From End Of List
     # Key idea: gap of n between two pointers.
     # Time:
     # Space:
@@ -47,7 +47,7 @@ def remove_nth_from_end(head: ListNode | None, n: int) -> ListNode | None:
 
 
 def delete_middle(head: ListNode | None) -> ListNode | None:
-    # Problem 12: Delete The Middle Node Of A Linked List
+    # Problem 14: Delete The Middle Node Of A Linked List
     # Key idea: slow/fast to find the middle, keep a trailing pointer to unlink it.
     # Time:
     # Space:

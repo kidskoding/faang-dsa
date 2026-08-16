@@ -1,5 +1,5 @@
 def can_partition_k_subsets(nums: list[int], k: int) -> bool:
-    # Problem 26: Partition to K Equal Sum Subsets
+    # Problem 34: Partition to K Equal Sum Subsets
     # Key idea: dp[mask] tracks which numbers are already placed into a completed bucket.
     # Time:
     # Space:
@@ -8,7 +8,7 @@ def can_partition_k_subsets(nums: list[int], k: int) -> bool:
 
 
 def smallest_sufficient_team(req_skills: list[str], people: list[list[str]]) -> list[int]:
-    # Problem 27: Smallest Sufficient Team
+    # Problem 35: Smallest Sufficient Team
     # Key idea: dp[skill_mask] stores the smallest team (as a set of people) covering that skill mask.
     # Time:
     # Space:
@@ -17,7 +17,7 @@ def smallest_sufficient_team(req_skills: list[str], people: list[list[str]]) -> 
 
 
 def min_number_of_semesters(n: int, relations: list[list[int]], k: int) -> int:
-    # Problem 28: Parallel Courses II
+    # Problem 36: Parallel Courses II
     # Key idea: dp[mask] stores the minimum semesters to complete exactly the courses in
     # mask, transitioning by taking any valid subset of newly-available courses each round.
     # Time:
@@ -27,7 +27,7 @@ def min_number_of_semesters(n: int, relations: list[list[int]], k: int) -> int:
 
 
 def max_students(seats: list[list[str]]) -> int:
-    # Problem 29: Maximum Students Taking Exam
+    # Problem 37: Maximum Students Taking Exam
     # Key idea: dp[row][mask] over seat layouts, checking mask validity against
     # broken seats and diagonal neighbors in the prior row.
     # Time:
@@ -37,7 +37,7 @@ def max_students(seats: list[list[str]]) -> int:
 
 
 def number_ways(hats: list[list[int]]) -> int:
-    # Problem 30: Number Of Ways To Wear Different Hats To Each Other
+    # Problem 38: Number Of Ways To Wear Different Hats To Each Other
     # Key idea: assign hats (not people) one at a time; dp[hat][mask] counts ways to cover the people bitmask.
     # Time:
     # Space:

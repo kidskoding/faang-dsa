@@ -1,5 +1,5 @@
 class RangeModule:
-    # Problem 15: Range Module
+    # Problem 22: Range Module
     # Key idea: maintain a sorted disjoint interval set with add/remove/query.
 
     def __init__(self) -> None:
@@ -28,7 +28,7 @@ class RangeModule:
 
 
 def employee_free_time(schedule: list[list[list[int]]]) -> list[list[int]]:
-    # Problem 14: Employee Free Time
+    # Problem 21: Employee Free Time
     # Key idea: flatten every employee's intervals, merge, then read the gaps.
     # Time:
     # Space:
@@ -37,7 +37,7 @@ def employee_free_time(schedule: list[list[list[int]]]) -> list[list[int]]:
 
 
 def car_pooling(trips: list[list[int]], capacity: int) -> bool:
-    # Problem 16: Car Pooling
+    # Problem 23: Car Pooling
     # Key idea: delta array of passenger changes at pickup and dropoff points.
     # Time:
     # Space:
@@ -46,7 +46,7 @@ def car_pooling(trips: list[list[int]], capacity: int) -> bool:
 
 
 def maximum_population(logs: list[list[int]]) -> int:
-    # Problem 17: Maximum Population Year
+    # Problem 24: Maximum Population Year
     # Key idea: delta array, +1 at birth and -1 at death, prefix sum for the peak.
     # Time:
     # Space:
@@ -55,7 +55,7 @@ def maximum_population(logs: list[list[int]]) -> int:
 
 
 def number_of_points(nums: list[list[int]]) -> int:
-    # Problem 18: Points That Intersect With Cars
+    # Problem 25: Points That Intersect With Cars
     # Key idea: difference array over the coordinate range, count covered points.
     # Time:
     # Space:
@@ -64,7 +64,7 @@ def number_of_points(nums: list[list[int]]) -> int:
 
 
 def corp_flight_bookings(bookings: list[list[int]], n: int) -> list[int]:
-    # Problem 19: Corporate Flight Bookings
+    # Problem 26: Corporate Flight Bookings
     # Key idea: difference array of seat deltas, prefix sum for per-flight totals.
     # Time:
     # Space:
@@ -73,7 +73,7 @@ def corp_flight_bookings(bookings: list[list[int]], n: int) -> list[int]:
 
 
 def split_painting(segments: list[list[int]]) -> list[list[int]]:
-    # Problem 20: Describe the Painting
+    # Problem 27: Describe the Painting
     # Key idea: color-sum deltas at segment endpoints, sweep and emit non-zero runs.
     # Time:
     # Space:
@@ -82,7 +82,7 @@ def split_painting(segments: list[list[int]]) -> list[list[int]]:
 
 
 def get_skyline(buildings: list[list[int]]) -> list[list[int]]:
-    # Problem 21: The Skyline Problem
+    # Problem 28: The Skyline Problem
     # Key idea: sweep x events with a max heap of active heights, emit height changes.
     # Time:
     # Space:
@@ -91,7 +91,7 @@ def get_skyline(buildings: list[list[int]]) -> list[list[int]]:
 
 
 def intersection_size_two(intervals: list[list[int]]) -> int:
-    # Problem 22: Set Intersection Size At Least Two
+    # Problem 29: Set Intersection Size At Least Two
     # Key idea: sort by end, greedily add the two largest points each interval needs.
     # Time:
     # Space:
@@ -100,7 +100,7 @@ def intersection_size_two(intervals: list[list[int]]) -> int:
 
 
 def falling_squares(positions: list[list[int]]) -> list[int]:
-    # Problem 23: Falling Squares
+    # Problem 30: Falling Squares
     # Key idea: coordinate-compressed segment tree of range max heights.
     # Time:
     # Space:
@@ -109,7 +109,7 @@ def falling_squares(positions: list[list[int]]) -> list[int]:
 
 
 def amount_painted(paint: list[list[int]]) -> list[int]:
-    # Problem 24: Amount of New Area Painted Each Day
+    # Problem 31: Amount of New Area Painted Each Day
     # Key idea: track painted coordinates with a sorted set or union-find skip pointers.
     # Time:
     # Space:

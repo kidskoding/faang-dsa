@@ -1,5 +1,5 @@
 def subsets(nums: list[int]) -> list[list[int]]:
-    # Problem 4: Subsets
+    # Problem 6: Subsets
     # Key idea: save the path at every node, advance start by one each recursion.
     # Time:
     # Space:
@@ -8,7 +8,7 @@ def subsets(nums: list[int]) -> list[list[int]]:
 
 
 def subsets_with_dup(nums: list[int]) -> list[list[int]]:
-    # Problem 5: Subsets II
+    # Problem 7: Subsets II
     # Key idea: sort first, skip repeated values at the same recursion depth.
     # Time:
     # Space:
@@ -17,7 +17,7 @@ def subsets_with_dup(nums: list[int]) -> list[list[int]]:
 
 
 def combine(n: int, k: int) -> list[list[int]]:
-    # Problem 6: Combinations
+    # Problem 8: Combinations
     # Key idea: save the path only when it reaches size k.
     # Time:
     # Space:
@@ -26,7 +26,7 @@ def combine(n: int, k: int) -> list[list[int]]:
 
 
 def combination_sum(candidates: list[int], target: int) -> list[list[int]]:
-    # Problem 7: Combination Sum
+    # Problem 9: Combination Sum
     # Key idea: reuse the same index to allow repeated picks, prune when the running sum exceeds the target.
     # Time:
     # Space:
@@ -35,7 +35,7 @@ def combination_sum(candidates: list[int], target: int) -> list[list[int]]:
 
 
 def combination_sum2(candidates: list[int], target: int) -> list[list[int]]:
-    # Problem 8: Combination Sum II
+    # Problem 10: Combination Sum II
     # Key idea: sort first, advance past duplicates at the same depth, no reuse of the same index.
     # Time:
     # Space:
@@ -44,7 +44,7 @@ def combination_sum2(candidates: list[int], target: int) -> list[list[int]]:
 
 
 def combination_sum3(k: int, n: int) -> list[list[int]]:
-    # Problem 9: Combination Sum III
+    # Problem 11: Combination Sum III
     # Key idea: fixed count and target sum both bound the recursion.
     # Time:
     # Space:
@@ -53,7 +53,7 @@ def combination_sum3(k: int, n: int) -> list[list[int]]:
 
 
 def count_vowel_strings(n: int) -> int:
-    # Problem 10: Count Sorted Vowel Strings
+    # Problem 12: Count Sorted Vowel Strings
     # Key idea: choose each next vowel in non-decreasing order, count the leaves of the recursion tree.
     # Time:
     # Space:

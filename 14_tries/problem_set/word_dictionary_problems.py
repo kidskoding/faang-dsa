@@ -9,7 +9,7 @@ class WordDictionaryNode:
 
 
 class WordDictionary:
-    # Problem 5: Design Add And Search Words Data Structure
+    # Problem 7: Design Add And Search Words Data Structure
     # Key idea: DFS branches into every child when the pattern character is a wildcard.
 
     def __init__(self) -> None:
@@ -36,7 +36,7 @@ class MagicDictionaryNode:
 
 
 class MagicDictionary:
-    # Problem 6: Implement Magic Dictionary
+    # Problem 8: Implement Magic Dictionary
     # Key idea: DFS search that must change exactly one character to reach a
     # stored word.
 
@@ -57,7 +57,7 @@ class MagicDictionary:
 
 
 def search_suggestions(products: list[str], search_word: str) -> list[list[str]]:
-    # Problem 7: Search Suggestions System
+    # Problem 9: Search Suggestions System
     # Key idea: walk the trie one character at a time, collecting the smallest
     # matches at each prefix.
     # Time:
@@ -74,7 +74,7 @@ class StreamCheckerNode:
 
 
 class StreamChecker:
-    # Problem 8: Stream Of Characters
+    # Problem 10: Stream Of Characters
     # Key idea: build the trie on reversed words, then check backward from the
     # newest character.
 
@@ -90,7 +90,7 @@ class StreamChecker:
 
 
 def camel_match(queries: list[str], pattern: str) -> list[bool]:
-    # Problem 9: Camelcase Matching
+    # Problem 11: Camelcase Matching
     # Key idea: match each query against the pattern trie, allowing extra
     # lowercase but never extra uppercase.
     # Time:
@@ -107,7 +107,7 @@ class WordFilterNode:
 
 
 class WordFilter:
-    # Problem 10: Prefix And Suffix Search
+    # Problem 12: Prefix And Suffix Search
     # Key idea: index each word by combined suffix#prefix keys so a single trie
     # answers both filters.
 
@@ -130,7 +130,7 @@ class AutocompleteNode:
 
 
 class AutocompleteSystem:
-    # Problem 11: Design Search Autocomplete System
+    # Problem 13: Design Search Autocomplete System
     # Key idea: trie nodes store historical query frequencies, ranked as the
     # user types each character.
 

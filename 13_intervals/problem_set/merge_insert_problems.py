@@ -1,5 +1,5 @@
 class SummaryRanges:
-    # Problem 7: Data Stream As Disjoint Intervals
+    # Problem 9: Data Stream As Disjoint Intervals
     # Key idea: keep a sorted, merged interval set and re-merge around each insert.
 
     def __init__(self) -> None:
@@ -22,7 +22,7 @@ class SummaryRanges:
 
 
 def merge(intervals: list[list[int]]) -> list[list[int]]:
-    # Problem 4: Merge Intervals
+    # Problem 6: Merge Intervals
     # Key idea: sort by start, extend the current merged interval or start a new one.
     # Time:
     # Space:
@@ -31,7 +31,7 @@ def merge(intervals: list[list[int]]) -> list[list[int]]:
 
 
 def insert(intervals: list[list[int]], new_interval: list[int]) -> list[list[int]]:
-    # Problem 5: Insert Interval
+    # Problem 7: Insert Interval
     # Key idea: append intervals fully before, merge overlapping, append fully after.
     # Time:
     # Space:
@@ -40,7 +40,7 @@ def insert(intervals: list[list[int]], new_interval: list[int]) -> list[list[int
 
 
 def erase_overlap_intervals(intervals: list[list[int]]) -> int:
-    # Problem 6: Non-overlapping Intervals
+    # Problem 8: Non-overlapping Intervals
     # Key idea: sort by end, greedily keep the interval that finishes earliest.
     # Time:
     # Space:
@@ -49,7 +49,7 @@ def erase_overlap_intervals(intervals: list[list[int]]) -> int:
 
 
 def remove_covered_intervals(intervals: list[list[int]]) -> int:
-    # Problem 8: Remove Covered Intervals
+    # Problem 10: Remove Covered Intervals
     # Key idea: sort by start asc and end desc, drop intervals covered by the last kept end.
     # Time:
     # Space:

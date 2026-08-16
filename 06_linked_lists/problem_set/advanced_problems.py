@@ -32,7 +32,7 @@ class MultilevelNode:
 
 
 def delete_duplicates_ii(head: ListNode | None) -> ListNode | None:
-    # Problem 23: Remove Duplicates From Sorted List II
+    # Problem 31: Remove Duplicates From Sorted List II
     # Key idea: dummy head, skip every node in a duplicate run.
     # Time:
     # Space:
@@ -41,7 +41,7 @@ def delete_duplicates_ii(head: ListNode | None) -> ListNode | None:
 
 
 def copy_random_list(head: RandomNode | None) -> RandomNode | None:
-    # Problem 24: Copy List With Random Pointer
+    # Problem 32: Copy List With Random Pointer
     # Key idea: map old nodes to clones, then wire pointers.
     # Time:
     # Space:
@@ -50,7 +50,7 @@ def copy_random_list(head: RandomNode | None) -> RandomNode | None:
 
 
 def flatten(head: MultilevelNode | None) -> MultilevelNode | None:
-    # Problem 25: Flatten A Multilevel Doubly Linked List
+    # Problem 33: Flatten A Multilevel Doubly Linked List
     # Key idea: splice each child list inline using a stack.
     # Time:
     # Space:
@@ -59,7 +59,7 @@ def flatten(head: MultilevelNode | None) -> MultilevelNode | None:
 
 
 def next_larger_nodes(head: ListNode | None) -> list[int]:
-    # Problem 27: Next Greater Node In Linked List
+    # Problem 34: Next Greater Node In Linked List
     # Key idea: monotonic stack over the values in one pass.
     # Time:
     # Space:
@@ -68,7 +68,7 @@ def next_larger_nodes(head: ListNode | None) -> list[int]:
 
 
 def reverse_even_length_groups(head: ListNode | None) -> ListNode | None:
-    # Problem 28: Reverse Nodes In Even Length Groups
+    # Problem 35: Reverse Nodes In Even Length Groups
     # Key idea: walk growing groups, reverse only the even-length ones.
     # Time:
     # Space:

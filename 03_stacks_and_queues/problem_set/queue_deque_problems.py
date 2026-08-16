@@ -1,5 +1,5 @@
 class MyQueue:
-    # Problem 3: Implement Queue Using Stacks
+    # Problem 15: Implement Queue Using Stacks
     # Key idea: two stacks simulate FIFO order.
 
     def __init__(self) -> None:
@@ -29,7 +29,7 @@ class MyQueue:
 
 
 class MyStack:
-    # Problem 4: Implement Stack Using Queues
+    # Problem 16: Implement Stack Using Queues
     # Key idea: rotate a queue after each push to simulate LIFO order.
 
     def __init__(self) -> None:
@@ -59,7 +59,7 @@ class MyStack:
 
 
 class MyCircularDeque:
-    # Problem 5: Design Circular Deque
+    # Problem 17: Design Circular Deque
     # Key idea: fixed-size buffer with head and tail indices for O(1) operations at both ends.
 
     def __init__(self, k: int) -> None:
@@ -109,7 +109,7 @@ class MyCircularDeque:
 
 
 class RecentCounter:
-    # Problem 6: Number Of Recent Calls
+    # Problem 18: Number Of Recent Calls
     # Key idea: queue of timestamps; pop from the front until inside the sliding time window.
 
     def __init__(self) -> None:
@@ -124,7 +124,7 @@ class RecentCounter:
 
 
 class MyCircularQueue:
-    # Problem 7: Design Circular Queue
+    # Problem 19: Design Circular Queue
     # Key idea: fixed-size ring buffer with head index and a count for O(1) enqueue/dequeue.
 
     def __init__(self, k: int) -> None:
@@ -164,7 +164,7 @@ class MyCircularQueue:
 
 
 class MovingAverage:
-    # Problem 8: Moving Average From Data Stream
+    # Problem 20: Moving Average From Data Stream
     # Key idea: fixed-size FIFO window; keep a running sum, evict the front when it overflows.
 
     def __init__(self, size: int) -> None:
@@ -179,7 +179,7 @@ class MovingAverage:
 
 
 class FrontMiddleBackQueue:
-    # Problem 9: Design Front Middle Back Queue
+    # Problem 21: Design Front Middle Back Queue
     # Key idea: two deques split at the middle; rebalance after each op to keep the front half sized correctly.
 
     def __init__(self) -> None:

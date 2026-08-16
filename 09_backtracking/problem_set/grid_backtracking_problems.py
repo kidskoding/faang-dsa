@@ -15,7 +15,7 @@ class Robot:
 
 
 def exist(board: list[list[str]], word: str) -> bool:
-    # Problem 14: Word Search
+    # Problem 19: Word Search
     # Key idea: mark the current cell visited before exploring neighbors, unmark on backtrack.
     # Time:
     # Space:
@@ -24,7 +24,7 @@ def exist(board: list[list[str]], word: str) -> bool:
 
 
 def solve_n_queens(n: int) -> list[list[str]]:
-    # Problem 15: N-Queens
+    # Problem 20: N-Queens
     # Key idea: place one queen per row, prune on column and diagonal conflicts.
     # Time:
     # Space:
@@ -33,7 +33,7 @@ def solve_n_queens(n: int) -> list[list[str]]:
 
 
 def total_n_queens(n: int) -> int:
-    # Problem 16: N-Queens II
+    # Problem 21: N-Queens II
     # Key idea: same placement search as N-Queens, count solutions instead of building boards.
     # Time:
     # Space:
@@ -42,7 +42,7 @@ def total_n_queens(n: int) -> int:
 
 
 def solve_sudoku(board: list[list[str]]) -> None:
-    # Problem 17: Sudoku Solver
+    # Problem 22: Sudoku Solver
     # Key idea: fill the next empty cell, prune on row/column/box constraints, backtrack on failure.
     # Time:
     # Space:
@@ -51,7 +51,7 @@ def solve_sudoku(board: list[list[str]]) -> None:
 
 
 def makesquare(matchsticks: list[int]) -> bool:
-    # Problem 18: Matchsticks to Square
+    # Problem 23: Matchsticks to Square
     # Key idea: assign each matchstick to one of four sides, prune when a side exceeds the target length.
     # Time:
     # Space:
@@ -60,7 +60,7 @@ def makesquare(matchsticks: list[int]) -> bool:
 
 
 def unique_paths_iii(grid: list[list[int]]) -> int:
-    # Problem 19: Unique Paths III
+    # Problem 24: Unique Paths III
     # Key idea: DFS every path that covers all empty cells, marking and unmarking cells as visited.
     # Time:
     # Space:
@@ -69,7 +69,7 @@ def unique_paths_iii(grid: list[list[int]]) -> int:
 
 
 def clean_room(robot: Robot) -> None:
-    # Problem 20: Robot Room Cleaner
+    # Problem 25: Robot Room Cleaner
     # Key idea: DFS with a relative-coordinate visited set, turning the robot back to its prior heading on backtrack.
     # Time:
     # Space:
@@ -78,7 +78,7 @@ def clean_room(robot: Robot) -> None:
 
 
 def can_partition_k_subsets(nums: list[int], k: int) -> bool:
-    # Problem 22: Partition to K Equal Sum Subsets
+    # Problem 26: Partition to K Equal Sum Subsets
     # Key idea: fill one bucket at a time to the target sum, sort descending and skip duplicate starts to prune.
     # Time:
     # Space:
@@ -87,7 +87,7 @@ def can_partition_k_subsets(nums: list[int], k: int) -> bool:
 
 
 def add_operators(num: str, target: int) -> list[str]:
-    # Problem 23: Expression Add Operators
+    # Problem 27: Expression Add Operators
     # Key idea: choose "+", "-", "*", or concatenation between digits, carrying the
     # last operand to undo multiplication precedence.
     # Time:
@@ -97,7 +97,7 @@ def add_operators(num: str, target: int) -> list[str]:
 
 
 def word_break(s: str, word_dict: list[str]) -> list[str]:
-    # Problem 24: Word Break II
+    # Problem 28: Word Break II
     # Key idea: choose each next dictionary-word prefix, memoizing suffixes to avoid re-exploring dead ends.
     # Time:
     # Space:
@@ -106,7 +106,7 @@ def word_break(s: str, word_dict: list[str]) -> list[str]:
 
 
 def remove_invalid_parentheses(s: str) -> list[str]:
-    # Problem 25: Remove Invalid Parentheses
+    # Problem 29: Remove Invalid Parentheses
     # Key idea: compute the minimum removals, then backtrack over which parentheses to drop, deduping at each depth.
     # Time:
     # Space:
@@ -115,7 +115,7 @@ def remove_invalid_parentheses(s: str) -> list[str]:
 
 
 def judge_point24(cards: list[int]) -> bool:
-    # Problem 26: 24 Game
+    # Problem 30: 24 Game
     # Key idea: pick two numbers and an operator, recurse on the reduced multiset until one value reaches 24.
     # Time:
     # Space:
