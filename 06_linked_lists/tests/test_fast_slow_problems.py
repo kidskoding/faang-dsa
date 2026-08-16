@@ -1,5 +1,6 @@
 from list_node import ListNode
 from problem_set.fast_slow_problems import (
+    delete_middle,
     detect_cycle,
     has_cycle,
     is_palindrome,
@@ -103,3 +104,21 @@ def test_remove_nth_from_end_head():
 
 def test_remove_nth_from_end_single():
     assert remove_nth_from_end(build_list([1]), 1) is None
+
+
+def test_delete_middle_odd_length():
+    head = build_list([1, 3, 4, 7, 1, 2, 6])
+    assert to_list(delete_middle(head)) == [1, 3, 4, 1, 2, 6]
+
+
+def test_delete_middle_even_length():
+    head = build_list([1, 2, 3, 4])
+    assert to_list(delete_middle(head)) == [1, 2, 4]
+
+
+def test_delete_middle_single_node():
+    assert delete_middle(build_list([1])) is None
+
+
+def test_delete_middle_two_nodes():
+    assert to_list(delete_middle(build_list([2, 1]))) == [2]

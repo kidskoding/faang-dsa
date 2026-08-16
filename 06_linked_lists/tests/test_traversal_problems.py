@@ -1,7 +1,9 @@
 from list_node import ListNode
 from problem_set.traversal_problems import (
+    MyLinkedList,
     delete_duplicates,
     delete_node,
+    get_decimal_value,
     get_intersection_node,
     merge_two_lists,
     remove_elements,
@@ -99,3 +101,41 @@ def test_get_intersection_node_no_overlap():
     head_b = build_list([1, 5])
 
     assert get_intersection_node(head_a, head_b) is None
+
+
+def test_get_decimal_value_normal():
+    assert get_decimal_value(build_list([1, 0, 1])) == 5
+
+
+def test_get_decimal_value_zero():
+    assert get_decimal_value(build_list([0])) == 0
+
+
+def test_get_decimal_value_all_ones():
+    assert get_decimal_value(build_list([1, 1, 1, 1])) == 15
+
+
+def test_my_linked_list_add_and_get():
+    linked_list = MyLinkedList()
+    linked_list.add_at_head(1)
+    linked_list.add_at_tail(3)
+    linked_list.add_at_index(1, 2)
+
+    assert linked_list.get(1) == 2
+
+
+def test_my_linked_list_delete_shifts_indices():
+    linked_list = MyLinkedList()
+    linked_list.add_at_head(1)
+    linked_list.add_at_tail(3)
+    linked_list.add_at_index(1, 2)
+    linked_list.delete_at_index(1)
+
+    assert linked_list.get(1) == 3
+
+
+def test_my_linked_list_get_out_of_range():
+    linked_list = MyLinkedList()
+    linked_list.add_at_head(1)
+
+    assert linked_list.get(5) == -1

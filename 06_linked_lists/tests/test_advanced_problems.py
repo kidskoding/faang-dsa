@@ -5,6 +5,8 @@ from problem_set.advanced_problems import (
     copy_random_list,
     delete_duplicates_ii,
     flatten,
+    next_larger_nodes,
+    reverse_even_length_groups,
 )
 
 
@@ -113,3 +115,24 @@ def test_flatten_multilevel():
 
 def test_flatten_empty():
     assert flatten(None) is None
+
+
+def test_next_larger_nodes_normal():
+    assert next_larger_nodes(build_list([2, 1, 5])) == [5, 5, 0]
+
+
+def test_next_larger_nodes_longer():
+    assert next_larger_nodes(build_list([2, 7, 4, 3, 5])) == [7, 0, 5, 5, 0]
+
+
+def test_reverse_even_length_groups_normal():
+    head = build_list([5, 2, 6, 3, 9, 1, 7, 3, 8, 4])
+    assert to_list(reverse_even_length_groups(head)) == [5, 6, 2, 3, 9, 1, 4, 8, 3, 7]
+
+
+def test_reverse_even_length_groups_short():
+    assert to_list(reverse_even_length_groups(build_list([1, 1, 0, 6]))) == [1, 0, 1, 6]
+
+
+def test_reverse_even_length_groups_odd_tail():
+    assert to_list(reverse_even_length_groups(build_list([2, 1]))) == [2, 1]

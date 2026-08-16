@@ -1,6 +1,8 @@
 from list_node import ListNode
 from problem_set.merge_split_problems import (
     add_two_numbers,
+    add_two_numbers_ii,
+    merge_in_between,
     merge_k_lists,
     partition,
     sort_list,
@@ -73,3 +75,33 @@ def test_merge_k_lists_empty():
 
 def test_merge_k_lists_with_empty_lists():
     assert to_list(merge_k_lists([None, build_list([1]), None])) == [1]
+
+
+def test_add_two_numbers_ii_normal():
+    total = add_two_numbers_ii(build_list([7, 2, 4, 3]), build_list([5, 6, 4]))
+    assert to_list(total) == [7, 8, 0, 7]
+
+
+def test_add_two_numbers_ii_carry_out():
+    total = add_two_numbers_ii(build_list([2, 4, 3]), build_list([5, 6, 4]))
+    assert to_list(total) == [8, 0, 7]
+
+
+def test_add_two_numbers_ii_zeros():
+    assert to_list(add_two_numbers_ii(build_list([0]), build_list([0]))) == [0]
+
+
+def test_merge_in_between_normal():
+    list1 = build_list([0, 1, 2, 3, 4, 5])
+    list2 = build_list([1000000, 1000001, 1000002])
+
+    merged = merge_in_between(list1, 3, 4, list2)
+    assert to_list(merged) == [0, 1, 2, 1000000, 1000001, 1000002, 5]
+
+
+def test_merge_in_between_wider_cut():
+    list1 = build_list([0, 1, 2, 3, 4, 5, 6])
+    list2 = build_list([1000000, 1000001, 1000002, 1000003, 1000004])
+
+    merged = merge_in_between(list1, 2, 5, list2)
+    assert to_list(merged) == [0, 1, 1000000, 1000001, 1000002, 1000003, 1000004, 6]

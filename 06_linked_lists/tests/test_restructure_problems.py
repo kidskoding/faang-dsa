@@ -1,6 +1,7 @@
 from list_node import ListNode
 from problem_set.restructure_problems import (
     odd_even_list,
+    remove_nodes,
     reorder_list,
     rotate_right,
     split_list_to_parts,
@@ -72,3 +73,11 @@ def test_split_list_to_parts_balanced():
         [5, 6, 7],
         [8, 9, 10],
     ]
+
+
+def test_remove_nodes_normal():
+    assert to_list(remove_nodes(build_list([5, 2, 13, 3, 8]))) == [13, 8]
+
+
+def test_remove_nodes_all_equal_are_kept():
+    assert to_list(remove_nodes(build_list([1, 1, 1, 1]))) == [1, 1, 1, 1]
