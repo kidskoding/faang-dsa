@@ -11,28 +11,16 @@
 ## Notes
 
 1. [Matrix Coordinates](notes/01_matrix_coordinates.md)
-1. [Modular Arithmetic](notes/02_modular_arithmetic.md)
-1. [GCD And LCM](notes/03_gcd_lcm.md)
-1. [Geometry Basics](notes/04_geometry_basics.md)
+2. [Modular Arithmetic](notes/02_modular_arithmetic.md)
+3. [GCD And LCM](notes/03_gcd_lcm.md)
+4. [Geometry Basics](notes/04_geometry_basics.md)
 
 ## Problem Set
 
-1. [Rotate Image](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
-1. [Spiral Matrix](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
-1. [Spiral Matrix II](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
-1. [Set Matrix Zeroes](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
-1. [Pow(x, n)](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
-1. [Sqrt(x)](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
-1. [Game Of Life](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
-1. [Fraction To Recurring Decimal](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
-1. [Nim Game](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
-1. [Happy Number](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
-1. [Excel Sheet Column Number](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
-1. [Excel Sheet Column Title](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
-1. [Valid Square](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
-1. [Rectangle Overlap](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
-1. [Minimum Area Rectangle](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
-1. [Max Points On A Line](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
+[Math and Geometry Problem Set](problem_set/MATH_GEOMETRY_PROBLEM_SET.md) — 41 problems, grouped into **Matrix**, **Modular And Digit Arithmetic**, **GCD And LCM**, **Geometry**. Each entry names the pattern it teaches and the stub function it solves, across 4 solution files in `problem_set/`.
+
+The workbook is the canonical list. It is not duplicated here, so the two
+cannot drift apart.
 
 ## Additional Notes
 

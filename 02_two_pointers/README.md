@@ -10,26 +10,14 @@
 ## Notes
 
 1. [Opposite-End Pointers](notes/01_opposite_end_pointers.md)
-1. [Same-Direction Pointers](notes/02_same_direction_pointers.md)
-1. [In-Place Mutation](notes/03_in_place_mutation.md)
+2. [Same-Direction Pointers](notes/02_same_direction_pointers.md)
 
 ## Problem Set
 
-1. [Valid Palindrome](problem_set/TWO_POINTERS_PROBLEM_SET.md)
-1. [Two Sum II - Input Array Is Sorted](problem_set/TWO_POINTERS_PROBLEM_SET.md)
-1. [Reverse String](problem_set/TWO_POINTERS_PROBLEM_SET.md)
-1. [Remove Element](problem_set/TWO_POINTERS_PROBLEM_SET.md)
-1. [Remove Duplicates From Sorted Array](problem_set/TWO_POINTERS_PROBLEM_SET.md)
-1. [Move Zeroes](problem_set/TWO_POINTERS_PROBLEM_SET.md)
-1. [Merge Sorted Array](problem_set/TWO_POINTERS_PROBLEM_SET.md)
-1. [Squares Of A Sorted Array](problem_set/TWO_POINTERS_PROBLEM_SET.md)
-1. [Container With Most Water](problem_set/TWO_POINTERS_PROBLEM_SET.md)
-1. [3Sum](problem_set/TWO_POINTERS_PROBLEM_SET.md)
-1. [3Sum Closest](problem_set/TWO_POINTERS_PROBLEM_SET.md)
-1. [Boats To Save People](problem_set/TWO_POINTERS_PROBLEM_SET.md)
-1. [Sort Colors](problem_set/TWO_POINTERS_PROBLEM_SET.md)
-1. [Trapping Rain Water](problem_set/TWO_POINTERS_PROBLEM_SET.md)
-1. [4Sum](problem_set/TWO_POINTERS_PROBLEM_SET.md)
+[Two Pointers Problem Set](problem_set/TWO_POINTERS_PROBLEM_SET.md) — 33 problems, grouped into **Opposite-End Pointers**, **Same-Direction Pointers**, **In-Place Mutation**. Each entry names the pattern it teaches and the stub function it solves, across 3 solution files in `problem_set/`.
+
+The workbook is the canonical list. It is not duplicated here, so the two
+cannot drift apart.
 
 ## Additional Notes
 

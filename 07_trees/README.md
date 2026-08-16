@@ -14,54 +14,20 @@
 ## Notes
 
 1. [Tree Fundamentals](notes/01_fundamentals.md)
-1. [Tree DFS](notes/02_dfs.md)
-1. [Tree BFS](notes/03_bfs.md)
-1. [Tree Path Problems](notes/04_path_problems.md)
-1. [BST](notes/05_bst.md)
-1. [Tree Construction](notes/06_construction.md)
-1. [Tree Serialization](notes/07_serialization.md)
-1. [Tree Complexity](notes/08_complexity.md)
+2. [Tree DFS](notes/02_dfs.md)
+3. [Tree BFS](notes/03_bfs.md)
+4. [Tree Path Problems](notes/04_path_problems.md)
+5. [BST](notes/05_bst.md)
+6. [Tree Construction](notes/06_construction.md)
+7. [Tree Serialization](notes/07_serialization.md)
+8. [Tree Complexity](notes/08_complexity.md)
 
 ## Problem Set
 
-1. [Maximum Depth Of Binary Tree](problem_set/TREE_PROBLEM_SET.md)
-1. [Invert Binary Tree](problem_set/TREE_PROBLEM_SET.md)
-1. [Same Tree](problem_set/TREE_PROBLEM_SET.md)
-1. [Symmetric Tree](problem_set/TREE_PROBLEM_SET.md)
-1. [Balanced Binary Tree](problem_set/TREE_PROBLEM_SET.md)
-1. [Diameter Of Binary Tree](problem_set/TREE_PROBLEM_SET.md)
-1. [Subtree Of Another Tree](problem_set/TREE_PROBLEM_SET.md)
-1. [Binary Tree Level Order Traversal](problem_set/TREE_PROBLEM_SET.md)
-1. [Right Side View](problem_set/TREE_PROBLEM_SET.md)
-1. [Minimum Depth](problem_set/TREE_PROBLEM_SET.md)
-1. [Average Of Levels](problem_set/TREE_PROBLEM_SET.md)
-1. [Zigzag Level Order Traversal](problem_set/TREE_PROBLEM_SET.md)
-1. [Path Sum](problem_set/TREE_PROBLEM_SET.md)
-1. [Path Sum II](problem_set/TREE_PROBLEM_SET.md)
-1. [Binary Tree Paths](problem_set/TREE_PROBLEM_SET.md)
-1. [Sum Root To Leaf Numbers](problem_set/TREE_PROBLEM_SET.md)
-1. [Path Sum III](problem_set/TREE_PROBLEM_SET.md)
-1. [Lowest Common Ancestor Of A Binary Tree](problem_set/TREE_PROBLEM_SET.md)
-1. [Search In BST](problem_set/TREE_PROBLEM_SET.md)
-1. [Validate BST](problem_set/TREE_PROBLEM_SET.md)
-1. [Kth Smallest Element In A BST](problem_set/TREE_PROBLEM_SET.md)
-1. [Lowest Common Ancestor Of A BST](problem_set/TREE_PROBLEM_SET.md)
-1. [Convert Sorted Array To BST](problem_set/TREE_PROBLEM_SET.md)
-1. [Insert Into A BST](problem_set/TREE_PROBLEM_SET.md)
-1. [Delete Node In A BST](problem_set/TREE_PROBLEM_SET.md)
-1. [Construct Binary Tree From Preorder And Inorder Traversal](problem_set/TREE_PROBLEM_SET.md)
-1. [Construct Binary Tree From Inorder And Postorder Traversal](problem_set/TREE_PROBLEM_SET.md)
-1. [Serialize And Deserialize Binary Tree](problem_set/TREE_PROBLEM_SET.md)
-1. [Binary Tree Maximum Path Sum](problem_set/TREE_PROBLEM_SET.md)
-1. [Binary Tree Cameras](problem_set/TREE_PROBLEM_SET.md)
-1. [House Robber III](problem_set/TREE_PROBLEM_SET.md)
-1. [Count Good Nodes In Binary Tree](problem_set/TREE_PROBLEM_SET.md)
-1. [Vertical Order Traversal Of A Binary Tree](problem_set/TREE_PROBLEM_SET.md)
-1. [All Nodes Distance K In Binary Tree](problem_set/TREE_PROBLEM_SET.md)
-1. [Flatten Binary Tree To Linked List](problem_set/TREE_PROBLEM_SET.md)
-1. [Recover Binary Search Tree](problem_set/TREE_PROBLEM_SET.md)
-1. [Lowest Common Ancestor Of Deepest Leaves](problem_set/TREE_PROBLEM_SET.md)
-1. [Binary Tree Pruning](problem_set/TREE_PROBLEM_SET.md)
+[Tree Problem Set](problem_set/TREE_PROBLEM_SET.md) — 57 problems, grouped into **Traversals**, **Recursive Shape**, **BFS Levels**, **Root-To-Leaf Paths**, **Binary Search Trees**, **Construction**. Each entry names the pattern it teaches and the stub function it solves, across 6 solution files in `problem_set/`.
+
+The workbook is the canonical list. It is not duplicated here, so the two
+cannot drift apart.
 
 ## Additional Notes
 

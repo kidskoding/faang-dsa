@@ -11,22 +11,15 @@
 ## Notes
 
 1. [Trie Basics](notes/01_trie_basics.md)
-1. [Word Dictionary Patterns](notes/02_word_dictionary.md)
-1. [Trie Plus DFS](notes/03_trie_plus_dfs.md)
+2. [Word Dictionary Patterns](notes/02_word_dictionary.md)
+3. [Trie Plus DFS](notes/03_trie_plus_dfs.md)
 
 ## Problem Set
 
-1. [Implement Trie (Prefix Tree)](problem_set/TRIES_PROBLEM_SET.md)
-1. [Map Sum Pairs](problem_set/TRIES_PROBLEM_SET.md)
-1. [Longest Word In Dictionary](problem_set/TRIES_PROBLEM_SET.md)
-1. [Replace Words](problem_set/TRIES_PROBLEM_SET.md)
-1. [Design Add And Search Words Data Structure](problem_set/TRIES_PROBLEM_SET.md)
-1. [Implement Magic Dictionary](problem_set/TRIES_PROBLEM_SET.md)
-1. [Search Suggestions System](problem_set/TRIES_PROBLEM_SET.md)
-1. [Stream Of Characters](problem_set/TRIES_PROBLEM_SET.md)
-1. [Word Search II](problem_set/TRIES_PROBLEM_SET.md)
-1. [Palindrome Pairs](problem_set/TRIES_PROBLEM_SET.md)
-1. [Concatenated Words](problem_set/TRIES_PROBLEM_SET.md)
+[Tries Problem Set](problem_set/TRIES_PROBLEM_SET.md) — 20 problems, grouped into **Trie Basics**, **Word Dictionary And Wildcard Search**, **Trie Plus DFS**. Each entry names the pattern it teaches and the stub function it solves, across 3 solution files in `problem_set/`.
+
+The workbook is the canonical list. It is not duplicated here, so the two
+cannot drift apart.
 
 ## Additional Notes
 
