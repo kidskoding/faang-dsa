@@ -1,0 +1,2 @@
+number = true
+exclude = [".venv/**", ".pytest_cache/**", ".direnv/**", "skills/**", ".claude/**"]

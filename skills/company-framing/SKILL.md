@@ -15,19 +15,19 @@ A problem doc has these sections, in this order, and nothing else:
 
 1. `# Problem N: <Themed Title>` — story title, tied to the company's domain
    (fintech for Robinhood, logistics for Amazon, etc.)
-1. Story paragraphs — themed entities (services, trades, packages…), then the
+2. Story paragraphs — themed entities (services, trades, packages…), then the
    ask as a plain directive: "Return the …".
-1. `## Reference` — data-structure class definition only (e.g. a themed
+3. `## Reference` — data-structure class definition only (e.g. a themed
    `TreeNode`), present only when the input is a linked structure.
-1. `## Examples` — 2–4 `### Example N` blocks with themed Input/Output;
+4. `## Examples` — 2–4 `### Example N` blocks with themed Input/Output;
    include at least one edge case (single node, empty result, boundary split).
    Any prose justifying an output goes **inside the same code block**, on an
    `Explanation:` line after the `Output:` line — never as a loose paragraph
    after the fence.
-1. `## Constraints` — text code block, LeetCode-style bounds restated in
+5. `## Constraints` — text code block, LeetCode-style bounds restated in
    themed terms.
-1. `## Follow-up` — optional; a harder verbal extension.
-1. `## Source` — LAST section: link to the closest real LeetCode problem.
+6. `## Follow-up` — optional; a harder verbal extension.
+7. `## Source` — LAST section: link to the closest real LeetCode problem.
 
 ## Hard rules
 

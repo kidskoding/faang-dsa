@@ -13,10 +13,10 @@ The practical goal is to solve most LeetCode mediums in 25-35 minutes with clear
 A problem is done only when you can:
 
 1. explain the pattern
-1. choose the right state, base case, or helper shape
-1. write the core logic cleanly
-1. pass the relevant tests
-1. explain time and space complexity
+2. choose the right state, base case, or helper shape
+3. write the core logic cleanly
+4. pass the relevant tests
+5. explain time and space complexity
 
 ## How To Prep
 
