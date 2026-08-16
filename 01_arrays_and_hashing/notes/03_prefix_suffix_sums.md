@@ -168,6 +168,15 @@ Given an integer array `nums` and integer `k`, return the number of contiguous,
 nonempty subarrays whose values sum to `k`. Values may be negative, so the
 running sum can rise, fall, or repeat.
 
+**Input**: `nums`, a `list[int]` where `1 <= len(nums) <= 2 * 10^4` and each
+value satisfies `-1000 <= nums[i] <= 1000`, and `k`, an `int` target sum with
+`-10^7 <= k <= 10^7`
+
+**Output**: an `int`, the number of contiguous nonempty slices of `nums` whose
+values add up to exactly `k`. Slices that overlap are counted separately, so the
+same index may belong to many counted subarrays, and the answer is `0` when no
+slice reaches `k`
+
 Checking every start and extending every end is `O(n²)` because many overlapping
 ranges are summed repeatedly. Two moving boundaries do not fix that for negative
 values: adding `-5` can make a too-large total smaller, so there is no safe rule
@@ -180,6 +189,26 @@ every other subarray.
 > "At each index I know the current prefix sum. A subarray ending here sums to
 > `k` for every earlier prefix equal to `running - k`, so I will add that stored
 > frequency before recording the current prefix."
+
+Therefore,
+
+1. Start `prefix_count` as `{0: 1}`, `running` at `0`, and `answer` at `0`. The
+   seeded zero is the empty prefix before index `0`, and without it every
+   subarray that starts at the very beginning would go uncounted
+2. Walk the array left to right, adding each value to `running`, so `running` is
+   always the prefix sum through the current index and no earlier boundary has to
+   be re-added
+3. Compute `needed = running - k`, which is the prefix sum an earlier boundary
+   must have had for the values between it and here to total exactly `k`
+4. Add `prefix_count.get(needed, 0)` to `answer`, taking the stored frequency
+   rather than a yes-or-no answer, because each earlier boundary with that same
+   prefix sum starts a different valid subarray. A missing key contributes `0`,
+   which is the rejection case
+5. Record the current prefix by incrementing `prefix_count[running]`, and do it
+   only after the lookup. Recording first would let `running` match its own
+   `needed` when `k` is `0` and count the empty subarray ending here
+6. Return `answer` once the scan finishes. An empty array never enters the loop,
+   so the seeded map is never consulted and the count stays `0`
 
 ```python
 def subarray_sum(nums: list[int], k: int) -> int:

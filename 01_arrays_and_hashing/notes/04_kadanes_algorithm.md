@@ -53,6 +53,14 @@ Given a nonempty integer array, return the largest possible sum of a nonempty
 contiguous subarray. Negative values are allowed, and the problem asks for the
 sum rather than the indices.
 
+**Input**: `nums`, a `list[int]` of at least one integer, where
+`1 <= len(nums) <= 10^5` and each value lies between `-10^4` and `10^4`, so
+values may be negative, zero, or positive
+
+**Output**: a single `int`, the largest sum obtainable from any contiguous
+nonempty slice of `nums`. Because the slice must contain at least one value, an
+all-negative array returns its least negative value rather than zero
+
 Enumerating every pair of boundaries and maintaining a running sum for each
 start takes `O(n²)` time. The repeated work is that many candidates arrive at
 the same index, even though only the largest of them can help an extension.
@@ -61,6 +69,29 @@ Kadane keeps exactly that one useful candidate.
 > "I will track the best subarray that must end at the current index. For each
 > value I either extend that subarray or reject it and restart here. A separate
 > global maximum remembers an answer that ended earlier."
+
+Step by step:
+
+1. Reject an empty array up front, because the answer must be a nonempty
+   subarray and there is no honest value to return when no value exists. Raising
+   here also protects the next step, which reads `nums[0]` directly.
+2. Set both `current` and `best` to `nums[0]`. The only subarray ending at index
+   `0` is `[nums[0]]` itself, and it is also the only subarray seen so far, so
+   the local and global answers agree at the start. Starting from the first
+   value instead of zero is what keeps an all-negative array honest.
+3. Walk the remaining indices from `1` to the end, handling one value at a time.
+   Every index is visited exactly once, and nothing earlier than `current` and
+   `best` is ever consulted again.
+4. At each value, form the two candidates for a subarray ending here: restart
+   with just `value`, or extend the previous local answer with
+   `current + value`. Take the larger as the new `current`, because the smaller
+   candidate can never catch up once both receive the same future values.
+5. Compare the refreshed `current` against `best` and keep the larger. This is
+   the separate global question, and it is what preserves an answer that ended
+   before the scan reached the end.
+6. After the loop, return `best`. Returning `current` would report the best
+   subarray that happens to end at the last index, which is a different and
+   usually smaller answer.
 
 ```python
 def max_subarray(nums: list[int]) -> int:

@@ -156,6 +156,13 @@ Given a list of strings, return groups where every word in one group contains
 the same characters with the same frequencies. Group order and word order do
 not matter. Empty strings are valid, and all empty strings belong together.
 
+**Input**: `words`, a `list[str]` of lowercase English words. A word may be the
+empty string, and the same word may appear more than once
+
+**Output**: a `list[list[str]]` whose inner lists partition the input, so every
+word appears exactly once overall and two words share an inner list exactly when
+they are anagrams of each other
+
 Comparing every word against every existing group repeatedly recounts or sorts
 words, which can become quadratic in the number of words. Instead, compute one
 signature per word and let a dictionary find its group.
@@ -163,6 +170,27 @@ signature per word and let a dictionary find its group.
 > "Two words are anagrams exactly when their sorted characters match. I will use
 > that sorted string as the dictionary key and append each original word to the
 > list stored under its key."
+
+Therefore,
+
+1. Create an empty dictionary whose keys are **signatures** and whose values are
+   lists of words, because the group a word belongs to has to be reachable by
+   lookup rather than by scanning the groups built so far
+2. Walk the words once, in input order. Each word is placed by itself, so no word
+   ever has to be compared against another word directly
+3. For the current word, build its signature by sorting its characters and joining
+   them back into a string. Sorting normalizes the order, so `"eat"` and `"tea"`
+   both collapse to `"aet"` while `"tan"` does not
+4. If that signature is not already a key, insert it with an empty list. This is
+   the word that discovers a new group, and the dictionary needs a container to
+   append into before the next line can run
+5. Append the **original** word, not the signature, to the list stored under that
+   key. The signature is only a name for the group, and the caller wants the words
+   back exactly as they were given
+6. After the loop, return the dictionary's values as a list. The empty string is
+   not a special case here, since its signature is the empty string, which is a
+   perfectly good key, and an empty input simply produces an empty dictionary and
+   therefore an empty answer
 
 ```python
 def group_anagrams(words: list[str]) -> list[list[str]]:

@@ -96,6 +96,19 @@ value or `-1` when the key is absent, and removing a missing key changes nothing
 The problem uses nonnegative integer keys, but Python's remainder operation also
 keeps negative keys inside the bucket range.
 
+**Input**: a sequence of method calls on the object, not one array. The
+constructor `MyHashMap()` takes no arguments and builds an empty map.
+`put(key: int, value: int) -> None` inserts the pair or overwrites the value of
+an existing key, `get(key: int) -> int` looks a key up, and
+`remove(key: int) -> None` deletes a key. Keys and values are integers in the
+range `0` to `10^6`, and there are at most `10^4` calls across all three methods
+
+**Output**: only `get` returns a value. It returns the `int` most recently stored
+under that key, or `-1` when the key is not in the map, which is why `-1` is
+reserved as the sentinel rather than a legal stored value. `put` and `remove`
+return `None` and are judged by their effect on later `get` calls; removing a key
+that was never inserted is a no-op rather than an error
+
 An array alone could store a value at `array[key]`, but that allocates for the
 largest possible key rather than the number of stored entries. Separate chaining
 uses a smaller bucket array and resolves collisions explicitly.
@@ -103,6 +116,36 @@ uses a smaller bucket array and resolves collisions explicitly.
 > "I will use an array of chains. Every operation hashes the key to one chain
 > and then checks equality inside that chain. `put` updates an equal key before
 > appending, and I will resize and rehash when the load factor exceeds 0.75."
+
+Therefore,
+
+1. Start with a small bucket array, here four empty chains, and a stored
+   `_size` count of live entries. The count is kept rather than recomputed
+   because the load factor is checked on every insertion, and summing chain
+   lengths each time would defeat the purpose
+2. Give every operation one shared way to find its chain, `key % len(buckets)`,
+   so `put`, `get`, and `remove` always agree on where a key belongs. Python's
+   remainder is nonnegative for a positive divisor, so this stays a valid index
+   even if a negative key ever arrives
+3. For an insertion, scan only that one chain and compare keys for equality. If a
+   stored key matches, overwrite its value in place and report that nothing new
+   was added, because a map holds one value per key and appending here would
+   create a duplicate that a later `get` or `remove` could read or leave behind
+4. If no key in the chain matches, append the new pair and increment `_size`.
+   Reporting insertion separately from update is what stops an overwrite from
+   inflating the count and triggering a needless resize
+5. After a genuine insertion, compare `_size / len(buckets)` against the 0.75
+   threshold. Crossing it means chains are getting long enough that lookups drift
+   toward a linear scan, so allocate a bucket array of twice the capacity, reset
+   the count, and reinsert every existing entry. The reinsertion must recompute
+   each bucket index, since `% new_capacity` can land a key somewhere its old
+   index does not predict
+6. For a lookup, scan the key's chain and return the value of the first equal
+   key. Falling off the end of the chain means the key is absent, so return the
+   `-1` sentinel
+7. For a removal, scan the chain the same way, delete the matching entry, and
+   decrement `_size`. If the scan finds nothing, return without touching
+   anything, which is the missing-key no-op the problem asks for
 
 ```python
 class MyHashMap:

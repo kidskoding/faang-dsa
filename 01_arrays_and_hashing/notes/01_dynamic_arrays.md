@@ -184,6 +184,14 @@ For example, rotating `[1, 2, 3, 4, 5, 6, 7]` right by three produces
 `[5, 6, 7, 1, 2, 3, 4]`. An empty array is normally excluded by the problem
 constraints, but guarding it makes the helper safe to reuse.
 
+**Input**: `nums`, a `list[int]` holding the values to rotate, where
+`1 <= len(nums) <= 10^5` under the problem's constraints, and `k`, an `int` with
+`0 <= k <= 10^5` giving how many positions each value moves to the right
+
+**Output**: none. The function returns `None` and the rotation is visible in
+`nums` itself, which is mutated so that the value that started at index `i` ends
+at index `(i + k) % len(nums)`
+
 Moving the last value to the front `k` times works, but each front insertion
 shifts the array. That costs `O(kn)` time in the worst case. The array already
 contains the right two groups; they are merely in the wrong order:
@@ -206,6 +214,25 @@ positions are rejected as a complete cycle.
 > "Repeated front insertion would redo shifting. I can instead view the array
 > as two groups, reverse the whole array to swap their order, and reverse each
 > group to restore its internal order."
+
+Therefore,
+
+1. Return immediately when `nums` is empty, because the next step divides by the
+   length, and a length of zero would raise instead of producing a rotation.
+2. Reduce `k` with `k %= len(nums)`, because a full rotation restores the
+   original order, so only the remainder describes real movement.
+3. Write a local `reverse(left, right)` helper that swaps the two boundary values
+   and steps both indices inward while `left < right`, since all three reversals
+   are the same operation applied to different ranges.
+4. Reverse the entire array with `reverse(0, len(nums) - 1)`. This puts the last
+   `k` values in front of the first `n - k` values, which is the group order the
+   answer needs, at the cost of scrambling the values inside each group.
+5. Reverse the first `k` positions with `reverse(0, k - 1)`, which undoes the
+   scrambling inside the group that moved to the front and restores its original
+   internal order.
+6. Reverse the remaining positions with `reverse(k, len(nums) - 1)`, which
+   restores the internal order of the group that moved to the back. The array now
+   holds both groups in the right order and each group in its own right order.
 
 ```python
 def rotate(nums: list[int], k: int) -> None:
