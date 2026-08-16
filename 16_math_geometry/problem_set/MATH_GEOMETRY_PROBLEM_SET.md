@@ -149,41 +149,47 @@ exponentiation, and digit/number-theory transforms.
 - solves: `rand10`
 - Pattern: rejection sampling to build a uniform distribution.
 
+### 23. [Pow(x, n)](https://leetcode.com/problems/powx-n/)
+
+- solves: (todo)
+- Pattern: binary exponentiation, squaring the base and halving the exponent, with
+  the negative exponent handled by inverting once at the end.
+
 ## GCD And LCM
 
 `gcd_lcm_problems.py` — Euclid's gcd applied to factor counts, repeated
 strings, and reduced fractions.
 
-### 23. [Number of Common Factors](https://leetcode.com/problems/number-of-common-factors/)
+### 24. [Number of Common Factors](https://leetcode.com/problems/number-of-common-factors/)
 
 - solves: `common_factors`
 - Pattern: the common factors of a and b are exactly the divisors of
   gcd(a, b).
 
-### 24. [Greatest Common Divisor of Strings](https://leetcode.com/problems/greatest-common-divisor-of-strings/)
+### 25. [Greatest Common Divisor of Strings](https://leetcode.com/problems/greatest-common-divisor-of-strings/)
 
 - solves: `gcd_of_strings`
 - Pattern: a common divisor exists only if `str1 + str2 == str2 + str1`;
   its length is gcd(len1, len2).
 
-### 25. [Fraction To Recurring Decimal](https://leetcode.com/problems/fraction-to-recurring-decimal/)
+### 26. [Fraction To Recurring Decimal](https://leetcode.com/problems/fraction-to-recurring-decimal/)
 
 - solves: `fraction_to_decimal`
 - Pattern: use gcd to reduce the fraction, then track remainders to detect
   a repeating cycle.
 
-### 26. [Smallest Even Multiple](https://leetcode.com/problems/smallest-even-multiple/)
+### 27. [Smallest Even Multiple](https://leetcode.com/problems/smallest-even-multiple/)
 
 - solves: `smallest_even_multiple`
 - Pattern: the answer is lcm(n, 2) — `n` if it is already even, else `2 * n`.
 
-### 27. [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/)
+### 28. [Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array/)
 
 - solves: `find_gcd`
 - Pattern: gcd of the array equals gcd of only its smallest and largest
   elements.
 
-### 28. [Water and Jug Problem](https://leetcode.com/problems/water-and-jug-problem/)
+### 29. [Water and Jug Problem](https://leetcode.com/problems/water-and-jug-problem/)
 
 - solves: `can_measure_water`
 - Pattern: by Bezout's identity, target is reachable iff it fits in the two
@@ -194,73 +200,73 @@ strings, and reduced fractions.
 `geometry_problems.py` — coordinate geometry with squared distances,
 interval overlap, reduced slopes, and area sweeps.
 
-### 29. [Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/)
+### 30. [Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/)
 
 - solves: `is_rectangle_overlap`
 - Pattern: check that both axis intervals overlap.
 
-### 30. [Valid Square](https://leetcode.com/problems/valid-square/)
+### 31. [Valid Square](https://leetcode.com/problems/valid-square/)
 
 - solves: `valid_square`
 - Pattern: compare squared distances between all point pairs.
 
-### 31. [Minimum Area Rectangle](https://leetcode.com/problems/minimum-area-rectangle/)
+### 32. [Minimum Area Rectangle](https://leetcode.com/problems/minimum-area-rectangle/)
 
 - solves: `min_area_rect`
 - Pattern: hash points and pair up diagonals that share a center and radius.
 
-### 32. [Max Points On A Line](https://leetcode.com/problems/max-points-on-a-line/)
+### 33. [Max Points On A Line](https://leetcode.com/problems/max-points-on-a-line/)
 
 - solves: `max_points`
 - Pattern: group points by reduced-slope key relative to each anchor point.
 
-### 33. [Largest Triangle Area](https://leetcode.com/problems/largest-triangle-area/)
+### 34. [Largest Triangle Area](https://leetcode.com/problems/largest-triangle-area/)
 
 - solves: `largest_triangle_area`
 - Pattern: apply the shoelace cross-product area over every triple of
   points.
 
-### 34. [Rectangle Area](https://leetcode.com/problems/rectangle-area/)
+### 35. [Rectangle Area](https://leetcode.com/problems/rectangle-area/)
 
 - solves: `compute_area`
 - Pattern: sum both areas and subtract the overlap of the two axis
   intervals.
 
-### 35. [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
+### 36. [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 
 - solves: `k_closest`
 - Pattern: keep the k smallest squared distances with a heap or quickselect.
 
-### 36. [Basic Calculator](https://leetcode.com/problems/basic-calculator/)
+### 37. [Basic Calculator](https://leetcode.com/problems/basic-calculator/)
 
 - solves: `calculate`
 - Pattern: evaluate with a running sign and a stack for parenthesized
   subexpressions.
 
-### 37. [Self Crossing](https://leetcode.com/problems/self-crossing/)
+### 38. [Self Crossing](https://leetcode.com/problems/self-crossing/)
 
 - solves: `is_self_crossing`
 - Pattern: compare each move against the prior few segments for the three
   crossing cases.
 
-### 38. [Erect the Fence](https://leetcode.com/problems/erect-the-fence/)
+### 39. [Erect the Fence](https://leetcode.com/problems/erect-the-fence/)
 
 - solves: `outer_trees`
 - Pattern: build the convex hull (Andrew's monotone chain) via cross-product
   turns.
 
-### 39. [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
+### 40. [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
 
 - solves: `get_skyline`
 - Pattern: sweep building edges and track the current max height with a heap.
 
-### 40. [Perfect Rectangle](https://leetcode.com/problems/perfect-rectangle/)
+### 41. [Perfect Rectangle](https://leetcode.com/problems/perfect-rectangle/)
 
 - solves: `is_rectangle_cover`
 - Pattern: check total area equals the bounding box and every interior
   corner cancels.
 
-### 41. [Rectangle Area II](https://leetcode.com/problems/rectangle-area-ii/)
+### 42. [Rectangle Area II](https://leetcode.com/problems/rectangle-area-ii/)
 
 - solves: `rectangle_area`
 - Pattern: coordinate-compress and sweep a line, summing active covered

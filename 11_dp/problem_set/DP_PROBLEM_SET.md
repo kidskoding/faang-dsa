@@ -243,3 +243,9 @@ DP.
 
 - solves: `cherry_pickup`
 - Pattern: two walks at once, `dp` over both positions on a shared diagonal.
+
+### 41. [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
+
+- solves: (todo)
+- Pattern: the LCS recurrence run against the reversed string, or `dp[i][j]` over
+  a widening interval where matching ends add two.
