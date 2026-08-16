@@ -17,7 +17,7 @@ def max_vowels(s: str, k: int) -> int:
 
 
 def num_of_subarrays(arr: list[int], k: int, threshold: int) -> int:
-    # Problem 3: Number of Sub-arrays of Size K and Average >= Threshold
+    # Problem 3: Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold
     # Key idea: average >= threshold means window sum >= k * threshold; count qualifying windows.
     # Time:
     # Space:

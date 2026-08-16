@@ -206,7 +206,7 @@ min of the current window in O(1) amortized.
 
 ### 33. [Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/)
 
-- solves: `longest_subarray`
+- solves: `longest_subarray_within_limit`
 - Pattern: keep a max deque and a min deque over the window; shrink left while `max - min > limit`.
 
 ### 34. [Shortest Subarray with Sum at Least K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/)

@@ -207,7 +207,7 @@ onsites.
 
 ### 32. [Find The Kth Smallest Sum Of A Matrix With Sorted Rows](https://leetcode.com/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/)
 
-- solves: `kth_smallest`
+- solves: `kth_smallest_matrix_sum`
 - Pattern: heap expands row-index combinations to enumerate the k smallest sums.
 
 ### 33. [Course Schedule III](https://leetcode.com/problems/course-schedule-iii/)

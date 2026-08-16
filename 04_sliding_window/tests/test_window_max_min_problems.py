@@ -1,5 +1,5 @@
 from problem_set.window_max_min_problems import (
-    longest_subarray,
+    longest_subarray_within_limit,
     max_sliding_window,
     min_sliding_window,
     shortest_subarray,
@@ -35,15 +35,15 @@ def test_min_sliding_window_decreasing():
 
 
 def test_longest_subarray_small_limit():
-    assert longest_subarray([8, 2, 4, 7], 4) == 2
+    assert longest_subarray_within_limit([8, 2, 4, 7], 4) == 2
 
 
 def test_longest_subarray_normal():
-    assert longest_subarray([10, 1, 2, 4, 7, 2], 5) == 4
+    assert longest_subarray_within_limit([10, 1, 2, 4, 7, 2], 5) == 4
 
 
 def test_longest_subarray_zero_limit():
-    assert longest_subarray([4, 2, 2, 2, 4, 4, 2, 2], 0) == 3
+    assert longest_subarray_within_limit([4, 2, 2, 2, 4, 4, 2, 2], 0) == 3
 
 
 def test_shortest_subarray_single():

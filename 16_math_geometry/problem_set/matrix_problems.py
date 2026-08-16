@@ -35,7 +35,7 @@ def set_zeroes(matrix: list[list[int]]) -> None:
 
 
 def game_of_life(board: list[list[int]]) -> None:
-    # Problem 7: Game Of Life
+    # Problem 5: Game Of Life
     # Key idea: encode next state in unused bits so the update stays in place.
     # Time:
     # Space:

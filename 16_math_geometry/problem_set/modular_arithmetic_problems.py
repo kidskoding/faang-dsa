@@ -1,5 +1,5 @@
 def my_pow(x: float, n: int) -> float:
-    # Problem 5: Pow(x, n)
+    # Problem 11: Pow(x, n)
     # Key idea: binary exponentiation halves the exponent each step.
     # Time:
     # Space:
@@ -8,7 +8,7 @@ def my_pow(x: float, n: int) -> float:
 
 
 def my_sqrt(x: int) -> int:
-    # Problem 6: Sqrt(x)
+    # Problem 10: Sqrt(x)
     # Key idea: binary search the answer space for the integer square root.
     # Time:
     # Space:
@@ -17,7 +17,7 @@ def my_sqrt(x: int) -> int:
 
 
 def can_win_nim(n: int) -> bool:
-    # Problem 9: Nim Game
+    # Problem 8: Nim Game
     # Key idea: find the losing positions via modulo on the pile size.
     # Time:
     # Space:
@@ -26,7 +26,7 @@ def can_win_nim(n: int) -> bool:
 
 
 def is_happy(n: int) -> bool:
-    # Problem 10: Happy Number
+    # Problem 9: Happy Number
     # Key idea: cycle detection over repeated digit-square-sum transforms.
     # Time:
     # Space:
@@ -35,7 +35,7 @@ def is_happy(n: int) -> bool:
 
 
 def title_to_number(column_title: str) -> int:
-    # Problem 11: Excel Sheet Column Number
+    # Problem 6: Excel Sheet Column Number
     # Key idea: treat the letters as a base-26 number.
     # Time:
     # Space:
@@ -44,7 +44,7 @@ def title_to_number(column_title: str) -> int:
 
 
 def convert_to_title(column_number: int) -> str:
-    # Problem 12: Excel Sheet Column Title
+    # Problem 7: Excel Sheet Column Title
     # Key idea: base-26 conversion with a 1-indexed digit shift.
     # Time:
     # Space:
@@ -53,7 +53,7 @@ def convert_to_title(column_number: int) -> str:
 
 
 def plus_one(digits: list[int]) -> list[int]:
-    # Problem 13: Plus One
+    # Problem 12: Plus One
     # Key idea: walk digits right-to-left, carrying, and prepend a leading 1 if it overflows.
     # Time:
     # Space:
@@ -62,7 +62,7 @@ def plus_one(digits: list[int]) -> list[int]:
 
 
 def is_palindrome(x: int) -> bool:
-    # Problem 14: Palindrome Number
+    # Problem 13: Palindrome Number
     # Key idea: reverse half the digits and compare without converting to a string.
     # Time:
     # Space:
@@ -71,7 +71,7 @@ def is_palindrome(x: int) -> bool:
 
 
 def add_strings(num1: str, num2: str) -> str:
-    # Problem 15: Add Strings
+    # Problem 14: Add Strings
     # Key idea: digit-by-digit bignum addition with carry.
     # Time:
     # Space:
@@ -80,7 +80,7 @@ def add_strings(num1: str, num2: str) -> str:
 
 
 def reverse(x: int) -> int:
-    # Problem 16: Reverse Integer
+    # Problem 15: Reverse Integer
     # Key idea: reverse digits with 32-bit overflow checking.
     # Time:
     # Space:
@@ -89,7 +89,7 @@ def reverse(x: int) -> int:
 
 
 def count_primes(n: int) -> int:
-    # Problem 17: Count Primes
+    # Problem 16: Count Primes
     # Key idea: sieve of Eratosthenes marks multiples as composite.
     # Time:
     # Space:
@@ -98,7 +98,7 @@ def count_primes(n: int) -> int:
 
 
 def trailing_zeroes(n: int) -> int:
-    # Problem 18: Factorial Trailing Zeroes
+    # Problem 17: Factorial Trailing Zeroes
     # Key idea: count factors of 5 by summing floor divisions by increasing powers of 5.
     # Time:
     # Space:
@@ -107,7 +107,7 @@ def trailing_zeroes(n: int) -> int:
 
 
 def multiply(num1: str, num2: str) -> str:
-    # Problem 19: Multiply Strings
+    # Problem 18: Multiply Strings
     # Key idea: schoolbook multiply into a fixed-size digit buffer indexed by position sums.
     # Time:
     # Space:
@@ -116,7 +116,7 @@ def multiply(num1: str, num2: str) -> str:
 
 
 def int_to_roman(num: int) -> str:
-    # Problem 20: Integer to Roman
+    # Problem 19: Integer to Roman
     # Key idea: greedily subtract the largest value-symbol pair, including the subtractive cases.
     # Time:
     # Space:
@@ -125,7 +125,7 @@ def int_to_roman(num: int) -> str:
 
 
 def nth_ugly_number(n: int) -> int:
-    # Problem 21: Ugly Number II
+    # Problem 20: Ugly Number II
     # Key idea: merge three pointer-advanced streams of multiples of 2, 3, and 5.
     # Time:
     # Space:
@@ -134,7 +134,7 @@ def nth_ugly_number(n: int) -> int:
 
 
 def num_squares(n: int) -> int:
-    # Problem 22: Perfect Squares
+    # Problem 21: Perfect Squares
     # Key idea: DP over the fewest squares, or BFS on remaining-value states.
     # Time:
     # Space:
@@ -143,7 +143,7 @@ def num_squares(n: int) -> int:
 
 
 def rand10() -> int:
-    # Problem 23: Implement Rand10() Using Rand7()
+    # Problem 22: Implement Rand10() Using Rand7()
     # Key idea: rejection sampling to build a uniform distribution.
     # Time:
     # Space:

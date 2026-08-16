@@ -9,7 +9,7 @@ class ListNode:
 
 
 def merge_k_lists(lists: list[ListNode | None]) -> ListNode | None:
-    # Problem 13: Merge K Sorted Lists
+    # Problem 19: Merge K Sorted Lists
     # Key idea: heap holds one candidate per list, always advancing the smallest.
     # Time:
     # Space:
@@ -18,7 +18,7 @@ def merge_k_lists(lists: list[ListNode | None]) -> ListNode | None:
 
 
 def smallest_range(nums: list[list[int]]) -> list[int]:
-    # Problem 14: Smallest Range Covering Elements From K Lists
+    # Problem 20: Smallest Range Covering Elements From K Lists
     # Key idea: heap tracks the current min across k lists while a running max bounds the range.
     # Time:
     # Space:
@@ -27,7 +27,7 @@ def smallest_range(nums: list[list[int]]) -> list[int]:
 
 
 class Twitter:
-    # Problem 15: Design Twitter
+    # Problem 22: Design Twitter
     # Key idea: merge each followee's recent tweets with a heap keyed by timestamp.
 
     def __init__(self) -> None:
@@ -62,7 +62,7 @@ class Twitter:
 
 
 def employee_free_time(schedule: list[list[list[int]]]) -> list[list[int]]:
-    # Problem 16: Employee Free Time
+    # Problem 21: Employee Free Time
     # Key idea: heap merges each employee's sorted intervals to find shared gaps.
     # Time:
     # Space:
@@ -71,7 +71,7 @@ def employee_free_time(schedule: list[list[list[int]]]) -> list[list[int]]:
 
 
 def k_smallest_pairs(nums1: list[int], nums2: list[int], k: int) -> list[list[int]]:
-    # Problem 17: Find K Pairs With Smallest Sums
+    # Problem 23: Find K Pairs With Smallest Sums
     # Key idea: heap expands the frontier of pair sums across two sorted arrays.
     # Time:
     # Space:
@@ -80,7 +80,7 @@ def k_smallest_pairs(nums1: list[int], nums2: list[int], k: int) -> list[list[in
 
 
 def kth_smallest(matrix: list[list[int]], k: int) -> int:
-    # Problem 18: Kth Smallest Element In A Sorted Matrix
+    # Problem 24: Kth Smallest Element In A Sorted Matrix
     # Key idea: heap merges sorted rows, popping k times to reach the kth smallest.
     # Time:
     # Space:
@@ -89,7 +89,7 @@ def kth_smallest(matrix: list[list[int]], k: int) -> int:
 
 
 def nth_super_ugly_number(n: int, primes: list[int]) -> int:
-    # Problem 19: Super Ugly Number
+    # Problem 25: Super Ugly Number
     # Key idea: heap merges the multiples generated from each prime factor.
     # Time:
     # Space:

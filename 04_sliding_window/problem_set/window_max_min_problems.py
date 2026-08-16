@@ -1,5 +1,5 @@
 def max_sliding_window(nums: list[int], k: int) -> list[int]:
-    # Problem 10: Sliding Window Maximum
+    # Problem 31: Sliding Window Maximum
     # Key idea: monotonic decreasing deque of indices gives the max of each window in O(1).
     # Time:
     # Space:
@@ -16,8 +16,8 @@ def min_sliding_window(nums: list[int], k: int) -> list[int]:
     raise NotImplementedError
 
 
-def longest_subarray(nums: list[int], limit: int) -> int:
-    # Problem 12: Longest Continuous Subarray With Absolute Diff <= Limit
+def longest_subarray_within_limit(nums: list[int], limit: int) -> int:
+    # Problem 33: Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
     # Key idea: keep two deques (max and min) over the window; shrink left while max - min > limit.
     # Time:
     # Space:
@@ -26,7 +26,7 @@ def longest_subarray(nums: list[int], limit: int) -> int:
 
 
 def shortest_subarray(nums: list[int], k: int) -> int:
-    # Problem 14: Shortest Subarray with Sum at Least K
+    # Problem 34: Shortest Subarray with Sum at Least K
     # Key idea: monotonic deque over prefix sums to find the shortest qualifying window with negatives allowed.
     # Time:
     # Space:
@@ -35,7 +35,7 @@ def shortest_subarray(nums: list[int], k: int) -> int:
 
 
 def continuous_subarrays(nums: list[int]) -> int:
-    # Problem 16: Continuous Subarrays
+    # Problem 36: Continuous Subarrays
     # Key idea: two deques track window max and min; shrink left while max - min > 2, count windows per right edge.
     # Time:
     # Space:
@@ -44,7 +44,7 @@ def continuous_subarrays(nums: list[int]) -> int:
 
 
 def find_max_value_of_equation(points: list[list[int]], k: int) -> int:
-    # Problem 17: Max Value of Equation
+    # Problem 37: Max Value of Equation
     # Key idea: monotonic decreasing deque of y - x keeps the best partner within the |xi - xj| <= k window.
     # Time:
     # Space:
@@ -53,7 +53,7 @@ def find_max_value_of_equation(points: list[list[int]], k: int) -> int:
 
 
 def maximum_robots(charge_times: list[int], running_costs: list[int], budget: int) -> int:
-    # Problem 18: Maximum Number of Robots Within Budget
+    # Problem 38: Maximum Number of Robots Within Budget
     # Key idea: sliding window with a monotonic deque for the running max charge time against the running sum budget.
     # Time:
     # Space:
@@ -62,7 +62,7 @@ def maximum_robots(charge_times: list[int], running_costs: list[int], budget: in
 
 
 def count_subarrays(nums: list[int], min_k: int, max_k: int) -> int:
-    # Problem 15: Count Subarrays With Fixed Bounds
+    # Problem 35: Count Subarrays With Fixed Bounds
     # Key idea: track last positions of minK, maxK, and out-of-range values to count valid windows per right edge.
     # Time:
     # Space:
