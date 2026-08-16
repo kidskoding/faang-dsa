@@ -2,7 +2,9 @@ from problem_set.divide_and_conquer_problems import (
     beautiful_array,
     closest_pair,
     diff_ways_to_compute,
+    find_median_sorted_arrays,
     get_skyline,
+    max_sub_array,
 )
 
 
@@ -71,3 +73,19 @@ def test_beautiful_array_no_arithmetic_triple():
             c = 2 * b - a
             if c in values:
                 assert not (values[a] < values[b] < values[c])
+
+
+def test_max_sub_array_normal():
+    assert max_sub_array([-2, 1, -3, 4, -1, 2, 1, -5, 4]) == 6
+
+
+def test_max_sub_array_all_negative():
+    assert max_sub_array([-1]) == -1
+
+
+def test_find_median_sorted_arrays_odd_total():
+    assert find_median_sorted_arrays([1, 3], [2]) == 2.0
+
+
+def test_find_median_sorted_arrays_even_total():
+    assert find_median_sorted_arrays([1, 2], [3, 4]) == 2.5

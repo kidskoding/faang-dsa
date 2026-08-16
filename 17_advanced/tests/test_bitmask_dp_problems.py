@@ -1,6 +1,8 @@
 from problem_set.bitmask_dp_problems import (
     can_partition_k_subsets,
+    max_students,
     min_number_of_semesters,
+    number_ways,
     smallest_sufficient_team,
 )
 
@@ -60,3 +62,25 @@ def test_min_number_of_semesters_chain_with_limit():
 
 def test_min_number_of_semesters_no_limit_needed():
     assert min_number_of_semesters(5, [[2, 1], [3, 1], [4, 1], [1, 5]], 2) == 4
+
+
+def test_max_students_normal():
+    seats = [
+        ["#", ".", "#", "#", ".", "#"],
+        [".", "#", "#", "#", "#", "."],
+        ["#", ".", "#", "#", ".", "#"],
+    ]
+    assert max_students(seats) == 4
+
+
+def test_number_ways_single_assignment():
+    assert number_ways([[3, 4], [4, 5], [5]]) == 1
+
+
+def test_number_ways_several_assignments():
+    assert number_ways([[3, 5, 1], [3, 5]]) == 4
+
+
+def test_number_ways_five_people():
+    hats = [[1, 2, 3], [2, 3, 5, 6], [1, 3, 7, 9], [1, 8, 9], [2, 5, 7]]
+    assert number_ways(hats) == 111

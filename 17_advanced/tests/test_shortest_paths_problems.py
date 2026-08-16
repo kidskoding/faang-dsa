@@ -2,6 +2,8 @@ from problem_set.shortest_paths_problems import (
     count_paths,
     find_cheapest_price,
     find_the_city,
+    minimum_effort_path,
+    network_delay_time,
 )
 
 
@@ -46,3 +48,19 @@ def test_find_the_city_tiebreak_largest_index():
 
 def test_find_the_city_minimal_graph():
     assert find_the_city(2, [[0, 1, 1]], 1) in (0, 1)
+
+
+def test_network_delay_time_reaches_all():
+    assert network_delay_time([[2, 1, 1], [2, 3, 1], [3, 4, 1]], 4, 2) == 2
+
+
+def test_network_delay_time_unreachable():
+    assert network_delay_time([[1, 2, 1]], 2, 2) == -1
+
+
+def test_minimum_effort_path_normal():
+    assert minimum_effort_path([[1, 2, 2], [3, 8, 2], [5, 3, 5]]) == 2
+
+
+def test_minimum_effort_path_gentler_route():
+    assert minimum_effort_path([[1, 2, 3], [3, 8, 4], [5, 3, 5]]) == 1

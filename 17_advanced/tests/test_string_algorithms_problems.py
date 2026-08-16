@@ -1,6 +1,8 @@
 from problem_set.string_algorithms_problems import (
+    build_failure_table,
     longest_prefix,
     repeated_string_match,
+    repeated_substring_pattern,
     shortest_palindrome,
     str_str,
 )
@@ -52,3 +54,23 @@ def test_longest_prefix_full_repeat():
 
 def test_longest_prefix_none():
     assert longest_prefix("leetcode") == ""
+
+
+def test_build_failure_table_with_repeats():
+    assert build_failure_table("aabaaab") == [0, 1, 0, 1, 2, 2, 3]
+
+
+def test_build_failure_table_no_repeats():
+    assert build_failure_table("abc") == [0, 0, 0]
+
+
+def test_repeated_substring_pattern_true():
+    assert repeated_substring_pattern("abab") is True
+
+
+def test_repeated_substring_pattern_false():
+    assert repeated_substring_pattern("aba") is False
+
+
+def test_repeated_substring_pattern_longer():
+    assert repeated_substring_pattern("abcabcabcabc") is True

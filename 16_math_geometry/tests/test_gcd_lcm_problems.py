@@ -1,7 +1,10 @@
 from problem_set.gcd_lcm_problems import (
+    can_measure_water,
     common_factors,
+    find_gcd,
     fraction_to_decimal,
     gcd_of_strings,
+    smallest_even_multiple,
 )
 
 
@@ -51,3 +54,35 @@ def test_common_factors_coprime_ish():
 
 def test_common_factors_equal():
     assert common_factors(1, 1) == 1
+
+
+def test_smallest_even_multiple_odd():
+    assert smallest_even_multiple(5) == 10
+
+
+def test_smallest_even_multiple_even():
+    assert smallest_even_multiple(6) == 6
+
+
+def test_find_gcd_normal():
+    assert find_gcd([2, 5, 6, 9, 10]) == 2
+
+
+def test_find_gcd_coprime():
+    assert find_gcd([7, 5, 6, 8, 3]) == 1
+
+
+def test_find_gcd_all_equal():
+    assert find_gcd([3, 3]) == 3
+
+
+def test_can_measure_water_reachable():
+    assert can_measure_water(3, 5, 4) is True
+
+
+def test_can_measure_water_unreachable():
+    assert can_measure_water(2, 6, 5) is False
+
+
+def test_can_measure_water_uses_both_jugs_full():
+    assert can_measure_water(1, 2, 3) is True

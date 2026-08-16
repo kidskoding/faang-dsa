@@ -1,10 +1,21 @@
 from problem_set.modular_arithmetic_problems import (
+    add_strings,
     can_win_nim,
     convert_to_title,
+    count_primes,
+    int_to_roman,
     is_happy,
+    is_palindrome,
+    multiply,
     my_pow,
     my_sqrt,
+    nth_ugly_number,
+    num_squares,
+    plus_one,
+    rand10,
+    reverse,
     title_to_number,
+    trailing_zeroes,
 )
 
 
@@ -86,3 +97,131 @@ def test_convert_to_title_double_letter():
 
 def test_convert_to_title_z():
     assert convert_to_title(26) == "Z"
+
+
+def test_plus_one_no_carry():
+    assert plus_one([1, 2, 3]) == [1, 2, 4]
+
+
+def test_plus_one_single_carry():
+    assert plus_one([9]) == [1, 0]
+
+
+def test_plus_one_cascading_carry():
+    assert plus_one([9, 9]) == [1, 0, 0]
+
+
+def test_is_palindrome_true():
+    assert is_palindrome(121) is True
+
+
+def test_is_palindrome_negative():
+    assert is_palindrome(-121) is False
+
+
+def test_is_palindrome_trailing_zero():
+    assert is_palindrome(10) is False
+
+
+def test_add_strings_normal():
+    assert add_strings("11", "123") == "134"
+
+
+def test_add_strings_with_carry():
+    assert add_strings("456", "77") == "533"
+
+
+def test_add_strings_zeros():
+    assert add_strings("0", "0") == "0"
+
+
+def test_reverse_positive():
+    assert reverse(123) == 321
+
+
+def test_reverse_negative():
+    assert reverse(-123) == -321
+
+
+def test_reverse_trailing_zero():
+    assert reverse(120) == 21
+
+
+def test_reverse_overflow_returns_zero():
+    assert reverse(1534236469) == 0
+
+
+def test_count_primes_below_ten():
+    assert count_primes(10) == 4
+
+
+def test_count_primes_zero():
+    assert count_primes(0) == 0
+
+
+def test_count_primes_two():
+    assert count_primes(2) == 0
+
+
+def test_trailing_zeroes_none():
+    assert trailing_zeroes(3) == 0
+
+
+def test_trailing_zeroes_one():
+    assert trailing_zeroes(5) == 1
+
+
+def test_trailing_zeroes_many():
+    assert trailing_zeroes(30) == 7
+
+
+def test_multiply_single_digits():
+    assert multiply("2", "3") == "6"
+
+
+def test_multiply_multi_digit():
+    assert multiply("123", "456") == "56088"
+
+
+def test_multiply_by_zero():
+    assert multiply("0", "52") == "0"
+
+
+def test_int_to_roman_large():
+    assert int_to_roman(3749) == "MMMDCCXLIX"
+
+
+def test_int_to_roman_normal():
+    assert int_to_roman(58) == "LVIII"
+
+
+def test_int_to_roman_subtractive():
+    assert int_to_roman(1994) == "MCMXCIV"
+
+
+def test_nth_ugly_number_tenth():
+    assert nth_ugly_number(10) == 12
+
+
+def test_nth_ugly_number_first():
+    assert nth_ugly_number(1) == 1
+
+
+def test_num_squares_three_terms():
+    assert num_squares(12) == 3
+
+
+def test_num_squares_two_terms():
+    assert num_squares(13) == 2
+
+
+def test_num_squares_perfect_square():
+    assert num_squares(1) == 1
+
+
+def test_rand10_stays_in_range():
+    assert all(1 <= rand10() <= 10 for _ in range(200))
+
+
+def test_rand10_covers_the_range():
+    assert len({rand10() for _ in range(2000)}) == 10

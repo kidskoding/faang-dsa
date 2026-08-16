@@ -1,4 +1,6 @@
 from problem_set.mst_problems import (
+    distance_limited_paths_exist,
+    find_critical_and_pseudo_critical_edges,
     min_cost_connect_points,
     min_cost_connecting_cities,
     min_cost_to_supply_water,
@@ -44,3 +46,20 @@ def test_min_cost_to_supply_water_no_pipes_needed():
 
 def test_min_cost_to_supply_water_single_house():
     assert min_cost_to_supply_water(1, [5], []) == 5
+
+
+def test_find_critical_and_pseudo_critical_edges_normal():
+    edges = [[0, 1, 1], [1, 2, 1], [2, 3, 2], [0, 3, 2], [0, 4, 3], [3, 4, 3], [1, 4, 6]]
+    assert find_critical_and_pseudo_critical_edges(5, edges) == [[0, 1], [2, 3, 4, 5]]
+
+
+def test_find_critical_and_pseudo_critical_edges_all_equal():
+    edges = [[0, 1, 1], [1, 2, 1], [2, 3, 1], [0, 3, 1]]
+    assert find_critical_and_pseudo_critical_edges(4, edges) == [[], [0, 1, 2, 3]]
+
+
+def test_distance_limited_paths_exist_normal():
+    edge_list = [[0, 1, 2], [1, 2, 4], [2, 0, 8], [1, 0, 16]]
+    queries = [[0, 1, 2], [0, 2, 5]]
+
+    assert distance_limited_paths_exist(3, edge_list, queries) == [False, True]
