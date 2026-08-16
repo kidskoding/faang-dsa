@@ -3,6 +3,7 @@ from problem_set.subsets_combinations_problems import (
     combination_sum2,
     combination_sum3,
     combine,
+    count_vowel_strings,
     subsets,
     subsets_with_dup,
 )
@@ -62,3 +63,15 @@ def test_combination_sum3_normal():
 
 def test_combination_sum3_no_solution():
     assert combination_sum3(9, 1) == []
+
+
+def test_count_vowel_strings_length_one():
+    assert count_vowel_strings(1) == 5
+
+
+def test_count_vowel_strings_length_two():
+    assert count_vowel_strings(2) == 15
+
+
+def test_count_vowel_strings_long():
+    assert count_vowel_strings(33) == 66045

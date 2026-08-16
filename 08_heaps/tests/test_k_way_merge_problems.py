@@ -2,7 +2,10 @@ from problem_set.k_way_merge_problems import (
     ListNode,
     Twitter,
     employee_free_time,
+    k_smallest_pairs,
+    kth_smallest,
     merge_k_lists,
+    nth_super_ugly_number,
     smallest_range,
 )
 
@@ -88,3 +91,31 @@ def test_employee_free_time_no_gaps():
 def test_employee_free_time_single_employee():
     schedule = [[[1, 2], [4, 5], [7, 8]]]
     assert employee_free_time(schedule) == [[2, 4], [5, 7]]
+
+
+def test_k_smallest_pairs_normal():
+    assert k_smallest_pairs([1, 7, 11], [2, 4, 6], 3) == [[1, 2], [1, 4], [1, 6]]
+
+
+def test_k_smallest_pairs_with_duplicates():
+    assert k_smallest_pairs([1, 1, 2], [1, 2, 3], 2) == [[1, 1], [1, 1]]
+
+
+def test_k_smallest_pairs_empty_input():
+    assert k_smallest_pairs([], [1, 2], 3) == []
+
+
+def test_kth_smallest_normal():
+    assert kth_smallest([[1, 5, 9], [10, 11, 13], [12, 13, 15]], 8) == 13
+
+
+def test_kth_smallest_first():
+    assert kth_smallest([[1, 2], [3, 4]], 1) == 1
+
+
+def test_nth_super_ugly_number_normal():
+    assert nth_super_ugly_number(12, [2, 7, 13, 19]) == 32
+
+
+def test_nth_super_ugly_number_first_is_one():
+    assert nth_super_ugly_number(1, [2, 3, 5]) == 1

@@ -3,7 +3,9 @@ from problem_set.heap_basics_problems import (
     k_closest_points,
     kth_largest_element,
     last_stone_weight,
+    maximum_product,
     meeting_rooms_ii,
+    min_stone_sum,
 )
 
 
@@ -79,3 +81,19 @@ def test_meeting_rooms_ii_empty():
 
 def test_meeting_rooms_ii_single():
     assert meeting_rooms_ii([[1, 5]]) == 1
+
+
+def test_maximum_product_small():
+    assert maximum_product([0, 4], 5) == 20
+
+
+def test_maximum_product_spreads_increments():
+    assert maximum_product([6, 3, 3, 2], 2) == 216
+
+
+def test_min_stone_sum_two_operations():
+    assert min_stone_sum([5, 4, 9], 2) == 12
+
+
+def test_min_stone_sum_three_operations():
+    assert min_stone_sum([4, 3, 6, 7], 3) == 12

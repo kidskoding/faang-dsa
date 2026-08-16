@@ -8,6 +8,7 @@ from problem_set.topological_sort_problems import (
     find_order,
     get_ancestors,
     largest_path_value,
+    longest_increasing_path,
     minimum_time,
     num_of_minutes,
 )
@@ -131,3 +132,15 @@ def test_largest_path_value_normal_case():
 
 def test_largest_path_value_cycle_returns_negative_one():
     assert largest_path_value("a", [[0, 0]]) == -1
+
+
+def test_longest_increasing_path_normal():
+    assert longest_increasing_path([[9, 9, 4], [6, 6, 8], [2, 1, 1]]) == 4
+
+
+def test_longest_increasing_path_diagonal_not_allowed():
+    assert longest_increasing_path([[3, 4, 5], [3, 2, 6], [2, 2, 1]]) == 4
+
+
+def test_longest_increasing_path_single_cell():
+    assert longest_increasing_path([[1]]) == 1

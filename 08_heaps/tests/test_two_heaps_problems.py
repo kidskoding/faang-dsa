@@ -1,6 +1,8 @@
 from problem_set.two_heaps_problems import (
     MedianFinder,
+    assign_tasks,
     find_maximized_capital,
+    get_order,
     median_sliding_window,
 )
 
@@ -50,3 +52,19 @@ def test_median_sliding_window_size_one():
 def test_median_sliding_window_even_window():
     result = median_sliding_window([1, 2, 3, 4], 2)
     assert result == [1.5, 2.5, 3.5]
+
+
+def test_get_order_normal():
+    assert get_order([[1, 2], [2, 4], [3, 2], [4, 1]]) == [0, 2, 3, 1]
+
+
+def test_get_order_all_same_arrival():
+    assert get_order([[7, 10], [7, 12], [7, 5], [7, 4], [7, 2]]) == [4, 3, 2, 0, 1]
+
+
+def test_assign_tasks_normal():
+    assert assign_tasks([3, 3, 2], [1, 2, 3, 2, 1, 2]) == [2, 2, 0, 2, 1, 2]
+
+
+def test_assign_tasks_single_server():
+    assert assign_tasks([5], [2, 1, 2, 4, 5, 2, 1]) == [0, 0, 0, 0, 0, 0, 0]

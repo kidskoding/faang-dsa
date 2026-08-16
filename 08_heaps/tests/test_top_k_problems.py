@@ -1,4 +1,6 @@
 from problem_set.top_k_problems import (
+    find_least_num_of_unique_ints,
+    frequency_sort,
     least_interval,
     reorganize_string,
     top_k_frequent,
@@ -55,3 +57,34 @@ def test_reorganize_string_impossible():
 
 def test_reorganize_string_single_char():
     assert reorganize_string("a") == "a"
+
+
+def test_frequency_sort_keeps_the_same_letters():
+    result = frequency_sort("tree")
+
+    assert sorted(result) == sorted("tree")
+
+
+def test_frequency_sort_groups_each_letter_together():
+    result = frequency_sort("cccaaa")
+
+    assert sorted(result) == sorted("cccaaa")
+    assert len(set(result[i] for i in range(len(result)))) == 2
+    assert result[0] == result[1] == result[2]
+    assert result[3] == result[4] == result[5]
+
+
+def test_frequency_sort_orders_by_descending_count():
+    result = frequency_sort("Aabb")
+    counts = [result.count(ch) for ch in result]
+
+    assert sorted(result) == sorted("Aabb")
+    assert counts == sorted(counts, reverse=True)
+
+
+def test_find_least_num_of_unique_ints_removes_one():
+    assert find_least_num_of_unique_ints([5, 5, 4], 1) == 1
+
+
+def test_find_least_num_of_unique_ints_removes_three():
+    assert find_least_num_of_unique_ints([4, 3, 1, 1, 3, 3, 2], 3) == 2

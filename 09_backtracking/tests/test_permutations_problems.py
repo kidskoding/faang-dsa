@@ -1,4 +1,6 @@
 from problem_set.permutations_problems import (
+    get_permutation,
+    num_tile_possibilities,
     partition,
     permute,
     permute_unique,
@@ -57,3 +59,27 @@ def test_restore_ip_addresses_too_short():
 
 def test_restore_ip_addresses_all_zeros():
     assert restore_ip_addresses("0000") == ["0.0.0.0"]
+
+
+def test_get_permutation_third_of_three():
+    assert get_permutation(3, 3) == "213"
+
+
+def test_get_permutation_ninth_of_four():
+    assert get_permutation(4, 9) == "2314"
+
+
+def test_get_permutation_first():
+    assert get_permutation(3, 1) == "123"
+
+
+def test_num_tile_possibilities_with_repeat():
+    assert num_tile_possibilities("AAB") == 8
+
+
+def test_num_tile_possibilities_longer():
+    assert num_tile_possibilities("AAABBC") == 188
+
+
+def test_num_tile_possibilities_single_tile():
+    assert num_tile_possibilities("V") == 1

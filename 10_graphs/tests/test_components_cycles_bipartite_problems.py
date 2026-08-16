@@ -2,9 +2,12 @@ from problem_set.components_cycles_bipartite_problems import (
     accounts_merge,
     closest_meeting_node,
     count_components,
+    critical_connections,
+    find_circle_num,
     find_redundant_connection,
     find_redundant_directed_connection,
     find_smallest_set_of_vertices,
+    hit_bricks,
     is_bipartite,
     min_reorder,
     possible_bipartition,
@@ -128,3 +131,29 @@ def test_find_redundant_directed_connection_two_parents_in_cycle():
 
 def test_find_redundant_directed_connection_returns_last_candidate():
     assert find_redundant_directed_connection([[2, 1], [3, 1], [4, 2], [1, 4]]) == [2, 1]
+
+
+def test_find_circle_num_two_provinces():
+    assert find_circle_num([[1, 1, 0], [1, 1, 0], [0, 0, 1]]) == 2
+
+
+def test_find_circle_num_all_isolated():
+    assert find_circle_num([[1, 0, 0], [0, 1, 0], [0, 0, 1]]) == 3
+
+
+def test_critical_connections_single_bridge():
+    result = critical_connections(4, [[0, 1], [1, 2], [2, 0], [1, 3]])
+    assert sorted(sorted(edge) for edge in result) == [[1, 3]]
+
+
+def test_critical_connections_lone_edge():
+    result = critical_connections(2, [[0, 1]])
+    assert sorted(sorted(edge) for edge in result) == [[0, 1]]
+
+
+def test_hit_bricks_one_hit():
+    assert hit_bricks([[1, 0, 0, 0], [1, 1, 1, 0]], [[1, 0]]) == [2]
+
+
+def test_hit_bricks_nothing_falls():
+    assert hit_bricks([[1, 0, 0, 0], [1, 1, 0, 0]], [[1, 1], [1, 0]]) == [0, 0]
