@@ -17,10 +17,7 @@
 
 ## Problem Set
 
-[Sliding Window Problem Set](problem_set/SLIDING_WINDOW_PROBLEM_SET.md) — 38 problems, grouped into **Fixed Window**, **Variable Window**, **Frequency Window**, **Window Max/Min**. Each entry names the pattern it teaches and the stub function it solves, across 4 solution files in `problem_set/`.
-
-The workbook is the canonical list. It is not duplicated here, so the two
-cannot drift apart.
+Problem Set available [here](problem_set/SLIDING_WINDOW_PROBLEM_SET.md)
 
 ## Additional Notes
 

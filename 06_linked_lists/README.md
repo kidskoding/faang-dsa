@@ -18,10 +18,7 @@
 
 ## Problem Set
 
-[Linked List Problem Set](problem_set/LINKED_LIST_PROBLEM_SET.md) — 35 problems, grouped into **Traversal**, **Fast And Slow Pointers**, **Reversal**, **Merge And Split**, **Restructure**, **Hards And Extensions**. Each entry names the pattern it teaches and the stub function it solves, across 6 solution files in `problem_set/`.
-
-The workbook is the canonical list. It is not duplicated here, so the two
-cannot drift apart.
+Problem Set available [here](problem_set/LINKED_LIST_PROBLEM_SET.md)
 
 ## Additional Notes
 

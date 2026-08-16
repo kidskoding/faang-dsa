@@ -17,10 +17,7 @@
 
 ## Problem Set
 
-[Math and Geometry Problem Set](problem_set/MATH_GEOMETRY_PROBLEM_SET.md) — 41 problems, grouped into **Matrix**, **Modular And Digit Arithmetic**, **GCD And LCM**, **Geometry**. Each entry names the pattern it teaches and the stub function it solves, across 4 solution files in `problem_set/`.
-
-The workbook is the canonical list. It is not duplicated here, so the two
-cannot drift apart.
+Problem Set available [here](problem_set/MATH_GEOMETRY_PROBLEM_SET.md)
 
 ## Additional Notes
 

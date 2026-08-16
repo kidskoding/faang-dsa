@@ -26,10 +26,7 @@
 
 ## Problem Set
 
-[Advanced Problem Set](problem_set/ADVANCED_PROBLEM_SET.md) — 38 problems, grouped into **Union Find**, **Shortest Paths Extensions**, **Minimum Spanning Tree**, **Range Structures**, **String Algorithms**, **Divide And Conquer**, **Bitmask DP**, **Bloom Filters**. Each entry names the pattern it teaches and the stub function it solves, across 7 solution files in `problem_set/`.
-
-The workbook is the canonical list. It is not duplicated here, so the two
-cannot drift apart.
+Problem Set available [here](problem_set/ADVANCED_PROBLEM_SET.md)
 
 ## Additional Notes
 

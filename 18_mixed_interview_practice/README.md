@@ -16,15 +16,7 @@
 
 ## Problem Set
 
-[Mixed Interview Practice Problem Set](problem_set/MIXED_PROBLEM_SET.md) — 23
-problems, grouped into **Multi-Pattern Problems**. Each entry names the pattern it
-teaches and the stub function it solves, across 1 solution file in `problem_set/`.
-
-Unlike the other modules, these problems chain two or more patterns and so do not
-belong in any single technique module.
-
-The workbook is the canonical list. It is not duplicated here, so the two
-cannot drift apart.
+Problem Set available [here](problem_set/MIXED_PROBLEM_SET.md)
 
 ## Additional Notes
 

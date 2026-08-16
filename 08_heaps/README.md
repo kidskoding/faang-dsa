@@ -18,10 +18,7 @@
 
 ## Problem Set
 
-[Heaps Problem Set](problem_set/HEAPS_PROBLEM_SET.md) — 34 problems, grouped into **Heap Basics**, **Top-K**, **Two Heaps**, **K-Way Merge**, **Hards And Extensions**. Each entry names the pattern it teaches and the stub function it solves, across 5 solution files in `problem_set/`.
-
-The workbook is the canonical list. It is not duplicated here, so the two
-cannot drift apart.
+Problem Set available [here](problem_set/HEAPS_PROBLEM_SET.md)
 
 ## Additional Notes
 

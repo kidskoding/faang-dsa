@@ -20,10 +20,7 @@
 
 ## Problem Set
 
-[DP Problem Set](problem_set/DP_PROBLEM_SET.md) — 40 problems, grouped into **1D DP**, **2D Grid DP**, **Knapsack**, **Sequence DP**. Each entry names the pattern it teaches and the stub function it solves, across 4 solution files in `problem_set/`.
-
-The workbook is the canonical list. It is not duplicated here, so the two
-cannot drift apart.
+Problem Set available [here](problem_set/DP_PROBLEM_SET.md)
 
 ## Additional Notes
 

@@ -23,10 +23,7 @@
 
 ## Problem Set
 
-[Graph Problem Set](problem_set/GRAPH_PROBLEM_SET.md) — 72 problems, grouped into **Graph Basics**, **Grid DFS**, **Grid BFS**, **Components, Cycles, And Bipartite**, **Topological Sort**, **Implicit-State BFS**, **Weighted Shortest Paths**. Each entry names the pattern it teaches and the stub function it solves, across 7 solution files in `problem_set/`.
-
-The workbook is the canonical list. It is not duplicated here, so the two
-cannot drift apart.
+Problem Set available [here](problem_set/GRAPH_PROBLEM_SET.md)
 
 ## Additional Notes
 

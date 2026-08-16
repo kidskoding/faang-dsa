@@ -18,10 +18,7 @@
 
 ## Problem Set
 
-[Backtracking Problem Set](problem_set/BACKTRACKING_PROBLEM_SET.md) — 30 problems, grouped into **Backtracking Basics**, **Subsets And Combinations**, **Permutations**, **Grid Backtracking**. Each entry names the pattern it teaches and the stub function it solves, across 4 solution files in `problem_set/`.
-
-The workbook is the canonical list. It is not duplicated here, so the two
-cannot drift apart.
+Problem Set available [here](problem_set/BACKTRACKING_PROBLEM_SET.md)
 
 ## Additional Notes
 

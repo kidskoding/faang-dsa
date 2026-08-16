@@ -24,10 +24,7 @@
 
 ## Problem Set
 
-[Tree Problem Set](problem_set/TREE_PROBLEM_SET.md) — 57 problems, grouped into **Traversals**, **Recursive Shape**, **BFS Levels**, **Root-To-Leaf Paths**, **Binary Search Trees**, **Construction**. Each entry names the pattern it teaches and the stub function it solves, across 6 solution files in `problem_set/`.
-
-The workbook is the canonical list. It is not duplicated here, so the two
-cannot drift apart.
+Problem Set available [here](problem_set/TREE_PROBLEM_SET.md)
 
 ## Additional Notes
 

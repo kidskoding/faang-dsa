@@ -17,10 +17,7 @@
 
 ## Problem Set
 
-[Binary Search Problem Set](problem_set/BINARY_SEARCH_PROBLEM_SET.md) — 34 problems, grouped into **Exact-Match Search**, **Boundary Search**, **Rotated Array Search**, **Search On Answer**. Each entry names the pattern it teaches and the stub function it solves, across 4 solution files in `problem_set/`.
-
-The workbook is the canonical list. It is not duplicated here, so the two
-cannot drift apart.
+Problem Set available [here](problem_set/BINARY_SEARCH_PROBLEM_SET.md)
 
 ## Additional Notes
 

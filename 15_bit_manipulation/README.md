@@ -18,10 +18,7 @@
 
 ## Problem Set
 
-[Bit Manipulation Problem Set](problem_set/BIT_MANIPULATION_PROBLEM_SET.md) — 26 problems, grouped into **Bitwise Basics**, **Masks**, **XOR Patterns**, **Subset Masks and Bitmask DP**. Each entry names the pattern it teaches and the stub function it solves, across 4 solution files in `problem_set/`.
-
-The workbook is the canonical list. It is not duplicated here, so the two
-cannot drift apart.
+Problem Set available [here](problem_set/BIT_MANIPULATION_PROBLEM_SET.md)
 
 ## Additional Notes
 

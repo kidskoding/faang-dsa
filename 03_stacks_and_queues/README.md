@@ -15,10 +15,7 @@
 
 ## Problem Set
 
-[Stacks and Queues Problem Set](problem_set/STACKS_AND_QUEUES_PROBLEM_SET.md) — 35 problems, grouped into **Stack Fundamentals**, **Queue And Deque Design**, **Monotonic Stack**. Each entry names the pattern it teaches and the stub function it solves, across 3 solution files in `problem_set/`.
-
-The workbook is the canonical list. It is not duplicated here, so the two
-cannot drift apart.
+Problem Set available [here](problem_set/STACKS_AND_QUEUES_PROBLEM_SET.md)
 
 ## Additional Notes
 

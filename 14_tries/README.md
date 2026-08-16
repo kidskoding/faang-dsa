@@ -16,10 +16,7 @@
 
 ## Problem Set
 
-[Tries Problem Set](problem_set/TRIES_PROBLEM_SET.md) — 20 problems, grouped into **Trie Basics**, **Word Dictionary And Wildcard Search**, **Trie Plus DFS**. Each entry names the pattern it teaches and the stub function it solves, across 3 solution files in `problem_set/`.
-
-The workbook is the canonical list. It is not duplicated here, so the two
-cannot drift apart.
+Problem Set available [here](problem_set/TRIES_PROBLEM_SET.md)
 
 ## Additional Notes
 

@@ -17,10 +17,7 @@
 
 ## Problem Set
 
-[Intervals Problem Set](problem_set/INTERVALS_PROBLEM_SET.md) — 31 problems, grouped into **Interval Basics**, **Merge And Insert**, **Meeting Rooms And Scheduling**, **Sweep Line**. Each entry names the pattern it teaches and the stub function it solves, across 4 solution files in `problem_set/`.
-
-The workbook is the canonical list. It is not duplicated here, so the two
-cannot drift apart.
+Problem Set available [here](problem_set/INTERVALS_PROBLEM_SET.md)
 
 ## Additional Notes
 

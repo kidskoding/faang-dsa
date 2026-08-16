@@ -14,10 +14,7 @@
 
 ## Problem Set
 
-[Two Pointers Problem Set](problem_set/TWO_POINTERS_PROBLEM_SET.md) — 33 problems, grouped into **Opposite-End Pointers**, **Same-Direction Pointers**, **In-Place Mutation**. Each entry names the pattern it teaches and the stub function it solves, across 3 solution files in `problem_set/`.
-
-The workbook is the canonical list. It is not duplicated here, so the two
-cannot drift apart.
+Problem Set available [here](problem_set/TWO_POINTERS_PROBLEM_SET.md)
 
 ## Additional Notes
 
