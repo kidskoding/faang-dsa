@@ -89,32 +89,37 @@ middle; move whichever end the comparison rules out.
 - solves: `min_pair_sum`
 - Pattern: sort, then pair smallest with largest from opposite ends to flatten the max pair sum.
 
-### 13. [Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)
+### 13. [Squares Of A Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
+
+- solves: `sorted_squares`
+- Pattern: the largest square is always at one of the two ends; fill the result from the back.
+
+### 14. [Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)
 
 - solves: `find_closest_elements`
 - Pattern: shrink a window from both ends, dropping whichever end is farther from the target.
 
-### 14. [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/)
+### 15. [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/)
 
 - solves: `backspace_compare`
 - Pattern: scan both strings from the back, skipping characters consumed by backspaces before comparing.
 
-### 15. [Reverse Words In A String](https://leetcode.com/problems/reverse-words-in-a-string/)
+### 16. [Reverse Words In A String](https://leetcode.com/problems/reverse-words-in-a-string/)
 
 - solves: `reverse_words`
 - Pattern: reverse the whole string, then reverse each word span with opposite-end pointers.
 
-### 16. [3Sum Smaller](https://leetcode.com/problems/3sum-smaller/)
+### 17. [3Sum Smaller](https://leetcode.com/problems/3sum-smaller/)
 
 - solves: `three_sum_smaller`
 - Pattern: fix one value, then count all pairs at once when the opposite-end sum drops below the target.
 
-### 17. [3Sum With Multiplicity](https://leetcode.com/problems/3sum-with-multiplicity/)
+### 18. [3Sum With Multiplicity](https://leetcode.com/problems/3sum-with-multiplicity/)
 
 - solves: `three_sum_multi`
 - Pattern: fix one value and count opposite-end pairs, handling equal-value multiplicities with combinatorics.
 
-### 18. [Number Of Subsequences That Satisfy The Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/)
+### 19. [Number Of Subsequences That Satisfy The Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/)
 
 - solves: `num_subseq`
 - Pattern: sort, then use opposite-end pointers to count valid min/max windows via powers of two.
@@ -124,52 +129,52 @@ middle; move whichever end the comparison rules out.
 `same_direction_problems.py` — both pointers move the same way; a fast
 read pointer scans while a slow write pointer trails behind.
 
-### 19. [Remove Element](https://leetcode.com/problems/remove-element/)
+### 20. [Remove Element](https://leetcode.com/problems/remove-element/)
 
 - solves: `remove_element`
 - Pattern: `write` pointer only advances when `read` finds a value to keep.
 
-### 20. [Remove Duplicates From Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+### 21. [Remove Duplicates From Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 
 - solves: `remove_duplicates`
 - Pattern: `write` advances only when `nums[read]` differs from `nums[write - 1]`.
 
-### 21. [Move Zeroes](https://leetcode.com/problems/move-zeroes/)
+### 22. [Move Zeroes](https://leetcode.com/problems/move-zeroes/)
 
 - solves: `move_zeroes`
 - Pattern: same-direction compaction, then backfill the tail with zeroes.
 
-### 22. [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
+### 23. [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
 
 - solves: `find_duplicate`
 - Pattern: Floyd's cycle detection treating values as next-index pointers.
 
-### 23. [Partition Labels](https://leetcode.com/problems/partition-labels/)
+### 24. [Partition Labels](https://leetcode.com/problems/partition-labels/)
 
 - solves: `partition_labels`
 - Pattern: expand the current partition until the scan pointer reaches the last occurrence of every letter inside it.
 
-### 24. [Longest Mountain In Array](https://leetcode.com/problems/longest-mountain-in-array/)
+### 25. [Longest Mountain In Array](https://leetcode.com/problems/longest-mountain-in-array/)
 
 - solves: `longest_mountain`
 - Pattern: walk up then down from each peak, extending a base pointer to measure the widest mountain.
 
-### 25. [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/)
+### 26. [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/)
 
 - solves: `num_subarray_product_less_than_k`
 - Pattern: same-direction window that shrinks from the left whenever the running product hits the limit.
 
-### 26. [Number Of Subarrays With Bounded Maximum](https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/)
+### 27. [Number Of Subarrays With Bounded Maximum](https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/)
 
 - solves: `num_subarray_bounded_max`
 - Pattern: count subarrays whose max lands in range by tracking the last out-of-range index with two pointers.
 
-### 27. [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/)
+### 28. [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/)
 
 - solves: `interval_intersection`
 - Pattern: advance two pointers across both sorted lists, emitting the overlap and moving the one that ends first.
 
-### 28. [Subarrays With K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/)
+### 29. [Subarrays With K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/)
 
 - solves: `subarrays_with_k_distinct`
 - Pattern: exactly-K equals at-most-K minus at-most-(K-1), each computed with a same-direction window.
@@ -180,15 +185,10 @@ read pointer scans while a slow write pointer trails behind.
 three) pointers, often writing from the back to avoid clobbering unread
 values.
 
-### 29. [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
+### 30. [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 
 - solves: `merge`
 - Pattern: write from the back so unread values are never overwritten.
-
-### 30. [Squares Of A Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
-
-- solves: `sorted_squares`
-- Pattern: the largest square is always at one of the two ends; fill the result from the back.
 
 ### 31. [Sort Colors](https://leetcode.com/problems/sort-colors/)
 

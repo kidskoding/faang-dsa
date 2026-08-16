@@ -129,7 +129,7 @@ unused item.
 - solves: `num_tile_possibilities`
 - Pattern: count sequences from a multiset of tiles, using per-depth counts to skip duplicate letters.
 
-## Grid Backtracking
+## Grid And Hard Backtracking
 
 `grid_backtracking_problems.py` — DFS over grid cells and boards with
 path-specific visited state, plus the hard placement/partition follow-ups.

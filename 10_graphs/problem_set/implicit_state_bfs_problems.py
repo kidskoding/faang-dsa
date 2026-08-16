@@ -44,7 +44,7 @@ def shortest_path_all_keys(grid: list[str]) -> int:
 
 
 def num_buses_to_destination(routes: list[list[int]], source: int, target: int) -> int:
-    # Problem 55: Bus Routes
+    # Problem 56: Bus Routes
     # Key idea: BFS over route/state compression.
     # Time:
     # Space:
@@ -53,7 +53,7 @@ def num_buses_to_destination(routes: list[list[int]], source: int, target: int) 
 
 
 def shortest_path_length(graph: list[list[int]]) -> int:
-    # Problem 56: Shortest Path Visiting All Nodes
+    # Problem 57: Shortest Path Visiting All Nodes
     # Key idea: BFS over node plus visited-bitmask state.
     # Time:
     # Space:
@@ -62,8 +62,17 @@ def shortest_path_length(graph: list[list[int]]) -> int:
 
 
 def minimum_moves(grid: list[list[int]]) -> int:
-    # Problem 57: Minimum Moves To Reach Target With Rotations
+    # Problem 58: Minimum Moves To Reach Target With Rotations
     # Key idea: BFS over grid position plus orientation.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+def has_path(maze: list[list[int]], start: list[int], destination: list[int]) -> bool:
+    # Problem 55: The Maze
+    # Key idea: DFS/BFS with rolling movement until walls.
     # Time:
     # Space:
 

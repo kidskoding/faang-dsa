@@ -328,17 +328,22 @@ generated states (strings, board positions, bitmask combinations).
 - solves: `shortest_path_all_keys`
 - Pattern: BFS over position plus collected-key bitmask.
 
-### 55. [Bus Routes](https://leetcode.com/problems/bus-routes/)
+### 55. [The Maze](https://leetcode.com/problems/the-maze/)
+
+- solves: `has_path`
+- Pattern: DFS/BFS with rolling movement until walls.
+
+### 56. [Bus Routes](https://leetcode.com/problems/bus-routes/)
 
 - solves: `num_buses_to_destination`
 - Pattern: BFS over route/state compression.
 
-### 56. [Shortest Path Visiting All Nodes](https://leetcode.com/problems/shortest-path-visiting-all-nodes/)
+### 57. [Shortest Path Visiting All Nodes](https://leetcode.com/problems/shortest-path-visiting-all-nodes/)
 
 - solves: `shortest_path_length`
 - Pattern: BFS over node plus visited-bitmask state.
 
-### 57. [Minimum Moves To Reach Target With Rotations](https://leetcode.com/problems/minimum-moves-to-reach-target-with-rotations/)
+### 58. [Minimum Moves To Reach Target With Rotations](https://leetcode.com/problems/minimum-moves-to-reach-target-with-rotations/)
 
 - solves: `minimum_moves`
 - Pattern: BFS over grid position plus orientation.
@@ -348,35 +353,30 @@ generated states (strings, board positions, bitmask combinations).
 `weighted_shortest_paths_problems.py` — Dijkstra, 0-1 BFS, and
 state-augmented shortest paths over weighted graphs and grids.
 
-### 58. [Evaluate Division](https://leetcode.com/problems/evaluate-division/)
+### 59. [Evaluate Division](https://leetcode.com/problems/evaluate-division/)
 
 - solves: `calc_equation`
 - Pattern: weighted graph traversal.
 
-### 59. [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+### 60. [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
 
 - solves: `network_delay_time`
 - Pattern: shortest paths in a weighted directed graph.
 
-### 60. [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
+### 61. [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
 
 - solves: `find_cheapest_price`
 - Pattern: shortest paths with an extra stop-count state.
 
-### 61. [Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)
+### 62. [Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)
 
 - solves: `minimum_effort_path`
 - Pattern: shortest path where path cost is the maximum edge effort.
 
-### 62. [Path With Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability/)
+### 63. [Path With Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability/)
 
 - solves: `max_probability`
 - Pattern: Dijkstra-style traversal maximizing probability.
-
-### 63. [The Maze](https://leetcode.com/problems/the-maze/)
-
-- solves: `has_path`
-- Pattern: DFS/BFS with rolling movement until walls.
 
 ### 64. [The Maze II](https://leetcode.com/problems/the-maze-ii/)
 
@@ -412,8 +412,3 @@ state-augmented shortest paths over weighted graphs and grids.
 
 - solves: `second_minimum_time`
 - Pattern: track first and second shortest arrival times.
-
-### 71. [Min Cost To Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
-
-- solves: `min_cost_connect_points`
-- Pattern: minimum spanning tree over complete graph distances.

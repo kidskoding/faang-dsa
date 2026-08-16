@@ -231,36 +231,25 @@ interval overlap, reduced slopes, and area sweeps.
 - solves: `k_closest`
 - Pattern: keep the k smallest squared distances with a heap or quickselect.
 
-### 36. [Basic Calculator](https://leetcode.com/problems/basic-calculator/)
-
-- solves: `calculate`
-- Pattern: evaluate with a running sign and a stack for parenthesized
-  subexpressions.
-
-### 37. [Self Crossing](https://leetcode.com/problems/self-crossing/)
+### 36. [Self Crossing](https://leetcode.com/problems/self-crossing/)
 
 - solves: `is_self_crossing`
 - Pattern: compare each move against the prior few segments for the three
   crossing cases.
 
-### 38. [Erect the Fence](https://leetcode.com/problems/erect-the-fence/)
+### 37. [Erect the Fence](https://leetcode.com/problems/erect-the-fence/)
 
 - solves: `outer_trees`
 - Pattern: build the convex hull (Andrew's monotone chain) via cross-product
   turns.
 
-### 39. [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
-
-- solves: `get_skyline`
-- Pattern: sweep building edges and track the current max height with a heap.
-
-### 40. [Perfect Rectangle](https://leetcode.com/problems/perfect-rectangle/)
+### 38. [Perfect Rectangle](https://leetcode.com/problems/perfect-rectangle/)
 
 - solves: `is_rectangle_cover`
 - Pattern: check total area equals the bounding box and every interior
   corner cancels.
 
-### 41. [Rectangle Area II](https://leetcode.com/problems/rectangle-area-ii/)
+### 39. [Rectangle Area II](https://leetcode.com/problems/rectangle-area-ii/)
 
 - solves: `rectangle_area`
 - Pattern: coordinate-compress and sweep a line, summing active covered

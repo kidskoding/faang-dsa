@@ -61,17 +61,8 @@ def k_closest(points: list[list[int]], k: int) -> list[list[int]]:
     raise NotImplementedError
 
 
-def calculate(s: str) -> int:
-    # Problem 36: Basic Calculator
-    # Key idea: evaluate with a running sign and a stack for parenthesized subexpressions.
-    # Time:
-    # Space:
-
-    raise NotImplementedError
-
-
 def is_self_crossing(distance: list[int]) -> bool:
-    # Problem 37: Self Crossing
+    # Problem 36: Self Crossing
     # Key idea: compare each move against the prior few segments for the three crossing cases.
     # Time:
     # Space:
@@ -80,7 +71,7 @@ def is_self_crossing(distance: list[int]) -> bool:
 
 
 def outer_trees(trees: list[list[int]]) -> list[list[int]]:
-    # Problem 38: Erect the Fence
+    # Problem 37: Erect the Fence
     # Key idea: build the convex hull (Andrew's monotone chain) via cross-product turns.
     # Time:
     # Space:
@@ -88,17 +79,8 @@ def outer_trees(trees: list[list[int]]) -> list[list[int]]:
     raise NotImplementedError
 
 
-def get_skyline(buildings: list[list[int]]) -> list[list[int]]:
-    # Problem 39: The Skyline Problem
-    # Key idea: sweep building edges and track the current max height with a heap.
-    # Time:
-    # Space:
-
-    raise NotImplementedError
-
-
 def is_rectangle_cover(rectangles: list[list[int]]) -> bool:
-    # Problem 40: Perfect Rectangle
+    # Problem 38: Perfect Rectangle
     # Key idea: check total area equals the bounding box and every interior corner cancels.
     # Time:
     # Space:
@@ -107,7 +89,7 @@ def is_rectangle_cover(rectangles: list[list[int]]) -> bool:
 
 
 def rectangle_area(rectangles: list[list[int]]) -> int:
-    # Problem 41: Rectangle Area II
+    # Problem 39: Rectangle Area II
     # Key idea: coordinate-compress and sweep a line, summing active covered width.
     # Time:
     # Space:

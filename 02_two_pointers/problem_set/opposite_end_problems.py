@@ -107,7 +107,7 @@ def min_pair_sum(nums: list[int]) -> int:
 
 
 def find_closest_elements(arr: list[int], k: int, x: int) -> list[int]:
-    # Problem 13: Find K Closest Elements
+    # Problem 14: Find K Closest Elements
     # Key idea: shrink a window from both ends, dropping whichever end is farther from the target.
     # Time:
     # Space:
@@ -116,7 +116,7 @@ def find_closest_elements(arr: list[int], k: int, x: int) -> list[int]:
 
 
 def backspace_compare(s: str, t: str) -> bool:
-    # Problem 14: Backspace String Compare
+    # Problem 15: Backspace String Compare
     # Key idea: scan both strings from the back, skipping characters consumed by backspaces before comparing.
     # Time:
     # Space:
@@ -125,7 +125,7 @@ def backspace_compare(s: str, t: str) -> bool:
 
 
 def reverse_words(s: str) -> str:
-    # Problem 15: Reverse Words In A String
+    # Problem 16: Reverse Words In A String
     # Key idea: reverse the whole string, then reverse each word span with opposite-end pointers.
     # Time:
     # Space:
@@ -134,7 +134,7 @@ def reverse_words(s: str) -> str:
 
 
 def three_sum_smaller(nums: list[int], target: int) -> int:
-    # Problem 16: 3Sum Smaller
+    # Problem 17: 3Sum Smaller
     # Key idea: fix one value, then count all pairs at once when the opposite-end sum drops below the target.
     # Time:
     # Space:
@@ -143,7 +143,7 @@ def three_sum_smaller(nums: list[int], target: int) -> int:
 
 
 def three_sum_multi(arr: list[int], target: int) -> int:
-    # Problem 17: 3Sum With Multiplicity
+    # Problem 18: 3Sum With Multiplicity
     # Key idea: fix one value and count opposite-end pairs, handling equal-value multiplicities with combinatorics.
     # Time:
     # Space:
@@ -152,8 +152,17 @@ def three_sum_multi(arr: list[int], target: int) -> int:
 
 
 def num_subseq(nums: list[int], target: int) -> int:
-    # Problem 18: Number Of Subsequences That Satisfy The Given Sum Condition
+    # Problem 19: Number Of Subsequences That Satisfy The Given Sum Condition
     # Key idea: sort, then use opposite-end pointers to count valid min/max windows via powers of two.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+def sorted_squares(nums: list[int]) -> list[int]:
+    # Problem 13: Squares Of A Sorted Array
+    # Key idea: the largest square is always at one of the two ends; fill the result from the back.
     # Time:
     # Space:
 

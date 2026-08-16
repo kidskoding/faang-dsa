@@ -1,4 +1,4 @@
-from problem_set.in_place_mutation_problems import merge, sort_colors, sorted_squares
+from problem_set.in_place_mutation_problems import merge, sort_colors
 
 
 def test_merge_both_empty():
@@ -27,22 +27,6 @@ def test_merge_normal():
     nums2 = [2, 5, 6]
     merge(nums1, 3, nums2, 3)
     assert nums1 == [1, 2, 2, 3, 5, 6]
-
-
-def test_sorted_squares_empty():
-    assert sorted_squares([]) == []
-
-
-def test_sorted_squares_single():
-    assert sorted_squares([3]) == [9]
-
-
-def test_sorted_squares_negatives_and_positives():
-    assert sorted_squares([-4, -1, 0, 3, 10]) == [0, 1, 9, 16, 100]
-
-
-def test_sorted_squares_all_negative():
-    assert sorted_squares([-7, -3, -1]) == [1, 9, 49]
 
 
 def test_sort_colors_empty():

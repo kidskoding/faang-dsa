@@ -2,7 +2,6 @@ from problem_set.weighted_shortest_paths_problems import (
     calc_equation,
     find_cheapest_price,
     find_the_city,
-    has_path,
     max_probability,
     min_cost,
     minimum_cost,
@@ -70,30 +69,6 @@ def test_max_probability_normal_case():
 
 def test_max_probability_no_path():
     assert max_probability(3, [[0, 1]], [0.5], 0, 2) == 0.0
-
-
-def test_has_path_true():
-    maze = [
-        [0, 0, 1, 0, 0],
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 1, 0],
-        [1, 1, 0, 1, 1],
-        [0, 0, 0, 0, 0],
-    ]
-
-    assert has_path(maze, [0, 4], [4, 4]) is True
-
-
-def test_has_path_false():
-    maze = [
-        [0, 0, 1, 0, 0],
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 1, 0],
-        [1, 1, 0, 1, 1],
-        [0, 0, 0, 0, 0],
-    ]
-
-    assert has_path(maze, [0, 4], [3, 2]) is False
 
 
 def test_shortest_distance_normal_case():

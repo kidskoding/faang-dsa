@@ -159,7 +159,7 @@ and minimum-jumps variants share the same greedy reach rule.
 - solves: `minimum_jumps`
 - Pattern: BFS over positions with a bounded reachable range and a no-two-consecutive-backward-jumps constraint.
 
-## Interval Greedy
+## Sorting-Based Greedy
 
 `interval_greedy_problems.py` — sort by an endpoint (or by frequency) then
 greedily commit interval by interval, keeping the earliest-ending or

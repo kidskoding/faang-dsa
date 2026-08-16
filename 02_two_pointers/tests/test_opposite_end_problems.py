@@ -4,6 +4,7 @@ from problem_set.opposite_end_problems import (
     max_area,
     num_rescue_boats,
     reverse_string,
+    sorted_squares,
     three_sum,
     three_sum_closest,
     trap,
@@ -123,3 +124,19 @@ def test_four_sum_normal():
     result = sorted(sorted(quad) for quad in four_sum([1, 0, -1, 0, -2, 2], 0))
     expected = sorted(sorted(quad) for quad in [[-2, -1, 1, 2], [-2, 0, 0, 2], [-1, 0, 0, 1]])
     assert result == expected
+
+
+def test_sorted_squares_empty():
+    assert sorted_squares([]) == []
+
+
+def test_sorted_squares_single():
+    assert sorted_squares([3]) == [9]
+
+
+def test_sorted_squares_negatives_and_positives():
+    assert sorted_squares([-4, -1, 0, 3, 10]) == [0, 1, 9, 16, 100]
+
+
+def test_sorted_squares_all_negative():
+    assert sorted_squares([-7, -3, -1]) == [1, 9, 49]

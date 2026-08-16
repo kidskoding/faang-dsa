@@ -3,7 +3,7 @@ def calc_equation(
     values: list[float],
     queries: list[list[str]],
 ) -> list[float]:
-    # Problem 58: Evaluate Division
+    # Problem 59: Evaluate Division
     # Key idea: weighted graph traversal.
     # Time:
     # Space:
@@ -12,7 +12,7 @@ def calc_equation(
 
 
 def network_delay_time(times: list[list[int]], n: int, k: int) -> int:
-    # Problem 59: Network Delay Time
+    # Problem 60: Network Delay Time
     # Key idea: shortest paths in a weighted directed graph.
     # Time:
     # Space:
@@ -21,7 +21,7 @@ def network_delay_time(times: list[list[int]], n: int, k: int) -> int:
 
 
 def find_cheapest_price(n: int, flights: list[list[int]], src: int, dst: int, k: int) -> int:
-    # Problem 60: Cheapest Flights Within K Stops
+    # Problem 61: Cheapest Flights Within K Stops
     # Key idea: shortest paths with an extra stop-count state.
     # Time:
     # Space:
@@ -30,7 +30,7 @@ def find_cheapest_price(n: int, flights: list[list[int]], src: int, dst: int, k:
 
 
 def minimum_effort_path(heights: list[list[int]]) -> int:
-    # Problem 61: Path With Minimum Effort
+    # Problem 62: Path With Minimum Effort
     # Key idea: shortest path where path cost is the maximum edge effort.
     # Time:
     # Space:
@@ -45,17 +45,8 @@ def max_probability(
     start: int,
     end: int,
 ) -> float:
-    # Problem 62: Path With Maximum Probability
+    # Problem 63: Path With Maximum Probability
     # Key idea: Dijkstra-style traversal maximizing probability.
-    # Time:
-    # Space:
-
-    raise NotImplementedError
-
-
-def has_path(maze: list[list[int]], start: list[int], destination: list[int]) -> bool:
-    # Problem 63: The Maze
-    # Key idea: DFS/BFS with rolling movement until walls.
     # Time:
     # Space:
 
@@ -119,15 +110,6 @@ def minimum_cost(max_time: int, edges: list[list[int]], passing_fees: list[int])
 def second_minimum_time(n: int, edges: list[list[int]], time: int, change: int) -> int:
     # Problem 70: Second Minimum Time To Reach Destination
     # Key idea: track first and second shortest arrival times.
-    # Time:
-    # Space:
-
-    raise NotImplementedError
-
-
-def min_cost_connect_points(points: list[list[int]]) -> int:
-    # Problem 71: Min Cost To Connect All Points
-    # Key idea: minimum spanning tree over complete graph distances.
     # Time:
     # Space:
 

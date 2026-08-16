@@ -1,5 +1,5 @@
 def remove_element(nums: list[int], val: int) -> int:
-    # Problem 19: Remove Element
+    # Problem 20: Remove Element
     # Key idea: write pointer only advances when read finds a value to keep.
     # Time:
     # Space:
@@ -8,7 +8,7 @@ def remove_element(nums: list[int], val: int) -> int:
 
 
 def remove_duplicates(nums: list[int]) -> int:
-    # Problem 20: Remove Duplicates From Sorted Array
+    # Problem 21: Remove Duplicates From Sorted Array
     # Key idea: write advances only when nums[read] differs from nums[write - 1].
     # Time:
     # Space:
@@ -17,7 +17,7 @@ def remove_duplicates(nums: list[int]) -> int:
 
 
 def move_zeroes(nums: list[int]) -> None:
-    # Problem 21: Move Zeroes
+    # Problem 22: Move Zeroes
     # Key idea: same-direction compaction, then backfill the tail with zeroes.
     # Time:
     # Space:
@@ -26,7 +26,7 @@ def move_zeroes(nums: list[int]) -> None:
 
 
 def find_duplicate(nums: list[int]) -> int:
-    # Problem 22: Find the Duplicate Number
+    # Problem 23: Find the Duplicate Number
     # Key idea: Floyd's cycle detection treating values as next-index pointers.
     # Time:
     # Space:
@@ -35,7 +35,7 @@ def find_duplicate(nums: list[int]) -> int:
 
 
 def partition_labels(s: str) -> list[int]:
-    # Problem 23: Partition Labels
+    # Problem 24: Partition Labels
     # Key idea: expand the current partition until the scan pointer reaches the last occurrence of every letter inside it.
     # Time:
     # Space:
@@ -44,7 +44,7 @@ def partition_labels(s: str) -> list[int]:
 
 
 def longest_mountain(arr: list[int]) -> int:
-    # Problem 24: Longest Mountain In Array
+    # Problem 25: Longest Mountain In Array
     # Key idea: walk up then down from each peak, extending a base pointer to measure the widest mountain.
     # Time:
     # Space:
@@ -53,7 +53,7 @@ def longest_mountain(arr: list[int]) -> int:
 
 
 def num_subarray_product_less_than_k(nums: list[int], k: int) -> int:
-    # Problem 25: Subarray Product Less Than K
+    # Problem 26: Subarray Product Less Than K
     # Key idea: same-direction window that shrinks from the left whenever the running product hits the limit.
     # Time:
     # Space:
@@ -62,7 +62,7 @@ def num_subarray_product_less_than_k(nums: list[int], k: int) -> int:
 
 
 def num_subarray_bounded_max(nums: list[int], left: int, right: int) -> int:
-    # Problem 26: Number Of Subarrays With Bounded Maximum
+    # Problem 27: Number Of Subarrays With Bounded Maximum
     # Key idea: count subarrays whose max lands in range by tracking the last out-of-range index with two pointers.
     # Time:
     # Space:
@@ -71,7 +71,7 @@ def num_subarray_bounded_max(nums: list[int], left: int, right: int) -> int:
 
 
 def interval_intersection(first_list: list[list[int]], second_list: list[list[int]]) -> list[list[int]]:
-    # Problem 27: Interval List Intersections
+    # Problem 28: Interval List Intersections
     # Key idea: advance two pointers across both sorted lists, emitting the overlap and moving the one that ends first.
     # Time:
     # Space:
@@ -80,7 +80,7 @@ def interval_intersection(first_list: list[list[int]], second_list: list[list[in
 
 
 def subarrays_with_k_distinct(nums: list[int], k: int) -> int:
-    # Problem 28: Subarrays With K Different Integers
+    # Problem 29: Subarrays With K Different Integers
     # Key idea: exactly-K equals at-most-K minus at-most-(K-1), each computed with a same-direction window.
     # Time:
     # Space:

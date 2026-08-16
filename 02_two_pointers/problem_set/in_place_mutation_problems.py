@@ -1,15 +1,6 @@
 def merge(nums1: list[int], m: int, nums2: list[int], n: int) -> None:
-    # Problem 29: Merge Sorted Array
+    # Problem 30: Merge Sorted Array
     # Key idea: write from the back so unread values are never overwritten.
-    # Time:
-    # Space:
-
-    raise NotImplementedError
-
-
-def sorted_squares(nums: list[int]) -> list[int]:
-    # Problem 30: Squares Of A Sorted Array
-    # Key idea: the largest square is always at one of the two ends; fill the result from the back.
     # Time:
     # Space:
 

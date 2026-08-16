@@ -1,4 +1,5 @@
 from problem_set.implicit_state_bfs_problems import (
+    has_path,
     ladder_length,
     min_mutation,
     minimum_moves,
@@ -104,3 +105,27 @@ def test_minimum_moves_normal_case():
 
 def test_minimum_moves_smallest_grid():
     assert minimum_moves([[0, 0], [0, 0]]) == 1
+
+
+def test_has_path_true():
+    maze = [
+        [0, 0, 1, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 1, 0],
+        [1, 1, 0, 1, 1],
+        [0, 0, 0, 0, 0],
+    ]
+
+    assert has_path(maze, [0, 4], [4, 4]) is True
+
+
+def test_has_path_false():
+    maze = [
+        [0, 0, 1, 0, 0],
+        [0, 0, 0, 0, 0],
+        [0, 0, 0, 1, 0],
+        [1, 1, 0, 1, 1],
+        [0, 0, 0, 0, 0],
+    ]
+
+    assert has_path(maze, [0, 4], [3, 2]) is False
