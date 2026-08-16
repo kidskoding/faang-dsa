@@ -256,3 +256,28 @@ item at a time.
 
 - solves: `number_ways`
 - Pattern: assign hats (not people) one at a time; `dp[hat][mask]` counts ways to cover the people bitmask.
+
+## Bloom Filters
+
+No stub file, and no numbered problems, because **LeetCode has no Bloom filter
+problem**. This is the one topic in the curriculum that is not drilled, and the
+absence is deliberate rather than an oversight.
+
+Bloom filters show up as a **design-round question** or as a follow-up when a hash
+set stops fitting in memory, which is a conversation rather than a 40-minute
+coding problem. Read [the topic](../notes/08_bloom_filters.md) and practise it by
+answering these out loud instead:
+
+- Size a filter for 100 million keys at a 1% false positive rate. How many bits,
+  how many hash functions, and how do you justify the formula?
+- Why can a Bloom filter never return a false negative, and why does that
+  one-sided error make it safe in front of a database?
+- A colleague proposes deleting a key by clearing its bits. What breaks, and what
+  variant fixes it?
+- You have two filters built over different shards with the same `m` and `k`. How
+  do you merge them, and why does that work?
+
+The closest LeetCode problems are [Design HashSet](https://leetcode.com/problems/design-hashset/)
+and [Design HashMap](https://leetcode.com/problems/design-hashmap/), which drill
+hashing and collision handling but not probabilistic membership. Both already
+appear in `01_arrays_and_hashing`.

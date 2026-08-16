@@ -226,67 +226,80 @@ cycles, 2-color graphs, and reason about directed edge orientation.
 - solves: `hit_bricks`
 - Pattern: reverse process with union-find connectivity restoration.
 
+### 37. [Redundant Connection II](https://leetcode.com/problems/redundant-connection-ii/)
+
+- solves: (todo)
+- Pattern: directed version of cycle removal; a node with two parents and a cycle
+  are separate cases, so find the candidate edges first and test which removal
+  leaves a valid rooted tree.
+
+### 38. [Count Subtrees With Max Distance Between Cities](https://leetcode.com/problems/count-subtrees-with-max-distance-between-cities/)
+
+- solves: (todo)
+- Pattern: enumerate every subset of nodes as a bitmask, keep the connected ones,
+  and take the diameter of each induced subtree.
+
 ## Topological Sort
 
 `topological_sort_problems.py` — order and reason about directed acyclic
 graphs via Kahn's algorithm, cycle detection, and DAG DP.
 
-### 37. [Course Schedule](https://leetcode.com/problems/course-schedule/)
+### 39. [Course Schedule](https://leetcode.com/problems/course-schedule/)
 
 - solves: `can_finish`
 - Pattern: detect cycles in a directed dependency graph.
 
-### 38. [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
+### 40. [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
 
 - solves: `find_order`
 - Pattern: return a topological ordering.
 
-### 39. [All Paths From Source To Target](https://leetcode.com/problems/all-paths-from-source-to-target/)
+### 41. [All Paths From Source To Target](https://leetcode.com/problems/all-paths-from-source-to-target/)
 
 - solves: `all_paths_source_target`
 - Pattern: backtrack through a DAG.
 
-### 40. [Find Eventual Safe States](https://leetcode.com/problems/find-eventual-safe-states/)
+### 42. [Find Eventual Safe States](https://leetcode.com/problems/find-eventual-safe-states/)
 
 - solves: `eventual_safe_nodes`
 - Pattern: detect nodes that cannot reach a cycle.
 
-### 41. [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/)
+### 43. [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/)
 
 - solves: `find_min_height_trees`
 - Pattern: peel leaves to find tree centers.
 
-### 42. [Time Needed To Inform All Employees](https://leetcode.com/problems/time-needed-to-inform-all-employees/)
+### 44. [Time Needed To Inform All Employees](https://leetcode.com/problems/time-needed-to-inform-all-employees/)
 
 - solves: `num_of_minutes`
 - Pattern: DFS/BFS over a management tree.
 
-### 43. [Course Schedule IV](https://leetcode.com/problems/course-schedule-iv/)
+### 45. [Course Schedule IV](https://leetcode.com/problems/course-schedule-iv/)
 
 - solves: `check_if_prerequisite`
 - Pattern: transitive prerequisite reachability.
 
-### 44. [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)
+### 46. [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)
 
 - solves: `find_itinerary`
 - Pattern: graph traversal with lexical ordering constraints.
 
-### 45. [All Ancestors Of A Node In A Directed Acyclic Graph](https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/)
+### 47. [All Ancestors Of A Node In A Directed Acyclic Graph](https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/)
 
 - solves: `get_ancestors`
 - Pattern: propagate ancestor sets through topological order.
 
-### 46. [Parallel Courses III](https://leetcode.com/problems/parallel-courses-iii/)
+### 48. [Parallel Courses III](https://leetcode.com/problems/parallel-courses-iii/)
 
 - solves: `minimum_time`
 - Pattern: longest path in a DAG.
 
-### 47. [Largest Color Value In A Directed Graph](https://leetcode.com/problems/largest-color-value-in-a-directed-graph/)
+### 49. [Largest Color Value In A Directed Graph](https://leetcode.com/problems/largest-color-value-in-a-directed-graph/)
 
 - solves: `largest_path_value`
 - Pattern: topological DP with cycle detection.
 
-### 48. [Longest Increasing Path In A Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
+### 50. [Longest Increasing Path In A Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
 
 - solves: `longest_increasing_path`
 - Pattern: memoized DFS on a directed acyclic grid graph.
@@ -296,42 +309,42 @@ graphs via Kahn's algorithm, cycle detection, and DAG DP.
 `implicit_state_bfs_problems.py` — BFS shortest paths where nodes are
 generated states (strings, board positions, bitmask combinations).
 
-### 49. [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/)
+### 51. [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/)
 
 - solves: `min_mutation`
 - Pattern: BFS over generated string states.
 
-### 50. [Open The Lock](https://leetcode.com/problems/open-the-lock/)
+### 52. [Open The Lock](https://leetcode.com/problems/open-the-lock/)
 
 - solves: `open_lock`
 - Pattern: BFS over generated states.
 
-### 51. [Word Ladder](https://leetcode.com/problems/word-ladder/)
+### 53. [Word Ladder](https://leetcode.com/problems/word-ladder/)
 
 - solves: `ladder_length`
 - Pattern: BFS shortest path in an implicit graph.
 
-### 52. [Snakes And Ladders](https://leetcode.com/problems/snakes-and-ladders/)
+### 54. [Snakes And Ladders](https://leetcode.com/problems/snakes-and-ladders/)
 
 - solves: `snakes_and_ladders`
 - Pattern: BFS over board positions with transitions.
 
-### 53. [Shortest Path To Get All Keys](https://leetcode.com/problems/shortest-path-to-get-all-keys/)
+### 55. [Shortest Path To Get All Keys](https://leetcode.com/problems/shortest-path-to-get-all-keys/)
 
 - solves: `shortest_path_all_keys`
 - Pattern: BFS over position plus collected-key bitmask.
 
-### 54. [Bus Routes](https://leetcode.com/problems/bus-routes/)
+### 56. [Bus Routes](https://leetcode.com/problems/bus-routes/)
 
 - solves: `num_buses_to_destination`
 - Pattern: BFS over route/state compression.
 
-### 55. [Shortest Path Visiting All Nodes](https://leetcode.com/problems/shortest-path-visiting-all-nodes/)
+### 57. [Shortest Path Visiting All Nodes](https://leetcode.com/problems/shortest-path-visiting-all-nodes/)
 
 - solves: `shortest_path_length`
 - Pattern: BFS over node plus visited-bitmask state.
 
-### 56. [Minimum Moves To Reach Target With Rotations](https://leetcode.com/problems/minimum-moves-to-reach-target-with-rotations/)
+### 58. [Minimum Moves To Reach Target With Rotations](https://leetcode.com/problems/minimum-moves-to-reach-target-with-rotations/)
 
 - solves: `minimum_moves`
 - Pattern: BFS over grid position plus orientation.
@@ -341,72 +354,72 @@ generated states (strings, board positions, bitmask combinations).
 `weighted_shortest_paths_problems.py` — Dijkstra, 0-1 BFS, and
 state-augmented shortest paths over weighted graphs and grids.
 
-### 57. [Evaluate Division](https://leetcode.com/problems/evaluate-division/)
+### 59. [Evaluate Division](https://leetcode.com/problems/evaluate-division/)
 
 - solves: `calc_equation`
 - Pattern: weighted graph traversal.
 
-### 58. [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+### 60. [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
 
 - solves: `network_delay_time`
 - Pattern: shortest paths in a weighted directed graph.
 
-### 59. [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
+### 61. [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
 
 - solves: `find_cheapest_price`
 - Pattern: shortest paths with an extra stop-count state.
 
-### 60. [Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)
+### 62. [Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)
 
 - solves: `minimum_effort_path`
 - Pattern: shortest path where path cost is the maximum edge effort.
 
-### 61. [Path With Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability/)
+### 63. [Path With Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability/)
 
 - solves: `max_probability`
 - Pattern: Dijkstra-style traversal maximizing probability.
 
-### 62. [The Maze](https://leetcode.com/problems/the-maze/)
+### 64. [The Maze](https://leetcode.com/problems/the-maze/)
 
 - solves: `has_path`
 - Pattern: DFS/BFS with rolling movement until walls.
 
-### 63. [The Maze II](https://leetcode.com/problems/the-maze-ii/)
+### 65. [The Maze II](https://leetcode.com/problems/the-maze-ii/)
 
 - solves: `shortest_distance`
 - Pattern: Dijkstra over rolling-movement distances.
 
-### 64. [Find The City With The Smallest Number Of Neighbors At A Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/)
+### 66. [Find The City With The Smallest Number Of Neighbors At A Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/)
 
 - solves: `find_the_city`
 - Pattern: all-pairs or repeated shortest paths.
 
-### 65. [Minimum Obstacle Removal To Reach Corner](https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/)
+### 67. [Minimum Obstacle Removal To Reach Corner](https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/)
 
 - solves: `minimum_obstacles`
 - Pattern: 0-1 BFS over a grid.
 
-### 66. [Minimum Cost To Make At Least One Valid Path In A Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)
+### 68. [Minimum Cost To Make At Least One Valid Path In A Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)
 
 - solves: `min_cost`
 - Pattern: 0-1 BFS over grid directions.
 
-### 67. [Swim In Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
+### 69. [Swim In Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
 
 - solves: `swim_in_water`
 - Pattern: priority-queue traversal over a weighted grid.
 
-### 68. [Minimum Cost To Reach Destination In Time](https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/)
+### 70. [Minimum Cost To Reach Destination In Time](https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/)
 
 - solves: `minimum_cost`
 - Pattern: shortest path with time as part of the state.
 
-### 69. [Second Minimum Time To Reach Destination](https://leetcode.com/problems/second-minimum-time-to-reach-destination/)
+### 71. [Second Minimum Time To Reach Destination](https://leetcode.com/problems/second-minimum-time-to-reach-destination/)
 
 - solves: `second_minimum_time`
 - Pattern: track first and second shortest arrival times.
 
-### 70. [Min Cost To Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
+### 72. [Min Cost To Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
 
 - solves: `min_cost_connect_points`
 - Pattern: minimum spanning tree over complete graph distances.
