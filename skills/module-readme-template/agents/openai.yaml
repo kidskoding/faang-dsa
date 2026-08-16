@@ -1,7 +1,0 @@
-interface:
-  display_name: "Module README Template"
-  short_description: "Keeps module READMEs consistent"
-  default_prompt: "Use $module-readme-template to format a DSA module README with topics, problem set, and notes."
-
-policy:
-  allow_implicit_invocation: true

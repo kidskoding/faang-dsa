@@ -38,7 +38,7 @@ NN_module/
 
 ## Stub File Format
 
-Each category file imports the shared node class and holds one function per problem. Header comment carries the problem number, the key idea, and empty complexity lines. Body is `pass`.
+Each category file imports the shared node class and holds one function per problem. Header comment carries the problem number, the key idea, and empty complexity lines. Body is `raise NotImplementedError`.
 
 ```python
 from list_node import ListNode
@@ -50,14 +50,14 @@ def reverse_list(head: ListNode | None) -> ListNode | None:
     # Time:
     # Space:
 
-    pass
+    raise NotImplementedError
 ```
 
 - Import the node by bare module name: `from list_node import ListNode`, `from tree_node import TreeNode`. This works because the module dir is on `pythonpath` (see below).
 - Type-hint every signature (`ListNode | None`, `list[int]`, etc.).
 - In-place problems return `None`; reflect that in the hint and the docs example.
 - Problems needing their own node type (e.g. random-pointer, multilevel, an LRU class) define that class at the top of the category file with a comment naming the problem it serves. Put `from __future__ import annotations` first when the class self-references.
-- Use `pass` as the body, never `raise NotImplementedError`, so unimplemented functions return `None` and tests fail as clean assertions, not errors.
+- Use `raise NotImplementedError` as the body, never `pass`. This matches the rest of the repo (783 occurrences, zero `pass` stubs) and makes an unsolved problem fail loudly instead of silently returning `None`.
 
 ### Modules Without A Node Class
 
@@ -130,7 +130,7 @@ testpaths = [
 python3 -m pytest NN_module/tests -q
 ```
 
-Expect a clean collection. If the stubs are unimplemented (`pass`), tests are **RED on purpose** — they are the target for solving. Confirm the count and that failures are assertion failures, not `ImportError`/collection errors. An `ImportError` means `pythonpath` is missing the module dir.
+Expect a clean collection. If the stubs are unimplemented, tests are **RED on purpose** — they are the target for solving. Confirm the count and that failures are assertion failures, not `ImportError`/collection errors. An `ImportError` means `pythonpath` is missing the module dir.
 
 ## Common Mistakes
 
@@ -139,6 +139,6 @@ Expect a clean collection. If the stubs are unimplemented (`pass`), tests are **
 | Forgot `pythonpath` entry                            | `ModuleNotFoundError: list_node` / `problem_set` at collection | Add `"NN_module"` to `pythonpath` in pyproject                                  |
 | Added `__init__.py`                                  | `problem_set` from another module shadows / import clashes     | Delete it; rely on namespace packages                                           |
 | Shared helpers in `conftest.py`                      | Diverges from trees convention                                 | Inline `build_*`/`to_*` in each test file                                       |
-| `NotImplementedError` body                           | Tests error instead of asserting                               | Use `pass` so failures are clean assertion RED                                  |
+| `pass` body instead of `raise NotImplementedError`   | Unsolved problems silently return `None`                       | Use `raise NotImplementedError`, matching the rest of the repo                  |
 | Compared nodes by value when contract returns a node | False pass/fail on cycle/intersection                          | Assert with `is` against the expected node                                      |
 | Renamed category files per test run                  | Imports drift                                                  | Keep `<category>_problems.py` ↔ `test_<category>_problems.py` paired and stable |
