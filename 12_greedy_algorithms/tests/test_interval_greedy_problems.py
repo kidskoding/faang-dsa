@@ -1,9 +1,14 @@
 from problem_set.interval_greedy_problems import (
+    advantage_count,
     candy,
+    eliminate_maximum,
     erase_overlap_intervals,
     find_min_arrow_shots,
+    is_n_straight_hand,
+    is_possible,
     least_interval,
     num_rescue_boats,
+    partition_disjoint,
     partition_labels,
     reconstruct_queue,
 )
@@ -121,3 +126,51 @@ def test_least_interval_single_task_type():
 
 def test_least_interval_empty():
     assert least_interval([], 2) == 0
+
+
+def test_is_n_straight_hand_possible():
+    assert is_n_straight_hand([1, 2, 3, 6, 2, 3, 4, 7, 8], 3) is True
+
+
+def test_is_n_straight_hand_wrong_group_size():
+    assert is_n_straight_hand([1, 2, 3, 4, 5], 4) is False
+
+
+def test_advantage_count_normal():
+    assert advantage_count([2, 7, 11, 15], [1, 10, 4, 11]) == [2, 11, 7, 15]
+
+
+def test_advantage_count_partial():
+    assert advantage_count([12, 24, 8, 32], [13, 25, 32, 11]) == [24, 32, 8, 12]
+
+
+def test_eliminate_maximum_all_monsters():
+    assert eliminate_maximum([1, 3, 4], [1, 1, 1]) == 3
+
+
+def test_eliminate_maximum_one_monster():
+    assert eliminate_maximum([1, 1, 2, 3], [1, 1, 1, 1]) == 1
+
+
+def test_eliminate_maximum_fast_monsters():
+    assert eliminate_maximum([3, 2, 4], [5, 3, 2]) == 1
+
+
+def test_partition_disjoint_normal():
+    assert partition_disjoint([5, 0, 3, 8, 6]) == 3
+
+
+def test_partition_disjoint_longer():
+    assert partition_disjoint([1, 1, 1, 0, 6, 12]) == 4
+
+
+def test_is_possible_one_run():
+    assert is_possible([1, 2, 3, 3, 4, 5]) is True
+
+
+def test_is_possible_two_runs():
+    assert is_possible([1, 2, 3, 3, 4, 4, 5, 5]) is True
+
+
+def test_is_possible_too_short():
+    assert is_possible([1, 2, 3, 4, 4, 5]) is False

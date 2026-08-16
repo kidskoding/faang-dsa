@@ -1,5 +1,7 @@
 from problem_set.grid_dp_problems import (
+    count_squares,
     maximal_square,
+    min_falling_path_sum,
     min_path_sum,
     minimum_total,
     unique_paths,
@@ -74,3 +76,19 @@ def test_maximal_square_normal():
 
 def test_maximal_square_single_cell():
     assert maximal_square([["1"]]) == 1
+
+
+def test_min_falling_path_sum_normal():
+    assert min_falling_path_sum([[2, 1, 3], [6, 5, 4], [7, 8, 9]]) == 13
+
+
+def test_min_falling_path_sum_negatives():
+    assert min_falling_path_sum([[-19, 57], [-40, -5]]) == -59
+
+
+def test_count_squares_normal():
+    assert count_squares([[0, 1, 1, 1], [1, 1, 1, 1], [0, 1, 1, 1]]) == 15
+
+
+def test_count_squares_no_large_square():
+    assert count_squares([[1, 0, 1], [1, 1, 0], [1, 1, 0]]) == 7

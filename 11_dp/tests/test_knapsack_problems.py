@@ -2,6 +2,8 @@ from problem_set.knapsack_problems import (
     can_partition,
     change,
     coin_change,
+    combination_sum4,
+    find_max_form,
     find_target_sum_ways,
 )
 
@@ -64,3 +66,19 @@ def test_change_zero_amount():
 
 def test_change_empty_coins():
     assert change(0, []) == 1
+
+
+def test_combination_sum4_counts_orderings():
+    assert combination_sum4([1, 2, 3], 4) == 7
+
+
+def test_combination_sum4_unreachable():
+    assert combination_sum4([9], 3) == 0
+
+
+def test_find_max_form_normal():
+    assert find_max_form(["10", "0001", "111001", "1", "0"], 5, 3) == 4
+
+
+def test_find_max_form_tight_budget():
+    assert find_max_form(["10", "0", "1"], 1, 1) == 2

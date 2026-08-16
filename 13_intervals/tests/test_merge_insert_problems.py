@@ -3,6 +3,7 @@ from problem_set.merge_insert_problems import (
     erase_overlap_intervals,
     insert,
     merge,
+    remove_covered_intervals,
 )
 
 
@@ -71,3 +72,11 @@ def test_summary_ranges_stream_bridges_gap():
         ranges.add_num(value)
     ranges.add_num(4)
     assert ranges.get_intervals() == [[1, 4], [6, 7]]
+
+
+def test_remove_covered_intervals_normal():
+    assert remove_covered_intervals([[1, 4], [3, 6], [2, 8]]) == 2
+
+
+def test_remove_covered_intervals_nested():
+    assert remove_covered_intervals([[1, 4], [2, 3]]) == 1

@@ -1,4 +1,5 @@
 from problem_set.sequence_dp_problems import (
+    cherry_pickup,
     count_substrings,
     is_interleave,
     is_match_regex,
@@ -7,9 +8,14 @@ from problem_set.sequence_dp_problems import (
     longest_common_subsequence,
     longest_palindrome,
     longest_palindrome_subseq,
+    longest_valid_parentheses,
     max_coins,
+    max_profit_iv,
     max_profit_with_cooldown,
     max_profit_with_fee,
+    maximal_rectangle,
+    merge_stones,
+    min_cut,
     min_distance,
     num_distinct,
     word_break,
@@ -182,3 +188,73 @@ def test_longest_palindrome_subseq_single():
 
 def test_longest_palindrome_subseq_full_palindrome():
     assert longest_palindrome_subseq("racecar") == 7
+
+
+def test_min_cut_one_cut():
+    assert min_cut("aab") == 1
+
+
+def test_min_cut_already_palindrome():
+    assert min_cut("a") == 0
+
+
+def test_min_cut_no_shared_letters():
+    assert min_cut("ab") == 1
+
+
+def test_max_profit_iv_one_trade_fits():
+    assert max_profit_iv(2, [2, 4, 1]) == 2
+
+
+def test_max_profit_iv_two_trades():
+    assert max_profit_iv(2, [3, 2, 6, 5, 0, 3]) == 7
+
+
+def test_max_profit_iv_no_trades_allowed():
+    assert max_profit_iv(0, [1, 3]) == 0
+
+
+def test_longest_valid_parentheses_partial():
+    assert longest_valid_parentheses("(()") == 2
+
+
+def test_longest_valid_parentheses_normal():
+    assert longest_valid_parentheses(")()())") == 4
+
+
+def test_maximal_rectangle_normal():
+    matrix = [
+        ["1", "0", "1", "0", "0"],
+        ["1", "0", "1", "1", "1"],
+        ["1", "1", "1", "1", "1"],
+        ["1", "0", "0", "1", "0"],
+    ]
+    assert maximal_rectangle(matrix) == 6
+
+
+def test_maximal_rectangle_all_zero():
+    assert maximal_rectangle([["0"]]) == 0
+
+
+def test_merge_stones_pairs():
+    assert merge_stones([3, 2, 4, 1], 2) == 20
+
+
+def test_merge_stones_impossible():
+    assert merge_stones([3, 2, 4, 1], 3) == -1
+
+
+def test_merge_stones_triples():
+    assert merge_stones([3, 5, 1, 2, 6], 3) == 25
+
+
+def test_cherry_pickup_normal():
+    assert cherry_pickup([[0, 1, -1], [1, 0, -1], [1, 1, 1]]) == 5
+
+
+def test_cherry_pickup_blocked():
+    assert cherry_pickup([[1, 1, -1], [1, -1, 1], [-1, 1, 1]]) == 0
+
+
+def test_cherry_pickup_open_grid():
+    assert cherry_pickup([[1, 1, 1], [1, 1, 1], [1, 1, 1]]) == 8

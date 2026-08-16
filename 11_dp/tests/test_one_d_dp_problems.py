@@ -1,5 +1,8 @@
 from problem_set.one_d_dp_problems import (
     climbing_stairs,
+    delete_and_earn,
+    max_product,
+    max_subarray,
     min_cost_climbing_stairs,
     num_decodings,
     rob,
@@ -78,3 +81,31 @@ def test_num_decodings_with_zero():
 
 def test_num_decodings_leading_invalid():
     assert num_decodings("0") == 0
+
+
+def test_max_subarray_normal():
+    assert max_subarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]) == 6
+
+
+def test_max_subarray_all_negative():
+    assert max_subarray([-1]) == -1
+
+
+def test_max_product_normal():
+    assert max_product([2, 3, -2, 4]) == 6
+
+
+def test_max_product_with_zero():
+    assert max_product([-2, 0, -1]) == 0
+
+
+def test_max_product_two_negatives():
+    assert max_product([-2, 3, -4]) == 24
+
+
+def test_delete_and_earn_small():
+    assert delete_and_earn([3, 4, 2]) == 6
+
+
+def test_delete_and_earn_with_repeats():
+    assert delete_and_earn([2, 2, 3, 3, 3, 4]) == 9
