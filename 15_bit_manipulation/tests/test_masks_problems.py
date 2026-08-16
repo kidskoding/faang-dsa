@@ -1,4 +1,10 @@
-from problem_set.masks_problems import get_sum, min_flips, range_bitwise_and
+from problem_set.masks_problems import (
+    get_sum,
+    gray_code,
+    min_flips,
+    range_bitwise_and,
+    valid_utf8,
+)
 
 
 def test_get_sum_normal():
@@ -47,3 +53,23 @@ def test_min_flips_already_equal():
 
 def test_min_flips_all_zero():
     assert min_flips(1, 2, 3) == 0
+
+
+def test_gray_code_two_bits():
+    assert gray_code(2) == [0, 1, 3, 2]
+
+
+def test_gray_code_one_bit():
+    assert gray_code(1) == [0, 1]
+
+
+def test_valid_utf8_two_byte_sequence():
+    assert valid_utf8([197, 130, 1]) is True
+
+
+def test_valid_utf8_bad_continuation():
+    assert valid_utf8([235, 140, 4]) is False
+
+
+def test_valid_utf8_four_byte_sequence():
+    assert valid_utf8([240, 162, 138, 147]) is True

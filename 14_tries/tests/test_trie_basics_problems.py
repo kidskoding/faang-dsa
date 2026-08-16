@@ -1,7 +1,9 @@
 from problem_set.trie_basics_problems import (
     MapSum,
     Trie,
+    TrieII,
     longest_word_in_dictionary,
+    minimum_length_encoding,
     replace_words,
 )
 
@@ -78,3 +80,38 @@ def test_replace_words_shortest_root_wins():
     dictionary = ["cat", "ca"]
     sentence = "cattle"
     assert replace_words(dictionary, sentence) == "ca"
+
+
+def test_trie_ii_counts_duplicates():
+    trie = TrieII()
+    trie.insert("apple")
+    trie.insert("apple")
+
+    assert trie.count_words_equal_to("apple") == 2
+    assert trie.count_words_starting_with("app") == 2
+
+
+def test_trie_ii_erase_decrements():
+    trie = TrieII()
+    trie.insert("apple")
+    trie.insert("apple")
+    trie.erase("apple")
+
+    assert trie.count_words_equal_to("apple") == 1
+    assert trie.count_words_starting_with("app") == 1
+
+
+def test_trie_ii_erase_to_empty():
+    trie = TrieII()
+    trie.insert("apple")
+    trie.erase("apple")
+
+    assert trie.count_words_starting_with("app") == 0
+
+
+def test_minimum_length_encoding_shares_suffixes():
+    assert minimum_length_encoding(["time", "me", "bell"]) == 10
+
+
+def test_minimum_length_encoding_single_word():
+    assert minimum_length_encoding(["t"]) == 2

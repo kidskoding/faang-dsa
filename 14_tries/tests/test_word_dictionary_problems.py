@@ -1,7 +1,10 @@
 from problem_set.word_dictionary_problems import (
+    AutocompleteSystem,
     MagicDictionary,
     StreamChecker,
     WordDictionary,
+    WordFilter,
+    camel_match,
     search_suggestions,
 )
 
@@ -90,3 +93,40 @@ def test_stream_checker_single_letter_word():
     assert stream_checker.query("a") is True
     assert stream_checker.query("b") is False
     assert stream_checker.query("a") is True
+
+
+def test_camel_match_two_letter_pattern():
+    queries = ["FooBar", "FooBarTest", "FootBall", "FrameBuffer", "ForceFeedBack"]
+    assert camel_match(queries, "FB") == [True, False, True, True, False]
+
+
+def test_camel_match_longer_pattern():
+    queries = ["FooBar", "FooBarTest", "FootBall", "FrameBuffer", "ForceFeedBack"]
+    assert camel_match(queries, "FoBaT") == [False, True, False, False, False]
+
+
+def test_word_filter_matches_prefix_and_suffix():
+    word_filter = WordFilter(["apple"])
+
+    assert word_filter.f("a", "e") == 0
+
+
+def test_word_filter_no_match():
+    word_filter = WordFilter(["apple"])
+
+    assert word_filter.f("b", "e") == -1
+
+
+def test_word_filter_returns_largest_index():
+    word_filter = WordFilter(["apple", "apply"])
+
+    assert word_filter.f("app", "y") == 1
+
+
+def test_autocomplete_system_ranks_by_frequency():
+    system = AutocompleteSystem(["i love you", "island", "iroman", "i love leetcode"], [5, 3, 2, 2])
+
+    assert system.input("i") == ["i love you", "island", "i love leetcode"]
+    assert system.input(" ") == ["i love you", "i love leetcode"]
+    assert system.input("a") == []
+    assert system.input("#") == []

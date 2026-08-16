@@ -1,4 +1,6 @@
 from problem_set.xor_problems import (
+    decode,
+    find_the_difference,
     missing_number,
     single_number,
     single_number_ii,
@@ -56,3 +58,19 @@ def test_missing_number_single_element_missing():
 
 def test_missing_number_empty():
     assert missing_number([]) == 0
+
+
+def test_find_the_difference_normal():
+    assert find_the_difference("abcd", "abcde") == "e"
+
+
+def test_find_the_difference_from_empty():
+    assert find_the_difference("", "y") == "y"
+
+
+def test_decode_normal():
+    assert decode([1, 2, 3], 1) == [1, 0, 2, 1]
+
+
+def test_decode_longer():
+    assert decode([6, 2, 7, 3], 4) == [4, 2, 0, 7, 4]

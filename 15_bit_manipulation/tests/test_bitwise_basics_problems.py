@@ -1,5 +1,8 @@
 from problem_set.bitwise_basics_problems import (
+    bitwise_complement,
     count_bits,
+    divide,
+    hamming_distance,
     hamming_weight,
     is_power_of_four,
     is_power_of_two,
@@ -85,3 +88,43 @@ def test_is_power_of_four_one():
 
 def test_is_power_of_four_negative():
     assert is_power_of_four(-4) is False
+
+
+def test_hamming_distance_normal():
+    assert hamming_distance(1, 4) == 2
+
+
+def test_hamming_distance_one_bit():
+    assert hamming_distance(3, 1) == 1
+
+
+def test_bitwise_complement_normal():
+    assert bitwise_complement(5) == 2
+
+
+def test_bitwise_complement_all_ones():
+    assert bitwise_complement(7) == 0
+
+
+def test_bitwise_complement_zero():
+    assert bitwise_complement(0) == 1
+
+
+def test_bitwise_complement_even():
+    assert bitwise_complement(10) == 5
+
+
+def test_divide_normal():
+    assert divide(10, 3) == 3
+
+
+def test_divide_negative_result_truncates_toward_zero():
+    assert divide(7, -3) == -2
+
+
+def test_divide_overflow_is_clamped():
+    assert divide(-2147483648, -1) == 2147483647
+
+
+def test_divide_by_one():
+    assert divide(1, 1) == 1
