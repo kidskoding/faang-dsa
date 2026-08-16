@@ -77,6 +77,12 @@ def min_sub_array_len(target: int, nums: list[int]) -> int:
             left += 1
 
     return 0 if best == len(nums) + 1 else best
+
+
+assert min_sub_array_len(7, [2, 3, 1, 2, 4, 3]) == 2
+assert min_sub_array_len(4, [1, 4, 4]) == 1
+assert min_sub_array_len(11, [1, 1, 1, 1, 1, 1, 1, 1]) == 0
+assert min_sub_array_len(5, []) == 0
 ```
 
 `best` starts above every possible length, so the first real answer can replace
@@ -150,6 +156,12 @@ def num_subarray_product_less_than_k(nums: list[int], k: int) -> int:
         total += right - left + 1
 
     return total
+
+
+assert num_subarray_product_less_than_k([10, 5, 2, 6], 100) == 8
+assert num_subarray_product_less_than_k([1, 2, 3], 0) == 0
+assert num_subarray_product_less_than_k([1, 1, 1], 2) == 6
+assert num_subarray_product_less_than_k([], 100) == 0
 ```
 
 The `k <= 1` guard is necessary because a product of positive integers cannot
@@ -167,6 +179,14 @@ transformation is developed in the next note.
 Given a string, return the length of its longest contiguous substring with no
 repeated character. The empty string is allowed and should return 0.
 
+**Input**: `s`, a `str` that may be empty and may contain English letters,
+digits, symbols, and spaces, so the alphabet is not limited to lowercase
+letters
+
+**Output**: an `int`, the length of the longest contiguous substring of `s` in
+which no character appears twice. An empty string has no substring to measure,
+so the answer is 0
+
 Trying every start and growing until a duplicate appears repeats the same work
 and costs `O(n^2)`. This is a longest-valid window: the new character at `right`
 may create a duplicate, removing characters from the left can only remove that
@@ -182,6 +202,30 @@ than the condition asks for.
 > `left` backward, because the map also contains old occurrences that have
 > already expired.”
 
+Therefore,
+
+1. Create an empty map `last_seen` from character to its most recent index, and
+   set `left = 0` and `best = 0`. The map is the state, `left` is the window's
+   start, and `best` is the longest width recorded so far
+2. Walk `right` from the first index to the last, so every character enters the
+   window exactly once and the window is always `s[left : right + 1]`
+3. Before recording anything, ask whether the entering character has been seen
+   at an index that is still **inside** the window, which means `last_seen[char]`
+   exists and is at least `left`. Only then does the character create a
+   duplicate that must be repaired
+4. When it does, set `left = last_seen[char] + 1`, which jumps the window's
+   start one position past the earlier copy in a single move rather than
+   removing characters one at a time. A stale index below `left` is the edge
+   case here: that occurrence already left the window, so the guard rejects the
+   jump and `left` never moves backward
+5. Store `last_seen[char] = right` whether or not a jump happened, because the
+   newest occurrence is the only one that can ever force a future jump
+6. Record `best = max(best, right - left + 1)` now that the window is valid
+   again, since the width is the candidate answer for a substring ending at
+   `right`
+7. Return `best` after the scan. On an empty string the loop body never runs and
+   the initial 0 is returned unchanged
+
 ```python
 def length_of_longest_substring(s: str) -> int:
     last_seen: dict[str, int] = {}
@@ -195,6 +239,13 @@ def length_of_longest_substring(s: str) -> int:
         best = max(best, right - left + 1)
 
     return best
+
+
+assert length_of_longest_substring("abcabcbb") == 3
+assert length_of_longest_substring("bbbbb") == 1
+assert length_of_longest_substring("pwwkew") == 3
+assert length_of_longest_substring("abba") == 2
+assert length_of_longest_substring("") == 0
 ```
 
 Trace `"abba"`:

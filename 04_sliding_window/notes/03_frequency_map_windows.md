@@ -72,6 +72,11 @@ def find_anagrams(s: str, pattern: str) -> list[int]:
             starts.append(right - width + 1)
 
     return starts
+
+
+assert find_anagrams("cbaebabacd", "abc") == [0, 6]
+assert find_anagrams("abab", "ab") == [0, 1, 2]
+assert find_anagrams("a", "ab") == []
 ```
 
 For `s = "cbaebabacd"` and `pattern = "abc"`, the first window matches, the
@@ -109,6 +114,12 @@ def longest_k_distinct(s: str, k: int) -> int:
         best = max(best, right - left + 1)
 
     return best
+
+
+assert longest_k_distinct("eceba", 2) == 3
+assert longest_k_distinct("aabac", 2) == 4
+assert longest_k_distinct("aa", 1) == 2
+assert longest_k_distinct("abc", 0) == 0
 ```
 
 Fruit Into Baskets is this function with `k = 2` and integer fruit types. On
@@ -156,6 +167,14 @@ def at_most_distinct(nums: list[int], k: int) -> int:
 
 def subarrays_with_k_distinct(nums: list[int], k: int) -> int:
     return at_most_distinct(nums, k) - at_most_distinct(nums, k - 1)
+
+
+assert at_most_distinct([1, 2, 1], 2) == 6
+assert at_most_distinct([1, 2, 1], 1) == 3
+assert subarrays_with_k_distinct([1, 2, 1, 2, 3], 2) == 7
+assert subarrays_with_k_distinct([1, 2, 1, 3, 4], 3) == 3
+assert subarrays_with_k_distinct([1, 2, 1], 0) == 0
+assert subarrays_with_k_distinct([], 1) == 0
 ```
 
 Subarrays with K Different Integers uses those two passes directly. On
@@ -225,6 +244,12 @@ def min_window(s: str, t: str) -> str:
     if best_len == len(s) + 1:
         return ""
     return s[best_left : best_left + best_len]
+
+
+assert min_window("ADOBECODEBANC", "ABC") == "BANC"
+assert min_window("AABEC", "ABC") == "ABEC"
+assert min_window("a", "a") == "a"
+assert min_window("a", "aa") == ""
 ```
 
 The grow test happens **after** incrementing because that move may satisfy a
@@ -258,6 +283,12 @@ def number_of_substrings(s: str) -> int:
         total += left
 
     return total
+
+
+assert number_of_substrings("abcabc") == 10
+assert number_of_substrings("aaacb") == 3
+assert number_of_substrings("abc") == 1
+assert number_of_substrings("ab") == 0
 ```
 
 ## When The Map Describes Something Else
@@ -290,6 +321,12 @@ def balanced_string(s: str) -> int:
             outside[s[left]] += 1
             left += 1
     return best
+
+
+assert balanced_string("QWER") == 0
+assert balanced_string("QQWE") == 1
+assert balanced_string("QQQW") == 2
+assert balanced_string("QQQQ") == 3
 ```
 
 **Substring with Concatenation of All Words** treats one equal-length word as a
@@ -338,6 +375,12 @@ def find_substring(s: str, words: list[str]) -> list[int]:
                 left += width
 
     return answer
+
+
+assert find_substring("barfoothefoobarman", ["foo", "bar"]) == [0, 9]
+assert find_substring("wordgoodgoodgoodbestword", ["word", "good", "best", "word"]) == []
+assert find_substring("barfoofoobarthefoobarman", ["bar", "foo", "the"]) == [6, 9, 12]
+assert find_substring("a", []) == []
 ```
 
 The offset loops perform `O(n)` word visits altogether, but Python creates and
@@ -388,6 +431,11 @@ def min_window_subsequence(source: str, target: str) -> str:
     if best_start == -1:
         return ""
     return source[best_start : best_start + best_len]
+
+
+assert min_window_subsequence("abcdebdde", "bde") == "bcde"
+assert min_window_subsequence("abc", "abc") == "abc"
+assert min_window_subsequence("abcde", "f") == ""
 ```
 
 The forward and backward passes use `O(1)` auxiliary space. They can revisit
@@ -398,6 +446,14 @@ source positions for different candidate ends, so the worst-case time is
 
 You are given an uppercase string and may replace at most `k` characters. Return
 the longest substring that can become one repeated character.
+
+**Input**: `s`, a `str` of uppercase English letters where `1 <= len(s) <= 10^5`,
+and `k`, an `int` giving how many characters may be replaced, where
+`0 <= k <= len(s)`
+
+**Output**: an `int`, the length of the longest substring of `s` that becomes a
+run of one repeated character after at most `k` replacements. Any character may
+be substituted for any other, so the answer is a length, not the substring itself
 
 For a window of width `w`, keep its most frequent character and replace every
 other position. If that frequency is `max_freq`, the required work is:
@@ -418,6 +474,32 @@ maximum** and may be stale.
 > Therefore any returned width at most `max_freq + k` is attainable around that
 > real group of repeated characters.”
 
+Therefore,
+
+1. Set up `counts` as an empty frequency map, `left` at 0, and `max_freq` at 0.
+   The map is the window state because validity depends on how many copies of the
+   dominant character the window holds, and `max_freq` caches that dominant count
+   so the test never rescans the map
+2. Walk `right` over every index of `s`, and on each step increment
+   `counts[char]`, since the incoming character joins the window before any
+   validity question can be asked about it
+3. Refresh `max_freq` with `max(max_freq, counts[char])`. Only the character that
+   just arrived can raise the maximum, so one comparison is enough, and this is
+   the only place `max_freq` ever changes
+4. Test whether `(right - left + 1) - max_freq > k`, which is the width minus the
+   characters you keep, so it is exactly the number of replacements the window
+   would demand. If that exceeds the budget, the window is too wide to buy
+5. When the test fails, move `left` forward exactly once: decrement
+   `counts[s[left]]` and advance `left`. A single `if` rather than a `while` is
+   deliberate, because one arrival widened the window by one, so one departure is
+   all it takes to hold the width steady. Deliberately leave `max_freq` alone
+   here, accepting a stale historical maximum rather than paying for a rescan
+6. Return `len(s) - left`, since the width is `right - left + 1` at the final
+   index and never shrinks, so the total number of left moves is the only thing
+   separating the answer from the full length. The edge case is a string that
+   never needs a shrink at all, such as `k >= len(s)` or a single repeated
+   letter: `left` stays 0 and the whole length is returned
+
 ```python
 def character_replacement(s: str, k: int) -> int:
     counts: dict[str, int] = {}
@@ -433,6 +515,11 @@ def character_replacement(s: str, k: int) -> int:
             left += 1
 
     return len(s) - left
+
+
+assert character_replacement("ABAB", 2) == 4
+assert character_replacement("AABABBA", 1) == 4
+assert character_replacement("A", 0) == 1
 ```
 
 The single `if` is deliberate. Each new character increases the width by one,

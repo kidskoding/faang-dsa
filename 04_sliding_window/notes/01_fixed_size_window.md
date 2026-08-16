@@ -50,6 +50,12 @@ def find_max_average(nums: list[int], k: int) -> float:
         best_sum = max(best_sum, window_sum)
 
     return best_sum / k
+
+
+assert find_max_average([1, 12, -5, -6, 50, 3], 4) == 12.75
+assert find_max_average([5], 1) == 5.0
+assert find_max_average([-3, -1, -4], 2) == -2.0
+assert find_max_average([4, 0, 4, 0], 4) == 2.0
 ```
 
 The first window is **primed** before the loop because there is no earlier
@@ -91,6 +97,13 @@ def contains_nearby_duplicate(nums: list[int], k: int) -> bool:
         window.add(value)
 
     return False
+
+
+assert contains_nearby_duplicate([1, 2, 3, 1], 3) is True
+assert contains_nearby_duplicate([1, 0, 1, 1], 1) is True
+assert contains_nearby_duplicate([1, 2, 3, 1, 2, 3], 2) is False
+assert contains_nearby_duplicate([1, 1], 0) is False
+assert contains_nearby_duplicate([], 1) is False
 ```
 
 The eviction is `right - k - 1`, not `right - k`, because the `k` positions
@@ -121,6 +134,16 @@ answer = contribution that is always present + best change inside one window
 You are given card points in a row and must take exactly `k` cards. Every card
 must come from the current left or right end. Return the largest possible score.
 
+**Input**: `card_points`, a `list[int]` holding the points on each card in row
+order, and `k`, an `int` giving exactly how many cards must be taken, where
+`1 <= k <= len(card_points) <= 10^5` and every point value is between `1` and
+`10^4`
+
+**Output**: a single `int`, the largest total that any legal sequence of `k`
+end-takes can reach. It is a maximum over choices, not the score of one
+particular greedy sequence, and because every card is worth at least `1`, taking
+all `n` cards is always allowed and returns the whole total
+
 A tempting greedy choice is to take the larger exposed end each time. It fails
 on `[1, 100, 3, 4, 5]` with `k = 2`: taking `5`, then `4`, scores 9, while
 taking the small `1` exposes `100` and scores 101. A local end does not reveal
@@ -138,6 +161,30 @@ maximum points taken = total points - minimum sum of a window of width n - k
 > block left behind. Its width is fixed at `n - k`, so I can update its sum by
 > adding one card and dropping one card on each slide.”
 
+1. Compute `leftover_width = n - k`, because the cards you do not take are
+   exactly the ones left in the middle, and their count is fixed the moment `k`
+   is known. This is the width the window will hold for the whole scan.
+2. Compute `total`, the sum of every card. The score you keep is whatever the
+   total is minus whatever the middle block holds, so the total is the fixed
+   part of the formula and only the block varies.
+3. **Prime** the first window by summing the first `leftover_width` cards, which
+   is the block left behind when all `k` cards are taken from the right end.
+   There is no earlier window to update from, so this one has to be built
+   directly. When `k` equals `n` the width is zero and this sum is `0`, which is
+   the correct block for taking every card.
+4. Seed `smallest` with that primed sum rather than with zero or infinity,
+   because a real window is already in hand and it is a genuine candidate.
+5. Slide `right` from `leftover_width` to the last index. On each step add
+   `card_points[right]`, the card entering on the right, and subtract
+   `card_points[right - leftover_width]`, the card falling off the left, so the
+   `leftover_width - 1` shared cards are never re-added.
+6. After each slide, keep `smallest = min(smallest, window_sum)`, since the
+   answer depends on the best block seen anywhere in the scan and not on the
+   block the loop happens to end on.
+7. Return `total - smallest`. Each window position corresponds to one legal
+   split of `k` cards between the two ends, so minimizing the block left behind
+   maximizes the points taken
+
 ```python
 def max_score(card_points: list[int], k: int) -> int:
     leftover_width = len(card_points) - k
@@ -150,6 +197,12 @@ def max_score(card_points: list[int], k: int) -> int:
         smallest = min(smallest, window_sum)
 
     return total - smallest
+
+
+assert max_score([1, 2, 3, 4, 5, 6, 1], 3) == 12
+assert max_score([2, 2, 2], 2) == 4
+assert max_score([9, 7, 7, 9, 7, 7, 9], 7) == 55
+assert max_score([1, 79, 80, 1, 1, 1, 200, 1], 3) == 202
 ```
 
 For `[1, 2, 3, 4, 5, 6, 1]` and `k = 3`, the leftover width is 4:

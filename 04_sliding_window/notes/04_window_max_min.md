@@ -76,6 +76,12 @@ def max_sliding_window(nums: list[int], k: int) -> list[int]:
             answer.append(nums[dq[0]])
 
     return answer
+
+
+assert max_sliding_window([1, 3, -1, -3, 5, 3, 6, 7], 3) == [3, 3, 5, 5, 6, 7]
+assert max_sliding_window([1, 3, -1, -3, 5], 3) == [3, 3, 5]
+assert max_sliding_window([9, 8, 7], 3) == [9]
+assert max_sliding_window([1], 1) == [1]
 ```
 
 Three lines carry the technique:
@@ -126,8 +132,17 @@ actual definition of “outside.”
 
 ## Worked Example: [Longest Continuous Subarray With Absolute Difference At Most Limit](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-difference-less-than-or-equal-to-limit/)
 
-Given an integer array and `limit`, return the longest contiguous subarray whose
-maximum minus minimum is at most `limit`.
+Given an integer array and `limit`, return the length of the longest contiguous
+subarray whose maximum minus minimum is at most `limit`.
+
+**Input**: `nums`, a `list[int]` of positive values with
+`1 <= len(nums) <= 10^5` and `1 <= nums[i] <= 10^9`, and `limit`, a non-negative
+`int` with `0 <= limit <= 10^9` giving the largest spread a subarray may have
+
+**Output**: a single `int`, the length of the longest contiguous subarray whose
+maximum element minus its minimum element is at most `limit`. Since `limit` is
+never negative, any one element is a valid subarray of spread `0`, so the answer
+is at least `1` and never `0`
 
 The width is not given, so this is a
 [variable window](02_variable_size_window.md). Growing can only keep or widen
@@ -141,6 +156,30 @@ decreasing deque for the maximum and one increasing deque for the minimum.
 > “Both deques store indices for the same `[left, right]` window. I will feed
 > `right` to both, shrink while their front values differ by more than `limit`,
 > and retire a front only when its index is exactly the position leaving.”
+
+Therefore,
+
+1. Create two empty deques of indices, `max_dq` decreasing and `min_dq`
+   increasing, plus `left = 0` and `best = 0`. The two deques answer the two
+   halves of the spread, and they must always describe the same `[left, right]`
+   window
+2. Walk `right` across the array. Before appending `right` to `max_dq`, pop every
+   back index whose value is at most the arriving value, because a later index
+   that is at least as large dominates it and can never be the maximum again
+3. Append `right` to `min_dq` the same way, but pop back indices whose value is at
+   least the arriving value, since the comparison reverses for a minimum
+4. Read the spread as `nums[max_dq[0]] - nums[min_dq[0]]`, the current window's
+   maximum minus its minimum, both available at the fronts in `O(1)`
+5. While that spread exceeds `limit`, shrink from the left. Retire `max_dq[0]`
+   only when it equals `left`, retire `min_dq[0]` only when it equals `left`, then
+   advance `left`. Each front is checked separately because only the deque whose
+   extreme sits at the leaving position loses a candidate, and popping the other
+   would discard an extreme still inside the window
+6. The shrink loop cannot run past `right`, because a one-element window has
+   spread `0` and `limit` is never negative, so `dq[0]` is always safe to read
+7. After the window is valid again, record `best = max(best, right - left + 1)`.
+   Recording after the repair rather than before is what makes this a
+   longest-valid answer instead of a count of anything shorter
 
 ```python
 from collections import deque
@@ -171,6 +210,12 @@ def longest_subarray(nums: list[int], limit: int) -> int:
         best = max(best, right - left + 1)
 
     return best
+
+
+assert longest_subarray([8, 2, 4, 7], 4) == 2
+assert longest_subarray([10, 1, 2, 4, 7, 2], 5) == 4
+assert longest_subarray([4, 2, 2, 2, 4, 4, 2, 2], 0) == 3
+assert longest_subarray([5], 0) == 1
 ```
 
 The two front checks are written as separate `if` statements because each deque
@@ -251,6 +296,12 @@ def shortest_subarray(nums: list[int], k: int) -> int:
         dq.append(end)
 
     return -1 if best == len(nums) + 1 else best
+
+
+assert shortest_subarray([1], 1) == 1
+assert shortest_subarray([1, 2], 4) == -1
+assert shortest_subarray([2, -1, 2], 3) == 3
+assert shortest_subarray([2, -1, 2, 3], 4) == 2
 ```
 
 For `nums = [2, -1, 2, 3]` and `k = 4`, the prefix values are
@@ -300,6 +351,11 @@ def find_max_value_of_equation(points: list[list[int]], k: int) -> int:
         dq.append(right)
 
     return best
+
+
+assert find_max_value_of_equation([[1, 3], [2, 0], [5, 10], [6, -10]], 1) == 4
+assert find_max_value_of_equation([[0, 0], [3, 0], [9, 2]], 3) == 3
+assert find_max_value_of_equation([[-19, 9], [-15, -19], [-5, -8]], 10) == -6
 ```
 
 The query happens before appending `right` so a point cannot pair with itself.
@@ -318,9 +374,7 @@ nonempty deque.
 from collections import deque
 
 
-def maximum_robots(
-    charge_times: list[int], running_costs: list[int], budget: int
-) -> int:
+def maximum_robots(charge_times: list[int], running_costs: list[int], budget: int) -> int:
     max_dq: deque[int] = deque()
     left = 0
     running_sum = 0
@@ -332,12 +386,7 @@ def maximum_robots(
         max_dq.append(right)
         running_sum += running_costs[right]
 
-        while (
-            max_dq
-            and charge_times[max_dq[0]]
-            + (right - left + 1) * running_sum
-            > budget
-        ):
+        while max_dq and charge_times[max_dq[0]] + (right - left + 1) * running_sum > budget:
             if max_dq[0] == left:
                 max_dq.popleft()
             running_sum -= running_costs[left]
@@ -346,6 +395,11 @@ def maximum_robots(
         best = max(best, right - left + 1)
 
     return best
+
+
+assert maximum_robots([3, 6, 1, 3, 4], [2, 1, 3, 4, 5], 25) == 3
+assert maximum_robots([11, 12, 19], [10, 8, 7], 19) == 0
+assert maximum_robots([1], [1], 2) == 1
 ```
 
 ## Counting Fixed Bounds Without A Deque
@@ -376,6 +430,11 @@ def count_subarrays(nums: list[int], min_k: int, max_k: int) -> int:
         total += max(0, min(last_min, last_max) - last_bad)
 
     return total
+
+
+assert count_subarrays([1, 3, 5, 2, 7, 5], 1, 5) == 2
+assert count_subarrays([1, 1, 1, 1], 1, 1) == 10
+assert count_subarrays([2, 2, 2], 1, 3) == 0
 ```
 
 The formula counts start indices from `last_bad + 1` through the earlier of
