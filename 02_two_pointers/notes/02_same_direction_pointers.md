@@ -323,6 +323,13 @@ calling a sorting function. A normal sort is correct but costs `O(n log n)`,
 while the three possible values let us maintain three finished regions and one
 unknown region
 
+**Input**: `nums`, a `list[int]` in which every value is `0`, `1`, or `2`, where
+`1 <= len(nums) <= 300`
+
+**Output**: `None`. The function returns nothing and instead **mutates `nums` in
+place**, so that after the call the list holds all of its `0` values first, then
+all of its `1` values, then all of its `2` values
+
 ```text
 [ 0 region ][ 1 region ][       unknown       ][ 2 region ]
               low        mid                 high
@@ -342,6 +349,26 @@ on every iteration, which proves the loop terminates
 > "A 0 swaps to the low side and both forward boundaries advance. A 1 is already
 > in its region, so only mid advances. A 2 swaps to the high side, but mid stays
 > because the incoming value has not been classified yet."
+
+Therefore,
+
+1. Start `low` and `mid` at index 0 and `high` at the last index, because before
+   any value has been examined the finished `0` and `2` regions are both empty and
+   the unknown region covers the whole array
+2. Loop while `mid <= high`, since that condition says exactly that the unknown
+   region still holds at least one value. For an empty list `high` starts at `-1`,
+   so the loop body never runs and the list is left untouched
+3. When `nums[mid]` is `0`, swap it with `nums[low]` and advance both `low` and
+   `mid`. The value arriving at `mid` is safe to skip because `low` either equals
+   `mid`, making the swap a self-swap, or points into the classified `1` region
+4. When `nums[mid]` is `2`, swap it with `nums[high]` and decrease `high`, but
+   leave `mid` where it is. The value arriving from `high` comes out of the unknown
+   region and has never been examined, so it must be classified on the next
+   iteration
+5. Otherwise the value is `1`, which already belongs between `low` and `mid`, so
+   advance `mid` alone and leave both swaps undone
+6. Stop once `mid` passes `high`. Every position has then been assigned to one of
+   the three regions, so `nums` is sorted and there is nothing to return
 
 ```python
 def sort_colors(nums: list[int]) -> None:

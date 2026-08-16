@@ -175,6 +175,13 @@ the distance between their indices and whose usable height is the shorter bar.
 Return the largest area, so a pair `(left, right)` holds
 `(right - left) * min(height[left], height[right])`
 
+**Input**: `height`, a `list[int]` of bar heights, where LeetCode guarantees
+`2 <= len(height) <= 10^5` and every height is between `0` and `10^4`
+
+**Output**: an `int`, the largest area any single pair of bars can hold, measured
+as the distance between their two indices times the shorter of their two heights.
+The bars are walls, not a shape to be filled, so nothing between them matters
+
 Trying every pair costs `O(n²)`. Start with the widest possible container
 instead. Every inward move loses width, which means a later container can improve
 only if its limiting height becomes taller
@@ -186,6 +193,27 @@ only if its limiting height becomes taller
 This is a forced-movement argument even though the heights are not sorted. If
 the bars tie, either one may move because both impose the same limit; the code
 below moves `right`
+
+Therefore,
+
+1. Place `left` at index `0` and `right` at the last index, because that pair has
+   the largest width available and every later candidate can only be narrower
+2. Keep a running `best` that starts at `0`. Starting from zero also settles the
+   degenerate input: with fewer than two bars, `right` never sits to the right of
+   `left`, the loop body never runs, and `0` is returned instead of an error
+3. While `left < right`, measure the current container: its width is
+   `right - left` and its usable height is the shorter of the two walls, so its
+   area is `(right - left) * min(height[left], height[right])`. Keep it in `best`
+   if it beats what has been seen
+4. Compare the two walls and move the shorter one inward by one step. That is the
+   forced move argued above: the shorter wall caps this area, so keeping it while
+   the width falls can never produce a larger container, while replacing it at
+   least makes a taller limit possible
+5. When the two walls tie, move either one, since both impose the same limit. The
+   code moves `right`, which is why the comparison is `height[left] < height[right]`
+   rather than `<=`
+6. Stop when the pointers meet, since a container needs two distinct bars, and
+   return `best`
 
 ```python
 def max_area(height: list[int]) -> int:
