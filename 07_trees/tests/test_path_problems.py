@@ -1,7 +1,10 @@
+from binary_tree import build_tree_from_level_order
 from problem_set.path_problems import (
     binary_tree_paths,
+    good_nodes,
     path_sum,
     path_sum_ii,
+    path_sum_iii,
     sum_root_to_leaf_numbers,
 )
 from tree_node import TreeNode
@@ -169,3 +172,25 @@ def test_sum_root_to_leaf_numbers_skewed_tree():
     root = TreeNode(1, right=TreeNode(0, right=TreeNode(5)))
 
     assert sum_root_to_leaf_numbers(root) == 105
+
+
+def test_good_nodes_normal():
+    assert good_nodes(build_tree_from_level_order([3, 1, 4, 3, None, 1, 5])) == 4
+
+
+def test_good_nodes_left_child_equal():
+    assert good_nodes(build_tree_from_level_order([3, 3, None, 4, 2])) == 3
+
+
+def test_good_nodes_single_node():
+    assert good_nodes(build_tree_from_level_order([1])) == 1
+
+
+def test_path_sum_iii_normal():
+    root = build_tree_from_level_order([10, 5, -3, 3, 2, None, 11, 3, -2, None, 1])
+    assert path_sum_iii(root, 8) == 3
+
+
+def test_path_sum_iii_deeper_tree():
+    root = build_tree_from_level_order([5, 4, 8, 11, None, 13, 4, 7, 2, None, None, 5, 1])
+    assert path_sum_iii(root, 22) == 3

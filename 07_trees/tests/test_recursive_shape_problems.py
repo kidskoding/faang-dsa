@@ -1,13 +1,19 @@
-from binary_tree import tree_to_level_order
+from binary_tree import build_tree_from_level_order, tree_to_level_order
 from problem_set.recursive_shape_problems import (
     balanced_binary_tree,
     diameter_of_binary_tree,
+    flatten,
     invert_tree,
+    lca_deepest_leaves,
+    lowest_common_ancestor,
     max_depth,
+    max_path_sum,
+    prune_tree,
     same_tree,
     subtree_of_another_tree,
     symmetric_tree,
 )
+from problem_set.tree_traversal_problems import preorder_traversal
 from tree_node import TreeNode
 
 
@@ -211,3 +217,56 @@ def test_subtree_of_another_tree_empty_subroot():
 
 def test_subtree_of_another_tree_empty_root_nonempty_subroot():
     assert not subtree_of_another_tree(None, TreeNode(1))
+
+
+def test_lowest_common_ancestor_split():
+    root = build_tree_from_level_order([3, 5, 1, 6, 2, 0, 8, None, None, 7, 4])
+    assert lowest_common_ancestor(root, root.left, root.right).val == 3
+
+
+def test_lowest_common_ancestor_node_is_its_own_ancestor():
+    root = build_tree_from_level_order([3, 5, 1, 6, 2, 0, 8, None, None, 7, 4])
+    assert lowest_common_ancestor(root, root.left, root.left.right.right).val == 5
+
+
+def test_prune_tree_drops_zero_only_subtrees():
+    root = build_tree_from_level_order([1, None, 0, 0, 1])
+    assert preorder_traversal(prune_tree(root)) == [1, 0, 1]
+
+
+def test_prune_tree_removes_everything():
+    assert prune_tree(TreeNode(0)) is None
+
+
+def test_flatten_produces_right_leaning_list():
+    root = build_tree_from_level_order([1, 2, 5, 3, 4, None, 6])
+    flatten(root)
+
+    assert preorder_traversal(root) == [1, 2, 3, 4, 5, 6]
+    assert root.left is None
+
+
+def test_flatten_empty():
+    assert flatten(None) is None
+
+
+def test_lca_deepest_leaves_normal():
+    root = build_tree_from_level_order([3, 5, 1, 6, 2, 0, 8, None, None, 7, 4])
+    assert lca_deepest_leaves(root).val == 2
+
+
+def test_lca_deepest_leaves_single_node():
+    assert lca_deepest_leaves(TreeNode(1)).val == 1
+
+
+def test_max_path_sum_all_positive():
+    assert max_path_sum(build_tree_from_level_order([1, 2, 3])) == 6
+
+
+def test_max_path_sum_skips_negative_root():
+    root = build_tree_from_level_order([-10, 9, 20, None, None, 15, 7])
+    assert max_path_sum(root) == 42
+
+
+def test_max_path_sum_single_negative_node():
+    assert max_path_sum(TreeNode(-3)) == -3

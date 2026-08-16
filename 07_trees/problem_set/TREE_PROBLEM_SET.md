@@ -26,7 +26,7 @@ Key idea:
 
 ## Traversals
 
-`traversal_problems.py` — walk a tree without recursion: explicit-stack
+`tree_traversal_problems.py` — walk a tree without recursion: explicit-stack
 DFS in all three orders, an on-demand iterator, and the N-ary variants.
 
 ### 1. [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
