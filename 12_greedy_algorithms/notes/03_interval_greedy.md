@@ -54,7 +54,7 @@ and one tiny example kills it
 time   0    1    2    3    4
 X      [-------------------]         a single all-day meeting [0, 4]
 Y           [----]                   [1, 2]
-Z                     [----]         [2, 3]
+Z                [----]              [2, 3]
 ```
 
 Sorting by start puts `X` first, and `X` is accepted because nothing has been
@@ -156,11 +156,11 @@ Three kept, three erased. The interesting lines are the rejections rather than
 the acceptances
 
 `[0, 6]` is the one to stare at. It is the *longest-running* meeting in the whole
-set except for `[3, 8]`, it starts before anything else, and the sweep throws it
-away without a second thought because `last_end` is already 4. That is the
-sorting decision paying off: had the list been ordered by start time, `[0, 6]`
-would have been examined first, accepted, and would have blocked both `[1, 4]`
-and `[5, 7]`
+set, six units against five for `[3, 8]`, it starts before anything else, and the
+sweep throws it away without a second thought because `last_end` is already 4.
+That is the sorting decision paying off: had the list been ordered by start time,
+`[0, 6]` would have been examined first, accepted, and would have blocked both
+`[1, 4]` and `[5, 7]`
 
 `[3, 5]` shows why the update has to be conditional. It is rejected while
 `last_end` stays at 4, not 5. Bumping `last_end` to 5 on a rejection would have
@@ -253,8 +253,8 @@ the city when the minute-`k` shot would be fired, so equality is a loss
 
 Some problems hand you no intervals at all and expect you to build them, then
 sweep the same way. [Partition Labels](https://leetcode.com/problems/partition-labels/)
-gives a string and asks for the sizes of the largest possible pieces such that
-every letter appears in exactly one piece
+gives a string and asks for the sizes of the pieces when it is cut into as many
+pieces as possible, such that every letter appears in exactly one piece
 
 Each distinct letter defines an interval, from its first occurrence to its last,
 and a cut is only legal at a position that no letter's interval spans. There is
@@ -541,8 +541,11 @@ assert reconstruct_queue([[1, 0]]) == [[1, 0]]
 The key `(-p[0], p[1])` is tallest first with **ascending `k` inside a tie**, and
 both halves are load-bearing. People of equal height *do* count each other, so
 among the 7s, `[7, 0]` has to be placed before `[7, 1]` for the second one to land
-behind it. Reverse that tie-break and the equal-height pairs come out swapped,
-which passes the small examples and fails the real tests
+behind it. Reverse that tie-break and it breaks on the very first example above:
+placing `[5, 2]` before `[5, 0]` means the later `[5, 0]` insertion slides in
+front of it, and the result comes out as
+`[5,0], [7,0], [6,1], [5,2], [4,4], [7,1]`, where `[5, 2]` now has three people
+at least as tall ahead of it instead of two
 
 `queue.insert(person[1], person)` is the greedy commitment: `k` is read directly
 as an index into the partially built queue, because every person already sitting
@@ -619,8 +622,9 @@ The phrase that identifies the technique is "separated by at least `n`", which
 makes this a scheduling problem where one task type is the bottleneck.
 Simulating minute by minute, repeatedly choosing whichever task has the most
 copies remaining, is the natural greedy and it is correct, but re-picking the
-maximum from up to 26 counters at every one of up to `10^4` minutes does far more
-work than the answer needs. The counts alone determine the answer
+maximum from up to 26 counters at every minute does far more work than the answer
+needs, and with `10^4` tasks and a cooldown of `100` the clock can run past a
+million minutes. The counts alone determine the answer
 
 The idea is to build the schedule around the most frequent task. Say it appears
 `max_count` times. Those runs create `max_count - 1` gaps between them, and every

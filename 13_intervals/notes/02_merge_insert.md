@@ -26,7 +26,7 @@ code to see what your eye sees
 [15, 18]                                                           [-----------]
 ```
 
-Four of those five strokes are stacked over the region from 1 to 6, and the
+Three of those five strokes are stacked over the region from 1 to 6, and the
 disjoint set for the whole picture is `[[1, 6], [8, 10], [15, 18]]`. This topic
 covers how to build that set, how to add one more interval to a set that is
 already disjoint, and the two counting problems that are the same scan with the
@@ -72,10 +72,11 @@ not a disjoint set at all
 
 Watch what the run does. It compares `[1, 3]` against `[6, 8]`, which do not
 overlap, so nothing happens. It then compares `[1, 3]` against `[2, 7]`, which do
-overlap, so those two collapse into `[1, 7]`. That merge has **created an overlap
-that did not exist in the input**, because `[1, 7]` reaches 7 while neither `[1, 3]`
-nor `[2, 7]` alone reached far enough to touch `[6, 8]`. The pair that now needs
-merging is one the loop has already walked past
+overlap, so those two collapse into `[1, 7]`. That merge has **put an overlap
+behind the scan**, because `[1, 7]` reaches 7 and now touches `[6, 8]`, while
+`[1, 3]`, the interval sitting at that index when the loop tested it against
+`[6, 8]`, did not. The pair that now needs merging is one the loop has already
+walked past
 
 The failure is specific and it hands you the fix. Merging is not a local property
 of a pair, because absorbing an interval pushes an endpoint outward and can wake
@@ -364,8 +365,10 @@ it needs Python 3.10 or later
 interviewers add on purpose. A repeated number must leave the set untouched, and
 it can already be present in two ways: `intervals[i][0] == value` means it is the
 start of an existing interval, and `intervals[i - 1][1] >= value` means it is
-somewhere inside the interval on the left. Without both checks, adding 5 twice
-either duplicates `[5, 5]` or widens a neighbour it was already inside
+somewhere inside the interval on the left. Without the first, adding 5 twice stores
+`[5, 5]` a second time; without the second, re-adding a value that sits inside a
+stored interval, such as 4 while `[3, 5]` is held, inserts a nested `[4, 4]` beside
+it and the set stops being disjoint
 
 **The `i -= 1` is what makes the second half work.** Once the left neighbour has
 absorbed the value, the interval to keep growing is that neighbour rather than
@@ -431,9 +434,10 @@ with no branching inside
    because a stored interval can be entirely swallowed and must not shrink the
    working end
 5. The `end` being tested in that loop condition is the widening one, not the
-   original. That is what lets the absorption chain: swallowing one interval can
-   push `end` far enough right to reach the next, exactly the effect that broke
-   the pairwise merge and that a left-to-right walk handles for free
+   original, so absorption can chain: pushing `end` right can bring the next
+   interval into reach. With stored intervals that never touch it never has to,
+   since the next start already lies past the end just absorbed, but the widening
+   `end` is the version that stays correct when they touch
 6. Stop that phase at the first interval whose start is beyond the current `end`.
    Everything from there on starts later still, because the input is sorted, so
    nothing further can touch the working interval
@@ -480,15 +484,19 @@ phase  interval    test                       working interval   action
 
 `[6, 7]` is the discarded step. It sits entirely inside the working interval, so
 both `min` and `max` keep what they had and the absorption is invisible in the
-state. Replacing `max(end, intervals[i][1])` with `intervals[i][1]` would set the
-working end to 7 here, and the very next line would then test `8 <= 7`, fail, and
-stop the phase early, leaving `[8, 10]` in the output beside `[3, 7]` when the two
-should have been one interval
+state. Replacing `max(end, intervals[i][1])` with `intervals[i][1]` breaks the run
+before it ever reaches this row: absorbing `[3, 5]` would drop the working end from
+8 down to 5, the next test `6 <= 5` would fail, and the phase would stop at once,
+returning `[[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]]` with the stretch from 5 to 6
+that `[4, 8]` covered now missing
 
-`[8, 10]` is the line that proves the loop condition must read the widening `end`.
-Against the original `[4, 8]` the test `8 <= 8` only passes because `end` is still
-8, and after absorbing it the working interval reaches 10, which is what makes
-`[12, 16]` the correct stopping point rather than the second thing absorbed
+`[8, 10]` is where the working `end` finally moves, from 8 out to 10, and that is
+the value `[12, 16]` is tested against rather than a stale 8. When the stored
+intervals never touch, the widening cannot pull in an extra interval on its own,
+since the next start already sits past the end just absorbed. It earns its place
+the moment they do touch: with `[[8, 10], [10, 16]]` stored, absorbing `[8, 10]`
+pushes `end` to 10 and `[10, 16]` is absorbed too, where a loop still testing the
+original 8 would have stopped and emitted `[3, 10]` beside `[10, 16]`
 
 - **Time Complexity:** `O(n)` for `n` stored intervals, because each interval is
   examined by exactly one of the three phases and copied at most once, and the
@@ -547,7 +555,7 @@ currently stored, which is at most the number of `add_num` calls so far
   already passed. Sorting by start removes that possibility, since an endpoint can
   then only ever move right, and everything to the right is still unprocessed
   - Concretely, `[1, 3]` and `[2, 7]` merge into `[1, 7]`, which now overlaps a
-    `[6, 8]` that neither of them touched before
+    `[6, 8]` that `[1, 3]` did not touch when the loop compared the two
 - The merge loop keeps the active block as `merged[-1]` rather than as a separate
   pair of variables, extends it with `merged[-1][1] = max(merged[-1][1], end)` on
   an overlap, and appends a fresh block otherwise
@@ -564,9 +572,10 @@ currently stored, which is at most the number of `add_num` calls so far
   in `O(n)` with no sort, by splitting the list into three contiguous runs: the
   intervals ending before the new one starts, the run touching it, and the
   intervals starting after it ends
-  - The second loop tests against the *widening* `end`, which is what lets one
-    absorption reach the next interval, and it uses `min` on the start and `max`
-    on the end for the same containment reason as `merge`
+  - The second loop tests against the *widening* `end` rather than the original,
+    and it uses `min` on the start and `max` on the end for the same containment
+    reason as `merge`. The `max` is the load-bearing one: dropping it lets a
+    swallowed interval shrink the working end and stop the phase early
   - Appending the new interval and re-running `merge` is a correct answer that
     costs `O(n log n)` and throws away the guarantee the problem handed you
 - The same sorted single pass answers counting questions when the output set is
@@ -600,7 +609,7 @@ Am I sorting by start (merging, covering) or by end (keeping the most intervals)
 Do equal starts need a descending-end tie-break so a wider interval is seen first?
 On an overlap, do I extend with max(current_end, end) rather than assigning end directly?
 Is the input already sorted and disjoint, which turns an O(n log n) sort into an O(n) walk?
-Does my loop condition read the widening end, so one absorption can chain into the next?
+Does my loop condition read the widening end rather than the original one I was handed?
 What does my code do on empty input, on a single interval, and on two identical intervals?
 For a streaming version, which neighbours can a new value touch, and are adjacent integers merged?
 Did I state that the sort dominates the time, and that the output list is the space?

@@ -38,8 +38,8 @@ single pair of bits. Everything else in this module is built out of them
 ```text
 a  b  |  a & b   a | b   a ^ b        ~a
 0  0  |    0       0       0           1
-0  1  |    0       1       1           0
-1  0  |    0       1       1           1
+0  1  |    0       1       1           1
+1  0  |    0       1       1           0
 1  1  |    1       1       0           0
 ```
 
@@ -310,7 +310,10 @@ Two easy problems fall straight out of clearing the lowest set bit. A positive
 **power of two** has exactly one set bit by definition, since it is a single
 power of two and nothing else, so clearing that one bit must leave zero. The
 `n > 0` guard is doing real work rather than being defensive, because `0 & -1` is
-also `0` and negative inputs pass the AND test too
+also `0`, so without the guard zero would be reported as a power of two.
+Negatives are already rejected by the AND itself in Python, since their infinite
+leading ones keep `n & (n - 1)` non-zero, so zero is the single case the guard
+exists for
 
 ```python
 def is_power_of_two(n: int) -> bool:
@@ -521,9 +524,9 @@ answer's bits from the top down, exactly the way long division writes digits
   at least halves each round giving `O(log q)` rounds, and each round restarts its
   doubling from the divisor instead of resuming where the last one stopped, so it
   redoes up to `O(log q)` doublings
-- **Space Complexity:** `O(1)`, because the only storage is the four integers
-  `a`, `chunk`, `multiple`, and `quotient`, and the quotient is accumulated in
-  place rather than into any list
+- **Space Complexity:** `O(1)`, because the only storage is a fixed handful of
+  integers, `a`, `b`, `chunk`, `multiple`, and `quotient` among them, and the
+  quotient is accumulated in place rather than into any list
 
 ## Time and Space Complexity
 
@@ -548,7 +551,7 @@ problem that names a fixed width, and `k` is the number of set bits in the value
 
 | Operation                                   | Time                                                                                                                                                                                                                                    | Space                                                                            |
 | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| Divide by repeated doubling                 | `O((log q)²)`: where `q` is the quotient, since each outer round removes at least half of what remains giving `O(log q)` rounds, and each round restarts its doubling from the divisor rather than resuming, costing another `O(log q)` | `O(1)`: four integers, and the quotient is accumulated in place                  |
+| Divide by repeated doubling                 | `O((log q)²)`: where `q` is the quotient, since each outer round removes at least half of what remains giving `O(log q)` rounds, and each round restarts its doubling from the divisor rather than resuming, costing another `O(log q)` | `O(1)`: a fixed handful of integers, and the quotient is accumulated in place    |
 | Divide by subtracting one divisor at a time | `O(quotient)`: the loop count is the answer itself, so dividing `2**31 - 1` by `1` runs about two billion times and times out                                                                                                           | `O(1)`: a single counter, which is why the space bound never reveals the problem |
 | Reversing `w` bits                          | `O(w)`: one iteration per bit position, and the width is fixed by the problem at 32 rather than derived from the value                                                                                                                  | `O(1)`: one accumulator holding the reversed value so far                        |
 

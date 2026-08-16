@@ -448,7 +448,7 @@ cancelled, and the two singletons ended up on opposite sides, leaving `A = 3` an
 - **Time Complexity:** `O(n)` for `n` values, because the array is walked exactly
   twice, once to build `diff` and once to route values, and every step in both
   passes is a single constant-time bitwise operation
-- **Space Complexity:** `O(1)`, because the state is three integers regardless of
+- **Space Complexity:** `O(1)`, because the state is four integers regardless of
   input size, and the returned pair is fixed at two elements rather than growing
   with `n`
 
@@ -483,11 +483,11 @@ of a value, which is 32 for every problem in this module
 
 **The cross-collection and chain folds**
 
-| Problem               | Time                                                                                                              | Space                                                                                                                                           |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| *Missing Number*      | `O(n)`: one pass folding each index together with its value, plus the seed                                        | `O(1)`: a single accumulator, and unlike the sum-formula solution there is no intermediate value large enough to overflow a fixed-width integer |
-| *Find the Difference* | `O(m)`: where `m` is the combined length of the two strings, since every character of both is folded exactly once | `O(1)` auxiliary in principle, though `s + t` as written builds a concatenated copy costing `O(m)`, which two separate loops would avoid        |
-| *Decode XORed Array*  | `O(n)`: one XOR per encoded element, each reading only the element decoded immediately before it                  | `O(n)`: the output list of `n + 1` values, which is the answer itself, with `O(1)` auxiliary beside it                                          |
+| Problem               | Time                                                                                                              | Space                                                                                                                                          |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| *Missing Number*      | `O(n)`: one pass folding each index together with its value, plus the seed                                        | `O(1)`: a single accumulator, and unlike the sum-formula solution every intermediate value stays inside the bit width of the inputs themselves |
+| *Find the Difference* | `O(m)`: where `m` is the combined length of the two strings, since every character of both is folded exactly once | `O(1)` auxiliary in principle, though `s + t` as written builds a concatenated copy costing `O(m)`, which two separate loops would avoid       |
+| *Decode XORed Array*  | `O(n)`: one XOR per encoded element, each reading only the element decoded immediately before it                  | `O(n)`: the output list of `n + 1` values, which is the answer itself, with `O(1)` auxiliary beside it                                         |
 
 ## Summary
 

@@ -16,7 +16,7 @@ m = 5
 
 value      0   1   2   3   4   5   6   7   8   9  10  11  12
 value % 5  0   1   2   3   4   0   1   2   3   4   0   1   2
-           ^               ^   ^               ^   ^
+           ^                   ^                   ^
            these three all collapse onto residue 0
 ```
 
@@ -261,8 +261,9 @@ assert factorial_mod(2000) == math.factorial(2000) % MOD
 
 `result` never exceeds `modulus` at the top of any iteration, so `result * k` stays
 small no matter how large `n` grows, and that is the entire point of writing the
-`%` inside the loop instead of after it. Note that `*` binds tighter than `%` in
-Python, so `result * k % modulus` already means `(result * k) % modulus`
+`%` inside the loop instead of after it. Note that `*` and `%` have equal
+precedence in Python and group left to right, so `result * k % modulus` already
+means `(result * k) % modulus`
 
 **The one operation that does not distribute is division.** Taking remainders first
 and then dividing gives a different answer, as `(10 // 5) % 3` is `2` while
@@ -372,9 +373,9 @@ which is missing from the sum, so its power has to be missing from the product
 
 Step 3 also shows the modulus doing real work. The true `base` there is `3^8`,
 which is `6561`, and `% 1000` cut it down to `561` before it was ever multiplied by
-anything. Four multiplications happened in total, against the thirteen the naive
-loop would have done, and against roughly thirty-one for an exponent near two
-billion
+anything. Four rounds happened in total, seven multiplications between them,
+against the thirteen the naive loop would have done, and against roughly
+thirty-one rounds for an exponent near two billion
 
 The final `result` is `323`. Checking it directly, `3^13` is `1594323`, whose last
 three digits are `323`

@@ -467,8 +467,10 @@ digits = ['1', '6'],  cycle starts at position 1  ->  "0.1(6)"
 ```
 
 The third line is the step that gets rejected rather than executed. The loop
-condition fails before another digit is appended, which matters because appending
-first and checking afterwards would emit a spurious `6` and give `"0.1(66)"`.
+condition fails before another digit is appended, and it is the
+`remainder not in seen` half that does it: drop that half and keep only
+`while remainder`, and the loop spins on remainder 4 forever, emitting a `6` on
+every pass and never terminating.
 Keying on the digit would also fail here, since digits repeat all the time
 without the expansion being periodic, and only a repeated remainder proves the
 whole future has repeated

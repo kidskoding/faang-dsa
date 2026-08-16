@@ -599,7 +599,7 @@ so the candidate moves to 1, which fails immediately as well, and so does 2.
 Station 3 is the first candidate that survives, and it is never re-checked
 against stations 0 through 2 even though the trip has to drive through them,
 because `total` reaching 0 is the proof that the wrap-around works. Notice that
-`total` is `-3` at the moment the surviving candidate is found, so reading the
+`total` is `-6` at the moment the surviving candidate is found, so reading the
 answer off `tank` alone or bailing out early on a negative `total` both give
 the wrong result
 

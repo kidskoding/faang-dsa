@@ -24,12 +24,12 @@ event list
 
 ```text
         0    1    2    3    4    5    6    7    8    9
-   a         [==============)                            a = [1, 5), value +1
-   b                   [====================)            b = [3, 9), value +1
+   a         [===================)                       a = [1, 5), value +1
+   b                   [=============================)   b = [3, 9), value +1
 
-delta         +1        +1        -1             -1
-position       1         3         5              9
-running   0    1    1    2    2    1    1    1    1    0
+delta       +1        +1        -1                  -1
+position     1         3         5                   9
+running 0    1    1    2    2    1    1    1    1    0
 ```
 
 The `running` row is the answer to "how many intervals cover this point" at every
@@ -172,7 +172,7 @@ i    diff[i]   running    flight   seats
 
 Two rows in that second table carry the idea. Slot 4 holds a delta of zero, and the
 running total passes straight through it unchanged, which is exactly the redundancy
-the stamping version was paying for four times per booking
+the stamping version was paying for three times over on the booking `[2, 5, 25]`
 
 Slot 5 is the discarded one, and it is discarded on purpose. It holds the `-25` that
 closes the booking running through flight 5, and the recovery loop stops at `i < n`

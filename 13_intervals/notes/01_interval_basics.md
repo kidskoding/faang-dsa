@@ -11,7 +11,7 @@ Every problem in this module is about those relationships
         |    |    |    |    |    |    |    |    |    |
    a         [=========]                                  a = [1, 3]
    b                   [==============]                   b = [3, 6]
-   c                                        [====]        c = [7, 8]
+   c                                       [====]         c = [7, 8]
 ```
 
 Everything you already know how to do to an array of numbers still applies, since
@@ -132,8 +132,9 @@ event would look later than an eleven o'clock one
 Scale the question up from two intervals to `n` of them. "Could a person attend
 every one of these meetings", which is the same as asking whether any two of them
 overlap, has an obvious answer: run `overlaps` on every pair. That is `O(n²)`
-comparisons, and on the `10^4` intervals these problems hand you it is `10^8`
-tests for a question that needs one pass
+comparisons, and on the `10^4` intervals these problems hand you that is the
+`n * (n - 1) / 2` pairs, about `5 * 10^7` tests, for a question that needs one
+pass
 
 The reason it feels wasteful is that most of those pairs are absurd. You compare
 the 9am meeting against the 5pm one when there are six meetings in between. What
@@ -220,7 +221,7 @@ assert find_min_arrow_shots([[1, 2]]) == 1
 assert find_min_arrow_shots([]) == 0
 ```
 
-**Three details in those eight lines**:
+**Three details in those eleven lines**:
 
 - `key=lambda p: p[1]` sorts by end and nothing else, which is the entire
   algorithm. Keeping the same loop but sorting by start answers
@@ -251,8 +252,9 @@ The two skipped rows are the point. `[2, 8]` is a wide balloon that stretches we
 past the arrow, and it still needs no arrow of its own, because the arrow at 6
 already passes through it. Notice also that `arrow_x` is only ever moved when a
 new arrow is fired, never when a balloon is skipped. Updating it to the skipped
-balloon's end would push it rightward to 8 and then to 16, and by the last row it
-would be claiming to pop a balloon that ends before the arrow was fired
+balloon's end would push it to 8 on row two, which makes `7 > 8` false so
+`[7, 12]` gets skipped as well and pushes it on to 12 and then to 16, and the
+whole input comes back as 1 arrow instead of 2
 
 ## Intervals That Nobody Handed You
 
@@ -286,8 +288,8 @@ assert summary_ranges([]) == []
 ```
 
 `start == i` after the inner loop means the run never advanced, so it holds one
-number and gets formatted without an arrow, which is the case the third and fourth
-examples on LeetCode exist to check. The inner `while` reads `nums[i + 1]` only
+number and gets formatted without an arrow, which is the case the trailing `7` in
+the first assertion and the lone `-1` in the third exist to check. The inner `while` reads `nums[i + 1]` only
 after confirming `i + 1 < len(nums)`, and Python's `and` short-circuits, so the
 bounds check has to come first or the last run walks off the end
 
@@ -355,8 +357,8 @@ region each pair of them shares
   `start <= end`. The list is sorted by start and its intervals are pairwise
   disjoint, so it describes a set of separated stretches of the number line
 - `second_list`, a `list[list[int]]` with the same guarantees. Either list may be
-  empty, and both are at most a few hundred intervals long, with coordinates that
-  fit comfortably in an `int`
+  empty, and each holds up to 1000 intervals, with coordinates that fit
+  comfortably in an `int`
 
 **Output**: a `list[list[int]]` of the intersections, sorted by start. Each entry
 is the region covered by one interval from each input list, and single-point

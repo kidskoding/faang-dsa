@@ -144,9 +144,10 @@ assert empty == []
 **The inner range is the line people get wrong.** It is `range(r + 1, n)`, so the
 swap only ever fires for positions strictly above the diagonal. Writing
 `range(n)` instead visits every pair twice, once as `(r, c)` and once as
-`(c, r)`, and the second swap undoes the first. That version returns
-`[[1, 2, 3], [4, 5, 6], [7, 8, 9]]` on the example above, which is the input
-unchanged and looks like the function was never called. Starting at `r + 1` also
+`(c, r)`, and the second swap undoes the first, so the whole transpose becomes a
+no-op. What is left is a function that only reverses the rows, and it returns
+`[[3, 2, 1], [6, 5, 4], [9, 8, 7]]` on the example above, which is each row
+mirrored rather than the matrix rotated. Starting at `r + 1` also
 skips `(r, r)`, which is correct because a diagonal cell is its own reflection
 
 The counterclockwise version is the same two passes with the second one changed.
@@ -277,13 +278,18 @@ while (2<=1) false        stop
 out=[1,2,3,6,9,8,7,4,5]
 ```
 
-The two rejections are the whole reason the guards exist. When the centre cell 5
-was read, `top` moved past `bottom`, so the rectangle was empty from that moment
-on. The bottom pass would have walked row `bottom = 1` again and appended 5 a
-second time. Notice also the right-column pass on that same iteration ran with an
-empty `range(2, 2)` and needed no guard, because an empty `range` is already a
-no-op, whereas the two reversed loops count *downwards* and stay non-empty even
-when the rectangle has collapsed
+The two rejections are the guards doing their job. When the centre cell 5 was
+read, `top` moved past `bottom`, so the rectangle was empty from that moment on.
+On this particular input the two skipped passes would have had empty ranges
+anyway, `range(0, 0, -1)` for the bottom pass and `range(1, 1, -1)` for the left
+one, so a 3x3 survives without the guards. The inputs that need them are the
+degenerate ones. On `[[1, 2, 3]]` the bottom pass runs `range(1, -1, -1)` after
+`top` has passed `bottom`, walks the only row backwards and appends 2 and 1 a
+second time; on `[[1], [2], [3]]` the left pass runs `range(1, 0, -1)` and
+re-appends 2. Notice also the right-column pass on that same 3x3 iteration ran
+with an empty `range(2, 2)` and needed no guard, because a forward `range`
+collapses to a no-op on its own, whereas a reversed `range` counts *downwards*
+and can still be non-empty over cells the earlier passes already took
 
 The same four boundaries generate a spiral instead of reading one. Nothing about
 the walk changes, because only the body of each loop flips from `append` to an
@@ -585,7 +591,7 @@ after >>= 1
 
 The rejected cells are the ones that prove the encoding works. Cell `(0, 1)` is
 live but has only one live neighbour, so it fails the survival rule and no bit is
-written, leaving it at `1`. Two steps later, cell `(1, 1)` counts its neighbours
+written, leaving it at `1`. Three steps later, cell `(1, 1)` counts its neighbours
 and reads `board[0][1] & 1`, which is still `1`, so `(0, 1)` correctly
 contributes to that count even though it has already been judged and condemned.
 Cell `(1, 0)` shows the other direction: it was written as `2` early in the pass,
@@ -651,7 +657,8 @@ columns of a rectangular one, so `R * C` is the number of cells
   because a transpose and a reversal are both made only of swaps, and a swap
   moves two values simultaneously so it can never lose one
   - The transpose loop must be `for c in range(r + 1, n)`. Using `range(n)` swaps
-    every pair twice and leaves the matrix exactly as it started
+    every pair twice, so the transpose cancels itself out and `rotate` is left
+    only mirroring each row
   - Counterclockwise is transpose plus `matrix.reverse()`, which reorders whole
     rows, as opposed to `row.reverse()`, which reorders the cells inside one row
 - Spiral traversal needs no visited grid, because the unread cells always form a

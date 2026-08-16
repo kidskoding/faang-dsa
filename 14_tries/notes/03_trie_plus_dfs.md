@@ -61,8 +61,8 @@ Two separate things go wrong, and both point at the same fix:
   starting cells launches a fresh search per word, so the entire cost of solving
   the problem once gets multiplied by `W`, and `W` can be in the thousands
 - **Shared prefixes are re-explored, once per word.** Given `oa`, `oat`, and
-  `oath`, the search for `oath` walks the same two cells that the search for `oat`
-  already walked, and neither search knows the other happened
+  `oath`, the search for `oath` walks the same three cells that the search for
+  `oat` already walked, and neither search knows the other happened
 
 The second failure is the informative one. Those three searches are identical
 until they diverge, so the work is only duplicated because the words are stored in
@@ -307,9 +307,11 @@ assert find_all_concatenated_words([]) == []
   the answer would be the whole list. Blocking the one cut that consumes the entire
   string from position zero is enough, since any other successful match leaves a
   non-empty suffix that must itself be built from stored words
-- `break` on the missing child, rather than `continue`, is what keeps this
-  quadratic instead of quadratic-with-a-restart. Once the prefix is dead, extending
-  it cannot revive it, so there is nothing left to try from this start
+- `break` on the missing child, rather than skipping that character and reading
+  on, is what keeps the scan from each start linear in the remaining length. Once
+  the prefix is dead, extending it cannot revive it, so there is nothing left to
+  try from this start — and a literal `continue` here would not even run, since
+  `node` is already `None` and the next iteration crashes on `node.children`
 
 ## Candidates That Fit The Columns
 
@@ -449,11 +451,11 @@ nodes ending a value:
 graph TD
     r(("root")) --> b0(("0"))
     r --> b1(("1"))
-    b0 --> b00(("0"))
     b0 --> b01(("1"))
-    b00 --> n2["0 = 2"]
-    b01 --> n5["1 = 5"]
+    b01 --> n2["0 = 2"]
+    b1 --> b10(("0"))
     b1 --> b11(("1"))
+    b10 --> n5["1 = 5"]
     b11 --> n6["0 = 6"]
 ```
 
@@ -578,10 +580,10 @@ width, and `C` is the total number of characters across all stored words
 
 **Word Search II**
 
-| Approach                         | Time                                                                                                                                                                                                                                                             | Space                                                                                                                                                                                               |
-| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| One trie, one sweep              | `O(C + m * n * 4 * 3^(L - 1))`: `O(C)` to build the trie, then each of the `m * n` starts has 4 first moves and at most 3 onward moves per step since the cell it came from is marked, with `L` bounding the depth because that is the deepest path the trie has | `O(C)`: one node per distinct prefix character across all words, plus `O(L)` for the recursion stack, which is dominated by the trie unless a single word is longer than the whole rest of the list |
-| A separate board search per word | `O(W * m * n * 4 * 3^(L - 1))`: the same sweep repeated once per word, with nothing shared between words that share a prefix                                                                                                                                     | `O(L)`: only the recursion stack, since no structure is built, which is the one thing this version does better                                                                                      |
+| Approach                         | Time                                                                                                                                                                                                                                                             | Space                                                                                                                                                                                          |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| One trie, one sweep              | `O(C + m * n * 4 * 3^(L - 1))`: `O(C)` to build the trie, then each of the `m * n` starts has 4 first moves and at most 3 onward moves per step since the cell it came from is marked, with `L` bounding the depth because that is the deepest path the trie has | `O(C)`: one node per distinct prefix character across all words, plus `O(L)` for the recursion stack, which the trie term always dominates since `C` counts that longest word's characters too |
+| A separate board search per word | `O(W * m * n * 4 * 3^(L - 1))`: the same sweep repeated once per word, with nothing shared between words that share a prefix                                                                                                                                     | `O(L)`: only the recursion stack, since no structure is built, which is the one thing this version does better                                                                                 |
 
 The `3^(L - 1)` factor is a loose ceiling that assumes the trie never prunes. In
 practice the dead-prefix return cuts branches within two or three characters,
@@ -596,12 +598,12 @@ because most letter sequences on a board are not prefixes of anything
 
 **The other trie-guided searches in this module**
 
-| Problem                       | Time                                                                                                                                                                                                                                                                                      | Space                                                                                                                               |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Concatenated Words            | `O(C + n * L²)`: for each of `n` words, each of `L` start positions walks at most `L` characters forward, and the memo means each start is solved once, against `O(n * 2^L)` if every combination of cuts were retried                                                                    | `O(C)`: the trie, plus `O(L)` for the memo and `O(L)` recursion depth per word                                                      |
-| Word Squares                  | `O(C * L)` to build, then output-sensitive: each row's candidate list holds only words matching the forced prefix, so the branching factor is the number of such words rather than `n`, and the search is still exponential in `k` in the worst case where every word shares every prefix | `O(C * L)`: each word's index is appended to `L + 1` nodes along its path, which is the price of the constant-time candidate lookup |
-| Longest Common Suffix Queries | `O(C + Q)`: one insert per container word and one walk per query, where `Q` is the total length of all query words, against `O(C * Q)` for comparing every query against every container word                                                                                             | `O(C)`: one node per distinct reversed prefix, each holding a single cached index                                                   |
-| Palindrome Pairs              | `O(C * L)`: each word walks the trie once, and each stopping point costs a linear palindrome check on the leftover characters                                                                                                                                                             | `O(C)` for the trie, plus the palindrome index lists stored on the nodes                                                            |
+| Problem                       | Time                                                                                                                                                                                                                                                                                  | Space                                                                                                                                                                                                  |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Concatenated Words            | `O(C + n * L²)`: for each of `n` words, each of `L` start positions walks at most `L` characters forward, and the memo means each start is solved once, against `O(n * 2^L)` if every combination of cuts were retried                                                                | `O(C)`: the trie, plus `O(L)` for the memo and `O(L)` recursion depth per word                                                                                                                         |
+| Word Squares                  | `O(C)` to build, then output-sensitive: each row's candidate list holds only words matching the forced prefix, so the branching factor is the number of such words rather than `n`, and the search is still exponential in `k` in the worst case where every word shares every prefix | `O(C)`: each word's index is appended to the `L + 1` nodes along its path, so the index lists hold one entry per character plus one per word, which is the price of the constant-time candidate lookup |
+| Longest Common Suffix Queries | `O(C + Q)`: one insert per container word and one walk per query, where `Q` is the total length of all query words, against `O(C * Q)` for comparing every query against every container word                                                                                         | `O(C)`: one node per distinct reversed prefix, each holding a single cached index                                                                                                                      |
+| Palindrome Pairs              | `O(C * L)`: each word walks the trie once, and each stopping point costs a linear palindrome check on the leftover characters                                                                                                                                                         | `O(C)` for the trie, plus the palindrome index lists stored on the nodes                                                                                                                               |
 
 ## Summary
 

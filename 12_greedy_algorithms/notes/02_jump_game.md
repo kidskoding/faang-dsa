@@ -537,7 +537,7 @@ pop (15, False) steps=3    -> (20, False) push
 pop (7, True) steps=3      -> position == x, answer 3
 ```
 
-Three rejections, each for a different reason, and the third is the one to
+Two rejections, each for a different reason, and the second is the one to
 remember. Position 12 is a legal arithmetic result that is simply off limits, and
 without the `blocked` test the search would route through it and return a shorter
 wrong answer

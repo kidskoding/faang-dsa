@@ -76,11 +76,12 @@ problems that ask prefix questions are almost always design problems that fire
 thousands of queries at a dictionary of thousands of words. That product is what
 times out
 
-Look at *what* the scan spends its time on rather than just at the bound. Testing
-`car` against `card` compares `c`, `a`, `r`. Testing it against `care` compares
-`c`, `a`, `r` again. Testing it against `car` compares them a third time. The
-same three comparisons are redone once per stored word, and they are redone on
-every future query too, because a set forgets everything between calls
+Look at *what* the scan spends its time on rather than just at the bound. Take
+the query `cab`, which nothing matches, so the loop never gets to stop early.
+Testing it against `car` compares `c`, `a`, `b`. Testing it against `card`
+compares `c`, `a`, `b` again. Testing it against `care` compares them a third
+time. The same three comparisons are redone once per stored word, and they are
+redone on every future query too, because a set forgets everything between calls
 
 The wasted work has an obvious shape: it is exactly the shared opening of the
 words. So store the shared opening once, walk it once, and the single walk
@@ -334,25 +335,25 @@ is that idea in its plainest form. Keep `prefix_count`, bumped at every node the
 insert passes through, and `word_count`, bumped only at the final node
 
 ```python
-class CountingNode:
+class TrieIINode:
     def __init__(self) -> None:
-        self.children: dict[str, CountingNode] = {}
+        self.children: dict[str, TrieIINode] = {}
         self.word_count: int = 0
         self.prefix_count: int = 0
 
 
 class TrieII:
     def __init__(self) -> None:
-        self.root = CountingNode()
+        self.root = TrieIINode()
 
     def insert(self, word: str) -> None:
         node = self.root
         for ch in word:
-            node = node.children.setdefault(ch, CountingNode())
+            node = node.children.setdefault(ch, TrieIINode())
             node.prefix_count += 1
         node.word_count += 1
 
-    def _walk(self, text: str) -> CountingNode | None:
+    def _walk(self, text: str) -> TrieIINode | None:
         node = self.root
         for ch in text:
             if ch not in node.children:

@@ -367,8 +367,9 @@ assert convex_hull([(0, 0), (0, 0)]) == [(0, 0)]
   lexicographically. The `set` removes duplicate points, which a repeated point needs
   because `cross` reads two copies of the same point as a zero turn: the `<= 0`
   condition then pops one copy back off, so most duplicates are harmless, but an input
-  that is nothing *but* copies of one point never reaches a pop and comes back as that
-  point listed twice instead of once
+  that is nothing *but* copies of one point pops down to a single entry and then
+  re-pushes, so each chain ends holding two copies and the point comes back listed
+  twice instead of once
 - Two passes are needed because sorting by `x` gives no information about whether a
   point belongs above or below the shape. The lower pass finds the bottom boundary,
   the reversed pass finds the top, and together they close the loop

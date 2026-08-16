@@ -282,10 +282,12 @@ assert empty.search("a") is False
 - `elif budget == 1` is what stops a second mismatch, since after paying once the
   recursive call receives `0` and its own `elif` can never fire again, so the rest
   of that path is forced to match character for character
-- `md.search("hell")` is `False` for a reason that has nothing to do with the
-  budget. The recursion ends at the node for `hell`, which exists because `hello`
-  passes through it, but `is_word` is not set there so the base case rejects it,
-  exactly as `search("ca")` did above
+- `md.search("hell")` is `False` because the budget is never spent. The only
+  length-four path is the free walk `h`, `e`, `l`, `l`, so the base case is
+  reached with `budget == 1` and fails on its first half. Adding `hell` to the
+  dictionary leaves the answer `False`, which is what separates this from
+  `search("ca")` above: there the `is_word` half did the rejecting, here the
+  "exactly" rule does
 
 ## Changing What Goes In Rather Than How You Search
 
@@ -344,7 +346,8 @@ No stored word is longer than `longest`, so walking further back than that can
 only fall off a trie that has no nodes at those depths, and `default=0` keeps the
 `max` from raising on an empty word list
 
-Two more transformations round out the section:
+Two more transformations round out the section, alongside the one problem here
+that does change the search:
 
 - *Prefix And Suffix Search* has to filter by a prefix and a suffix at once, and a
   trie can only anchor at the start of a key. Insert every `suffix + "#" + word`

@@ -168,7 +168,8 @@ assert min_meeting_rooms([]) == 0
 
 `best = max(best, rooms)` sits inside the loop rather than being read off at the
 end, because `rooms` finishes at whatever is still running after the last start,
-which is usually 1 and never the peak.
+which need not be the peak. On the five meetings traced below it ends at 1 while
+the peak was 3.
 
 **The same function with one comparison changed** solves *Divide Intervals Into
 Minimum Number of Groups*, where you must split intervals into groups with no
@@ -274,9 +275,11 @@ so the only way the size grows is a start that found no free room, and it never
 falls.
 
 One `if` rather than a `while` is enough, and this is the line people question.
-Each iteration adds exactly one meeting, so it can consume at most one freed room,
-and freeing several rooms at once would not change the size. A `while` here is not
-wrong, it is just wasted work.
+Each iteration adds exactly one meeting, so it can consume at most one freed room.
+A `while` here is not merely wasted work, it is wrong: several pops against a
+single push shrink the heap below its high-water mark, and `len(in_use)` then
+reports the rooms busy at the last start rather than the peak, answering 1 instead
+of 3 on the five meetings above.
 
 **Which of the two to write** depends on what the problem wants back:
 
@@ -464,8 +467,9 @@ assert [
 assert MyCalendarThree().book(0, 1) == 1
 ```
 
-`defaultdict(int)` matters because two bookings can share a boundary, and
-`self.delta[10] += 1` twice must accumulate to `2` rather than overwrite. Ends are
+`defaultdict(int)` matters because `+=` on a plain `dict` raises `KeyError` the
+first time a boundary appears, and because two bookings can share a boundary, so
+`self.delta[10] += 1` twice must accumulate to `2`. Ends are
 subtracted at the end coordinate itself, so a booking ending at 10 and one
 starting at 10 cancel at that key and never register as concurrent, which is the
 half-open convention expressed as arithmetic. This delta encoding generalises well
@@ -502,7 +506,8 @@ Flowers here bloom on **inclusive** ranges, so a flower starting exactly at `whe
 counts as open, which needs `bisect_right` to place the query past its equals, and
 a flower ending exactly at `when` is still blooming and must not be subtracted,
 which needs `bisect_left` to stop before its equals. Swap the two and every query
-landing on a boundary is off by one.
+landing on a boundary comes out too low, by one for each interval endpoint sitting
+exactly on it.
 
 *Minimum Interval to Include Each Query* wants the shortest covering interval
 instead of the count, and the queries arrive unsorted. Sorting the queries and
