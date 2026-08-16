@@ -1,6 +1,7 @@
 from problem_set.rotated_array_problems import (
     find_min_rotated,
     find_min_rotated_ii,
+    peak_index_in_mountain_array,
     search_rotated,
     search_rotated_ii,
 )
@@ -88,3 +89,15 @@ def test_find_min_rotated_ii_single():
 
 def test_find_min_rotated_ii_all_duplicates():
     assert find_min_rotated_ii([2, 2, 2, 2]) == 2
+
+
+def test_peak_index_in_mountain_array_minimal():
+    assert peak_index_in_mountain_array([0, 1, 0]) == 1
+
+
+def test_peak_index_in_mountain_array_longer_descent():
+    assert peak_index_in_mountain_array([0, 2, 1, 0]) == 1
+
+
+def test_peak_index_in_mountain_array_late_peak():
+    assert peak_index_in_mountain_array([3, 4, 5, 1]) == 2

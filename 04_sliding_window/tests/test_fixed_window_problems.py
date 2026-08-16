@@ -1,5 +1,9 @@
 from problem_set.fixed_window_problems import (
+    contains_nearby_duplicate,
+    count_good_substrings,
     find_max_average,
+    max_satisfied,
+    max_score,
     max_vowels,
     num_of_subarrays,
 )
@@ -43,3 +47,46 @@ def test_num_of_subarrays_mostly_qualifying():
 
 def test_num_of_subarrays_none_qualify():
     assert num_of_subarrays([1, 1, 1, 1], 2, 5) == 0
+
+
+def test_contains_nearby_duplicate_within_k():
+    assert contains_nearby_duplicate([1, 2, 3, 1], 3) is True
+
+
+def test_contains_nearby_duplicate_outside_k():
+    assert contains_nearby_duplicate([1, 2, 3, 1, 2, 3], 2) is False
+
+
+def test_contains_nearby_duplicate_adjacent():
+    assert contains_nearby_duplicate([1, 0, 1, 1], 1) is True
+
+
+def test_count_good_substrings_one():
+    assert count_good_substrings("xyzzaz") == 1
+
+
+def test_count_good_substrings_several():
+    assert count_good_substrings("aababcabc") == 4
+
+
+def test_max_satisfied_uses_window():
+    customers = [1, 0, 1, 2, 1, 1, 7, 5]
+    grumpy = [0, 1, 0, 1, 0, 1, 0, 1]
+
+    assert max_satisfied(customers, grumpy, 3) == 16
+
+
+def test_max_satisfied_single_minute():
+    assert max_satisfied([1], [0], 1) == 1
+
+
+def test_max_score_takes_from_both_ends():
+    assert max_score([1, 2, 3, 4, 5, 6, 1], 3) == 12
+
+
+def test_max_score_takes_all():
+    assert max_score([2, 2, 2], 2) == 4
+
+
+def test_max_score_whole_array():
+    assert max_score([9, 7, 7, 9, 7, 7, 9], 7) == 55

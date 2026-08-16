@@ -1,6 +1,10 @@
 from problem_set.window_max_min_problems import (
+    continuous_subarrays,
+    count_subarrays,
+    find_max_value_of_equation,
     longest_subarray_within_limit,
     max_sliding_window,
+    maximum_robots,
     min_sliding_window,
     shortest_subarray,
 )
@@ -60,3 +64,35 @@ def test_shortest_subarray_with_negative():
 
 def test_shortest_subarray_normal():
     assert shortest_subarray([84, -37, 32, 40, 95], 167) == 3
+
+
+def test_continuous_subarrays_normal():
+    assert continuous_subarrays([5, 4, 2, 4]) == 8
+
+
+def test_continuous_subarrays_all_within_range():
+    assert continuous_subarrays([1, 2, 3]) == 6
+
+
+def test_find_max_value_of_equation_normal():
+    assert find_max_value_of_equation([[1, 3], [2, 0], [5, 10], [6, -10]], 1) == 4
+
+
+def test_find_max_value_of_equation_wider_k():
+    assert find_max_value_of_equation([[0, 0], [3, 0], [9, 2]], 3) == 3
+
+
+def test_maximum_robots_normal():
+    assert maximum_robots([3, 6, 1, 3, 4], [2, 1, 3, 4, 5], 25) == 3
+
+
+def test_maximum_robots_budget_too_small():
+    assert maximum_robots([11, 12, 19], [10, 8, 7], 19) == 0
+
+
+def test_count_subarrays_normal():
+    assert count_subarrays([1, 3, 5, 2, 7, 5], 1, 5) == 2
+
+
+def test_count_subarrays_all_equal():
+    assert count_subarrays([1, 1, 1, 1], 1, 1) == 10

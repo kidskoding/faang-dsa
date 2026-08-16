@@ -1,10 +1,15 @@
 from problem_set.frequency_window_problems import (
+    balanced_string,
     character_replacement,
     check_inclusion,
     find_anagrams,
+    find_substring,
     length_of_longest_substring_k_distinct,
     min_window,
+    min_window_subsequence,
+    num_subarrays_with_sum,
     number_of_subarrays,
+    number_of_substrings,
     subarrays_with_k_distinct,
     total_fruit,
 )
@@ -136,3 +141,52 @@ def test_number_of_subarrays_normal_two():
 
 def test_number_of_subarrays_single_odd():
     assert number_of_subarrays([1], 1) == 1
+
+
+def test_number_of_substrings_normal():
+    assert number_of_substrings("abcabc") == 10
+
+
+def test_number_of_substrings_skewed():
+    assert number_of_substrings("aaacb") == 3
+
+
+def test_number_of_substrings_minimum():
+    assert number_of_substrings("abc") == 1
+
+
+def test_num_subarrays_with_sum_normal():
+    assert num_subarrays_with_sum([1, 0, 1, 0, 1], 2) == 4
+
+
+def test_num_subarrays_with_sum_all_zeros():
+    assert num_subarrays_with_sum([0, 0, 0, 0, 0], 0) == 15
+
+
+def test_balanced_string_already_balanced():
+    assert balanced_string("QWER") == 0
+
+
+def test_balanced_string_one_replacement():
+    assert balanced_string("QQWE") == 1
+
+
+def test_balanced_string_two_replacements():
+    assert balanced_string("QQQW") == 2
+
+
+def test_find_substring_normal():
+    assert find_substring("barfoothefoobarman", ["foo", "bar"]) == [0, 9]
+
+
+def test_find_substring_no_match():
+    words = ["word", "good", "best", "word"]
+    assert find_substring("wordgoodgoodgoodbestword", words) == []
+
+
+def test_min_window_subsequence_normal():
+    assert min_window_subsequence("abcdebdde", "bde") == "bcde"
+
+
+def test_min_window_subsequence_no_window():
+    assert min_window_subsequence("abc", "xyz") == ""
