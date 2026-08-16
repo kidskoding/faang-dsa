@@ -1,6 +1,7 @@
 from problem_set.multi_pattern_problems import (
     LRUCache,
     alien_order,
+    count_subgraphs_for_each_diameter,
     find_ladders,
     longest_dup_substring,
     max_result,
@@ -71,3 +72,15 @@ def test_max_result_large_jumps():
 
 def test_max_result_all_negative_middle():
     assert max_result([1, -5, -20, 4, -1, 3, -6, -3], 2) == 0
+
+
+def test_count_subgraphs_for_each_diameter_path():
+    assert count_subgraphs_for_each_diameter(4, [[1, 2], [2, 3], [2, 4]]) == [3, 4, 0]
+
+
+def test_count_subgraphs_for_each_diameter_two_nodes():
+    assert count_subgraphs_for_each_diameter(2, [[1, 2]]) == [1]
+
+
+def test_count_subgraphs_for_each_diameter_star():
+    assert count_subgraphs_for_each_diameter(3, [[1, 2], [2, 3]]) == [2, 1]

@@ -165,3 +165,9 @@ interview patterns working together; neither pattern alone finishes them.
 - solves: `min_camera_cover`
 - chains: tree post-order DFS + greedy state machine
 - Pattern: each subtree reports covered / needs-camera / has-camera, and the parent greedily places cameras on demand.
+
+### 24. [Count Subtrees With Max Distance Between Cities](https://leetcode.com/problems/count-subtrees-with-max-distance-between-cities/)
+
+- solves: `count_subgraphs_for_each_diameter`
+- chains: bitmask subset enumeration + connectivity check + tree diameter by BFS
+- Pattern: n is at most 15, so enumerate every subset of cities, keep the ones that stay connected, and measure each survivor's diameter.

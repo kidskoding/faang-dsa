@@ -292,3 +292,12 @@ def min_camera_cover(root: TreeNode | None) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def count_subgraphs_for_each_diameter(n: int, edges: list[list[int]]) -> list[int]:
+    # Problem 24: Count Subtrees With Max Distance Between Cities
+    # Key idea: enumerate every subset, keep the connected ones, take each one's diameter.
+    # Time:
+    # Space:
+
+    raise NotImplementedError

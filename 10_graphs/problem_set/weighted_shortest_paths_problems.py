@@ -3,7 +3,7 @@ def calc_equation(
     values: list[float],
     queries: list[list[str]],
 ) -> list[float]:
-    # Problem 59: Evaluate Division
+    # Problem 58: Evaluate Division
     # Key idea: weighted graph traversal.
     # Time:
     # Space:
@@ -12,7 +12,7 @@ def calc_equation(
 
 
 def network_delay_time(times: list[list[int]], n: int, k: int) -> int:
-    # Problem 60: Network Delay Time
+    # Problem 59: Network Delay Time
     # Key idea: shortest paths in a weighted directed graph.
     # Time:
     # Space:
@@ -21,7 +21,7 @@ def network_delay_time(times: list[list[int]], n: int, k: int) -> int:
 
 
 def find_cheapest_price(n: int, flights: list[list[int]], src: int, dst: int, k: int) -> int:
-    # Problem 61: Cheapest Flights Within K Stops
+    # Problem 60: Cheapest Flights Within K Stops
     # Key idea: shortest paths with an extra stop-count state.
     # Time:
     # Space:
@@ -30,7 +30,7 @@ def find_cheapest_price(n: int, flights: list[list[int]], src: int, dst: int, k:
 
 
 def minimum_effort_path(heights: list[list[int]]) -> int:
-    # Problem 62: Path With Minimum Effort
+    # Problem 61: Path With Minimum Effort
     # Key idea: shortest path where path cost is the maximum edge effort.
     # Time:
     # Space:
@@ -45,7 +45,7 @@ def max_probability(
     start: int,
     end: int,
 ) -> float:
-    # Problem 63: Path With Maximum Probability
+    # Problem 62: Path With Maximum Probability
     # Key idea: Dijkstra-style traversal maximizing probability.
     # Time:
     # Space:
@@ -54,7 +54,7 @@ def max_probability(
 
 
 def has_path(maze: list[list[int]], start: list[int], destination: list[int]) -> bool:
-    # Problem 64: The Maze
+    # Problem 63: The Maze
     # Key idea: DFS/BFS with rolling movement until walls.
     # Time:
     # Space:
@@ -63,7 +63,7 @@ def has_path(maze: list[list[int]], start: list[int], destination: list[int]) ->
 
 
 def shortest_distance(maze: list[list[int]], start: list[int], destination: list[int]) -> int:
-    # Problem 65: The Maze II
+    # Problem 64: The Maze II
     # Key idea: Dijkstra over rolling-movement distances.
     # Time:
     # Space:
@@ -72,7 +72,7 @@ def shortest_distance(maze: list[list[int]], start: list[int], destination: list
 
 
 def find_the_city(n: int, edges: list[list[int]], distance_threshold: int) -> int:
-    # Problem 66: Find The City With The Smallest Number Of Neighbors At A Threshold Distance
+    # Problem 65: Find The City With The Smallest Number Of Neighbors At A Threshold Distance
     # Key idea: all-pairs or repeated shortest paths.
     # Time:
     # Space:
@@ -81,7 +81,7 @@ def find_the_city(n: int, edges: list[list[int]], distance_threshold: int) -> in
 
 
 def minimum_obstacles(grid: list[list[int]]) -> int:
-    # Problem 67: Minimum Obstacle Removal To Reach Corner
+    # Problem 66: Minimum Obstacle Removal To Reach Corner
     # Key idea: 0-1 BFS over a grid.
     # Time:
     # Space:
@@ -90,7 +90,7 @@ def minimum_obstacles(grid: list[list[int]]) -> int:
 
 
 def min_cost(grid: list[list[int]]) -> int:
-    # Problem 68: Minimum Cost To Make At Least One Valid Path In A Grid
+    # Problem 67: Minimum Cost To Make At Least One Valid Path In A Grid
     # Key idea: 0-1 BFS over grid directions.
     # Time:
     # Space:
@@ -99,7 +99,7 @@ def min_cost(grid: list[list[int]]) -> int:
 
 
 def swim_in_water(grid: list[list[int]]) -> int:
-    # Problem 69: Swim In Rising Water
+    # Problem 68: Swim In Rising Water
     # Key idea: priority-queue traversal over a weighted grid.
     # Time:
     # Space:
@@ -108,7 +108,7 @@ def swim_in_water(grid: list[list[int]]) -> int:
 
 
 def minimum_cost(max_time: int, edges: list[list[int]], passing_fees: list[int]) -> int:
-    # Problem 70: Minimum Cost To Reach Destination In Time
+    # Problem 69: Minimum Cost To Reach Destination In Time
     # Key idea: shortest path with time as part of the state.
     # Time:
     # Space:
@@ -117,7 +117,7 @@ def minimum_cost(max_time: int, edges: list[list[int]], passing_fees: list[int])
 
 
 def second_minimum_time(n: int, edges: list[list[int]], time: int, change: int) -> int:
-    # Problem 71: Second Minimum Time To Reach Destination
+    # Problem 70: Second Minimum Time To Reach Destination
     # Key idea: track first and second shortest arrival times.
     # Time:
     # Space:
@@ -126,7 +126,7 @@ def second_minimum_time(n: int, edges: list[list[int]], time: int, change: int) 
 
 
 def min_cost_connect_points(points: list[list[int]]) -> int:
-    # Problem 72: Min Cost To Connect All Points
+    # Problem 71: Min Cost To Connect All Points
     # Key idea: minimum spanning tree over complete graph distances.
     # Time:
     # Space:

@@ -2,7 +2,6 @@ from problem_set.components_cycles_bipartite_problems import (
     accounts_merge,
     closest_meeting_node,
     count_components,
-    count_subgraphs_for_each_diameter,
     find_redundant_connection,
     find_redundant_directed_connection,
     find_smallest_set_of_vertices,
@@ -129,15 +128,3 @@ def test_find_redundant_directed_connection_two_parents_in_cycle():
 
 def test_find_redundant_directed_connection_returns_last_candidate():
     assert find_redundant_directed_connection([[2, 1], [3, 1], [4, 2], [1, 4]]) == [2, 1]
-
-
-def test_count_subgraphs_for_each_diameter_path():
-    assert count_subgraphs_for_each_diameter(4, [[1, 2], [2, 3], [2, 4]]) == [3, 4, 0]
-
-
-def test_count_subgraphs_for_each_diameter_two_nodes():
-    assert count_subgraphs_for_each_diameter(2, [[1, 2]]) == [1]
-
-
-def test_count_subgraphs_for_each_diameter_star():
-    assert count_subgraphs_for_each_diameter(3, [[1, 2], [2, 3]]) == [2, 1]

@@ -1,5 +1,5 @@
 def can_finish(num_courses: int, prerequisites: list[list[int]]) -> bool:
-    # Problem 39: Course Schedule
+    # Problem 38: Course Schedule
     # Key idea: detect cycles in a directed dependency graph.
     # Time:
     # Space:
@@ -8,7 +8,7 @@ def can_finish(num_courses: int, prerequisites: list[list[int]]) -> bool:
 
 
 def find_order(num_courses: int, prerequisites: list[list[int]]) -> list[int]:
-    # Problem 40: Course Schedule II
+    # Problem 39: Course Schedule II
     # Key idea: return a topological ordering.
     # Time:
     # Space:
@@ -17,7 +17,7 @@ def find_order(num_courses: int, prerequisites: list[list[int]]) -> list[int]:
 
 
 def all_paths_source_target(graph: list[list[int]]) -> list[list[int]]:
-    # Problem 41: All Paths From Source To Target
+    # Problem 40: All Paths From Source To Target
     # Key idea: backtrack through a DAG.
     # Time:
     # Space:
@@ -26,7 +26,7 @@ def all_paths_source_target(graph: list[list[int]]) -> list[list[int]]:
 
 
 def eventual_safe_nodes(graph: list[list[int]]) -> list[int]:
-    # Problem 42: Find Eventual Safe States
+    # Problem 41: Find Eventual Safe States
     # Key idea: detect nodes that cannot reach a cycle.
     # Time:
     # Space:
@@ -35,7 +35,7 @@ def eventual_safe_nodes(graph: list[list[int]]) -> list[int]:
 
 
 def find_min_height_trees(n: int, edges: list[list[int]]) -> list[int]:
-    # Problem 43: Minimum Height Trees
+    # Problem 42: Minimum Height Trees
     # Key idea: peel leaves to find tree centers.
     # Time:
     # Space:
@@ -44,7 +44,7 @@ def find_min_height_trees(n: int, edges: list[list[int]]) -> list[int]:
 
 
 def num_of_minutes(n: int, head_id: int, manager: list[int], inform_time: list[int]) -> int:
-    # Problem 44: Time Needed To Inform All Employees
+    # Problem 43: Time Needed To Inform All Employees
     # Key idea: DFS/BFS over a management tree.
     # Time:
     # Space:
@@ -57,7 +57,7 @@ def check_if_prerequisite(
     prerequisites: list[list[int]],
     queries: list[list[int]],
 ) -> list[bool]:
-    # Problem 45: Course Schedule IV
+    # Problem 44: Course Schedule IV
     # Key idea: transitive prerequisite reachability.
     # Time:
     # Space:
@@ -66,7 +66,7 @@ def check_if_prerequisite(
 
 
 def find_itinerary(tickets: list[list[str]]) -> list[str]:
-    # Problem 46: Reconstruct Itinerary
+    # Problem 45: Reconstruct Itinerary
     # Key idea: graph traversal with lexical ordering constraints.
     # Time:
     # Space:
@@ -75,7 +75,7 @@ def find_itinerary(tickets: list[list[str]]) -> list[str]:
 
 
 def get_ancestors(n: int, edges: list[list[int]]) -> list[list[int]]:
-    # Problem 47: All Ancestors Of A Node In A Directed Acyclic Graph
+    # Problem 46: All Ancestors Of A Node In A Directed Acyclic Graph
     # Key idea: propagate ancestor sets through topological order.
     # Time:
     # Space:
@@ -84,7 +84,7 @@ def get_ancestors(n: int, edges: list[list[int]]) -> list[list[int]]:
 
 
 def minimum_time(n: int, relations: list[list[int]], time: list[int]) -> int:
-    # Problem 48: Parallel Courses III
+    # Problem 47: Parallel Courses III
     # Key idea: longest path in a DAG.
     # Time:
     # Space:
@@ -93,7 +93,7 @@ def minimum_time(n: int, relations: list[list[int]], time: list[int]) -> int:
 
 
 def largest_path_value(colors: str, edges: list[list[int]]) -> int:
-    # Problem 49: Largest Color Value In A Directed Graph
+    # Problem 48: Largest Color Value In A Directed Graph
     # Key idea: topological DP with cycle detection.
     # Time:
     # Space:
@@ -102,7 +102,7 @@ def largest_path_value(colors: str, edges: list[list[int]]) -> int:
 
 
 def longest_increasing_path(matrix: list[list[int]]) -> int:
-    # Problem 50: Longest Increasing Path In A Matrix
+    # Problem 49: Longest Increasing Path In A Matrix
     # Key idea: memoized DFS on a directed acyclic grid graph.
     # Time:
     # Space:

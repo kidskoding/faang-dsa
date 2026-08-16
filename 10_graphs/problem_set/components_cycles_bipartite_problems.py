@@ -115,12 +115,3 @@ def find_redundant_directed_connection(edges: list[list[int]]) -> list[int]:
     # Space:
 
     raise NotImplementedError
-
-
-def count_subgraphs_for_each_diameter(n: int, edges: list[list[int]]) -> list[int]:
-    # Problem 38: Count Subtrees With Max Distance Between Cities
-    # Key idea: enumerate every subset, keep the connected ones, take each one's diameter.
-    # Time:
-    # Space:
-
-    raise NotImplementedError
