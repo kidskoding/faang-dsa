@@ -50,7 +50,7 @@ not a template to copy.
 | Pass   | When                         | What carries it                                            |
 | ------ | ---------------------------- | ---------------------------------------------------------- |
 | Learn  | first read                   | prose: brute force → why it fails → insight → code → trace |
-| Revise | before practice, weeks later | compact complexity, summary, and interview checklist        |
+| Revise | before practice, weeks later | compact complexity, summary, and interview checklist       |
 
 The prose teaches; the tail is what they reread at 11pm before a mock. Both are
 required. A note that is all prose can't be revised from; a note that is all
@@ -579,7 +579,6 @@ interviewers probe and the one most likely to be wrong.
 After the code, walk the lines that carry the idea: why the tuple is ordered that
 way, why the check is on roots and not nodes, what breaks if a line is removed.
 Use `text` blocks for traces and figures.
-
 
 ### The dry run is the load-bearing section
 
