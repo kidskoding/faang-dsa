@@ -1,10 +1,14 @@
 from problem_set.array_problems import (
     RandomizedSet,
+    find_duplicate,
     find_duplicates,
     first_missing_positive,
     next_permutation,
     rotate,
+    rotate_image,
     set_zeroes,
+    sort_colors,
+    spiral_order,
 )
 
 
@@ -123,3 +127,78 @@ def test_next_permutation_single():
     nums = [1]
     next_permutation(nums)
     assert nums == [1]
+
+
+def test_sort_colors_mixed():
+    nums = [2, 0, 2, 1, 1, 0]
+    sort_colors(nums)
+    assert nums == [0, 0, 1, 1, 2, 2]
+
+
+def test_sort_colors_one_of_each():
+    nums = [2, 0, 1]
+    sort_colors(nums)
+    assert nums == [0, 1, 2]
+
+
+def test_sort_colors_single():
+    nums = [0]
+    sort_colors(nums)
+    assert nums == [0]
+
+
+def test_sort_colors_no_twos():
+    nums = [1, 1, 0, 0]
+    sort_colors(nums)
+    assert nums == [0, 0, 1, 1]
+
+
+def test_find_duplicate_normal():
+    assert find_duplicate([1, 3, 4, 2, 2]) == 2
+
+
+def test_find_duplicate_repeat_is_first_value():
+    assert find_duplicate([3, 1, 3, 4, 2]) == 3
+
+
+def test_find_duplicate_two_elements():
+    assert find_duplicate([1, 1]) == 1
+
+
+def test_find_duplicate_all_same():
+    assert find_duplicate([2, 2, 2, 2, 2]) == 2
+
+
+def test_spiral_order_square():
+    assert spiral_order([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) == [1, 2, 3, 6, 9, 8, 7, 4, 5]
+
+
+def test_spiral_order_wide():
+    matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]
+    assert spiral_order(matrix) == [1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]
+
+
+def test_spiral_order_single_cell():
+    assert spiral_order([[7]]) == [7]
+
+
+def test_spiral_order_two_by_two():
+    assert spiral_order([[1, 2], [3, 4]]) == [1, 2, 4, 3]
+
+
+def test_rotate_image_three_by_three():
+    matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    rotate_image(matrix)
+    assert matrix == [[7, 4, 1], [8, 5, 2], [9, 6, 3]]
+
+
+def test_rotate_image_two_by_two():
+    matrix = [[1, 2], [3, 4]]
+    rotate_image(matrix)
+    assert matrix == [[3, 1], [4, 2]]
+
+
+def test_rotate_image_single_cell():
+    matrix = [[1]]
+    rotate_image(matrix)
+    assert matrix == [[1]]

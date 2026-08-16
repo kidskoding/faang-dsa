@@ -1,4 +1,9 @@
-from problem_set.in_place_mutation_problems import merge, sort_colors
+from problem_set.in_place_mutation_problems import (
+    merge,
+    rotate,
+    sort_colors,
+    wiggle_sort,
+)
 
 
 def test_merge_both_empty():
@@ -51,3 +56,29 @@ def test_sort_colors_already_sorted():
     nums = [0, 1, 2]
     sort_colors(nums)
     assert nums == [0, 1, 2]
+
+
+def test_rotate_normal():
+    nums = [1, 2, 3, 4, 5, 6, 7]
+    rotate(nums, 3)
+    assert nums == [5, 6, 7, 1, 2, 3, 4]
+
+
+def test_rotate_with_negatives():
+    nums = [-1, -100, 3, 99]
+    rotate(nums, 2)
+    assert nums == [3, 99, -1, -100]
+
+
+def test_rotate_k_larger_than_length():
+    nums = [1, 2]
+    rotate(nums, 3)
+    assert nums == [2, 1]
+
+
+def test_wiggle_sort_alternates():
+    nums = [1, 5, 1, 1, 6, 4]
+    wiggle_sort(nums)
+
+    assert sorted(nums) == [1, 1, 1, 4, 5, 6]
+    assert all(nums[i] < nums[i + 1] if i % 2 == 0 else nums[i] > nums[i + 1] for i in range(len(nums) - 1))

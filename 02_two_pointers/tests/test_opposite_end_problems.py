@@ -1,14 +1,23 @@
 from problem_set.opposite_end_problems import (
+    backspace_compare,
+    bag_of_tokens_score,
+    find_closest_elements,
     four_sum,
     is_palindrome,
     max_area,
+    min_pair_sum,
     num_rescue_boats,
+    num_subseq,
     reverse_string,
+    reverse_words,
     sorted_squares,
     three_sum,
     three_sum_closest,
+    three_sum_multi,
+    three_sum_smaller,
     trap,
     two_sum,
+    valid_palindrome,
 )
 
 
@@ -140,3 +149,99 @@ def test_sorted_squares_negatives_and_positives():
 
 def test_sorted_squares_all_negative():
     assert sorted_squares([-7, -3, -1]) == [1, 9, 49]
+
+
+def test_valid_palindrome_already_palindrome():
+    assert valid_palindrome("aba") is True
+
+
+def test_valid_palindrome_one_deletion():
+    assert valid_palindrome("abca") is True
+
+
+def test_valid_palindrome_needs_two_deletions():
+    assert valid_palindrome("abc") is False
+
+
+def test_bag_of_tokens_score_cannot_play():
+    assert bag_of_tokens_score([100], 50) == 0
+
+
+def test_bag_of_tokens_score_one_token():
+    assert bag_of_tokens_score([100, 200], 150) == 1
+
+
+def test_bag_of_tokens_score_trades_down():
+    assert bag_of_tokens_score([100, 200, 300, 400], 200) == 2
+
+
+def test_min_pair_sum_four_elements():
+    assert min_pair_sum([3, 5, 2, 3]) == 7
+
+
+def test_min_pair_sum_six_elements():
+    assert min_pair_sum([3, 5, 4, 2, 4, 6]) == 8
+
+
+def test_find_closest_elements_target_inside():
+    assert find_closest_elements([1, 2, 3, 4, 5], 4, 3) == [1, 2, 3, 4]
+
+
+def test_find_closest_elements_target_below_range():
+    assert find_closest_elements([1, 2, 3, 4, 5], 4, -1) == [1, 2, 3, 4]
+
+
+def test_find_closest_elements_with_duplicates():
+    assert find_closest_elements([1, 1, 2, 3, 4, 5], 4, -1) == [1, 1, 2, 3]
+
+
+def test_backspace_compare_equal():
+    assert backspace_compare("ab#c", "ad#c") is True
+
+
+def test_backspace_compare_not_equal():
+    assert backspace_compare("a#c", "b") is False
+
+
+def test_backspace_compare_both_empty_after_backspaces():
+    assert backspace_compare("ab##", "c#d#") is True
+
+
+def test_reverse_words_normal():
+    assert reverse_words("the sky is blue") == "blue is sky the"
+
+
+def test_reverse_words_strips_extra_spaces():
+    assert reverse_words("  hello world  ") == "world hello"
+
+
+def test_three_sum_smaller_normal():
+    assert three_sum_smaller([-2, 0, 1, 3], 2) == 2
+
+
+def test_three_sum_smaller_empty():
+    assert three_sum_smaller([], 0) == 0
+
+
+def test_three_sum_smaller_too_short():
+    assert three_sum_smaller([0], 0) == 0
+
+
+def test_three_sum_multi_distinct_values():
+    assert three_sum_multi([1, 1, 2, 2, 3, 3, 4, 4, 5, 5], 8) == 20
+
+
+def test_three_sum_multi_repeated_values():
+    assert three_sum_multi([1, 1, 2, 2, 2, 2], 5) == 12
+
+
+def test_num_subseq_normal():
+    assert num_subseq([3, 5, 6, 7], 9) == 4
+
+
+def test_num_subseq_with_duplicates():
+    assert num_subseq([3, 3, 6, 8], 10) == 6
+
+
+def test_num_subseq_larger():
+    assert num_subseq([2, 3, 3, 4, 6, 7], 12) == 61

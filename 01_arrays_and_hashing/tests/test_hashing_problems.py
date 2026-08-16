@@ -1,10 +1,14 @@
 from problem_set.hashing_problems import (
     Codec,
+    MyHashMap,
     contains_duplicate,
     group_anagrams,
+    intersect,
     is_anagram,
     is_valid_sudoku,
     longest_consecutive,
+    majority_element,
+    majority_element_ii,
     top_k_frequent,
     two_sum,
 )
@@ -128,3 +132,68 @@ def test_codec_roundtrip_empty_strings():
     codec = Codec()
     strs = ["", "a", ""]
     assert codec.decode(codec.encode(strs)) == strs
+
+
+def test_intersect_with_repeats():
+    assert sorted(intersect([1, 2, 2, 1], [2, 2])) == [2, 2]
+
+
+def test_intersect_keeps_multiplicity():
+    assert sorted(intersect([4, 9, 5], [9, 4, 9, 8, 4])) == [4, 9]
+
+
+def test_intersect_no_overlap():
+    assert intersect([1, 2], [3, 4]) == []
+
+
+def test_majority_element_normal():
+    assert majority_element([3, 2, 3]) == 3
+
+
+def test_majority_element_longer():
+    assert majority_element([2, 2, 1, 1, 1, 2, 2]) == 2
+
+
+def test_majority_element_single():
+    assert majority_element([1]) == 1
+
+
+def test_majority_element_ii_one_winner():
+    assert sorted(majority_element_ii([3, 2, 3])) == [3]
+
+
+def test_majority_element_ii_single():
+    assert sorted(majority_element_ii([1])) == [1]
+
+
+def test_majority_element_ii_two_winners():
+    assert sorted(majority_element_ii([1, 2])) == [1, 2]
+
+
+def test_majority_element_ii_excludes_below_threshold():
+    assert sorted(majority_element_ii([1, 1, 1, 3, 3, 2, 2, 2])) == [1, 2]
+
+
+def test_my_hash_map_put_and_get():
+    hash_map = MyHashMap()
+    hash_map.put(1, 1)
+    hash_map.put(2, 2)
+
+    assert hash_map.get(1) == 1
+    assert hash_map.get(3) == -1
+
+
+def test_my_hash_map_overwrites_existing_key():
+    hash_map = MyHashMap()
+    hash_map.put(2, 2)
+    hash_map.put(2, 1)
+
+    assert hash_map.get(2) == 1
+
+
+def test_my_hash_map_remove():
+    hash_map = MyHashMap()
+    hash_map.put(2, 1)
+    hash_map.remove(2)
+
+    assert hash_map.get(2) == -1

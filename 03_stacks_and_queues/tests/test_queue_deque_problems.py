@@ -1,4 +1,12 @@
-from problem_set.queue_deque_problems import MyCircularDeque, MyQueue, MyStack
+from problem_set.queue_deque_problems import (
+    FrontMiddleBackQueue,
+    MovingAverage,
+    MyCircularDeque,
+    MyCircularQueue,
+    MyQueue,
+    MyStack,
+    RecentCounter,
+)
 
 
 def test_my_queue_fifo_order():
@@ -107,3 +115,58 @@ def test_my_circular_deque_full_after_wraparound():
     assert deque_.insert_last(3) is True
     assert deque_.get_front() == 2
     assert deque_.get_rear() == 3
+
+
+def test_recent_counter_window():
+    counter = RecentCounter()
+
+    assert counter.ping(1) == 1
+    assert counter.ping(100) == 2
+    assert counter.ping(3001) == 3
+    assert counter.ping(3002) == 3
+
+
+def test_my_circular_queue_fills_and_wraps():
+    queue = MyCircularQueue(3)
+
+    assert queue.en_queue(1) is True
+    assert queue.en_queue(2) is True
+    assert queue.en_queue(3) is True
+    assert queue.en_queue(4) is False
+    assert queue.rear() == 3
+    assert queue.is_full() is True
+    assert queue.de_queue() is True
+    assert queue.en_queue(4) is True
+    assert queue.rear() == 4
+
+
+def test_my_circular_queue_empty_reads():
+    queue = MyCircularQueue(2)
+
+    assert queue.is_empty() is True
+    assert queue.front() == -1
+    assert queue.rear() == -1
+    assert queue.de_queue() is False
+
+
+def test_moving_average_window_slides():
+    average = MovingAverage(3)
+
+    assert average.next(1) == 1.0
+    assert average.next(10) == 5.5
+    assert average.next(3) == 14 / 3
+    assert average.next(5) == 6.0
+
+
+def test_front_middle_back_queue_operations():
+    queue = FrontMiddleBackQueue()
+    queue.push_front(1)
+    queue.push_back(2)
+    queue.push_middle(3)
+    queue.push_middle(4)
+
+    assert queue.pop_front() == 1
+    assert queue.pop_middle() == 3
+    assert queue.pop_middle() == 4
+    assert queue.pop_back() == 2
+    assert queue.pop_front() == -1

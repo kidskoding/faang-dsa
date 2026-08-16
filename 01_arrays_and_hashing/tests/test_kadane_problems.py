@@ -1,4 +1,12 @@
-from problem_set.kadane_problems import max_product_subarray, max_profit, max_subarray
+from problem_set.kadane_problems import (
+    k_concatenation_max_sum,
+    max_absolute_sum,
+    max_product_subarray,
+    max_profit,
+    max_subarray,
+    max_subarray_sum_circular,
+    max_turbulence_size,
+)
 
 
 def test_max_subarray_normal():
@@ -39,3 +47,55 @@ def test_max_product_subarray_negative_flip():
 
 def test_max_product_subarray_single_element():
     assert max_product_subarray([-5]) == -5
+
+
+def test_max_subarray_sum_circular_non_wrapping():
+    assert max_subarray_sum_circular([1, -2, 3, -2]) == 3
+
+
+def test_max_subarray_sum_circular_wraps():
+    assert max_subarray_sum_circular([5, -3, 5]) == 10
+
+
+def test_max_subarray_sum_circular_all_negative():
+    assert max_subarray_sum_circular([-3, -2, -3]) == -2
+
+
+def test_max_subarray_sum_circular_wraps_by_one():
+    assert max_subarray_sum_circular([3, -1, 2, -1]) == 4
+
+
+def test_max_absolute_sum_negative_run_wins():
+    assert max_absolute_sum([1, -3, 2, 3, -4]) == 5
+
+
+def test_max_absolute_sum_longer():
+    assert max_absolute_sum([2, -5, 1, -4, 3, -2]) == 8
+
+
+def test_max_absolute_sum_all_positive():
+    assert max_absolute_sum([1, 2, 3]) == 6
+
+
+def test_max_turbulence_size_normal():
+    assert max_turbulence_size([9, 4, 2, 10, 7, 8, 8, 1, 9]) == 5
+
+
+def test_max_turbulence_size_monotonic():
+    assert max_turbulence_size([4, 8, 12, 16]) == 2
+
+
+def test_max_turbulence_size_single():
+    assert max_turbulence_size([100]) == 1
+
+
+def test_k_concatenation_max_sum_positive_total():
+    assert k_concatenation_max_sum([1, 2], 3) == 9
+
+
+def test_k_concatenation_max_sum_non_positive_total():
+    assert k_concatenation_max_sum([1, -2, 1], 5) == 2
+
+
+def test_k_concatenation_max_sum_all_negative():
+    assert k_concatenation_max_sum([-1, -2], 7) == 0

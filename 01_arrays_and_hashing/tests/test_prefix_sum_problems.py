@@ -2,9 +2,15 @@ from problem_set.prefix_sum_problems import (
     NumArray,
     NumMatrix,
     check_subarray_sum,
+    find_max_length,
+    left_right_difference,
+    max_score,
+    max_sub_array_len,
+    pivot_index,
     product_except_self,
     subarray_sum,
     subarrays_div_by_k,
+    ways_to_split_array,
 )
 
 
@@ -89,3 +95,71 @@ def test_product_except_self_with_zero():
 
 def test_product_except_self_two_elements():
     assert product_except_self([3, 5]) == [5, 3]
+
+
+def test_max_sub_array_len_normal():
+    assert max_sub_array_len([1, -1, 5, -2, 3], 3) == 4
+
+
+def test_max_sub_array_len_negatives():
+    assert max_sub_array_len([-2, -1, 2, 1], 1) == 2
+
+
+def test_max_sub_array_len_no_match():
+    assert max_sub_array_len([1, 2, 3], 10) == 0
+
+
+def test_pivot_index_normal():
+    assert pivot_index([1, 7, 3, 6, 5, 6]) == 3
+
+
+def test_pivot_index_no_pivot():
+    assert pivot_index([1, 2, 3]) == -1
+
+
+def test_pivot_index_at_start():
+    assert pivot_index([2, 1, -1]) == 0
+
+
+def test_left_right_difference_normal():
+    assert left_right_difference([10, 4, 8, 3]) == [15, 1, 11, 22]
+
+
+def test_left_right_difference_single():
+    assert left_right_difference([1]) == [0]
+
+
+def test_max_score_normal():
+    assert max_score("011101") == 5
+
+
+def test_max_score_zeros_then_ones():
+    assert max_score("00111") == 5
+
+
+def test_max_score_all_ones():
+    assert max_score("1111") == 3
+
+
+def test_ways_to_split_array_normal():
+    assert ways_to_split_array([10, 4, -8, 7]) == 2
+
+
+def test_ways_to_split_array_no_negatives():
+    assert ways_to_split_array([2, 3, 1, 0]) == 2
+
+
+def test_find_max_length_pair():
+    assert find_max_length([0, 1]) == 2
+
+
+def test_find_max_length_odd_length():
+    assert find_max_length([0, 1, 0]) == 2
+
+
+def test_find_max_length_no_ones():
+    assert find_max_length([0, 0, 0]) == 0
+
+
+def test_find_max_length_longer():
+    assert find_max_length([0, 1, 1, 0, 1, 1, 1, 0]) == 4
