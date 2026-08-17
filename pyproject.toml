@@ -39,7 +39,6 @@ pythonpath = [
     "16_math_geometry",
     "17_advanced",
     "18_mixed_interview_practice",
-    "other/problem_sets/01_grid_bfs",
     "other/mock_interviews/astranis",
 ]
 testpaths = [
@@ -61,7 +60,6 @@ testpaths = [
     "16_math_geometry",
     "17_advanced",
     "18_mixed_interview_practice",
-    "other/problem_sets",
     "other/mock_interviews"
 ]
 
@@ -100,5 +98,4 @@ extraPaths = [
     "15_bit_manipulation",
     "16_math_geometry",
     "17_advanced",
-    "other/problem_sets/01_grid_bfs",
 ]
