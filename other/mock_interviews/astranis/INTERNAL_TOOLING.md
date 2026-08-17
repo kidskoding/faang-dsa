@@ -31,7 +31,7 @@ once the previous part works.
    with a low-stock query. Stock never goes negative.
 
 ```bash
-uv run pytest other/problem_sets/03_internal_tooling -q
+uv run pytest other/mock_interviews/astranis -q
 ```
 
 ## What They Are Watching For

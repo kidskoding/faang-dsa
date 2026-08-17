@@ -40,8 +40,7 @@ pythonpath = [
     "17_advanced",
     "18_mixed_interview_practice",
     "other/problem_sets/01_grid_bfs",
-    "other/problem_sets/02_packet_parsing",
-    "other/problem_sets/03_internal_tooling",
+    "other/mock_interviews/astranis",
 ]
 testpaths = [
     "01_arrays_and_hashing",
@@ -62,7 +61,8 @@ testpaths = [
     "16_math_geometry",
     "17_advanced",
     "18_mixed_interview_practice",
-    "other/problem_sets"
+    "other/problem_sets",
+    "other/mock_interviews"
 ]
 
 [tool.ruff]
