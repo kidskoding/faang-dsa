@@ -40,6 +40,7 @@ pythonpath = [
     "17_advanced",
     "18_mixed_interview_practice",
     "other/problem_sets/01_grid_bfs",
+    "other/problem_sets/02_packet_parsing",
 ]
 testpaths = [
     "01_arrays_and_hashing",
