@@ -1,17 +1,28 @@
 def two_sum(nums: list[int], target: int) -> list[int]:
     # Problem 1: Two Sum
     # Key idea: complement lookup in a hash map.
-    # Time:
-    # Space:
+    
+    # Time: O(n) because you perform once pass on nums, where each dictionary lookup and insert is O(1) on average
+    # Space: O(n) because the map holds up to n entries if no pair is found
 
-    raise NotImplementedError
+    mapping = {}
+    for i, x in enumerate(nums):
+        complement = target - x
+        if complement in mapping:
+            return [mapping[complement], i]
+            
+        mapping[x] = i
 
+    return []
 
 def contains_duplicate(nums: list[int]) -> bool:
     # Problem 2: Contains Duplicate
     # Key idea: seen set membership check.
     # Time:
     # Space:
+
+    seen = set()
+    
 
     raise NotImplementedError
 

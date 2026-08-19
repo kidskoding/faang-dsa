@@ -26,6 +26,18 @@ def test_two_sum_duplicate_values():
     assert two_sum([3, 3], 6) == [0, 1]
 
 
+def test_two_sum_all_negative():
+    assert two_sum([-1, -2, -3, -4, -5], -8) == [2, 4]
+
+
+def test_two_sum_mixed_signs():
+    assert two_sum([-3, 4, 3, 90], 0) == [0, 2]
+
+
+def test_two_sum_no_pair():
+    assert two_sum([1, 2, 3], 100) == []
+
+
 def test_contains_duplicate_true():
     assert contains_duplicate([1, 2, 3, 1]) is True
 
