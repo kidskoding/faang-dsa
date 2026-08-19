@@ -1,5 +1,6 @@
-from collections import defaultdict
 import heapq
+from collections import defaultdict
+
 
 def two_sum(nums: list[int], target: int) -> list[int]:
     # Problem 1: Two Sum
