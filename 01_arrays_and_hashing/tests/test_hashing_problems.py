@@ -66,6 +66,18 @@ def test_is_anagram_empty_strings():
     assert is_anagram("", "") is True
 
 
+def test_is_anagram_t_longer_with_repeat():
+    assert is_anagram("ab", "aab") is False
+
+
+def test_is_anagram_same_length_different_counts():
+    assert is_anagram("aabb", "abbb") is False
+
+
+def test_is_anagram_same_letters_wrong_multiplicity():
+    assert is_anagram("aacc", "ccac") is False
+
+
 def test_group_anagrams_normal():
     result = group_anagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
     normalized = sorted(sorted(group) for group in result)
@@ -81,12 +93,39 @@ def test_group_anagrams_single_word():
     assert group_anagrams(["abc"]) == [["abc"]]
 
 
+def test_group_anagrams_empty_string():
+    assert group_anagrams([""]) == [[""]]
+
+
+def test_group_anagrams_identical_words_group_together():
+    assert group_anagrams(["a", "a"]) == [["a", "a"]]
+
+
+def test_group_anagrams_same_letters_different_lengths_do_not_group():
+    result = group_anagrams(["ab", "aab"])
+    normalized = sorted(sorted(group) for group in result)
+
+    assert normalized == [["aab"], ["ab"]]
+
+
 def test_top_k_frequent_normal():
     assert set(top_k_frequent([1, 1, 1, 2, 2, 3], 2)) == {1, 2}
 
 
 def test_top_k_frequent_single_element():
     assert top_k_frequent([1], 1) == [1]
+
+
+def test_top_k_frequent_k_equals_distinct_count():
+    assert sorted(top_k_frequent([1, 2, 3], 3)) == [1, 2, 3]
+
+
+def test_top_k_frequent_breaks_a_tie():
+    assert set(top_k_frequent([1, 1, 2, 2, 3], 2)) == {1, 2}
+
+
+def test_top_k_frequent_with_negatives():
+    assert set(top_k_frequent([-1, -1, -1, -2, -2, 5], 2)) == {-1, -2}
 
 
 def test_longest_consecutive_normal():

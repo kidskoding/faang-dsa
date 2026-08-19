@@ -1,9 +1,12 @@
+from collections import defaultdict
+
+
 def two_sum(nums: list[int], target: int) -> list[int]:
     # Problem 1: Two Sum
     # Key idea: complement lookup in a hash map.
     
-    # Time: O(n) because you perform once pass on nums, where each dictionary lookup and insert is O(1) on average
-    # Space: O(n) because the map holds up to n entries if no pair is found
+    # Time: O(n) because you perform one pass on nums, where each dictionary lookup and insert is O(1) on average
+    # Space: O(n) because the hash map holds up to n entries if no pair is found
 
     mapping = {}
     for i, x in enumerate(nums):
@@ -14,44 +17,87 @@ def two_sum(nums: list[int], target: int) -> list[int]:
         mapping[x] = i
 
     return []
+    
 
 def contains_duplicate(nums: list[int]) -> bool:
     # Problem 2: Contains Duplicate
     # Key idea: seen set membership check.
-    # Time:
-    # Space:
+    
+    # Time: O(n) because you perform one pass on nums, where each dictionary lookup and insert is O(1) on average
+    # Space: O(n) because the hash set holds up to n entries if no pair is found
 
     seen = set()
-    
+    for x in nums:
+        if x in seen:
+            return True
 
-    raise NotImplementedError
+        seen.add(x)
+
+    return False
 
 
 def is_anagram(s: str, t: str) -> bool:
     # Problem 3: Valid Anagram
     # Key idea: compare character frequency maps.
-    # Time:
-    # Space:
+    
+    # Time: O(n) because you perform two independent passes on s and t, which are both the same 
+    # Space: O(n) space because the hash map holds up to n entries if no pair is found
 
-    raise NotImplementedError
+    if len(s) != len(t):
+        return False
 
+    map = {}
+    for x in s:
+        map[x] = map.get(x, 0) + 1
+
+    for x in t:
+        if x in map:
+            map[x] -= 1
+
+            if map[x] == 0:
+                del map[x]
+
+    return map == {}
+    
 
 def group_anagrams(strs: list[str]) -> list[list[str]]:
     # Problem 4: Group Anagrams
     # Key idea: hash map keyed by a sorted-string signature.
-    # Time:
-    # Space:
 
-    raise NotImplementedError
+    # Time: O(n * k log k), n strings sorted in O(k log k) time, where k is the max word length of a string
+    # Space: O(n * k) because every entry in the hash map stores up to n keys, with each up to k characters long
+
+    res = []
+    map = defaultdict(list)
+    
+    for x in strs:
+        sorted_x = ''.join(sorted(x))
+        map[sorted_x].append(x)
+
+    for value in map.values():
+        res.append(value)
+
+    return res
 
 
 def top_k_frequent(nums: list[int], k: int) -> list[int]:
     # Problem 5: Top K Frequent Elements
     # Key idea: frequency map plus bucket sort or a heap.
+    
     # Time:
     # Space:
 
-    raise NotImplementedError
+    res = []
+    map = {}
+    for x in nums:
+        map[x] = map.get(x, 0) + 1
+
+    for _ in range(k):
+        key, _ = max(map.items(), key=lambda x: x[1])
+        res.append(key)
+        del map[key]
+
+    return res
 
 
 def longest_consecutive(nums: list[int]) -> int:
