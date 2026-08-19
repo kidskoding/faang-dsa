@@ -1,10 +1,10 @@
 from collections import defaultdict
-
+import heapq
 
 def two_sum(nums: list[int], target: int) -> list[int]:
     # Problem 1: Two Sum
     # Key idea: complement lookup in a hash map.
-    
+
     # Time: O(n) because you perform one pass on nums, where each dictionary lookup and insert is O(1) on average
     # Space: O(n) because the hash map holds up to n entries if no pair is found
 
@@ -13,16 +13,16 @@ def two_sum(nums: list[int], target: int) -> list[int]:
         complement = target - x
         if complement in mapping:
             return [mapping[complement], i]
-            
+
         mapping[x] = i
 
     return []
-    
+
 
 def contains_duplicate(nums: list[int]) -> bool:
     # Problem 2: Contains Duplicate
     # Key idea: seen set membership check.
-    
+
     # Time: O(n) because you perform one pass on nums, where each dictionary lookup and insert is O(1) on average
     # Space: O(n) because the hash set holds up to n entries if no pair is found
 
@@ -39,8 +39,8 @@ def contains_duplicate(nums: list[int]) -> bool:
 def is_anagram(s: str, t: str) -> bool:
     # Problem 3: Valid Anagram
     # Key idea: compare character frequency maps.
-    
-    # Time: O(n) because you perform two independent passes on s and t, which are both the same 
+
+    # Time: O(n) because you perform two independent passes on s and t, which are both the same
     # Space: O(n) space because the hash map holds up to n entries if no pair is found
 
     if len(s) != len(t):
@@ -58,7 +58,7 @@ def is_anagram(s: str, t: str) -> bool:
                 del map[x]
 
     return map == {}
-    
+
 
 def group_anagrams(strs: list[str]) -> list[list[str]]:
     # Problem 4: Group Anagrams
@@ -69,7 +69,7 @@ def group_anagrams(strs: list[str]) -> list[list[str]]:
 
     res = []
     map = defaultdict(list)
-    
+
     for x in strs:
         sorted_x = ''.join(sorted(x))
         map[sorted_x].append(x)
@@ -83,9 +83,9 @@ def group_anagrams(strs: list[str]) -> list[list[str]]:
 def top_k_frequent(nums: list[int], k: int) -> list[int]:
     # Problem 5: Top K Frequent Elements
     # Key idea: frequency map plus bucket sort or a heap.
-    
-    # Time:
-    # Space:
+
+    # Time: O(n + k * m) for one pass to count, then k scans of the whole map
+    # Space: O(m) for the frequency map, O(k) for the result
 
     res = []
     map = {}
@@ -99,15 +99,45 @@ def top_k_frequent(nums: list[int], k: int) -> list[int]:
 
     return res
 
+# Alternative solution with a max heap
+def top_k_frequent_v2(nums: list[int], k: int) -> list[int]:
+    # Time: O(m + m log k) because n elements to count frequencies and then m distinct items (where m <= n) that are then
+    # pushed / popped on a size k heap
+    # Space: O(m + k) the counts map plus the heap, so O(n) worst case
+
+    map = {}
+    heap = []
+    for x in nums:
+        map[x] = map.get(x, 0) + 1
+
+    for value, count in map.items():
+        heapq.heappush(heap, (count, value))
+        if len(heap) > k:
+            heapq.heappop(heap)
+
+    return [value for _, value in heap]
+
 
 def longest_consecutive(nums: list[int]) -> int:
     # Problem 6: Longest Consecutive Sequence
     # Key idea: hash set lookup, only start counting from sequence heads.
-    # Time:
-    # Space:
+    
+    # Time: 
+    # Space: O(n) because you use a hash set to 
 
-    raise NotImplementedError
+    seen = set(nums)
+    best = 0
+    for x in seen:
+        if x - 1 not in seen:
+            curr = x
+            length = 1
+            while curr + 1 in seen:
+                curr += 1
+                length += 1
 
+            best = max(best, length)
+
+    return best
 
 def is_valid_sudoku(board: list[list[str]]) -> bool:
     # Problem 7: Valid Sudoku
