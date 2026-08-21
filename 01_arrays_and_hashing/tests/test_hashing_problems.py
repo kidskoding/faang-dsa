@@ -140,6 +140,18 @@ def test_longest_consecutive_with_duplicates():
     assert longest_consecutive([1, 2, 0, 1]) == 3
 
 
+def test_longest_consecutive_single_element():
+    assert longest_consecutive([7]) == 1
+
+
+def test_longest_consecutive_with_negatives():
+    assert longest_consecutive([-3, -2, -1, 5, 7]) == 3
+
+
+def test_longest_consecutive_no_run_longer_than_one():
+    assert longest_consecutive([10, 30, 20]) == 1
+
+
 def _valid_board() -> list[list[str]]:
     return [
         ["5", "3", ".", ".", "7", ".", ".", ".", "."],
@@ -166,6 +178,44 @@ def test_is_valid_sudoku_true():
 
 def test_is_valid_sudoku_false_duplicate_in_column():
     assert is_valid_sudoku(_invalid_board()) is False
+
+
+def _sparse_board() -> list[list[str]]:
+    return [["." for _ in range(9)] for _ in range(9)]
+
+
+def test_is_valid_sudoku_false_duplicate_only_in_box():
+    """Rows and columns are clean; only the top-left 3x3 box repeats.
+
+    A solution that checks rows and columns but forgets the boxes passes every
+    other test in this file, so this is the one that catches it.
+    """
+    board = _sparse_board()
+    board[0][0] = "5"
+    board[1][1] = "5"
+
+    assert is_valid_sudoku(board) is False
+
+
+def test_is_valid_sudoku_false_duplicate_only_in_row():
+    board = _sparse_board()
+    board[3][0] = "7"
+    board[3][8] = "7"
+
+    assert is_valid_sudoku(board) is False
+
+
+def test_is_valid_sudoku_same_value_in_different_boxes_is_fine():
+    board = _sparse_board()
+    board[0][0] = "5"
+    board[4][4] = "5"
+    board[8][8] = "5"
+
+    assert is_valid_sudoku(board) is True
+
+
+def test_is_valid_sudoku_empty_board():
+    assert is_valid_sudoku(_sparse_board()) is True
 
 
 def test_codec_roundtrip_normal():
@@ -195,6 +245,22 @@ def test_intersect_keeps_multiplicity():
 
 def test_intersect_no_overlap():
     assert intersect([1, 2], [3, 4]) == []
+
+
+def test_intersect_first_array_limits_the_count():
+    assert intersect([2], [2, 2, 2]) == [2]
+
+
+def test_intersect_second_array_limits_the_count():
+    assert intersect([2, 2, 2], [2]) == [2]
+
+
+def test_intersect_empty_first():
+    assert intersect([], [1, 2]) == []
+
+
+def test_intersect_empty_second():
+    assert intersect([1, 2], []) == []
 
 
 def test_majority_element_normal():

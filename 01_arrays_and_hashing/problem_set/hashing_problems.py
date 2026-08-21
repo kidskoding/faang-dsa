@@ -85,8 +85,9 @@ def top_k_frequent(nums: list[int], k: int) -> list[int]:
     # Problem 5: Top K Frequent Elements
     # Key idea: frequency map plus bucket sort or a heap.
 
-    # Time: O(n + k * m) for one pass to count, then k scans of the whole map
-    # Space: O(m) for the frequency map, O(k) for the result
+    # Time: O(n + k * m) for one pass to count, then k scans of the whole map, which consists of m keys
+    #   O(n^2) when k approaches m
+    # Space: O(m) for the frequency map, where m is the number of distinct values (O(n) when everything is unique)
 
     res = []
     map = {}
@@ -122,9 +123,10 @@ def top_k_frequent_v2(nums: list[int], k: int) -> list[int]:
 def longest_consecutive(nums: list[int]) -> int:
     # Problem 6: Longest Consecutive Sequence
     # Key idea: hash set lookup, only start counting from sequence heads.
-    
-    # Time: 
-    # Space: O(n) because you use a hash set to 
+
+    # Time: O(n) because you build the set in one pass of nums, then check membership once per element in the
+    #   outer loop
+    # Space: O(n) because you use a hash set to hold up to n unique values
 
     seen = set(nums)
     best = 0
@@ -143,11 +145,32 @@ def longest_consecutive(nums: list[int]) -> int:
 def is_valid_sudoku(board: list[list[str]]) -> bool:
     # Problem 7: Valid Sudoku
     # Key idea: hash sets per row, column, and box.
-    # Time:
-    # Space:
 
-    raise NotImplementedError
+    # Time: O(1) because there is a constant 9x9 board, so this is a constant 81 cells. Generally speaking for an
+    # n x n board, it is O(n^2) because every cell is visited a constant number of times
+    #
+    # Space: O(1) because at most 9 values per row, column, and box stored in each HashSet
+    # O(n^2) for general n x n board
 
+    rows = defaultdict(set)
+    cols = defaultdict(set)
+    boxes = defaultdict(set)
+
+    for r in range(9):
+        for c in range(9):
+            val = board[r][c]
+            if val == '.':
+                continue
+
+            box = (r // 3, c // 3)
+            if val in rows[r] or val in cols[c] or val in boxes[box]:
+                return False
+
+            rows[r].add(val)
+            cols[c].add(val)
+            boxes[box].add(val)
+
+    return True
 
 class Codec:
     # Problem 8: Encode And Decode Strings
@@ -167,11 +190,21 @@ class Codec:
 def intersect(nums1: list[int], nums2: list[int]) -> list[int]:
     # Problem 9: Intersection of Two Arrays II
     # Key idea: frequency-map intersection of two arrays.
+
     # Time:
     # Space:
 
-    raise NotImplementedError
+    intersection = {}
+    res = []
+    for x in nums1:
+        intersection[x] = intersection.get(x, 0) + 1
 
+    for x in nums2:
+        if intersection.get(x, 0) > 0:
+            res.append(x)
+            intersection[x] -= 1
+
+    return res
 
 def majority_element(nums: list[int]) -> int:
     # Problem 10: Majority Element
