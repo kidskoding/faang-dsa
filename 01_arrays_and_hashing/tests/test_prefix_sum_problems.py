@@ -4,8 +4,10 @@ from problem_set.prefix_sum_problems import (
     check_subarray_sum,
     find_max_length,
     left_right_difference,
+    matrix_block_sum,
     max_score,
     max_sub_array_len,
+    max_sum_two_no_overlap,
     pivot_index,
     product_except_self,
     subarray_sum,
@@ -163,3 +165,29 @@ def test_find_max_length_no_ones():
 
 def test_find_max_length_longer():
     assert find_max_length([0, 1, 1, 0, 1, 1, 1, 0]) == 4
+
+
+def test_matrix_block_sum_radius_one():
+    mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    assert matrix_block_sum(mat, 1) == [[12, 21, 16], [27, 45, 33], [24, 39, 28]]
+
+
+def test_matrix_block_sum_radius_covers_everything():
+    mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    assert matrix_block_sum(mat, 2) == [[45, 45, 45], [45, 45, 45], [45, 45, 45]]
+
+
+def test_matrix_block_sum_single_cell():
+    assert matrix_block_sum([[5]], 1) == [[5]]
+
+
+def test_max_sum_two_no_overlap_normal():
+    assert max_sum_two_no_overlap([0, 6, 5, 2, 2, 5, 1, 9, 4], 1, 2) == 20
+
+
+def test_max_sum_two_no_overlap_longer_windows():
+    assert max_sum_two_no_overlap([3, 8, 1, 3, 2, 1, 8, 9, 0], 3, 2) == 29
+
+
+def test_max_sum_two_no_overlap_wide_windows():
+    assert max_sum_two_no_overlap([2, 1, 5, 6, 0, 9, 5, 0, 3, 8], 4, 3) == 31

@@ -88,61 +88,97 @@ membership checks, frequency counts, and signature grouping.
 - solves: `MyHashMap`
 - Pattern: bucket array with separate chaining for collisions.
 
+### 13. [4Sum II](https://leetcode.com/problems/4sum-ii/)
+
+- solves: `four_sum_count`
+- Pattern: split the four arrays in half, hash every pair sum from the first
+  half, then look up its negation among the pair sums of the second half.
+
+### 14. [Brick Wall](https://leetcode.com/problems/brick-wall/)
+
+- solves: `least_bricks`
+- Pattern: count how many rows share each internal edge position, then cut where
+  the most edges line up instead of counting crossings.
+
+### 15. [Custom Sort String](https://leetcode.com/problems/custom-sort-string/)
+
+- solves: `custom_sort_string`
+- Pattern: count the characters, emit the ones named by the ordering first, then
+  append whatever the ordering never mentioned.
+
+### 16. [Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/)
+
+- solves: `TinyURLCodec`
+- Pattern: two hash maps and a counter, so encoding is a lookup rather than a
+  hash that can collide.
+
 ## Array Manipulation
 
 `array_problems.py` — in-place array and matrix moves: reversals,
 prefix/suffix products, sign-flip marking, and index-as-hash placement.
 
-### 13. [Rotate Array](https://leetcode.com/problems/rotate-array/)
+### 17. [Rotate Array](https://leetcode.com/problems/rotate-array/)
 
 - solves: `rotate`
 - Pattern: reverse the whole array, then reverse each part in place.
 
-### 14. [Find All Duplicates In An Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/)
+### 18. [Find All Duplicates In An Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/)
 
 - solves: `find_duplicates`
 - Pattern: mark visited values in place using index sign flips.
 
-### 15. [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
+### 19. [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
 
 - solves: `set_zeroes`
 - Pattern: use the first row and column as marker storage.
 
-### 16. [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)
+### 20. [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)
 
 - solves: `RandomizedSet`
 - Pattern: hash map of value to index paired with a dense array for O(1) random pick.
 
-### 17. [First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
+### 21. [First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
 
 - solves: `first_missing_positive`
 - Pattern: place each value at its index in place, then scan for the first mismatch.
 
-### 18. [Sort Colors](https://leetcode.com/problems/sort-colors/)
+### 22. [Sort Colors](https://leetcode.com/problems/sort-colors/)
 
 - solves: `sort_colors`
 - Pattern: Dutch national flag three-way partition in one pass.
 
-### 19. [Find The Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
+### 23. [Find The Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
 
 - solves: `find_duplicate`
 - Pattern: treat values as pointers, Floyd cycle detection to find the repeat.
 
-### 20. [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
+### 24. [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
 
 - solves: `spiral_order`
 - Pattern: shrink top/bottom/left/right bounds while walking the layers.
 
-### 21. [Rotate Image](https://leetcode.com/problems/rotate-image/)
+### 25. [Rotate Image](https://leetcode.com/problems/rotate-image/)
 
 - solves: `rotate_image`
 - Pattern: transpose in place, then reverse each row.
 
-### 22. [Next Permutation](https://leetcode.com/problems/next-permutation/)
+### 26. [Next Permutation](https://leetcode.com/problems/next-permutation/)
 
 - solves: `next_permutation`
 - Pattern: scan from the right for the first descent, swap it with the smallest
   larger value to its right, then reverse the suffix.
+
+### 27. [Increasing Triplet Subsequence](https://leetcode.com/problems/increasing-triplet-subsequence/)
+
+- solves: `increasing_triplet`
+- Pattern: track the smallest value seen and the smallest pair-second seen; a
+  third value beating both proves the triplet exists without storing indices.
+
+### 28. [Maximum Swap](https://leetcode.com/problems/maximum-swap/)
+
+- solves: `maximum_swap`
+- Pattern: record the last index of each digit, then scan left to right for the
+  first place a larger digit appears later.
 
 ## Prefix & Suffix Sums
 
@@ -151,104 +187,122 @@ prefix/suffix products, sign-flip marking, and index-as-hash placement.
 subarray-sum counting (including modulo and 2D variants); combine a prefix
 pass with a suffix pass for split-point and both-sides problems.
 
-### 23. [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/)
+### 29. [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/)
 
 - solves: `NumArray`
 - Pattern: precompute a prefix sum array for O(1) range queries.
 
-### 24. [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+### 30. [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
 
 - solves: `subarray_sum`
 - Pattern: running prefix sum plus a count hash map.
 
-### 25. [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/)
+### 31. [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/)
 
 - solves: `check_subarray_sum`
 - Pattern: running prefix sum modulo k, hash map of first-seen remainder index.
 
-### 26. [Subarrays Divisible By K](https://leetcode.com/problems/subarray-sums-divisible-by-k/)
+### 32. [Subarrays Divisible By K](https://leetcode.com/problems/subarray-sums-divisible-by-k/)
 
 - solves: `subarrays_div_by_k`
 - Pattern: running prefix sum modulo k, count matching remainders.
 
-### 27. [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)
+### 33. [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)
 
 - solves: `NumMatrix`
 - Pattern: 2D prefix sum with inclusion-exclusion.
 
-### 28. [Maximum Size Subarray Sum Equals k](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/)
+### 34. [Maximum Size Subarray Sum Equals k](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/)
 
 - solves: `max_sub_array_len`
 - Pattern: prefix sum with first-seen index in a hash map to get longest subarray.
 
-### 29. [Contiguous Array](https://leetcode.com/problems/contiguous-array/)
+### 35. [Contiguous Array](https://leetcode.com/problems/contiguous-array/)
 
 - solves: `find_max_length`
 - Pattern: map 0 to -1, track first index of each running prefix sum.
 
-### 30. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+### 36. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 
 - solves: `product_except_self`
 - Pattern: prefix products times suffix products.
 
-### 31. [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)
+### 37. [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)
 
 - solves: `pivot_index`
 - Pattern: the pivot is where the prefix sum on the left equals the suffix sum on the right.
 
-### 32. [Left and Right Sum Differences](https://leetcode.com/problems/left-and-right-sum-differences/)
+### 38. [Left and Right Sum Differences](https://leetcode.com/problems/left-and-right-sum-differences/)
 
 - solves: `left_right_difference`
 - Pattern: build a left prefix-sum array and a right suffix-sum array, then take the absolute difference per index.
 
-### 33. [Maximum Score After Splitting a String](https://leetcode.com/problems/maximum-score-after-splitting-a-string/)
+### 39. [Maximum Score After Splitting a String](https://leetcode.com/problems/maximum-score-after-splitting-a-string/)
 
 - solves: `max_score`
 - Pattern: prefix count of zeros on the left plus suffix count of ones on the right, maximized over every split.
 
-### 34. [Number of Ways to Split Array](https://leetcode.com/problems/number-of-ways-to-split-array/)
+### 40. [Number of Ways to Split Array](https://leetcode.com/problems/number-of-ways-to-split-array/)
 
 - solves: `ways_to_split_array`
 - Pattern: sweep the split point comparing the left prefix sum against the remaining suffix sum.
+
+### 41. [Matrix Block Sum](https://leetcode.com/problems/matrix-block-sum/)
+
+- solves: `matrix_block_sum`
+- Pattern: 2D prefix sums, then inclusion-exclusion over a clamped window around
+  each cell.
+
+### 42. [Maximum Sum of Two Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/)
+
+- solves: `max_sum_two_no_overlap`
+- Pattern: prefix sums plus a sweep that tracks the best earlier window of each
+  length, taking both orderings.
 
 ## Kadane
 
 `kadane_problems.py` — one-pass running optimum that extends or restarts at
 each index, plus its min/max and circular variants.
 
-### 35. [Best Time To Buy And Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+### 43. [Best Time To Buy And Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
 - solves: `max_profit`
 - Pattern: track the running minimum while scanning left to right.
 
-### 36. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+### 44. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
 - solves: `max_subarray`
 - Pattern: Kadane's algorithm, extend or restart at each index.
 
-### 37. [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
+### 45. [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
 
 - solves: `max_product_subarray`
 - Pattern: Kadane's variant tracking running max and min for sign flips.
 
-### 38. [Maximum Sum Circular Subarray](https://leetcode.com/problems/maximum-sum-circular-subarray/)
+### 46. [Maximum Sum Circular Subarray](https://leetcode.com/problems/maximum-sum-circular-subarray/)
 
 - solves: `max_subarray_sum_circular`
 - Pattern: Kadane for both max subarray and total-minus-min subarray.
 
-### 39. [Maximum Absolute Sum of Any Subarray](https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/)
+### 47. [Maximum Absolute Sum of Any Subarray](https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/)
 
 - solves: `max_absolute_sum`
 - Pattern: run Kadane for both the max and min subarray, answer is the larger magnitude.
 
-### 40. [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/)
+### 48. [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/)
 
 - solves: `max_turbulence_size`
 - Pattern: Kadane-style up/down run lengths that extend only when the comparison sign alternates.
 
-### 41. [K-Concatenation Maximum Sum](https://leetcode.com/problems/k-concatenation-maximum-sum/)
+### 49. [K-Concatenation Maximum Sum](https://leetcode.com/problems/k-concatenation-maximum-sum/)
 
 - solves: `k_concatenation_max_sum`
 - Pattern: Kadane over one or two copies plus extra whole-array sums when the total is positive.
   </content>
   </invoke>
+
+### 50. [Maximum Subarray Sum with One Deletion](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/)
+
+- solves: `maximum_sum`
+- Pattern: two Kadane states in parallel — best ending here with no deletion
+  used, and best ending here having already deleted one element.

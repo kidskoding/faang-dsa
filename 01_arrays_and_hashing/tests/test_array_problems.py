@@ -3,6 +3,8 @@ from problem_set.array_problems import (
     find_duplicate,
     find_duplicates,
     first_missing_positive,
+    increasing_triplet,
+    maximum_swap,
     next_permutation,
     rotate,
     rotate_image,
@@ -202,3 +204,35 @@ def test_rotate_image_single_cell():
     matrix = [[1]]
     rotate_image(matrix)
     assert matrix == [[1]]
+
+
+def test_increasing_triplet_sorted():
+    assert increasing_triplet([1, 2, 3, 4, 5]) is True
+
+
+def test_increasing_triplet_descending():
+    assert increasing_triplet([5, 4, 3, 2, 1]) is False
+
+
+def test_increasing_triplet_out_of_order():
+    assert increasing_triplet([2, 1, 5, 0, 4, 6]) is True
+
+
+def test_increasing_triplet_all_equal():
+    assert increasing_triplet([1, 1, 1]) is False
+
+
+def test_maximum_swap_normal():
+    assert maximum_swap(2736) == 7236
+
+
+def test_maximum_swap_already_maximal():
+    assert maximum_swap(9973) == 9973
+
+
+def test_maximum_swap_repeated_digits():
+    assert maximum_swap(1993) == 9913
+
+
+def test_maximum_swap_uses_the_last_occurrence():
+    assert maximum_swap(98368) == 98863

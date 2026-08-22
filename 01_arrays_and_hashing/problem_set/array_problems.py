@@ -102,3 +102,21 @@ def next_permutation(nums: list[int]) -> None:
     # Space:
 
     raise NotImplementedError
+
+
+def increasing_triplet(nums: list[int]) -> bool:
+    # Problem 21: Increasing Triplet Subsequence
+    # Key idea: track the smallest value and the smallest pair-second seen so far.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+def maximum_swap(num: int) -> int:
+    # Problem 22: Maximum Swap
+    # Key idea: last index of each digit, then swap the first digit a bigger one follows.
+    # Time:
+    # Space:
+
+    raise NotImplementedError

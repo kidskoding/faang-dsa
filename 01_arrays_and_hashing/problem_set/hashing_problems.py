@@ -251,3 +251,46 @@ class MyHashMap:
         # Space:
 
         raise NotImplementedError
+
+
+def four_sum_count(nums1: list[int], nums2: list[int], nums3: list[int], nums4: list[int]) -> int:
+    # Problem 13: 4Sum II
+    # Key idea: hash every pair sum from the first two arrays, look up its negation.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+def least_bricks(wall: list[list[int]]) -> int:
+    # Problem 14: Brick Wall
+    # Key idea: count shared edge positions, cut where the most edges line up.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+def custom_sort_string(order: str, s: str) -> str:
+    # Problem 15: Custom Sort String
+    # Key idea: count characters, emit the ordered ones first, then the rest.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+class TinyURLCodec:
+    # Problem 16: Encode and Decode TinyURL
+    # Key idea: two maps and a counter, so encoding cannot collide.
+    # Time:
+    # Space:
+
+    def __init__(self) -> None:
+        raise NotImplementedError
+
+    def encode(self, long_url: str) -> str:
+        raise NotImplementedError
+
+    def decode(self, short_url: str) -> str:
+        raise NotImplementedError

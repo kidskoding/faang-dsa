@@ -116,3 +116,21 @@ def product_except_self(nums: list[int]) -> list[int]:
     # Space:
 
     raise NotImplementedError
+
+
+def matrix_block_sum(mat: list[list[int]], k: int) -> list[list[int]]:
+    # Problem 35: Matrix Block Sum
+    # Key idea: 2D prefix sums with inclusion-exclusion over a clamped window.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+def max_sum_two_no_overlap(nums: list[int], first_len: int, second_len: int) -> int:
+    # Problem 36: Maximum Sum of Two Non-Overlapping Subarrays
+    # Key idea: prefix sums plus a sweep tracking the best earlier window, both orderings.
+    # Time:
+    # Space:
+
+    raise NotImplementedError

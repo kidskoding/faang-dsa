@@ -1,11 +1,15 @@
 from problem_set.hashing_problems import (
     Codec,
     MyHashMap,
+    TinyURLCodec,
     contains_duplicate,
+    custom_sort_string,
+    four_sum_count,
     group_anagrams,
     intersect,
     is_anagram,
     is_valid_sudoku,
+    least_bricks,
     longest_consecutive,
     majority_element,
     majority_element_ii,
@@ -314,3 +318,64 @@ def test_my_hash_map_remove():
     hash_map.remove(2)
 
     assert hash_map.get(2) == -1
+
+
+def test_four_sum_count_two_tuples():
+    assert four_sum_count([1, 2], [-2, -1], [-1, 2], [0, 2]) == 2
+
+
+def test_four_sum_count_all_zeros():
+    assert four_sum_count([0], [0], [0], [0]) == 1
+
+
+def test_four_sum_count_no_match():
+    assert four_sum_count([1], [1], [1], [1]) == 0
+
+
+def test_least_bricks_normal():
+    wall = [[1, 2, 2, 1], [3, 1, 2], [1, 3, 2], [2, 4], [3, 1, 2], [1, 3, 1, 1]]
+    assert least_bricks(wall) == 2
+
+
+def test_least_bricks_no_shared_edges():
+    assert least_bricks([[1], [1], [1]]) == 3
+
+
+def test_least_bricks_two_rows():
+    assert least_bricks([[1, 1], [2]]) == 1
+
+
+def test_custom_sort_string_all_ordered():
+    assert custom_sort_string("cba", "abcd") == "cbad"
+
+
+def test_custom_sort_string_order_has_extra_letters():
+    assert custom_sort_string("bcafg", "abcd") == "bcad"
+
+
+def test_custom_sort_string_with_repeats():
+    assert custom_sort_string("kqep", "pekeq") == "kqeep"
+
+
+def test_tiny_url_codec_round_trips():
+    codec = TinyURLCodec()
+    url = "https://leetcode.com/problems/design-tinyurl"
+
+    assert codec.decode(codec.encode(url)) == url
+
+
+def test_tiny_url_codec_is_stable_for_the_same_url():
+    codec = TinyURLCodec()
+    url = "http://example.com"
+
+    assert codec.encode(url) == codec.encode(url)
+
+
+def test_tiny_url_codec_gives_distinct_codes():
+    codec = TinyURLCodec()
+    first = codec.encode("http://a.com")
+    second = codec.encode("http://b.com")
+
+    assert first != second
+    assert codec.decode(first) == "http://a.com"
+    assert codec.decode(second) == "http://b.com"

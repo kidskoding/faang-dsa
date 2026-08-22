@@ -59,3 +59,12 @@ def k_concatenation_max_sum(arr: list[int], k: int) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def maximum_sum(arr: list[int]) -> int:
+    # Problem 50: Maximum Subarray Sum with One Deletion
+    # Key idea: two Kadane states — no deletion used, and one already used.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
