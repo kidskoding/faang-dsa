@@ -121,3 +121,17 @@ def test_full_bloom_flowers_normal():
 
 def test_full_bloom_flowers_repeated_queries():
     assert full_bloom_flowers([[1, 10], [3, 3]], [3, 3, 2]) == [2, 2, 1]
+
+
+def test_my_calendar_three_disjoint_bookings_stay_at_one():
+    calendar = MyCalendarThree()
+
+    assert calendar.book(10, 20) == 1
+    assert calendar.book(30, 40) == 1
+
+
+def test_my_calendar_three_touching_intervals_do_not_overlap():
+    calendar = MyCalendarThree()
+
+    assert calendar.book(10, 20) == 1
+    assert calendar.book(20, 30) == 1

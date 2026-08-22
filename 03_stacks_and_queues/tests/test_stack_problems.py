@@ -195,3 +195,21 @@ def test_longest_valid_parentheses_normal():
 
 def test_longest_valid_parentheses_empty():
     assert longest_valid_parentheses("") == 0
+
+
+def test_freq_stack_single_value():
+    stack = FreqStack()
+    stack.push(7)
+    stack.push(7)
+
+    assert stack.pop() == 7
+    assert stack.pop() == 7
+
+
+def test_freq_stack_ties_go_to_most_recent():
+    stack = FreqStack()
+    stack.push(1)
+    stack.push(2)
+
+    assert stack.pop() == 2
+    assert stack.pop() == 1

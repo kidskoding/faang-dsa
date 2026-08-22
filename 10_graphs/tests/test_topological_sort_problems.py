@@ -144,3 +144,16 @@ def test_longest_increasing_path_diagonal_not_allowed():
 
 def test_longest_increasing_path_single_cell():
     assert longest_increasing_path([[1]]) == 1
+
+
+def test_check_if_prerequisite_direct_edge():
+    assert check_if_prerequisite(2, [[1, 0]], [[0, 1], [1, 0]]) == [False, True]
+
+
+def test_check_if_prerequisite_no_edges():
+    assert check_if_prerequisite(2, [], [[1, 0], [0, 1]]) == [False, False]
+
+
+def test_check_if_prerequisite_transitive():
+    prereqs = [[0, 1], [1, 2], [2, 3], [3, 4]]
+    assert check_if_prerequisite(5, prereqs, [[0, 4], [4, 0]]) == [True, False]

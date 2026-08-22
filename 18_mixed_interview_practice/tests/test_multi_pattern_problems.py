@@ -352,3 +352,18 @@ def test_weighted_random_picker_respects_weights():
 
     assert set(draws) == {0, 1}
     assert 0.70 < draws.count(1) / len(draws) < 0.80
+
+
+def test_lfu_cache_zero_capacity():
+    cache = LFUCache(0)
+    cache.put(1, 1)
+
+    assert cache.get(1) == -1
+
+
+def test_lfu_cache_update_existing_key():
+    cache = LFUCache(2)
+    cache.put(1, 1)
+    cache.put(1, 5)
+
+    assert cache.get(1) == 5

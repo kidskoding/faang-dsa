@@ -134,3 +134,11 @@ def test_amount_painted_overlapping():
 
 def test_amount_painted_out_of_order():
     assert amount_painted([[1, 4], [5, 8], [4, 7]]) == [3, 3, 1]
+
+
+def test_get_skyline_single_building():
+    assert get_skyline([[0, 2, 3]]) == [[0, 3], [2, 0]]
+
+
+def test_get_skyline_nested_building():
+    assert get_skyline([[0, 10, 5], [2, 4, 3]]) == [[0, 5], [10, 0]]

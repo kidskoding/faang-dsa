@@ -139,3 +139,17 @@ def test_my_linked_list_get_out_of_range():
     linked_list.add_at_head(1)
 
     assert linked_list.get(5) == -1
+
+
+def test_delete_node_deeper_in_the_list():
+    head = build_list([1, 2, 3, 4, 5])
+    delete_node(node_at(head, 2))
+
+    assert to_list(head) == [1, 2, 4, 5]
+
+
+def test_delete_node_second_to_last():
+    head = build_list([1, 2])
+    delete_node(head)
+
+    assert to_list(head) == [2]

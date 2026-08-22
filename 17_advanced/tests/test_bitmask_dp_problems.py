@@ -84,3 +84,11 @@ def test_number_ways_several_assignments():
 def test_number_ways_five_people():
     hats = [[1, 2, 3], [2, 3, 5, 6], [1, 3, 7, 9], [1, 8, 9], [2, 5, 7]]
     assert number_ways(hats) == 111
+
+
+def test_max_students_all_broken_seats():
+    assert max_students([["#", "#"], ["#", "#"]]) == 0
+
+
+def test_max_students_single_seat():
+    assert max_students([["."]]) == 1

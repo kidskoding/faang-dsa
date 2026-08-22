@@ -170,3 +170,48 @@ def test_front_middle_back_queue_operations():
     assert queue.pop_middle() == 4
     assert queue.pop_back() == 2
     assert queue.pop_front() == -1
+
+
+def test_recent_counter_all_within_window():
+    counter = RecentCounter()
+
+    assert counter.ping(1) == 1
+    assert counter.ping(2) == 2
+    assert counter.ping(3) == 3
+
+
+def test_recent_counter_drops_everything_old():
+    counter = RecentCounter()
+    counter.ping(1)
+
+    assert counter.ping(10000) == 1
+
+
+def test_moving_average_window_of_one():
+    average = MovingAverage(1)
+
+    assert average.next(5) == 5.0
+    assert average.next(10) == 10.0
+
+
+def test_moving_average_before_window_fills():
+    average = MovingAverage(5)
+
+    assert average.next(4) == 4.0
+    assert average.next(6) == 5.0
+
+
+def test_front_middle_back_queue_empty_pops():
+    queue = FrontMiddleBackQueue()
+
+    assert queue.pop_front() == -1
+    assert queue.pop_middle() == -1
+    assert queue.pop_back() == -1
+
+
+def test_front_middle_back_queue_single_element():
+    queue = FrontMiddleBackQueue()
+    queue.push_back(1)
+
+    assert queue.pop_middle() == 1
+    assert queue.pop_back() == -1

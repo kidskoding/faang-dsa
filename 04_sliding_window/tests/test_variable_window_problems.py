@@ -130,3 +130,15 @@ def test_longest_nice_subarray_normal():
 
 def test_longest_nice_subarray_all_overlap():
     assert longest_nice_subarray([3, 1, 5, 11, 13]) == 1
+
+
+def test_num_subarray_product_less_than_k_all_qualify():
+    assert num_subarray_product_less_than_k([1, 1, 1], 2) == 6
+
+
+def test_num_subarray_product_less_than_k_none_qualify():
+    assert num_subarray_product_less_than_k([10, 20], 5) == 0
+
+
+def test_num_subarray_product_less_than_k_single_element():
+    assert num_subarray_product_less_than_k([5], 10) == 1
