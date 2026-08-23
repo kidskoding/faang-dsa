@@ -332,6 +332,24 @@ def test_four_sum_count_no_match():
     assert four_sum_count([1], [1], [1], [1]) == 0
 
 
+def test_four_sum_count_counts_every_index_combination():
+    """Duplicates must multiply, not collapse.
+
+    Every one of the 2*2*2*2 index choices sums to zero. A solution that stores
+    pair sums in a set rather than a counter returns 4 here and still passes
+    every other test in this file.
+    """
+    assert four_sum_count([0, 0], [0, 0], [0, 0], [0, 0]) == 16
+
+
+def test_four_sum_count_duplicates_across_arrays():
+    assert four_sum_count([1, 1], [-1, -1], [0, 0], [0, 0]) == 16
+
+
+def test_four_sum_count_mixed_signs():
+    assert four_sum_count([-1, -1], [-1, 1], [-1, 1], [1, -1]) == 6
+
+
 def test_least_bricks_normal():
     wall = [[1, 2, 2, 1], [3, 1, 2], [1, 3, 2], [2, 4], [3, 1, 2], [1, 3, 1, 1]]
     assert least_bricks(wall) == 2

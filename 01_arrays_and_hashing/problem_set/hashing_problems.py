@@ -1,5 +1,7 @@
 import heapq
 from collections import defaultdict
+import itertools
+import math
 
 
 def two_sum(nums: list[int], target: int) -> list[int]:
@@ -212,7 +214,11 @@ def majority_element(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    raise NotImplementedError
+    map = {}
+    for x in nums:
+        map[x] = map.get(x, 0) + 1
+
+    return max(map, key=map.get, default=None)
 
 
 def majority_element_ii(nums: list[int]) -> list[int]:
@@ -221,7 +227,13 @@ def majority_element_ii(nums: list[int]) -> list[int]:
     # Time:
     # Space:
 
-    raise NotImplementedError
+    map = {}
+    req = math.floor(len(nums) / 3)
+    for x in nums:
+        map[x] = map.get(x, 0) + 1
+
+    map = {k: v for k, v in map.items() if v > req}
+    return list(map.keys())
 
 
 class MyHashMap:
@@ -259,7 +271,14 @@ def four_sum_count(nums1: list[int], nums2: list[int], nums3: list[int], nums4: 
     # Time:
     # Space:
 
-    raise NotImplementedError
+    count = 0
+    map = {x + y: 0 - (x + y) for x, y in itertools.product(nums1, nums2)}
+    all_sums = [x + y for x, y in itertools.product(nums1, nums2)]
+    for x in all_sums:
+        if x in map.values():
+            count += 1
+
+    return count
 
 
 def least_bricks(wall: list[list[int]]) -> int:
