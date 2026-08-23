@@ -363,6 +363,19 @@ def test_least_bricks_two_rows():
     assert least_bricks([[1, 1], [2]]) == 1
 
 
+def test_least_bricks_every_row_aligned():
+    """A seam every row shares, so the line crosses nothing."""
+    assert least_bricks([[1, 1], [1, 1], [1, 1]]) == 0
+
+
+def test_least_bricks_single_row():
+    assert least_bricks([[1, 2, 3]]) == 0
+
+
+def test_least_bricks_mirrored_rows():
+    assert least_bricks([[2, 1], [1, 2]]) == 1
+
+
 def test_custom_sort_string_all_ordered():
     assert custom_sort_string("cba", "abcd") == "cbad"
 

@@ -1,7 +1,7 @@
 import heapq
-from collections import defaultdict
 import itertools
 import math
+from collections import Counter, defaultdict
 
 
 def two_sum(nums: list[int], target: int) -> list[int]:
@@ -271,12 +271,12 @@ def four_sum_count(nums1: list[int], nums2: list[int], nums3: list[int], nums4: 
     # Time:
     # Space:
 
+    counts = Counter(a + b for a, b in itertools.product(nums1, nums2))
     count = 0
-    map = {x + y: 0 - (x + y) for x, y in itertools.product(nums1, nums2)}
-    all_sums = [x + y for x, y in itertools.product(nums1, nums2)]
-    for x in all_sums:
-        if x in map.values():
-            count += 1
+    for a, b in itertools.product(nums3, nums4):
+        complement = 0 - (a + b)
+        if complement in counts:
+            count += counts[complement]
 
     return count
 
@@ -287,7 +287,14 @@ def least_bricks(wall: list[list[int]]) -> int:
     # Time:
     # Space:
 
-    raise NotImplementedError
+    map = {}
+    for row in wall:
+        pos = 0
+        for brick in row[:-1]:
+            pos += brick
+            map[pos] = map.get(pos, 0) + 1
+
+    return len(wall) - max(map.values(), default=0)
 
 
 def custom_sort_string(order: str, s: str) -> str:
