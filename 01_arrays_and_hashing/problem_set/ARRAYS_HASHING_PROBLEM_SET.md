@@ -67,6 +67,11 @@ membership checks, frequency counts, and signature grouping.
 
 - solves: `Codec`
 - Pattern: length-prefix encoding to make decoding unambiguous.
+- LeetCode premium, so the statement is here: design an algorithm to encode a
+  list of strings into a single string, which is then sent over the network and
+  decoded back into the original list. Implement `encode(strs) -> str` and
+  `decode(s) -> list[str]`. Strings may contain any characters, including
+  whatever you might want to use as a delimiter, and may be empty.
 
 ### 9. [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)
 
@@ -216,6 +221,9 @@ pass with a suffix pass for split-point and both-sides problems.
 
 - solves: `max_sub_array_len`
 - Pattern: prefix sum with first-seen index in a hash map to get longest subarray.
+- LeetCode premium, so the statement is here: given an integer array `nums` and
+  an integer `k`, return the length of the longest subarray that sums to `k`. If
+  there is no such subarray, return 0. Values may be negative.
 
 ### 35. [Contiguous Array](https://leetcode.com/problems/contiguous-array/)
 
