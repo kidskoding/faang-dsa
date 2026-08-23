@@ -1,5 +1,5 @@
 def my_sqrt(x: int) -> int:
-    # Problem 21: Sqrt(x)
+    # Problem 24: Sqrt(x)
     # Key idea: binary search the answer space for the largest value whose square fits.
     # Time:
     # Space:
@@ -8,7 +8,7 @@ def my_sqrt(x: int) -> int:
 
 
 def min_eating_speed(piles: list[int], h: int) -> int:
-    # Problem 22: Koko Eating Bananas
+    # Problem 25: Koko Eating Bananas
     # Key idea: search on answer space for the minimum feasible eating speed.
     # Time:
     # Space:
@@ -17,7 +17,7 @@ def min_eating_speed(piles: list[int], h: int) -> int:
 
 
 def ship_within_days(weights: list[int], days: int) -> int:
-    # Problem 23: Capacity To Ship Packages Within D Days
+    # Problem 26: Capacity To Ship Packages Within D Days
     # Key idea: search on answer space for the minimum feasible ship capacity.
     # Time:
     # Space:
@@ -26,7 +26,7 @@ def ship_within_days(weights: list[int], days: int) -> int:
 
 
 def split_array(nums: list[int], k: int) -> int:
-    # Problem 24: Split Array Largest Sum
+    # Problem 27: Split Array Largest Sum
     # Key idea: search on answer space for the minimum largest subarray sum
     # under a split-count constraint.
     # Time:
@@ -36,7 +36,7 @@ def split_array(nums: list[int], k: int) -> int:
 
 
 def find_median_sorted_arrays(nums1: list[int], nums2: list[int]) -> float:
-    # Problem 25: Median of Two Sorted Arrays
+    # Problem 28: Median of Two Sorted Arrays
     # Key idea: binary search a partition index instead of merging.
     # Time:
     # Space:
@@ -45,7 +45,7 @@ def find_median_sorted_arrays(nums1: list[int], nums2: list[int]) -> float:
 
 
 def arrange_coins(n: int) -> int:
-    # Problem 26: Arranging Coins
+    # Problem 29: Arranging Coins
     # Key idea: search on answer space for the largest full row count under a triangular-sum bound.
     # Time:
     # Space:
@@ -54,7 +54,7 @@ def arrange_coins(n: int) -> int:
 
 
 def min_speed_on_time(dist: list[int], hour: float) -> int:
-    # Problem 27: Minimum Speed to Arrive on Time
+    # Problem 30: Minimum Speed to Arrive on Time
     # Key idea: search on answer space for the minimum speed that keeps total travel time in budget.
     # Time:
     # Space:
@@ -63,7 +63,7 @@ def min_speed_on_time(dist: list[int], hour: float) -> int:
 
 
 def smallest_divisor(nums: list[int], threshold: int) -> int:
-    # Problem 28: Find the Smallest Divisor Given a Threshold
+    # Problem 31: Find the Smallest Divisor Given a Threshold
     # Key idea: binary search on the answer for the minimum feasible divisor.
     # Time:
     # Space:
@@ -72,7 +72,7 @@ def smallest_divisor(nums: list[int], threshold: int) -> int:
 
 
 def find_duplicate(nums: list[int]) -> int:
-    # Problem 29: Find the Duplicate Number
+    # Problem 32: Find the Duplicate Number
     # Key idea: binary search on the value range using a count-of-elements-at-most predicate.
     # Time:
     # Space:
@@ -81,7 +81,7 @@ def find_duplicate(nums: list[int]) -> int:
 
 
 def min_days(bloom_day: list[int], m: int, k: int) -> int:
-    # Problem 30: Minimum Number of Days to Make m Bouquets
+    # Problem 33: Minimum Number of Days to Make m Bouquets
     # Key idea: search on answer space for the minimum wait day that yields enough bouquets.
     # Time:
     # Space:
@@ -90,7 +90,7 @@ def min_days(bloom_day: list[int], m: int, k: int) -> int:
 
 
 def max_distance(position: list[int], m: int) -> int:
-    # Problem 31: Magnetic Force Between Two Balls
+    # Problem 34: Magnetic Force Between Two Balls
     # Key idea: search on answer space for the maximum minimum gap achievable when placing balls.
     # Time:
     # Space:
@@ -99,7 +99,7 @@ def max_distance(position: list[int], m: int) -> int:
 
 
 def kth_smallest(matrix: list[list[int]], k: int) -> int:
-    # Problem 32: Kth Smallest Element in a Sorted Matrix
+    # Problem 35: Kth Smallest Element in a Sorted Matrix
     # Key idea: search on the value range, counting entries at most the midpoint per row.
     # Time:
     # Space:
@@ -108,7 +108,7 @@ def kth_smallest(matrix: list[list[int]], k: int) -> int:
 
 
 def find_kth_number(m: int, n: int, k: int) -> int:
-    # Problem 33: Kth Smallest Number in Multiplication Table
+    # Problem 36: Kth Smallest Number in Multiplication Table
     # Key idea: search on the value range, counting multiplication-table entries at most the midpoint.
     # Time:
     # Space:
@@ -117,7 +117,7 @@ def find_kth_number(m: int, n: int, k: int) -> int:
 
 
 def smallest_distance_pair(nums: list[int], k: int) -> int:
-    # Problem 34: Find K-th Smallest Pair Distance
+    # Problem 37: Find K-th Smallest Pair Distance
     # Key idea: search on the distance value range with a two-pointer count of pairs within it.
     # Time:
     # Space:

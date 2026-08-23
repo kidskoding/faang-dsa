@@ -1,5 +1,8 @@
 from problem_set.in_place_mutation_problems import (
     merge,
+    pancake_sort,
+    rearrange_array,
+    remove_duplicates_ii,
     rotate,
     sort_colors,
     wiggle_sort,
@@ -107,3 +110,57 @@ def test_wiggle_sort_single_element():
     wiggle_sort(nums)
 
     assert nums == [7]
+
+
+def _apply_flips(arr: list[int], flips: list[int]) -> list[int]:
+    out = arr[:]
+    for k in flips:
+        out[:k] = out[:k][::-1]
+    return out
+
+
+def test_remove_duplicates_ii_keeps_at_most_two():
+    nums = [1, 1, 1, 2, 2, 3]
+    k = remove_duplicates_ii(nums)
+
+    assert k == 5
+    assert nums[:k] == [1, 1, 2, 2, 3]
+
+
+def test_remove_duplicates_ii_longer():
+    nums = [0, 0, 1, 1, 1, 1, 2, 3, 3]
+    k = remove_duplicates_ii(nums)
+
+    assert k == 7
+    assert nums[:k] == [0, 0, 1, 1, 2, 3, 3]
+
+
+def test_remove_duplicates_ii_single_element():
+    nums = [1]
+    k = remove_duplicates_ii(nums)
+
+    assert k == 1
+    assert nums[:k] == [1]
+
+
+def test_rearrange_array_alternates_signs():
+    assert rearrange_array([3, 1, -2, -5, 2, -4]) == [3, -2, 1, -5, 2, -4]
+
+
+def test_rearrange_array_shortest():
+    assert rearrange_array([-1, 1]) == [1, -1]
+
+
+def test_pancake_sort_normal():
+    arr = [3, 2, 4, 1]
+    assert _apply_flips(arr, pancake_sort(arr)) == [1, 2, 3, 4]
+
+
+def test_pancake_sort_already_sorted():
+    arr = [1, 2, 3]
+    assert _apply_flips(arr, pancake_sort(arr)) == [1, 2, 3]
+
+
+def test_pancake_sort_two_swapped():
+    arr = [2, 1, 3]
+    assert _apply_flips(arr, pancake_sort(arr)) == [1, 2, 3]

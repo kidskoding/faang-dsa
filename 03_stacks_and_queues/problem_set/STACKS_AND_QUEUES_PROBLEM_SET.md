@@ -140,77 +140,95 @@ scratch on top of stacks, queues, and a ring buffer.
 - solves: `FrontMiddleBackQueue`
 - Pattern: two deques split at the middle; rebalance after each op to keep the front half sized correctly.
 
+### 22. [Design Hit Counter](https://leetcode.com/problems/design-hit-counter/)
+
+- solves: `HitCounter`
+- Pattern: a queue of timestamps, dropping anything older than the five-minute
+  window before answering a count.
+
+### 23. [Design Browser History](https://leetcode.com/problems/design-browser-history/)
+
+- solves: `BrowserHistory`
+- Pattern: one list plus a cursor; visiting truncates everything ahead of the
+  cursor, which is what makes forward history disappear.
+
+### 24. [Design Most Recently Used Queue](https://leetcode.com/problems/design-most-recently-used-queue/)
+
+- solves: `MRUQueue`
+- Pattern: fetch the kth element and move it to the back, so recently touched
+  values drift to the end.
+
 ## Monotonic Stack
 
 `monotonic_stack_problems.py` — a stack kept sorted so each pop resolves the
 next-greater / next-smaller relationship and its span boundaries.
 
-### 22. [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)
+### 25. [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)
 
 - solves: `next_greater_element`
 - Pattern: monotonic stack over the full array plus a hash map lookup for the subset query.
 
-### 23. [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
+### 26. [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
 
 - solves: `daily_temperatures`
 - Pattern: monotonic decreasing stack of indices resolved by the next warmer day.
 
-### 24. [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/)
+### 27. [Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/)
 
 - solves: `next_greater_elements`
 - Pattern: monotonic stack over a circular array by iterating twice the length.
 
-### 25. [Online Stock Span](https://leetcode.com/problems/online-stock-span/)
+### 28. [Online Stock Span](https://leetcode.com/problems/online-stock-span/)
 
 - solves: `StockSpanner`
 - Pattern: monotonic stack of (price, span) pairs collapsed as new prices arrive.
 
-### 26. [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/)
+### 29. [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/)
 
 - solves: `asteroid_collision`
 - Pattern: stack resolves collisions immediately as each new asteroid arrives.
 
-### 27. [Remove K Digits](https://leetcode.com/problems/remove-k-digits/)
+### 30. [Remove K Digits](https://leetcode.com/problems/remove-k-digits/)
 
 - solves: `remove_k_digits`
 - Pattern: monotonic increasing stack removes larger trailing digits while removals remain.
 
-### 28. [Largest Rectangle In Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
+### 31. [Largest Rectangle In Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
 
 - solves: `largest_rectangle_area`
 - Pattern: monotonic increasing stack tracks left/right boundaries for each bar's max rectangle.
 
-### 29. [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+### 32. [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
 
 - solves: `trap`
 - Pattern: monotonic decreasing stack resolves trapped water between bars as taller bars appear.
 
-### 30. [Car Fleet](https://leetcode.com/problems/car-fleet/)
+### 33. [Car Fleet](https://leetcode.com/problems/car-fleet/)
 
 - solves: `car_fleet`
 - Pattern: sort by position and use a stack of arrival times to merge cars into fleets.
 
-### 31. [Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/)
+### 34. [Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/)
 
 - solves: `remove_duplicate_letters`
 - Pattern: monotonic increasing stack keeps the lexicographically smallest result using last-occurrence counts.
 
-### 32. [132 Pattern](https://leetcode.com/problems/132-pattern/)
+### 35. [132 Pattern](https://leetcode.com/problems/132-pattern/)
 
 - solves: `find132pattern`
 - Pattern: right-to-left monotonic stack tracks the largest valid "2" below each candidate "3".
 
-### 33. [Sum Of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/)
+### 36. [Sum Of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/)
 
 - solves: `sum_subarray_mins`
 - Pattern: monotonic stack counts subarrays where each element is the minimum via span boundaries.
 
-### 34. [Sum Of Subarray Ranges](https://leetcode.com/problems/sum-of-subarray-ranges/)
+### 37. [Sum Of Subarray Ranges](https://leetcode.com/problems/sum-of-subarray-ranges/)
 
 - solves: `sub_array_ranges`
 - Pattern: monotonic-stack contribution counting for both subarray minimums and maximums.
 
-### 35. [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/)
+### 38. [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/)
 
 - solves: `maximal_rectangle`
 - Pattern: build per-row histograms and apply the largest-rectangle monotonic stack to each.

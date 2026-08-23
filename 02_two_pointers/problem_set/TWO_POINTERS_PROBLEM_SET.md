@@ -206,3 +206,21 @@ values.
 - Pattern: partition around the median, then interleave halves with three-way pointer indexing.
   </content>
   </invoke>
+
+### 34. [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)
+
+- solves: `remove_duplicates_ii`
+- Pattern: a write pointer that only accepts a value when it differs from the
+  one two slots back, which allows exactly two copies.
+
+### 35. [Rearrange Array Elements by Sign](https://leetcode.com/problems/rearrange-array-elements-by-sign/)
+
+- solves: `rearrange_array`
+- Pattern: two read pointers, one over positives and one over negatives,
+  interleaved into the result.
+
+### 36. [Pancake Sorting](https://leetcode.com/problems/pancake-sorting/)
+
+- solves: `pancake_sort`
+- Pattern: repeatedly bring the largest unsorted value to the front with one
+  flip, then flip it into place.

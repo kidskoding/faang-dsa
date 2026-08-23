@@ -59,3 +59,21 @@ def max_score(card_points: list[int], k: int) -> int:
     # Space:
 
     raise NotImplementedError
+
+
+def get_averages(nums: list[int], k: int) -> list[int]:
+    # Problem 8: K Radius Subarray Averages
+    # Key idea: fixed window of width 2k+1 with a running sum, -1 where it overhangs.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+def get_subarray_beauty(nums: list[int], k: int, x: int) -> list[int]:
+    # Problem 9: Sliding Subarray Beauty
+    # Key idea: values are bounded, so count them instead of sorting each window.
+    # Time:
+    # Space:
+
+    raise NotImplementedError

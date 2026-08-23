@@ -1,6 +1,9 @@
 from problem_set.queue_deque_problems import (
+    BrowserHistory,
     FrontMiddleBackQueue,
+    HitCounter,
     MovingAverage,
+    MRUQueue,
     MyCircularDeque,
     MyCircularQueue,
     MyQueue,
@@ -215,3 +218,74 @@ def test_front_middle_back_queue_single_element():
 
     assert queue.pop_middle() == 1
     assert queue.pop_back() == -1
+
+
+def test_hit_counter_counts_within_the_window():
+    counter = HitCounter()
+    counter.hit(1)
+    counter.hit(2)
+    counter.hit(3)
+
+    assert counter.get_hits(4) == 3
+
+
+def test_hit_counter_evicts_old_hits():
+    counter = HitCounter()
+    counter.hit(1)
+    counter.hit(2)
+    counter.hit(3)
+    counter.hit(300)
+
+    assert counter.get_hits(300) == 4
+    assert counter.get_hits(301) == 3
+
+
+def test_hit_counter_window_fully_expired():
+    counter = HitCounter()
+    counter.hit(1)
+
+    assert counter.get_hits(601) == 0
+
+
+def test_browser_history_back_and_forward():
+    history = BrowserHistory("leetcode.com")
+    history.visit("google.com")
+    history.visit("facebook.com")
+    history.visit("youtube.com")
+
+    assert history.back(1) == "facebook.com"
+    assert history.back(1) == "google.com"
+    assert history.forward(1) == "facebook.com"
+
+
+def test_browser_history_visit_truncates_forward():
+    history = BrowserHistory("leetcode.com")
+    history.visit("google.com")
+    history.visit("facebook.com")
+    history.back(1)
+    history.visit("linkedin.com")
+
+    assert history.forward(2) == "linkedin.com"
+
+
+def test_browser_history_clamps_at_the_ends():
+    history = BrowserHistory("leetcode.com")
+    history.visit("google.com")
+
+    assert history.back(7) == "leetcode.com"
+
+
+def test_mru_queue_moves_fetched_value_to_the_back():
+    queue = MRUQueue(8)
+
+    assert queue.fetch(3) == 3
+    assert queue.fetch(5) == 6
+    assert queue.fetch(2) == 2
+    assert queue.fetch(8) == 2
+
+
+def test_mru_queue_fetch_last_is_a_no_op():
+    queue = MRUQueue(3)
+
+    assert queue.fetch(3) == 3
+    assert queue.fetch(3) == 3

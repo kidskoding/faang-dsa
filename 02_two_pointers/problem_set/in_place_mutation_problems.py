@@ -32,3 +32,30 @@ def wiggle_sort(nums: list[int]) -> None:
     # Space:
 
     raise NotImplementedError
+
+
+def remove_duplicates_ii(nums: list[int]) -> int:
+    # Problem 34: Remove Duplicates from Sorted Array II
+    # Key idea: write pointer that accepts a value only if it differs from two slots back.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+def rearrange_array(nums: list[int]) -> list[int]:
+    # Problem 35: Rearrange Array Elements by Sign
+    # Key idea: one pointer over positives, one over negatives, interleaved.
+    # Time:
+    # Space:
+
+    raise NotImplementedError
+
+
+def pancake_sort(arr: list[int]) -> list[int]:
+    # Problem 36: Pancake Sorting
+    # Key idea: flip the largest unsorted value to the front, then flip it into place.
+    # Time:
+    # Space:
+
+    raise NotImplementedError

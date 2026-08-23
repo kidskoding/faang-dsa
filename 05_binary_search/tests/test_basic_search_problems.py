@@ -1,9 +1,13 @@
 from problem_set.basic_search_problems import (
+    ArrayReader,
+    find_peak_grid,
     guess_number,
+    h_index,
     search,
     search_insert,
     search_matrix,
     search_matrix_ii,
+    search_unknown_size,
 )
 
 
@@ -111,3 +115,53 @@ def test_guess_number_at_upper_bound():
         return 0 if num == 10 else (-1 if num > 10 else 1)
 
     assert guess_number(10, guess) == 10
+
+
+class _ListReader(ArrayReader):
+    """Concrete stand-in; get returns 2^31 - 1 past the end, as the problem states."""
+
+    def __init__(self, values: list[int]) -> None:
+        self.values = values
+
+    def get(self, index: int) -> int:
+        return self.values[index] if 0 <= index < len(self.values) else 2**31 - 1
+
+
+def test_find_peak_grid_two_by_two():
+    assert find_peak_grid([[1, 4], [3, 2]]) in ([0, 1], [1, 0])
+
+
+def test_find_peak_grid_three_by_three():
+    assert find_peak_grid([[10, 20, 15], [21, 30, 14], [7, 16, 32]]) in ([1, 1], [2, 2])
+
+
+def test_find_peak_grid_single_cell():
+    assert find_peak_grid([[1]]) == [0, 0]
+
+
+def test_h_index_normal():
+    assert h_index([0, 1, 3, 5, 6]) == 3
+
+
+def test_h_index_few_papers():
+    assert h_index([1, 2, 100]) == 2
+
+
+def test_h_index_no_citations():
+    assert h_index([0]) == 0
+
+
+def test_h_index_single_well_cited_paper():
+    assert h_index([100]) == 1
+
+
+def test_search_unknown_size_found():
+    assert search_unknown_size(_ListReader([-1, 0, 3, 5, 9, 12]), 9) == 4
+
+
+def test_search_unknown_size_missing():
+    assert search_unknown_size(_ListReader([-1, 0, 3, 5, 9, 12]), 2) == -1
+
+
+def test_search_unknown_size_single_element():
+    assert search_unknown_size(_ListReader([5]), 5) == 0

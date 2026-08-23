@@ -2,6 +2,8 @@ from problem_set.fixed_window_problems import (
     contains_nearby_duplicate,
     count_good_substrings,
     find_max_average,
+    get_averages,
+    get_subarray_beauty,
     max_satisfied,
     max_score,
     max_vowels,
@@ -90,3 +92,28 @@ def test_max_score_takes_all():
 
 def test_max_score_whole_array():
     assert max_score([9, 7, 7, 9, 7, 7, 9], 7) == 55
+
+
+def test_get_averages_normal():
+    nums = [7, 4, 3, 9, 1, 8, 5, 2, 6]
+    assert get_averages(nums, 3) == [-1, -1, -1, 5, 4, 4, -1, -1, -1]
+
+
+def test_get_averages_radius_zero():
+    assert get_averages([100000], 0) == [100000]
+
+
+def test_get_averages_window_too_wide():
+    assert get_averages([8], 100000) == [-1]
+
+
+def test_get_subarray_beauty_normal():
+    assert get_subarray_beauty([1, -1, -3, -2, 3], 3, 2) == [-1, -2, -2]
+
+
+def test_get_subarray_beauty_first_smallest():
+    assert get_subarray_beauty([-3, 1, 2, -3, 0, -3], 2, 1) == [-3, 0, -3, -3, -3]
+
+
+def test_get_subarray_beauty_all_negative():
+    assert get_subarray_beauty([-1, -2, -3, -4, -5], 2, 2) == [-1, -2, -3, -4]

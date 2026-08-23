@@ -216,3 +216,51 @@ class FrontMiddleBackQueue:
         # Time:
         # Space:
         raise NotImplementedError
+
+
+class HitCounter:
+    # Problem 22: Design Hit Counter
+    # Key idea: queue of timestamps, evict anything outside the 300 second window.
+    # Time:
+    # Space:
+
+    def __init__(self) -> None:
+        raise NotImplementedError
+
+    def hit(self, timestamp: int) -> None:
+        raise NotImplementedError
+
+    def get_hits(self, timestamp: int) -> int:
+        raise NotImplementedError
+
+
+class BrowserHistory:
+    # Problem 23: Design Browser History
+    # Key idea: one list plus a cursor; visiting truncates everything ahead of it.
+    # Time:
+    # Space:
+
+    def __init__(self, homepage: str) -> None:
+        raise NotImplementedError
+
+    def visit(self, url: str) -> None:
+        raise NotImplementedError
+
+    def back(self, steps: int) -> str:
+        raise NotImplementedError
+
+    def forward(self, steps: int) -> str:
+        raise NotImplementedError
+
+
+class MRUQueue:
+    # Problem 24: Design Most Recently Used Queue
+    # Key idea: fetch the kth element and move it to the back.
+    # Time:
+    # Space:
+
+    def __init__(self, n: int) -> None:
+        raise NotImplementedError
+
+    def fetch(self, k: int) -> int:
+        raise NotImplementedError
