@@ -388,6 +388,19 @@ def test_custom_sort_string_with_repeats():
     assert custom_sort_string("kqep", "pekeq") == "kqeep"
 
 
+def test_custom_sort_string_empty_input():
+    assert custom_sort_string("cba", "") == ""
+
+
+def test_custom_sort_string_no_overlap():
+    """Nothing in order appears in s, so everything is a leftover."""
+    assert sorted(custom_sort_string("xyz", "abc")) == ["a", "b", "c"]
+
+
+def test_custom_sort_string_groups_repeats_together():
+    assert custom_sort_string("cba", "aaabbbccc") == "cccbbbaaa"
+
+
 def test_tiny_url_codec_round_trips():
     codec = TinyURLCodec()
     url = "https://leetcode.com/problems/design-tinyurl"

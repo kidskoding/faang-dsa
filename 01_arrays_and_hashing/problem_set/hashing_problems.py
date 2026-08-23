@@ -303,7 +303,16 @@ def custom_sort_string(order: str, s: str) -> str:
     # Time:
     # Space:
 
-    raise NotImplementedError
+    counts = Counter(s)
+    res = ''
+    for ch in order:
+        res += ch * counts[ch]
+        del counts[ch]
+
+    for ch, n in counts.items():
+        res += ch * n
+
+    return res
 
 
 class TinyURLCodec:
