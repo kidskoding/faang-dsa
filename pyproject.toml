@@ -41,6 +41,7 @@ pythonpath = [
     "18_mixed_interview_practice",
     "other/mock_interviews/astranis",
     "redos/2026-08-22",
+    "redos/2026-08-23",
 ]
 testpaths = [
     "01_arrays_and_hashing",

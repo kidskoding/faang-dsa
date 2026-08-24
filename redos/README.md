@@ -6,11 +6,16 @@ the date you did it, so you can diff the two afterwards.
 
 ```text
 redos/
-└── 2026-08-22/
-    ├── redo_problems.py
+└── 2026-08-23/
+    ├── redo_2026_08_23.py
     └── tests/
-        └── test_redo_problems.py
+        └── test_redo_2026_08_23.py
 ```
+
+The filenames carry the date, not just the folder. `problem_set` and the redo
+folders share one flat module namespace, so two files called
+`redo_problems.py` in different dated folders collide and pytest refuses to
+collect either.
 
 ## The Rule
 
