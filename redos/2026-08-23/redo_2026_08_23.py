@@ -2,6 +2,8 @@
 #
 # Write each from scratch. Do not open hashing_problems.py first.
 
+import heapq
+
 
 def longest_consecutive(nums: list[int]) -> int:
     # Longest Consecutive Sequence
@@ -21,3 +23,22 @@ def is_valid_sudoku(board: list[list[str]]) -> bool:
     # Space:
 
     raise NotImplementedError
+
+
+def top_k_frequent(nums: list[int], k: int) -> list[int]:
+    # Top K Frequent Elements
+    # First time: scanned the map k times, O(n*k). Aim for the bucket sort, O(n).
+    # Time:
+    # Space:
+
+    map = {}
+    heap = []
+    for x in nums:
+        map[x] = map.get(x, 0) + 1
+
+    for k, v in map.items():
+        heapq.heappush(heap, (v, k))
+        if len(heap) > k:
+            heapq.heappop(heap)
+
+    return [value for _, value in heap]

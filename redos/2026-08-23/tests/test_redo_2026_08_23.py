@@ -1,4 +1,4 @@
-from redo_2026_08_23 import is_valid_sudoku, longest_consecutive
+from redo_2026_08_23 import is_valid_sudoku, longest_consecutive, top_k_frequent
 
 
 def _valid_board() -> list[list[str]]:
@@ -78,3 +78,7 @@ def test_is_valid_sudoku_same_value_in_different_boxes_is_fine():
 
 def test_is_valid_sudoku_empty_board():
     assert is_valid_sudoku(_sparse_board()) is True
+
+
+def test_top_k_frequent_with_negatives():
+    assert set(top_k_frequent([-1, -1, -1, -2, -2, 5], 2)) == {-1, -2}
