@@ -74,7 +74,7 @@ def group_anagrams(strs: list[str]) -> list[list[str]]:
     map = defaultdict(list)
 
     for x in strs:
-        sorted_x = ''.join(sorted(x))
+        sorted_x = "".join(sorted(x))
         map[sorted_x].append(x)
 
     for value in map.values():
@@ -102,6 +102,7 @@ def top_k_frequent(nums: list[int], k: int) -> list[int]:
         del map[key]
 
     return res
+
 
 # Alternative solution with a max heap
 def top_k_frequent_v2(nums: list[int], k: int) -> list[int]:
@@ -144,6 +145,7 @@ def longest_consecutive(nums: list[int]) -> int:
 
     return best
 
+
 def is_valid_sudoku(board: list[list[str]]) -> bool:
     # Problem 7: Valid Sudoku
     # Key idea: hash sets per row, column, and box.
@@ -161,7 +163,7 @@ def is_valid_sudoku(board: list[list[str]]) -> bool:
     for r in range(9):
         for c in range(9):
             val = board[r][c]
-            if val == '.':
+            if val == ".":
                 continue
 
             box = (r // 3, c // 3)
@@ -173,6 +175,7 @@ def is_valid_sudoku(board: list[list[str]]) -> bool:
             boxes[box].add(val)
 
     return True
+
 
 class Codec:
     # Problem 8: Encode And Decode Strings
@@ -207,6 +210,7 @@ def intersect(nums1: list[int], nums2: list[int]) -> list[int]:
             intersection[x] -= 1
 
     return res
+
 
 def majority_element(nums: list[int]) -> int:
     # Problem 10: Majority Element
@@ -304,7 +308,7 @@ def custom_sort_string(order: str, s: str) -> str:
     # Space:
 
     counts = Counter(s)
-    res = ''
+    res = ""
     for ch in order:
         res += ch * counts[ch]
         del counts[ch]

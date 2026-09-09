@@ -114,10 +114,7 @@ def test_wiggle_sort_odd_length():
     wiggle_sort(nums)
 
     assert sorted(nums) == [1, 1, 1, 3, 4, 5, 6]
-    assert all(
-        nums[i] < nums[i + 1] if i % 2 == 0 else nums[i] > nums[i + 1]
-        for i in range(len(nums) - 1)
-    )
+    assert all(nums[i] < nums[i + 1] if i % 2 == 0 else nums[i] > nums[i + 1] for i in range(len(nums) - 1))
 
 
 def test_wiggle_sort_two_elements():

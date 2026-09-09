@@ -46,9 +46,7 @@ def test_clean_records_empty_input():
 
 
 def test_clean_records_tolerates_missing_keys():
-    assert clean_records([{"part_id": "a-1"}]) == [
-        {"part_id": "A-1", "qty": 0, "category": "uncategorized"}
-    ]
+    assert clean_records([{"part_id": "a-1"}]) == [{"part_id": "A-1", "qty": 0, "category": "uncategorized"}]
 
 
 def test_total_by_category_sums_each_group():
