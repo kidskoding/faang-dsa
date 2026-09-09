@@ -38,6 +38,28 @@ def test_rotate_empty():
     assert nums == []
 
 
+def test_rotate_k_zero_leaves_it_unchanged():
+    nums = [1, 2, 3, 4]
+    rotate(nums, 0)
+    assert nums == [1, 2, 3, 4]
+
+
+def test_rotate_k_equals_length_is_a_full_cycle():
+    """k % n == 0, so the array must come back unchanged.
+
+    The slicing shortcut breaks here: nums[-0:] is the whole list, not empty.
+    """
+    nums = [1, 2, 3, 4]
+    rotate(nums, 4)
+    assert nums == [1, 2, 3, 4]
+
+
+def test_rotate_k_is_a_multiple_of_length():
+    nums = [1, 2, 3]
+    rotate(nums, 6)
+    assert nums == [1, 2, 3]
+
+
 def test_set_zeroes_normal():
     matrix = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]
     set_zeroes(matrix)
