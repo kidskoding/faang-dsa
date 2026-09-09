@@ -14,6 +14,7 @@ dev = [
     "mdformat-frontmatter>=2.0.8",
     "mdformat-gfm>=0.4.1",
     "ruff>=0.11.13",
+    "ty>=0.0.1a1",
 ]
 
 [tool.mdformat]
@@ -74,17 +75,10 @@ target-version = "py312"
 [tool.ruff.lint]
 select = ["E", "F", "I"]
 
-[tool.pyright]
-typeCheckingMode = "off"
-reportUnknownArgumentType = "none"
-reportUnknownMemberType = "none"
-reportUnknownParameterType = "none"
-reportUnknownVariableType = "none"
-reportMissingParameterType = "none"
-
-[[tool.pyright.executionEnvironments]]
-root = "."
-extraPaths = [
+[tool.ty.environment]
+extra-paths = [
+    "redos/2026-08-25",
+    "redos/2026-08-24",
     "01_arrays_and_hashing",
     "02_two_pointers",
     "03_stacks_and_queues",
@@ -102,4 +96,24 @@ extraPaths = [
     "15_bit_manipulation",
     "16_math_geometry",
     "17_advanced",
+    "18_mixed_interview_practice",
+    "other/mock_interviews/astranis",
+    "redos/2026-08-23",
 ]
+
+[tool.ty.rules]
+# Every unsolved problem is a stub whose body is `raise NotImplementedError`,
+# so the declared return type is never actually produced.
+empty-body = "ignore"
+
+[[tool.ty.overrides]]
+# Tests build a known-good structure then walk it, so node.next.next is safe
+# even though the annotation says the link is optional. Asserting the shape
+# first would only pad the test.
+include = ["**/tests/**"]
+
+[tool.ty.overrides.rules]
+unresolved-attribute = "ignore"
+invalid-argument-type = "ignore"
+not-subscriptable = "ignore"
+invalid-assignment = "ignore"
