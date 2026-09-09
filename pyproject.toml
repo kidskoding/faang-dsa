@@ -77,8 +77,6 @@ select = ["E", "F", "I"]
 
 [tool.ty.environment]
 extra-paths = [
-    "redos/2026-08-25",
-    "redos/2026-08-24",
     "01_arrays_and_hashing",
     "02_two_pointers",
     "03_stacks_and_queues",
@@ -98,7 +96,6 @@ extra-paths = [
     "17_advanced",
     "18_mixed_interview_practice",
     "other/mock_interviews/astranis",
-    "redos/2026-08-23",
 ]
 
 [tool.ty.rules]
