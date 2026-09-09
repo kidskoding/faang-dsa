@@ -23,5 +23,8 @@ jobs:
           uv run ruff check .
           uv run ruff format --check .
 
+      - name: Check types
+        run: uv run ty check
+
       - name: Check Markdown formatting
         run: find . -path './.git' -prune -o -path './.venv' -prune -o -path './.pytest_cache' -prune -o -name '*.md' -type f -print | xargs -r uv run mdformat --check

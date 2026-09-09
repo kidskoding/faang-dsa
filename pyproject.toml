@@ -107,6 +107,15 @@ extra-paths = [
 empty-body = "ignore"
 
 [[tool.ty.overrides]]
+# problem_set/ is a workspace: 800 stubs that get solved, rewritten, and
+# re-solved. Gating CI on half-finished practice code would turn the build red
+# every evening, so these are checked by running ty locally, not by CI.
+include = ["**/problem_set/**"]
+
+[tool.ty.overrides.rules]
+no-matching-overload = "ignore"
+
+[[tool.ty.overrides]]
 # Tests build a known-good structure then walk it, so node.next.next is safe
 # even though the annotation says the link is optional. Asserting the shape
 # first would only pad the test.
