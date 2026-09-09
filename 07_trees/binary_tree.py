@@ -49,12 +49,14 @@ def build_tree_from_level_order(values: list[int | None]) -> TreeNode | None:
     while queue and i < len(values):
         node = queue.popleft()
 
-        if i < len(values) and values[i] is not None:
-            node.left = TreeNode(values[i])
+        left_value = values[i] if i < len(values) else None
+        if left_value is not None:
+            node.left = TreeNode(left_value)
         i += 1
 
-        if i < len(values) and values[i] is not None:
-            node.right = TreeNode(values[i])
+        right_value = values[i] if i < len(values) else None
+        if right_value is not None:
+            node.right = TreeNode(right_value)
         i += 1
 
         if node.left is not None:
@@ -77,7 +79,7 @@ def tree_to_level_order(root: TreeNode | None) -> list[int | None]:
         return []
 
     res = []
-    queue = deque([root])
+    queue: deque[TreeNode | None] = deque([root])
 
     while queue:
         node = queue.popleft()

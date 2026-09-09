@@ -165,8 +165,9 @@ def delete(root: TreeNode | None, val: int) -> TreeNode | None:
     else:
         if root.left and root.right:
             successor = min_value_node(root.right)
-            root.val = successor.val
-            root.right = delete(root.right, successor.val)
+            if successor is not None:
+                root.val = successor.val
+                root.right = delete(root.right, successor.val)
         elif root.left:
             return root.left
         else:
