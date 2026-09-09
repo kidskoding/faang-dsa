@@ -24,7 +24,7 @@ For a company-focused week:
 - [7. Bloomberg](07_bloomberg.md)
 - [8. Coinbase](08_coinbase.md)
 - [9. Palantir](09_palantir.md)
-- [10. Salesforce](10_salesforce.md)
+- [10. Slack / Salesforce](10_slack_salesforce.md)
 - [11. TikTok / ByteDance](11_tiktok_bytedance.md)
 - [12. Oracle](12_oracle.md)
 - [13. NVIDIA](13_nvidia.md)

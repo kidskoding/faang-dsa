@@ -39,4 +39,3 @@ These are additional company-focused LeetCode-style practice sets for major tech
 - [53. Airtable](53_airtable.md)
 - [54. Rivian](54_rivian.md)
 - [55. Cisco](55_cisco.md)
-- [56. Slack](56_slack.md)
