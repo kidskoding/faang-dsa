@@ -21,6 +21,8 @@ wrap = 88
 
 [tool.pytest.ini_options]
 pythonpath = [
+    "redos/2026-08-25",
+    "redos/2026-08-24",
     "01_arrays_and_hashing",
     "02_two_pointers",
     "03_stacks_and_queues",
