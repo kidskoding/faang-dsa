@@ -17,3 +17,9 @@ wheels/
 
 docs/
 redos/
+
+# scratch cram sheets, not part of the curriculum
+cram/
+
+# personal study plan, not part of the curriculum
+plan/
