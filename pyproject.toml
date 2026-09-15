@@ -99,18 +99,6 @@ extra-paths = [
 empty-body = "ignore"
 
 [[tool.ty.overrides]]
-# 800 stubs that get solved, rewritten, and re-solved. Gating CI on
-# half-finished practice code would turn the build red most evenings.
-include = ["**/problem_set/**"]
-
-[tool.ty.overrides.rules]
-no-matching-overload = "ignore"
-
-[[tool.ty.overrides]]
-# Tests build a known-good structure and then walk it, so node.next.next is
-# safe even where the annotation says the link is optional. Asserting the shape
-# first would only pad the test. Solutions get no such pass: an unchecked
-# optional there is a real bug, and one ty already caught in the tree code.
 include = ["**/tests/**"]
 
 [tool.ty.overrides.rules]

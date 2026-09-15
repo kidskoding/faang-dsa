@@ -218,11 +218,11 @@ def majority_element(nums: list[int]) -> int:
     # Time:
     # Space:
 
-    map = {}
+    counts: dict[int, int] = {}
     for x in nums:
-        map[x] = map.get(x, 0) + 1
+        counts[x] = counts.get(x, 0) + 1
 
-    return max(map, key=map.get, default=None)
+    return max(counts, key=lambda k: counts[k])
 
 
 def majority_element_ii(nums: list[int]) -> list[int]:
