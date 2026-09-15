@@ -42,7 +42,6 @@ pythonpath = [
     "16_math_geometry",
     "17_advanced",
     "18_mixed_interview_practice",
-    "other/mock_interviews/astranis",
     "redos/2026-08-23",
 ]
 testpaths = [
@@ -64,7 +63,6 @@ testpaths = [
     "16_math_geometry",
     "17_advanced",
     "18_mixed_interview_practice",
-    "other/mock_interviews",
     "redos"
 ]
 
@@ -95,7 +93,6 @@ extra-paths = [
     "16_math_geometry",
     "17_advanced",
     "18_mixed_interview_practice",
-    "other/mock_interviews/astranis",
 ]
 
 [tool.ty.rules]
